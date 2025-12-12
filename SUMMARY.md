@@ -16,7 +16,7 @@
 ## Xử lý hình ảnh (GUI)
 
 * [Điều chỉnh cài đặt dự án](processing-images-gui/adjusting-project-settings.md)
-* [Thêm tệp vào dự án](processing-images-gui/page-1.md)
+* [Thêm tệp vào dự án](processing-images-gui/adding-files-to-a-project.md)
 * [Chọn hình ảnh mục tiêu](processing-images-gui/choosing-target-images.md)
 * [Bắt đầu xử lý](processing-images-gui/starting-the-processing.md)
 * [Giám sát quá trình xử lý](processing-images-gui/monitoring-the-processing.md)
@@ -24,11 +24,11 @@
 
 ## THIẾT LẬP DỰ ÁN
 
-* [Cài đặt dự án](project-settings/page-2.md)
+* [Cài đặt dự án](project-settings/project-settings.md)
 * [Công thức chỉ số đa phổ](project-settings/multispectral-index-formulas.md)
 
 ## Trình xem ảnh (GUI)
 
-* [Mở một hình ảnh toàn màn hình](image-viewer-gui/page-3.md)
+* [Mở một hình ảnh toàn màn hình](image-viewer-gui/opening-an-image-full-screen.md)
 * [Lớp hình ảnh](image-viewer-gui/image-layers.md)
 * [Hộp cát chỉ mục/LUT](image-viewer-gui/index-lut-sandbox.md)
