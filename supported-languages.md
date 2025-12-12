@@ -2,61 +2,82 @@
 
 Chloros cung cấp hỗ trợ giao diện đầy đủ bằng **38 ngôn ngữ trên toàn thế giới**, giúp người dùng trên toàn cầu có thể truy cập được. Bạn có thể chuyển đổi ngôn ngữ ngay lập tức trên tất cả các giao diện: Máy tính để bàn, Trình duyệt, CLI và Python SDK.
 
-Cloros hỗ trợ các ngôn ngữ sau:
+Chloros hỗ trợ các ngôn ngữ sau:
 
-1. 🇺🇸 **Tiếng Anh**
-2. 🇪🇸 **Tiếng Tây Ban Nha** (tiếng Tây Ban Nha)
-3. 🇵🇹 **Người Bồ Đào Nha** (Tiếng Bồ Đào Nha)
-4. 🇫🇷 **Français** (tiếng Pháp)
-5. 🇩🇪 **Tiếng Đức** (tiếng Đức)
-6. 🇮🇹 **Tiếng Ý** (tiếng Ý)
-7. 🇯🇵 **日本語** (tiếng Nhật)
-8. 🇰🇷 **한국어** (tiếng Hàn)
-9. 🇨🇳 **简体中文** (Tiếng Trung giản thể)
-10. 🇹🇼 **繁體中文** (tiếng Trung phồn thể)
-11. 🇷🇺 **Русский** (tiếng Nga)
-12. 🇳🇱 **Hà Lan** (tiếng Hà Lan)
-13. 🇸🇦 **العربية** (tiếng Ả Rập)
-14. 🇵🇱 **Tiếng Ba Lan** (tiếng Ba Lan)
-15. 🇹🇷 **Türkçe** (tiếng Thổ Nhĩ Kỳ)
-16. 🇮🇳 **हिंदी** (Tiếng Hindi)
-17. 🇮🇩 **Tiếng Bahasa Indonesia** (tiếng Indonesia)
-18. 🇻🇳 **Tiếng Việt** (Tiếng Việt)
-19. 🇹🇭 **ไทย** (tiếng Thái)
-20. 🇸🇪 **Svenska** (Thụy Điển)
-21. 🇩🇰 **Dansk** (tiếng Đan Mạch)
-22. 🇳🇴 **Norsk** (Na Uy)
-23. 🇫🇮 **Suomi** (Phần Lan)
-24. 🇬🇷 **Ελληνικά** (tiếng Hy Lạp)
-25. 🇨🇿 **Čeština** (Séc)
-26. 🇭🇺 **Magyar** (tiếng Hungary)
-27. 🇷🇴 **Română** (tiếng Rumani)
-28. 🇺🇦 **Українська** (tiếng Ukraina)
-29. 🇧🇷 **Português Brasileiro** (tiếng Bồ Đào Nha Brazil)
-30. 🇭🇰 **粵語** (tiếng Quảng Đông)
-31. 🇲🇾 **Tiếng Bahasa Melayu** (tiếng Mã Lai)
-32. 🇸🇰 **Slovenčina** (Tiếng Slovak)
-33. 🇧🇬 **Български** (tiếng Bungari)
-34. 🇭🇷 **Hrvatski** (tiếng Croatia)
-35. 🇱🇹 **Lietuvių** (tiếng Litva)
-36. 🇱🇻 **Latviešu** (tiếng Latvia)
-37. 🇪🇪 **Eesti** (tiếng Estonia)
-38. 🇸🇮 **Slovenščina** (tiếng Slovenia)
+| # | Ngôn ngữ | Tên bản xứ | Mã CLI |
+|---|----------|-------------|----------|
+| 1 | 🇺🇸 Tiếng Anh | Tiếng Anh | `en` |
+| 2 | 🇪🇸 Tiếng Tây Ban Nha | Tiếng Tây Ban Nha | `es` |
+| 3 | 🇵🇹 Tiếng Bồ Đào Nha | Bồ Đào Nha | `pt` |
+| 4 | 🇫🇷 Tiếng Pháp | Tiếng Pháp | `fr` |
+| 5 | 🇩🇪 Tiếng Đức | tiếng Đức | `de` |
+| 6 | 🇮🇹 Ý | Tiếng Ý | `it` |
+| 7 | 🇯🇵 Tiếng Nhật | 日本語 | `ja` |
+| 8 | 🇰🇷 Tiếng Hàn | 한국어 | `ko` |
+| 9 | 🇨🇳 Tiếng Trung (Giản thể) | 简体中文 | `zh` |
+| 10 | 🇹🇼 Tiếng Trung (Phồn thể) | 繁體中文 | `zh-TW` |
+| 11 | 🇷🇺 Tiếng Nga | Русский | `ru` |
+| 12 | 🇳🇱 Tiếng Hà Lan | Hà Lan | `nl` |
+| 13 | 🇸🇦 Tiếng Ả Rập | العربية | `ar` |
+| 14 | 🇵🇱 Tiếng Ba Lan | Tiếng Ba Lan | `pl` |
+| 15 | 🇹🇷 Tiếng Thổ Nhĩ Kỳ | Türkçe | `tr` |
+| 16 | 🇮🇳 Tiếng Hindi | हिंदी | `hi` |
+| 17 | 🇮🇩 Tiếng Indonesia | Tiếng Bahasa Indonesia | `id` |
+| 18 | 🇻🇳 Tiếng Việt | Tiếng Việt | `vi` |
+| 19 | 🇹🇭 Thái | ไทย | `th` |
+| 20 | 🇸🇪 Tiếng Thụy Điển | Svenska | `sv` |
+| 21 | 🇩🇰 Tiếng Đan Mạch | Đan Mạch | `da` |
+| 22 | 🇳🇴 Na Uy | Norsk | `no` |
+| 23 | 🇫🇮 Phần Lan | Suomi | `fi` |
+| 24 | 🇬🇷 Tiếng Hy Lạp | Ελληνικά | `el` |
+| 25 | 🇨🇿 Tiếng Séc | Čeština | `cs` |
+| 26 | 🇭🇺 Tiếng Hungary | Tiếng Magyar | `hu` |
+| 27 | 🇷🇴 Tiếng Rumani | Română | `ro` |
+| 28 | 🇺🇦 Tiếng Ukraina | Українська | `uk` |
+| 29 | 🇧🇷 Tiếng Bồ Đào Nha Brazil | Bồ Đào Nha Brasileiro | `pt-BR` |
+| 30 | 🇭🇰 Quảng Đông | 粵語 | `zh-HK` |
+| 31 | 🇲🇾 Mã Lai | Tiếng Bahasa Melayu | `ms` |
+| 32 | 🇸🇰 Tiếng Slovak | Tiếng Slovenia | `sk` |
+| 33 | 🇧🇬 Tiếng Bulgaria | Български | `bg` |
+| 34 | 🇭🇷 Tiếng Croatia | Hrvatski | `hr` |
+| 35 | 🇱🇹 Tiếng Litva | Liệtuvių | `lt` |
+| 36 | 🇱🇻 Tiếng Latvia | Latviešu | `lv` |
+| 37 | 🇪🇪 Tiếng Estonia | Eesti | `et` |
+| 38 | 🇸🇮 Tiếng Slovenia | Tiếng Sloveniaščina | `sl` |
 
 ## Cách thay đổi ngôn ngữ
 
-### Trong trình duyệt/máy tính để bàn Chloros
+### Trong Máy tính để bàn/Trình duyệt Chloros
 
 1. Mở cài đặt ứng dụng
 2. Điều hướng đến menu chọn ngôn ngữ
 3. Chọn ngôn ngữ ưa thích của bạn từ danh sách
 4. Giao diện sẽ cập nhật ngay lập tức
 
-### Trong Cloros CLI
+### Trong Chloros CLI
 
-Sử dụng tham số ngôn ngữ với các lệnh của bạn để đặt ngôn ngữ giao diện.
+Sử dụng lệnh `language` để xem hoặc thay đổi ngôn ngữ giao diện CLI:
 
-### Trong SDK Python của Chloros
+```bash
+# View current language
+chloros-cli language
+
+# Change to Spanish
+chloros-cli language es
+
+# Change to Chinese (Simplified)
+chloros-cli language zh
+
+# Change to Brazilian Portuguese
+chloros-cli language pt-BR
+
+# List all available languages
+chloros-cli language --list
+```
+
+Để biết thêm chi tiết, hãy xem [tài liệu CLI](CLI.md).
+
+### Trong Chloros Python SDK
 
 Đặt tham số ngôn ngữ khi khởi tạo SDK để nhận thông báo và kết quả đầu ra bằng ngôn ngữ ưa thích của bạn.
 
@@ -64,8 +85,8 @@ Sử dụng tham số ngôn ngữ với các lệnh của bạn để đặt ng�
 
 Tất cả 38 ngôn ngữ đều được hỗ trợ đầy đủ trên:
 
-* **Chloros Desktop** - Bản dịch GUI hoàn chỉnh
-* **Trình duyệt Cloros** - Giao diện web ở mọi ngôn ngữ
+* **Máy tính để bàn Chloros** - Bản dịch GUI hoàn chỉnh
+* **Trình duyệt Chloros** - Giao diện web ở tất cả các ngôn ngữ
 * **Chloros CLI** - Giao diện dòng lệnh và thông báo đầu ra
 * **Chloros Python SDK** - Thông báo và tài liệu API
 
