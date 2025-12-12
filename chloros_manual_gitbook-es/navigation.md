@@ -1,47 +1,47 @@
-# GUI : Navigation
+# GUI: Điều hướng
 
-When you first launch Chloros and Chloros (Browser) it will start up its backend. Once it is ready the top left main menu icon will be revealed <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
+Khi bạn khởi chạy Chloros và Chloros (Trình duyệt) lần đầu tiên, nó sẽ khởi động phần phụ trợ của nó. Khi nó đã sẵn sàng, biểu tượng menu chính trên cùng bên trái sẽ hiển thị <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
 
-<figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/header.JPG" alt="">_<figcaption></figcaption></figure>
 
-From left to right the top header contains:
+Từ trái sang phải tiêu đề trên cùng chứa:
 
-### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Main Menu
+### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Menu chính
 
-From the main menu you can start a new project, open an existing project or open the project folder.
+Từ menu chính, bạn có thể bắt đầu một dự án mới, mở một dự án hiện có hoặc mở thư mục dự án.
 
-### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Play/Start Button
+### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Nút Phát/Bắt đầu
 
-When enabled, the start processing button starts the image processing pipeline.
+Khi được bật, nút bắt đầu xử lý sẽ khởi động quy trình xử lý hình ảnh.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Progress Bar <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Thanh tiến trình <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
 
-In the free Chloros mode, which processes all files sequentially, the progress bar will show 2 stages: Target Detect and Processing.
+Ở chế độ Chloros miễn phí, xử lý tất cả các tệp một cách tuần tự, thanh tiến trình sẽ hiển thị 2 giai đoạn: Phát hiện và Xử lý Mục tiêu.
 
-In the paid Chloros+ licensed mode, which process all files simultaneously, the progress bar shows 4 stages: Detecting, Analyzing, Calibrating, Exporting. If you hover your mouse cursor over the Chloros+ progress bar it will drop down the extended 4 progress bar panel so you can follow along. Clicking the top progress bar will freeze the dropdown panel, clicking again unfreezes it.
+Trong chế độ được cấp phép Chloros+ trả phí, xử lý đồng thời tất cả các tệp, thanh tiến trình hiển thị 4 giai đoạn: Phát hiện, Phân tích, Hiệu chỉnh, Xuất. Nếu bạn di con trỏ chuột qua thanh tiến trình Chloros+, nó sẽ thả xuống bảng điều khiển 4 thanh tiến trình mở rộng để bạn có thể theo dõi. Nhấp vào thanh tiến trình trên cùng sẽ đóng băng bảng thả xuống, nhấp lại sẽ mở khóa.
 
-<figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/plus_prog.JPG" alt="">_<figcaption></figcaption></figure>
 
-## Side Menu
+## Menu bên
 
-The left sidebar menu contains various icons to interact with:
+Menu thanh bên trái chứa nhiều biểu tượng khác nhau để tương tác:
 
-#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Project Settings](project-settings/page-2.md)
+#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Cài đặt dự án](project-settings/page-2.md)
 
-The Project Setting tab allows you to adjust project global and project processing settings. Adjust these prior to starting to process your files.
+Tab Cài đặt dự án cho phép bạn điều chỉnh cài đặt xử lý dự án và toàn cầu của dự án. Điều chỉnh những điều này trước khi bắt đầu xử lý tệp của bạn.
 
-#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> File Browser
+#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Trình duyệt tệp
 
-Add files/folders and remove files from the project. Duplicate files are ignored. Check the target column box for any target image, and the processing will only look at checked images for targets, greatly speeding up your processing time.
+Thêm tệp/thư mục và xóa tệp khỏi dự án. Các tập tin trùng lặp sẽ bị bỏ qua. Chọn hộp cột mục tiêu để tìm bất kỳ hình ảnh mục tiêu nào và quá trình xử lý sẽ chỉ xem xét các hình ảnh đã chọn để tìm mục tiêu, giúp tăng tốc đáng kể thời gian xử lý của bạn.
 
-#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Image Viewer](image-viewer-gui/page-3.md)
+#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Trình xem hình ảnh](image-viewer-gui/page-3.md)
 
-When an image is clicked in the main image viewer it is opened full screen in the Image Viewer tab.
+Khi một hình ảnh được nhấp vào trong trình xem hình ảnh chính, nó sẽ được mở toàn màn hình trong tab Trình xem hình ảnh.
 
-#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Debug Log
+#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Nhật ký gỡ lỗi
 
-Review the log for debug prints when issues happen. Copy/download the log and send to [MAPIR Support](https://www.mapir.camera/community/contact) for assistance.
+Xem lại nhật ký để tìm các bản in gỡ lỗi khi có sự cố xảy ra. Sao chép/tải nhật ký xuống và gửi tới [Hỗ trợ MAPIR](https://www.mapir.camera/community/contact) để được hỗ trợ.
 
-#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [User Login](chloros+-login.md)
+#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Đăng nhập người dùng](chloros+-login.md)
 
-The user login sidebar allows you to log into your Chloros+ account to unlock advanced features. You can also view the current application version, as well as adjust the language of the displayed text in Chloros GUI and CLI.
+Thanh bên đăng nhập của người dùng cho phép bạn đăng nhập vào tài khoản Chloros+ của mình để mở khóa các tính năng nâng cao. Bạn cũng có thể xem phiên bản ứng dụng hiện tại cũng như điều chỉnh ngôn ngữ của văn bản được hiển thị trong GUI và CLI của Chloros.

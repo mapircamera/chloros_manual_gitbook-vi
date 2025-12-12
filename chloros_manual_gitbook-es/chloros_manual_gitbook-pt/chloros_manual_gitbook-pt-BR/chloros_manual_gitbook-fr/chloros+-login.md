@@ -1,43 +1,43 @@
-# Chloros+ Login
+# Cloros+ Đăng nhập
 
-## Chloros and Chloros (Browser) Login
+## Đăng nhập Chloros và Chloros (Trình duyệt)
 
-The user <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+Menu thanh bên <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> của người dùng cho phép bạn đăng nhập vào tài khoản Chloros+ của mình và mở khóa các tính năng bổ sung.
 
-When logged in your account details will be shown:
+Khi đăng nhập chi tiết tài khoản của bạn sẽ được hiển thị:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375">_<figcaption></figcaption></figure>
 
-## CLI Login
+## Đăng nhập CLI
 
-Login with your Chloros+ credentials to enable CLI processing.
+Đăng nhập bằng thông tin đăng nhập Chloros+ của bạn để kích hoạt xử lý CLI.
 
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli login <email> <password>
 ```
 
-**Example:**
+**Ví dụ:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
+{% gợi ý style="warning" %}
+**Ký tự đặc biệt**: Sử dụng dấu ngoặc đơn xung quanh mật khẩu chứa các ký tự như `$`, `!` hoặc dấu cách.
 {% endhint %}
 
-**Output:**
+**Đầu ra:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt="">_<figcaption></figcaption></figure>
 
-### Plan Expiration
+### Gói hết hạn
 
-The plan expiration in the GUI shows when your license will become invalid. For recurring monthly subscriptions the expiration is at the end of the month. For yearly subscriptions it is a year after you started the subscription. The license check requires a monthly internet connection to verify, with a 30 day grace period.
+Gói hết hạn trong GUI hiển thị khi giấy phép của bạn không còn hiệu lực. Đối với đăng ký định kỳ hàng tháng, thời gian hết hạn là vào cuối tháng. Đối với đăng ký hàng năm, thời gian là một năm sau khi bạn bắt đầu đăng ký. Việc kiểm tra giấy phép yêu cầu kết nối Internet hàng tháng để xác minh, với thời gian gia hạn 30 ngày.
 
-### Device Limit
+### Giới hạn thiết bị
 
-Each Chloros+ plan offers a different number of registered devices. Each device you log into with a Chloros+ account will count towards your number of registered devices. You can rename and remove a device on your MAPIR Cloud account page.
+Mỗi gói Chloros+ cung cấp số lượng thiết bị đã đăng ký khác nhau. Mỗi thiết bị bạn đăng nhập bằng tài khoản Chloros+ sẽ được tính vào số lượng thiết bị đã đăng ký của bạn. Bạn có thể đổi tên và xóa thiết bị trên trang tài khoản Đám mây MAPIR của mình.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Chloros+ Plan</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Devices Supported</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr>_TAG_3__Gói Cloros+</th><th align="center">ĐỒNG</th><th align="center">BRONZE</th><th align="center">BẠC</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Thiết bị Được hỗ trợ</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody>_TAG_29__

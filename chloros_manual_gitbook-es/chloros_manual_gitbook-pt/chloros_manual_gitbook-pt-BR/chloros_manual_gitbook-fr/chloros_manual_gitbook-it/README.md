@@ -1,41 +1,41 @@
-﻿# Chloros User Manual - Italian
+﻿#Hướng dẫn sử dụng Chloros - Tiếng Ý
 
-This is the Italian translation of the Chloros Professional Multispectral Image Processing Software user manual.
+Đây là bản dịch tiếng Ý của hướng dẫn sử dụng Phần mềm xử lý ảnh đa phổ chuyên nghiệp Chloros.
 
-## About Chloros
+## Giới thiệu về Cloros
 
-Chloros is professional multispectral image processing software that transforms imagery into actionable insights with powerful desktop software, command-line tools, and Python API.
+Chloros là phần mềm xử lý hình ảnh đa phổ chuyên nghiệp giúp biến hình ảnh thành thông tin chi tiết hữu ích bằng phần mềm máy tính để bàn mạnh mẽ, công cụ dòng lệnh và API Python.
 
-### Features
-- Desktop and Browser interfaces
-- CLI and Python SDK (Chloros+)
-- Available in 28 languages
-- 24+ vegetation indices
-- Reflectance calibration
-- Ambient light sensor support
+### Đặc trưng
+- Giao diện máy tính để bàn và trình duyệt
+- CLI và Python SDK (Chloros+)
+- Có sẵn trong 28 ngôn ngữ
+- 24+ chỉ số thực vật
+- Hiệu chuẩn phản xạ
+- Hỗ trợ cảm biến ánh sáng xung quanh
 
-## Documentation
+## Tài liệu
 
-This manual is synchronized with GitBook. The documentation covers:
-- Installation and setup
-- Image processing workflows
-- Calibration procedures
-- Vegetation index calculations
-- CLI and Python SDK usage
-- API reference
+Hướng dẫn này được đồng bộ hóa với GitBook. Tài liệu bao gồm:
+- Cài đặt và thiết lập
+- Quy trình xử lý hình ảnh
+- Quy trình hiệu chuẩn
+- Tính toán chỉ số thực vật
+- Cách sử dụng CLI và Python SDK
+- Tham chiếu API
 
-## Links
+## Liên kết
 
-- [Main Website](https://www.mapir.camera)
-- [Chloros Download](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
-- [Chloros+ Plans](https://cloud.mapir.camera/pricing)
-- [English Documentation](https://mapir.gitbook.io/chloros)
-- [Support](https://www.mapir.camera/community/contact)
+- [Trang web chính](https://www.mapir.camera)
+- [Tải xuống clo](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
+- [Gói Cloros+](https://cloud.mapir.camera/pricing)
+- [Tài liệu tiếng Anh](https://mapir.gitbook.io/chloros)
+- [Ủng hộ](https://www.mapir.camera/community/contact)
 
-## Translation Status
+## Trạng thái dịch
 
-Translation in progress - This manual will be translated to Italian soon.
+Đang tiến hành dịch - Sách hướng dẫn này sẽ sớm được dịch sang tiếng Ý.
 
-## License
+## Giấy phép
 
-Copyright MAPIR Camera. All rights reserved.
+Bản quyền Camera MAPIR. Mọi quyền được bảo lưu.

@@ -1,34 +1,34 @@
-# Table of contents
+# Mục lục
 
-* [Getting Started](README.md)
-* [GUI : Navigation](navigation.md)
-* [GUI : Projects](projects.md)
-* [CLI : Command Line](CLI.md)
-* [API : Python SDK](api-python-sdk.md)
-* [Supported Cameras](supported-cameras.md)
-* [Output Image Formats](output-image-formats.md)
-* [Chloros+ Login](chloros+-login.md)
-* [Calibration Targets](calibration-targets.md)
-* [Supported Languages](supported-languages.md)
-* [Download](download.md)
-* [FAQ](faq.md)
+* [Bắt đầu](README.md)
+* [GUI: Điều hướng](navigation.md)
+* [GUI : Dự án](projects.md)
+* [CLI: Dòng lệnh](CLI.md)
+* [API: SDK Python](api-python-sdk.md)
+* [Máy ảnh được hỗ trợ](supported-cameras.md)
+* [Định dạng hình ảnh đầu ra](output-image-formats.md)
+* [Cloros+ Đăng nhập](chloros+-login.md)
+* [Mục tiêu hiệu chuẩn](calibration-targets.md)
+* [Ngôn ngữ được hỗ trợ](supported-languages.md)
+* [Tải xuống](download.md)
+* [Câu hỏi thường gặp](faq.md)
 
-## Processing Images (GUI)
+## Xử lý hình ảnh (GUI)
 
-* [Adjusting Project Settings](processing-images-gui/adjusting-project-settings.md)
-* [Adding Files to a Project](processing-images-gui/page-1.md)
-* [Choosing Target Images](processing-images-gui/choosing-target-images.md)
-* [Starting the Processing](processing-images-gui/starting-the-processing.md)
-* [Monitoring the Processing](processing-images-gui/monitoring-the-processing.md)
-* [Finishing the Processing](processing-images-gui/finishing-the-processing.md)
+* [Điều chỉnh cài đặt dự án](processing-images-gui/adjusting-project-settings.md)
+* [Thêm tệp vào dự án](processing-images-gui/page-1.md)
+* [Chọn hình ảnh mục tiêu](processing-images-gui/choosing-target-images.md)
+* [Bắt đầu xử lý](processing-images-gui/starting-the-processing.md)
+* [Giám sát quá trình xử lý](processing-images-gui/monitoring-the-processing.md)
+* [Kết thúc quá trình xử lý](processing-images-gui/finishing-the-processing.md)
 
-## PROJECT SETTINGS
+## THIẾT LẬP DỰ ÁN
 
-* [Project Settings](project-settings/page-2.md)
-* [Multispectral Index Formulas](project-settings/multispectral-index-formulas.md)
+* [Cài đặt dự án](project-settings/page-2.md)
+* [Công thức chỉ số đa phổ](project-settings/multispectral-index-formulas.md)
 
-## IMAGE VIEWER (GUI)
+## Trình xem ảnh (GUI)
 
-* [Opening an Image Full Screen](image-viewer-gui/page-3.md)
-* [Image Layers](image-viewer-gui/image-layers.md)
-* [Index/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Mở một hình ảnh toàn màn hình](image-viewer-gui/page-3.md)
+* [Lớp hình ảnh](image-viewer-gui/image-layers.md)
+* [Hộp cát chỉ mục/LUT](image-viewer-gui/index-lut-sandbox.md)
