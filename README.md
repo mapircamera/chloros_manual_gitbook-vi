@@ -1,47 +1,47 @@
 ---
-metaLinks: {}
+liên kết meta: {}
 ---
 
-# Getting Started
+# Bắt đầu
 
 <div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
 
-Chloros is a software application from [MAPIR](https://www.mapir.camera) to process images and other sensor data.
+Chloros là một ứng dụng phần mềm của [MAPIR](https://www.mapir.camera) để xử lý hình ảnh và dữ liệu cảm biến khác.
 
 ***
 
-Chloros is available in 4 application modes:
+Cloros có sẵn ở 4 chế độ ứng dụng:
 
-## Chloros: Desktop GUI application
+## Chloros: Ứng dụng GUI trên máy tính để bàn
 
-\[Recommended] Standalone separate window with all features.
+\[Khuyến nghị] Cửa sổ riêng biệt độc lập với tất cả các tính năng.
 
-## Chloros (Browser): Web-based GUI interface
+## Chloros (Trình duyệt): Giao diện GUI dựa trên web
 
-Runs in your web browser (Chrome/Edge). Best for slower computers with <4GB VRAM.
+Chạy trong trình duyệt web của bạn (Chrome/Edge). Tốt nhất cho các máy tính chậm hơn với <4GB VRAM.
 
-## [Chloros CLI: Command line interface](CLI.md)
+## [Chloros CLI: Giao diện dòng lệnh](CLI.md)
 
-Command-line batch processing. Perfect for automation, scripting, and advanced workflows. _CLI requires a Chloros+ license to access._
+Xử lý hàng loạt dòng lệnh. Hoàn hảo cho tự động hóa, viết kịch bản và quy trình làm việc nâng cao. _CLI yêu cầu giấy phép Chloros+ để truy cập._
 
-## [Chloros API: Python SDK](api-python-sdk.md)
+## [API Chloros: SDK Python](api-python-sdk.md)
 
-Programmatic Python interface for automation and custom workflows. Perfect for research pipelines, integration with existing Python applications, and building custom tools. _API requires a Chloros+ license to access._
+Giao diện Python có lập trình để tự động hóa và quy trình làm việc tùy chỉnh. Hoàn hảo cho quy trình nghiên cứu, tích hợp với các ứng dụng Python hiện có và xây dựng các công cụ tùy chỉnh. _API yêu cầu giấy phép Chloros+ để truy cập._
 
 ***
 
-## Chloros+
+## Clo+
 
-While Chloros is free to use for most tasks, you may find you want more. That is where a paid license for Chloros+ can benefit you. With a Chloros+ license you can unlock new features such as:
+Mặc dù Chloros được sử dụng miễn phí cho hầu hết các tác vụ nhưng bạn có thể thấy mình muốn nhiều hơn thế. Đó là lúc giấy phép trả phí cho Chloros+ có thể mang lại lợi ích cho bạn. Với giấy phép Chloros+, bạn có thể mở khóa các tính năng mới như:
 
-* **Multi-threaded Processing**: greatly speed up image processing for larger projects by simultaneously processing images through the pipeline.
-* **GPU (CUDA) Acceleration**: take advantage of today's higher GPU memory options to further speed up the image processing pipeline. We recommend 4GB or more of VRAM for best results.
-* **Chloros+** [**CLI**](CLI.md) **Access**: run Chloros+ from the command line to automate and integrate into your own software.
-* **Chloros+** [**API**](api-python-sdk.md) **Access:** run Chloros+ from Python for programmatic control, enabling seamless integration with your research pipelines, data analysis workflows, and custom applications.
-* **Multiple Device Usage**: each Chloros+ license allows for 2+ devices to be registered. Use your MAPIR Cloud account to manage registered devices. Add support for more devices by upgrading your Chloros+ license.
-* **Custom Multispectral Index Formulas:** enter in custom multispectral indices in the Chloros raster calculators, both for processing and the image viewing sandbox.
+* **Xử lý đa luồng**: tăng tốc đáng kể quá trình xử lý hình ảnh cho các dự án lớn hơn bằng cách xử lý đồng thời hình ảnh thông qua quy trình.
+* **Tăng tốc GPU (CUDA)**: tận dụng các tùy chọn bộ nhớ GPU cao hơn hiện nay để tăng tốc hơn nữa quy trình xử lý hình ảnh. Chúng tôi khuyên dùng VRAM 4GB trở lên để có kết quả tốt nhất.
+* **Chloros+** [**CLI**](CLI.md) **Access**: chạy Chloros+ từ dòng lệnh để tự động hóa và tích hợp vào phần mềm của riêng bạn.
+* **Chloros+** [**API**](api-python-sdk.md) **Truy cập:** chạy Chloros+ từ Python để kiểm soát theo chương trình, cho phép tích hợp liền mạch với quy trình nghiên cứu, quy trình phân tích dữ liệu và ứng dụng tùy chỉnh của bạn.
+* **Sử dụng nhiều thiết bị**: mỗi giấy phép Chloros+ cho phép đăng ký hơn 2 thiết bị. Sử dụng tài khoản Đám mây MAPIR của bạn để quản lý các thiết bị đã đăng ký. Thêm hỗ trợ cho nhiều thiết bị hơn bằng cách nâng cấp giấy phép Chloros+ của bạn.
+* **Công thức chỉ mục đa phổ tùy chỉnh:** nhập các chỉ mục đa phổ tùy chỉnh vào máy tính raster Chloros, cho cả để xử lý và hộp cát xem hình ảnh.
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Chloros+ Pricing &#x26; Signup</a></p>
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary" data-icon="envira">Giá Chloros+ & Đăng ký</a></p>
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
