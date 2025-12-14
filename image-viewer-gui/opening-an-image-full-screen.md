@@ -8,20 +8,18 @@ Trình xem ảnh Chloros cung cấp giao diện toàn màn hình chuyên dụng 
 
 Cách phổ biến nhất để mở hình ảnh trong Trình xem ảnh:
 
-1. Đảm bảo bạn đang ở trong tab **Trình duyệt tệp** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Nhấp vào **hình thu nhỏ** bất kỳ của hình ảnh trong lưới hình ảnh
-3. Hình ảnh mở ra trong **khu vực xem trước chính** (giữa màn hình)
+1. Đảm bảo bạn đang ở trong tab **Trình duyệt tệp**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Nhấp vào**hình thu nhỏ**bất kỳ của hình ảnh trong lưới hình ảnh
+3. Hình ảnh mở ra trong**khu vực xem trước chính**(giữa màn hình)
 4. Hình ảnh hiện đã được tải và sẵn sàng để xem toàn màn hình
 
 ### Mở tab Trình xem ảnh
 
 Sau khi tải hình ảnh vào khu vực xem trước:
 
-1. Nhấp vào biểu tượng **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
+1. Nhấp vào biểu tượng**Trình xem hình ảnh**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
 2. Tab Trình xem Hình ảnh mở ra, hiển thị toàn màn hình hình ảnh đã chọn
-3. Các công cụ xem và phân tích nâng cao có sẵn ở thanh bên trái
-
-***
+3. Các công cụ xem và phân tích nâng cao có sẵn ở thanh bên trái***
 
 ## Tổng quan về giao diện trình xem hình ảnh
 
@@ -32,9 +30,7 @@ Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 * **Độ phân giải đầy đủ**: Hình ảnh được hiển thị ở độ phân giải gốc
 * **Có thể thu phóng**: Sử dụng điều khiển hoặc con lăn chuột để thu phóng
 * **Có thể xoay**: Nhấp và kéo để di chuyển xung quanh khi được phóng to
-* **Tỷ lệ khung hình được duy trì**: Tỷ lệ hình ảnh theo tỷ lệ
-
-***
+* **Tỷ lệ khung hình được duy trì**: Tỷ lệ hình ảnh theo tỷ lệ***
 
 ## Tùy chọn xem
 
@@ -44,29 +40,23 @@ Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 
 Điều hướng qua bộ hình ảnh của bạn bằng phím tắt hoặc nút:
 
-* **Hình ảnh tiếp theo**: Nhấp vào nút → hoặc nhấn phím **→** (Mũi tên phải)
-* **Hình trước**: Bấm vào nút ← hoặc nhấn phím **←** (Mũi tên trái)
+* **Hình ảnh tiếp theo**: Nhấp vào nút → hoặc nhấn phím**→** (Mũi tên phải)
+* **Hình trước**: Bấm vào nút ← hoặc nhấn phím**←** (Mũi tên trái)
 * **Chuyển đến hình ảnh cụ thể**: Quay lại Trình duyệt Tệp và nhấp vào hình thu nhỏ mong muốn
 
 #### Điều khiển thu phóng
 
-Điều chỉnh độ phóng đại để kiểm tra chi tiết hình ảnh:
+Điều chỉnh độ phóng đại để kiểm tra chi tiết hình ảnh:**Phóng to:***Nhấp vào nút******
 
-**Phóng to:**
+ (Cộng)
+* Nhấn phím **++ hoặc**=**
+* Cuộn con lăn chuột **lên** **Thu nhỏ:***
 
-* Nhấp vào nút ****** (Cộng)
-* Nhấn phím **++ hoặc **=**
-* Cuộn con lăn chuột **lên**
-
-**Thu nhỏ:**
-
-* Nhấp vào nút **−** (Trừ)
+Nhấp vào nút**−** (Trừ)
 * Nhấn phím **−** (Dấu trừ)
-* Cuộn con lăn chuột **xuống**
+* Cuộn con lăn chuột **xuống** **Vừa với màn hình:***
 
-**Vừa với màn hình:**
-
-* Nhấp vào nút **↔** (Vừa vặn)
+Nhấp vào nút**↔** (Vừa vặn)
 * Nhấn phím **0** (Không)
 * Click đúp vào hình ảnh
 
@@ -75,34 +65,19 @@ Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 Khi phóng to ra ngoài kích thước màn hình:
 
 1. Di chuyển con trỏ chuột lên hình ảnh
-2. Nhấp và **giữ chuột trái**
-3. **Kéo** để di chuyển hình ảnh xung quanh
-4. Thả tay ra để dừng lia máy
-
-**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ
-
-***
+2. Nhấp và **giữ chuột trái**3.** Kéo**để di chuyển hình ảnh xung quanh
+4. Thả tay ra để dừng lia máy**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ***
 
 ## Kiểm tra giá trị pixel
 
 ### Xem giá trị pixel tại con trỏ
 
-Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel sẽ hiển thị theo thời gian thực:
-
-**Vị trí hiển thị giá trị:**
-
-* **Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT**
-* **Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu**
-* Hiển thị giá trị cho pixel **dưới con trỏ hoặc được đánh dấu**
-* Cập nhật khi bạn di chuyển chuột
-
-***
+Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel sẽ hiển thị theo thời gian thực:**Vị trí hiển thị giá trị:***
+** Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT*** ** Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu***Hiển thị giá trị cho pixel** dưới con trỏ hoặc được đánh dấu***Cập nhật khi bạn di chuyển chuột***
 
 ## Loại hình ảnh bạn có thể xem
 
-### Ảnh gốc (Xử lý trước)
-
-**Hình ảnh RAW + JPG từ máy ảnh:**
+### Ảnh gốc (Xử lý trước)**Hình ảnh RAW + JPG từ máy ảnh:**
 
 * Hiển thị dữ liệu RAW như được xem trước
 * Hiển thị giá trị gốc, chưa được sửa
@@ -132,15 +107,13 @@ Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel 
 
 Áp dụng các chỉ số đa phổ và Bảng tra cứu màu sắc:
 
-1. Xác định vị trí **Index/LUT Sandbox** trong **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> thanh bên
+1. Xác định vị trí**Index/LUT Sandbox**trong**Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> thanh bên
 2. Chọn chỉ số thực vật (NDVI, NDRE, v.v.)
 3. Chọn công thức đa phổ hoặc tạo công thức tùy chỉnh của riêng bạn (chỉ Chloros+)
 4. Áp dụng gradient LUT màu để trực quan hóa
 5. Điều chỉnh phạm vi giá trị và ngưỡng
 
-Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết hướng dẫn chi tiết.
-
-***
+Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết hướng dẫn chi tiết.***
 
 ## Phím tắt
 
@@ -153,7 +126,7 @@ Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết hướng dẫn chi ti
 
 ### Phóng
 
-* ******* hoặc **=**: Phóng to
+* *******hoặc**=**: Phóng to
 * **−**: Thu nhỏ
 * **0** (Không): Vừa với màn hình
 * **Con lăn chuột**: Phóng to/thu nhỏ
@@ -167,9 +140,7 @@ Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết hướng dẫn chi ti
 ### Khác
 
 * **Ctrl+S**: Lưu hình ảnh hiện tại
-* **F**: Chế độ toàn màn hình (nếu có)
-
-***
+* **F**: Chế độ toàn màn hình (nếu có)***
 
 ### Xác minh tính toán chỉ số
 
@@ -182,15 +153,11 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
    * **GNDVI**: Tương tự NDVI nhưng nhạy cảm với diệp lục
 3. Kiểm tra thảm thực vật:
    * **Đất**: Gần 0 hoặc hơi âm
-   * **Nước**: Giá trị âm (-0,5 đến 0)
-
-***
+   * **Nước**: Giá trị âm (-0,5 đến 0)***
 
 ## Khắc phục sự cố khi xem
 
-### Ảnh không mở được
-
-**Nguyên nhân có thể:**
+### Ảnh không mở được**Nguyên nhân có thể:**
 
 * Tệp bị hỏng trong quá trình xử lý
 * Định dạng tệp không được hỗ trợ
@@ -203,9 +170,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
 3. Đóng các ứng dụng khác để giải phóng bộ nhớ
 4. Thử hình ảnh nhỏ hơn/khác
 
-### Hiển thị hình ảnh đen hoặc trắng
-
-**Nguyên nhân có thể:**
+### Hiển thị hình ảnh đen hoặc trắng**Nguyên nhân có thể:**
 
 * Phạm vi giá trị ngoài khả năng hiển thị
 * Hình ảnh nổi 32-bit có giá trị bất thường
@@ -217,9 +182,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
 2. Thử mở trong QGIS hoặc tương tự với điều chỉnh phạm vi tự động
 3. Kiểm tra nhật ký gỡ lỗi trong quá trình xử lý để tìm lỗi
 
-### Giá trị pixel có vẻ sai
-
-**Nguyên nhân có thể:**
+### Giá trị pixel có vẻ sai**Nguyên nhân có thể:**
 
 * Xem hình ảnh sai (bản gốc so với đã xử lý)
 * Hiệu chuẩn không được áp dụng chính xác
@@ -230,18 +193,16 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
 
 1. Xác minh rằng bạn đang xem đầu ra được xử lý (kiểm tra hậu tố tên tệp)
 2. Kiểm tra trạng thái nút chế độ phần trăm
-3. So sánh với các hình ảnh nổi tiếng từ cùng một tập dữ liệu
-
-***
+3. So sánh với các hình ảnh nổi tiếng từ cùng một tập dữ liệu***
 
 ## Các bước tiếp theo
 
 Bây giờ bạn có thể xem hình ảnh toàn màn hình:
 
-* [**Image Layers**](image-layers.md) - Tìm hiểu về hiển thị đa băng tần
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Áp dụng các chỉ mục tùy chỉnh và ánh xạ màu
-* [**Công thức chỉ mục đa phổ**](../project-settings/multispectral-index-formulas.md) - Hiểu các chỉ mục có sẵn
+* [ **Image Layers**](image-layers.md) - Tìm hiểu về hiển thị đa băng tần
+* [ **Index/LUT Sandbox**](index-lut-sandbox.md) - Áp dụng các chỉ mục tùy chỉnh và ánh xạ màu
+* [ **Công thức chỉ mục đa phổ**](../project-settings/multispectral-index-formulas.md) - Hiểu các chỉ mục có sẵn
 
 Để biết quy trình xử lý, hãy xem:
 
-* [**Đang xử lý hình ảnh (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Hướng dẫn xử lý hoàn chỉnh
+* [ **Đang xử lý hình ảnh (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Hướng dẫn xử lý hoàn chỉnh

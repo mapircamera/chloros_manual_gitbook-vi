@@ -1,4 +1,4 @@
-# CLI : Dòng lệnh
+# CLI: Dòng lệnh
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -6,24 +6,23 @@
 
 ### Các tính năng chính
 
-* 🚀 **Tự động hóa** - Xử lý hàng loạt tập lệnh của nhiều bộ dữ liệu
+* 🚀 **Tự động hóa** - Xử lý hàng loạt tập lệnh của nhiều tập dữ liệu
 * 🔗 **Tích hợp** - Nhúng vào quy trình công việc và quy trình hiện có
-* 💻 **Thao tác không đầu** - Chạy không cần GUI
+* 💻 **Hoạt động không đầu** - Chạy không cần GUI
 * 🌍 **Đa ngôn ngữ** - Hỗ trợ 38 ngôn ngữ
-* ⚡ **Xử lý song song** - Tự động điều chỉnh quy mô theo CPU của bạn (tối đa 16 nhân viên song song)
+* ⚡ **Xử lý song song** - Tự động chia tỷ lệ cho CPU của bạn (tối đa 16 nhân viên song song)
 
 ### Yêu cầu
 
-| Yêu cầu | Chi tiết |
+| Yêu cầu          | Chi tiết                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| **Hệ điều hành** | Windows 10/11 (64-bit) |
-| **Giấy phép** | Chloros+ ([yêu cầu gói trả phí](https://cloud.mapir.Camera/pricing)) |
-| **Bộ nhớ** | RAM tối thiểu 8GB (khuyến nghị 16GB) |
-| **Internet** | Cần thiết để kích hoạt giấy phép |
-| **Dung lượng đĩa** | Thay đổi theo quy mô dự án |
+|**Hệ điều hành** | Windows 10/11 (64-bit)                                              |
+|**Giấy phép**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
+|**Ký ức**           | RAM tối thiểu 8GB (khuyến nghị 16GB)                                  |
+|**Internet**         | Cần thiết để kích hoạt giấy phép                                     |
+|**Dung lượng đĩa**       | Thay đổi theo quy mô dự án                                              |
 
-{% gợi ý style="warning" %}
-**Yêu cầu về giấy phép**: CLI yêu cầu đăng ký Chloros+ trả phí. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập CLI. Hãy truy cập [https://cloud.mapir.Camera/pricing](https://cloud.mapir.Camera/pricing) để nâng cấp.
+{% hint style="warning" %}**Yêu cầu về giấy phép**: CLI yêu cầu đăng ký Chloros+ trả phí. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập CLI. Thăm nom [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) để nâng cấp.
 {% endhint %}
 
 ## Bắt đầu nhanh
@@ -32,12 +31,12 @@
 
 CLI được tự động đưa vào trình cài đặt Chloros:
 
-1. Tải xuống và chạy **Chloros Installer.exe**
+1. Tải xuống và chạy**Chloros Installer.exe**
 2. Hoàn tất trình hướng dẫn cài đặt
-3. CLI được cài đặt vào: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
+3. CLI được cài đặt để:`C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
-{% gợi ý style="thành công" %}
-Trình cài đặt sẽ tự động thêm `chloros-cli` vào PATH hệ thống của bạn. Khởi động lại thiết bị đầu cuối của bạn sau khi cài đặt.
+{% hint style="success" %}
+Trình cài đặt tự động thêm`chloros-cli`vào PATH hệ thống của bạn. Khởi động lại thiết bị đầu cuối của bạn sau khi cài đặt.
 {% endhint %}
 
 ### Thiết lập lần đầu
@@ -55,19 +54,17 @@ chloros-cli status
 chloros-cli process "C:\Images\Dataset001"
 ```
 
-### Basic Usage
+### Cách sử dụng cơ bản
 
-Process a folder with default settings:
+Xử lý thư mục có cài đặt mặc định:
 
 ```powershell
 chloros-cli process "C:\Images\Dataset001"
-```
+```***
 
-***
+## Tham chiếu lệnh
 
-## Command Reference
-
-### General Syntax
+### Cú pháp chung
 
 ```
 chloros-cli [global-options] <command> [command-options]
@@ -75,114 +72,91 @@ chloros-cli [global-options] <command> [command-options]
 
 ***
 
-## Commands
+## Lệnh
 
 ### `process` - Process Images
 
-Process images in a folder with calibration.
-
-**Syntax:**
+Xử lý hình ảnh trong một thư mục có hiệu chuẩn.**Cú pháp:**
 
 ```bash
 chloros-cli process <input-folder> [options]
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 ```
 
-#### Process Command Options
+#### Tùy chọn lệnh xử lý
 
-| Option                | Type    | Default        | Description                                                                            |
+| Lựa chọn                | Kiểu    | Mặc định        | Sự miêu tả                                                                            |
 | --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<thư mục đầu vào>`      | Path    | _Required_     | Folder containing RAW/JPG multispectral images                                         |
-| `-o, --output`        | Path    | Same as input  | Output folder for processed images                                                     |
-| `-n, --tên dự án`  | String  | Auto-generated | Custom project name                                                                    |
-| `--vignette`          | Flag    | Enabled        | Enable vignette correction                                                             |
-| `--không có họa tiết`       | Flag    | -              | Disable vignette correction                                                            |
-| `--phản ánh`       | Flag    | Enabled        | Enable reflectance calibration                                                         |
-| `--không phản ánh`    | Flag    | -              | Disable reflectance calibration                                                        |
-| `--ppk`               | Flag    | Disabled       | Apply PPK corrections from .daq light sensor data                                      |
-| `--format`            | Choice  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Phần trăm)`, `PNG (8-bit)`, `JPG (8-bit)` |
-| `--min-target-size`   | Integer | Auto           | Minimum target size in pixels for calibration panel detection                          |
-| `--phân cụm mục tiêu` | Integer | Auto           | Target clustering threshold (0-100)                                                    |
-| `--exposure-pin-1`    | String  | None           | Lock exposure for camera model (Pin 1)                                                 |
-| `--exposure-pin-2`    | String  | None           | Lock exposure for camera model (Pin 2)                                                 |
-| `--recal-interval`    | Integer | Auto           | Recalibration interval in seconds                                                      |
-| `--bù múi giờ`   | Integer | 0              | Timezone offset in hours                                                               |
-
-***
+| `<input-folder>`      | Con đường    | _Required_     | Thư mục chứa ảnh đa phổ RAW/JPG                                         |
+| `-o, --output`        | Con đường    | Tương tự như đầu vào  | Thư mục đầu ra cho hình ảnh được xử lý                                                     |
+| `-n, --project-name`  | Sợi dây  | Được tạo tự động | Tên dự án tùy chỉnh                                                                    |
+| `--vignette`          | Lá cờ    | Đã bật        | Bật tính năng chỉnh sửa họa tiết                                                             |
+| `--no-vignette`       | Lá cờ    | -              | Tắt tính năng chỉnh sửa họa tiết                                                            |
+| `--reflectance`       | Lá cờ    | Đã bật        | Kích hoạt hiệu chuẩn phản xạ                                                         |
+| `--no-reflectance`    | Lá cờ    | -              | Vô hiệu hóa hiệu chỉnh phản xạ                                                        |
+| `--ppk`               | Lá cờ    | Tàn tật       | Áp dụng hiệu chỉnh PPK từ dữ liệu cảm biến ánh sáng .daq                                      |
+| `--format`            | Sự lựa chọn  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
+| `--min-target-size`   | số nguyên | Tự động           | Kích thước mục tiêu tối thiểu tính bằng pixel để phát hiện bảng hiệu chuẩn                          |
+| `--target-clustering` | số nguyên | Tự động           | Ngưỡng phân cụm mục tiêu (0-100)                                                    |
+| `--exposure-pin-1`    | Sợi dây  | Không có           | Khóa phơi sáng cho mẫu máy ảnh (Chân 1)                                                 |
+| `--exposure-pin-2`    | Sợi dây  | Không có           | Khóa phơi sáng cho mẫu máy ảnh (Chân 2)                                                 |
+| `--recal-interval`    | số nguyên | Tự động           | Khoảng thời gian hiệu chuẩn lại tính bằng giây                                                      |
+| `--timezone-offset`   | số nguyên | 0              | Độ lệch múi giờ tính bằng giờ                                                               |***
 
 ### `login` - Authenticate Account
 
-Login with your Chloros+ credentials to enable CLI processing.
+Đăng nhập bằng thông tin đăng nhập Chloros+ của bạn để kích hoạt xử lý CLI.
 
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli login <email> <password>
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
-{% endhint %}
+{% hint style="warning" %}**Ký tự đặc biệt**: Sử dụng dấu ngoặc đơn xung quanh mật khẩu chứa các ký tự như`$`, `!`, hoặc dấu cách.
+{% endhint %}**đầu ra:**
 
-**Output:**
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+### `logout` - Clear Credentials
 
-***
+Xóa thông tin đăng nhập được lưu trữ và đăng xuất khỏi tài khoản của bạn.
 
-### `đăng xuất` - Clear Credentials
-
-Clear stored credentials and logout from your account.
-
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli logout
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli logout
-```
-
-**Output:**
+```**đầu ra:**
 
 ```
 ✓ Logout successful
 ℹ Credentials cleared from cache
-```
+```***
 
-***
+### `status` - Check License Status
 
-### `trạng thái` - Check License Status
+Hiển thị giấy phép hiện tại và trạng thái xác thực.
 
-Display current license and authentication status.
-
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli status
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli status
-```
-
-**Output:**
+```**đầu ra:**
 
 ```
 ╔══════════════════════════════════════╗
@@ -193,35 +167,27 @@ chloros-cli status
 📋 Plan: Chloros+ Professional
 🔓 API/CLI Access: Enabled
 ✓ Status: Active
-```
+```***
 
-***
+### `export-status` - Check Export Progress
 
-### `trạng thái xuất` - Check Export Progress
+Theo dõi tiến trình xuất Thread 4 trong hoặc sau khi xử lý.
 
-Monitor Thread 4 export progress during or after processing.
-
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli export-status
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli export-status
-```
+```**Trường hợp sử dụng:** Call this command while processing is running to check export progress.***
 
-**Use Case:** Call this command while processing is running to check export progress.
+### `language` - Manage Interface Language
 
-***
+Xem hoặc thay đổi ngôn ngữ giao diện CLI.
 
-### `ngôn ngữ` - Manage Interface Language
-
-View or change the CLI interface language.
-
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 # Show current language
@@ -232,9 +198,7 @@ chloros-cli language --list
 
 # Set a specific language
 chloros-cli language <language-code>
-```
-
-**Examples:**
+```**Ví dụ:**
 
 ```powershell
 # View current language
@@ -250,203 +214,177 @@ chloros-cli language es
 chloros-cli language ja
 ```
 
-#### Supported Languages (38 Total)
+#### Ngôn ngữ được hỗ trợ (Tổng cộng 38)
 
-| Code    | Language              | Native Name      |
+| Mã số    | Ngôn ngữ              | Tên bản xứ      |
 | ------- | --------------------- | ---------------- |
-| `en`    | English               | English          |
-| `es`    | Spanish               | Español          |
-| `pt`    | Portuguese            | Português        |
-| `fr`    | French                | Français         |
-| `de`    | German                | Deutsch          |
-| `nó`    | Italian               | Italiano         |
-| `ja`    | Japanese              | 日本語              |
-| `ko`    | Korean                | 한국어              |
-| `zh`    | Chinese (Simplified)  | 简体中文             |
-| `zh-TW` | Chinese (Traditional) | 繁體中文             |
-| `ru`    | Russian               | Русский          |
-| `nl`    | Dutch                 | Nederlands       |
-| `ar`    | Arabic                | العربية          |
-| `làm ơn`    | Polish                | Polski           |
-| `tr`    | Turkish               | Türkçe           |
-| `xin chào`    | Hindi                 | हिंदी            |
-| `id`    | Indonesian            | Bahasa Indonesia |
-| `vi`    | Vietnamese            | Tiếng Việt       |
-| `th`    | Thai                  | ไทย              |
-| `sv`    | Swedish               | Svenska          |
-| `da`    | Danish                | Dansk            |
-| `không`    | Norwegian             | Norsk            |
-| `fi`    | Finnish               | Suomi            |
-| `el`    | Greek                 | Ελληνικά         |
-| `cs`    | Czech                 | Čeština          |
-| `hu`    | Hungarian             | Magyar           |
-| `ro`    | Romanian              | Română           |
-| `uk`    | Ukrainian             | Українська       |
-| `pt-BR` | Brazilian Portuguese  | Português Brasileiro |
-| `zh-HK` | Cantonese             | 粵語             |
-| `ms`    | Malay                 | Bahasa Melayu    |
-| `sk`    | Slovak                | Slovenčina       |
-| `bg`    | Bulgarian             | Български        |
-| `giờ`    | Croatian              | Hrvatski         |
-| `lt`    | Lithuanian            | Lietuvių         |
-| `lv`    | Latvian               | Latviešu         |
-| `và`    | Estonian              | Eesti            |
-| `sl`    | Slovenian             | Slovenščina      |
+| `en`    | Tiếng Anh               | Tiếng Anh          |
+| `es`    | tiếng Tây Ban Nha               | tiếng Tây Ban Nha          |
+| `pt`    | tiếng Bồ Đào Nha            | người Bồ Đào Nha        |
+| `fr`    | người Pháp                | người Pháp         |
+| `de`    | tiếng Đức                | tiếng Đức          |
+| `it`    | người Ý               | tiếng Ý         |
+| `ja`    | tiếng Nhật              | 日本語              |
+| `ko`    | Tiếng Hàn                | 한국어              |
+| `zh`    | Tiếng Trung (Giản thể)  | 简体中文             |
+| `zh-TW` | Tiếng Trung (truyền thống) | 繁體中文             |
+| `ru`    | tiếng Nga               | Русский          |
+| `nl`    | tiếng Hà Lan                 | Hà Lan       |
+| `ar`    | tiếng Ả Rập                | عربية          |
+| `pl`    | Đánh bóng                | Tiếng Ba Lan           |
+| `tr`    | tiếng Thổ Nhĩ Kỳ               | Türkçe           |
+| `hi`    | Tiếng Hindi                 | हिंदी            |
+| `id`    | tiếng Indonesia            | Tiếng Bahasa Indonesia |
+| `vi`    | Tiếng Việt            | Tiếng Việt       |
+| `th`    | tiếng Thái                  | ไทย              |
+| `sv`    | tiếng Thụy Điển               | Svenska          |
+| `da`    | tiếng Đan Mạch                | Đan Mạch            |
+| `no`    | người Na Uy             | Norsk            |
+| `fi`    | tiếng Phần Lan               | Suomi            |
+| `el`    | tiếng Hy Lạp                 | Ελληνικά         |
+| `cs`    | tiếng Séc                 | Čeština          |
+| `hu`    | tiếng Hungary             | Tiếng Magyar           |
+| `ro`    | người Rumani              | Româna           |
+| `uk`    | tiếng Ukraina             | Українська       |
+| `pt-BR` | Tiếng Bồ Đào Nha Brazil  | Bồ Đào Nha Brasileiro |
+| `zh-HK` | tiếng Quảng Đông             | 粵語             |
+| `ms`    | Mã Lai                 | Tiếng Bahasa Melayu    |
+| `sk`    | Tiếng Slovak                | Tiếng Slovenia       |
+| `bg`    | tiếng Bungari             | Български        |
+| `hr`    | tiếng Croatia              | Hrvatski         |
+| `lt`    | tiếng Litva            | Liệtuvių         |
+| `lv`    | tiếng Latvia               | Latvian         |
+| `et`    | tiếng Estonia              | Eesti            |
+| `sl`    | tiếng Slovenia             | Tiếng Sloveniaščina      |
 
-{% hint style="success" %}
-**Automatic Persistence**: Your language preference is saved to `~/.chloros/cli_lingu.json` and persists across all sessions.
-{% endhint %}
-
-***
+{% hint style="success" %}**Tính kiên trì tự động**: Tùy chọn ngôn ngữ của bạn được lưu vào`~/.chloros/cli_language.json`và tồn tại trong tất cả các phiên.
+{% endhint %}***
 
 ### `set-project-folder` - Set Default Project Folder
 
-Change the default project folder location (shared with GUI).
+Thay đổi vị trí thư mục dự án mặc định (được chia sẻ với GUI).
 
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli set-project-folder <folder-path>
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli set-project-folder "C:\Projects\2025"
-```
-
-***
+```***
 
 ### `get-project-folder` - Show Project Folder
 
-Display the current default project folder location.
+Hiển thị vị trí thư mục dự án mặc định hiện tại.
 
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli get-project-folder
-```
-
-**Example:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli get-project-folder
-```
-
-**Output:**
+```**đầu ra:**
 
 ```
 ℹ Current project folder: C:\Projects\2025
-```
-
-***
+```***
 
 ### `reset-project-folder` - Reset to Default
 
-Reset the project folder to the default location.
+Đặt lại thư mục dự án về vị trí mặc định.
 
-**Syntax:**
+**Cú pháp:**
 
 ```bash
 chloros-cli reset-project-folder
-```
+```***
 
-***
+## Tùy chọn toàn cầu
 
-## Global Options
+Các tùy chọn này áp dụng cho tất cả các lệnh:
 
-These options apply to all commands:
-
-| Option          | Type    | Default       | Description                                      |
+| Lựa chọn          | Kiểu    | Mặc định       | Sự miêu tả                                      |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Path    | Auto-detected | Path to backend executable                       |
-| `--port`        | Integer | 5000          | Backend API port number                          |
-| `--khởi động lại`     | Flag    | -             | Force restart backend (kills existing processes) |
-| `--version`     | Flag    | -             | Show version information and exit                |
-| `--help`        | Flag    | -             | Show help information and exit                   |
+| `--backend-exe` | Con đường    | Tự động phát hiện | Đường dẫn đến phần thực thi phụ trợ                       |
+| `--port`        | số nguyên | 5000          | Số cổng API phụ trợ                          |
+| `--restart`     | Lá cờ    | -             | Buộc khởi động lại chương trình phụ trợ (giết chết các tiến trình hiện có) |
+| `--version`     | Lá cờ    | -             | Hiển thị thông tin phiên bản và thoát                |
+| `--help`        | Lá cờ    | -             | Hiển thị thông tin trợ giúp và thoát                   |
 
-**Example with Global Options:**
+**Ví dụ với Tùy chọn chung:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Survey_001"
-```
+```***
 
-***
+## Hướng dẫn cài đặt xử lý
 
-## Processing Settings Guide
+### Xử lý song song
 
-### Parallel Processing
+Chloros+ CLI **tự động chia tỷ lệ** xử lý song song để phù hợp với khả năng của máy tính của bạn:**Nó hoạt động như thế nào:**
 
-Chloros+ CLI **automatically scales** parallel processing to match your computer's capabilities:
+* Phát hiện lõi CPU và RAM của bạn
+* Phân bổ nhân viên: **2× lõi CPU** (sử dụng siêu phân luồng)
+* **Tối đa: 16 công nhân song song** (để ổn định)**Cấp hệ thống:**
 
-**How It Works:**
-
-* Detects your CPU cores and RAM
-* Allocates workers: **2× CPU cores** (uses hyperthreading)
-* **Maximum: 16 parallel workers** (for stability)
-
-**System Tiers:**
-
-| System Type   | CPU        | RAM      | Workers  | Performance     |
+| Loại hệ thống   | CPU        | ĐẬP      | Công nhân  | Hiệu suất     |
 | ------------- | ---------- | -------- | -------- | --------------- |
-| **High-End**  | 16+ cores  | 32+ GB   | Up to 16 | Maximum speed   |
-| **Mid-Range** | 8-15 cores | 16-31 GB | 8-16     | Excellent speed |
-| **Low-End**   | 4-7 cores  | 8-15 GB  | 4-8      | Good speed      |
+|**Cao cấp**  | 16+ lõi  | 32+GB   | Lên đến 16 | Tốc độ tối đa   |
+|**Tầm trung** | 8-15 lõi | 16-31GB | 8-16     | Tốc độ tuyệt vời |
+|**Cấp thấp**   | 4-7 lõi  | 8-15 GB  | 4-8      | Tốc độ tốt      |
 
-{% hint style="success" %}
-**Automatic Optimization**: The CLI automatically detects your system specs and configures optimal parallel processing. No manual configuration needed!
+{% hint style="success" %}**Tối ưu hóa tự động**: CLI tự động phát hiện thông số kỹ thuật hệ thống của bạn và định cấu hình xử lý song song tối ưu. Không cần cấu hình thủ công!
 {% endhint %}
 
-### Debayer Methods
+### Phương pháp Debayer
 
-The CLI uses **High Quality (Faster)** as the default and recommended debayer algorithm:
+CLI sử dụng**Chất lượng cao (Nhanh hơn)** làm thuật toán gỡ lỗi mặc định và được đề xuất:
 
-| Method                      | Quality | Speed | Description                                 |
-| --------------------------- | ------- | ----- | ------------------------------------------- |
-| **High Quality (Faster)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Edge-aware algorithm (default, recommended) |
+| Phương pháp                      | Chất lượng | Tốc độ | Sự miêu tả                                 |
+| -------------------------- | ------- | ----- | ------------------------------------------ |
+|**Chất lượng cao (Nhanh hơn)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Thuật toán nhận biết cạnh (mặc định, được khuyến nghị) |
 
-### Vignette Correction
+### Chỉnh sửa họa tiết**Nó làm gì:** Corrects light falloff at image edges (darker corners common in camera imagery).
 
-**What it does:** Corrects light falloff at image edges (darker corners common in camera imagery).
-
-* **Enabled by default** - Most users should keep this enabled
-* Use `--no-vignette` to disable
+* **Bật theo mặc định** - Hầu hết người dùng nên bật tính năng này
+* Sử dụng`--no-vignette`vô hiệu hóa
 
 {% hint style="success" %}
-**Recommendation**: Always enable vignette correction to ensure uniform brightness across the frame.
+**Khuyến nghị**: Luôn bật tính năng chỉnh sửa họa tiết để đảm bảo độ sáng đồng đều trên toàn khung hình.
 {% endhint %}
 
-### Reflectance Calibration
+### Hiệu chỉnh phản xạ
 
-Converts raw sensor values to standardized reflectance percentages using calibration panels.
+Chuyển đổi giá trị cảm biến thô thành tỷ lệ phần trăm phản xạ được tiêu chuẩn hóa bằng bảng hiệu chuẩn.
 
-* **Enabled by default** - Essential for vegetation analysis
-* Requires calibration target panels in images
-* Use `--no-reflectance` to disable
+* **Bật theo mặc định** - Cần thiết cho phân tích thảm thực vật
+* Yêu cầu bảng mục tiêu hiệu chuẩn trong hình ảnh
+* Sử dụng`--no-reflectance`vô hiệu hóa
 
 {% hint style="info" %}
-**Requirements**: Ensure calibration panels are properly exposed and visible in your images for accurate reflectance conversion.
+**Yêu cầu**: Đảm bảo bảng hiệu chuẩn được hiển thị đúng cách và hiển thị trong hình ảnh của bạn để chuyển đổi độ phản xạ chính xác.
 {% endhint %}
 
-### PPK Corrections
+### Chỉnh sửa PPK**Nó làm gì:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
 
-**What it does:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
+* ** Bị tắt theo mặc định**
+* Sử dụng`--ppk`để kích hoạt
+* Yêu cầu tệp .daq trong thư mục dự án từ cảm biến ánh sáng MAPIR DAQ-A-SD.
 
-* **Disabled by default**
-* Use `--ppk` to enable
-* Requires .daq files in project folder from MAPIR DAQ-A-SD light sensor.
+### Định dạng đầu ra
 
-### Output Formats
-
-<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Bit Depth</th><th width="116.5999755859375">File Size</th><th>Best For</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>16-bit integer</td><td>Large</td><td>GIS analysis, photogrammetry (recommended)</td></tr><tr><td><strong>TIFF (32-bit, Percent)</strong></td><td>32-bit float</td><td>Very Large</td><td>Scientific analysis, research</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>8-bit integer</td><td>Medium</td><td>Visual inspection, web sharing</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Small</td><td>Quick preview, compressed output</td></tr></tbody></table>
+<table><thead><tr><th width="197">Định dạng</th><th width="130.20001220703125">Độ sâu bit</th><th width="116.5999755859375">Kích thước tệp</th><th>Tốt nhất cho</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>Số nguyên 16 bit</td><td>Lớn</td><td>Phân tích GIS, phép đo ảnh (được khuyến nghị)</td></tr><tr><td><strong>TIFF (32 bit, Phần trăm)</strong></td><td>Phôi nổi 32 bit</td><td>Rất lớn</td><td>Phân tích khoa học, nghiên cứu</td></tr><tr><td><strong>PNG (8 bit)</strong></td><td>Số nguyên 8 bit</td><td>Trung bình</td><td>Kiểm tra trực quan, chia sẻ web</td></tr><tr><td><strong>JPG (8 bit)</strong></td><td>Số nguyên 8 bit</td><td>Nhỏ</td><td>Xem trước nhanh, được nén đầu ra</td></tr></tbody></table>
 
 ***
 
-## Automation & Scripting
+## Tự động hóa & Viết kịch bản
 
-### PowerShell Batch Processing
+### Xử lý hàng loạt PowerShell
 
-Process multiple dataset folders automatically:
+Tự động xử lý nhiều thư mục dữ liệu:
 
 ```powershell
 # process_all_datasets.ps1
@@ -470,9 +408,9 @@ foreach ($dataset in $datasets) {
 Write-Host "All datasets processed!" -ForegroundColor Green
 ```
 
-### Windows Batch Script
+### Tập lệnh hàng loạt Windows
 
-Simple loop for batch processing:
+Vòng lặp đơn giản để xử lý hàng loạt:
 
 ```batch
 @echo off
@@ -497,9 +435,9 @@ echo All datasets processed!
 pause
 ```
 
-### Python Automation Script
+### Tập lệnh tự động hóa Python
 
-Advanced automation with error handling:
+Tự động hóa nâng cao với xử lý lỗi:
 
 ```python
 import subprocess
@@ -578,16 +516,16 @@ if __name__ == '__main__':
 
 ***
 
-## Processing Workflow
+## Xử lý quy trình làm việc
 
-### Standard Workflow
+### Quy trình làm việc tiêu chuẩn
 
-1. **Input**: Folder containing RAW/JPG image pairs
-2. **Discovery**: CLI auto-scans for supported image files
-3. **Processing**: Parallel mode scales to your CPU cores (Chloros+)
-4. **Output**: Creates camera-model subfolders with processed images
+1.**Đầu vào**: Thư mục chứa các cặp ảnh RAW/JPG
+2.**Khám phá**: CLI tự động quét để tìm các tệp hình ảnh được hỗ trợ
+3.**Đang xử lý**: Chế độ song song sẽ mở rộng theo lõi CPU của bạn (Chloros+)
+4.**Đầu ra**: Tạo các thư mục con kiểu máy ảnh chứa hình ảnh đã được xử lý
 
-### Example Output Structure
+### Cấu trúc đầu ra ví dụ
 
 ```
 MyProject/
@@ -600,248 +538,203 @@ MyProject/
     └── ...
 ```
 
-### Processing Time Estimates
+### Ước tính thời gian xử lý
 
-Typical processing times for 100 images (12MP each):
+Thời gian xử lý thông thường cho 100 hình ảnh (mỗi hình 12MP):
 
-| Mode              | Time      | Hardware                                     |
-| ----------------- | --------- | -------------------------------------------- |
-| **Parallel Mode** | 5-10 min  | i7/Ryzen 7, 16GB RAM, SSD (up to 16 workers) |
-| **Parallel Mode** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (up to 8 workers)   |
+| Cách thức              | Thời gian      | Phần cứng                                     |
+| ------------------ | --------- | -------------------------------------------- |
+|**Chế độ song song** | 5-10 phút  | i7/Ryzen 7, RAM 16GB, SSD (tối đa 16 nhân viên) |
+|**Chế độ song song** | 10-15 phút | i5/Ryzen 5, RAM 8GB, HDD (tối đa 8 nhân viên)   |
 
-{% hint style="info" %}
-**Performance Tip**: Processing time varies based on image count, resolution, and computer specs.
-{% endhint %}
+{% hint style="info" %}**Mẹo về hiệu suất**: Thời gian xử lý thay đổi tùy theo số lượng hình ảnh, độ phân giải và thông số kỹ thuật của máy tính.
+{% endhint %}***
 
-***
+## Khắc phục sự cố
 
-## Troubleshooting
+### CLI Không tìm thấy
 
-### CLI Not Found
-
-**Error:**
+**Lỗi:**
 
 ```
 'chloros-cli' is not recognized as an internal or external command
-```
+```**Giải pháp:**
 
-**Solutions:**
-
-1. Verify installation location:
+1. Xác minh vị trí cài đặt:
 
 ```powershell
 dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 ```
 
-2. Use full path if not in PATH:
+2. Sử dụng đường dẫn đầy đủ nếu không có trong PATH:
 
 ```powershell
 "C:\Program Files\Chloros\resources\cli\chloros-cli.exe" process "C:\Datasets\Field_A"
 ```
 
-3. Add to PATH manually:
-   * Open System Properties → Environment Variables
-   * Edit PATH variable
-   * Add: `C:\Program Files\Chloros\resources\cli`
-   * Restart terminal
+3. Thêm vào PATH theo cách thủ công:
+* Thuộc tính hệ thống mở → Biến môi trường
+* Chỉnh sửa biến PATH
+* Thêm vào:`C:\Program Files\Chloros\resources\cli`
+* Khởi động lại thiết bị đầu cuối
 
 ***
 
-### Backend Failed to Start
-
-**Error:**
+### Phần cuối không thể bắt đầu**Lỗi:**
 
 ```
 Backend failed to start within 30 seconds
-```
+```**Giải pháp:**
 
-**Solutions:**
-
-1. Check if backend already running (close it first)
-2. Check Windows Firewall is not blocking
-3. Try different port:
+1. Kiểm tra xem chương trình phụ trợ đã chạy chưa (đóng nó trước)
+2. Kiểm tra Tường lửa Windows không chặn
+3. Hãy thử cổng khác:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
 ```
 
-4. Force restart backend:
+4. Buộc khởi động lại chương trình phụ trợ:
 
 ```powershell
 chloros-cli --restart process "C:\Datasets\Field_A"
-```
+```***
 
-***
+### Vấn đề về giấy phép / xác thực
 
-### License / Authentication Issues
-
-**Error:**
+**Lỗi:**
 
 ```
 Chloros+ license required for CLI access
-```
+```**Giải pháp:**
 
-**Solutions:**
-
-1. Verify you have an active Chloros+ subscription
-2. Login with your credentials:
+1. Xác minh bạn có đăng ký Chloros+ đang hoạt động
+2. Đăng nhập bằng thông tin đăng nhập của bạn:
 
 ```powershell
 chloros-cli login user@example.com 'password'
 ```
 
-3. Check license status:
+3. Kiểm tra trạng thái giấy phép:
 
 ```powershell
 chloros-cli status
 ```
 
-4. Contact support: info@mapir.camera
+4. Liên hệ hỗ trợ: info@mapir.Camera***
 
-***
+### Không tìm thấy hình ảnh nào
 
-### No Images Found
-
-**Error:**
+**Lỗi:**
 
 ```
 No images found in the specified folder
-```
+```**Giải pháp:**
 
-**Solutions:**
+1. Xác minh thư mục chứa các định dạng được hỗ trợ (.RAW, .TIF, .JPG)
+2. Kiểm tra đường dẫn thư mục có chính xác không (sử dụng dấu ngoặc kép cho đường dẫn có dấu cách)
+3. Đảm bảo bạn có quyền đọc cho thư mục
+4. Kiểm tra phần mở rộng tập tin là chính xác***
 
-1. Verify folder contains supported formats (.RAW, .TIF, .JPG)
-2. Check folder path is correct (use quotes for paths with spaces)
-3. Ensure you have read permissions for the folder
-4. Check file extensions are correct
+### Xử lý gian hàng hoặc treo
 
-***
+**Giải pháp:**
 
-### Processing Stalls or Hangs
+1. Kiểm tra dung lượng đĩa trống (đảm bảo đủ cho đầu ra)
+2. Đóng các ứng dụng khác để giải phóng bộ nhớ
+3. Giảm số lượng hình ảnh (xử lý theo đợt)***
 
-**Solutions:**
+### Cổng đã được sử dụng
 
-1. Check available disk space (ensure enough for output)
-2. Close other applications to free memory
-3. Reduce image count (process in batches)
-
-***
-
-### Port Already in Use
-
-**Error:**
+**Lỗi:**
 
 ```
 Port 5000 is already in use
-```
+```**Giải pháp:**
 
-**Solution:**
-
-Specify a different port:
+Chỉ định một cổng khác:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
-```
+```***
+
+## Câu hỏi thường gặp
+
+### Hỏi: Tôi có cần giấy phép cho CLI không?
+
+**A:** Yes! The CLI requires a paid**Chloros+ license**.
+
+* ❌ Gói tiêu chuẩn (miễn phí): CLI bị vô hiệu hóa
+* ✅ Gói Chloros+ (trả phí): CLI được kích hoạt đầy đủ
+
+Đăng ký tại: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-## FAQ
+### Câu hỏi: Tôi có thể sử dụng CLI trên máy chủ không có GUI không?**A:** Yes! The CLI runs completely headless. Requirements:
 
-### Q: Do I need a license for the CLI?
-
-**A:** Yes! The CLI requires a paid **Chloros+ license**.
-
-* ❌ Standard (free) plan: CLI disabled
-* ✅ Chloros+ (paid) plans: CLI fully enabled
-
-Subscribe at: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* Windows Server 2016 trở lên
+* Visual C++ có thể phân phối lại được cài đặt
+* Đủ RAM (tối thiểu 8GB, khuyến nghị 16GB)
+* Kích hoạt giấy phép GUI một lần trên bất kỳ máy nào
 
 ***
 
-### Q: Can I use the CLI on a server without GUI?
+### Hỏi: Hình ảnh đã xử lý được lưu ở đâu?**A:** By default, processed images are saved in the**same folder as input** in camera-model subfolders (e.g., `Survey3N_RGN/`).
 
-**A:** Yes! The CLI runs completely headless. Requirements:
-
-* Windows Server 2016 or later
-* Visual C++ Redistributable installed
-* Sufficient RAM (8GB minimum, 16GB recommended)
-* One-time GUI license activation on any machine
-
-***
-
-### Q: Where are processed images saved?
-
-**A:** By default, processed images are saved in the **same folder as input** in camera-model subfolders (e.g., `Survey3N_RGN/`).
-
-Use `-o` option to specify different output folder:
+Sử dụng`-o`tùy chọn để chỉ định thư mục đầu ra khác nhau:
 
 ```powershell
 chloros-cli process "C:\Input" -o "D:\Output"
-```
+```***
 
-***
+### Câu hỏi: Tôi có thể xử lý nhiều thư mục cùng một lúc không?
 
-### Q: Can I process multiple folders at once?
+**A:** Not directly in one command, but you can use scripting to process folders sequentially. See [Automation & Scripting](CLI.md#automation--scripting) section.***
 
-**A:** Not directly in one command, but you can use scripting to process folders sequentially. See [Automation & Scripting](CLI.md#automation--scripting) section.
-
-***
-
-### Q: How do I save CLI output to a log file?
+### Câu hỏi: Làm cách nào để lưu đầu ra CLI vào tệp nhật ký?
 
 **PowerShell:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
-```
-
-**Batch:**
+```**Lô:**
 
 ```batch
 chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
-```
+```***
 
-***
-
-### Q: What happens if I press Ctrl+C during processing?
+### Hỏi: Điều gì xảy ra nếu tôi nhấn Ctrl+C trong khi xử lý?
 
 **A:** The CLI will:
 
-1. Stop processing gracefully
-2. Shut down the backend
-3. Exit with code 130
+1. Dừng xử lý một cách duyên dáng
+2. Tắt phần phụ trợ
+3. Thoát với mã 130
 
-Partially processed images may remain in the output folder.
+Hình ảnh được xử lý một phần có thể vẫn còn trong thư mục đầu ra.***
 
-***
+### Câu hỏi: Tôi có thể tự động xử lý CLI không?
 
-### Q: Can I automate CLI processing?
+**A:** Absolutely! The CLI is designed for automation. See [Automation & Scripting](CLI.md#automation--scripting) for PowerShell, Batch, and Python examples.***
 
-**A:** Absolutely! The CLI is designed for automation. See [Automation & Scripting](CLI.md#automation--scripting) for PowerShell, Batch, and Python examples.
-
-***
-
-### Q: How do I check the CLI version?
+### Hỏi: Làm cách nào để kiểm tra phiên bản CLI?
 
 **A:**
 
 ```powershell
 chloros-cli --version
-```
-
-**Output:**
+```**đầu ra:**
 
 ```
 Chloros CLI 1.0.2
-```
+```***
 
-***
+## Nhận trợ giúp
 
-## Getting Help
+### Trợ giúp dòng lệnh
 
-### Command-Line Help
-
-View help information directly in the CLI:
+Xem thông tin trợ giúp trực tiếp trong CLI:
 
 ```powershell
 # General help
@@ -853,19 +746,17 @@ chloros-cli login --help
 chloros-cli language --help
 ```
 
-### Support Channels
+### Kênh hỗ trợ
 
-* **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **Email**: info@mapir.máy ảnh
+* **Trang web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Giá**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***
 
-***
+## Ví dụ hoàn chỉnh
 
-## Complete Examples
+### Ví dụ 1: Xử lý cơ bản
 
-### Example 1: Basic Processing
-
-Process with default settings (vignette, reflectance):
+Xử lý với cài đặt mặc định (làm mờ nét ảnh, độ phản chiếu):
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
@@ -873,22 +764,20 @@ chloros-cli process "C:\Datasets\Field_A_2025_01_15"
 
 ***
 
-### Example 2: High-Quality Scientific Output
+### Ví dụ 2: Sản phẩm khoa học chất lượng cao
 
-32-bit float TIFF:
+TIFF nổi 32 bit:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
   --format "TIFF (32-bit, Percent)" ^
   --vignette ^
   --reflectance
-```
+```***
 
-***
+### Ví dụ 3: Xử lý xem trước nhanh
 
-### Example 3: Fast Preview Processing
-
-8-bit PNG without calibration for quick review:
+PNG 8 bit không cần hiệu chỉnh để xem nhanh:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -899,21 +788,19 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 4: PPK-Corrected Processing
+### Ví dụ 4: Xử lý đã sửa PPK
 
-Apply PPK corrections with reflectance:
+Áp dụng hiệu chỉnh PPK với độ phản xạ:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
   --ppk ^
   --reflectance
-```
+```***
 
-***
+### Ví dụ 5: Vị trí đầu ra tùy chỉnh
 
-### Example 5: Custom Output Location
-
-Process to different drive with specific format:
+Xử lý sang ổ đĩa khác với định dạng cụ thể:
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^
@@ -923,9 +810,9 @@ chloros-cli process "C:\Input\Raw_Images" ^
 
 ***
 
-### Example 6: Authentication Workflow
+### Ví dụ 6: Quy trình xác thực
 
-Complete authentication flow:
+Luồng xác thực hoàn chỉnh:
 
 ```powershell
 # Step 1: Login
@@ -939,13 +826,11 @@ chloros-cli process "C:\Datasets\Field_A"
 
 # Step 4: Logout (optional, when switching accounts)
 chloros-cli logout
-```
+```***
 
-***
+### Ví dụ 7: Sử dụng đa ngôn ngữ
 
-### Example 7: Multi-Language Usage
-
-Change interface language:
+Thay đổi ngôn ngữ giao diện:
 
 ```powershell
 # List available languages

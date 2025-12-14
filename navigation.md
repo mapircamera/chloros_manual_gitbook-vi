@@ -40,7 +40,7 @@ Khi một hình ảnh được nhấp vào trong trình xem hình ảnh chính, 
 
 #### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Nhật ký gỡ lỗi
 
-Xem lại nhật ký để tìm các bản in gỡ lỗi khi có sự cố xảy ra. Sao chép/tải xuống nhật ký và gửi đến [Hỗ trợ MAPIR](https://www.mapir.Camera/community/contact) để được hỗ trợ.
+Xem lại nhật ký để tìm các bản in gỡ lỗi khi có sự cố xảy ra. Sao chép/tải xuống nhật ký và gửi đến [Hỗ trợ MAPIR](https://www.mapir.camera/community/contact) để được hỗ trợ.
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Đăng nhập người dùng](chloros+-login.md)
 

@@ -59,7 +59,7 @@ Trong bảng trình duyệt tệp, việc chọn trước các hình ảnh mục
 
 <summary>Nếu tôi sẽ tải hình ảnh của mình lên <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> tôi có nên xử lý trong Chloros trước khi tải lên không?</summary>
 
-Nếu bạn dự định tải lên nền tảng xử lý trực tuyến [MAPIR Cloud] của chúng tôi (https://www.mapir.Camera/collections/software/products/mapir-cloud-subscription), bạn không được chỉnh sửa hình ảnh trước khi tải lên. Đám mây sẽ thực hiện tất cả quá trình xử lý tương tự và hơn thế nữa.
+Nếu bạn dự định tải lên nền tảng xử lý trực tuyến [MAPIR Cloud] của chúng tôi (https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), bạn không được chỉnh sửa hình ảnh trước khi tải lên. Đám mây sẽ thực hiện tất cả quá trình xử lý tương tự và hơn thế nữa.
 
 </details>
 
@@ -67,6 +67,6 @@ Nếu bạn dự định tải lên nền tảng xử lý trực tuyến [MAPIR 
 
 <summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
 
-Chúng tôi luôn mong muốn nhận được phản hồi về sản phẩm của mình. Nếu bạn phát hiện vấn đề với sản phẩm của chúng tôi hoặc có đề xuất về cách chúng tôi có thể cải thiện sản phẩm của mình, vui lòng [LIÊN HỆ VỚI CHÚNG TÔI](https://www.mapir.Camera/community/contact) để chia sẻ suy nghĩ của bạn. Hầu hết hoạt động R\&D của chúng tôi đều được hướng dẫn bằng cách lắng nghe những nhu cầu lớn nhất của khách hàng.
+Chúng tôi luôn mong muốn nhận được phản hồi về sản phẩm của mình. Nếu bạn phát hiện vấn đề với sản phẩm của chúng tôi hoặc có đề xuất về cách chúng tôi có thể cải thiện sản phẩm của mình, vui lòng [LIÊN HỆ VỚI CHÚNG TÔI](https://www.mapir.camera/community/contact) để chia sẻ suy nghĩ của bạn. Hầu hết hoạt động R\&D của chúng tôi đều được hướng dẫn bằng cách lắng nghe những nhu cầu lớn nhất của khách hàng.
 
 </details>

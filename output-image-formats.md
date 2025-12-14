@@ -14,11 +14,9 @@ metaLinks:
 
 Đầu ra định dạng 32-bit (pixel float 0,0 - 1,0) TIFF (.tif). Giá trị pixel biểu thị tỷ lệ phần trăm phản xạ trong đó 0,0 = 0% và 1,0 = 100%.
 
-### **JPG (8-bit)**
+### **JPG (8-bit)**Đầu ra định dạng 8-bit (pixel kỹ thuật số 0 -255) JPG (.jpg).
 
-Đầu ra định dạng 8-bit (pixel kỹ thuật số 0 -255) JPG (.jpg).
-
-### ** PNG (8-bit)**
+###**PNG (8-bit)**
 
 Đầu ra định dạng 8-bit (pixel kỹ thuật số 0 - 255) PNG (.png). Nén không mất dữ liệu thích hợp để xem và hiển thị trên web.
 

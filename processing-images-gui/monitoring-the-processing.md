@@ -10,12 +10,8 @@ Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử 
 
 Đối với người dùng không có giấy phép Chloros+:
 
-**Hiển thị tiến độ 2 giai đoạn:**
-
-1. **Phát hiện mục tiêu** - Tìm mục tiêu hiệu chuẩn trong hình ảnh
-2. **Đang xử lý** - Áp dụng chỉnh sửa và xuất
-
-**Thanh tiến trình hiển thị:**
+**Hiển thị tiến độ 2 giai đoạn:**1.** Phát hiện mục tiêu**- Tìm mục tiêu hiệu chuẩn trong hình ảnh
+2.**Đang xử lý**- Áp dụng chỉnh sửa và xuất**Thanh tiến trình hiển thị:**
 
 * Tỷ lệ hoàn thành tổng thể (0-100%)
 * Nghệ danh hiện tại
@@ -25,16 +21,11 @@ Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử 
 
 Đối với người dùng có giấy phép Chloros+:
 
-**Hiển thị tiến độ 4 giai đoạn:**
-
-1. **Phát hiện** - Tìm mục tiêu hiệu chuẩn
-2. **Phân tích** - Kiểm tra hình ảnh và chuẩn bị đường dẫn
-3. **Hiệu chỉnh** - Áp dụng hiệu chỉnh họa tiết và độ phản chiếu
-4. **Xuất** - Lưu các tập tin đã xử lý
-
-**Tính năng tương tác:**
-
-* **Di chuột qua** thanh tiến trình để xem bảng 4 giai đoạn mở rộng
+**Hiển thị tiến độ 4 giai đoạn:**1.** Phát hiện**- Tìm mục tiêu hiệu chuẩn
+2.**Phân tích**- Kiểm tra hình ảnh và chuẩn bị đường dẫn
+3.**Hiệu chỉnh**- Áp dụng hiệu chỉnh họa tiết và độ phản chiếu
+4.**Xuất**- Lưu các tập tin đã xử lý**Tính năng tương tác:***
+**Di chuột qua** thanh tiến trình để xem bảng 4 giai đoạn mở rộng
 * **Nhấp vào** thanh tiến trình để cố định/ghim bảng mở rộng
 * **Nhấp lại** để giải phóng và tự động ẩn khi rời chuột
 * Mỗi giai đoạn cho thấy sự tiến bộ của từng cá nhân (0-100%)
@@ -43,9 +34,7 @@ Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử 
 
 ## Tìm hiểu từng giai đoạn xử lý
 
-### Giai đoạn 1: Phát hiện (Phát hiện mục tiêu)
-
-**Chuyện gì đang xảy ra vậy:**
+### Giai đoạn 1: Phát hiện (Phát hiện mục tiêu)**Chuyện gì đang xảy ra vậy:**
 
 * Chloros quét hình ảnh được đánh dấu bằng hộp kiểm Target
 * Thuật toán thị giác máy tính xác định 4 bảng hiệu chuẩn
@@ -78,9 +67,7 @@ Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử 
 * Tổ chức hàng đợi xử lý ảnh
 * Chuẩn bị công nhân xử lý song song (chỉ Cloros+)
 
-**Thời lượng:** 5-30 giây
-
-**Chỉ báo tiến độ:**
+**Thời lượng:**5-30 giây**Chỉ báo tiến độ:**
 
 * Phân tích: 0% → 100%
 * Giai đoạn nhanh, thường kết thúc nhanh
@@ -92,29 +79,21 @@ Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử 
 
 ### Giai đoạn 3: Hiệu chỉnh
 
-**Chuyện gì đang xảy ra vậy:**
-
-* **Debayering**: Chuyển đổi mẫu RAW Bayer thành 3 kênh
+**Chuyện gì đang xảy ra vậy:*** ** Debayering**: Chuyển đổi mẫu RAW Bayer thành 3 kênh
 * **Chỉnh họa tiết**: Loại bỏ vết tối ở cạnh ống kính
 * **Hiệu chỉnh phản xạ**: Chuẩn hóa với giá trị mục tiêu
 * **Tính toán chỉ số**: Tính toán các chỉ số đa phổ
 * Xử lý từng hình ảnh thông qua đường ống đầy đủ
 
-**Thời lượng:** Phần lớn thời gian xử lý (60-80%)
-
-**Chỉ báo tiến độ:**
+**Thời lượng:**Phần lớn thời gian xử lý (60-80%)** Chỉ báo tiến độ:**
 
 * Hiệu chuẩn: 0% → 100%
 * Hình ảnh hiện tại đang được xử lý
 * Hình ảnh hoàn thành / Tổng số hình ảnh
 
-**Hành vi xử lý:**
-
-* **Chế độ miễn phí**: Xử lý tuần tự từng hình ảnh
+**Hành vi xử lý:*** ** Chế độ miễn phí**: Xử lý tuần tự từng hình ảnh
 * **Chế độ Cloros+**: Xử lý đồng thời tối đa 16 hình ảnh
-* **Tăng tốc GPU**: Tăng tốc đáng kể giai đoạn này
-
-**Những gì cần xem:**
+* **Tăng tốc GPU**: Tăng tốc đáng kể giai đoạn này**Những gì cần xem:**
 
 * Tiến bộ ổn định thông qua số lượng hình ảnh
 * Kiểm tra Nhật ký gỡ lỗi để biết thông báo hoàn thành trên mỗi hình ảnh
@@ -129,9 +108,7 @@ Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử 
 * Tạo thư mục con mô hình máy ảnh
 * Giữ nguyên tên tập tin gốc với hậu tố thích hợp
 
-**Thời lượng:** 10-20% tổng thời gian xử lý
-
-**Chỉ báo tiến độ:**
+**Thời lượng:**10-20% tổng thời gian xử lý**Chỉ báo tiến độ:**
 
 * Xuất: 0% → 100%
 * Tập tin đang được ghi
@@ -151,7 +128,7 @@ Nhật ký gỡ lỗi cung cấp thông tin chi tiết về tiến trình xử l
 
 ### Truy cập nhật ký gỡ lỗi
 
-1. Nhấp vào biểu tượng **Nhật ký gỡ lỗi** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> ở thanh bên trái
+1. Nhấp vào biểu tượng**Nhật ký gỡ lỗi**<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> ở thanh bên trái
 2. Bảng nhật ký mở ra hiển thị các thông báo xử lý theo thời gian thực
 3. Tự động cuộn để hiển thị tin nhắn mới nhất
 
@@ -177,9 +154,7 @@ Các sự cố không nghiêm trọng không ngừng xử lý:
 [CẢNH BÁO] Không tìm thấy dữ liệu GPS trong IMG_0145.RAW
 [CẢNH BÁO] Khoảng cách dấu thời gian của hình ảnh mục tiêu > 30 phút
 [CẢNH BÁO] Độ tương phản thấp trong bảng hiệu chuẩn - kết quả có thể thay đổi
-```
-
-**Hành động:** Xem lại cảnh báo sau khi xử lý nhưng không làm gián đoạn
+```**Hành động:** Xem lại cảnh báo sau khi xử lý nhưng không làm gián đoạn
 
 #### Thông Báo Lỗi (Đỏ)
 
@@ -189,9 +164,7 @@ Các vấn đề nghiêm trọng có thể khiến quá trình xử lý không t
 [ERROR] Không thể ghi tập tin - đĩa đầy
 [ERROR] Tệp hình ảnh bị hỏng: IMG_0299.RAW
 [LỖI] Không phát hiện thấy mục tiêu nào - bật hiệu chỉnh độ phản xạ hoặc đánh dấu hình ảnh mục tiêu
-```
-
-**Hành động:** Dừng xử lý, giải quyết lỗi, khởi động lại
+```**Hành động:** Dừng xử lý, giải quyết lỗi, khởi động lại
 
 ### Thông báo nhật ký chung
 
@@ -209,16 +182,13 @@ Các vấn đề nghiêm trọng có thể khiến quá trình xử lý không t
 Để sao chép nhật ký nhằm khắc phục sự cố hoặc hỗ trợ:
 
 1. Mở bảng Nhật ký gỡ lỗi
-2. Nhấp vào nút **"Sao chép nhật ký"** (hoặc nhấp chuột phải → Chọn tất cả)
+2. Nhấp vào nút**"Sao chép nhật ký"**(hoặc nhấp chuột phải → Chọn tất cả)
 3. Dán vào file văn bản hoặc email
-4. Gửi tới bộ phận hỗ trợ MAPIR nếu cần
-
-***
+4. Gửi tới bộ phận hỗ trợ MAPIR nếu cần***
 
 ## Giám sát tài nguyên hệ thống
 
 ### Cách sử dụng CPU
-
 **Chế độ miễn phí:**
 
 * 1 lõi CPU ở mức \~100%
@@ -284,9 +254,7 @@ Khi tính năng tăng tốc GPU được bật:
 
 ## Phát hiện sự cố trong quá trình xử lý
 
-### Dấu hiệu cảnh báo
-
-**Tiến trình bị đình trệ (không thay đổi trong hơn 5 phút):**
+### Dấu hiệu cảnh báo**Tiến trình bị đình trệ (không thay đổi trong hơn 5 phút):**
 
 * Kiểm tra nhật ký gỡ lỗi để tìm lỗi
 * Xác minh dung lượng đĩa trống
@@ -314,18 +282,13 @@ Dừng xử lý nếu bạn thấy:
 * ❌ Nhận ra cài đặt sai đã được định cấu hình
 * ❌ Nhập sai hình ảnh
 
-**Cách dừng:**
-
-1. Nhấp vào **Nút Dừng/Hủy** (thay thế nút Bắt đầu)
+**Cách dừng:**1. Nhấp vào** Nút Dừng/Hủy**(thay thế nút Bắt đầu)
 2. Quá trình xử lý bị dừng, tiến trình bị mất
-3. Khắc phục sự cố và khởi động lại từ đầu
-
-***
+3. Khắc phục sự cố và khởi động lại từ đầu***
 
 ## Khắc phục sự cố trong quá trình xử lý
 
 ### Quá trình xử lý rất chậm
-
 **Nguyên nhân có thể:**
 
 * Hình ảnh mục tiêu không được đánh dấu (quét tất cả hình ảnh)
@@ -340,34 +303,26 @@ Dừng xử lý nếu bạn thấy:
 2. Tương lai: Sử dụng SSD, giảm chỉ số, nâng cấp phần cứng
 3. Cân nhắc CLI để xử lý hàng loạt tập dữ liệu lớn
 
-### Cảnh báo "Dung lượng ổ đĩa"
-
-**Giải pháp:**
+### Cảnh báo "Dung lượng ổ đĩa"**Giải pháp:**
 
 1. Giải phóng dung lượng ổ đĩa ngay lập tức
 2. Di chuyển dự án sang ổ đĩa có nhiều không gian hơn
 3. Giảm số lượng chỉ số cần xuất
 4. Sử dụng định dạng JPG thay vì TIFF (tệp nhỏ hơn)
 
-### Thông báo "Tệp bị hỏng" thường xuyên
-
-**Giải pháp:**
+### Thông báo "Tệp bị hỏng" thường xuyên**Giải pháp:**
 
 1. Sao chép lại hình ảnh từ thẻ SD để đảm bảo tính toàn vẹn
 2. Kiểm tra lỗi thẻ SD
 3. Xóa các tập tin bị hỏng khỏi dự án
 4. Tiếp tục xử lý các ảnh còn lại
 
-### Hệ thống quá nóng / Giảm ga
-
-**Giải pháp:**
+### Hệ thống quá nóng / Giảm ga**Giải pháp:**
 
 1. Đảm bảo thông gió đầy đủ
 2. Làm sạch bụi ở lỗ thông hơi máy tính
 3. Giảm tải xử lý (sử dụng chế độ Free thay vì Chloros+)
-4. Xử lý vào thời điểm mát mẻ trong ngày
-
-***
+4. Xử lý vào thời điểm mát mẻ trong ngày***
 
 ## Đang xử lý thông báo hoàn chỉnh
 
@@ -384,9 +339,9 @@ Khi quá trình xử lý kết thúc:
 
 Sau khi quá trình xử lý hoàn tất:
 
-1. **Xem lại kết quả** - Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
-2. **Kiểm tra thư mục đầu ra** - Xác minh tất cả các tệp được xuất chính xác
-3. **Xem lại nhật ký gỡ lỗi** - Kiểm tra mọi cảnh báo hoặc lỗi
-4. **Xem trước hình ảnh đã xử lý** - Sử dụng Image Viewer hoặc phần mềm bên ngoài
+1.**Xem lại kết quả**- Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
+2.**Kiểm tra thư mục đầu ra**- Xác minh tất cả các tệp được xuất chính xác
+3.**Xem lại nhật ký gỡ lỗi**- Kiểm tra mọi cảnh báo hoặc lỗi
+4.**Xem trước hình ảnh đã xử lý** - Sử dụng Image Viewer hoặc phần mềm bên ngoài
 
 Để biết thông tin về việc xem xét và sử dụng kết quả đã xử lý của bạn, hãy xem [Hoàn tất quá trình xử lý](finishing-the-processing.md).

@@ -9,11 +9,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 * **Hình ảnh gốc** (tệp JPG và RAW từ máy ảnh của bạn)
 * **Các đầu ra được hiệu chỉnh phản xạ** (nếu hiệu chỉnh phản xạ được bật)
 * **Hình ảnh mục tiêu** (nếu hình ảnh chứa mục tiêu hiệu chỉnh)
-* **Hình ảnh chỉ mục** (NDVI, NDRE, GNDVI, v.v. nếu chỉ mục đã được định cấu hình)
-
-**Trình đơn thả xuống Bộ chọn lớp** ở phía trên bên phải của Trình xem hình ảnh cho phép bạn chuyển đổi ngay lập tức giữa các phiên bản này mà không cần rời khỏi trình xem.
-
-***
+* **Hình ảnh chỉ mục**(NDVI, NDRE, GNDVI, v.v. nếu chỉ mục đã được định cấu hình)**Trình đơn thả xuống Bộ chọn lớp**ở phía trên bên phải của Trình xem hình ảnh cho phép bạn chuyển đổi ngay lập tức giữa các phiên bản này mà không cần rời khỏi trình xem.***
 
 ## Các loại lớp có sẵn
 
@@ -54,7 +50,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 * Kiểm tra chất lượng hình ảnh mục tiêu
 * Khắc phục sự cố hiệu chuẩn
 
-{% gợi ý style="info" %}
+{% hint style="info" %}
 **Lớp mục tiêu**: Lớp này chỉ xuất hiện trong danh sách thả xuống dành cho các hình ảnh có chứa mục tiêu hiệu chỉnh. Ảnh chụp thông thường sẽ không có tùy chọn này.
 {% endhint %}
 
@@ -74,7 +70,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 * Kiểm tra giá trị pixel để có độ chính xác khoa học
 * So sánh với bản gốc để xem hiệu ứng hiệu chỉnh
 
-{% gợi ý style="thành công" %}
+{% hint style="success" %}
 **Khuyến nghị**: Sử dụng lớp RAW (Phản xạ) khi kiểm tra giá trị pixel cho các phép đo và phân tích khoa học.
 {% endhint %}
 
@@ -110,7 +106,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 ### Mở menu thả xuống
 
 1. Mở hình ảnh ở chế độ toàn màn hình (nhấp vào bất kỳ hình thu nhỏ nào trong Trình xem Hình ảnh)
-2. Xác định vị trí **trình đơn thả xuống lớp** ở góc trên bên phải của trình xem
+2. Xác định vị trí**trình đơn thả xuống lớp**ở góc trên bên phải của trình xem
 3. Trình đơn thả xuống hiển thị lớp hiện được chọn (ví dụ: "JPG")
 4. Nhấp vào menu thả xuống để xem tất cả các lớp có sẵn
 
@@ -119,9 +115,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 1. Nhấp vào menu thả xuống lớp để mở danh sách
 2. Tất cả các lớp có sẵn cho hình ảnh hiện tại đều được hiển thị
 3. Nhấp vào tên lớp bất kỳ để chuyển sang phiên bản đó
-4. Hình ảnh cập nhật ngay lập tức để hiển thị lớp đã chọn
-
-**Chuyển đổi nhanh:**
+4. Hình ảnh cập nhật ngay lập tức để hiển thị lớp đã chọn**Chuyển đổi nhanh:**
 
 * Danh sách thả xuống ghi nhớ lựa chọn cuối cùng của bạn
 * Khi điều hướng đến hình ảnh tiếp theo, Chloros cố gắng hiển thị cùng loại lớp
@@ -131,11 +125,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 
 Không phải tất cả các lớp đều có sẵn cho mọi hình ảnh:
 
-**Luôn có sẵn:**
-
-* ✅ JPG (mỗi hình ảnh đều có bản xem trước JPG)
-
-**Có điều kiện:**
+**Luôn có sẵn:***✅ JPG (mỗi hình ảnh đều có bản xem trước JPG)**Có điều kiện:**
 
 * ⚠️ RAW (Bản gốc) - Chỉ khi ảnh được chụp ở chế độ RAW hoặc RAW+JPG
 * ⚠️ RAW (Mục tiêu) - Chỉ khi hình ảnh chứa mục tiêu hiệu chỉnh được phát hiện
@@ -148,9 +138,7 @@ Không phải tất cả các lớp đều có sẵn cho mọi hình ảnh:
 
 ### Điều hướng giữa các hình ảnh
 
-Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũi tên hoặc nhấp vào hình thu nhỏ):
-
-**Ưu tiên lớp được giữ nguyên:**
+Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũi tên hoặc nhấp vào hình thu nhỏ):**Ưu tiên lớp được giữ nguyên:**
 
 * Nếu xem "RAW (Phản xạ)", hình ảnh tiếp theo hiển thị "RAW (Phản xạ)" (nếu có)
 * Nếu xem "RAW (Chỉ số NDVI)", hình ảnh tiếp theo hiển thị "RAW (Chỉ mục NDVI)" (nếu có)
@@ -162,55 +150,45 @@ Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũ
 2. Nhấn → để xem Hình 2
 3. Hình 2 tự động hiển thị lớp RAW (NDVI Index)
 4. Tiếp tục điều hướng - tất cả hình ảnh đều hiển thị lớp NDVI
-5. Rất hiệu quả để xem xét kết quả chỉ mục trên nhiều hình ảnh
-
-***
+5. Rất hiệu quả để xem xét kết quả chỉ mục trên nhiều hình ảnh***
 
 ## Quy trình làm việc chung
 
 ### Quy trình 1: Trước/Sau so sánh
-
 **Mục tiêu**: So sánh hình ảnh gốc và hình ảnh đã hiệu chỉnh
 
 1. Mở hình ảnh đã xử lý trong Image Viewer
-2. Chọn **RAW (Bản gốc)** từ danh sách thả xuống
+2. Chọn**RAW (Bản gốc)**từ danh sách thả xuống
 3. Lưu ý các giá trị họa tiết và chưa được hiệu chỉnh
-4. Chuyển sang **RAW (Phản xạ)** từ danh sách thả xuống
+4. Chuyển sang**RAW (Phản xạ)**từ danh sách thả xuống
 5. So sánh - loại bỏ họa tiết, hiệu chỉnh các giá trị
 
-### Quy trình 2: Đánh giá chỉ mục
-
-**Mục tiêu**: Xem xét nhanh kết quả NDVI trên tập dữ liệu
+### Quy trình 2: Đánh giá chỉ mục**Mục tiêu**: Xem xét nhanh kết quả NDVI trên tập dữ liệu
 
 1. Mở hình ảnh được xử lý đầu tiên
-2. Chọn **RAW (Chỉ số NDVI)** từ danh sách thả xuống
+2. Chọn**RAW (Chỉ số NDVI)**từ danh sách thả xuống
 3. Sử dụng phím mũi tên → để chuyển sang hình ảnh tiếp theo
 4. Lớp NDVI tự động tồn tại
 5. Tiếp tục xem qua tất cả các hình ảnh, kiểm tra các mẫu NDVI
-6. Chuyển sang **RAW (Chỉ số NDRE)** để so sánh
+6. Chuyển sang**RAW (Chỉ số NDRE)**để so sánh
 
-### Quy trình 3: Xác minh mục tiêu
-
-**Mục tiêu**: Xác minh tất cả hình ảnh mục tiêu được phát hiện chính xác
+### Quy trình 3: Xác minh mục tiêu**Mục tiêu**: Xác minh tất cả hình ảnh mục tiêu được phát hiện chính xác
 
 1. Điều hướng đến hình ảnh mục tiêu
-2. Chọn **RAW (Mục tiêu)** từ danh sách thả xuống
+2. Chọn**RAW (Mục tiêu)**từ danh sách thả xuống
 3. Xác minh các mục tiêu hiệu chuẩn được nhìn thấy và phát hiện rõ ràng
 4. Điều hướng đến hình ảnh mục tiêu tiếp theo
 5. Lặp lại xác minh cho tất cả các mục tiêu
 
-### Quy trình 4: Kiểm tra giá trị pixel
-
-**Mục tiêu**: Kiểm tra các giá trị phản xạ để đảm bảo độ chính xác về mặt khoa học
+### Quy trình 4: Kiểm tra giá trị pixel**Mục tiêu**: Kiểm tra các giá trị phản xạ để đảm bảo độ chính xác về mặt khoa học
 
 1. Mở ảnh đã xử lý
-2. Chọn lớp **RAW (Phản xạ)**
-3. Bật chế độ **Phần trăm pixel** (nút ở thanh công cụ trên cùng bên phải)
+2. Chọn lớp**RAW (Phản xạ)**
+
+3. Bật chế độ**Phần trăm pixel**(nút ở thanh công cụ trên cùng bên phải)
 4. Di chuyển con trỏ qua vùng thực vật
 5. Xác minh giá trị pixel nằm trong phạm vi mong đợi (30-70% đối với NIR, 5-15% đối với Đỏ)
-6. Kiểm tra các vùng đất, nước để có giá trị phù hợp
-
-***
+6. Kiểm tra các vùng đất, nước để có giá trị phù hợp***
 
 ## Tìm hiểu giá trị pixel theo lớp
 
@@ -232,9 +210,7 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 
 * **Phạm vi**: 0-65.535 (TIFF 16 bit) hoặc 0,0-1,0 (Phần trăm 32 bit)
 * **Ý nghĩa**: Phần trăm phản xạ đã được hiệu chỉnh
-* **Sử dụng**: Đo lường và phân tích khoa học
-
-**Đối với TIFF 16 bit:** Chia cho 65.535 để có phần trăm phản xạ **Đối với Phần trăm 32 bit:** Các giá trị biểu thị trực tiếp phần trăm (0,5 = 50% phản xạ)
+* **Sử dụng**: Đo lường và phân tích khoa học**Đối với TIFF 16 bit:**Chia cho 65.535 để có phần trăm phản xạ**Đối với Phần trăm 32 bit:** Các giá trị biểu thị trực tiếp phần trăm (0,5 = 50% phản xạ)
 
 ### RAW (Hình ảnh chỉ mục)
 
@@ -266,17 +242,11 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 
 * **Luôn kiểm tra RAW (Bản gốc)**: Xác minh chất lượng dữ liệu nguồn trước khi tin cậy các đầu ra được xử lý
 * **So sánh các lớp**: Sử dụng chuyển đổi lớp để xác thực quá trình xử lý hoạt động chính xác
-* **Kiểm tra phạm vi chỉ mục**: Sử dụng chế độ Pixel Percent với các lớp chỉ mục để xác minh giá trị là hợp lý
-
-***
+* **Kiểm tra phạm vi chỉ mục**: Sử dụng chế độ Pixel Percent với các lớp chỉ mục để xác minh giá trị là hợp lý***
 
 ## Khắc phục sự cố
 
-### Lớp không có sẵn
-
-**Sự cố**: Lớp dự kiến ​​không xuất hiện trong danh sách thả xuống
-
-**Nguyên nhân có thể:**
+### Lớp không có sẵn**Sự cố**: Lớp dự kiến ​​không xuất hiện trong danh sách thả xuống**Nguyên nhân có thể:**
 
 * Hình ảnh chưa được xử lý (chỉ có JPG và RAW (Bản gốc))
 * Hiệu chỉnh phản xạ đã bị vô hiệu hóa trong quá trình xử lý
@@ -289,19 +259,9 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 2. Kiểm tra Cài đặt dự án để xác nhận các chỉ mục đã được định cấu hình
 3. Xử lý lại với các chỉ mục mong muốn được kích hoạt
 
-### Hiển thị sai lớp
+### Hiển thị sai lớp**Sự cố**: Hình ảnh mở ở lớp không mong muốn**Lý do**: Ưu tiên lớp từ hình ảnh trước đó được chuyển tiếp nhưng lớp đó không tồn tại trên hình ảnh hiện tại**Giải pháp**: Chloros tự động chuyển về JPG khi không có lớp ưa thích - đây là hiện tượng bình thường
 
-**Sự cố**: Hình ảnh mở ở lớp không mong muốn
-
-**Lý do**: Ưu tiên lớp từ hình ảnh trước đó được chuyển tiếp nhưng lớp đó không tồn tại trên hình ảnh hiện tại
-
-**Giải pháp**: Chloros tự động chuyển về JPG khi không có lớp ưa thích - đây là hiện tượng bình thường
-
-### Không thể nhìn thấy mục tiêu hiệu chỉnh
-
-**Sự cố**: Lớp RAW (Mục tiêu) không hiển thị tính năng phát hiện mục tiêu
-
-**Nguyên nhân có thể:**
+### Không thể nhìn thấy mục tiêu hiệu chỉnh**Sự cố**: Lớp RAW (Mục tiêu) không hiển thị tính năng phát hiện mục tiêu**Nguyên nhân có thể:**
 
 * Mục tiêu không được phát hiện trong quá trình xử lý
 * Hình ảnh thực tế không chứa mục tiêu
@@ -312,9 +272,7 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 1. Kiểm tra Nhật ký gỡ lỗi để biết thông báo "Đã tìm thấy mục tiêu"
 2. Xác minh hình ảnh thực sự chứa các mục tiêu hiệu chuẩn hiển thị
 3. Điều chỉnh cài đặt phát hiện mục tiêu trong Cài đặt dự án
-4. Xem [Chọn hình ảnh mục tiêu](../processing-images-gui/choosing-target-images.md)
-
-***
+4. Xem [Chọn hình ảnh mục tiêu](../processing-images-gui/choosing-target-images.md)***
 
 ## Tính năng liên quan
 
@@ -338,15 +296,13 @@ Xem [Mở toàn màn hình hình ảnh](opening-an-image-full-screen.md) để b
 * **Ánh xạ màu LUT**: Áp dụng chuyển màu cho các chỉ số thang độ xám
 * **Xuất trực quan hóa**: Lưu hình ảnh chỉ mục màu
 
-Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết chi tiết.
-
-***
+Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết chi tiết.***
 
 ## Các bước tiếp theo
 
 Bây giờ bạn đã hiểu các lớp hình ảnh:
 
-* [**Mở hình ảnh toàn màn hình**](opening-an-image-full-screen.md) - Hướng dẫn hoàn chỉnh về Trình xem hình ảnh
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Trực quan hóa chỉ mục tương tác
-* [**Công thức chỉ mục đa phổ**](../project-settings/multispectral-index-formulas.md) - Tham chiếu các chỉ số có sẵn
-* [**Hoàn tất quá trình xử lý**](../processing-images-gui/finishing-the-processing.md) - Tìm hiểu kết quả đầu ra được xử lý
+* [ **Mở hình ảnh toàn màn hình**](opening-an-image-full-screen.md) - Hướng dẫn hoàn chỉnh về Trình xem hình ảnh
+* [ **Index/LUT Sandbox**](index-lut-sandbox.md) - Trực quan hóa chỉ mục tương tác
+* [ **Công thức chỉ mục đa phổ**](../project-settings/multispectral-index-formulas.md) - Tham chiếu các chỉ số có sẵn
+* [ **Hoàn tất quá trình xử lý**](../processing-images-gui/finishing-the-processing.md) - Tìm hiểu kết quả đầu ra được xử lý

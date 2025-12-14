@@ -1,4 +1,4 @@
-#API: SDK Python
+# API: SDK Python
 
 **Chloros Python SDK** cung cấp quyền truy cập theo chương trình vào công cụ xử lý hình ảnh Chloros, cho phép tự động hóa, quy trình công việc tùy chỉnh và tích hợp liền mạch với các ứng dụng Python và quy trình nghiên cứu của bạn.
 
@@ -13,17 +13,16 @@
 
 ### Yêu cầu
 
-| Yêu cầu | Chi tiết |
+| Yêu cầu          | Chi tiết                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| **Máy tính để bàn Cloros** | Phải được cài đặt cục bộ |
-| **Giấy phép** | Chloros+ ([yêu cầu gói trả phí](https://cloud.mapir.Camera/pricing)) |
-| **Hệ điều hành** | Windows 10/11 (64-bit) |
-| **Trăn** | Python 3.7 trở lên |
-| **Bộ nhớ** | RAM tối thiểu 8GB (khuyến nghị 16GB) |
-| **Internet** | Cần thiết để kích hoạt giấy phép |
+|**Máy tính để bàn Cloros**  | Phải được cài đặt cục bộ                                           |
+|**Giấy phép**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
+|**Hệ điều hành** | Windows 10/11 (64-bit)                                              |
+|**Trăn**           | Python 3.7 trở lên                                                |
+|**Ký ức**           | RAM tối thiểu 8GB (khuyến nghị 16GB)                                  |
+|**Internet**         | Cần thiết để kích hoạt giấy phép                                     |
 
-{% gợi ý style="warning" %}
-**Yêu cầu về giấy phép**: Python SDK yêu cầu đăng ký Chloros+ trả phí để truy cập API. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập API/SDK. Hãy truy cập [https://cloud.mapir.Camera/pricing](https://cloud.mapir.Camera/pricing) để nâng cấp.
+{% hint style="warning" %}**Yêu cầu về giấy phép**: Python SDK yêu cầu đăng ký Chloros+ trả phí để truy cập API. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập API/SDK. Thăm nom [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) để nâng cấp.
 {% endhint %}
 
 ## Bắt đầu nhanh
@@ -36,13 +35,12 @@ Cài đặt qua pip:
 pip install chloros-sdk
 ```
 
-{% hint style="info" %}
-**First-Time Setup**: Before using the SDK, activate your Chloros+ license by opening Chloros, Chloros (Browser) or Chloros CLI and logging in with your credentials. This only needs to be done once.
+{% hint style="info" %}**Thiết lập lần đầu**: Trước khi sử dụng SDK, hãy kích hoạt giấy phép Chloros+ của bạn bằng cách mở Chloros, Chloros (Trình duyệt) hoặc Chloros CLI và đăng nhập bằng thông tin xác thực của bạn. Điều này chỉ cần được thực hiện một lần.
 {% endhint %}
 
-### Basic Usage
+### Cách sử dụng cơ bản
 
-Process a folder with just a few lines:
+Xử lý một thư mục chỉ với một vài dòng:
 
 ```python
 from chloros_sdk import process_folder
@@ -51,9 +49,9 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\DroneImages\\Flight001")
 ```
 
-### Full Control
+### Kiểm soát hoàn toàn
 
-For advanced workflows:
+Đối với quy trình công việc nâng cao:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -76,68 +74,57 @@ chloros.configure(
 
 # Process images
 chloros.process(mode="parallel", wait=True)
-```
+```***
 
-***
+## Hướng dẫn cài đặt
 
-## Installation Guide
+### Điều kiện tiên quyết
 
-### Prerequisites
+Trước khi cài đặt SDK, hãy đảm bảo bạn có:
 
-Before installing the SDK, ensure you have:
+1. **Đã cài đặt Cloros Desktop** ([download](download.md))
+2.**Đã cài đặt Python 3.7+** ([python.org](https://www.python.org))
+3.**Giấy phép Active Chloros+** ([nâng cấp](https://cloud.mapir.camera/pricing))
 
-1. **Chloros Desktop** installed ([download](download.md))
-2. **Python 3.7+** installed ([python.org](https://www.python.org))
-3. **Active Chloros+ license** ([upgrade](https://cloud.mapir.camera/pricing))
-
-### Install via pip
-
-**Standard installation:**
+### Cài đặt qua pip**Cài đặt tiêu chuẩn:**
 
 ```bash
 pip install chloros-sdk
-```
-
-**With progress monitoring support:**
+```**Với sự hỗ trợ theo dõi tiến độ:**
 
 ```bash
 pip install chloros-sdk[progress]
-```
-
-**Development installation:**
+```**Cài đặt phát triển:**
 
 ```bash
 pip install chloros-sdk[dev]
 ```
 
-### Verify Installation
+### Xác minh cài đặt
 
-Test that the SDK is installed correctly:
+Kiểm tra xem SDK đã được cài đặt đúng chưa:
 
 ```python
 import chloros_sdk
 print(f"Chloros SDK version: {chloros_sdk.__version__}")
-```
+```***
 
-***
+## Thiết lập lần đầu
 
-## First-Time Setup
+### Kích hoạt giấy phép
 
-### License Activation
+SDK sử dụng giấy phép tương tự như Chloros, Chloros (Trình duyệt) và Chloros CLI. Kích hoạt một lần thông qua GUI hoặc CLI:
 
-The SDK uses the same license as Chloros, Chloros (Browser), and Chloros CLI. Activate once via the GUI or CLI:
+1. Mở **Chloros hoặc Chloros (Trình duyệt)** và đăng nhập vào Người dùng<img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line">tab. Hoặc mở**CLI**.
+2. Nhập thông tin đăng nhập Chloros+ của bạn và đăng nhập
+3. Giấy phép được lưu trữ cục bộ (vẫn tồn tại trong các lần khởi động lại)
 
-1. Open **Chloros or Chloros (Browser)** and login on the User <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> tab. Or, open the **CLI**.
-2. Enter your Chloros+ credentials and log in
-3. License is cached locally (persists across reboots)
-
-{% hint style="success" %}
-**One-Time Setup**: After logging in via the GUI or CLI, the SDK automatically uses the cached license. No additional authentication needed!
+{% hint style="success" %}**Thiết lập một lần**: Sau khi đăng nhập qua GUI hoặc CLI, SDK sẽ tự động sử dụng giấy phép được lưu trong bộ nhớ đệm. Không cần xác thực bổ sung!
 {% endhint %}
 
-### Test Connection
+### Kiểm tra kết nối
 
-Verify the SDK can connect to Chloros:
+Xác minh SDK có thể kết nối với Chloros:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -148,17 +135,15 @@ chloros = ChlorosLocal()
 # Check status
 status = chloros.get_status()
 print(f"Backend running: {status['running']}")
-```
+```***
 
-***
+## Tham chiếu API
 
-## API Reference
+### Lớp địa phương cloros
 
-### ChlorosLocal Class
+Lớp chính để xử lý hình ảnh Chloros cục bộ.
 
-Main class for local Chloros image processing.
-
-#### Constructor
+#### Người xây dựng
 
 ```python
 ChlorosLocal(
@@ -170,17 +155,15 @@ ChlorosLocal(
 )
 ```
 
-**Parameters:**
+**Thông số:**
 
-| Parameter                 | Type | Default                   | Description                           |
+| tham số                 | Kiểu | Mặc định                   | Sự miêu tả                           |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
-| `api_url`                 | str  | `"http://localhost:5000"` | URL of local Chloros backend          |
-| `auto_start_backend`      | bool | `Đúng`                    | Automatically start backend if needed |
-| `phụ trợ_exe`             | str  | `Không` (auto-detect)      | Path to backend executable            |
-| `hết giờ`                 | int  | `30`                      | Request timeout in seconds            |
-| `backend_startup_timeout` | int  | `60`                      | Timeout for backend startup (seconds) |
-
-**Examples:**
+| `api_url`                 | str  | `"http://localhost:5000"` | URL của chương trình phụ trợ Chloros cục bộ          |
+| `auto_start_backend`      | bool | `True`                    | Tự động bắt đầu phụ trợ nếu cần |
+| `backend_exe`             | str  | `None` (auto-detect)      | Đường dẫn đến phần thực thi phụ trợ            |
+| `timeout`                 | int  | `30`                      | Yêu cầu thời gian chờ tính bằng giây            |
+| `backend_startup_timeout` | int  | `60`                      | Thời gian chờ để khởi động phụ trợ (giây) |**Ví dụ:**
 
 ```python
 # Default (auto-start backend)
@@ -194,26 +177,20 @@ chloros = ChlorosLocal(backend_exe="C:/Custom/chloros-backend.exe")
 
 # Custom timeout
 chloros = ChlorosLocal(timeout=60)
-```
+```***
 
-***
-
-### Methods
+### phương pháp
 
 #### `create_project(project_name, camera=None)`
 
-Create a new Chloros project.
+Tạo một dự án Chloros mới.
 
-**Parameters:**
+**Thông số:**
 
-| Parameter      | Type | Required | Description                                              |
+| tham số      | Kiểu | Yêu cầu | Sự miêu tả                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
-| `tên_dự án` | str  | Yes      | Name for the project                                     |
-| `máy ảnh`       | str  | No       | Camera template (e.g., "Survey3N\_RGN", "Survey3W\_OCN") |
-
-**Returns:** `dict` - Project creation response
-
-**Example:**
+| `project_name` | str  | Đúng      | Tên cho dự án                                     |
+| `camera`       | str  | No       | Mẫu máy ảnh (ví dụ: "Survey3N\_RGN", "Survey3W\_OCN") |**Trả lại:** `dict` - Project creation response**Ví dụ:**
 
 ```python
 # Basic project
@@ -221,24 +198,18 @@ chloros.create_project("DroneField_A")
 
 # With camera template
 chloros.create_project("DroneField_A", camera="Survey3N_RGN")
-```
-
-***
+```***
 
 #### `import_images(folder_path, recursive=False)`
 
-Import images from a folder.
+Nhập hình ảnh từ một thư mục.
 
-**Parameters:**
+**Thông số:**
 
-| Parameter     | Type     | Required | Description                        |
+| tham số     | Kiểu     | Yêu cầu | Sự miêu tả                        |
 | ------------- | -------- | -------- | ---------------------------------- |
-| `đường dẫn thư mục` | str/Path | Yes      | Path to folder with images         |
-| `đệ quy`   | bool     | No       | Search subfolders (default: False) |
-
-**Returns:** `dict` - Import results with file count
-
-**Example:**
+| `folder_path` | str/Đường dẫn | Đúng      | Đường dẫn đến thư mục có hình ảnh         |
+| `recursive`   | bool     | No       | Tìm kiếm thư mục con (mặc định: Sai) |**Trả lại:** `dict` - Import results with file count**Ví dụ:**
 
 ```python
 # Import from folder
@@ -246,38 +217,30 @@ chloros.import_images("C:\\DroneImages\\Flight001")
 
 # Import recursively
 chloros.import_images("C:\\DroneImages", recursive=True)
-```
+```***
 
-***
+#### `configure(**settings)`
 
-#### `cấu hình(**cài đặt)`
+Định cấu hình cài đặt xử lý.**Thông số:**
 
-Configure processing settings.
+| tham số                 | Kiểu | Mặc định                 | Sự miêu tả                     |
+| ------------------------- | ---- | -------------- | ------------------------------- |
+| `debayer`                 | str  | "Chất lượng cao (Nhanh hơn)" | Phương pháp Debayer                  |
+| `vignette_correction`     | bool | `True`                  | Bật tính năng chỉnh sửa họa tiết      |
+| `reflectance_calibration` | bool | `True`                  | Kích hoạt hiệu chuẩn phản xạ  |
+| `indices`                 | danh sách | `None`                  | Chỉ số thực vật để tính toán |
+| `export_format`           | str  | "TIFF (16-bit)"         | định dạng đầu ra                   |
+| `ppk`                     | bool | `False`                 | Kích hoạt tính năng chỉnh sửa PPK          |
+| `custom_settings`         | mệnh lệnh | `None`                  | Cài đặt tùy chỉnh nâng cao        |**Định dạng xuất:**
 
-**Parameters:**
+* `"TIFF (16-bit)"`- Được khuyến nghị cho GIS/phép đo ảnh
+* `"TIFF (32-bit, Percent)"`- Phân tích khoa học
+* `"PNG (8-bit)"`- Kiểm tra trực quan
+* `"JPG (8-bit)"`- Đầu ra nén
 
-| Parameter                 | Type | Default                 | Description                     |
-| ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | "High Quality (Faster)" | Debayer method                  |
-| `vignette_ Correction`     | bool | `Đúng`                  | Enable vignette correction      |
-| `phản xạ_hiệu chuẩn`                     | bool | `Đúng`                  | Enable reflectance calibration  |
-| `chỉ số`                 | list | `Không có`                  | Vegetation indices to calculate |
-| `xuất_format`           | str  | "TIFF (16-bit)"         | Output format                   |
-| `ppk`              | bool     | `Sai`                 | Enable PPK corrections          |
-| `custom_settings`         | dict | `Không có`                  | Advanced custom settings        |
+**Chỉ số có sẵn:**
 
-**Export Formats:**
-
-* `"TIFF (16-bit)"` - Recommended for GIS/photogrammetry
-* `"TIFF (32-bit, Phần trăm)"` - Scientific analysis
-* `"PNG (8-bit)"` - Visual inspection
-* `"JPG (8-bit)"` - Compressed output
-
-**Available Indices:**
-
-NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2, and more.
-
-**Example:**
+NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2, v.v.**Ví dụ:**
 
 ```python
 # Basic configuration
@@ -296,30 +259,23 @@ chloros.configure(
     export_format="TIFF (32-bit, Percent)",
     indices=["NDVI", "NDRE", "GNDVI", "OSAVI", "CIG"]
 )
-```
+```***
 
-***
+#### `process(mode="parallel", wait=True, progress_callback=None)`
 
-#### `process(mode="parallel", wait=True, Progress_callback=None)`
+Xử lý hình ảnh dự án
 
-Process the project images.
+**Thông số:**
 
-**Parameters:**
-
-| Parameter           | Type     | Default      | Description                               |
+| tham số           | Kiểu     | Mặc định      | Sự miêu tả                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `chế độ`              | str      | `"song song"` | Processing mode: "parallel" or "serial"   |
-| `đợi`     | bool     | `Đúng`       | Wait for completion                       |
-| `progress_callback` | callable | `Không có`       | Progress callback function(progress, msg) |
-| `thăm dò ý kiến`     | float    | `2.0`        | Polling interval for progress (seconds)   |
+| `mode`              | str      | `"parallel"` | Chế độ xử lý: "song song" hoặc "nối tiếp"   |
+| `wait`              | bool     | `True`       | Chờ hoàn thành                       |
+| `progress_callback` | có thể gọi được | `None`       | Hàm gọi lại tiến trình (tiến trình, tin nhắn) |
+| `poll_interval`     | trôi nổi    | `2.0`        | Khoảng thời gian bỏ phiếu cho tiến trình (giây)   |**Trả lại:** `dict` - Processing results
 
-**Returns:** `dict` - Processing results
-
-{% hint style="warning" %}
-**Parallel Mode**: Requires Chloros+ license. Automatically scales to your CPU cores (up to 16 workers).
-{% endhint %}
-
-**Example:**
+{% hint style="warning" %}**Chế độ song song**: Yêu cầu giấy phép Chloros+. Tự động điều chỉnh quy mô theo lõi CPU của bạn (tối đa 16 nhân viên).
+{% endhint %}**Ví dụ:**
 
 ```python
 # Simple processing
@@ -337,76 +293,58 @@ chloros.process(
 
 # Fire-and-forget (non-blocking)
 chloros.process(wait=False)
-```
-
-***
+```***
 
 #### `get_config()`
 
-Get current project configuration.
+Nhận cấu hình dự án hiện tại.
 
-**Returns:** `dict` - Current project configuration
-
-**Example:**
+**Trả lại:** `dict` - Current project configuration**Ví dụ:**
 
 ```python
 config = chloros.get_config()
 print(config['Project Settings'])
-```
-
-***
+```***
 
 #### `get_status()`
 
-Get backend status information.
+Nhận thông tin trạng thái phụ trợ.
 
-**Returns:** `dict` - Backend status
-
-**Example:**
+**Trả lại:** `dict` - Backend status**Ví dụ:**
 
 ```python
 status = chloros.get_status()
 print(f"Running: {status['running']}")
 print(f"URL: {status['url']}")
-```
-
-***
+```***
 
 #### `shutdown_backend()`
 
-Shutdown the backend (if started by SDK).
+Tắt phần phụ trợ (nếu được khởi động bằng SDK).
 
-**Example:**
+**Ví dụ:**
 
 ```python
 chloros.shutdown_backend()
-```
+```***
 
-***
-
-### Convenience Functions
+### Chức năng tiện lợi
 
 #### `process_folder(folder_path, **options)`
 
-One-line convenience function to process a folder.
+Chức năng tiện lợi một dòng để xử lý một thư mục.**Thông số:**
 
-**Parameters:**
-
-| Parameter                 | Type     | Default         | Description                    |
+| tham số                 | Kiểu     | Mặc định         | Sự miêu tả                    |
 | ------------------------- | -------- | --------------- | ------------------------------ |
-| `đường dẫn thư mục`             | str/Path | Required        | Path to folder with images     |
-| `tên_dự án`            | str      | Auto-generated  | Project name                   |
-| `máy ảnh`                  | str      | `Không có`          | Camera template                |
-| `chỉ số`                 | list     | `["NDVI"]`      | Indices to calculate           |
-| `vignette_ Correction` | bool     | `Đúng`          | Enable vignette correction     |
-| `phản xạ_hiệu chuẩn` | bool | `Đúng`          | Enable reflectance calibration |
-| `xuất_format`           | str      | "TIFF (16-bit)" | Output format                  |
-| `chế độ`                    | str      | `"song song"`    | Processing mode                |
-| `progress_callback`       | callable | `Không có`          | Progress callback              |
-
-**Returns:** `dict` - Processing results
-
-**Example:**
+| `folder_path`             | str/Đường dẫn | Yêu cầu        | Đường dẫn đến thư mục có hình ảnh     |
+| `project_name`            | str      | Được tạo tự động  | Tên dự án                   |
+| `camera`                  | str      | `None`          | Mẫu máy ảnh                |
+| `indices`                 | danh sách     | `["NDVI"]`      | Các chỉ số để tính toán           |
+| `vignette_correction`     | bool     | `True`          | Bật tính năng chỉnh sửa họa tiết     |
+| `reflectance_calibration` | bool     | `True`          | Kích hoạt hiệu chuẩn phản xạ |
+| `export_format`           | str      | "TIFF (16-bit)" | định dạng đầu ra                  |
+| `mode`                    | str      | `"parallel"`    | Chế độ xử lý                |
+| `progress_callback`       | có thể gọi được | `None`          | Gọi lại tiến độ              |**Trả lại:** `dict` - Processing results**Ví dụ:**
 
 ```python
 from chloros_sdk import process_folder
@@ -431,13 +369,11 @@ results = process_folder(
     "C:\\DroneImages\\Flight001",
     progress_callback=show_progress
 )
-```
+```***
 
-***
+## Hỗ trợ Trình quản lý bối cảnh
 
-## Context Manager Support
-
-The SDK supports context managers for automatic cleanup:
+SDK hỗ trợ trình quản lý bối cảnh để tự động dọn dẹp:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -453,11 +389,11 @@ with ChlorosLocal() as chloros:
 
 ***
 
-## Complete Examples
+## Ví dụ hoàn chỉnh
 
-### Example 1: Basic Processing
+### Ví dụ 1: Xử lý cơ bản
 
-Process a folder with default settings:
+Xử lý thư mục có cài đặt mặc định:
 
 ```python
 from chloros_sdk import process_folder
@@ -466,13 +402,11 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Datasets\\Field_A_2025_01_15")
 
 print(f"Processing complete: {results}")
-```
+```***
 
-***
+### Ví dụ 2: Quy trình làm việc tùy chỉnh
 
-### Example 2: Custom Workflow
-
-Full control over processing pipeline:
+Kiểm soát hoàn toàn đường ống xử lý:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -512,9 +446,9 @@ print("Processing complete!")
 
 ***
 
-### Example 3: Batch Processing Multiple Folders
+### Ví dụ 3: Xử lý hàng loạt nhiều thư mục
 
-Process multiple flight datasets:
+Xử lý nhiều tập dữ liệu chuyến bay:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -564,9 +498,9 @@ print("All flights processed!")
 
 ***
 
-### Example 4: Research Pipeline Integration
+### Ví dụ 4: Tích hợp quy trình nghiên cứu
 
-Integrate Chloros with data analysis:
+Tích hợp Chloros với phân tích dữ liệu:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -615,13 +549,11 @@ print(df)
 # plt.ylabel('Biomass (kg/ha)')
 # plt.title('NDVI vs Biomass Correlation')
 # plt.show()
-```
+```***
 
-***
+### Ví dụ 5: Giám sát tiến độ tùy chỉnh
 
-### Example 5: Custom Progress Monitoring
-
-Advanced progress tracking with logging:
+Theo dõi tiến trình nâng cao bằng tính năng ghi nhật ký:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -658,9 +590,9 @@ logging.info("Processing complete!")
 
 ***
 
-### Example 6: Error Handling
+### Ví dụ 6: Xử lý lỗi
 
-Robust error handling for production use:
+Xử lý lỗi mạnh mẽ khi sử dụng trong sản xuất:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -706,13 +638,11 @@ if success:
     print(f"✓ {message}")
 else:
     print(f"✗ {message}")
-```
+```***
 
-***
+### Ví dụ 7: Công cụ dòng lệnh
 
-### Example 7: Command-Line Tool
-
-Build a custom CLI tool with the SDK:
+Xây dựng công cụ CLI tùy chỉnh với SDK:
 
 ```python
 #!/usr/bin/env python
@@ -775,19 +705,17 @@ if __name__ == '__main__':
     sys.exit(main())
 ```
 
-**Usage:**
+**Cách sử dụng:**
 
 ```bash
 python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
-```
+```***
 
-***
+## Xử lý ngoại lệ
 
-## Exception Handling
+SDK cung cấp các lớp ngoại lệ cụ thể cho các loại lỗi khác nhau:
 
-The SDK provides specific exception classes for different error types:
-
-### Exception Hierarchy
+### Phân cấp ngoại lệ
 
 ```python
 ChlorosError                    # Base exception
@@ -799,7 +727,7 @@ ChlorosError                    # Base exception
 └── ChlorosConfigurationError  # Configuration errors
 ```
 
-### Exception Examples
+### Ví dụ ngoại lệ
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -824,11 +752,11 @@ except ChlorosError as e:
 
 ***
 
-## Advanced Topics
+## Chủ đề nâng cao
 
-### Custom Backend Configuration
+### Cấu hình phụ trợ tùy chỉnh
 
-Use a custom backend location or configuration:
+Sử dụng vị trí hoặc cấu hình phụ trợ tùy chỉnh:
 
 ```python
 chloros = ChlorosLocal(
@@ -839,9 +767,9 @@ chloros = ChlorosLocal(
 )
 ```
 
-### Non-Blocking Processing
+### Xử lý không chặn
 
-Start processing and continue with other tasks:
+Bắt đầu xử lý và tiếp tục với các tác vụ khác:
 
 ```python
 # Start processing (non-blocking)
@@ -861,9 +789,9 @@ while True:
 print("Processing complete!")
 ```
 
-### Memory Management
+### Quản lý bộ nhớ
 
-For large datasets, process in batches:
+Đối với các tập dữ liệu lớn, xử lý theo đợt:
 
 ```python
 from pathlib import Path
@@ -888,15 +816,11 @@ for i in range(0, len(images), batch_size):
 
 ***
 
-## Troubleshooting
+## Khắc phục sự cố
 
-### Backend Not Starting
+### Phần cuối không bắt đầu**Vấn đề:** SDK fails to start backend**Giải pháp:**
 
-**Issue:** SDK fails to start backend
-
-**Solutions:**
-
-1. Verify Chloros Desktop is installed:
+1. Xác minh Cloros Desktop đã được cài đặt:
 
 ```python
 import os
@@ -904,23 +828,19 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. Check Windows Firewall isn't blocking
-3. Try manual backend path:
+2. Kiểm tra Tường lửa Windows không chặn
+3. Hãy thử đường dẫn phụ trợ thủ công:
 
 ```python
 chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
-```
+```***
 
-***
+### Giấy phép không được phát hiện
 
-### License Not Detected
+**Vấn đề:** SDK warns about missing license**Giải pháp:**
 
-**Issue:** SDK warns about missing license
-
-**Solutions:**
-
-1. Open Chloros, Chloros (Browser) or Chloros CLI and login.
-2. Verify license is cached:
+1. Mở Chloros, Chloros (Trình duyệt) hoặc Chloros CLI và đăng nhập.
+2. Xác minh giấy phép được lưu trữ:
 
 ```python
 from pathlib import Path
@@ -931,15 +851,11 @@ cache_path = Path(os.getenv('APPDATA')) / 'Chloros' / 'cache'
 print(f"Cache exists: {cache_path.exists()}")
 ```
 
-3. Contact support: info@mapir.camera
+3. Liên hệ hỗ trợ: info@mapir.Camera***
 
-***
+### Lỗi nhập
 
-### Import Errors
-
-**Issue:** `ModuleNotFoundError: Không có mô-đun nào có tên 'chloros_sdk'`
-
-**Solutions:**
+**Vấn đề:** `ModuleNotFoundError: No module named 'chloros_sdk'`**Giải pháp:**
 
 ```bash
 # Verify installation
@@ -951,78 +867,66 @@ pip install chloros-sdk
 
 # Check Python environment
 python -c "import sys; print(sys.path)"
-```
+```***
 
-***
+### Hết thời gian xử lý
 
-### Processing Timeout
+**Vấn đề:** Processing times out**Giải pháp:**
 
-**Issue:** Processing times out
-
-**Solutions:**
-
-1. Increase timeout:
+1. Tăng thời gian chờ:
 
 ```python
 chloros = ChlorosLocal(timeout=120)  # 2 minutes
 ```
 
-2. Process smaller batches
-3. Check available disk space
-4. Monitor system resources
+2. Xử lý các lô nhỏ hơn
+3. Kiểm tra dung lượng đĩa trống
+4. Giám sát tài nguyên hệ thống***
 
-***
+### Cổng đã được sử dụng
 
-### Port Already in Use
-
-**Issue:** Backend port 5000 occupied
-
-**Solutions:**
+**Vấn đề:** Backend port 5000 occupied**Giải pháp:**
 
 ```python
 # Use different port
 chloros = ChlorosLocal(api_url="http://localhost:5001")
 ```
 
-Or find and close conflicting process:
+Hoặc tìm và đóng quá trình xung đột:
 
 ```powershell
 # PowerShell
 Get-NetTCPConnection -LocalPort 5000
-```
+```***
 
-***
+## Mẹo về hiệu suất
 
-## Performance Tips
+### Tối ưu hóa tốc độ xử lý
 
-### Optimize Processing Speed
-
-1. **Use Parallel Mode** (requires Chloros+)
+1. **Sử dụng Chế độ song song** (yêu cầu Chloros+)
 
 ```python
 chloros.process(mode="parallel")  # Up to 16 workers
 ```
 
-2. **Reduce Output Resolution** (if acceptable)
+2.**Giảm độ phân giải đầu ra** (nếu chấp nhận được)
 
 ```python
 chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 ```
 
-3. **Disable Unnecessary Indices**
+3.**Vô hiệu hóa các chỉ số không cần thiết**
 
 ```python
 # Only calculate needed indices
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Process on SSD** (not HDD)
+4.**Xử lý trên SSD** (không phải HDD)***
 
-***
+### Tối ưu hóa bộ nhớ
 
-### Memory Optimization
-
-For large datasets:
+Đối với tập dữ liệu lớn:
 
 ```python
 # Process in batches instead of all at once
@@ -1031,22 +935,20 @@ For large datasets:
 
 ***
 
-### Background Processing
+### Xử lý nền
 
-Free up Python for other tasks:
+Giải phóng Python cho các tác vụ khác:
 
 ```python
 chloros.process(wait=False)  # Non-blocking
 
 # Continue with other work
 # ...
-```
+```***
 
-***
+## Ví dụ tích hợp
 
-## Integration Examples
-
-### Django Integration
+### Tích hợp Django
 
 ```python
 # views.py
@@ -1064,7 +966,7 @@ def process_images_view(request):
             return JsonResponse({'success': False, 'error': str(e)})
 ```
 
-### Flask API
+### API bình
 
 ```python
 # app.py
@@ -1088,7 +990,7 @@ if __name__ == '__main__':
     app.run()
 ```
 
-### Jupyter Notebook
+### Máy tính xách tay Jupyter
 
 ```python
 # notebook.ipynb
@@ -1119,59 +1021,51 @@ chloros.process(progress_callback=notebook_progress)
 
 ***
 
-## FAQ
+## Câu hỏi thường gặp
 
-### Q: Does the SDK require an internet connection?
+### Câu hỏi: SDK có yêu cầu kết nối internet không?**A:** Only for initial license activation. After logging in via Chloros, Chloros (Browser) or Chloros CLI the license is cached locally and works offline for 30 days.***
 
-**A:** Only for initial license activation. After logging in via Chloros, Chloros (Browser) or Chloros CLI the license is cached locally and works offline for 30 days.
-
-***
-
-### Q: Can I use the SDK on a server without GUI?
+### Câu hỏi: Tôi có thể sử dụng SDK trên máy chủ không có GUI không?
 
 **A:** Yes! Requirements:
 
-* Windows Server 2016 or later
-* Chloros installed (one-time)
-* License activated on any machine (cached license copied to server)
+* Windows Server 2016 trở lên
+* Đã cài đặt cloros (một lần)
+* Giấy phép được kích hoạt trên bất kỳ máy nào (giấy phép được lưu trong bộ nhớ đệm được sao chép vào máy chủ)
 
 ***
 
-### Q: What's the difference between Desktop, CLI, and SDK?
+### Câu hỏi: Sự khác biệt giữa Máy tính để bàn, CLI và SDK là gì?
 
-| Feature         | Desktop GUI | CLI Command Line | Python SDK  |
+| Tính năng         | GUI trên máy tính để bàn | Dòng lệnh CLI | SDK Python  |
 | --------------- | ----------- | ---------------- | ----------- |
-| **Interface**   | Point-click | Command          | Python API  |
-| **Best For**    | Visual work | Scripting        | Integration |
-| **Automation**  | Limited     | Good             | Excellent   |
-| **Flexibility** | Basic       | Good             | Maximum     |
-| **License**     | Chloros+    | Chloros+         | Chloros+    |
+|**Giao diện**   | Bấm chuột | Yêu cầu          | API Python  |
+|**Tốt nhất cho**    | Tác phẩm trực quan | Viết kịch bản        | Tích hợp |
+|**Tự động hóa**  | Giới hạn     | Tốt             | Xuất sắc   |
+|**Tính linh hoạt** | Nền tảng       | Tốt             | Tối đa     |
+|**Giấy phép**     | Clo+    | Clo+         | Clo+    |***
 
-***
-
-### Q: Can I distribute apps built with the SDK?
+### Câu hỏi: Tôi có thể phân phối các ứng dụng được xây dựng bằng SDK không?
 
 **A:** SDK code can be integrated into your applications, but:
 
-* End users need Chloros installed
-* End users need active Chloros+ licenses
-* Commercial distribution requires OEM licensing
+* Người dùng cuối cần cài đặt Chloros
+* Người dùng cuối cần có giấy phép Chloros+ đang hoạt động
+* Phân phối thương mại yêu cầu giấy phép OEM
 
-Contact info@mapir.camera for OEM inquiries.
+Liên hệ với info@mapir.Camera để được giải đáp thắc mắc về OEM.
 
 ***
 
-### Q: How do I update the SDK?
+### Câu hỏi: Làm cách nào để cập nhật SDK?
 
 ```bash
 pip install --upgrade chloros-sdk
-```
+```***
 
-***
+### Hỏi: Hình ảnh đã xử lý được lưu ở đâu?
 
-### Q: Where are processed images saved?
-
-By default, in the Project Path :
+Theo mặc định, trong Đường dẫn dự án:
 
 ```
 Project_Path/
@@ -1181,9 +1075,7 @@ Project_Path/
 
 ***
 
-### Q: Can I process images from Python scripts running on schedule?
-
-**A:** Yes! Use Windows Task Scheduler with Python scripts:
+### Câu hỏi: Tôi có thể xử lý hình ảnh từ các tập lệnh Python chạy theo lịch không?**A:** Yes! Use Windows Task Scheduler with Python scripts:
 
 ```python
 # scheduled_processing.py
@@ -1193,11 +1085,9 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Schedule via Task Scheduler to run daily.
+Lập lịch thông qua Trình lập lịch tác vụ để chạy hàng ngày.***
 
-***
-
-### Q: Does the SDK support async/await?
+### Câu hỏi: SDK có hỗ trợ tính năng async/await không?
 
 **A:** Current version is synchronous. For async behavior, use `wait=False` or run in separate thread:
 
@@ -1211,9 +1101,7 @@ thread = threading.Thread(target=process_thread)
 thread.start()
 
 # Continue with other work...
-```
-
-***
+```***
 
 ## Nhận trợ giúp
 
@@ -1224,14 +1112,12 @@ thread.start()
 ### Kênh hỗ trợ
 
 * **Email**: info@mapir.máy ảnh
-* **Trang web**: [https://www.mapir.Camera/community/contact](https://www.mapir.Camera/community/contact)
-* **Giá**: [https://cloud.mapir.Camera/pricing](https://cloud.mapir.Camera/pricing)
+* **Trang web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Giá**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ### Mã mẫu
 
-Tất cả các ví dụ được liệt kê ở đây đều đã được thử nghiệm và sẵn sàng sản xuất. Sao chép và điều chỉnh chúng cho trường hợp sử dụng của bạn.
-
-***
+Tất cả các ví dụ được liệt kê ở đây đều đã được thử nghiệm và sẵn sàng sản xuất. Sao chép và điều chỉnh chúng cho trường hợp sử dụng của bạn.***
 
 ## Giấy phép
 

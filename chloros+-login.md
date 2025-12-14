@@ -16,19 +16,14 @@ Khi đăng nhập chi tiết tài khoản của bạn sẽ được hiển thị
 
 ```bash
 chloros-cli login <email> <password>
-```
-
-**Ví dụ:**
+```**Ví dụ:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% gợi ý style="warning" %}
-**Ký tự đặc biệt**: Sử dụng dấu ngoặc đơn xung quanh mật khẩu chứa các ký tự như `$`, `!` hoặc dấu cách.
-{% endhint %}
-
-**Đầu ra:**
+{% hint style="warning" %}**Ký tự đặc biệt**: Sử dụng dấu ngoặc đơn xung quanh mật khẩu chứa các ký tự như `$`, `!` hoặc dấu cách.
+{% endhint %}**Đầu ra:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 

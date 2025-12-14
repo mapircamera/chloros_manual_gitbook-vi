@@ -5,14 +5,11 @@ Sau khi bạn đã tạo hoặc mở dự án trong Chloros, bước tiếp theo
 ## Truy cập Trình duyệt Tệp
 
 1. Mở hoặc tạo dự án trong Chloros
-2. Nhấp vào biểu tượng **Trình duyệt tệp** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> ở thanh bên trái
+2. Nhấp vào biểu tượng **Trình duyệt tệp**<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> ở thanh bên trái
 3. Bảng File Browser sẽ hiển thị danh sách tệp dự án của bạn
 
-{% gợi ý style="info" %}
-**Các loại tệp được hỗ trợ**: Chloros hỗ trợ các tệp hình ảnh RAW+JPG và JPG từ máy ảnh MAPIR Survey3W và Survey3N. Chỉ nên sử dụng RAW+JPG.
-{% endhint %}
-
-***
+{% hint style="info" %}**Các loại tệp được hỗ trợ**: Chloros hỗ trợ các tệp hình ảnh RAW+JPG và JPG từ máy ảnh MAPIR Survey3W và Survey3N. Chỉ nên sử dụng RAW+JPG.
+{% endhint %}***
 
 ## Thêm hình ảnh vào dự án của bạn
 
@@ -22,20 +19,18 @@ Có hai cách chính để thêm hình ảnh vào dự án của bạn:
 
 Sử dụng tùy chọn này để nhập các tệp hình ảnh riêng lẻ hoặc một số tệp được lựa chọn.
 
-1. Nhấp vào nút **"Thêm tệp"** ở đầu bảng Trình duyệt tệp
+1. Nhấp vào nút**"Thêm tệp"**ở đầu bảng Trình duyệt tệp
 2. Điều hướng đến thư mục chứa hình ảnh của bạn
-3. Chọn một hoặc nhiều file ảnh (giữ **Ctrl** để chọn nhiều file)
-4. Nhấp vào **"Mở"** để nhập các tệp đã chọn
+3. Chọn một hoặc nhiều file ảnh (giữ**Ctrl**để chọn nhiều file)
+4. Nhấp vào**"Mở"**để nhập các tệp đã chọn
 
 ### Cách 2: Thêm thư mục
 
 Sử dụng tùy chọn này để nhập tất cả hình ảnh từ một thư mục cùng một lúc.
 
-1. Nhấp vào nút **"Thêm thư mục"** ở đầu bảng Trình duyệt tệp
+1. Nhấp vào nút**"Thêm thư mục"**ở đầu bảng Trình duyệt tệp
 2. Điều hướng đến và chọn thư mục chứa hình ảnh phiên chụp của bạn
-3. Nhấp vào **"Chọn thư mục"** để nhập tất cả hình ảnh được hỗ trợ từ thư mục đó
-
-***
+3. Nhấp vào**"Chọn thư mục"**để nhập tất cả hình ảnh được hỗ trợ từ thư mục đó***
 
 ## Tìm hiểu bảng trình duyệt tệp
 
@@ -78,16 +73,15 @@ Khi hình ảnh được nhập, chúng sẽ xuất hiện trong bảng có các
 Để xóa hình ảnh không mong muốn khỏi dự án của bạn:
 
 1. Chọn một hoặc nhiều hình ảnh trong bảng File Browser
-2. Nhấp vào nút **"Xóa đã chọn"**
+2. Nhấp vào nút**"Xóa đã chọn"**
+
 3. Xác nhận xóa (tệp không bị xóa khỏi đĩa, chỉ bị xóa khỏi dự án)
 
 ### Sắp xếp và lọc
 
 * **Sắp xếp theo cột**: Nhấp vào bất kỳ tiêu đề cột nào để sắp xếp hình ảnh
 * **Sắp xếp dấu thời gian**: Hữu ích cho việc sắp xếp các chuỗi chụp theo trình tự thời gian
-* **Bộ lọc mẫu máy ảnh**: Nhóm hình ảnh theo loại máy ảnh nếu sử dụng nhiều máy ảnh
-
-***
+* **Bộ lọc mẫu máy ảnh**: Nhóm hình ảnh theo loại máy ảnh nếu sử dụng nhiều máy ảnh***
 
 ## Xem trước hình ảnh
 
@@ -104,9 +98,7 @@ Bấm vào bất kỳ hình thu nhỏ nào của hình ảnh trong Trình duyệ
 * **Hình trước**: Nhấp vào mũi tên trái hoặc nhấn phím ←
 * **Hình ảnh tiếp theo**: Nhấp vào mũi tên phải hoặc nhấn phím →
 * **Phóng to/Thu nhỏ**: Sử dụng bánh xe chuột hoặc nút thu phóng
-* **Pan**: Nhấp và kéo vào hình ảnh khi phóng to
-
-***
+* **Pan**: Nhấp và kéo vào hình ảnh khi phóng to***
 
 ## Xử lý tệp trùng lặp
 
@@ -116,11 +108,9 @@ Chloros tự động phát hiện và bỏ qua các tập tin trùng lặp:
 * Ngăn chặn việc xử lý kép ngẫu nhiên
 * Thông báo cảnh báo hiển thị khi phát hiện trùng lặp
 
-{% gợi ý style="warning" %}
+{% hint style="warning" %}
 **Quan trọng**: Không đổi tên hoặc sửa đổi tệp hình ảnh gốc của bạn trước khi nhập. Cloros dựa vào tên tệp gốc và siêu dữ liệu để xử lý thích hợp.
-{% endhint %}
-
-***
+{% endhint %}***
 
 ## Bộ dữ liệu máy ảnh hỗn hợp
 
@@ -130,10 +120,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 2. Mỗi loại camera được xử lý với cấu hình hiệu chuẩn phù hợp
 3. File Browser hiển thị model camera ở cột Camera Model
 4. Xử lý áp dụng cài đặt chính xác cho từng loại camera
-
-**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN
-
-***
+**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN***
 
 ## Các phương pháp hay nhất
 
@@ -160,9 +147,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
 ## Các vấn đề thường gặp và giải pháp
 
-### Hình ảnh không xuất hiện sau khi nhập
-
-**Nguyên nhân có thể:**
+### Hình ảnh không xuất hiện sau khi nhập**Nguyên nhân có thể:**
 
 * Định dạng tệp không được hỗ trợ (chỉ RAW+JPG và JPG từ máy ảnh MAPIR)
 * Hình ảnh được lấy từ máy ảnh không phải MAPIR (xem [Máy ​​ảnh được hỗ trợ](../supported-Cameras.md))
@@ -170,9 +155,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
 **Giải pháp**: Xác minh định dạng tệp và khả năng tương thích của mẫu máy ảnh
 
-### Mẫu máy ảnh không được phát hiện
-
-**Nguyên nhân có thể:**
+### Mẫu máy ảnh không được phát hiện**Nguyên nhân có thể:**
 
 * Siêu dữ liệu EXIF ​​​​đã sửa đổi
 * Hình ảnh được chỉnh sửa bằng phần mềm bên ngoài
@@ -180,25 +163,21 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
 **Giải pháp**: Nhập lại các tập tin gốc, chưa sửa đổi từ máy ảnh/thẻ SD
 
-### Thiếu dấu thời gian
-
-**Nguyên nhân có thể:**
+### Thiếu dấu thời gian**Nguyên nhân có thể:**
 
 * Đồng hồ máy ảnh không được đặt chính xác
 * Dữ liệu EXIF ​​​​bị phần mềm bên ngoài loại bỏ
 
-**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp
-
-***
+**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp***
 
 ## Các bước tiếp theo
 
 Khi tệp của bạn được nhập:
 
-1. **Xem lại danh sách tệp** - Đảm bảo tất cả hình ảnh được tải chính xác
-2. **Kiểm tra các mẫu máy ảnh** - Xác minh việc phát hiện camera chính xác
-3. **Đánh dấu hình ảnh mục tiêu** - Xem [Chọn hình ảnh mục tiêu](chọn-target-images.md)
-4. **Điều chỉnh cài đặt** - Định cấu hình các tùy chọn xử lý trong [Cài đặt dự án]( adjustment-project-settings.md)
-5. **Bắt đầu xử lý** - Xem [Bắt đầu xử lý](starting-the-processing.md)
+1.**Xem lại danh sách tệp**- Đảm bảo tất cả hình ảnh được tải chính xác
+2.**Kiểm tra các mẫu máy ảnh**- Xác minh việc phát hiện camera chính xác
+3.**Đánh dấu hình ảnh mục tiêu**- Xem [Chọn hình ảnh mục tiêu](chọn-target-images.md)
+4.**Điều chỉnh cài đặt**- Định cấu hình các tùy chọn xử lý trong [Cài đặt dự án]( adjustment-project-settings.md)
+5.**Bắt đầu xử lý** - Xem [Bắt đầu xử lý](starting-the-processing.md)
 
 Để biết thông tin chi tiết về cấu hình dự án, hãy xem [Điều chỉnh cài đặt dự án]( adjustment-project-settings.md).

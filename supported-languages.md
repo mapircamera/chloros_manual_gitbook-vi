@@ -11,7 +11,7 @@ Cloros hỗ trợ các ngôn ngữ sau:
 | 3 | 🇵🇹 Tiếng Bồ Đào Nha | Bồ Đào Nha | `pt` |
 | 4 | 🇫🇷 Tiếng Pháp | Tiếng Pháp | `fr` |
 | 5 | 🇩🇪 Tiếng Đức | tiếng Đức | `de` |
-| 6 | 🇮🇹 Ý | Tiếng Ý | `nó` |
+| 6 | 🇮🇹 Ý | Tiếng Ý | `it` |
 | 7 | 🇯🇵 Tiếng Nhật | 日本語 | `ja` |
 | 8 | 🇰🇷 Tiếng Hàn | 한국어 | `ko` |
 | 9 | 🇨🇳 Tiếng Trung (Giản thể) | 简体中文 | `zh` |
@@ -19,15 +19,15 @@ Cloros hỗ trợ các ngôn ngữ sau:
 | 11 | 🇷🇺 Tiếng Nga | Русский | `ru` |
 | 12 | 🇳🇱 Tiếng Hà Lan | Hà Lan | `nl` |
 | 13 | 🇸🇦 Tiếng Ả Rập | العربية | `ar` |
-| 14 | 🇵🇱 Tiếng Ba Lan | Tiếng Ba Lan | `làm ơn` |
+| 14 | 🇵🇱 Tiếng Ba Lan | Tiếng Ba Lan | `pl` |
 | 15 | 🇹🇷 Tiếng Thổ Nhĩ Kỳ | Türkçe | `tr` |
-| 16 | 🇮🇳 Tiếng Hindi | हिंदी | `xin chào` |
+| 16 | 🇮🇳 Tiếng Hindi | हिंदी | `hi` |
 | 17 | 🇮🇩 Tiếng Indonesia | Tiếng Bahasa Indonesia | `id` |
 | 18 | 🇻🇳 Tiếng Việt | Tiếng Việt | `vi` |
 | 19 | 🇹🇭 Thái | ไทย | `th` |
 | 20 | 🇸🇪 Tiếng Thụy Điển | Svenska | `sv` |
 | 21 | 🇩🇰 Tiếng Đan Mạch | Đan Mạch | `da` |
-| 22 | 🇳🇴 Na Uy | Norsk | `không` |
+| 22 | 🇳🇴 Na Uy | Norsk | `no` |
 | 23 | 🇫🇮 Phần Lan | Suomi | `fi` |
 | 24 | 🇬🇷 Tiếng Hy Lạp | Ελληνικά | `el` |
 | 25 | 🇨🇿 Tiếng Séc | Čeština | `cs` |
@@ -39,10 +39,10 @@ Cloros hỗ trợ các ngôn ngữ sau:
 | 31 | 🇲🇾 Mã Lai | Tiếng Bahasa Melayu | `ms` |
 | 32 | 🇸🇰 Tiếng Slovak | Tiếng Slovenia | `sk` |
 | 33 | 🇧🇬 Tiếng Bulgaria | Български | `bg` |
-| 34 | 🇭🇷 Tiếng Croatia | Hrvatski | `giờ` |
+| 34 | 🇭🇷 Tiếng Croatia | Hrvatski | `hr` |
 | 35 | 🇱🇹 Tiếng Litva | Liệtuvių | `lt` |
 | 36 | 🇱🇻 Tiếng Latvia | Latviešu | `lv` |
-| 37 | 🇪🇪 Tiếng Estonia | Eesti | `và` |
+| 37 | 🇪🇪 Tiếng Estonia | Eesti | `et` |
 | 38 | 🇸🇮 Tiếng Slovenia | Tiếng Sloveniaščina | `sl` |
 
 ## Cách thay đổi ngôn ngữ
@@ -56,7 +56,7 @@ Cloros hỗ trợ các ngôn ngữ sau:
 
 ### Trong Cloros CLI
 
-Sử dụng lệnh `ngôn ngữ` để xem hoặc thay đổi ngôn ngữ giao diện CLI:
+Sử dụng lệnh `language` để xem hoặc thay đổi ngôn ngữ giao diện CLI:
 
 ```bash
 # Xem ngôn ngữ hiện tại

@@ -7,10 +7,8 @@ Thanh bên Cài đặt dự án <img src="../.gitbook/assets/icon_project-settin
 Để truy cập Cài đặt dự án:
 
 1. Mở một dự án bằng Chloros
-2. Nhấp vào tab **Cài đặt dự án** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ở thanh bên trái
-3. Bảng cài đặt sẽ hiển thị tất cả các tùy chọn cấu hình có sẵn được sắp xếp theo danh mục
-
-***
+2. Nhấp vào tab **Cài đặt dự án**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ở thanh bên trái
+3. Bảng cài đặt sẽ hiển thị tất cả các tùy chọn cấu hình có sẵn được sắp xếp theo danh mục***
 
 ## Phát hiện mục tiêu
 
@@ -121,9 +119,7 @@ Các cài đặt này kiểm soát cách Chloros xử lý và hiệu chỉnh hì
   * Camera đơn + chốt đơn: Chân 2 tự động được đặt thành "Không sử dụng"
   * Camera đơn + hai chân: Chân 2 tự động được đặt thành "Không sử dụng"
   * Nhiều camera: Yêu cầu lựa chọn thủ công
-* **Lưu ý**: Không thể gán cùng một camera cho cả Chân 1 và Chân 2 cùng một lúc.
-
-***
+* **Lưu ý**: Không thể gán cùng một camera cho cả Chân 1 và Chân 2 cùng một lúc.***
 
 ## Chỉ mục
 
@@ -178,9 +174,7 @@ Các cài đặt này kiểm soát định dạng và chất lượng của hìn
   * **TIFF (16-bit)**: Được khuyến nghị cho phân tích khoa học và quy trình làm việc chuyên nghiệp. Bảo toàn chất lượng dữ liệu tối đa mà không có hiện tượng nén. Tốt nhất cho phân tích đa phổ và xử lý sâu hơn trong phần mềm GIS.
   * **TIFF (32-bit, Percent)**: Tốt nhất cho các quy trình công việc yêu cầu giá trị phản xạ dưới dạng phần trăm (0-100%). Cung cấp độ chính xác tối đa cho các phép đo phóng xạ.
   * **PNG (8-bit)**: Phù hợp để xem trên web và hiển thị tổng thể. Kích thước tệp nhỏ hơn với tính năng nén không mất dữ liệu nhưng dải động giảm.
-  * **JPG (8-bit)**: Kích thước tệp nhỏ nhất, chỉ phù hợp để xem trước và hiển thị trên web. Sử dụng tính năng nén tổn thất không phù hợp cho phân tích khoa học.
-
-***
+  * **JPG (8-bit)**: Kích thước tệp nhỏ nhất, chỉ phù hợp để xem trước và hiển thị trên web. Sử dụng tính năng nén tổn thất không phù hợp cho phân tích khoa học.***
 
 ## Lưu mẫu dự án
 
@@ -196,9 +190,7 @@ Tính năng này cho phép bạn lưu cài đặt dự án hiện tại của m�
   1. Định cấu hình tất cả cài đặt dự án mong muốn của bạn
   2. Nhập tên mẫu (ví dụ: "Tiêu chuẩn NDVI của RedEdge Survey3")
   3. Nhấp vào biểu tượng lưu
-  4. Mẫu hiện có thể được tải khi tạo dự án mới
-
-***
+  4. Mẫu hiện có thể được tải khi tạo dự án mới***
 
 ## Lưu thư mục dự án
 
@@ -211,9 +203,7 @@ Cài đặt này chỉ định nơi lưu dự án mới theo mặc định.
   * Đặt thành ổ đĩa mạng để cộng tác nhóm
   * Thay đổi sang ổ đĩa có nhiều dung lượng lưu trữ hơn cho các tập dữ liệu lớn
   * Sắp xếp các dự án theo năm, khách hàng hoặc loại dự án trong các thư mục khác nhau
-* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.
-
-***
+* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***
 
 ## Cài đặt Kiên trì
 
@@ -223,10 +213,10 @@ Tất cả các cài đặt dự án sẽ được lưu tự động cùng với
 
 Các cài đặt được áp dụng theo thứ tự sau:
 
-1. **Mặc định hệ thống** - Giá trị mặc định tích hợp được xác định bởi Chloros
-2. **Cài đặt mẫu** - Nếu bạn tải mẫu khi tạo dự án
-3. **Đã lưu cài đặt dự án** - Cài đặt được lưu cùng với tệp dự án
-4. **Điều chỉnh thủ công** - Mọi thay đổi bạn thực hiện trong phiên hiện tại
+1.**Mặc định hệ thống**- Giá trị mặc định tích hợp được xác định bởi Chloros
+2.**Cài đặt mẫu**- Nếu bạn tải mẫu khi tạo dự án
+3.**Đã lưu cài đặt dự án**- Cài đặt được lưu cùng với tệp dự án
+4.**Điều chỉnh thủ công** - Mọi thay đổi bạn thực hiện trong phiên hiện tại
 
 ### Cài đặt và xử lý ảnh
 
@@ -240,11 +230,11 @@ Hầu hết các thay đổi cài đặt (đặc biệt là trong danh mục X�
 
 ## Các phương pháp hay nhất
 
-1. **Bắt đầu với giá trị mặc định**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình làm việc thông thường.
-2. **Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho quy trình làm việc hoặc máy ảnh cụ thể, hãy lưu chúng dưới dạng mẫu để đảm bảo tính nhất quán giữa các dự án.
-3. **Kiểm tra trước khi xử lý hoàn toàn**: Khi thử nghiệm các cài đặt mới, hãy thử nghiệm trên một tập hợp con hình ảnh nhỏ trước khi xử lý toàn bộ tập dữ liệu của bạn.
-4. **Ghi lại cài đặt của bạn**: Sử dụng tên mẫu mô tả cho biết hệ thống camera, loại xử lý và mục đích sử dụng (ví dụ: "Survey3\_RGB\_NDVI\_Agriculture").
-5. **Lựa chọn định dạng xuất**: Chọn định dạng xuất dựa trên mục đích sử dụng cuối cùng của bạn:
+1.**Bắt đầu với giá trị mặc định**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình làm việc thông thường.
+2.**Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho quy trình làm việc hoặc máy ảnh cụ thể, hãy lưu chúng dưới dạng mẫu để đảm bảo tính nhất quán giữa các dự án.
+3.**Kiểm tra trước khi xử lý hoàn toàn**: Khi thử nghiệm các cài đặt mới, hãy thử nghiệm trên một tập hợp con hình ảnh nhỏ trước khi xử lý toàn bộ tập dữ liệu của bạn.
+4.**Ghi lại cài đặt của bạn**: Sử dụng tên mẫu mô tả cho biết hệ thống camera, loại xử lý và mục đích sử dụng (ví dụ: "Survey3\_RGB\_NDVI\_Agriculture").
+5.**Lựa chọn định dạng xuất**: Chọn định dạng xuất dựa trên mục đích sử dụng cuối cùng của bạn:
    * Phân tích khoa học → TIFF (16-bit hoặc 32-bit)
    * Xử lý GIS → TIFF (16-bit)
    * Hình dung nhanh → PNG (8-bit)

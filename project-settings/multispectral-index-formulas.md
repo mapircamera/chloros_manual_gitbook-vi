@@ -86,9 +86,7 @@ $$
 
 Hằng số gamma là một hàm trọng số phụ thuộc vào điều kiện sol khí trong khí quyển. ENVI sử dụng giá trị 1,7, là giá trị được đề xuất bởi Gitelson, Kaufman và Merzylak (1996, trang 296).
 
-_Tài liệu tham khảo: Gitelson, A., Y. Kaufman và M. Merzylak. "Sử dụng Kênh Xanh trong Viễn thám thảm thực vật Toàn cầu từ EOS-MODIS." Viễn thám môi trường 58 (1996): 289-298._
-
-***
+_Tài liệu tham khảo: Gitelson, A., Y. Kaufman và M. Merzylak. "Sử dụng Kênh Xanh trong Viễn thám thảm thực vật Toàn cầu từ EOS-MODIS." Viễn thám môi trường 58 (1996): 289-298._***
 
 ##GCI - Chỉ số diệp lục xanh
 
@@ -100,9 +98,7 @@ $$
 
 Việc có bước sóng NIR rộng và màu xanh lá cây giúp dự đoán tốt hơn về hàm lượng chất diệp lục đồng thời cho phép độ nhạy cao hơn và tỷ lệ tín hiệu trên nhiễu cao hơn.
 
-_Tài liệu tham khảo: Gitelson, A., Y. Gritz và M. Merzlyak. "Mối quan hệ giữa hàm lượng chất diệp lục trong lá và độ phản xạ quang phổ cũng như các thuật toán đánh giá chất diệp lục không phá hủy ở lá cây cao hơn." Tạp chí Sinh lý học Thực vật 160 (2003): 271-282._
-
-***
+_Tài liệu tham khảo: Gitelson, A., Y. Gritz và M. Merzlyak. "Mối quan hệ giữa hàm lượng chất diệp lục trong lá và độ phản xạ quang phổ cũng như các thuật toán đánh giá chất diệp lục không phá hủy ở lá cây cao hơn." Tạp chí Sinh lý học Thực vật 160 (2003): 271-282._***
 
 ##GLI - Chỉ Số Lá Xanh
 
@@ -126,9 +122,7 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Tài liệu tham khảo: Gitelson, A., và M. Merzlyak. "Cảm biến từ xa về nồng độ chất diệp lục trong lá cây cao hơn." Những tiến bộ trong nghiên cứu không gian 22 (1998): 689-692._
-
-***
+_Tài liệu tham khảo: Gitelson, A., và M. Merzlyak. "Cảm biến từ xa về nồng độ chất diệp lục trong lá cây cao hơn." Những tiến bộ trong nghiên cứu không gian 22 (1998): 689-692._***
 
 ## GOSAVI - Chỉ số thực vật điều chỉnh đất được tối ưu hóa xanh
 
@@ -138,9 +132,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Tài liệu tham khảo: Sripada, R., et al. "Xác định nhu cầu nitơ trong mùa đối với ngô bằng cách sử dụng ảnh hồng ngoại màu trên không." Tiến sĩ luận án, Đại học bang Bắc Carolina, 2005._
-
-***
+_Tài liệu tham khảo: Sripada, R., et al. "Xác định nhu cầu nitơ trong mùa đối với ngô bằng cách sử dụng ảnh hồng ngoại màu trên không." Tiến sĩ luận án, Đại học bang Bắc Carolina, 2005._***
 
 ## GRVI - Chỉ số thực vật tỷ lệ xanh
 
@@ -150,9 +142,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Tài liệu tham khảo: Sripada, R., et al. "Chụp ảnh hồng ngoại màu trên không để xác định nhu cầu nitơ đầu mùa ở ngô." Tạp chí Nông học 98 (2006): 968-977._
-
-***
+_Tài liệu tham khảo: Sripada, R., et al. "Chụp ảnh hồng ngoại màu trên không để xác định nhu cầu nitơ đầu mùa ở ngô." Tạp chí Nông học 98 (2006): 968-977._***
 
 ## GSAVI - Chỉ số thực vật điều chỉnh đất xanh
 
@@ -194,9 +184,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Tham khảo: Datt, B. "Cảm biến từ xa về hàm lượng nước trong lá bạch đàn." Tạp chí Sinh lý học Thực vật 154, số 1. 1 (1999): 30-36._
-
-***
+_Tham khảo: Datt, B. "Cảm biến từ xa về hàm lượng nước trong lá bạch đàn." Tạp chí Sinh lý học Thực vật 154, số 1. 1 (1999): 30-36._***
 
 ## MNLI - Chỉ số phi tuyến tính được sửa đổi
 
@@ -228,9 +216,7 @@ Chỉ số này tương tự NDVI nhưng so sánh độ tương phản giữa NI
 
 $$
 NDRE = {NIR - RedEdge \over NIR + RedEdge  }
-$$
-
-***
+$$***
 
 ## NDVI - Chỉ số thực vật khác biệt chuẩn hóa
 
@@ -242,9 +228,7 @@ $$
 
 Giá trị của chỉ số này dao động từ -1 đến 1. Phạm vi phổ biến của thảm thực vật xanh là 0,2 đến 0,8.
 
-_Tài liệu tham khảo: Rouse, J., R. Haas, J. Schell và D. Deering. Giám sát hệ thống thực vật ở vùng đồng bằng lớn bằng ERTS. Hội nghị chuyên đề ERTS lần thứ ba, NASA (1973): 309-317._
-
-***
+_Tài liệu tham khảo: Rouse, J., R. Haas, J. Schell và D. Deering. Giám sát hệ thống thực vật ở vùng đồng bằng lớn bằng ERTS. Hội nghị chuyên đề ERTS lần thứ ba, NASA (1973): 309-317._***
 
 ## NLI - Chỉ số phi tuyến tính
 
@@ -254,9 +238,7 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Tài liệu tham khảo: Goel, N., và W. Qin. "Ảnh hưởng của kiến ​​trúc tán cây đến mối quan hệ giữa các chỉ số thực vật khác nhau với LAI và Fpar: Mô phỏng máy tính." Đánh giá viễn thám 10 (1994): 309-347._
-
-***
+_Tài liệu tham khảo: Goel, N., và W. Qin. "Ảnh hưởng của kiến ​​trúc tán cây đến mối quan hệ giữa các chỉ số thực vật khác nhau với LAI và Fpar: Mô phỏng máy tính." Đánh giá viễn thám 10 (1994): 309-347._***
 
 ## OSAVI - Chỉ số thực vật điều chỉnh đất tối ưu
 
@@ -266,9 +248,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Tài liệu tham khảo: Rondeaux, G., M. Steven và F. Baret. "Tối ưu hóa các chỉ số thực vật điều chỉnh đất." Viễn thám môi trường 55 (1996): 95-107._
-
-***
+_Tài liệu tham khảo: Rondeaux, G., M. Steven và F. Baret. "Tối ưu hóa các chỉ số thực vật điều chỉnh đất." Viễn thám môi trường 55 (1996): 95-107._***
 
 ## RDVI - Chỉ số thực vật khác biệt tái chuẩn hóa
 
@@ -278,9 +258,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Tài liệu tham khảo: Roujean, J., và F. Breon. "Ước tính cải cách hành chính được hấp thụ bởi thảm thực vật từ các phép đo phản xạ hai chiều." Viễn thám môi trường 51 (1995): 375-384._
-
-***
+_Tài liệu tham khảo: Roujean, J., và F. Breon. "Ước tính cải cách hành chính được hấp thụ bởi thảm thực vật từ các phép đo phản xạ hai chiều." Viễn thám môi trường 51 (1995): 375-384._***
 
 ##SAVI - Chỉ số thực vật điều chỉnh đất
 
@@ -314,9 +292,7 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Tài liệu tham khảo: Gitelson, A., et al. "Thực vật và các đường đất trong không gian quang phổ nhìn thấy được: Khái niệm và kỹ thuật ước tính từ xa tỷ lệ thực vật. Tạp chí quốc tế về viễn thám 23 (2002): 2537−2562._
-
-***
+_Tài liệu tham khảo: Gitelson, A., et al. "Thực vật và các đường đất trong không gian quang phổ nhìn thấy được: Khái niệm và kỹ thuật ước tính từ xa tỷ lệ thực vật. Tạp chí quốc tế về viễn thám 23 (2002): 2537−2562._***
 
 ## WDRVI - Chỉ số thực vật dải động rộng
 
