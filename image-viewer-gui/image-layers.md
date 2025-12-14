@@ -99,9 +99,7 @@ Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nha
 * Xác định lĩnh vực quan tâm
 * Xác minh hình ảnh chỉ mục trước khi sử dụng trong GIS hoặc phân tích
 
-***
-
-## Sử dụng Bộ chọn lớp
+***## Sử dụng Bộ chọn lớp
 
 ### Mở menu thả xuống
 
@@ -132,9 +130,7 @@ Không phải tất cả các lớp đều có sẵn cho mọi hình ảnh:
 * ⚠️ RAW (Phản xạ) - Chỉ sau khi xử lý với tính năng hiệu chỉnh độ phản xạ được bật
 * ⚠️ RAW (\[Index] Index) - Chỉ sau khi xử lý với các chỉ mục được định cấu hình
 
-***
-
-## Độ bền của lớp
+***## Độ bền của lớp
 
 ### Điều hướng giữa các hình ảnh
 
@@ -144,9 +140,7 @@ Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũ
 * Nếu xem "RAW (Chỉ số NDVI)", hình ảnh tiếp theo hiển thị "RAW (Chỉ mục NDVI)" (nếu có)
 * Nếu cùng một lớp không tồn tại, mặc định là JPG
 
-**Quy trình làm việc mẫu:**
-
-1. Mở Ảnh 1, chuyển sang RAW (Chỉ số NDVI)
+**Quy trình làm việc mẫu:**1. Mở Ảnh 1, chuyển sang RAW (Chỉ số NDVI)
 2. Nhấn → để xem Hình 2
 3. Hình 2 tự động hiển thị lớp RAW (NDVI Index)
 4. Tiếp tục điều hướng - tất cả hình ảnh đều hiển thị lớp NDVI
@@ -154,8 +148,7 @@ Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũ
 
 ## Quy trình làm việc chung
 
-### Quy trình 1: Trước/Sau so sánh
-**Mục tiêu**: So sánh hình ảnh gốc và hình ảnh đã hiệu chỉnh
+### Quy trình 1: Trước/Sau so sánh**Mục tiêu**: So sánh hình ảnh gốc và hình ảnh đã hiệu chỉnh
 
 1. Mở hình ảnh đã xử lý trong Image Viewer
 2. Chọn**RAW (Bản gốc)**từ danh sách thả xuống
@@ -183,9 +176,7 @@ Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũ
 ### Quy trình 4: Kiểm tra giá trị pixel**Mục tiêu**: Kiểm tra các giá trị phản xạ để đảm bảo độ chính xác về mặt khoa học
 
 1. Mở ảnh đã xử lý
-2. Chọn lớp**RAW (Phản xạ)**
-
-3. Bật chế độ**Phần trăm pixel**(nút ở thanh công cụ trên cùng bên phải)
+2. Chọn lớp**RAW (Phản xạ)**3. Bật chế độ**Phần trăm pixel**(nút ở thanh công cụ trên cùng bên phải)
 4. Di chuyển con trỏ qua vùng thực vật
 5. Xác minh giá trị pixel nằm trong phạm vi mong đợi (30-70% đối với NIR, 5-15% đối với Đỏ)
 6. Kiểm tra các vùng đất, nước để có giá trị phù hợp***
@@ -242,9 +233,7 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 
 * **Luôn kiểm tra RAW (Bản gốc)**: Xác minh chất lượng dữ liệu nguồn trước khi tin cậy các đầu ra được xử lý
 * **So sánh các lớp**: Sử dụng chuyển đổi lớp để xác thực quá trình xử lý hoạt động chính xác
-* **Kiểm tra phạm vi chỉ mục**: Sử dụng chế độ Pixel Percent với các lớp chỉ mục để xác minh giá trị là hợp lý***
-
-## Khắc phục sự cố
+* **Kiểm tra phạm vi chỉ mục**: Sử dụng chế độ Pixel Percent với các lớp chỉ mục để xác minh giá trị là hợp lý***## Khắc phục sự cố
 
 ### Lớp không có sẵn**Sự cố**: Lớp dự kiến ​​không xuất hiện trong danh sách thả xuống**Nguyên nhân có thể:**
 
@@ -253,9 +242,7 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 * Chỉ mục cụ thể chưa được định cấu hình trong Cài đặt dự án
 * Hình ảnh chỉ là hình ảnh mục tiêu (không có chỉ mục nào được tạo cho mục tiêu)
 
-**Giải pháp:**
-
-1. Xác minh hình ảnh đã được xử lý (kiểm tra thư mục đầu ra để tìm các tệp đã được xử lý)
+**Giải pháp:**1. Xác minh hình ảnh đã được xử lý (kiểm tra thư mục đầu ra để tìm các tệp đã được xử lý)
 2. Kiểm tra Cài đặt dự án để xác nhận các chỉ mục đã được định cấu hình
 3. Xử lý lại với các chỉ mục mong muốn được kích hoạt
 
@@ -267,9 +254,7 @@ Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 * Hình ảnh thực tế không chứa mục tiêu
 * Cài đặt phát hiện mục tiêu quá nghiêm ngặt
 
-**Giải pháp:**
-
-1. Kiểm tra Nhật ký gỡ lỗi để biết thông báo "Đã tìm thấy mục tiêu"
+**Giải pháp:**1. Kiểm tra Nhật ký gỡ lỗi để biết thông báo "Đã tìm thấy mục tiêu"
 2. Xác minh hình ảnh thực sự chứa các mục tiêu hiệu chuẩn hiển thị
 3. Điều chỉnh cài đặt phát hiện mục tiêu trong Cài đặt dự án
 4. Xem [Chọn hình ảnh mục tiêu](../processing-images-gui/choosing-target-images.md)***

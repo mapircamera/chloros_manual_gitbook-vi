@@ -50,13 +50,9 @@ Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 
  (Cộng)
 * Nhấn phím **++ hoặc**=**
-* Cuộn con lăn chuột **lên** **Thu nhỏ:***
-
-Nhấp vào nút**−** (Trừ)
+* Cuộn con lăn chuột **lên** **Thu nhỏ:***Nhấp vào nút**−** (Trừ)
 * Nhấn phím **−** (Dấu trừ)
-* Cuộn con lăn chuột **xuống** **Vừa với màn hình:***
-
-Nhấp vào nút**↔** (Vừa vặn)
+* Cuộn con lăn chuột **xuống** **Vừa với màn hình:***Nhấp vào nút**↔** (Vừa vặn)
 * Nhấn phím **0** (Không)
 * Click đúp vào hình ảnh
 
@@ -65,17 +61,13 @@ Nhấp vào nút**↔** (Vừa vặn)
 Khi phóng to ra ngoài kích thước màn hình:
 
 1. Di chuyển con trỏ chuột lên hình ảnh
-2. Nhấp và **giữ chuột trái**3.** Kéo**để di chuyển hình ảnh xung quanh
-4. Thả tay ra để dừng lia máy**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ***
-
-## Kiểm tra giá trị pixel
+2. Nhấp và **giữ chuột trái**3.**Kéo**để di chuyển hình ảnh xung quanh
+4. Thả tay ra để dừng lia máy**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ***## Kiểm tra giá trị pixel
 
 ### Xem giá trị pixel tại con trỏ
 
 Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel sẽ hiển thị theo thời gian thực:**Vị trí hiển thị giá trị:***
-** Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT*** ** Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu***Hiển thị giá trị cho pixel** dưới con trỏ hoặc được đánh dấu***Cập nhật khi bạn di chuyển chuột***
-
-## Loại hình ảnh bạn có thể xem
+**Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT*** **Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu***Hiển thị giá trị cho pixel**dưới con trỏ hoặc được đánh dấu***Cập nhật khi bạn di chuyển chuột***## Loại hình ảnh bạn có thể xem
 
 ### Ảnh gốc (Xử lý trước)**Hình ảnh RAW + JPG từ máy ảnh:**
 
@@ -101,9 +93,7 @@ Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel 
 * Phạm vi thường là -1 đến +1 đối với các chỉ số được chuẩn hóa
 * Có thể áp dụng LUT màu để trực quan hóa
 
-***
-
-## Ứng dụng chỉ mục và LUT
+***## Ứng dụng chỉ mục và LUT
 
 Áp dụng các chỉ số đa phổ và Bảng tra cứu màu sắc:
 
@@ -153,9 +143,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
    * **GNDVI**: Tương tự NDVI nhưng nhạy cảm với diệp lục
 3. Kiểm tra thảm thực vật:
    * **Đất**: Gần 0 hoặc hơi âm
-   * **Nước**: Giá trị âm (-0,5 đến 0)***
-
-## Khắc phục sự cố khi xem
+   * **Nước**: Giá trị âm (-0,5 đến 0)***## Khắc phục sự cố khi xem
 
 ### Ảnh không mở được**Nguyên nhân có thể:**
 
@@ -163,9 +151,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
 * Định dạng tệp không được hỗ trợ
 * Không đủ bộ nhớ cho hình ảnh lớn
 
-**Giải pháp:**
-
-1. Thử mở bằng trình xem bên ngoài để xác minh tính toàn vẹn của tệp
+**Giải pháp:**1. Thử mở bằng trình xem bên ngoài để xác minh tính toàn vẹn của tệp
 2. Kiểm tra định dạng tệp phù hợp với loại dự kiến
 3. Đóng các ứng dụng khác để giải phóng bộ nhớ
 4. Thử hình ảnh nhỏ hơn/khác
@@ -176,9 +162,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
 * Hình ảnh nổi 32-bit có giá trị bất thường
 * Lỗi tính chỉ số
 
-**Giải pháp:**
-
-1. Kiểm tra giá trị pixel - nếu tất cả rất thấp hoặc rất cao, hãy điều chỉnh phạm vi hiển thị
+**Giải pháp:**1. Kiểm tra giá trị pixel - nếu tất cả rất thấp hoặc rất cao, hãy điều chỉnh phạm vi hiển thị
 2. Thử mở trong QGIS hoặc tương tự với điều chỉnh phạm vi tự động
 3. Kiểm tra nhật ký gỡ lỗi trong quá trình xử lý để tìm lỗi
 
@@ -189,9 +173,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
 * Dữ liệu cảm biến ánh sáng không được đưa vào đầu vào
 * Chế độ phần trăm chuyển đổi không chính xác
 
-**Giải pháp:**
-
-1. Xác minh rằng bạn đang xem đầu ra được xử lý (kiểm tra hậu tố tên tệp)
+**Giải pháp:**1. Xác minh rằng bạn đang xem đầu ra được xử lý (kiểm tra hậu tố tên tệp)
 2. Kiểm tra trạng thái nút chế độ phần trăm
 3. So sánh với các hình ảnh nổi tiếng từ cùng một tập dữ liệu***
 

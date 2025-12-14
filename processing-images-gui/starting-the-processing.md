@@ -34,20 +34,17 @@ Nút Bắt đầu/Phát nằm ở thanh tiêu đề trên cùng của Chloros:
 4. Cập nhật thanh tiến trình, hiển thị trạng thái xử lý
 
 {% hint style="success" %}**Đã bắt đầu xử lý**: Sau khi nhấp vào, Chloros sẽ tự động xử lý tất cả các bước xử lý - phát hiện mục tiêu, gỡ lỗi, hiệu chỉnh, tính toán chỉ mục và xuất.
-{% endhint %}***
-
-## Tìm hiểu các chế độ xử lý
+{% endhint %}***## Tìm hiểu các chế độ xử lý
 
 Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào giấy phép của bạn:
 
-### Chế độ miễn phí (Xử lý tuần tự)
-**Có sẵn cho tất cả người dùng** **Cách thức hoạt động:**
+### Chế độ miễn phí (Xử lý tuần tự)**Có sẵn cho tất cả người dùng** **Cách thức hoạt động:**
 
 * Xử lý tuần tự từng hình ảnh một
 * Hoạt động đơn luồng
 * Sử dụng bộ nhớ thấp hơn
 
-**Thanh tiến trình hiển thị 2 giai đoạn:**1.** Phát hiện mục tiêu**- Quét các mục tiêu hiệu chỉnh
+**Thanh tiến trình hiển thị 2 giai đoạn:**1.**Phát hiện mục tiêu**- Quét các mục tiêu hiệu chỉnh
 2.**Đang xử lý**- Áp dụng hiệu chỉnh và xuất hình ảnh**Thời gian xử lý:**
 
 * Chậm hơn nhiều so với chế độ song song của Chloros+
@@ -62,7 +59,7 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 * Sử dụng nhiều lõi CPU
 * Tăng tốc GPU (CUDA) tùy chọn với card đồ họa NVIDIA
 
-**Thanh tiến trình hiển thị 4 giai đoạn:**1.** Phát hiện**- Tìm mục tiêu hiệu chuẩn
+**Thanh tiến trình hiển thị 4 giai đoạn:**1.**Phát hiện**- Tìm mục tiêu hiệu chuẩn
 2.**Phân tích**- Kiểm tra siêu dữ liệu hình ảnh và chuẩn bị quy trình
 3.**Hiệu chỉnh**- Áp dụng hiệu chỉnh và hiệu chuẩn
 4.**Xuất**- Lưu hình ảnh và chỉ mục đã xử lý**Tương tác trên thanh tiến trình:***
@@ -76,12 +73,9 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 
 {% hint style="info" %}
 **Chloros+ Speed**: Xử lý song song có thể nhanh hơn 5-10 lần so với chế độ tuần tự đối với các tập dữ liệu lớn. Dự án 500 hình ảnh mất 2 giờ ở chế độ miễn phí có thể hoàn thành sau 15-20 phút với Chloros+.
-{% endhint %}***
+{% endhint %}***## Điều gì xảy ra trong quá trình xử lý
 
-## Điều gì xảy ra trong quá trình xử lý
-
-### Giai đoạn 1: Phát hiện mục tiêu
-**Chloros làm gì:**
+### Giai đoạn 1: Phát hiện mục tiêu**Chloros làm gì:**
 
 * Quét hình ảnh mục tiêu được đánh dấu (hoặc tất cả hình ảnh nếu không được đánh dấu)
 * Xác định 4 bảng hiệu chuẩn trong mỗi mục tiêu
@@ -96,7 +90,7 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 * Áp dụng thuật toán demosaicing chất lượng cao
 * Bảo toàn chất lượng hình ảnh và chi tiết tối đa
 
-**Thời lượng:** Thay đổi tùy theo số lượng hình ảnh và tốc độ CPU
+**Thời lượng:**Thay đổi tùy theo số lượng hình ảnh và tốc độ CPU
 
 ### Giai đoạn 3: Hiệu chỉnh**Chloros làm gì:***
 **Hiệu chỉnh họa tiết**: Loại bỏ vết tối ở các cạnh của ống kính
@@ -104,7 +98,7 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 * Áp dụng hiệu chỉnh trên tất cả các băng tần/kênh
 * Sử dụng mục tiêu hiệu chỉnh phù hợp cho từng hình ảnh dựa trên dấu thời gian
 
-**Thời lượng:** Phần lớn thời gian xử lý
+**Thời lượng:**Phần lớn thời gian xử lý
 
 ### Giai đoạn 4: Tính chỉ số**Chloros làm gì:**
 
@@ -112,7 +106,7 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 * Áp dụng toán học dải cho hình ảnh được hiệu chỉnh
 * Tạo hình ảnh chỉ mục cho từng chỉ mục đã chọn
 
-**Thời lượng:** Một vài giây cho mỗi hình ảnh
+**Thời lượng:**Một vài giây cho mỗi hình ảnh
 
 ### Giai đoạn 5: Xuất khẩu**Chloros làm gì:**
 
@@ -121,7 +115,7 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 * Ghi tập tin vào thư mục con của mẫu máy ảnh
 * Giữ nguyên tên tập tin gốc có hậu tố
 
-**Thời lượng:** Thay đổi tùy theo định dạng xuất và kích thước tệp***
+**Thời lượng:**Thay đổi tùy theo định dạng xuất và kích thước tệp***
 
 ## Hành vi xử lý
 
@@ -170,9 +164,7 @@ Trong khi chạy quá trình xử lý, bạn có thể:
 * **Kiểm tra tab nhật ký** - Xem các thông báo và cảnh báo xử lý chi tiết
 * **Xem trước hình ảnh đã hoàn thành**- Một số tệp xuất có thể xuất hiện trong quá trình xử lý
 
-Để biết thông tin chi tiết về giám sát, hãy xem [Giám sát quá trình xử lý](monitoring-the-processing.md).***
-
-## Đang hủy xử lý
+Để biết thông tin chi tiết về giám sát, hãy xem [Giám sát quá trình xử lý](monitoring-the-processing.md).***## Đang hủy xử lý
 
 Nếu bạn cần dừng xử lý:
 
@@ -226,21 +218,16 @@ Thời gian xử lý thực tế thay đổi rất nhiều dựa trên:
 
 {% hint style="info" %}
 **Lần đầu tiên**: Quá trình xử lý ban đầu có thể mất nhiều thời gian hơn do Chloros xây dựng bộ nhớ đệm và cấu hình. Việc xử lý các tập dữ liệu tương tự sau đó sẽ nhanh hơn.
-{% endhint %}***
+{% endhint %}***## Các vấn đề thường gặp khi bắt đầu
 
-## Các vấn đề thường gặp khi bắt đầu
-
-### Nút Bắt đầu bị vô hiệu hóa (Chuyển sang màu xám)
-**Nguyên nhân có thể:**
+### Nút Bắt đầu bị vô hiệu hóa (Chuyển sang màu xám)**Nguyên nhân có thể:**
 
 * Không có hình ảnh được nhập
 * Phần phụ trợ chưa bắt đầu đầy đủ
 * Quá trình xử lý trước đó vẫn đang chạy
 * Dự án chưa được tải đầy đủ
 
-**Giải pháp:**
-
-1. Đợi phần phụ trợ khởi chạy hoàn toàn (kiểm tra biểu tượng menu chính)
+**Giải pháp:**1. Đợi phần phụ trợ khởi chạy hoàn toàn (kiểm tra biểu tượng menu chính)
 2. Xác minh hình ảnh được nhập vào File Browser
 3. Khởi động lại Chloros nếu nút vẫn bị tắt
 4. Kiểm tra Nhật ký gỡ lỗi để biết thông báo lỗi
@@ -252,9 +239,7 @@ Thời gian xử lý thực tế thay đổi rất nhiều dựa trên:
 * Dung lượng đĩa không đủ
 * Không đủ bộ nhớ (RAM)
 
-**Giải pháp:**
-
-1. Kiểm tra Nhật ký gỡ lỗi <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> để biết thông báo lỗi
+**Giải pháp:**1. Kiểm tra Nhật ký gỡ lỗi <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> để biết thông báo lỗi
 2. Xác minh dung lượng đĩa trống
 3. Thử xử lý một tập hợp con hình ảnh nhỏ hơn
 4. Xác minh hình ảnh không bị hỏng
@@ -265,9 +250,7 @@ Thời gian xử lý thực tế thay đổi rất nhiều dựa trên:
 * Hình ảnh mục tiêu không chứa mục tiêu hiển thị
 * Cài đặt phát hiện mục tiêu quá nghiêm ngặt
 
-**Giải pháp:**
-
-1. Xem lại [Chọn ảnh mục tiêu](chọn-target-images.md)
+**Giải pháp:**1. Xem lại [Chọn ảnh mục tiêu](chọn-target-images.md)
 2. Đánh dấu hình ảnh phù hợp vào cột Target
 3. Xác minh mục tiêu hiển thị trong hình ảnh được đánh dấu
 4. Điều chỉnh cài đặt phát hiện mục tiêu nếu cần***
@@ -296,9 +279,7 @@ Nếu sử dụng khả năng tăng tốc GPU NVIDIA:
 1. Cập nhật trình điều khiển NVIDIA lên phiên bản mới nhất
 2. Đảm bảo GPU có 4GB+ VRAM
 3. Đóng các ứng dụng sử dụng nhiều GPU (game, chỉnh sửa video)
-4. Theo dõi nhiệt độ GPU (đảm bảo làm mát đầy đủ)***
-
-## Các bước tiếp theo
+4. Theo dõi nhiệt độ GPU (đảm bảo làm mát đầy đủ)***## Các bước tiếp theo
 
 Khi quá trình xử lý đã bắt đầu:
 

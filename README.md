@@ -8,9 +8,7 @@ metaLinks: {}
 
 Chloros là một ứng dụng phần mềm của [MAPIR](https://www.mapir.camera) để xử lý hình ảnh và dữ liệu cảm biến khác.
 
-***
-
-Cloros có sẵn ở 4 chế độ ứng dụng:
+***Cloros có sẵn ở 4 chế độ ứng dụng:
 
 ## Chloros: Ứng dụng GUI trên máy tính để bàn
 

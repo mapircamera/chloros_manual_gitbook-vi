@@ -203,9 +203,7 @@ Cài đặt này chỉ định nơi lưu dự án mới theo mặc định.
   * Đặt thành ổ đĩa mạng để cộng tác nhóm
   * Thay đổi sang ổ đĩa có nhiều dung lượng lưu trữ hơn cho các tập dữ liệu lớn
   * Sắp xếp các dự án theo năm, khách hàng hoặc loại dự án trong các thư mục khác nhau
-* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***
-
-## Cài đặt Kiên trì
+* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***## Cài đặt Kiên trì
 
 Tất cả các cài đặt dự án sẽ được lưu tự động cùng với tệp dự án của bạn (định dạng dự án `.mapir`). Khi bạn mở lại một dự án, tất cả các cài đặt sẽ được khôi phục chính xác như khi bạn rời khỏi chúng.
 
@@ -226,9 +224,7 @@ Hầu hết các thay đổi cài đặt (đặc biệt là trong danh mục X�
 * Thư mục làm việc
 * Định dạng hình ảnh đã hiệu chỉnh (áp dụng khi xuất)
 
-***
-
-## Các phương pháp hay nhất
+***## Các phương pháp hay nhất
 
 1.**Bắt đầu với giá trị mặc định**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình làm việc thông thường.
 2.**Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho quy trình làm việc hoặc máy ảnh cụ thể, hãy lưu chúng dưới dạng mẫu để đảm bảo tính nhất quán giữa các dự án.

@@ -9,9 +9,7 @@ Sau khi bạn đã tạo hoặc mở dự án trong Chloros, bước tiếp theo
 3. Bảng File Browser sẽ hiển thị danh sách tệp dự án của bạn
 
 {% hint style="info" %}**Các loại tệp được hỗ trợ**: Chloros hỗ trợ các tệp hình ảnh RAW+JPG và JPG từ máy ảnh MAPIR Survey3W và Survey3N. Chỉ nên sử dụng RAW+JPG.
-{% endhint %}***
-
-## Thêm hình ảnh vào dự án của bạn
+{% endhint %}***## Thêm hình ảnh vào dự án của bạn
 
 Có hai cách chính để thêm hình ảnh vào dự án của bạn:
 
@@ -64,9 +62,7 @@ Khi hình ảnh được nhập, chúng sẽ xuất hiện trong bảng có các
 * Tăng tốc đáng kể việc phát hiện mục tiêu trong quá trình xử lý
 * Xem [Chọn ảnh mục tiêu](chọn-target-images.md) để biết chi tiết
 
-***
-
-## Quản lý tệp trong dự án của bạn
+***## Quản lý tệp trong dự án của bạn
 
 ### Xóa tập tin
 
@@ -110,17 +106,14 @@ Chloros tự động phát hiện và bỏ qua các tập tin trùng lặp:
 
 {% hint style="warning" %}
 **Quan trọng**: Không đổi tên hoặc sửa đổi tệp hình ảnh gốc của bạn trước khi nhập. Cloros dựa vào tên tệp gốc và siêu dữ liệu để xử lý thích hợp.
-{% endhint %}***
-
-## Bộ dữ liệu máy ảnh hỗn hợp
+{% endhint %}***## Bộ dữ liệu máy ảnh hỗn hợp
 
 Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
 1. Chloros tự động phát hiện từng mẫu camera
 2. Mỗi loại camera được xử lý với cấu hình hiệu chuẩn phù hợp
 3. File Browser hiển thị model camera ở cột Camera Model
-4. Xử lý áp dụng cài đặt chính xác cho từng loại camera
-**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN***
+4. Xử lý áp dụng cài đặt chính xác cho từng loại camera**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN***
 
 ## Các phương pháp hay nhất
 
@@ -143,9 +136,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 * Đặt mục tiêu trong cùng điều kiện ánh sáng với khu vực chụp
 * Đánh dấu ảnh mục tiêu bằng hộp kiểm Mục tiêu để tăng tốc độ xử lý
 
-***
-
-## Các vấn đề thường gặp và giải pháp
+***## Các vấn đề thường gặp và giải pháp
 
 ### Hình ảnh không xuất hiện sau khi nhập**Nguyên nhân có thể:**
 
@@ -168,9 +159,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 * Đồng hồ máy ảnh không được đặt chính xác
 * Dữ liệu EXIF ​​​​bị phần mềm bên ngoài loại bỏ
 
-**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp***
-
-## Các bước tiếp theo
+**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp***## Các bước tiếp theo
 
 Khi tệp của bạn được nhập:
 

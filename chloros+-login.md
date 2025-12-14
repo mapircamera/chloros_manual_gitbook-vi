@@ -12,13 +12,9 @@ Khi đăng nhập chi tiết tài khoản của bạn sẽ được hiển thị
 
 Đăng nhập bằng thông tin đăng nhập Chloros+ của bạn để kích hoạt xử lý CLI.
 
-**Cú pháp:**
-
-```bash
+**Cú pháp:**```bash
 chloros-cli login <email> <password>
-```**Ví dụ:**
-
-```powershell
+```**Ví dụ:**```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 

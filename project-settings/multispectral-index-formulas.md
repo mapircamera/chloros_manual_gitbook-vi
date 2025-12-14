@@ -74,9 +74,7 @@ $$
 
 _Tài liệu tham khảo: Pinty, B., và M. Verstraete. GEMI: Chỉ số phi tuyến tính để theo dõi thảm thực vật toàn cầu từ vệ tinh. Thảm thực vật 101 (1992): 15-20._
 
-***
-
-##GARI - Chỉ số chống chịu khí quyển xanh
+***##GARI - Chỉ số chống chịu khí quyển xanh
 
 Chỉ số này nhạy hơn với phạm vi nồng độ diệp lục rộng và ít nhạy cảm hơn với các tác động của khí quyển so với NDVI.
 
@@ -112,9 +110,7 @@ Giá trị GLI nằm trong khoảng từ -1 đến +1. Giá trị âm đại di�
 
 _Tài liệu tham khảo: Louhaichi, M., M. Borman, và D. Johnson. "Nền tảng được bố trí theo không gian và chụp ảnh trên không để ghi lại tác động của việc chăn thả đối với lúa mì." Geocarto International 16, số 1 (2001): 65-70._
 
-***
-
-## GNDVI - Chỉ số thực vật khác biệt chuẩn hóa xanh
+***## GNDVI - Chỉ số thực vật khác biệt chuẩn hóa xanh
 
 Chỉ số này tương tự như NDVI ngoại trừ việc nó đo phổ màu xanh lá cây từ 540 đến 570 nm thay vì phổ màu đỏ. Chỉ số này nhạy cảm hơn với nồng độ diệp lục so với NDVI.
 
@@ -132,9 +128,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Tài liệu tham khảo: Sripada, R., et al. "Xác định nhu cầu nitơ trong mùa đối với ngô bằng cách sử dụng ảnh hồng ngoại màu trên không." Tiến sĩ luận án, Đại học bang Bắc Carolina, 2005._***
-
-## GRVI - Chỉ số thực vật tỷ lệ xanh
+_Tài liệu tham khảo: Sripada, R., et al. "Xác định nhu cầu nitơ trong mùa đối với ngô bằng cách sử dụng ảnh hồng ngoại màu trên không." Tiến sĩ luận án, Đại học bang Bắc Carolina, 2005._***## GRVI - Chỉ số thực vật tỷ lệ xanh
 
 Chỉ số này rất nhạy cảm với tốc độ quang hợp trong tán rừng, vì độ phản xạ màu xanh lá cây và màu đỏ bị ảnh hưởng mạnh mẽ bởi sự thay đổi sắc tố của lá.
 
@@ -174,9 +168,7 @@ Giá trị LAI cao thường nằm trong khoảng từ 0 đến 3,5. Tuy nhiên,
 
 _Tham khảo: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, và A. Thomsen. "Dữ liệu đa phổ trong không khí để định lượng chỉ số diện tích lá, nồng độ nitơ và hiệu quả quang hợp trong nông nghiệp." Viễn thám về môi trường 81, không. 2-3 (2002): 179-193._
 
-***
-
-## LCI - Chỉ số diệp lục lá
+***## LCI - Chỉ số diệp lục lá
 
 Chỉ số này được sử dụng để ước tính hàm lượng chất diệp lục ở thực vật bậc cao, nhạy cảm với sự thay đổi độ phản xạ do sự hấp thụ chất diệp lục gây ra.
 
@@ -208,9 +200,7 @@ $$
 
 _Tài liệu tham khảo: Qi, J., A. Chehbouni, A. Huete, Y. Kerr và S. Sorooshian. "Chỉ số thảm thực vật được điều chỉnh trên đất đã được sửa đổi." Viễn thám môi trường 48 (1994): 119-126._
 
-***
-
-## NDRE- Chuẩn hóa sự khác biệt RedEdge
+***## NDRE- Chuẩn hóa sự khác biệt RedEdge
 
 Chỉ số này tương tự NDVI nhưng so sánh độ tương phản giữa NIR với RedEdge thay vì Red, thường phát hiện căng thẳng thực vật sớm hơn.
 
@@ -228,9 +218,7 @@ $$
 
 Giá trị của chỉ số này dao động từ -1 đến 1. Phạm vi phổ biến của thảm thực vật xanh là 0,2 đến 0,8.
 
-_Tài liệu tham khảo: Rouse, J., R. Haas, J. Schell và D. Deering. Giám sát hệ thống thực vật ở vùng đồng bằng lớn bằng ERTS. Hội nghị chuyên đề ERTS lần thứ ba, NASA (1973): 309-317._***
-
-## NLI - Chỉ số phi tuyến tính
+_Tài liệu tham khảo: Rouse, J., R. Haas, J. Schell và D. Deering. Giám sát hệ thống thực vật ở vùng đồng bằng lớn bằng ERTS. Hội nghị chuyên đề ERTS lần thứ ba, NASA (1973): 309-317._***## NLI - Chỉ số phi tuyến tính
 
 Chỉ số này giả định rằng mối quan hệ giữa nhiều chỉ số thực vật và các thông số sinh lý bề mặt là phi tuyến tính. Nó tuyến tính hóa các mối quan hệ với các tham số bề mặt có xu hướng phi tuyến tính.
 
@@ -248,9 +236,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Tài liệu tham khảo: Rondeaux, G., M. Steven và F. Baret. "Tối ưu hóa các chỉ số thực vật điều chỉnh đất." Viễn thám môi trường 55 (1996): 95-107._***
-
-## RDVI - Chỉ số thực vật khác biệt tái chuẩn hóa
+_Tài liệu tham khảo: Rondeaux, G., M. Steven và F. Baret. "Tối ưu hóa các chỉ số thực vật điều chỉnh đất." Viễn thám môi trường 55 (1996): 95-107._***## RDVI - Chỉ số thực vật khác biệt tái chuẩn hóa
 
 Chỉ số này sử dụng sự khác biệt giữa bước sóng cận hồng ngoại và bước sóng đỏ, cùng với NDVI, để làm nổi bật thảm thực vật khỏe mạnh. Nó không nhạy cảm với tác động của hình học xem đất và mặt trời.
 
@@ -282,9 +268,7 @@ $$
 
 _Tài liệu tham khảo: Bannari, A., H. Asalhi và P. Teillet. "Chỉ số thực vật khác biệt được chuyển đổi (TDVI) để lập bản đồ lớp phủ thực vật" Trong Kỷ yếu của Hội nghị chuyên đề về khoa học địa chất và viễn thám, IGARSS '02, IEEE International, Tập 5 (2002)._
 
-***
-
-## VARI - Chỉ số chống chịu khí quyển có thể nhìn thấy
+***## VARI - Chỉ số chống chịu khí quyển có thể nhìn thấy
 
 Chỉ số này dựa trên ARVI và được sử dụng để ước tính tỷ lệ thực vật trong một cảnh có độ nhạy thấp với các hiệu ứng khí quyển.
 

@@ -9,24 +9,17 @@ Khi quá trình xử lý kết thúc thành công, bạn sẽ thấy một số 
 * ✅ **Thanh tiến trình**: Hoàn thành 100%
 * ✅ **Nhật ký gỡ lỗi**: Hiển thị thông báo "Đang xử lý hoàn tất"
 * ✅ **Nút bắt đầu**: Được bật lại (sẵn sàng cho lần xử lý tiếp theo)
-* ✅ **Tệp đầu ra**: Tất cả hình ảnh đã xử lý được lưu vào thư mục con của mẫu máy ảnh***
-
-## Định vị hình ảnh đã xử lý của bạn
+* ✅ **Tệp đầu ra**: Tất cả hình ảnh đã xử lý được lưu vào thư mục con của mẫu máy ảnh***## Định vị hình ảnh đã xử lý của bạn
 
 ### Mở thư mục đầu ra
 
 1. Nhấp vào biểu tượng**Main Menu**<img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (trên cùng bên trái)
-2. Chọn**"Mở thư mục dự án"**
-
-3. File explorer của bạn sẽ mở ra thư mục dự án
+2. Chọn**"Mở thư mục dự án"**3. File explorer của bạn sẽ mở ra thư mục dự án
 4. Xác định vị trí dự án của bạn theo tên***
 
 ## Xem lại hình ảnh đã xử lý
 
-### Xem trước nhanh trong File Explorer
-**Bản xem trước tích hợp sẵn của Windows:**
-
-1. Điều hướng đến thư mục con mẫu máy ảnh
+### Xem trước nhanh trong File Explorer**Bản xem trước tích hợp sẵn của Windows:**1. Điều hướng đến thư mục con mẫu máy ảnh
 2. Chọn file hình ảnh
 3. Bản xem trước xuất hiện trong khung xem trước của Windows Explorer
 4. Sử dụng phím mũi tên để duyệt qua hình ảnh
@@ -47,9 +40,7 @@ Sử dụng Trình xem hình ảnh tích hợp của Chloros để hiển thị 
 3. Nhấp vào tab**Trình xem hình ảnh**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
 4. Sử dụng [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) để phân tích tương tác
 
-Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md) để biết hướng dẫn chi tiết.***
-
-## Xem lại Nhật ký gỡ lỗi
+Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md) để biết hướng dẫn chi tiết.***## Xem lại Nhật ký gỡ lỗi
 
 ### Kiểm tra cảnh báo hoặc lỗi
 
@@ -63,9 +54,7 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 
 Để lưu giữ hồ sơ xử lý hoặc gửi tới bộ phận Hỗ trợ MAPIR:
 
-1. Nhấp vào nút**"Sao chép"**hoặc**"Tải xuống"**
-
-2. Lưu dưới dạng tệp văn bản trong thư mục dự án
+1. Nhấp vào nút**"Sao chép"**hoặc**"Tải xuống"**2. Lưu dưới dạng tệp văn bản trong thư mục dự án
 3. Kèm theo tài liệu dự án
 4. Gửi tới bộ phận hỗ trợ MAPIR nếu gặp sự cố***
 
@@ -78,9 +67,7 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 * Dung lượng ổ đĩa hết trong khi xuất
 * Tệp bị hỏng trong quá trình xử lý
 
-**Giải pháp:**
-
-1. Kiểm tra Nhật ký gỡ lỗi để biết thông báo lỗi/bỏ qua
+**Giải pháp:**1. Kiểm tra Nhật ký gỡ lỗi để biết thông báo lỗi/bỏ qua
 2. Xác minh dung lượng ổ đĩa đủ
 3. Đếm tệp: Phải khớp (số lượng ban đầu - số lượng mục tiêu) × (chỉ số + 1)
 4. Nhập lại và xử lý lại mọi tệp bị thiếu
@@ -91,9 +78,7 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 * Máy ảnh/ống kính không có trong cơ sở dữ liệu hồ sơ Chloros
 * Họa tiết cực độ vượt quá khả năng chỉnh sửa
 
-**Giải pháp:**
-
-1. Xác minh tính năng chỉnh sửa họa tiết đã được bật trong Cài đặt dự án
+**Giải pháp:**1. Xác minh tính năng chỉnh sửa họa tiết đã được bật trong Cài đặt dự án
 2. Kiểm tra mẫu máy ảnh được phát hiện chính xác
 3. Liên hệ với bộ phận hỗ trợ của MAPIR nếu hiện tượng mờ viền vẫn tiếp diễn
 
@@ -104,9 +89,7 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 * Hiệu chỉnh phản xạ bị vô hiệu hóa
 * Hình ảnh mục tiêu chất lượng kém
 
-**Giải pháp:**
-
-1. Xác minh hiệu chỉnh độ phản xạ đã được bật
+**Giải pháp:**1. Xác minh hiệu chỉnh độ phản xạ đã được bật
 2. Kiểm tra thông báo "Đã tìm thấy mục tiêu" trong Nhật ký gỡ lỗi
 3. Xem lại chất lượng hình ảnh mục tiêu
 4. Tái xử lý với các mục tiêu thích hợp được đánh dấu
@@ -115,9 +98,7 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 **Nước, đá, đất**: -0,1 đến 0,2
 * **Thảm thực vật thưa thớt/không tốt**: 0,2 đến 0,4
 * **Thảm thực vật vừa phải**: 0,4 đến 0,6
-* **Thảm thực vật rậm rạp, khỏe mạnh**: 0,6 đến 0,9**Nếu các giá trị nằm ngoài phạm vi này:**
-
-1. Xác minh hiệu chuẩn phản xạ đã được áp dụng
+* **Thảm thực vật rậm rạp, khỏe mạnh**: 0,6 đến 0,9**Nếu các giá trị nằm ngoài phạm vi này:**1. Xác minh hiệu chuẩn phản xạ đã được áp dụng
 2. Xác minh nhật ký cảm biến ánh sáng đã được đưa vào
 3. Kiểm tra mục tiêu hiệu chuẩn đã được phát hiện
 4. Đảm bảo phát hiện đúng mẫu máy ảnh
@@ -125,10 +106,7 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 
 ## Sử dụng hình ảnh đã xử lý của bạn
 
-### Dành cho phép đo ảnh / Tạo chỉnh hình
-**Quy trình làm việc được đề xuất:**
-
-1.**Nhập hình ảnh phản xạ đã hiệu chỉnh** vào phần mềm đo ảnh:
+### Dành cho phép đo ảnh / Tạo chỉnh hình**Quy trình làm việc được đề xuất:**1.**Nhập hình ảnh phản xạ đã hiệu chỉnh** vào phần mềm đo ảnh:
    * Pix4Dmapper
    * Metashape Agisoft
    * Triển khai Drone
@@ -138,36 +116,24 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 4.**Xử lý khảm chỉ mục**: Tạo trực giao NDVI từ các hình ảnh chỉ mục riêng lẻ
 5.**Xuất GeoTIFF tham chiếu địa lý**: Để sử dụng trong các ứng dụng GIS
 
-### Để phân tích GIS**Quy trình làm việc được đề xuất:**
-
-1.**Tải vào QGIS, ArcGIS hoặc tương tự**
-
-2.**Sử dụng hình ảnh phản xạ TIFF 16-bit**để phân tích đa băng tần
+### Để phân tích GIS**Quy trình làm việc được đề xuất:**1.**Tải vào QGIS, ArcGIS hoặc tương tự**2.**Sử dụng hình ảnh phản xạ TIFF 16-bit**để phân tích đa băng tần
 3.**Sử dụng hình ảnh chỉ mục**(NDVI, NDRE) làm lớp thực vật sẵn sàng sử dụng
 4.**Máy tính raster**: Kết hợp các dải để phân tích tùy chỉnh
 5.**Xuất**: Tạo bản đồ phân loại, phát hiện thay đổi, bản đồ tình trạng thảm thực vật
 
-### Để phân tích / báo cáo trực tiếp**Quy trình làm việc được đề xuất:**
-
-1.**Sử dụng hình ảnh chỉ mục có màu LUT**cho báo cáo trực quan
+### Để phân tích / báo cáo trực tiếp**Quy trình làm việc được đề xuất:**1.**Sử dụng hình ảnh chỉ mục có màu LUT**cho báo cáo trực quan
 2.**Trích xuất số liệu thống kê**: NDVI trung bình trên mỗi trường/ô
 3.**Chuỗi thời gian**: So sánh các chỉ số trên nhiều phiên
-4.**Tạo báo cáo**: Bao gồm bản đồ, số liệu thống kê và hình ảnh trực quan***
+4.**Tạo báo cáo**: Bao gồm bản đồ, số liệu thống kê và hình ảnh trực quan***## Lưu trữ và sao lưu
 
-## Lưu trữ và sao lưu
-
-### Chiến lược sao lưu được đề xuất**Những gì cần lưu:***
-
-✅**Hình ảnh RAW/JPG gốc** - Lưu trữ trên ổ đĩa/đám mây riêng
+### Chiến lược sao lưu được đề xuất**Những gì cần lưu:***✅**Hình ảnh RAW/JPG gốc** - Lưu trữ trên ổ đĩa/đám mây riêng
 * ✅ **Đầu ra đã xử lý** - Giữ hình ảnh và chỉ số đã hiệu chỉnh
 * ✅ **Tệp dự án** - Chứa tất cả các cài đặt để xử lý lại nếu cần
 * ✅ **Nhật ký gỡ lỗi** - Chi tiết xử lý tài liệu
 * ✅ **Hình ảnh mục tiêu hiệu chuẩn**- Để xác minh và xử lý lại**Khuyến nghị lưu trữ:***
 **Sao lưu ngay lập tức**: Ổ cứng ngoài
 * **Lưu trữ dài hạn**: Lưu trữ đám mây (Google Drive, Dropbox, v.v.)
-* **Dữ liệu quan trọng**: Giữ 2-3 bản sao ở các vị trí khác nhau***
-
-## Lần xử lý tiếp theo
+* **Dữ liệu quan trọng**: Giữ 2-3 bản sao ở các vị trí khác nhau***## Lần xử lý tiếp theo
 
 ### Sử dụng lại cài đặt dự án
 
@@ -175,9 +141,7 @@ Nếu xử lý các tập dữ liệu tương tự trong tương lai:
 
 1.**Lưu mẫu dự án**(nếu chưa được thực hiện)
 2.**Tạo dự án mới**sử dụng mẫu đã lưu
-3.**Nhập hình ảnh mới**
-
-4.**Xử lý**với các cài đặt giống hệt nhau để đảm bảo tính nhất quán
+3.**Nhập hình ảnh mới**4.**Xử lý**với các cài đặt giống hệt nhau để đảm bảo tính nhất quán
 
 ### Xử lý hàng loạt nhiều phiên
 
@@ -228,9 +192,7 @@ Nếu bạn gặp phải vấn đề:
 * 📧 **Email**: info@mapir.camera (bao gồm Nhật ký gỡ lỗi)
 * 🌐 **Hỗ trợ**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Câu hỏi thường gặp**: [Câu hỏi thường gặp](../faq.md)
-* 📖 **Tài liệu**: [Hướng dẫn sử dụng Cloros](../)***
-
-## Tóm tắt: Hoàn thành quy trình làm việc
+* 📖 **Tài liệu**: [Hướng dẫn sử dụng Cloros](../)***## Tóm tắt: Hoàn thành quy trình làm việc
 
 Bây giờ bạn đã hoàn thành toàn bộ quy trình xử lý Chloros:
 

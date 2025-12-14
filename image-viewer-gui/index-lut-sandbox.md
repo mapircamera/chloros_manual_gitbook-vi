@@ -43,7 +43,7 @@ Hộp cát cho phép bạn:
 * **Áp dụng chỉ mục mới và độ dốc màu (LUT)** để trực quan hóa dữ liệu
 * **Điều chỉnh cài đặt hiển thị** một cách tương tác
 * **Xem** hình ảnh chỉ mục đã được tính toán
-* **Kiểm tra** giá trị pixel ở mọi mức thu phóng
+* **Kiểm tra**giá trị pixel ở mọi mức thu phóng
 
 ### Mở Sandbox
 
@@ -93,12 +93,9 @@ Thảm thực vật bị căng thẳng: 0,2 đến 0,4
 Nước: -0,1 đến 0,1
 ```
 
-Để có tài liệu về công thức chỉ mục đầy đủ, hãy xem [Công thức chỉ mục đa phổ](../project-settings/multispectral-index-formulas.md).***
+Để có tài liệu về công thức chỉ mục đầy đủ, hãy xem [Công thức chỉ mục đa phổ](../project-settings/multispectral-index-formulas.md).***## Làm việc với LUT (Bảng tra cứu)
 
-## Làm việc với LUT (Bảng tra cứu)
-
-### LUT là gì?
-**Bảng tra cứu (LUT)** ánh xạ các giá trị chỉ số số thành màu sắc để trực quan hóa:
+### LUT là gì?**Bảng tra cứu (LUT)** ánh xạ các giá trị chỉ số số thành màu sắc để trực quan hóa:
 
 * **Đầu vào**: Giá trị pixel chỉ mục (ví dụ: NDVI 0,65)
 * **Đầu ra**: Màu RGB (ví dụ: xanh lục sáng)
@@ -121,25 +118,17 @@ Khi bạn có một hình ảnh chỉ mục hiển thị
 4. Điều chỉnh chế độ cắt
 5. Chọn hộp Chỉ mục trong thanh bên tab**Image Viewer**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> để áp dụng LUT
 
-### Chọn một dải màu**Chọn độ chuyển màu:**
-
-1. Trong bảng LUT, tìm**thanh gradient màu**
-
-2. Di chuột qua nó để xem các cài đặt trước độ dốc có sẵn
+### Chọn một dải màu**Chọn độ chuyển màu:**1. Trong bảng LUT, tìm**thanh gradient màu**2. Di chuột qua nó để xem các cài đặt trước độ dốc có sẵn
 3. Chọn độ dốc mong muốn
 4. Hình ảnh**cập nhật ngay lập tức**với màu sắc mới khi hộp Chỉ mục được chọn
 
 {% hint style="success" %}**Phương pháp tốt nhất**: Đối với các chỉ số thực vật như NDVI, chuyển màu Đỏ-Vàng-Xanh lục mang tính trực quan nhất vì nó phù hợp với các liên kết màu sắc tự nhiên (xanh lục=khỏe mạnh, vàng=trung bình, đỏ=căng thẳng).
 {% endhint %}
 
-### Điều chỉnh các lớp màu**Điều khiển lớp**xác định số lượng bước màu riêng biệt xuất hiện trong dải màu của bạn:** Tùy chọn số lớp:*** **2-5 lớp**: Danh mục rất rộng, khu vực riêng biệt
+### Điều chỉnh các lớp màu**Điều khiển lớp**xác định số lượng bước màu riêng biệt xuất hiện trong dải màu của bạn:**Tùy chọn số lớp:*** **2-5 lớp**: Danh mục rất rộng, khu vực riêng biệt
 * **6-10 lớp**: Cân bằng, tốt cho việc phân loại
 * **11-20 lớp**: Chuyển màu mượt mà, xuất hiện liên tục
-* **Hơn 20 lớp**: Gần như liên tục, độ mượt tối đa**Cách điều chỉnh:**
-
-1. Trong bảng LUT, xác định vị trí**ô màu mẫu bên dưới thanh gradient**
-
-2. Điều chỉnh số lớp bằng cách thêm bằng nút +
+* **Hơn 20 lớp**: Gần như liên tục, độ mượt tối đa**Cách điều chỉnh:**1. Trong bảng LUT, xác định vị trí**ô màu mẫu bên dưới thanh gradient**2. Điều chỉnh số lớp bằng cách thêm bằng nút +
 3. Xóa số lớp bằng cách nhấp đúp vào mẫu màu
 4. Cập nhật độ dốc**theo thời gian thực**trên hình ảnh**Hiệu ứng trực quan:***
 **Ít lớp hơn** (3-5): Tạo các vùng riêng biệt, phân loại đơn giản hóa, dễ phân biệt danh mục hơn
@@ -149,15 +138,11 @@ Khi bạn có một hình ảnh chỉ mục hiển thị
 * **Lớp trung bình (6-10)**: Phân tích tổng quát, cân bằng chi tiết, báo cáo chuẩn
 * **Nhiều lớp (15-20)**: Phân tích khoa học, kiểm tra chi tiết, đầu ra chất lượng công bố
 
-### Tinh chỉnh phạm vi giá trị**Điều khiển phạm vi giá trị**xác định giá trị chỉ mục nào ánh xạ tới màu nào trong dải màu của bạn:**Điều khiển phạm vi trong bảng LUT:*** ** Giá trị tối thiểu**: Giới hạn dưới của thang màu
+### Tinh chỉnh phạm vi giá trị**Điều khiển phạm vi giá trị**xác định giá trị chỉ mục nào ánh xạ tới màu nào trong dải màu của bạn:**Điều khiển phạm vi trong bảng LUT:*** **Giá trị tối thiểu**: Giới hạn dưới của thang màu
 * **Giá trị tối đa**: Giới hạn trên của thang màu
 * **Giá trị trung gian**: Tự động phân bổ giữa mức tối thiểu và tối đa (dựa trên số lượng lớp)
 
-#### Điều chỉnh Giá trị Tối thiểu/Tối đa**Để điều chỉnh phạm vi giá trị:**1. Trong bảng LUT, tìm các trường nhập** Giá trị tối thiểu**và**Giá trị tối đa**
-
-2. Nhấp vào trường**Giá trị tối thiểu**
-
-3. Nhập giá trị tối thiểu mong muốn (ví dụ: `0,2`)
+#### Điều chỉnh Giá trị Tối thiểu/Tối đa**Để điều chỉnh phạm vi giá trị:**1. Trong bảng LUT, tìm các trường nhập**Giá trị tối thiểu**và**Giá trị tối đa**2. Nhấp vào trường**Giá trị tối thiểu**3. Nhập giá trị tối thiểu mong muốn (ví dụ: `0,2`)
 4. Nhấn**Enter**hoặc nhấp vào bên ngoài trường
 5. Lặp lại cho trường**Giá trị tối đa**(ví dụ: `0,9`)
 6. Hình ảnh**cập nhật ngay lập tức**{% hint style="info" %}**Tự động chia tỷ lệ**: Khi bạn áp dụng LUT lần đầu tiên, Chloros sẽ tự động đặt mức tối thiểu/tối đa cho phạm vi dữ liệu thực tế trong hình ảnh. Sau đó, bạn có thể thu hẹp phạm vi này để tập trung vào phạm vi giá trị cụ thể mà bạn quan tâm.
@@ -170,7 +155,7 @@ Khi bạn có một hình ảnh chỉ mục hiển thị
 **Tăng độ tương phản** trong lĩnh vực bạn quan tâm
 * **Loại trừ các giá trị không liên quan** (ví dụ: vùng nước, đất trống)
 * **Chuẩn hóa trực quan** trên nhiều hình ảnh hoặc ngày tháng
-* **Nhấn mạnh những khác biệt tinh tế** trong phạm vi giá trị hẹp
+* **Nhấn mạnh những khác biệt tinh tế**trong phạm vi giá trị hẹp
 
 ### Cắt bớt các giá trị ngoài phạm vi
 
@@ -187,7 +172,7 @@ Khi giá trị pixel nằm ngoài phạm vi tối thiểu/tối đa đã xác đ
 
 #### 2. Nền trong suốt
 
-* Các pixel **nằm ngoài phạm vi**trở nên**hoàn toàn trong suốt***Chỉ các pixel** trong phạm vi** hiển thị dải màu
+* Các pixel **nằm ngoài phạm vi**trở nên**hoàn toàn trong suốt***Chỉ các pixel**trong phạm vi** hiển thị dải màu
 * **Trường hợp sử dụng**: Lớp phủ GIS, tách biệt các phạm vi giá trị cụ thể, chỉ làm nổi bật các lĩnh vực quan tâm
 * **Ví dụ**: Chỉ hiển thị màu NDVI 0,4-0,7, mọi thứ khác trong suốt
 
@@ -197,33 +182,33 @@ Khi giá trị pixel nằm ngoài phạm vi tối thiểu/tối đa đã xác đ
 #### 3. Nền chỉ mục
 
 * Điểm ảnh **ngoài phạm vi**hiển thị ở**thang độ xám** (hiển thị giá trị chỉ mục thô)
-* Các điểm ảnh **trong phạm vi**hiển thị**độ dốc màu*** ** Trường hợp sử dụng**: Làm nổi bật tinh tế, duy trì ngữ cảnh trong khi nhấn mạnh các lĩnh vực quan tâm
+* Các điểm ảnh **trong phạm vi**hiển thị**độ dốc màu*** **Trường hợp sử dụng**: Làm nổi bật tinh tế, duy trì ngữ cảnh trong khi nhấn mạnh các lĩnh vực quan tâm
 * **Ví dụ**: Làm nổi bật màu thực vật bị căng thẳng (NDVI 0,3-0,5) trong khi hiển thị các vùng khỏe mạnh bằng màu xám
 
 #### 4. Nền gốc
 
-* Các pixel **ngoài phạm vi**hiển thị**hình ảnh đa phổ gốc***Các điểm ảnh** trong phạm vi**hiển thị**độ dốc màu*** ** Trường hợp sử dụng**: Trực quan nhất - kết hợp bối cảnh hình ảnh tự nhiên với lớp phủ màu phân tích
+* Các pixel **ngoài phạm vi**hiển thị**hình ảnh đa phổ gốc***Các điểm ảnh**trong phạm vi**hiển thị**độ dốc màu*** **Trường hợp sử dụng**: Trực quan nhất - kết hợp bối cảnh hình ảnh tự nhiên với lớp phủ màu phân tích
 * **Ví dụ**: Xem diện mạo cánh đồng/cây trồng thực tế với các vùng căng thẳng được mã hóa màu được phủ lên
 
 ### Chọn chế độ cắt phù hợp
 
 | Chế độ cắt | Tốt nhất cho | Phong cách trực quan |
 | -------------------------- | ------------------------------------------ | ---------------------------- |
-|**Tối thiểu và Tối đa** | Hiển thị đầy đủ dữ liệu, phân tích khoa học | Tất cả các pixel được tô màu |
-|**Nền trong suốt** | Lớp phủ GIS, cô lập các phạm vi cụ thể | Màu sắc trên phạm vi, khoảng trống ngoài |
-|**Nền chỉ mục** | Nhấn mạnh tinh tế, duy trì bối cảnh dữ liệu | Màu sắc trong phạm vi, màu xám xa hơn |
-|**Hình nền gốc** | Báo cáo, thuyết trình, phân tích trực quan | Màu sắc trên phạm vi, hình ảnh xa hơn |
+|**Tối thiểu và Tối đa**| Hiển thị đầy đủ dữ liệu, phân tích khoa học | Tất cả các pixel được tô màu |
+|**Nền trong suốt**| Lớp phủ GIS, cô lập các phạm vi cụ thể | Màu sắc trên phạm vi, khoảng trống ngoài |
+|**Nền chỉ mục**| Nhấn mạnh tinh tế, duy trì bối cảnh dữ liệu | Màu sắc trong phạm vi, màu xám xa hơn |
+|**Hình nền gốc**| Báo cáo, thuyết trình, phân tích trực quan | Màu sắc trên phạm vi, hình ảnh xa hơn |
 
 ### Tạo màu LUT tùy chỉnh
 
-Để kiểm soát hoàn toàn khả năng hiển thị của mình, bạn có thể tạo**chuyển màu tùy chỉnh**bằng cách chỉnh sửa các điểm dừng màu riêng lẻ.**Để tạo dải màu tùy chỉnh:**1. Trong bảng LUT, tìm** thanh xem trước gradient**2. Tìm** hình vuông mẫu màu**bên dưới dải màu
+Để kiểm soát hoàn toàn khả năng hiển thị của mình, bạn có thể tạo**chuyển màu tùy chỉnh**bằng cách chỉnh sửa các điểm dừng màu riêng lẻ.**Để tạo dải màu tùy chỉnh:**1. Trong bảng LUT, tìm**thanh xem trước gradient**2. Tìm**hình vuông mẫu màu**bên dưới dải màu
 3.**Nhấp vào điểm dừng màu**để chọn nó
 4.**Bộ chọn màu** mở ra
 5. Chọn màu mới bằng cách sử dụng:
    * **Bánh xe màu**: Lựa chọn màu sắc trực quan
    * **Thanh trượt RGB/HSV**: Kiểm soát màu chính xác
    * **Mục nhập mã hex**: Thông số màu chính xác (ví dụ: `#FF0000` cho màu đỏ)
-6. Nhấp vào bộ chọn màu**để áp dụng màu mới**7. Độ dốc** cập nhật ngay lập tức**trên hình ảnh**Thêm hoặc xóa các điểm dừng màu:***
+6. Nhấp vào bộ chọn màu**để áp dụng màu mới**7. Độ dốc**cập nhật ngay lập tức**trên hình ảnh**Thêm hoặc xóa các điểm dừng màu:***
 **Thêm điểm dừng**: Nhấp vào biểu tượng + để thêm mẫu màu mới vào cuối
 * **Xóa điểm dừng**: Nhấp đúp chuột vào ô vuông màu để xóa mẫu màu**Chiến lược tùy chỉnh:***
 **Đảo ngược gradient**: Lật thứ tự màu để đảo ngược ý nghĩa (ví dụ: xanh lá cây=thấp, đỏ=cao)
@@ -233,9 +218,7 @@ Khi giá trị pixel nằm ngoài phạm vi tối thiểu/tối đa đã xác đ
 * **Đa ngưỡng**: Sử dụng các màu riêng biệt ở ngưỡng giá trị cụ thể để phân loại
 
 {% hint style="info" %}**Lưu các gradient tùy chỉnh**: Các gradient tùy chỉnh có thể được lưu và sử dụng lại. Nhấp vào biểu tượng lưu trong bảng LUT để giữ nguyên cách phối màu tùy chỉnh của bạn để sử dụng trong tương lai.
-{% endhint %}***
-
-## Quy trình làm việc tương tác
+{% endhint %}***## Quy trình làm việc tương tác
 
 ### Cập nhật theo thời gian thực
 
@@ -251,9 +234,7 @@ Tất cả các điều chỉnh LUT trong sandbox đều cập nhật hình ản
 {% hint style="success" %}**Phản hồi trực tiếp**: Phản hồi trực quan tức thì cho phép bạn nhanh chóng thử nghiệm các cài đặt khác nhau cho đến khi bạn tìm thấy hình ảnh trực quan tối ưu cho nhu cầu phân tích của mình.
 {% endhint %}
 
-### Quy trình làm việc sàng lọc lặp đi lặp lại**Quy trình tối ưu hóa LUT điển hình:**
-
-1.**Chọn lớp chỉ mục**(ví dụ: RAW (Phản xạ))
+### Quy trình làm việc sàng lọc lặp đi lặp lại**Quy trình tối ưu hóa LUT điển hình:**1.**Chọn lớp chỉ mục**(ví dụ: RAW (Phản xạ))
 2.**Áp dụng chỉ mục**- Chọn bộ lọc máy ảnh và công thức chỉ mục, kéo các vòng tròn màu đến vị trí thích hợp trong công thức chỉ mục
 3.**Áp dụng độ dốc LUT**- Bắt đầu với cài đặt trước Đỏ-Vàng-Xanh
 4.**Kiểm tra giá trị pixel**- Di chuyển con trỏ xung quanh, ghi chú phạm vi giá trị
@@ -264,9 +245,7 @@ Tất cả các điều chỉnh LUT trong sandbox đều cập nhật hình ản
 
 ### Kiểm tra giá trị pixel
 
-Hiểu giá trị pixel thực tế là rất quan trọng để thiết lập phạm vi LUT hiệu quả:**Cách kiểm tra giá trị:**
-
-1. Giá trị pixel hiển thị khi hình ảnh có Chỉ mục hoặc cả hai hộp Chỉ mục và LUT**được chọn**.
+Hiểu giá trị pixel thực tế là rất quan trọng để thiết lập phạm vi LUT hiệu quả:**Cách kiểm tra giá trị:**1. Giá trị pixel hiển thị khi hình ảnh có Chỉ mục hoặc cả hai hộp Chỉ mục và LUT**được chọn**.
 2.**Di chuyển con trỏ**qua các vùng khác nhau của hình ảnh
 3.**Quan sát giá trị pixel**hiển thị trong chú giải khi bạn di chuột
 4. Phóng to để xem từng pixel được đánh dấu bằng giá trị nổi
@@ -274,7 +253,7 @@ Hiểu giá trị pixel thực tế là rất quan trọng để thiết lập p
    * **Thảm thực vật khỏe mạnh**: ví dụ: NDVI 0,55-0,85
    * **Thực vật bị căng thẳng**: ví dụ: NDVI 0,30-0,50
    * **Đất trống**: ví dụ: NDVI 0,05-0,25
-   * **Nước**(nếu có): ví dụ: NDVI -0,05 đến 0,10**Sử dụng giá trị pixel để đặt phạm vi LUT:** Sau khi kiểm tra giá trị pixel, hãy điều chỉnh LUT tối thiểu/tối đa cho phù hợp:**Tình huống ví dụ:***
+   * **Nước**(nếu có): ví dụ: NDVI -0,05 đến 0,10**Sử dụng giá trị pixel để đặt phạm vi LUT:**Sau khi kiểm tra giá trị pixel, hãy điều chỉnh LUT tối thiểu/tối đa cho phù hợp:**Tình huống ví dụ:***
 **Quan sát**: Giá trị đất = 0,05-0,25, Căng thẳng = 0,25-0,50, Khỏe mạnh = 0,50-0,85
 * **Mục tiêu**: Chỉ hình dung tình trạng thực vật (không bao gồm đất)
 * **Cài đặt LUT**: Tối thiểu = `0,25`, Tối đa = `0,85`
@@ -282,26 +261,20 @@ Hiểu giá trị pixel thực tế là rất quan trọng để thiết lập p
 * **Kết quả**: Độ dốc màu chỉ áp dụng cho thảm thực vật, đất hiển thị như ảnh gốc
 
 {% hint style="info" %}**Phạm vi động**: Các loại cây trồng, mùa vụ và giai đoạn tăng trưởng khác nhau sẽ có phạm vi giá trị khác nhau. Luôn kiểm tra giá trị pixel trong tập dữ liệu cụ thể của bạn trước khi đặt phạm vi LUT.
-{% endhint %}***
-
-## Chỉ số tùy chỉnh (Chloros+)
+{% endhint %}***## Chỉ số tùy chỉnh (Chloros+)
 
 ### Tạo công thức chỉ mục tùy chỉnh
 
 {% hint style="info" %}**Nơi tạo**: Bạn có thể định cấu hình các chỉ mục tùy chỉnh trong**Cài đặt dự án**trước khi xử lý, cũng như trong thanh bên hộp cát của Trình xem hình ảnh.
-{% endhint %}**Để tạo chỉ mục tùy chỉnh:**1.** Mở Cài đặt dự án**(trước khi xử lý) hoặc thanh bên hộp cát của Trình xem hình ảnh
-2. Điều hướng đến**danh sách thả xuống Công thức chỉ mục**
-
-3. Tìm tùy chọn**"Tùy chỉnh"**(phải đăng nhập bằng giấy phép Chloros+)
+{% endhint %}**Để tạo chỉ mục tùy chỉnh:**1.**Mở Cài đặt dự án**(trước khi xử lý) hoặc thanh bên hộp cát của Trình xem hình ảnh
+2. Điều hướng đến**danh sách thả xuống Công thức chỉ mục**3. Tìm tùy chọn**"Tùy chỉnh"**(phải đăng nhập bằng giấy phép Chloros+)
 4.**Xác định công thức** bằng cách sử dụng các biến số trong băng tần:
    * Tên ban nhạc: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, v.v.
    * Toán tử: `+`, `-`, `*`, `/`, `^` (số mũ)
    * Hàm: `sqrt()`, `abs()`, v.v. (nếu được hỗ trợ)
    * Dấu ngoặc đơn: `()` cho thứ tự thực hiện các thao tác
 5. **Đặt tên cho chỉ mục của bạn**(ví dụ: "MyIndex" hoặc "CustomNDVI")
-6.**Lưu cấu hình** **Ví dụ về công thức tùy chỉnh:**
-
-```
+6.**Lưu cấu hình** **Ví dụ về công thức tùy chỉnh:**```
 
 NDVI đã sửa đổi có bù:
 (NIR - Đỏ) / (NIR + Đỏ + 0,5)

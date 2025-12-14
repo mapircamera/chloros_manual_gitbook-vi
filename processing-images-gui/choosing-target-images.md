@@ -24,14 +24,11 @@ Khi bạn kiểm tra cột Mục tiêu để tìm hình ảnh cụ thể:
 
 {% hint style="success" %}
 **Cải thiện tốc độ**: Đánh dấu 2-3 hình ảnh mục tiêu trong tập dữ liệu 500 hình ảnh có thể giảm thời gian phát hiện mục tiêu từ hơn 30 phút xuống dưới 1 phút.
-{% endhint %}***
-
-## Cách đánh dấu ảnh mục tiêu
+{% endhint %}***## Cách đánh dấu ảnh mục tiêu
 
 ### Bước 1: Xác định hình ảnh mục tiêu của bạn
 
-Xem qua các hình ảnh đã nhập của bạn trong Trình duyệt Tệp và xác định hình ảnh nào chứa mục tiêu hiệu chỉnh.
-**Các tình huống thường gặp:***
+Xem qua các hình ảnh đã nhập của bạn trong Trình duyệt Tệp và xác định hình ảnh nào chứa mục tiêu hiệu chỉnh.**Các tình huống thường gặp:***
 **Mục tiêu bắt trước**: Bị bắt trước khi bắt đầu phiên
 * **Mục tiêu sau khi bắt**: Bị bắt sau khi hoàn thành phiên
 * **Mục tiêu tại hiện trường**: Mục tiêu được đặt trong khu vực đánh chiếm
@@ -54,9 +51,7 @@ Trước khi xử lý, hãy kiểm tra kỹ:
 * [ ] Không có hình ảnh không phải mục tiêu nào được kiểm tra ngẫu nhiên
 * [ ] Mục tiêu được hiển thị rõ ràng trong hình ảnh được kiểm tra
 
-***
-
-## Các phương pháp hay nhất cho hình ảnh mục tiêu
+***## Các phương pháp hay nhất cho hình ảnh mục tiêu
 
 ### Nguyên tắc nắm bắt mục tiêu**Thời gian:**
 
@@ -90,9 +85,7 @@ Trước khi xử lý, hãy kiểm tra kỹ:
 * Xoay camera giữa các lần chụp để có kết quả tốt nhất
 * Tùy chọn: định kỳ giữa buổi nếu điều kiện ánh sáng thay đổi liên tục
 
-***
-
-## Làm việc với nhiều máy ảnh
+***## Làm việc với nhiều máy ảnh
 
 ### Cài đặt máy ảnh kép
 
@@ -114,18 +107,16 @@ Cột**Mẫu máy ảnh** giúp xác định hình ảnh nào đến từ máy �
 
 Sử dụng cột này để xác minh rằng bạn đã đánh dấu mục tiêu cho từng loại camera trong dự án của mình.
 
-***
-
-## Cài đặt phát hiện mục tiêu
+***## Cài đặt phát hiện mục tiêu
 
 ### Điều chỉnh độ nhạy phát hiện
 
 Nếu Chloros không phát hiện chính xác mục tiêu của bạn, hãy điều chỉnh các cài đặt này trong [Cài đặt dự án]( adjustment-project-settings.md):**Diện tích mẫu hiệu chuẩn tối thiểu:***
 **Mặc định**: 25 pixel
 * **Tăng** nếu phát hiện sai trên các đồ tạo tác nhỏ
-* **Giảm** nếu không phát hiện được mục tiêu**Phân cụm mục tiêu tối thiểu:*** ** Mặc định**: 60
+* **Giảm**nếu không phát hiện được mục tiêu**Phân cụm mục tiêu tối thiểu:*** **Mặc định**: 60
 * **Tăng** nếu mục tiêu được chia thành nhiều lần phát hiện
-* **Giảm** nếu mục tiêu có biến thể màu không được phát hiện đầy đủ***
+* **Giảm**nếu mục tiêu có biến thể màu không được phát hiện đầy đủ***
 
 ## Các vấn đề phổ biến về hình ảnh mục tiêu
 
@@ -136,9 +127,7 @@ Nếu Chloros không phát hiện chính xác mục tiêu của bạn, hãy đi�
 * Ánh sáng kém (bóng, chói)
 * Cài đặt phát hiện mục tiêu quá nghiêm ngặt
 
-**Giải pháp:**
-
-1. Xác minh cột Target đã được kiểm tra hình ảnh chính xác chưa
+**Giải pháp:**1. Xác minh cột Target đã được kiểm tra hình ảnh chính xác chưa
 2. Xem lại chất lượng hình ảnh mục tiêu trong bản xem trước
 3. Giành lại mục tiêu nếu chất lượng kém
 4. Điều chỉnh cài đặt phát hiện mục tiêu nếu cần
@@ -149,9 +138,7 @@ Nếu Chloros không phát hiện chính xác mục tiêu của bạn, hãy đi�
 * Những mảng sáng trong thảm thực vật
 * Độ nhạy phát hiện quá thấp
 
-**Giải pháp:**
-
-1. Chỉ đánh dấu ảnh mục tiêu thực tế để hạn chế phạm vi phát hiện
+**Giải pháp:**1. Chỉ đánh dấu ảnh mục tiêu thực tế để hạn chế phạm vi phát hiện
 2. Tăng diện tích mẫu hiệu chuẩn tối thiểu
 3. Tăng giá trị phân cụm mục tiêu tối thiểu
 4. Đảm bảo hình ảnh mục tiêu chỉ hiển thị mục tiêu (nền tối thiểu bị lộn xộn)***
@@ -168,9 +155,7 @@ Trước khi bắt đầu xử lý, hãy xác minh lựa chọn hình ảnh mụ
 * [ ] Không có bóng hoặc vật cản trên mục tiêu
 * [ ] Đối với máy ảnh kép: Mục tiêu được đánh dấu cho cả hai loại máy ảnh
 
-***
-
-## Xử lý không có mục tiêu
+***## Xử lý không có mục tiêu
 
 ### Xử lý không có mục tiêu hiệu chỉnh
 
@@ -182,9 +167,7 @@ Mặc dù không được khuyến nghị cho công việc khoa học nhưng b�
 4. Đầu ra sẽ không được hiệu chỉnh để có độ phản xạ tuyệt đối
 
 {% hint style="warning" %}**Không được đề xuất**: Nếu không hiệu chỉnh độ phản xạ, giá trị pixel chỉ biểu thị độ sáng tương đối, không phải phép đo phản xạ khoa học. Sử dụng mục tiêu hiệu chuẩn để có kết quả chính xác, có thể lặp lại.
-{% endhint %}***
-
-## Các bước tiếp theo
+{% endhint %}***## Các bước tiếp theo
 
 Khi bạn đã đánh dấu hình ảnh mục tiêu của mình:
 
