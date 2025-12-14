@@ -1,36 +1,36 @@
-# API : Python SDK
+#API: SDK Python
 
-The **Chloros Python SDK** provides programmatic access to the Chloros image processing engine, enabling automation, custom workflows, and seamless integration with your Python applications and research pipelines.
+**Chloros Python SDK** cung cấp quyền truy cập theo chương trình vào công cụ xử lý hình ảnh Chloros, cho phép tự động hóa, quy trình công việc tùy chỉnh và tích hợp liền mạch với các ứng dụng Python và quy trình nghiên cứu của bạn.
 
-### Key Features
+### Các tính năng chính
 
-* 🐍 **Native Python** - Clean, Pythonic API for image processing
-* 🔧 **Full API Access** - Complete control over Chloros processing
-* 🚀 **Automation** - Build custom batch processing workflows
-* 🔗 **Integration** - Embed Chloros in existing Python applications
-* 📊 **Research-Ready** - Perfect for scientific analysis pipelines
-* ⚡ **Parallel Processing** - Scales to your CPU cores (Chloros+)
+* 🐍 **Native Python** - API Pythonic rõ ràng để xử lý hình ảnh
+* 🔧 **Quyền truy cập API đầy đủ** - Kiểm soát hoàn toàn quá trình xử lý Chloros
+* 🚀 **Tự động hóa** - Xây dựng quy trình xử lý hàng loạt tùy chỉnh
+* 🔗 **Tích hợp** - Nhúng Chloros vào các ứng dụng Python hiện có
+* 📊 **Sẵn sàng cho nghiên cứu** - Hoàn hảo cho quy trình phân tích khoa học
+* ⚡ **Xử lý song song** - Cân theo lõi CPU của bạn (Chloros+)
 
-### Requirements
+### Yêu cầu
 
-| Requirement          | Details                                                             |
+| Yêu cầu | Chi tiết |
 | -------------------- | ------------------------------------------------------------------- |
-| **Chloros Desktop**  | Must be installed locally                                           |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **Python**           | Python 3.7 or higher                                                |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
+| **Máy tính để bàn Cloros** | Phải được cài đặt cục bộ |
+| **Giấy phép** | Chloros+ ([yêu cầu gói trả phí](https://cloud.mapir.Camera/pricing)) |
+| **Hệ điều hành** | Windows 10/11 (64-bit) |
+| **Trăn** | Python 3.7 trở lên |
+| **Bộ nhớ** | RAM tối thiểu 8GB (khuyến nghị 16GB) |
+| **Internet** | Cần thiết để kích hoạt giấy phép |
 
-{% hint style="warning" %}
-**License Requirement**: The Python SDK requires a paid Chloros+ subscription for API access. Standard (free) plans do not have API/SDK access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
+{% gợi ý style="warning" %}
+**Yêu cầu về giấy phép**: Python SDK yêu cầu đăng ký Chloros+ trả phí để truy cập API. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập API/SDK. Hãy truy cập [https://cloud.mapir.Camera/pricing](https://cloud.mapir.Camera/pricing) để nâng cấp.
 {% endhint %}
 
-## Quick Start
+## Bắt đầu nhanh
 
-### Installation
+### Cài đặt
 
-Install via pip:
+Cài đặt qua pip:
 
 ```bash
 pip install chloros-sdk
@@ -175,9 +175,9 @@ ChlorosLocal(
 | Parameter                 | Type | Default                   | Description                           |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
 | `api_url`                 | str  | `"http://localhost:5000"` | URL of local Chloros backend          |
-| `auto_start_backend`      | bool | `True`                    | Automatically start backend if needed |
-| `backend_exe`             | str  | `None` (auto-detect)      | Path to backend executable            |
-| `timeout`                 | int  | `30`                      | Request timeout in seconds            |
+| `auto_start_backend`      | bool | `Đúng`                    | Automatically start backend if needed |
+| `phụ trợ_exe`             | str  | `Không` (auto-detect)      | Path to backend executable            |
+| `hết giờ`                 | int  | `30`                      | Request timeout in seconds            |
 | `backend_startup_timeout` | int  | `60`                      | Timeout for backend startup (seconds) |
 
 **Examples:**
@@ -208,8 +208,8 @@ Create a new Chloros project.
 
 | Parameter      | Type | Required | Description                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
-| `project_name` | str  | Yes      | Name for the project                                     |
-| `camera`       | str  | No       | Camera template (e.g., "Survey3N\_RGN", "Survey3W\_OCN") |
+| `tên_dự án` | str  | Yes      | Name for the project                                     |
+| `máy ảnh`       | str  | No       | Camera template (e.g., "Survey3N\_RGN", "Survey3W\_OCN") |
 
 **Returns:** `dict` - Project creation response
 
@@ -233,8 +233,8 @@ Import images from a folder.
 
 | Parameter     | Type     | Required | Description                        |
 | ------------- | -------- | -------- | ---------------------------------- |
-| `folder_path` | str/Path | Yes      | Path to folder with images         |
-| `recursive`   | bool     | No       | Search subfolders (default: False) |
+| `đường dẫn thư mục` | str/Path | Yes      | Path to folder with images         |
+| `đệ quy`   | bool     | No       | Search subfolders (default: False) |
 
 **Returns:** `dict` - Import results with file count
 
@@ -250,7 +250,7 @@ chloros.import_images("C:\\DroneImages", recursive=True)
 
 ***
 
-#### `configure(**settings)`
+#### `cấu hình(**cài đặt)`
 
 Configure processing settings.
 
@@ -259,17 +259,17 @@ Configure processing settings.
 | Parameter                 | Type | Default                 | Description                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
 | `debayer`                 | str  | "High Quality (Faster)" | Debayer method                  |
-| `vignette_correction`     | bool | `True`                  | Enable vignette correction      |
-| `reflectance_calibration` | bool | `True`                  | Enable reflectance calibration  |
-| `indices`                 | list | `None`                  | Vegetation indices to calculate |
-| `export_format`           | str  | "TIFF (16-bit)"         | Output format                   |
-| `ppk`                     | bool | `False`                 | Enable PPK corrections          |
-| `custom_settings`         | dict | `None`                  | Advanced custom settings        |
+| `vignette_ Correction`     | bool | `Đúng`                  | Enable vignette correction      |
+| `phản xạ_hiệu chuẩn`                     | bool | `Đúng`                  | Enable reflectance calibration  |
+| `chỉ số`                 | list | `Không có`                  | Vegetation indices to calculate |
+| `xuất_format`           | str  | "TIFF (16-bit)"         | Output format                   |
+| `ppk`              | bool     | `Sai`                 | Enable PPK corrections          |
+| `custom_settings`         | dict | `Không có`                  | Advanced custom settings        |
 
 **Export Formats:**
 
 * `"TIFF (16-bit)"` - Recommended for GIS/photogrammetry
-* `"TIFF (32-bit, Percent)"` - Scientific analysis
+* `"TIFF (32-bit, Phần trăm)"` - Scientific analysis
 * `"PNG (8-bit)"` - Visual inspection
 * `"JPG (8-bit)"` - Compressed output
 
@@ -300,7 +300,7 @@ chloros.configure(
 
 ***
 
-#### `process(mode="parallel", wait=True, progress_callback=None)`
+#### `process(mode="parallel", wait=True, Progress_callback=None)`
 
 Process the project images.
 
@@ -308,10 +308,10 @@ Process the project images.
 
 | Parameter           | Type     | Default      | Description                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `mode`              | str      | `"parallel"` | Processing mode: "parallel" or "serial"   |
-| `wait`              | bool     | `True`       | Wait for completion                       |
-| `progress_callback` | callable | `None`       | Progress callback function(progress, msg) |
-| `poll_interval`     | float    | `2.0`        | Polling interval for progress (seconds)   |
+| `chế độ`              | str      | `"song song"` | Processing mode: "parallel" or "serial"   |
+| `đợi`     | bool     | `Đúng`       | Wait for completion                       |
+| `progress_callback` | callable | `Không có`       | Progress callback function(progress, msg) |
+| `thăm dò ý kiến`     | float    | `2.0`        | Polling interval for progress (seconds)   |
 
 **Returns:** `dict` - Processing results
 
@@ -394,15 +394,15 @@ One-line convenience function to process a folder.
 
 | Parameter                 | Type     | Default         | Description                    |
 | ------------------------- | -------- | --------------- | ------------------------------ |
-| `folder_path`             | str/Path | Required        | Path to folder with images     |
-| `project_name`            | str      | Auto-generated  | Project name                   |
-| `camera`                  | str      | `None`          | Camera template                |
-| `indices`                 | list     | `["NDVI"]`      | Indices to calculate           |
-| `vignette_correction`     | bool     | `True`          | Enable vignette correction     |
-| `reflectance_calibration` | bool     | `True`          | Enable reflectance calibration |
-| `export_format`           | str      | "TIFF (16-bit)" | Output format                  |
-| `mode`                    | str      | `"parallel"`    | Processing mode                |
-| `progress_callback`       | callable | `None`          | Progress callback              |
+| `đường dẫn thư mục`             | str/Path | Required        | Path to folder with images     |
+| `tên_dự án`            | str      | Auto-generated  | Project name                   |
+| `máy ảnh`                  | str      | `Không có`          | Camera template                |
+| `chỉ số`                 | list     | `["NDVI"]`      | Indices to calculate           |
+| `vignette_ Correction` | bool     | `Đúng`          | Enable vignette correction     |
+| `phản xạ_hiệu chuẩn` | bool | `Đúng`          | Enable reflectance calibration |
+| `xuất_format`           | str      | "TIFF (16-bit)" | Output format                  |
+| `chế độ`                    | str      | `"song song"`    | Processing mode                |
+| `progress_callback`       | callable | `Không có`          | Progress callback              |
 
 **Returns:** `dict` - Processing results
 
@@ -937,7 +937,7 @@ print(f"Cache exists: {cache_path.exists()}")
 
 ### Import Errors
 
-**Issue:** `ModuleNotFoundError: No module named 'chloros_sdk'`
+**Issue:** `ModuleNotFoundError: Không có mô-đun nào có tên 'chloros_sdk'`
 
 **Solutions:**
 
@@ -1215,26 +1215,26 @@ thread.start()
 
 ***
 
-## Getting Help
+## Nhận trợ giúp
 
-### Documentation
+### Tài liệu
 
-* **API Reference**: This page
+* **Tham khảo API**: Trang này
 
-### Support Channels
+### Kênh hỗ trợ
 
-* **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **Email**: info@mapir.máy ảnh
+* **Trang web**: [https://www.mapir.Camera/community/contact](https://www.mapir.Camera/community/contact)
+* **Giá**: [https://cloud.mapir.Camera/pricing](https://cloud.mapir.Camera/pricing)
 
-### Sample Code
+### Mã mẫu
 
-All examples listed here are tested and production-ready. Copy and adapt them for your use case.
+Tất cả các ví dụ được liệt kê ở đây đều đã được thử nghiệm và sẵn sàng sản xuất. Sao chép và điều chỉnh chúng cho trường hợp sử dụng của bạn.
 
 ***
 
-## License
+## Giấy phép
 
-**Proprietary Software** - Copyright (c) 2025 MAPIR Inc.
+**Phần mềm độc quyền** - Bản quyền (c) 2025 MAPIR Inc.
 
-SDK requires an active Chloros+ subscription. Unauthorized use, distribution, or modification is prohibited.
+SDK yêu cầu đăng ký Chloros+ đang hoạt động. Việc sử dụng, phân phối hoặc sửa đổi trái phép đều bị cấm.

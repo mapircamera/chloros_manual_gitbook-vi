@@ -1,48 +1,48 @@
-# CLI : Command Line
+# CLI : Dòng lệnh
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
 
-The **Chloros CLI** provides powerful command-line access to the Chloros image processing engine, enabling automation, scripting, and headless operation for your imaging workflows.
+**Chloros CLI** cung cấp khả năng truy cập dòng lệnh mạnh mẽ vào công cụ xử lý hình ảnh Chloros, cho phép tự động hóa, tạo tập lệnh và vận hành không đầu cho quy trình xử lý hình ảnh của bạn.
 
-### Key Features
+### Các tính năng chính
 
-* 🚀 **Automation** - Script batch processing of multiple datasets
-* 🔗 **Integration** - Embed in existing workflows and pipelines
-* 💻 **Headless Operation** - Run without GUI
-* 🌍 **Multi-Language** - Support for 38 languages
-* ⚡ **Parallel Processing** - Dynamically scales to your CPU (up to 16 parallel workers)
+* 🚀 **Tự động hóa** - Xử lý hàng loạt tập lệnh của nhiều bộ dữ liệu
+* 🔗 **Tích hợp** - Nhúng vào quy trình công việc và quy trình hiện có
+* 💻 **Thao tác không đầu** - Chạy không cần GUI
+* 🌍 **Đa ngôn ngữ** - Hỗ trợ 38 ngôn ngữ
+* ⚡ **Xử lý song song** - Tự động điều chỉnh quy mô theo CPU của bạn (tối đa 16 nhân viên song song)
 
-### Requirements
+### Yêu cầu
 
-| Requirement          | Details                                                             |
+| Yêu cầu | Chi tiết |
 | -------------------- | ------------------------------------------------------------------- |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
-| **Disk Space**       | Varies by project size                                              |
+| **Hệ điều hành** | Windows 10/11 (64-bit) |
+| **Giấy phép** | Chloros+ ([yêu cầu gói trả phí](https://cloud.mapir.Camera/pricing)) |
+| **Bộ nhớ** | RAM tối thiểu 8GB (khuyến nghị 16GB) |
+| **Internet** | Cần thiết để kích hoạt giấy phép |
+| **Dung lượng đĩa** | Thay đổi theo quy mô dự án |
 
-{% hint style="warning" %}
-**License Requirement**: The CLI requires a paid Chloros+ subscription. Standard (free) plans do not have CLI access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
+{% gợi ý style="warning" %}
+**Yêu cầu về giấy phép**: CLI yêu cầu đăng ký Chloros+ trả phí. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập CLI. Hãy truy cập [https://cloud.mapir.Camera/pricing](https://cloud.mapir.Camera/pricing) để nâng cấp.
 {% endhint %}
 
-## Quick Start
+## Bắt đầu nhanh
 
-### Installation
+### Cài đặt
 
-The CLI is automatically included with the Chloros installer:
+CLI được tự động đưa vào trình cài đặt Chloros:
 
-1. Download and run **Chloros Installer.exe**
-2. Complete the installation wizard
-3. CLI installed to: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
+1. Tải xuống và chạy **Chloros Installer.exe**
+2. Hoàn tất trình hướng dẫn cài đặt
+3. CLI được cài đặt vào: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
-{% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH. Restart your terminal after installation.
+{% gợi ý style="thành công" %}
+Trình cài đặt sẽ tự động thêm `chloros-cli` vào PATH hệ thống của bạn. Khởi động lại thiết bị đầu cuối của bạn sau khi cài đặt.
 {% endhint %}
 
-### First-Time Setup
+### Thiết lập lần đầu
 
-Before using the CLI, activate your Chloros+ license:
+Trước khi sử dụng CLI, hãy kích hoạt giấy phép Chloros+ của bạn:
 
 ```bash
 # Login with your Chloros+ account
@@ -97,21 +97,21 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 
 | Option                | Type    | Default        | Description                                                                            |
 | --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<input-folder>`      | Path    | _Required_     | Folder containing RAW/JPG multispectral images                                         |
+| `<thư mục đầu vào>`      | Path    | _Required_     | Folder containing RAW/JPG multispectral images                                         |
 | `-o, --output`        | Path    | Same as input  | Output folder for processed images                                                     |
-| `-n, --project-name`  | String  | Auto-generated | Custom project name                                                                    |
+| `-n, --tên dự án`  | String  | Auto-generated | Custom project name                                                                    |
 | `--vignette`          | Flag    | Enabled        | Enable vignette correction                                                             |
-| `--no-vignette`       | Flag    | -              | Disable vignette correction                                                            |
-| `--reflectance`       | Flag    | Enabled        | Enable reflectance calibration                                                         |
-| `--no-reflectance`    | Flag    | -              | Disable reflectance calibration                                                        |
+| `--không có họa tiết`       | Flag    | -              | Disable vignette correction                                                            |
+| `--phản ánh`       | Flag    | Enabled        | Enable reflectance calibration                                                         |
+| `--không phản ánh`    | Flag    | -              | Disable reflectance calibration                                                        |
 | `--ppk`               | Flag    | Disabled       | Apply PPK corrections from .daq light sensor data                                      |
-| `--format`            | Choice  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
+| `--format`            | Choice  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Phần trăm)`, `PNG (8-bit)`, `JPG (8-bit)` |
 | `--min-target-size`   | Integer | Auto           | Minimum target size in pixels for calibration panel detection                          |
-| `--target-clustering` | Integer | Auto           | Target clustering threshold (0-100)                                                    |
+| `--phân cụm mục tiêu` | Integer | Auto           | Target clustering threshold (0-100)                                                    |
 | `--exposure-pin-1`    | String  | None           | Lock exposure for camera model (Pin 1)                                                 |
 | `--exposure-pin-2`    | String  | None           | Lock exposure for camera model (Pin 2)                                                 |
 | `--recal-interval`    | Integer | Auto           | Recalibration interval in seconds                                                      |
-| `--timezone-offset`   | Integer | 0              | Timezone offset in hours                                                               |
+| `--bù múi giờ`   | Integer | 0              | Timezone offset in hours                                                               |
 
 ***
 
@@ -141,7 +141,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 ***
 
-### `logout` - Clear Credentials
+### `đăng xuất` - Clear Credentials
 
 Clear stored credentials and logout from your account.
 
@@ -166,7 +166,7 @@ chloros-cli logout
 
 ***
 
-### `status` - Check License Status
+### `trạng thái` - Check License Status
 
 Display current license and authentication status.
 
@@ -197,7 +197,7 @@ chloros-cli status
 
 ***
 
-### `export-status` - Check Export Progress
+### `trạng thái xuất` - Check Export Progress
 
 Monitor Thread 4 export progress during or after processing.
 
@@ -217,7 +217,7 @@ chloros-cli export-status
 
 ***
 
-### `language` - Manage Interface Language
+### `ngôn ngữ` - Manage Interface Language
 
 View or change the CLI interface language.
 
@@ -259,7 +259,7 @@ chloros-cli language ja
 | `pt`    | Portuguese            | Português        |
 | `fr`    | French                | Français         |
 | `de`    | German                | Deutsch          |
-| `it`    | Italian               | Italiano         |
+| `nó`    | Italian               | Italiano         |
 | `ja`    | Japanese              | 日本語              |
 | `ko`    | Korean                | 한국어              |
 | `zh`    | Chinese (Simplified)  | 简体中文             |
@@ -267,15 +267,15 @@ chloros-cli language ja
 | `ru`    | Russian               | Русский          |
 | `nl`    | Dutch                 | Nederlands       |
 | `ar`    | Arabic                | العربية          |
-| `pl`    | Polish                | Polski           |
+| `làm ơn`    | Polish                | Polski           |
 | `tr`    | Turkish               | Türkçe           |
-| `hi`    | Hindi                 | हिंदी            |
+| `xin chào`    | Hindi                 | हिंदी            |
 | `id`    | Indonesian            | Bahasa Indonesia |
 | `vi`    | Vietnamese            | Tiếng Việt       |
 | `th`    | Thai                  | ไทย              |
 | `sv`    | Swedish               | Svenska          |
 | `da`    | Danish                | Dansk            |
-| `no`    | Norwegian             | Norsk            |
+| `không`    | Norwegian             | Norsk            |
 | `fi`    | Finnish               | Suomi            |
 | `el`    | Greek                 | Ελληνικά         |
 | `cs`    | Czech                 | Čeština          |
@@ -287,14 +287,14 @@ chloros-cli language ja
 | `ms`    | Malay                 | Bahasa Melayu    |
 | `sk`    | Slovak                | Slovenčina       |
 | `bg`    | Bulgarian             | Български        |
-| `hr`    | Croatian              | Hrvatski         |
+| `giờ`    | Croatian              | Hrvatski         |
 | `lt`    | Lithuanian            | Lietuvių         |
 | `lv`    | Latvian               | Latviešu         |
-| `et`    | Estonian              | Eesti            |
+| `và`    | Estonian              | Eesti            |
 | `sl`    | Slovenian             | Slovenščina      |
 
 {% hint style="success" %}
-**Automatic Persistence**: Your language preference is saved to `~/.chloros/cli_language.json` and persists across all sessions.
+**Automatic Persistence**: Your language preference is saved to `~/.chloros/cli_lingu.json` and persists across all sessions.
 {% endhint %}
 
 ***
@@ -361,7 +361,7 @@ These options apply to all commands:
 | --------------- | ------- | ------------- | ------------------------------------------------ |
 | `--backend-exe` | Path    | Auto-detected | Path to backend executable                       |
 | `--port`        | Integer | 5000          | Backend API port number                          |
-| `--restart`     | Flag    | -             | Force restart backend (kills existing processes) |
+| `--khởi động lại`     | Flag    | -             | Force restart backend (kills existing processes) |
 | `--version`     | Flag    | -             | Show version information and exit                |
 | `--help`        | Flag    | -             | Show help information and exit                   |
 

@@ -1,392 +1,392 @@
-# Monitoring the Processing
+# Giám sát quá trình xử lý
 
-Once processing has started, Chloros provides several ways to monitor progress, check for issues, and understand what's happening with your dataset. This page explains how to track your processing and interpret the information Chloros provides.
+Sau khi quá trình xử lý bắt đầu, Chloros cung cấp một số cách để theo dõi tiến trình, kiểm tra sự cố và hiểu điều gì đang xảy ra với tập dữ liệu của bạn. Trang này giải thích cách theo dõi quá trình xử lý của bạn và diễn giải thông tin mà Chloros cung cấp.
 
-## Progress Bar Overview
+## Tổng quan về thanh tiến trình
 
-The progress bar in the top header shows real-time processing status and completion percentage.
+Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử lý theo thời gian thực và phần trăm hoàn thành.
 
-### Free Mode Progress Bar
+### Thanh tiến trình chế độ miễn phí
 
-For users without Chloros+ license:
+Đối với người dùng không có giấy phép Chloros+:
 
-**2-Stage Progress Display:**
+**Hiển thị tiến độ 2 giai đoạn:**
 
-1. **Target Detect** - Finding calibration targets in images
-2. **Processing** - Applying corrections and exporting
+1. **Phát hiện mục tiêu** - Tìm mục tiêu hiệu chuẩn trong hình ảnh
+2. **Đang xử lý** - Áp dụng chỉnh sửa và xuất
 
-**Progress bar shows:**
+**Thanh tiến trình hiển thị:**
 
-* Overall completion percentage (0-100%)
-* Current stage name
-* Simple horizontal bar visualization
+* Tỷ lệ hoàn thành tổng thể (0-100%)
+* Nghệ danh hiện tại
+* Trực quan hóa thanh ngang đơn giản
 
-### Chloros+ Progress Bar
+### Chloros+ Thanh tiến trình
 
-For users with Chloros+ license:
+Đối với người dùng có giấy phép Chloros+:
 
-**4-Stage Progress Display:**
+**Hiển thị tiến độ 4 giai đoạn:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining images and preparing pipeline
-3. **Calibrating** - Applying vignette and reflectance corrections
-4. **Exporting** - Saving processed files
+1. **Phát hiện** - Tìm mục tiêu hiệu chuẩn
+2. **Phân tích** - Kiểm tra hình ảnh và chuẩn bị đường dẫn
+3. **Hiệu chỉnh** - Áp dụng hiệu chỉnh họa tiết và độ phản chiếu
+4. **Xuất** - Lưu các tập tin đã xử lý
 
-**Interactive Features:**
+**Tính năng tương tác:**
 
-* **Hover over** progress bar to see expanded 4-stage panel
-* **Click** progress bar to freeze/pin the expanded panel
-* **Click again** to unfreeze and auto-hide on mouse leave
-* Each stage shows individual progress (0-100%)
-
-***
-
-## Understanding Each Processing Stage
-
-### Stage 1: Detecting (Target Detection)
-
-**What's happening:**
-
-* Chloros scans images marked with Target checkbox
-* Computer vision algorithms identify the 4 calibration panels
-* Reflectance values extracted from each panel
-* Target timestamps recorded for proper calibration scheduling
-
-**Duration:**
-
-* With marked targets: 10-60 seconds
-* Without marked targets: 5-30+ minutes (scans all images)
-
-**Progress indicator:**
-
-* Detecting: 0% → 100%
-* Number of images scanned
-* Targets found count
-
-**What to watch for:**
-
-* Should complete quickly if targets properly marked
-* If taking too long, targets may not be marked
-* Check Debug Log for "Target found" messages
-
-### Stage 2: Analyzing
-
-**What's happening:**
-
-* Reading image EXIF metadata (timestamps, exposure settings)
-* Determining calibration strategy based on target timestamps
-* Organizing image processing queue
-* Preparing parallel processing workers (Chloros+ only)
-
-**Duration:** 5-30 seconds
-
-**Progress indicator:**
-
-* Analyzing: 0% → 100%
-* Fast stage, usually completes quickly
-
-**What to watch for:**
-
-* Should progress steadily without pauses
-* Warnings about missing metadata will appear in Debug Log
-
-### Stage 3: Calibrating
-
-**What's happening:**
-
-* **Debayering**: Converting RAW Bayer pattern to 3 channels
-* **Vignette correction**: Removing lens edge darkening
-* **Reflectance calibration**: Normalizing with target values
-* **Index calculation**: Computing multispectral indices
-* Processing each image through the full pipeline
-
-**Duration:** Majority of total processing time (60-80%)
-
-**Progress indicator:**
-
-* Calibrating: 0% → 100%
-* Current image being processed
-* Images completed / Total images
-
-**Processing behavior:**
-
-* **Free mode**: Processes one image at a time sequentially
-* **Chloros+ mode**: Processes up to 16 images simultaneously
-* **GPU acceleration**: Significantly speeds up this stage
-
-**What to watch for:**
-
-* Steady progress through image count
-* Check Debug Log for per-image completion messages
-* Warnings about image quality or calibration issues
-
-### Stage 4: Exporting
-
-**What's happening:**
-
-* Writing calibrated images to disk in selected format
-* Exporting multispectral index images with LUT colors
-* Creating camera model subfolders
-* Preserving original filenames with appropriate suffixes
-
-**Duration:** 10-20% of total processing time
-
-**Progress indicator:**
-
-* Exporting: 0% → 100%
-* Files being written
-* Export format and destination
-
-**What to watch for:**
-
-* Disk space warnings
-* File write errors
-* Completion of all configured outputs
+* **Di chuột qua** thanh tiến trình để xem bảng 4 giai đoạn mở rộng
+* **Nhấp vào** thanh tiến trình để cố định/ghim bảng mở rộng
+* **Nhấp lại** để giải phóng và tự động ẩn khi rời chuột
+* Mỗi giai đoạn cho thấy sự tiến bộ của từng cá nhân (0-100%)
 
 ***
 
-## Debug Log Tab
+## Tìm hiểu từng giai đoạn xử lý
 
-The Debug Log provides detailed information about processing progress and any issues encountered.
+### Giai đoạn 1: Phát hiện (Phát hiện mục tiêu)
 
-### Accessing the Debug Log
+**Chuyện gì đang xảy ra vậy:**
 
-1. Click the **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> icon in the left sidebar
-2. Log panel opens showing real-time processing messages
-3. Auto-scrolls to show latest messages
+* Chloros quét hình ảnh được đánh dấu bằng hộp kiểm Target
+* Thuật toán thị giác máy tính xác định 4 bảng hiệu chuẩn
+* Giá trị phản xạ được trích xuất từ ​​​​mỗi bảng
+* Dấu thời gian mục tiêu được ghi lại để lập lịch hiệu chuẩn phù hợp
 
-### Understanding Log Messages
+**Khoảng thời gian:**
 
-#### Information Messages (White/Gray)
+* Với mục tiêu được đánh dấu: 10-60 giây
+* Không có mục tiêu được đánh dấu: 5-30+ phút (quét tất cả hình ảnh)
 
-Normal processing updates:
+**Chỉ báo tiến độ:**
+
+* Phát hiện: 0% → 100%
+* Số lượng hình ảnh được quét
+* Số mục tiêu được tìm thấy
+
+**Những gì cần xem:**
+
+* Nên hoàn thành nhanh nếu mục tiêu được đánh dấu đúng
+* Nếu mất quá nhiều thời gian, mục tiêu có thể không được đánh dấu
+* Kiểm tra Nhật ký gỡ lỗi để biết thông báo "Đã tìm thấy mục tiêu"
+
+### Giai đoạn 2: Phân tích
+
+**Chuyện gì đang xảy ra vậy:**
+
+* Đọc siêu dữ liệu EXIF ​​​​của hình ảnh (dấu thời gian, cài đặt phơi sáng)
+* Xác định chiến lược hiệu chỉnh dựa trên dấu thời gian mục tiêu
+* Tổ chức hàng đợi xử lý ảnh
+* Chuẩn bị công nhân xử lý song song (chỉ Cloros+)
+
+**Thời lượng:** 5-30 giây
+
+**Chỉ báo tiến độ:**
+
+* Phân tích: 0% → 100%
+* Giai đoạn nhanh, thường kết thúc nhanh
+
+**Những gì cần xem:**
+
+* Nên tiến triển đều đặn không ngừng nghỉ
+* Cảnh báo về siêu dữ liệu bị thiếu sẽ xuất hiện trong Nhật ký gỡ lỗi
+
+### Giai đoạn 3: Hiệu chỉnh
+
+**Chuyện gì đang xảy ra vậy:**
+
+* **Debayering**: Chuyển đổi mẫu RAW Bayer thành 3 kênh
+* **Chỉnh họa tiết**: Loại bỏ vết tối ở cạnh ống kính
+* **Hiệu chỉnh phản xạ**: Chuẩn hóa với giá trị mục tiêu
+* **Tính toán chỉ số**: Tính toán các chỉ số đa phổ
+* Xử lý từng hình ảnh thông qua đường ống đầy đủ
+
+**Thời lượng:** Phần lớn thời gian xử lý (60-80%)
+
+**Chỉ báo tiến độ:**
+
+* Hiệu chuẩn: 0% → 100%
+* Hình ảnh hiện tại đang được xử lý
+* Hình ảnh hoàn thành / Tổng số hình ảnh
+
+**Hành vi xử lý:**
+
+* **Chế độ miễn phí**: Xử lý tuần tự từng hình ảnh
+* **Chế độ Cloros+**: Xử lý đồng thời tối đa 16 hình ảnh
+* **Tăng tốc GPU**: Tăng tốc đáng kể giai đoạn này
+
+**Những gì cần xem:**
+
+* Tiến bộ ổn định thông qua số lượng hình ảnh
+* Kiểm tra Nhật ký gỡ lỗi để biết thông báo hoàn thành trên mỗi hình ảnh
+* Cảnh báo về vấn đề chất lượng hình ảnh hoặc hiệu chuẩn
+
+### Giai đoạn 4: Xuất khẩu
+
+**Chuyện gì đang xảy ra vậy:**
+
+* Ghi hình ảnh đã hiệu chỉnh vào đĩa ở định dạng đã chọn
+* Xuất hình ảnh chỉ mục đa phổ với màu LUT
+* Tạo thư mục con mô hình máy ảnh
+* Giữ nguyên tên tập tin gốc với hậu tố thích hợp
+
+**Thời lượng:** 10-20% tổng thời gian xử lý
+
+**Chỉ báo tiến độ:**
+
+* Xuất: 0% → 100%
+* Tập tin đang được ghi
+* Định dạng xuất và đích
+
+**Những gì cần xem:**
+
+* Cảnh báo dung lượng ổ đĩa
+* Lỗi ghi tập tin
+* Hoàn thành tất cả các đầu ra được cấu hình
+
+***
+
+## Tab nhật ký gỡ lỗi
+
+Nhật ký gỡ lỗi cung cấp thông tin chi tiết về tiến trình xử lý và mọi vấn đề gặp phải.
+
+### Truy cập nhật ký gỡ lỗi
+
+1. Nhấp vào biểu tượng **Nhật ký gỡ lỗi** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> ở thanh bên trái
+2. Bảng nhật ký mở ra hiển thị các thông báo xử lý theo thời gian thực
+3. Tự động cuộn để hiển thị tin nhắn mới nhất
+
+### Hiểu thông điệp tường trình
+
+#### Tin nhắn thông tin (Trắng/Xám)
+
+Cập nhật xử lý thông thường:
 
 ```
-[INFO] Processing started
-[INFO] Target detected in IMG_0015.RAW - 4 panels found
-[INFO] Calibrating IMG_0234.RAW
-[INFO] Exported NDVI image: IMG_0234_NDVI.tif
-[INFO] Processing complete
+[INFO] Đã bắt đầu xử lý
+[INFO] Đã phát hiện mục tiêu trong IMG_0015.RAW - tìm thấy 4 bảng
+[INFO] Đang hiệu chỉnh IMG_0234.RAW
+[INFO] Hình ảnh NDVI đã xuất: IMG_0234_NDVI.tif
+[THÔNG TIN] Quá trình xử lý hoàn tất
 ```
 
-#### Warning Messages (Yellow)
+#### Thông báo cảnh báo (Vàng)
 
-Non-critical issues that don't stop processing:
-
-```
-[WARN] No GPS data found in IMG_0145.RAW
-[WARN] Target image timestamp gap > 30 minutes
-[WARN] Low contrast in calibration panel - results may vary
-```
-
-**Action:** Review warnings after processing, but don't interrupt
-
-#### Error Messages (Red)
-
-Critical issues that may cause processing to fail:
+Các sự cố không nghiêm trọng không ngừng xử lý:
 
 ```
-[ERROR] Cannot write file - disk full
-[ERROR] Corrupted image file: IMG_0299.RAW
-[ERROR] No targets detected - enable reflectance calibration or mark target images
+[CẢNH BÁO] Không tìm thấy dữ liệu GPS trong IMG_0145.RAW
+[CẢNH BÁO] Khoảng cách dấu thời gian của hình ảnh mục tiêu > 30 phút
+[CẢNH BÁO] Độ tương phản thấp trong bảng hiệu chuẩn - kết quả có thể thay đổi
 ```
 
-**Action:** Stop processing, resolve error, restart
+**Hành động:** Xem lại cảnh báo sau khi xử lý nhưng không làm gián đoạn
 
-### Common Log Messages
+#### Thông Báo Lỗi (Đỏ)
 
-| Message                          | Meaning                                | Action Needed                                         |
+Các vấn đề nghiêm trọng có thể khiến quá trình xử lý không thành công:
+
+```
+[ERROR] Không thể ghi tập tin - đĩa đầy
+[ERROR] Tệp hình ảnh bị hỏng: IMG_0299.RAW
+[LỖI] Không phát hiện thấy mục tiêu nào - bật hiệu chỉnh độ phản xạ hoặc đánh dấu hình ảnh mục tiêu
+```
+
+**Hành động:** Dừng xử lý, giải quyết lỗi, khởi động lại
+
+### Thông báo nhật ký chung
+
+| Tin nhắn | Ý nghĩa | Cần hành động |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Target detected in \[filename]" | Calibration target found successfully  | None - normal                                         |
-| "Processing image X of Y"        | Current progress update                | None - normal                                         |
-| "No targets found"               | No calibration targets detected        | Mark target images or disable reflectance calibration |
-| "Insufficient disk space"        | Not enough storage for output          | Free up disk space                                    |
-| "Skipping corrupted file"        | Image file is damaged                  | Re-copy file from SD card                             |
-| "PPK data applied"               | GPS corrections from .daq file applied | None - normal                                         |
+| "Đã phát hiện mục tiêu trong \[tên tệp]" | Đã tìm thấy mục tiêu hiệu chỉnh thành công | Không - bình thường |
+| "Xử lý ảnh X của Y" | Cập nhật tiến độ hiện tại | Không - bình thường |
+| "Không tìm thấy mục tiêu" | Không phát hiện thấy mục tiêu hiệu chuẩn | Đánh dấu hình ảnh mục tiêu hoặc tắt hiệu chỉnh độ phản xạ |
+| "Không đủ dung lượng đĩa" | Không đủ dung lượng lưu trữ cho đầu ra | Giải phóng dung lượng ổ đĩa |
+| "Bỏ qua tập tin bị hỏng" | File ảnh bị hỏng | Sao chép lại tập tin từ thẻ SD |
+| "Dữ liệu PPK được áp dụng" | Đã áp dụng chỉnh sửa GPS từ tệp .daq | Không - bình thường |
 
-### Copying Log Data
+### Sao chép dữ liệu nhật ký
 
-To copy log for troubleshooting or support:
+Để sao chép nhật ký nhằm khắc phục sự cố hoặc hỗ trợ:
 
-1. Open Debug Log panel
-2. Click **"Copy Log"** button (or right-click → Select All)
-3. Paste into text file or email
-4. Send to MAPIR support if needed
-
-***
-
-## System Resource Monitoring
-
-### CPU Usage
-
-**Free Mode:**
-
-* 1 CPU core at \~100%
-* Other cores idle or available
-* System remains responsive
-
-**Chloros+ Parallel Mode:**
-
-* Multiple cores at 80-100% (up to 16 cores)
-* High overall CPU utilization
-* System may feel less responsive
-
-**To monitor:**
-
-* Windows Task Manager (Ctrl+Shift+Esc)
-* Performance tab → CPU section
-* Look for "Chloros" or "chloros-backend" processes
-
-### Memory (RAM) Usage
-
-**Typical usage:**
-
-* Small projects (< 100 images): 2-4 GB
-* Medium projects (100-500 images): 4-8 GB
-* Large projects (500+ images): 8-16 GB
-* Chloros+ parallel mode uses more RAM
-
-**If memory is low:**
-
-* Process smaller batches
-* Close other applications
-* Upgrade RAM if regularly processing large datasets
-
-### GPU Usage (Chloros+ with CUDA)
-
-When GPU acceleration is enabled:
-
-* NVIDIA GPU shows high utilization (60-90%)
-* VRAM usage increases (requires 4GB+ VRAM)
-* Calibrating stage is significantly faster
-
-**To monitor:**
-
-* NVIDIA System Tray icon
-* Task Manager → Performance → GPU
-* GPU-Z or similar monitoring tool
-
-### Disk I/O
-
-**What to expect:**
-
-* High disk read during Analyzing stage
-* High disk write during Exporting stage
-* SSD significantly faster than HDD
-
-**Performance tip:**
-
-* Use SSD for project folder when possible
-* Avoid network drives for large datasets
-* Ensure disk isn't near capacity (affects write speed)
+1. Mở bảng Nhật ký gỡ lỗi
+2. Nhấp vào nút **"Sao chép nhật ký"** (hoặc nhấp chuột phải → Chọn tất cả)
+3. Dán vào file văn bản hoặc email
+4. Gửi tới bộ phận hỗ trợ MAPIR nếu cần
 
 ***
 
-## Detecting Problems During Processing
+## Giám sát tài nguyên hệ thống
 
-### Warning Signs
+### Cách sử dụng CPU
 
-**Progress stalls (no change for 5+ minutes):**
+**Chế độ miễn phí:**
 
-* Check Debug Log for errors
-* Verify disk space available
-* Check Task Manager to ensure Chloros is running
+* 1 lõi CPU ở mức \~100%
+* Các lõi khác nhàn rỗi hoặc có sẵn
+* Hệ thống vẫn đáp ứng
 
-**Error messages appear frequently:**
+**Chloros+ Chế độ song song:**
 
-* Stop processing and review errors
-* Common causes: disk space, corrupted files, memory issues
-* See Troubleshooting section below
+* Nhiều lõi ở mức 80-100% (tối đa 16 lõi)
+* Mức sử dụng CPU tổng thể cao
+* Hệ thống có thể cảm thấy kém phản hồi hơn
 
-**System becomes unresponsive:**
+**Để theo dõi:**
 
-* Chloros+ parallel mode using too many resources
-* Consider reducing concurrent tasks or upgrading hardware
-* Free mode is less resource-intensive
+* Trình quản lý tác vụ Windows (Ctrl+Shift+Esc)
+* Tab hiệu suất → phần CPU
+* Tìm kiếm các quy trình "Chloros" hoặc "chloros-backend"
 
-### When to Stop Processing
+### Cách sử dụng bộ nhớ (RAM)
 
-Stop processing if you see:
+**Cách sử dụng điển hình:**
 
-* ❌ "Disk full" or "Cannot write file" errors
-* ❌ Repeated image file corruption errors
-* ❌ System completely frozen (not responding)
-* ❌ Realized wrong settings were configured
-* ❌ Wrong images imported
+* Dự án nhỏ (< 100 hình ảnh): 2-4 GB
+* Dự án trung bình (100-500 hình ảnh): 4-8 GB
+* Dự án lớn (500+ hình ảnh): 8-16 GB
+* Chế độ song song Chloros+ sử dụng nhiều RAM hơn
 
-**How to stop:**
+**Nếu bộ nhớ sắp hết:**
 
-1. Click **Stop/Cancel button** (replaces Start button)
-2. Processing halts, progress is lost
-3. Fix issues and restart from beginning
+* Xử lý các lô nhỏ hơn
+* Đóng các ứng dụng khác
+* Nâng cấp RAM nếu thường xuyên xử lý tập dữ liệu lớn
 
-***
+### Cách sử dụng GPU (Chloros+ với CUDA)
 
-## Troubleshooting During Processing
+Khi tính năng tăng tốc GPU được bật:
 
-### Processing is Very Slow
+* GPU NVIDIA cho thấy mức sử dụng cao (60-90%)
+* Mức sử dụng VRAM tăng lên (yêu cầu 4GB+ VRAM)
+* Giai đoạn hiệu chỉnh nhanh hơn đáng kể
 
-**Possible causes:**
+**Để theo dõi:**
 
-* Unmarked target images (scanning all images)
-* HDD instead of SSD storage
-* Insufficient system resources
-* Many indices configured
-* Network drive access
+* Biểu tượng Khay hệ thống NVIDIA
+* Trình quản lý tác vụ → Hiệu suất → GPU
+* GPU-Z hoặc công cụ giám sát tương tự
 
-**Solutions:**
+### Đĩa I/O
 
-1. If just started and in Detecting stage: Cancel, mark targets, restart
-2. For future: Use SSD, reduce indices, upgrade hardware
-3. Consider CLI for batch processing large datasets
+**Điều gì sẽ xảy ra:**
 
-### "Disk Space" Warnings
+* Tốc độ đọc đĩa cao trong giai đoạn Phân tích
+* Ghi đĩa cao trong giai đoạn Xuất
+* SSD nhanh hơn đáng kể so với HDD
 
-**Solutions:**
+**Mẹo về hiệu suất:**
 
-1. Free up disk space immediately
-2. Move project to drive with more space
-3. Reduce number of indices to export
-4. Use JPG format instead of TIFF (smaller files)
-
-### Frequent "Corrupted File" Messages
-
-**Solutions:**
-
-1. Re-copy images from SD card to ensure integrity
-2. Test SD card for errors
-3. Remove corrupted files from project
-4. Continue processing remaining images
-
-### System Overheating / Throttling
-
-**Solutions:**
-
-1. Ensure adequate ventilation
-2. Clean dust from computer vents
-3. Reduce processing load (use Free mode instead of Chloros+)
-4. Process during cooler times of day
+* Sử dụng SSD cho thư mục dự án khi có thể
+* Tránh các ổ đĩa mạng cho các tập dữ liệu lớn
+* Đảm bảo đĩa không quá dung lượng (ảnh hưởng đến tốc độ ghi)
 
 ***
 
-## Processing Complete Notification
+## Phát hiện sự cố trong quá trình xử lý
 
-When processing finishes:
+### Dấu hiệu cảnh báo
 
-* Progress bar reaches 100%
-* **"Processing Complete"** message appears in Debug Log
-* Start button becomes enabled again
-* All output files are in camera model subfolder
+**Tiến trình bị đình trệ (không thay đổi trong hơn 5 phút):**
+
+* Kiểm tra nhật ký gỡ lỗi để tìm lỗi
+* Xác minh dung lượng đĩa trống
+* Kiểm tra Trình quản lý tác vụ để đảm bảo Chloros đang chạy
+
+**Thông báo lỗi xuất hiện thường xuyên:**
+
+* Dừng xử lý và xem xét lỗi
+* Nguyên nhân thường gặp: dung lượng ổ đĩa, file bị hỏng, vấn đề về bộ nhớ
+* Xem phần Khắc phục sự cố bên dưới
+
+**Hệ thống không phản hồi:**
+
+* Chế độ song song Chloros+ sử dụng quá nhiều tài nguyên
+* Cân nhắc giảm bớt các tác vụ đồng thời hoặc nâng cấp phần cứng
+* Chế độ miễn phí ít tốn tài nguyên hơn
+
+### Khi nào nên ngừng xử lý
+
+Dừng xử lý nếu bạn thấy:
+
+* ❌ Lỗi "Đĩa đầy" hoặc "Không thể ghi tệp"
+* ❌ Lỗi hỏng file ảnh lặp đi lặp lại
+* ❌ Hệ thống bị đóng băng hoàn toàn (không phản hồi)
+* ❌ Nhận ra cài đặt sai đã được định cấu hình
+* ❌ Nhập sai hình ảnh
+
+**Cách dừng:**
+
+1. Nhấp vào **Nút Dừng/Hủy** (thay thế nút Bắt đầu)
+2. Quá trình xử lý bị dừng, tiến trình bị mất
+3. Khắc phục sự cố và khởi động lại từ đầu
 
 ***
 
-## Next Steps
+## Khắc phục sự cố trong quá trình xử lý
 
-Once processing completes:
+### Quá trình xử lý rất chậm
 
-1. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
-2. **Check output folder** - Verify all files exported correctly
-3. **Review Debug Log** - Check for any warnings or errors
-4. **Preview processed images** - Use Image Viewer or external software
+**Nguyên nhân có thể:**
 
-For information about reviewing and using your processed results, see [Finishing the Processing](finishing-the-processing.md).
+* Hình ảnh mục tiêu không được đánh dấu (quét tất cả hình ảnh)
+* HDD thay vì lưu trữ SSD
+* Tài nguyên hệ thống không đủ
+* Nhiều chỉ số được cấu hình
+* Truy cập ổ đĩa mạng
+
+**Giải pháp:**
+
+1. Nếu mới bắt đầu và đang trong giai đoạn Phát hiện: Hủy, đánh dấu mục tiêu, khởi động lại
+2. Tương lai: Sử dụng SSD, giảm chỉ số, nâng cấp phần cứng
+3. Cân nhắc CLI để xử lý hàng loạt tập dữ liệu lớn
+
+### Cảnh báo "Dung lượng ổ đĩa"
+
+**Giải pháp:**
+
+1. Giải phóng dung lượng ổ đĩa ngay lập tức
+2. Di chuyển dự án sang ổ đĩa có nhiều không gian hơn
+3. Giảm số lượng chỉ số cần xuất
+4. Sử dụng định dạng JPG thay vì TIFF (tệp nhỏ hơn)
+
+### Thông báo "Tệp bị hỏng" thường xuyên
+
+**Giải pháp:**
+
+1. Sao chép lại hình ảnh từ thẻ SD để đảm bảo tính toàn vẹn
+2. Kiểm tra lỗi thẻ SD
+3. Xóa các tập tin bị hỏng khỏi dự án
+4. Tiếp tục xử lý các ảnh còn lại
+
+### Hệ thống quá nóng / Giảm ga
+
+**Giải pháp:**
+
+1. Đảm bảo thông gió đầy đủ
+2. Làm sạch bụi ở lỗ thông hơi máy tính
+3. Giảm tải xử lý (sử dụng chế độ Free thay vì Chloros+)
+4. Xử lý vào thời điểm mát mẻ trong ngày
+
+***
+
+## Đang xử lý thông báo hoàn chỉnh
+
+Khi quá trình xử lý kết thúc:
+
+* Thanh tiến độ đạt 100%
+* **Thông báo "Đang xử lý hoàn tất"** xuất hiện trong Nhật ký gỡ lỗi
+* Nút bắt đầu được bật lại
+* Tất cả các tập tin đầu ra đều nằm trong thư mục con của mẫu máy ảnh
+
+***
+
+## Các bước tiếp theo
+
+Sau khi quá trình xử lý hoàn tất:
+
+1. **Xem lại kết quả** - Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
+2. **Kiểm tra thư mục đầu ra** - Xác minh tất cả các tệp được xuất chính xác
+3. **Xem lại nhật ký gỡ lỗi** - Kiểm tra mọi cảnh báo hoặc lỗi
+4. **Xem trước hình ảnh đã xử lý** - Sử dụng Image Viewer hoặc phần mềm bên ngoài
+
+Để biết thông tin về việc xem xét và sử dụng kết quả đã xử lý của bạn, hãy xem [Hoàn tất quá trình xử lý](finishing-the-processing.md).

@@ -1,247 +1,247 @@
-# Opening an Image Full Screen
+# Mở một hình ảnh toàn màn hình
 
-The Chloros Image Viewer provides a dedicated full-screen interface for viewing, analyzing, and manipulating your multispectral images. Whether viewing original images or processed outputs, the Image Viewer offers powerful tools for inspection and analysis.
+Trình xem ảnh Chloros cung cấp giao diện toàn màn hình chuyên dụng để xem, phân tích và thao tác với các hình ảnh đa phổ của bạn. Cho dù xem hình ảnh gốc hay kết quả đầu ra đã được xử lý, Trình xem Hình ảnh đều cung cấp các công cụ mạnh mẽ để kiểm tra và phân tích.
 
-## Accessing the Image Viewer
+## Truy cập Trình xem ảnh
 
-### From the File Browser
+### Từ Trình duyệt Tệp
 
-The most common way to open an image in the Image Viewer:
+Cách phổ biến nhất để mở hình ảnh trong Trình xem ảnh:
 
-1. Ensure you're in the **File Browser** tab <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Click any **image thumbnail** in the image grid
-3. The image opens in the **main preview area** (center of screen)
-4. The image is now loaded and ready for full-screen viewing
+1. Đảm bảo bạn đang ở trong tab **Trình duyệt tệp** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Nhấp vào **hình thu nhỏ** bất kỳ của hình ảnh trong lưới hình ảnh
+3. Hình ảnh mở ra trong **khu vực xem trước chính** (giữa màn hình)
+4. Hình ảnh hiện đã được tải và sẵn sàng để xem toàn màn hình
 
-### Opening the Image Viewer Tab
+### Mở tab Trình xem ảnh
 
-Once an image is loaded in the preview area:
+Sau khi tải hình ảnh vào khu vực xem trước:
 
-1. Click the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> icon in the left sidebar
-2. The Image Viewer tab opens, displaying the selected image full-screen
-3. Advanced viewing and analysis tools become available in the left sidebar
-
-***
-
-## Image Viewer Interface Overview
-
-### Main Display Area
-
-The largest portion of the screen shows your image:
-
-* **Full resolution**: Images displayed at native resolution
-* **Zoomable**: Use controls or mouse wheel to zoom
-* **Pannable**: Click and drag to move around when zoomed
-* **Aspect ratio maintained**: Images scale proportionally
+1. Nhấp vào biểu tượng **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
+2. Tab Trình xem Hình ảnh mở ra, hiển thị toàn màn hình hình ảnh đã chọn
+3. Các công cụ xem và phân tích nâng cao có sẵn ở thanh bên trái
 
 ***
 
-## Viewing Options
+## Tổng quan về giao diện trình xem hình ảnh
 
-### Basic Image Navigation
+### Khu vực hiển thị chính
 
-#### Browse Through Images
+Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 
-Navigate through your image set using keyboard shortcuts or buttons:
-
-* **Next image**: Click → button or press **→** (Right Arrow) key
-* **Previous image**: Click ← button or press **←** (Left Arrow) key
-* **Jump to specific image**: Return to File Browser and click desired thumbnail
-
-#### Zoom Controls
-
-Adjust magnification to inspect image details:
-
-**Zoom In:**
-
-* Click **+** (Plus) button
-* Press **+** or **=** key
-* Scroll mouse wheel **up**
-
-**Zoom Out:**
-
-* Click **−** (Minus) button
-* Press **−** (Minus) key
-* Scroll mouse wheel **down**
-
-**Fit to Screen:**
-
-* Click **↔** (Fit) button
-* Press **0** (Zero) key
-* Double-click on image
-
-#### Pan When Zoomed
-
-When zoomed in beyond screen size:
-
-1. Move mouse cursor over image
-2. Click and **hold left mouse button**
-3. **Drag** to move image around
-4. Release to stop panning
-
-**Alternative**: Use arrow keys to pan in small increments
+* **Độ phân giải đầy đủ**: Hình ảnh được hiển thị ở độ phân giải gốc
+* **Có thể thu phóng**: Sử dụng điều khiển hoặc con lăn chuột để thu phóng
+* **Có thể xoay**: Nhấp và kéo để di chuyển xung quanh khi được phóng to
+* **Tỷ lệ khung hình được duy trì**: Tỷ lệ hình ảnh theo tỷ lệ
 
 ***
 
-## Pixel Value Inspection
+## Tùy chọn xem
 
-### Viewing Pixel Values at Cursor
+### Điều hướng hình ảnh cơ bản
 
-As you move your mouse cursor over the image, pixel values display in real-time:
+#### Duyệt qua hình ảnh
 
-**Value display location:**
+Điều hướng qua bộ hình ảnh của bạn bằng phím tắt hoặc nút:
 
-* **Floating number and red line in right side index LUT gradient legend**
-* **When zoomed in further, floating value near cursor and highlighted pixel**
-* Shows values for pixel **under cursor or highlighted**
-* Updates as you move mouse
+* **Hình ảnh tiếp theo**: Nhấp vào nút → hoặc nhấn phím **→** (Mũi tên phải)
+* **Hình trước**: Bấm vào nút ← hoặc nhấn phím **←** (Mũi tên trái)
+* **Chuyển đến hình ảnh cụ thể**: Quay lại Trình duyệt Tệp và nhấp vào hình thu nhỏ mong muốn
 
-***
+#### Điều khiển thu phóng
 
-## Image Types You Can View
+Điều chỉnh độ phóng đại để kiểm tra chi tiết hình ảnh:
 
-### Original Images (Pre-Processing)
+**Phóng to:**
 
-**RAW + JPG images from camera:**
+* Nhấp vào nút ****** (Cộng)
+* Nhấn phím **++ hoặc **=**
+* Cuộn con lăn chuột **lên**
 
-* Display RAW data as previewed
-* Show original, uncorrected values
-* Useful for checking image quality before processing
+**Thu nhỏ:**
 
-### Calibrated Reflectance Images
+* Nhấp vào nút **−** (Trừ)
+* Nhấn phím **−** (Dấu trừ)
+* Cuộn con lăn chuột **xuống**
 
-**After processing:**
+**Vừa với màn hình:**
 
-* Vignette corrected
-* Reflectance calibrated
-* Multi-band TIFF (Red, Green, NIR, etc.)
-* Scientific data ready for analysis
+* Nhấp vào nút **↔** (Vừa vặn)
+* Nhấn phím **0** (Không)
+* Click đúp vào hình ảnh
 
-### Index Images
+#### Xoay khi phóng to
 
-**NDVI, NDRE, GNDVI, etc. (\_NDVI.tif files):**
+Khi phóng to ra ngoài kích thước màn hình:
 
-* Single-band grayscale images
-* Pixel values represent index calculation results
-* Range typically -1 to +1 for normalized indices
-* Can apply color LUTs for visualization
+1. Di chuyển con trỏ chuột lên hình ảnh
+2. Nhấp và **giữ chuột trái**
+3. **Kéo** để di chuyển hình ảnh xung quanh
+4. Thả tay ra để dừng lia máy
 
-***
-
-## Index and LUT Application
-
-Apply multispectral indices and color Look-Up Tables:
-
-1. Locate **Index/LUT Sandbox** in **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
-2. Select vegetation index (NDVI, NDRE, etc.)
-3. Select multispectral formula, or create your own custom one (Chloros+ only)
-4. Apply color LUT gradient for visualization
-5. Adjust value ranges and thresholds
-
-See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
+**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ
 
 ***
 
-## Keyboard Shortcuts
+## Kiểm tra giá trị pixel
 
-### Navigation
+### Xem giá trị pixel tại con trỏ
 
-* **→** (Right Arrow): Next image
-* **←** (Left Arrow): Previous image
-* **Home**: First image in list
-* **End**: Last image in list
+Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel sẽ hiển thị theo thời gian thực:
 
-### Zoom
+**Vị trí hiển thị giá trị:**
 
-* **+** or **=**: Zoom in
-* **−**: Zoom out
-* **0** (Zero): Fit to screen
-* **Mouse Wheel**: Zoom in/out
-
-### View Controls
-
-* **P**: Toggle pixel percent mode
-* **L**: Toggle layers panel
-* **Esc**: Close full-screen or return to File Browser
-
-### Other
-
-* **Ctrl+S**: Save current image
-* **F**: Full-screen mode (if available)
+* **Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT**
+* **Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu**
+* Hiển thị giá trị cho pixel **dưới con trỏ hoặc được đánh dấu**
+* Cập nhật khi bạn di chuyển chuột
 
 ***
 
-### Verifying Index Calculations
+## Loại hình ảnh bạn có thể xem
 
-Check that indices calculated correctly:
+### Ảnh gốc (Xử lý trước)
 
-1. Open NDVI or other index image
-2. Check vegetation areas:
-   * **NDVI**: Should show 0.4-0.9 for healthy plants
-   * **NDRE**: Higher values for vigorous growth
-   * **GNDVI**: Similar to NDVI but chlorophyll-sensitive
-3. Check non-vegetation:
-   * **Soil**: Near 0 or slightly negative
-   * **Water**: Negative values (-0.5 to 0)
+**Hình ảnh RAW + JPG từ máy ảnh:**
 
-***
+* Hiển thị dữ liệu RAW như được xem trước
+* Hiển thị giá trị gốc, chưa được sửa
+* Hữu ích cho việc kiểm tra chất lượng hình ảnh trước khi xử lý
 
-## Troubleshooting Viewing Issues
+### Hình ảnh phản chiếu đã được hiệu chỉnh
 
-### Image Won't Open
+**Sau khi xử lý:**
 
-**Possible causes:**
+* Đã sửa họa tiết
+* Hiệu chỉnh phản xạ
+* TIFF nhiều băng tần (Đỏ, Xanh lục, NIR, v.v.)
+* Dữ liệu khoa học sẵn sàng để phân tích
 
-* File corrupted during processing
-* Unsupported file format
-* Insufficient memory for large image
+### Hình ảnh chỉ mục
 
-**Solutions:**
+**NDVI, NDRE, GNDVI, v.v. (tệp \_NDVI.tif):**
 
-1. Try opening in external viewer to verify file integrity
-2. Check file format matches expected type
-3. Close other applications to free memory
-4. Try smaller/different image
-
-### Black or White Image Display
-
-**Possible causes:**
-
-* Value range outside display capability
-* 32-bit float image with unusual values
-* Index calculation error
-
-**Solutions:**
-
-1. Check pixel values - if all very low or very high, adjust display range
-2. Try opening in QGIS or similar with auto-range adjustment
-3. Check Debug Log from processing for errors
-
-### Pixel Values Seem Wrong
-
-**Possible causes:**
-
-* Viewing wrong image (original vs processed)
-* Calibration didn't apply correctly
-* Light sensor data wasn't included in input
-* Percent mode toggled incorrectly
-
-**Solutions:**
-
-1. Verify you're viewing processed output (check filename suffix)
-2. Check percent mode button state
-3. Compare with known-good images from same dataset
+* Hình ảnh thang độ xám đơn băng tần
+* Giá trị pixel biểu thị kết quả tính toán chỉ số
+* Phạm vi thường là -1 đến +1 đối với các chỉ số được chuẩn hóa
+* Có thể áp dụng LUT màu để trực quan hóa
 
 ***
 
-## Next Steps
+## Ứng dụng chỉ mục và LUT
 
-Now that you can view images full-screen:
+Áp dụng các chỉ số đa phổ và Bảng tra cứu màu sắc:
 
-* [**Image Layers**](image-layers.md) - Learn about multi-band visualization
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Apply custom indices and color mapping
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Understand available indices
+1. Xác định vị trí **Index/LUT Sandbox** trong **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> thanh bên
+2. Chọn chỉ số thực vật (NDVI, NDRE, v.v.)
+3. Chọn công thức đa phổ hoặc tạo công thức tùy chỉnh của riêng bạn (chỉ Chloros+)
+4. Áp dụng gradient LUT màu để trực quan hóa
+5. Điều chỉnh phạm vi giá trị và ngưỡng
 
-For processing workflow, see:
+Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết hướng dẫn chi tiết.
 
-* [**Processing Images (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Complete processing guide
+***
+
+## Phím tắt
+
+### Điều hướng
+
+* **→** (Mũi tên phải): Hình ảnh tiếp theo
+* **←** (Mũi tên trái): Hình ảnh trước đó
+* **Trang chủ**: Hình ảnh đầu tiên trong danh sách
+* **Kết thúc**: Hình ảnh cuối cùng trong danh sách
+
+### Phóng
+
+* ******* hoặc **=**: Phóng to
+* **−**: Thu nhỏ
+* **0** (Không): Vừa với màn hình
+* **Con lăn chuột**: Phóng to/thu nhỏ
+
+### Xem điều khiển
+
+* **P**: Chuyển đổi chế độ phần trăm pixel
+* **L**: Chuyển đổi bảng điều khiển lớp
+* **Esc**: Đóng toàn màn hình hoặc quay lại Trình duyệt tệp
+
+### Khác
+
+* **Ctrl+S**: Lưu hình ảnh hiện tại
+* **F**: Chế độ toàn màn hình (nếu có)
+
+***
+
+### Xác minh tính toán chỉ số
+
+Kiểm tra xem các chỉ số được tính toán có chính xác không:
+
+1. Mở NDVI hoặc hình ảnh chỉ mục khác
+2. Kiểm tra diện tích thảm thực vật:
+   * **NDVI**: Nên hiển thị 0,4-0,9 đối với cây khỏe mạnh
+   * **NDRE**: Giá trị cao hơn cho sự tăng trưởng mạnh mẽ
+   * **GNDVI**: Tương tự NDVI nhưng nhạy cảm với diệp lục
+3. Kiểm tra thảm thực vật:
+   * **Đất**: Gần 0 hoặc hơi âm
+   * **Nước**: Giá trị âm (-0,5 đến 0)
+
+***
+
+## Khắc phục sự cố khi xem
+
+### Ảnh không mở được
+
+**Nguyên nhân có thể:**
+
+* Tệp bị hỏng trong quá trình xử lý
+* Định dạng tệp không được hỗ trợ
+* Không đủ bộ nhớ cho hình ảnh lớn
+
+**Giải pháp:**
+
+1. Thử mở bằng trình xem bên ngoài để xác minh tính toàn vẹn của tệp
+2. Kiểm tra định dạng tệp phù hợp với loại dự kiến
+3. Đóng các ứng dụng khác để giải phóng bộ nhớ
+4. Thử hình ảnh nhỏ hơn/khác
+
+### Hiển thị hình ảnh đen hoặc trắng
+
+**Nguyên nhân có thể:**
+
+* Phạm vi giá trị ngoài khả năng hiển thị
+* Hình ảnh nổi 32-bit có giá trị bất thường
+* Lỗi tính chỉ số
+
+**Giải pháp:**
+
+1. Kiểm tra giá trị pixel - nếu tất cả rất thấp hoặc rất cao, hãy điều chỉnh phạm vi hiển thị
+2. Thử mở trong QGIS hoặc tương tự với điều chỉnh phạm vi tự động
+3. Kiểm tra nhật ký gỡ lỗi trong quá trình xử lý để tìm lỗi
+
+### Giá trị pixel có vẻ sai
+
+**Nguyên nhân có thể:**
+
+* Xem hình ảnh sai (bản gốc so với đã xử lý)
+* Hiệu chuẩn không được áp dụng chính xác
+* Dữ liệu cảm biến ánh sáng không được đưa vào đầu vào
+* Chế độ phần trăm chuyển đổi không chính xác
+
+**Giải pháp:**
+
+1. Xác minh rằng bạn đang xem đầu ra được xử lý (kiểm tra hậu tố tên tệp)
+2. Kiểm tra trạng thái nút chế độ phần trăm
+3. So sánh với các hình ảnh nổi tiếng từ cùng một tập dữ liệu
+
+***
+
+## Các bước tiếp theo
+
+Bây giờ bạn có thể xem hình ảnh toàn màn hình:
+
+* [**Image Layers**](image-layers.md) - Tìm hiểu về hiển thị đa băng tần
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Áp dụng các chỉ mục tùy chỉnh và ánh xạ màu
+* [**Công thức chỉ mục đa phổ**](../project-settings/multispectral-index-formulas.md) - Hiểu các chỉ mục có sẵn
+
+Để biết quy trình xử lý, hãy xem:
+
+* [**Đang xử lý hình ảnh (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Hướng dẫn xử lý hoàn chỉnh

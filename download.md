@@ -1,172 +1,172 @@
 ---
-metaLinks:
-  alternates:
+liên kết meta:
+  thay thế:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
 
-# Download
+# Tải xuống
 
-Download the latest version of Chloros for Windows to get started with multispectral image processing.
+Tải xuống phiên bản Chloros mới nhất cho Windows để bắt đầu xử lý hình ảnh đa phổ.
 
-### System Requirements
+### Yêu cầu hệ thống
 
-| Requirement          | Minimum                         | Recommended                     |
+| Yêu cầu | Tối thiểu | Được đề xuất |
 | -------------------- | ------------------------------- | ------------------------------- |
-| **Operating System** | Windows 10 (64-bit)             | Windows 11 (64-bit)             |
-| **Processor**        | Intel Core i5 or equivalent     | Intel Core i7 or better         |
-| **Memory (RAM)**     | 8GB                             | 16GB or more                    |
-| **Graphics Card**    | DirectX 11 compatible           | NVIDIA GPU with 4GB+ VRAM       |
-| **Storage**          | 2GB free space                  | SSD with 10GB+ free space       |
-| **Display**          | 1920x1080                       | 2560x1440 or higher             |
-| **Internet**         | Required for license activation | Required for license activation |
+| **Hệ điều hành** | Windows 10 (64-bit) | Windows 11 (64-bit) |
+| **Bộ xử lý** | Intel Core i5 hoặc tương đương | Intel Core i7 trở lên |
+| **Bộ nhớ (RAM)** | 8GB | 16GB trở lên |
+| **Card đồ họa** | Tương thích DirectX 11 | GPU NVIDIA với 4GB+ VRAM |
+| **Lưu trữ** | Dung lượng trống 2GB | SSD có hơn 10GB dung lượng trống |
+| **Hiển thị** | 1920x1080 | 2560x1440 trở lên |
+| **Internet** | Cần thiết để kích hoạt giấy phép | Cần thiết để kích hoạt giấy phép |
 
-{% hint style="info" %}
-**GPU Acceleration**: Chloros+ users with NVIDIA GPUs (4GB+ VRAM) can use CUDA acceleration for significantly faster processing.
+{% gợi ý style="info" %}
+**Tăng tốc GPU**: Người dùng Chloros+ có GPU NVIDIA (4GB+ VRAM) có thể sử dụng khả năng tăng tốc CUDA để xử lý nhanh hơn đáng kể.
 {% endhint %}
 
 ***
 
-## Download Chloros
+## Tải xuống Cloros
 
-### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Tải Chloros Tại Đây</a>
+### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button Primary">Tải xuống Chloros tại đây</a>
 
-### Latest Stable Release
+### Bản phát hành ổn định mới nhất
 
-**Chloros Installer for Windows**
+**Trình cài đặt Cloros cho Windows**
 
-* **Version**: 1.0.3
-* **Release Date**: December ?, 2025
-* **File Size**: 1.6GB
-* **File Type**: .exe (Windows Installer)
+* **Phiên bản**: 1.0.3
+* **Ngày phát hành**: Tháng 12 ?, 2025
+* **Kích thước tệp**: 1,6GB
+* **Loại tệp**: .exe (Trình cài đặt Windows)
 
-#### **Installation Steps:**
+#### **Các bước cài đặt:**
 
-1. Download the `CHLOROS INSTALLER - CURRENT VERSION.exe` file
-2. Double-click the installer to begin installation
-3. Follow the installation wizard prompts
-4. Choose installation directory (default: `C:\Program Files\Chloros\`)
-5. Complete installation and launch Chloros
-6. Sign in with your MAPIR Cloud Chloros+ account (or continue with free version)
+1. Tải xuống tệp `CHLOROS INSTALLER - CURRENT VERSION.exe`
+2. Bấm đúp vào trình cài đặt để bắt đầu cài đặt
+3. Làm theo lời nhắc của trình hướng dẫn cài đặt
+4. Chọn thư mục cài đặt (mặc định: `C:\Program Files\Chloros\`)
+5. Hoàn tất cài đặt và khởi chạy Chloros
+6. Đăng nhập bằng tài khoản MAPIR Cloud Chloros+ của bạn (hoặc tiếp tục với phiên bản miễn phí)
 
-{% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH for command-line access.
+{% gợi ý style="thành công" %}
+Trình cài đặt tự động thêm `chloros-cli` vào PATH hệ thống của bạn để truy cập dòng lệnh.
 {% endhint %}
 
 ***
 
-## Additional Resources
+## Tài nguyên bổ sung
 
-### Python SDK
+### SDK Python
 
-For developers and automation workflows, install the Chloros Python SDK:
+Đối với các nhà phát triển và quy trình tự động hóa, hãy cài đặt Chloros Python SDK:
 
 ```bash
 pip install chloros-sdk
 ```
 
-**Documentation**: [API: Python SDK](api-python-sdk.md)
+**Tài liệu**: [API: Python SDK](api-python-sdk.md)
 
-**Requirements**: Chloros Desktop must be installed, Chloros+ license required
-
-***
-
-## What's Included
-
-The Chloros installation includes:
-
-* ✅ **Chloros Desktop GUI** - Full-featured graphical interface
-* ✅ **Chloros (Browser)** - Web-based interface for lower-spec systems
-* ✅ **Chloros CLI** - Command-line interface (requires Chloros+ license)
-* ✅ **Backend Engine** - Image processing pipeline
-* ✅ **Camera Profiles** - Pre-configured MAPIR camera templates
+**Yêu cầu**: Phải cài đặt Chloros Desktop, cần có giấy phép Chloros+
 
 ***
 
-## Upgrade to Chloros+
+## Bao gồm những gì
 
-Unlock advanced features with a Chloros+ subscription:
+Quá trình cài đặt Chloros bao gồm:
 
-* 🚀 **Multi-threaded Processing** - Process images in parallel
-* ⚡ **GPU (CUDA) Acceleration** - Leverage NVIDIA GPU power
-* 💻 **CLI Access** - Automate with command-line tools
-* 🐍 **Python SDK** - Programmatic API access
-* 📱 **Multiple Devices** - Use on 2-10+ devices (plan dependent)
-* 🧮 **Custom Formulas** - Create custom multispectral indices
+* ✅ **Cloros Desktop GUI** - Giao diện đồ họa đầy đủ tính năng
+* ✅ **Chloros (Trình duyệt)** - Giao diện dựa trên web dành cho các hệ thống có thông số kỹ thuật thấp hơn
+* ✅ **Chloros CLI** - Giao diện dòng lệnh (yêu cầu giấy phép Chloros+)
+* ✅ **Công cụ phụ trợ** - Quy trình xử lý hình ảnh
+* ✅ **Hồ sơ máy ảnh** - Mẫu máy ảnh MAPIR được cấu hình sẵn
+
+***
+
+## Nâng cấp lên Chloros+
+
+Mở khóa các tính năng nâng cao bằng đăng ký Chloros+:
+
+* 🚀 **Xử lý đa luồng** - Xử lý hình ảnh song song
+* ⚡ **Tăng tốc GPU (CUDA)** - Tận dụng sức mạnh GPU NVIDIA
+* 💻 **Truy cập CLI** - Tự động hóa bằng các công cụ dòng lệnh
+* 🐍 **Python SDK** - Truy cập API có lập trình
+* 📱 **Nhiều thiết bị** - Sử dụng trên 2-10+ thiết bị (tùy thuộc vào gói)
+* 🧮 **Công thức tùy chỉnh** - Tạo các chỉ mục đa phổ tùy chỉnh
 
 <p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">View Chloros+ Plans &#x26; Pricing</a></p>
 
 ***
 
-## Installation Help
+## Trợ giúp cài đặt
 
-### Troubleshooting
+### Khắc phục sự cố
 
-**Installation fails with error message:**
+**Cài đặt không thành công với thông báo lỗi:**
 
-* Ensure you have administrator rights
-* Temporarily disable antivirus software
-* Check that you meet minimum system requirements
+* Đảm bảo bạn có quyền quản trị viên
+* Tạm thời vô hiệu hóa phần mềm diệt virus
+* Kiểm tra xem bạn có đáp ứng các yêu cầu hệ thống tối thiểu không
 
-**Application won't start:**
+**Ứng dụng sẽ không bắt đầu:**
 
-* Try Chloros (Browser) version
-* Verify Windows 10/11 (64-bit) is installed
-* Update graphics drivers
-* Check Windows Event Viewer for error details
-* Contact support with error logs
+* Dùng thử phiên bản Chloros (Trình duyệt)
+* Xác minh Windows 10/11 (64-bit) đã được cài đặt
+* Cập nhật trình điều khiển đồ họa
+* Kiểm tra Windows Event Viewer để biết chi tiết lỗi
+* Liên hệ hỗ trợ với nhật ký lỗi
 
-**License activation issues:**
+**Vấn đề kích hoạt giấy phép:**
 
-* Ensure internet connection is active
-* Verify credentials at [https://cloud.mapir.camera](https://cloud.mapir.camera)
-* Check firewall isn't blocking Chloros
-* See [Chloros+ Login](chloros+-login.md) for detailed instructions
+* Đảm bảo kết nối internet đang hoạt động
+* Xác minh thông tin đăng nhập tại [https://cloud.mapir.Camera](https://cloud.mapir.Camera)
+* Kiểm tra tường lửa không chặn Chloros
+* Xem [Chloros+ Đăng nhập](chloros+-login.md) để biết hướng dẫn chi tiết
 
-### Getting Support
+### Nhận hỗ trợ
 
-Need help with installation or setup?
+Cần trợ giúp về cài đặt hoặc thiết lập?
 
-* 📧 **Email**: info@mapir.camera
-* 🌐 **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **Documentation**: [Getting Started](./)
-* ❓ **FAQ**: [Frequently Asked Questions](faq.md)
+* 📧 **Email**: info@mapir.máy ảnh
+* 🌐 **Trang web**: [https://www.mapir.Camera/community/contact](https://www.mapir.Camera/community/contact)
+* 📚 **Tài liệu**: [Bắt đầu](./)
+* ❓ **Câu hỏi thường gặp**: [Câu hỏi thường gặp](faq.md)
 
 ***
 
-## Change Log
+## Nhật ký thay đổi
 
 <details>
 
 <summary>Version 1.0.3</summary>
 
-### **Release Date**: December ?, 2025
+### **Ngày phát hành**: Tháng 12 ?, 2025
 
-#### New Features
+#### Tính năng mới
 
-* Initial Launch
+* Ra mắt lần đầu
 
-#### Improvements
+#### Cải tiến
 
-* Initial Launch
+* Ra mắt lần đầu
 
-#### Bug Fixes
+#### Sửa lỗi
 
-* Initial Launch
+* Ra mắt lần đầu
 
-#### Known Issues
+#### Sự cố đã biết
 
-* Initial Launch
+* Ra mắt lần đầu
 
 </details>
 
 ***
 
-## License Agreement
+## Thỏa thuận cấp phép
 
-**Proprietary Software** - Copyright (c) 2025 MAPIR Inc.
+**Phần mềm độc quyền** - Bản quyền (c) 2025 MAPIR Inc.
 
-Unauthorized use, distribution, or modification is prohibited.
+Việc sử dụng, phân phối hoặc sửa đổi trái phép đều bị cấm.
 
-**Free Version**: Available for personal and commercial use with feature limitations
+**Phiên bản miễn phí**: Có sẵn cho mục đích sử dụng cá nhân và thương mại với những hạn chế về tính năng
 
-**Chloros+**: Subscription-based license for advanced features and commercial deployments
+**Chloros+**: Giấy phép dựa trên đăng ký cho các tính năng nâng cao và triển khai thương mại

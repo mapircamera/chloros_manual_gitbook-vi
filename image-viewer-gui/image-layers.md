@@ -1,352 +1,352 @@
-# Image Layers
+# Lớp hình ảnh
 
-The Image Layers dropdown in the Chloros Image Viewer allows you to quickly switch between different versions of the same image - from the original captures to processed reflectance outputs and calculated index images.
+Trình đơn thả xuống Lớp hình ảnh trong Trình xem ảnh Chloros cho phép bạn nhanh chóng chuyển đổi giữa các phiên bản khác nhau của cùng một hình ảnh - từ ảnh chụp ban đầu đến đầu ra phản xạ đã xử lý và hình ảnh chỉ mục được tính toán.
 
-## What are Image Layers?
+## Lớp hình ảnh là gì?
 
-In Chloros, **layers** refer to the different image outputs available for a single source image. When you process images, Chloros creates multiple versions:
+Trong Chloros, **lớp** đề cập đến các đầu ra hình ảnh khác nhau có sẵn cho một hình ảnh nguồn. Khi bạn xử lý hình ảnh, Chloros sẽ tạo ra nhiều phiên bản:
 
-* **Original images** (JPG and RAW files from your camera)
-* **Reflectance calibrated** outputs (if reflectance calibration was enabled)
-* **Target images** (if the image contains calibration targets)
-* **Index images** (NDVI, NDRE, GNDVI, etc. if indices were configured)
+* **Hình ảnh gốc** (tệp JPG và RAW từ máy ảnh của bạn)
+* **Các đầu ra được hiệu chỉnh phản xạ** (nếu hiệu chỉnh phản xạ được bật)
+* **Hình ảnh mục tiêu** (nếu hình ảnh chứa mục tiêu hiệu chỉnh)
+* **Hình ảnh chỉ mục** (NDVI, NDRE, GNDVI, v.v. nếu chỉ mục đã được định cấu hình)
 
-The **Layer Selector dropdown** in the top-right of the Image Viewer lets you instantly switch between these versions without leaving the viewer.
+**Trình đơn thả xuống Bộ chọn lớp** ở phía trên bên phải của Trình xem hình ảnh cho phép bạn chuyển đổi ngay lập tức giữa các phiên bản này mà không cần rời khỏi trình xem.
 
 ***
 
-## Available Layer Types
+## Các loại lớp có sẵn
 
 ### JPG
 
-* The original JPG preview image from your camera
-* Always available for all images
-* Unprocessed, as captured by the camera
-* Fastest to load and display
+* Hình ảnh xem trước JPG gốc từ máy ảnh của bạn
+* Luôn có sẵn cho tất cả các hình ảnh
+* Chưa được xử lý, như được chụp bởi camera
+* Tải và hiển thị nhanh nhất
 
-**When to view:**
+**Thời điểm xem:**
 
-* Quick preview of original capture
-* Checking image composition and framing
-* Verifying capture quality before processing
+* Xem trước nhanh bản chụp gốc
+* Kiểm tra bố cục và khung hình ảnh
+* Xác minh chất lượng chụp trước khi xử lý
 
-### RAW (Original)
+### NGUYÊN (Bản gốc)
 
-* The original RAW sensor data from your camera
-* Debayered with no post processing applied
-* Higher bit depth than JPG (typically 12-bit or 14-bit sensor data)
+* Dữ liệu cảm biến RAW gốc từ máy ảnh của bạn
+* Đã gỡ bỏ mà không áp dụng xử lý bài đăng
+* Độ sâu bit cao hơn JPG (thường là dữ liệu cảm biến 12 bit hoặc 14 bit)
 
-**When to view:**
+**Thời điểm xem:**
 
-* Inspecting original sensor data quality
-* Checking for sensor issues or artifacts
-* Comparing before/after processing results
+* Kiểm tra chất lượng dữ liệu cảm biến gốc
+* Kiểm tra các vấn đề về cảm biến hoặc hiện vật
+* So sánh kết quả trước/sau xử lý
 
-### RAW (Target)
+### RAW (Mục tiêu)
 
-* Only appears for images identified as containing calibration targets
-* Shows the original RAW image with target detected
-* Used to verify target detection was successful
+* Chỉ xuất hiện đối với các hình ảnh được xác định là chứa mục tiêu hiệu chuẩn
+* Hiển thị ảnh RAW gốc với mục tiêu được phát hiện
+* Được sử dụng để xác minh việc phát hiện mục tiêu đã thành công
 
-**When to view:**
+**Thời điểm xem:**
 
-* Confirming calibration targets were detected correctly
-* Checking target image quality
-* Troubleshooting calibration issues
+* Xác nhận mục tiêu hiệu chuẩn đã được phát hiện chính xác
+* Kiểm tra chất lượng hình ảnh mục tiêu
+* Khắc phục sự cố hiệu chuẩn
 
-{% hint style="info" %}
-**Target Layer**: This layer only appears in the dropdown for images that contain calibration targets. Regular capture images will not have this option.
+{% gợi ý style="info" %}
+**Lớp mục tiêu**: Lớp này chỉ xuất hiện trong danh sách thả xuống dành cho các hình ảnh có chứa mục tiêu hiệu chỉnh. Ảnh chụp thông thường sẽ không có tùy chọn này.
 {% endhint %}
 
-### RAW (Reflectance)
+### RAW (Phản xạ)
 
-* The calibrated reflectance output image
-* Vignette corrected (if enabled in processing)
-* Reflectance calibrated using target data (if enabled)
-* Multi-band TIFF with all camera channels
-* Pixel values represent percent reflectance (when using percent mode)
-* Ready to manipulate with the [Index/LUT Sandbox](index-lut-sandbox.md)
+* Hình ảnh đầu ra phản xạ được hiệu chỉnh
+* Đã sửa họa tiết (nếu được bật trong quá trình xử lý)
+* Độ phản xạ được hiệu chỉnh bằng dữ liệu mục tiêu (nếu được bật)
+* TIFF đa băng tần với tất cả các kênh camera
+* Giá trị pixel biểu thị độ phản xạ phần trăm (khi sử dụng chế độ phần trăm)
+* Sẵn sàng thao tác với [Index/LUT Sandbox](index-lut-sandbox.md)
 
-**When to view:**
+**Thời điểm xem:**
 
-* Inspecting calibrated results
-* Verifying calibration quality
-* Checking pixel values for scientific accuracy
-* Comparing with original to see calibration effects
+* Kiểm tra kết quả hiệu chuẩn
+* Kiểm tra chất lượng hiệu chuẩn
+* Kiểm tra giá trị pixel để có độ chính xác khoa học
+* So sánh với bản gốc để xem hiệu ứng hiệu chỉnh
 
-{% hint style="success" %}
-**Recommended**: Use RAW (Reflectance) layer when checking pixel values for scientific measurements and analysis.
+{% gợi ý style="thành công" %}
+**Khuyến nghị**: Sử dụng lớp RAW (Phản xạ) khi kiểm tra giá trị pixel cho các phép đo và phân tích khoa học.
 {% endhint %}
 
-### RAW (NDVI Index)... and similar
+### RAW (Chỉ số NDVI)... và tương tự
 
-* Calculated vegetation index image (NDVI in this example)
-* The index name changes based on which index was configured during processing
-* Examples: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index), etc.
-* Single-band grayscale image showing index calculation results
-* One layer appears for each index configured in Project Settings
+* Hình ảnh chỉ số thực vật được tính toán (NDVI trong ví dụ này)
+* Tên chỉ mục thay đổi dựa trên chỉ mục nào được cấu hình trong quá trình xử lý
+* Ví dụ: RAW (Chỉ số NDVI), RAW (Chỉ số NDRE), RAW (Chỉ số GNDVI), v.v.
+* Hình ảnh thang độ xám đơn dải hiển thị kết quả tính toán chỉ số
+* Một lớp xuất hiện cho mỗi chỉ mục được định cấu hình trong Cài đặt dự án
 
-**Possible index names:**
+**Tên chỉ mục có thể có:**
 
-* RAW (NDVI Index)
-* RAW (NDRE Index)
-* RAW (GNDVI Index)
-* RAW (OSAVI Index)
-* RAW (EVI Index)
-* RAW (SAVI Index)
-* And many more... (see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md))
+* RAW (Chỉ số NDVI)
+* RAW (Chỉ số NDRE)
+* RAW (Chỉ số GNDVI)
+* RAW (Chỉ số OSAVI)
+* RAW (Chỉ số EVI)
+* RAW (Chỉ số SAVI)
+* Và nhiều hơn nữa... (xem [Công thức chỉ số đa phổ](../project-settings/multispectral-index-formulas.md))
 
-**When to view:**
+**Thời điểm xem:**
 
-* Examining index calculation results
-* Checking index value ranges
-* Identifying areas of interest
-* Verifying index images before using in GIS or analysis
-
-***
-
-## Using the Layer Selector
-
-### Opening the Dropdown
-
-1. Open an image in fullscreen mode (click any thumbnail in the Image Viewer)
-2. Locate the **layer dropdown** in the top-right corner of the viewer
-3. The dropdown shows the currently selected layer (e.g., "JPG")
-4. Click the dropdown to see all available layers
-
-### Switching Layers
-
-1. Click the layer dropdown to open the list
-2. All available layers for the current image are shown
-3. Click any layer name to switch to that version
-4. The image updates immediately to show the selected layer
-
-**Quick switching:**
-
-* The dropdown remembers your last selection
-* When navigating to the next image, Chloros attempts to show the same layer type
-* If that layer doesn't exist on the next image, it defaults to JPG
-
-### Layer Availability
-
-Not all layers are available for every image:
-
-**Always available:**
-
-* ✅ JPG (every image has a JPG preview)
-
-**Conditionally available:**
-
-* ⚠️ RAW (Original) - Only if image was captured in RAW or RAW+JPG mode
-* ⚠️ RAW (Target) - Only if image contains detected calibration targets
-* ⚠️ RAW (Reflectance) - Only after processing with reflectance calibration enabled
-* ⚠️ RAW (\[Index] Index) - Only after processing with indices configured
+* Kiểm tra kết quả tính chỉ số
+* Kiểm tra phạm vi giá trị chỉ số
+* Xác định lĩnh vực quan tâm
+* Xác minh hình ảnh chỉ mục trước khi sử dụng trong GIS hoặc phân tích
 
 ***
 
-## Layer Persistence
+## Sử dụng Bộ chọn lớp
 
-### Navigating Between Images
+### Mở menu thả xuống
 
-When you navigate to a different image (using arrow keys or clicking thumbnails):
+1. Mở hình ảnh ở chế độ toàn màn hình (nhấp vào bất kỳ hình thu nhỏ nào trong Trình xem Hình ảnh)
+2. Xác định vị trí **trình đơn thả xuống lớp** ở góc trên bên phải của trình xem
+3. Trình đơn thả xuống hiển thị lớp hiện được chọn (ví dụ: "JPG")
+4. Nhấp vào menu thả xuống để xem tất cả các lớp có sẵn
 
-**Layer preference is preserved:**
+### Chuyển lớp
 
-* If viewing "RAW (Reflectance)", next image shows "RAW (Reflectance)" (if available)
-* If viewing "RAW (NDVI Index)", next image shows "RAW (NDVI Index)" (if available)
-* If the same layer doesn't exist, defaults to JPG
+1. Nhấp vào menu thả xuống lớp để mở danh sách
+2. Tất cả các lớp có sẵn cho hình ảnh hiện tại đều được hiển thị
+3. Nhấp vào tên lớp bất kỳ để chuyển sang phiên bản đó
+4. Hình ảnh cập nhật ngay lập tức để hiển thị lớp đã chọn
 
-**Example workflow:**
+**Chuyển đổi nhanh:**
 
-1. Open Image 1, switch to RAW (NDVI Index)
-2. Press → to view Image 2
-3. Image 2 automatically displays RAW (NDVI Index) layer
-4. Continue navigating - all images show NDVI layer
-5. Very efficient for reviewing index results across many images
+* Danh sách thả xuống ghi nhớ lựa chọn cuối cùng của bạn
+* Khi điều hướng đến hình ảnh tiếp theo, Chloros cố gắng hiển thị cùng loại lớp
+* Nếu lớp đó không tồn tại trên hình ảnh tiếp theo, nó sẽ mặc định là JPG
 
-***
+### Tính khả dụng của lớp
 
-## Common Workflows
+Không phải tất cả các lớp đều có sẵn cho mọi hình ảnh:
 
-### Workflow 1: Before/After Comparison
+**Luôn có sẵn:**
 
-**Goal**: Compare original vs. calibrated image
+* ✅ JPG (mỗi hình ảnh đều có bản xem trước JPG)
 
-1. Open processed image in Image Viewer
-2. Select **RAW (Original)** from dropdown
-3. Note the vignetting and uncalibrated values
-4. Switch to **RAW (Reflectance)** from dropdown
-5. Compare - vignetting removed, values calibrated
+**Có điều kiện:**
 
-### Workflow 2: Index Review
-
-**Goal**: Quickly review NDVI results across dataset
-
-1. Open first processed image
-2. Select **RAW (NDVI Index)** from dropdown
-3. Use → arrow key to navigate to next image
-4. NDVI layer persists automatically
-5. Continue through all images, checking NDVI patterns
-6. Switch to **RAW (NDRE Index)** to compare
-
-### Workflow 3: Target Verification
-
-**Goal**: Verify all target images were detected correctly
-
-1. Navigate to a target image
-2. Select **RAW (Target)** from dropdown
-3. Verify calibration targets are clearly visible and detected
-4. Navigate to next target image
-5. Repeat verification for all targets
-
-### Workflow 4: Pixel Value Inspection
-
-**Goal**: Check reflectance values for scientific accuracy
-
-1. Open processed image
-2. Select **RAW (Reflectance)** layer
-3. Enable **Pixel Percent** mode (button in top-right toolbar)
-4. Move cursor over vegetation areas
-5. Verify pixel values are in expected ranges (30-70% for NIR, 5-15% for Red)
-6. Check soil and water areas for appropriate values
+* ⚠️ RAW (Bản gốc) - Chỉ khi ảnh được chụp ở chế độ RAW hoặc RAW+JPG
+* ⚠️ RAW (Mục tiêu) - Chỉ khi hình ảnh chứa mục tiêu hiệu chỉnh được phát hiện
+* ⚠️ RAW (Phản xạ) - Chỉ sau khi xử lý với tính năng hiệu chỉnh độ phản xạ được bật
+* ⚠️ RAW (\[Index] Index) - Chỉ sau khi xử lý với các chỉ mục được định cấu hình
 
 ***
 
-## Understanding Pixel Values by Layer
+## Độ bền của lớp
 
-Different layers show different pixel value ranges:
+### Điều hướng giữa các hình ảnh
 
-### JPG Layer
+Khi bạn điều hướng đến một hình ảnh khác (sử dụng phím mũi tên hoặc nhấp vào hình thu nhỏ):
 
-* **Range**: 0-255 (8-bit)
-* **Meaning**: Display values, gamma-corrected
-* **Use**: Visual inspection only, not for scientific measurement
+**Ưu tiên lớp được giữ nguyên:**
 
-### RAW (Original)
+* Nếu xem "RAW (Phản xạ)", hình ảnh tiếp theo hiển thị "RAW (Phản xạ)" (nếu có)
+* Nếu xem "RAW (Chỉ số NDVI)", hình ảnh tiếp theo hiển thị "RAW (Chỉ mục NDVI)" (nếu có)
+* Nếu cùng một lớp không tồn tại, mặc định là JPG
 
-* **Range**: 0-65535 (16-bit)
-* **Meaning**: Raw sensor digital numbers
-* **Use**: Checking sensor performance, not calibrated
+**Quy trình làm việc mẫu:**
 
-### RAW (Reflectance)
-
-* **Range**: 0-65,535 (16-bit TIFF) or 0.0-1.0 (32-bit Percent)
-* **Meaning**: Calibrated percent reflectance
-* **Use**: Scientific measurements and analysis
-
-**For 16-bit TIFF:** Divide by 65,535 to get percent reflectance **For 32-bit Percent:** Values directly represent percent (0.5 = 50% reflectance)
-
-### RAW (Index Images)
-
-* **Range**: Varies by index (typically -1.0 to +1.0 for normalized indices)
-* **Meaning**: Index calculation result
-* **Examples**:
-  * NDVI: -1 to +1 (vegetation typically 0.4 to 0.9)
-  * NDRE: -1 to +1 (stress detection)
-  * EVI: 0 to 1 (enhanced vegetation)
+1. Mở Ảnh 1, chuyển sang RAW (Chỉ số NDVI)
+2. Nhấn → để xem Hình 2
+3. Hình 2 tự động hiển thị lớp RAW (NDVI Index)
+4. Tiếp tục điều hướng - tất cả hình ảnh đều hiển thị lớp NDVI
+5. Rất hiệu quả để xem xét kết quả chỉ mục trên nhiều hình ảnh
 
 ***
 
-## Tips and Best Practices
+## Quy trình làm việc chung
 
-### Efficient Layer Switching
+### Quy trình 1: Trước/Sau so sánh
 
-* **Keyboard shortcut awareness**: While there's no keyboard shortcut for layers, navigation arrows (←/→) work across all layers
-* **Consistent workflows**: Pick one layer (e.g., NDVI) and review entire dataset before switching to another
-* **Quick comparisons**: Toggle between Original and Reflectance to verify processing quality
+**Mục tiêu**: So sánh hình ảnh gốc và hình ảnh đã hiệu chỉnh
 
-### Performance Considerations
+1. Mở hình ảnh đã xử lý trong Image Viewer
+2. Chọn **RAW (Bản gốc)** từ danh sách thả xuống
+3. Lưu ý các giá trị họa tiết và chưa được hiệu chỉnh
+4. Chuyển sang **RAW (Phản xạ)** từ danh sách thả xuống
+5. So sánh - loại bỏ họa tiết, hiệu chỉnh các giá trị
 
-* **JPG loads fastest**: Use for quick navigation through many images
-* **RAW layers load slower**: Higher resolution and bit depth
-* **Index layers**: Similar speed to Reflectance layers
-* **First load is slowest**: Subsequent views of same layer are cached and faster
+### Quy trình 2: Đánh giá chỉ mục
 
-### Quality Verification
+**Mục tiêu**: Xem xét nhanh kết quả NDVI trên tập dữ liệu
 
-* **Always check RAW (Original)**: Verify source data quality before trusting processed outputs
-* **Compare layers**: Use layer switching to validate processing worked correctly
-* **Check index ranges**: Use Pixel Percent mode with index layers to verify values are reasonable
+1. Mở hình ảnh được xử lý đầu tiên
+2. Chọn **RAW (Chỉ số NDVI)** từ danh sách thả xuống
+3. Sử dụng phím mũi tên → để chuyển sang hình ảnh tiếp theo
+4. Lớp NDVI tự động tồn tại
+5. Tiếp tục xem qua tất cả các hình ảnh, kiểm tra các mẫu NDVI
+6. Chuyển sang **RAW (Chỉ số NDRE)** để so sánh
 
-***
+### Quy trình 3: Xác minh mục tiêu
 
-## Troubleshooting
+**Mục tiêu**: Xác minh tất cả hình ảnh mục tiêu được phát hiện chính xác
 
-### Layer Not Available
+1. Điều hướng đến hình ảnh mục tiêu
+2. Chọn **RAW (Mục tiêu)** từ danh sách thả xuống
+3. Xác minh các mục tiêu hiệu chuẩn được nhìn thấy và phát hiện rõ ràng
+4. Điều hướng đến hình ảnh mục tiêu tiếp theo
+5. Lặp lại xác minh cho tất cả các mục tiêu
 
-**Problem**: Expected layer doesn't appear in dropdown
+### Quy trình 4: Kiểm tra giá trị pixel
 
-**Possible causes:**
+**Mục tiêu**: Kiểm tra các giá trị phản xạ để đảm bảo độ chính xác về mặt khoa học
 
-* Image wasn't processed (only JPG and RAW (Original) available)
-* Reflectance calibration was disabled during processing
-* Specific index wasn't configured in Project Settings
-* Image is a target-only image (no indices generated for targets)
-
-**Solutions:**
-
-1. Verify image was processed (check output folder for processed files)
-2. Check Project Settings to confirm indices were configured
-3. Reprocess with desired indices enabled
-
-### Wrong Layer Shown
-
-**Problem**: Image opens in unexpected layer
-
-**Cause**: Layer preference from previous image carried forward, but that layer doesn't exist on current image
-
-**Solution**: Chloros automatically falls back to JPG when preferred layer unavailable - this is normal behavior
-
-### Can't See Calibration Targets
-
-**Problem**: RAW (Target) layer doesn't show target detection
-
-**Possible causes:**
-
-* Targets weren't detected during processing
-* Image doesn't actually contain targets
-* Target detection settings too strict
-
-**Solutions:**
-
-1. Check Debug Log for "Target found" messages
-2. Verify image actually contains visible calibration targets
-3. Adjust target detection settings in Project Settings
-4. See [Choosing Target Images](../processing-images-gui/choosing-target-images.md)
+1. Mở ảnh đã xử lý
+2. Chọn lớp **RAW (Phản xạ)**
+3. Bật chế độ **Phần trăm pixel** (nút ở thanh công cụ trên cùng bên phải)
+4. Di chuyển con trỏ qua vùng thực vật
+5. Xác minh giá trị pixel nằm trong phạm vi mong đợi (30-70% đối với NIR, 5-15% đối với Đỏ)
+6. Kiểm tra các vùng đất, nước để có giá trị phù hợp
 
 ***
 
-## Related Features
+## Tìm hiểu giá trị pixel theo lớp
 
-### Image Viewer Tools
+Các lớp khác nhau hiển thị các phạm vi giá trị pixel khác nhau:
 
-When viewing any layer, you can use:
+### Lớp JPG
 
-* **Zoom controls**: Magnify to inspect details
-* **Pan**: Click and drag to move around zoomed image
-* **Pixel value inspection**: See values at cursor location
-* **Navigation arrows**: Move between images while maintaining layer
-* **Pixel Percent mode**: Toggle between DN and percent display
+* **Phạm vi**: 0-255 (8-bit)
+* **Ý nghĩa**: Hiển thị giá trị, đã hiệu chỉnh gamma
+* **Sử dụng**: Chỉ kiểm tra bằng mắt, không dùng để đo lường khoa học
 
-See [Opening an Image Full Screen](opening-an-image-full-screen.md) for complete Image Viewer documentation.
+### NGUYÊN (Bản gốc)
 
-### Index/LUT Sandbox
+* **Phạm vi**: 0-65535 (16-bit)
+* **Ý nghĩa**: Số liệu cảm biến thô
+* **Sử dụng**: Kiểm tra hoạt động của cảm biến, chưa hiệu chỉnh
 
-For interactive index testing and visualization:
+### RAW (Phản xạ)
 
-* **Real-time index calculation**: Test different index formulas
-* **LUT color mapping**: Apply color gradients to grayscale indices
-* **Export visualizations**: Save colored index images
+* **Phạm vi**: 0-65.535 (TIFF 16 bit) hoặc 0,0-1,0 (Phần trăm 32 bit)
+* **Ý nghĩa**: Phần trăm phản xạ đã được hiệu chỉnh
+* **Sử dụng**: Đo lường và phân tích khoa học
 
-See [Index/LUT Sandbox](index-lut-sandbox.md) for details.
+**Đối với TIFF 16 bit:** Chia cho 65.535 để có phần trăm phản xạ **Đối với Phần trăm 32 bit:** Các giá trị biểu thị trực tiếp phần trăm (0,5 = 50% phản xạ)
+
+### RAW (Hình ảnh chỉ mục)
+
+* **Phạm vi**: Thay đổi theo chỉ mục (thường là -1,0 đến +1,0 đối với các chỉ số được chuẩn hóa)
+* **Ý nghĩa**: Kết quả tính chỉ số
+* **Ví dụ**:
+  * NDVI: -1 đến +1 (thực vật thường là 0,4 đến 0,9)
+  * NDRE: -1 đến +1 (phát hiện ứng suất)
+  * EVI: 0 đến 1 (thảm thực vật được tăng cường)
 
 ***
 
-## Next Steps
+## Mẹo và cách thực hành tốt nhất
 
-Now that you understand image layers:
+### Chuyển lớp hiệu quả
 
-* [**Opening an Image Full Screen**](opening-an-image-full-screen.md) - Complete Image Viewer guide
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Interactive index visualization
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Available indices reference
-* [**Finishing the Processing**](../processing-images-gui/finishing-the-processing.md) - Understanding processed outputs
+* **Nhận thức về phím tắt**: Mặc dù không có phím tắt cho các lớp nhưng mũi tên điều hướng (←/→) hoạt động trên tất cả các lớp
+* **Quy trình làm việc nhất quán**: Chọn một lớp (ví dụ: NDVI) và xem lại toàn bộ tập dữ liệu trước khi chuyển sang lớp khác
+* **So sánh nhanh**: Chuyển đổi giữa Bản gốc và Phản chiếu để xác minh chất lượng xử lý
+
+### Cân nhắc về hiệu suất
+
+* **JPG tải nhanh nhất**: Sử dụng để điều hướng nhanh qua nhiều hình ảnh
+* **Các lớp RAW tải chậm hơn**: Độ phân giải và độ sâu bit cao hơn
+* **Lớp chỉ mục**: Tốc độ tương tự như lớp Phản chiếu
+* **Lần tải đầu tiên chậm nhất**: Các lượt xem tiếp theo của cùng một lớp được lưu vào bộ nhớ đệm và nhanh hơn
+
+### Xác minh chất lượng
+
+* **Luôn kiểm tra RAW (Bản gốc)**: Xác minh chất lượng dữ liệu nguồn trước khi tin cậy các đầu ra được xử lý
+* **So sánh các lớp**: Sử dụng chuyển đổi lớp để xác thực quá trình xử lý hoạt động chính xác
+* **Kiểm tra phạm vi chỉ mục**: Sử dụng chế độ Pixel Percent với các lớp chỉ mục để xác minh giá trị là hợp lý
+
+***
+
+## Khắc phục sự cố
+
+### Lớp không có sẵn
+
+**Sự cố**: Lớp dự kiến ​​không xuất hiện trong danh sách thả xuống
+
+**Nguyên nhân có thể:**
+
+* Hình ảnh chưa được xử lý (chỉ có JPG và RAW (Bản gốc))
+* Hiệu chỉnh phản xạ đã bị vô hiệu hóa trong quá trình xử lý
+* Chỉ mục cụ thể chưa được định cấu hình trong Cài đặt dự án
+* Hình ảnh chỉ là hình ảnh mục tiêu (không có chỉ mục nào được tạo cho mục tiêu)
+
+**Giải pháp:**
+
+1. Xác minh hình ảnh đã được xử lý (kiểm tra thư mục đầu ra để tìm các tệp đã được xử lý)
+2. Kiểm tra Cài đặt dự án để xác nhận các chỉ mục đã được định cấu hình
+3. Xử lý lại với các chỉ mục mong muốn được kích hoạt
+
+### Hiển thị sai lớp
+
+**Sự cố**: Hình ảnh mở ở lớp không mong muốn
+
+**Lý do**: Ưu tiên lớp từ hình ảnh trước đó được chuyển tiếp nhưng lớp đó không tồn tại trên hình ảnh hiện tại
+
+**Giải pháp**: Chloros tự động chuyển về JPG khi không có lớp ưa thích - đây là hiện tượng bình thường
+
+### Không thể nhìn thấy mục tiêu hiệu chỉnh
+
+**Sự cố**: Lớp RAW (Mục tiêu) không hiển thị tính năng phát hiện mục tiêu
+
+**Nguyên nhân có thể:**
+
+* Mục tiêu không được phát hiện trong quá trình xử lý
+* Hình ảnh thực tế không chứa mục tiêu
+* Cài đặt phát hiện mục tiêu quá nghiêm ngặt
+
+**Giải pháp:**
+
+1. Kiểm tra Nhật ký gỡ lỗi để biết thông báo "Đã tìm thấy mục tiêu"
+2. Xác minh hình ảnh thực sự chứa các mục tiêu hiệu chuẩn hiển thị
+3. Điều chỉnh cài đặt phát hiện mục tiêu trong Cài đặt dự án
+4. Xem [Chọn hình ảnh mục tiêu](../processing-images-gui/choosing-target-images.md)
+
+***
+
+## Tính năng liên quan
+
+### Công cụ xem ảnh
+
+Khi xem bất kỳ lớp nào, bạn có thể sử dụng:
+
+* **Điều khiển thu phóng**: Phóng to để kiểm tra chi tiết
+* **Pan**: Nhấp và kéo để di chuyển xung quanh hình ảnh được phóng to
+* **Kiểm tra giá trị pixel**: Xem giá trị tại vị trí con trỏ
+* **Mũi tên điều hướng**: Di chuyển giữa các hình ảnh trong khi duy trì lớp
+* **Chế độ Phần trăm pixel**: Chuyển đổi giữa hiển thị DN và phần trăm
+
+Xem [Mở toàn màn hình hình ảnh](opening-an-image-full-screen.md) để biết tài liệu đầy đủ về Trình xem hình ảnh.
+
+### Hộp cát chỉ mục/LUT
+
+Để kiểm tra và trực quan hóa chỉ mục tương tác:
+
+* **Tính chỉ số theo thời gian thực**: Kiểm tra các công thức chỉ số khác nhau
+* **Ánh xạ màu LUT**: Áp dụng chuyển màu cho các chỉ số thang độ xám
+* **Xuất trực quan hóa**: Lưu hình ảnh chỉ mục màu
+
+Xem [Index/LUT Sandbox](index-lut-sandbox.md) để biết chi tiết.
+
+***
+
+## Các bước tiếp theo
+
+Bây giờ bạn đã hiểu các lớp hình ảnh:
+
+* [**Mở hình ảnh toàn màn hình**](opening-an-image-full-screen.md) - Hướng dẫn hoàn chỉnh về Trình xem hình ảnh
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Trực quan hóa chỉ mục tương tác
+* [**Công thức chỉ mục đa phổ**](../project-settings/multispectral-index-formulas.md) - Tham chiếu các chỉ số có sẵn
+* [**Hoàn tất quá trình xử lý**](../processing-images-gui/finishing-the-processing.md) - Tìm hiểu kết quả đầu ra được xử lý

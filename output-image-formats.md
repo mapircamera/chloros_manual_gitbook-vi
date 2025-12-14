@@ -1,24 +1,24 @@
 ---
-metaLinks:
-  alternates:
+liên kết meta:
+  thay thế:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
 ---
 
-# Output Image Formats
+# Định dạng hình ảnh đầu ra
 
-### TIFF (16-bit)
+###TIFF (16-bit)
 
-16-bit (pixel digital number 0 - 65535) TIFF (.tif) format output.
+Đầu ra định dạng 16-bit (pixel kỹ thuật số 0 - 65535) TIFF (.tif).
 
-### TIFF (32-bit, Percent %)
+### TIFF (32-bit, Phần trăm %)
 
-32-bit (pixel float 0.0 - 1.0) TIFF (.tif) format output. Pixel values represent reflectance percentages where 0.0 = 0% and 1.0 = 100%.
+Đầu ra định dạng 32-bit (pixel float 0,0 - 1,0) TIFF (.tif). Giá trị pixel biểu thị tỷ lệ phần trăm phản xạ trong đó 0,0 = 0% và 1,0 = 100%.
 
 ### **JPG (8-bit)**
 
-8-bit (pixel digital number 0 -255) JPG (.jpg) format output.
+Đầu ra định dạng 8-bit (pixel kỹ thuật số 0 -255) JPG (.jpg).
 
-### **PNG (8-bit)**
+### ** PNG (8-bit)**
 
-8-bit (pixel digital number 0 - 255) PNG (.png) format output. Lossless compression suitable for web viewing and visualization.
+Đầu ra định dạng 8-bit (pixel kỹ thuật số 0 - 255) PNG (.png). Nén không mất dữ liệu thích hợp để xem và hiển thị trên web.
 

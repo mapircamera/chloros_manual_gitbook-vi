@@ -1,366 +1,366 @@
-# Starting the Processing
+# Bắt đầu xử lý
 
-Once you've imported your images, marked your calibration targets, and configured your project settings, you're ready to begin processing. This page guides you through initiating the Chloros processing pipeline.
+Khi bạn đã nhập hình ảnh của mình, đánh dấu các mục tiêu hiệu chỉnh và định cấu hình cài đặt dự án của mình, bạn đã sẵn sàng bắt đầu xử lý. Trang này hướng dẫn bạn cách bắt đầu quy trình xử lý Chloros.
 
-## Pre-Processing Checklist
+## Danh sách kiểm tra trước khi xử lý
 
-Before clicking the Start button, verify that everything is ready:
+Trước khi nhấp vào nút Bắt đầu, hãy xác minh rằng mọi thứ đã sẵn sàng:
 
-* [ ] **Files imported** - All images appear in File Browser
-* [ ] **Target images marked** - Target column checked for calibration images
-* [ ] **Camera models detected** - Camera Model column shows correct cameras
-* [ ] **Settings configured** - Project Settings reviewed and adjusted
-* [ ] **Indices selected** - Desired multispectral indices added (if needed)
-* [ ] **Export format chosen** - Output format appropriate for your workflow
+* [ ] **Tệp đã nhập** - Tất cả hình ảnh xuất hiện trong Trình duyệt tệp
+* [ ] **Hình ảnh mục tiêu được đánh dấu** - Cột mục tiêu đã được kiểm tra để hiệu chỉnh hình ảnh
+* [ ] **Đã phát hiện các mẫu máy ảnh** - Cột Mẫu máy ảnh hiển thị các máy ảnh chính xác
+* [ ] **Cài đặt được định cấu hình** - Cài đặt dự án được xem xét và điều chỉnh
+* [ ] **Các chỉ số đã chọn** - Đã thêm các chỉ số đa phổ mong muốn (nếu cần)
+* [ ] **Định dạng xuất đã chọn** - Định dạng đầu ra phù hợp với quy trình làm việc của bạn
 
-{% hint style="info" %}
-**Tip**: Click through a few images in the File Browser to verify they loaded correctly before processing.
+{% gợi ý style="info" %}
+**Mẹo**: Nhấp qua một số hình ảnh trong Trình duyệt tệp để xác minh rằng chúng được tải chính xác trước khi xử lý.
 {% endhint %}
 
 ***
 
-## Starting the Processing
+## Bắt đầu xử lý
 
-### Locate the Start Button
+### Xác định vị trí nút Bắt đầu
 
-The Start/Play button is located in the top header bar of Chloros:
+Nút Bắt đầu/Phát nằm ở thanh tiêu đề trên cùng của Chloros:
 
-* Position: Top center of the window
-* Icon: **Play/Start button** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
-* Status: Button is enabled (bright) when ready to process
+* Vị trí: Trên cùng chính giữa cửa sổ
+* Biểu tượng: **Nút Phát/Bắt đầu** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Trạng thái: Nút được bật (sáng) khi sẵn sàng xử lý
 
-### Click to Start
+### Nhấp để bắt đầu
 
-1. Click the **Play/Start button** in the top header
-2. Processing begins immediately
-3. The button becomes disabled (grayed out) during processing
-4. Progress bar updates, showing processing status
+1. Nhấp vào **Nút Phát/Bắt đầu** ở tiêu đề trên cùng
+2. Quá trình xử lý bắt đầu ngay lập tức
+3. Nút này sẽ bị vô hiệu hóa (chuyển sang màu xám) trong quá trình xử lý
+4. Cập nhật thanh tiến trình, hiển thị trạng thái xử lý
 
-{% hint style="success" %}
-**Processing Started**: Once clicked, Chloros automatically handles all processing steps - target detection, debayering, calibration, index calculation, and export.
+{% gợi ý style="thành công" %}
+**Đã bắt đầu xử lý**: Sau khi nhấp vào, Chloros sẽ tự động xử lý tất cả các bước xử lý - phát hiện mục tiêu, gỡ lỗi, hiệu chỉnh, tính toán chỉ mục và xuất.
 {% endhint %}
 
 ***
 
-## Understanding Processing Modes
+## Tìm hiểu các chế độ xử lý
 
-Chloros operates in two different processing modes depending on your license:
+Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào giấy phép của bạn:
 
-### Free Mode (Sequential Processing)
+### Chế độ miễn phí (Xử lý tuần tự)
 
-**Available to all users**
+**Có sẵn cho tất cả người dùng**
 
-**How it works:**
+**Cách thức hoạt động:**
 
-* Processes images one at a time, sequentially
-* Single-threaded operation
-* Lower memory usage
+* Xử lý tuần tự từng hình ảnh một
+* Hoạt động đơn luồng
+* Sử dụng bộ nhớ thấp hơn
 
-**Progress bar shows 2 stages:**
+**Thanh tiến trình hiển thị 2 giai đoạn:**
 
-1. **Target Detect** - Scanning for calibration targets
-2. **Processing** - Applying calibration and exporting images
+1. **Phát hiện mục tiêu** - Quét các mục tiêu hiệu chỉnh
+2. **Đang xử lý** - Áp dụng hiệu chỉnh và xuất hình ảnh
 
-**Processing time:**
+**Thời gian xử lý:**
 
-* Much slower than Chloros+ parallel mode
-* Suitable for small to medium datasets (< 200 images)
+* Chậm hơn nhiều so với chế độ song song của Chloros+
+* Thích hợp cho bộ dữ liệu vừa và nhỏ (< 200 hình ảnh)
 
-### Chloros+ Mode (Parallel Processing)
+### Chế độ Chloros+ (Xử lý song song)
 
-**Requires Chloros+ license**
+**Yêu cầu giấy phép Chloros+**
 
-**How it works:**
+**Cách thức hoạt động:**
 
-* Processes multiple images simultaneously
-* Multi-threaded operation (up to 16 parallel workers)
-* Utilizes multiple CPU cores
-* Optional GPU (CUDA) acceleration with NVIDIA graphics cards
+* Xử lý nhiều hình ảnh cùng một lúc
+* Hoạt động đa luồng (tối đa 16 công nhân song song)
+* Sử dụng nhiều lõi CPU
+* Tăng tốc GPU (CUDA) tùy chọn với card đồ họa NVIDIA
 
-**Progress bar shows 4 stages:**
+**Thanh tiến trình hiển thị 4 giai đoạn:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining image metadata and preparing pipeline
-3. **Calibrating** - Applying corrections and calibrations
-4. **Exporting** - Saving processed images and indices
+1. **Phát hiện** - Tìm mục tiêu hiệu chuẩn
+2. **Phân tích** - Kiểm tra siêu dữ liệu hình ảnh và chuẩn bị quy trình
+3. **Hiệu chỉnh** - Áp dụng hiệu chỉnh và hiệu chuẩn
+4. **Xuất** - Lưu hình ảnh và chỉ mục đã xử lý
 
-**Progress bar interaction:**
+**Tương tác trên thanh tiến trình:**
 
-* **Hover mouse** over bar to see detailed 4-stage dropdown panel
-* **Click** progress bar to freeze the dropdown panel in place
-* **Click again** to unfreeze and hide panel
+* **Di chuột** qua thanh để xem bảng thả xuống chi tiết 4 giai đoạn
+* **Nhấp vào** thanh tiến trình để cố định bảng thả xuống tại chỗ
+* **Nhấp lại** để mở cố định và ẩn bảng điều khiển
 
-**Processing time:**
+**Thời gian xử lý:**
 
-* Significantly faster than free mode
-* Scales with CPU core count
-* GPU acceleration further improves speed
+* Nhanh hơn đáng kể so với chế độ miễn phí
+* Cân với số lượng lõi CPU
+* Tăng tốc GPU cải thiện hơn nữa tốc độ
 
-{% hint style="info" %}
-**Chloros+ Speed**: Parallel processing can be 5-10x faster than sequential mode for large datasets. A 500-image project that takes 2 hours in free mode may complete in 15-20 minutes with Chloros+.
+{% gợi ý style="info" %}
+**Chloros+ Speed**: Xử lý song song có thể nhanh hơn 5-10 lần so với chế độ tuần tự đối với các tập dữ liệu lớn. Dự án 500 hình ảnh mất 2 giờ ở chế độ miễn phí có thể hoàn thành sau 15-20 phút với Chloros+.
 {% endhint %}
 
 ***
 
-## What Happens During Processing
+## Điều gì xảy ra trong quá trình xử lý
 
-### Stage 1: Target Detection
+### Giai đoạn 1: Phát hiện mục tiêu
 
-**What Chloros does:**
+**Chloros làm gì:**
 
-* Scans marked target images (or all images if none marked)
-* Identifies the 4 calibration panels in each target
-* Extracts reflectance values from target panels
-* Records target timestamps for calibration scheduling
+* Quét hình ảnh mục tiêu được đánh dấu (hoặc tất cả hình ảnh nếu không được đánh dấu)
+* Xác định 4 bảng hiệu chuẩn trong mỗi mục tiêu
+* Trích xuất các giá trị phản xạ từ bảng mục tiêu
+* Ghi lại dấu thời gian mục tiêu để lập kế hoạch hiệu chuẩn
 
-**Duration:** 1-30 seconds (with marked targets), 5-30+ minutes (unmarked)
+**Thời lượng:** 1-30 giây (với mục tiêu được đánh dấu), 5-30+ phút (không được đánh dấu)
 
-### Stage 2: Debayering (RAW Conversion)
+### Giai đoạn 2: Debayering (Chuyển đổi RAW)
 
-**What Chloros does:**
+**Chloros làm gì:**
 
-* Converts RAW Bayer pattern data to full RGB images
-* Applies high-quality demosaicing algorithm
-* Preserves maximum image quality and detail
+* Chuyển đổi dữ liệu mẫu RAW Bayer thành hình ảnh RGB đầy đủ
+* Áp dụng thuật toán demosaicing chất lượng cao
+* Bảo toàn chất lượng hình ảnh và chi tiết tối đa
 
-**Duration:** Varies by image count and CPU speed
+**Thời lượng:** Thay đổi tùy theo số lượng hình ảnh và tốc độ CPU
 
-### Stage 3: Calibration
+### Giai đoạn 3: Hiệu chỉnh
 
-**What Chloros does:**
+**Chloros làm gì:**
 
-* **Vignette correction**: Removes lens darkening at edges
-* **Reflectance calibration**: Normalizes using target reflectance values
-* Applies corrections across all bands/channels
-* Uses appropriate calibration target for each image based on timestamp
+* **Hiệu chỉnh họa tiết**: Loại bỏ vết tối ở các cạnh của ống kính
+* **Hiệu chỉnh độ phản xạ**: Chuẩn hóa bằng cách sử dụng các giá trị phản xạ mục tiêu
+* Áp dụng hiệu chỉnh trên tất cả các băng tần/kênh
+* Sử dụng mục tiêu hiệu chỉnh phù hợp cho từng hình ảnh dựa trên dấu thời gian
 
-**Duration:** Majority of processing time
+**Thời lượng:** Phần lớn thời gian xử lý
 
-### Stage 4: Index Calculation
+### Giai đoạn 4: Tính chỉ số
 
-**What Chloros does:**
+**Chloros làm gì:**
 
-* Calculates configured multispectral indices (NDVI, NDRE, etc.)
-* Applies band math to calibrated images
-* Generates index images for each selected index
+* Tính toán các chỉ số đa phổ được cấu hình (NDVI, NDRE, v.v.)
+* Áp dụng toán học dải cho hình ảnh được hiệu chỉnh
+* Tạo hình ảnh chỉ mục cho từng chỉ mục đã chọn
 
-**Duration:** A few seconds per image
+**Thời lượng:** Một vài giây cho mỗi hình ảnh
 
-### Stage 5: Export
+### Giai đoạn 5: Xuất khẩu
 
-**What Chloros does:**
+**Chloros làm gì:**
 
-* Saves calibrated images in selected format
-* Exports index images with configured LUT colors
-* Writes files to camera model subfolders
-* Preserves original filenames with suffixes
+* Lưu hình ảnh đã hiệu chỉnh ở định dạng đã chọn
+* Xuất hình ảnh chỉ mục với màu LUT được định cấu hình
+* Ghi tập tin vào thư mục con của mẫu máy ảnh
+* Giữ nguyên tên tập tin gốc có hậu tố
 
-**Duration:** Varies by export format and file size
+**Thời lượng:** Thay đổi tùy theo định dạng xuất và kích thước tệp
 
 ***
 
-## Processing Behavior
+## Hành vi xử lý
 
-### Automatic Processing Pipeline
+### Đường ống xử lý tự động
 
-Once started, the entire pipeline runs automatically:
+Sau khi bắt đầu, toàn bộ quy trình sẽ tự động chạy:
 
-* No user interaction needed
-* All configured steps execute in sequence
-* Progress updates shown in real-time
+* Không cần sự tương tác của người dùng
+* Tất cả các bước cấu hình thực hiện theo trình tự
+* Cập nhật tiến độ được hiển thị trong thời gian thực
 
-### Computer Usage During Processing
+### Sử dụng máy tính trong quá trình xử lý
 
-**Free Mode:**
+**Chế độ miễn phí:**
 
-* Relatively low CPU usage (single-threaded)
-* Computer remains responsive for other tasks
-* Safe to minimize Chloros and work in other applications
+* Sử dụng CPU tương đối thấp (đơn luồng)
+* Máy tính vẫn đáp ứng các tác vụ khác
+* An toàn để giảm thiểu Cloros và hoạt động trong các ứng dụng khác
 
-**Chloros+ Parallel Mode:**
+**Chloros+ Chế độ song song:**
 
-* High CPU usage (multi-threaded, up to 16 cores)
-* With GPU acceleration: High GPU usage
-* Computer may be less responsive during processing
-* Avoid starting other CPU-intensive tasks
+* Mức sử dụng CPU cao (đa luồng, tối đa 16 lõi)
+* Với khả năng tăng tốc GPU: Mức sử dụng GPU cao
+* Máy tính có thể phản hồi kém hơn trong quá trình xử lý
+* Tránh bắt đầu các tác vụ ngốn CPU khác
 
-{% hint style="warning" %}
-**Performance Tip**: For best Chloros+ performance, close other applications and let Chloros use full system resources.
+{% gợi ý style="warning" %}
+**Mẹo về hiệu suất**: Để có hiệu suất Chloros+ tốt nhất, hãy đóng các ứng dụng khác và để Chloros sử dụng toàn bộ tài nguyên hệ thống.
 {% endhint %}
 
-### Processing Cannot Be Paused
+### Không thể tạm dừng quá trình xử lý
 
-**Important limitations:**
+**Những hạn chế quan trọng:**
 
-* Once started, processing cannot be paused
-* You can cancel processing, but progress is lost
-* Partial results are not saved
-* Must restart from beginning if canceled
+* Sau khi bắt đầu, quá trình xử lý không thể bị tạm dừng
+* Bạn có thể hủy quá trình xử lý nhưng tiến trình sẽ bị mất
+* Kết quả một phần không được lưu
+* Phải khởi động lại từ đầu nếu bị hủy
 
-**Planning tip:** For very large projects, consider processing in batches or using CLI for better control.
-
-***
-
-## Monitoring Your Processing
-
-While processing runs, you can:
-
-* **Watch progress bar** - See overall completion percentage
-* **View current stage** - Detect, Analyze, Calibrate, or Export
-* **Check log tab** - See detailed processing messages and warnings
-* **Preview completed images** - Some export files may appear during processing
-
-For detailed information on monitoring, see [Monitoring the Processing](monitoring-the-processing.md).
+**Mẹo lập kế hoạch:** Đối với các dự án rất lớn, hãy cân nhắc xử lý theo đợt hoặc sử dụng CLI để kiểm soát tốt hơn.
 
 ***
 
-## Canceling Processing
+## Giám sát quá trình xử lý của bạn
 
-If you need to stop processing:
+Trong khi chạy quá trình xử lý, bạn có thể:
 
-### How to Cancel
+* **Xem thanh tiến trình** - Xem phần trăm hoàn thành tổng thể
+* **Xem giai đoạn hiện tại** - Phát hiện, Phân tích, Hiệu chỉnh hoặc Xuất
+* **Kiểm tra tab nhật ký** - Xem các thông báo và cảnh báo xử lý chi tiết
+* **Xem trước hình ảnh đã hoàn thành** - Một số tệp xuất có thể xuất hiện trong quá trình xử lý
 
-1. Locate the **Stop/Cancel button** (replaces Start button during processing)
-2. Click the Stop button
-3. Processing halts immediately
-4. Partial results are discarded
+Để biết thông tin chi tiết về giám sát, hãy xem [Giám sát quá trình xử lý](monitoring-the-processing.md).
 
-### When to Cancel
+***
 
-**Valid reasons to cancel:**
+## Đang hủy xử lý
 
-* Realized incorrect settings were used
-* Forgot to mark target images
-* Wrong images imported
-* System running too slow or unresponsive
+Nếu bạn cần dừng xử lý:
 
-**After canceling:**
+### Cách hủy
 
-* Review and fix any issues
-* Adjust settings as needed
-* Restart processing from the beginning
-* For the cleanest experience, completely close Chloros and restart
+1. Xác định vị trí **Nút Dừng/Hủy** (thay thế nút Bắt đầu trong quá trình xử lý)
+2. Nhấp vào nút Dừng
+3. Quá trình xử lý dừng ngay lập tức
+4. Kết quả một phần bị loại bỏ
 
-{% hint style="warning" %}
-**No Partial Results**: Canceling discards all progress. Chloros does not save partially processed images.
+### Khi nào nên hủy
+
+**Lý do hợp lệ để hủy:**
+
+* Nhận thấy cài đặt không chính xác đã được sử dụng
+* Quên đánh dấu hình ảnh mục tiêu
+* Hình ảnh được nhập sai
+* Hệ thống chạy quá chậm hoặc không phản hồi
+
+**Sau khi hủy:**
+
+* Xem xét và khắc phục mọi sự cố
+* Điều chỉnh cài đặt khi cần thiết
+* Khởi động lại quá trình xử lý từ đầu
+* Để có trải nghiệm sạch nhất, hãy đóng hoàn toàn Chloros và khởi động lại
+
+{% gợi ý style="warning" %}
+**Không có kết quả một phần**: Việc hủy sẽ loại bỏ tất cả tiến trình. Cloros không lưu hình ảnh được xử lý một phần.
 {% endhint %}
 
 ***
 
-## Processing Time Estimates
+## Ước tính thời gian xử lý
 
-Actual processing time varies greatly based on:
+Thời gian xử lý thực tế thay đổi rất nhiều dựa trên:
 
-* Number of images
-* Image resolution
-* RAW vs JPG input format
-* Processing mode (Free vs Chloros+)
-* CPU speed and core count
-* GPU availability (Chloros+ only)
-* Number of indices to calculate
-* Export format complexity
+* Số lượng hình ảnh
+* Độ phân giải hình ảnh
+* Định dạng đầu vào RAW và JPG
+* Chế độ xử lý (Miễn phí so với Chloros+)
+* Tốc độ CPU và số lượng lõi
+* Tính khả dụng của GPU (chỉ Cloros+)
+* Số chỉ số cần tính
+* Độ phức tạp của định dạng xuất
 
-### Rough Estimates (Chloros+, 12MP images, modern CPU)
+### Ước tính sơ bộ (Chloros+, hình ảnh 12MP, CPU hiện đại)
 
-| Image Count | Free Mode | Chloros+ (CPU) | Chloros+ (GPU) |
+| Đếm Hình Ảnh | Chế độ miễn phí | Cloros+ (CPU) | Cloros+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
-| 50 images   | 15-20 min | 5-8 min        | 3-5 min        |
-| 100 images  | 30-40 min | 10-15 min      | 5-8 min        |
-| 200 images  | 1-1.5 hrs | 20-30 min      | 10-15 min      |
-| 500 images  | 2-3 hrs   | 45-60 min      | 20-30 min      |
-| 1000 images | 4-6 hrs   | 1.5-2 hrs      | 40-60 min      |
+| 50 hình ảnh | 15-20 phút | 5-8 phút | 3-5 phút |
+| 100 hình ảnh | 30-40 phút | 10-15 phút | 5-8 phút |
+| 200 hình ảnh | 1-1,5 giờ | 20-30 phút | 10-15 phút |
+| 500 hình ảnh | 2-3 giờ | 45-60 phút | 20-30 phút |
+| 1000 hình ảnh | 4-6 giờ | 1,5-2 giờ | 40-60 phút |
 
-{% hint style="info" %}
-**First Run**: Initial processing may take longer as Chloros builds caches and profiles. Subsequent processing of similar datasets will be faster.
+{% gợi ý style="info" %}
+**Lần đầu tiên**: Quá trình xử lý ban đầu có thể mất nhiều thời gian hơn do Chloros xây dựng bộ nhớ đệm và cấu hình. Việc xử lý các tập dữ liệu tương tự sau đó sẽ nhanh hơn.
 {% endhint %}
 
 ***
 
-## Common Issues at Start
+## Các vấn đề thường gặp khi bắt đầu
 
-### Start Button Disabled (Grayed Out)
+### Nút Bắt đầu bị vô hiệu hóa (Chuyển sang màu xám)
 
-**Possible causes:**
+**Nguyên nhân có thể:**
 
-* No images imported
-* Backend not fully started
-* Previous processing still running
-* Project not fully loaded
+* Không có hình ảnh được nhập
+* Phần phụ trợ chưa bắt đầu đầy đủ
+* Quá trình xử lý trước đó vẫn đang chạy
+* Dự án chưa được tải đầy đủ
 
-**Solutions:**
+**Giải pháp:**
 
-1. Wait for backend to fully initialize (check main menu icon)
-2. Verify images are imported in File Browser
-3. Restart Chloros if button remains disabled
-4. Check Debug Log for error messages
+1. Đợi phần phụ trợ khởi chạy hoàn toàn (kiểm tra biểu tượng menu chính)
+2. Xác minh hình ảnh được nhập vào File Browser
+3. Khởi động lại Chloros nếu nút vẫn bị tắt
+4. Kiểm tra Nhật ký gỡ lỗi để biết thông báo lỗi
 
-### Processing Starts Then Immediately Fails
+### Quá trình bắt đầu rồi thất bại ngay lập tức
 
-**Possible causes:**
+**Nguyên nhân có thể:**
 
-* No valid images in project
-* Corrupted image files
-* Insufficient disk space
-* Insufficient memory (RAM)
+* Không có hình ảnh hợp lệ trong dự án
+* Tệp hình ảnh bị hỏng
+* Dung lượng đĩa không đủ
+* Không đủ bộ nhớ (RAM)
 
-**Solutions:**
+**Giải pháp:**
 
-1. Check Debug Log <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> for error messages
-2. Verify disk space available
-3. Try processing a smaller subset of images
-4. Verify images are not corrupted
+1. Kiểm tra Nhật ký gỡ lỗi <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> để biết thông báo lỗi
+2. Xác minh dung lượng đĩa trống
+3. Thử xử lý một tập hợp con hình ảnh nhỏ hơn
+4. Xác minh hình ảnh không bị hỏng
 
-### "No Targets Detected" Warning
+### Cảnh báo "Không phát hiện mục tiêu"
 
-**Possible causes:**
+**Nguyên nhân có thể:**
 
-* Forgot to mark target images
-* Target images don't contain visible targets
-* Target detection settings too strict
+* Quên đánh dấu hình ảnh mục tiêu
+* Hình ảnh mục tiêu không chứa mục tiêu hiển thị
+* Cài đặt phát hiện mục tiêu quá nghiêm ngặt
 
-**Solutions:**
+**Giải pháp:**
 
-1. Review [Choosing Target Images](choosing-target-images.md)
-2. Mark appropriate images in Target column
-3. Verify targets are visible in marked images
-4. Adjust target detection settings if needed
-
-***
-
-## Tips for Successful Processing
-
-### Before Starting
-
-1. **Test with small subset first** - Process 10-20 images to verify settings
-2. **Check available disk space** - Ensure 2-3x dataset size free
-3. **Close unnecessary applications** - Free up system resources
-4. **Verify target images** - Preview marked targets to ensure quality
-5. **Save project** - Project auto-saves, but good practice to save manually
-
-### During Processing
-
-1. **Avoid system sleep** - Disable power saving modes
-2. **Keep Chloros in foreground** - Or at least visible in taskbar
-3. **Monitor progress occasionally** - Check for warnings or errors
-4. **Don't load other heavy applications** - Especially with Chloros+ parallel mode
-
-### Chloros+ GPU Acceleration
-
-If using NVIDIA GPU acceleration:
-
-1. Update NVIDIA drivers to latest version
-2. Ensure GPU has 4GB+ VRAM
-3. Close GPU-intensive applications (games, video editing)
-4. Monitor GPU temperature (ensure adequate cooling)
+1. Xem lại [Chọn ảnh mục tiêu](chọn-target-images.md)
+2. Đánh dấu hình ảnh phù hợp vào cột Target
+3. Xác minh mục tiêu hiển thị trong hình ảnh được đánh dấu
+4. Điều chỉnh cài đặt phát hiện mục tiêu nếu cần
 
 ***
 
-## Next Steps
+## Mẹo để xử lý thành công
 
-Once processing has started:
+### Trước khi bắt đầu
 
-1. **Monitor the progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-2. **Wait for completion** - Processing runs automatically
-3. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
+1. **Thử nghiệm với tập hợp con nhỏ trước** - Xử lý 10-20 hình ảnh để xác minh cài đặt
+2. **Kiểm tra dung lượng đĩa trống** - Đảm bảo kích thước tập dữ liệu miễn phí 2-3x
+3. **Đóng các ứng dụng không cần thiết** - Giải phóng tài nguyên hệ thống
+4. **Xác minh hình ảnh mục tiêu** - Xem trước mục tiêu được đánh dấu để đảm bảo chất lượng
+5. **Lưu dự án** - Dự án tự động lưu nhưng cách tốt nhất là lưu thủ công
 
-For information about what to do during processing, see [Monitoring the Processing](monitoring-the-processing.md).
+### Trong quá trình xử lý
+
+1. **Tránh chế độ ngủ của hệ thống** - Tắt chế độ tiết kiệm năng lượng
+2. **Giữ Chloros ở nền trước** - Hoặc ít nhất là hiển thị trên thanh tác vụ
+3. **Thỉnh thoảng theo dõi tiến trình** - Kiểm tra các cảnh báo hoặc lỗi
+4. **Không tải các ứng dụng nặng khác** - Đặc biệt có chế độ song song Chloros+
+
+### Tăng tốc GPU + Chloros
+
+Nếu sử dụng khả năng tăng tốc GPU NVIDIA:
+
+1. Cập nhật trình điều khiển NVIDIA lên phiên bản mới nhất
+2. Đảm bảo GPU có 4GB+ VRAM
+3. Đóng các ứng dụng sử dụng nhiều GPU (game, chỉnh sửa video)
+4. Theo dõi nhiệt độ GPU (đảm bảo làm mát đầy đủ)
+
+***
+
+## Các bước tiếp theo
+
+Khi quá trình xử lý đã bắt đầu:
+
+1. **Theo dõi tiến trình** - Xem [Theo dõi quá trình xử lý](monitoring-the-processing.md)
+2. **Chờ hoàn thành** - Quá trình xử lý diễn ra tự động
+3. **Xem lại kết quả** - Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
+
+Để biết thông tin về những việc cần làm trong quá trình xử lý, hãy xem [Giám sát quá trình xử lý](monitoring-the-processing.md).

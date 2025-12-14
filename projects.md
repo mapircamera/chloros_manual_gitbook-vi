@@ -1,17 +1,17 @@
-# GUI : Projects
+# GUI : Dự án
 
-Chloros allows you to create projects which can be reopened in the future.
+Chloros cho phép bạn tạo các dự án có thể mở lại trong tương lai.
 
-## New Project
+##Dự án mới
 
 <figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "New Project" from the main menu and enter a unique name for your project.
+Chọn "Dự án mới" từ menu chính và nhập tên duy nhất cho dự án của bạn.
 
-## Open Project
+## Mở dự án
 
 <figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "Open Project" to see a list of existing projects in the Project Folder. If no projects exist the secondary side menu will not open. You can see some GUI created projects (t1, t2, t3) listed in the above photo. The DATE\_TIME projects were created by the CLI using the default project naming scheme. Clicking any project name will open it.
+Chọn "Mở dự án" để xem danh sách các dự án hiện có trong Thư mục dự án. Nếu không có dự án nào tồn tại, menu bên phụ sẽ không mở. Bạn có thể thấy một số dự án được tạo bằng GUI (t1, t2, t3) được liệt kê trong ảnh trên. Các dự án DATE\_TIME được CLI tạo bằng cách sử dụng sơ đồ đặt tên dự án mặc định. Nhấp vào bất kỳ tên dự án nào sẽ mở nó.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/project-settings.md).
+Nhấp vào nút "Mở thư mục dự án" sẽ mở trình khám phá tệp trên máy tính của bạn tại đường dẫn dự án. Bạn có thể điều chỉnh đường dẫn dự án trong [Cài đặt dự án](project-settings/project-settings.md).
