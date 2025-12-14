@@ -41,7 +41,7 @@ Không. Bộ dữ liệu hình ảnh Survey3 phải có độ phơi sáng cố �
 
 <details>
 
-<summary>Can Chloros process or analyze orthomosaic images?</summary>
+<summary>Cloros có thể xử lý hoặc phân tích hình ảnh trực giao không?</summary>
 
 Không. Chỉ hỗ trợ các hình ảnh camera MAPIR riêng lẻ, không hỗ trợ các hình ảnh được ghép lại như bản đồ trực giao.
 
@@ -49,7 +49,7 @@ Không. Chỉ hỗ trợ các hình ảnh camera MAPIR riêng lẻ, không hỗ 
 
 <details>
 
-<summary>How can I speed up the target detection step of Chloros?</summary>
+<summary>Làm cách nào để tăng tốc bước phát hiện mục tiêu của Chloros?</summary>
 
 Trong bảng trình duyệt tệp, việc chọn trước các hình ảnh mục tiêu ở cột bên phải sẽ yêu cầu Chloros chỉ xem các mục tiêu hiệu chỉnh trong những hình ảnh đó, giúp tăng tốc đáng kể quá trình xử lý.
 
@@ -65,7 +65,7 @@ Nếu bạn dự định tải lên nền tảng xử lý trực tuyến [MAPIR 
 
 <details>
 
-<summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
+<summary>MAPIR có bao giờ hỗ trợ tính năng X không? Tôi thực sự mong muốn MAPIR cung cấp X.</summary>
 
 Chúng tôi luôn mong muốn nhận được phản hồi về sản phẩm của mình. Nếu bạn phát hiện vấn đề với sản phẩm của chúng tôi hoặc có đề xuất về cách chúng tôi có thể cải thiện sản phẩm của mình, vui lòng [LIÊN HỆ VỚI CHÚNG TÔI](https://www.mapir.camera/community/contact) để chia sẻ suy nghĩ của bạn. Hầu hết hoạt động R\&D của chúng tôi đều được hướng dẫn bằng cách lắng nghe những nhu cầu lớn nhất của khách hàng.
 
