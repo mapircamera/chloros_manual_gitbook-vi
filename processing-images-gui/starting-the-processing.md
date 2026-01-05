@@ -1,290 +1,366 @@
-# Bắt đầu xử lý
+# Starting the Processing
 
-Khi bạn đã nhập hình ảnh của mình, đánh dấu các mục tiêu hiệu chỉnh và định cấu hình cài đặt dự án của mình, bạn đã sẵn sàng bắt đầu xử lý. Trang này hướng dẫn bạn cách bắt đầu quy trình xử lý Chloros.
+Once you've imported your images, marked your calibration targets, and configured your project settings, you're ready to begin processing. This page guides you through initiating the Chloros processing pipeline.
 
-## Danh sách kiểm tra trước khi xử lý
+## Pre-Processing Checklist
 
-Trước khi nhấp vào nút Bắt đầu, hãy xác minh rằng mọi thứ đã sẵn sàng:
+Before clicking the Start button, verify that everything is ready:
 
-* [ ] **Tệp đã nhập** - Tất cả hình ảnh xuất hiện trong Trình duyệt tệp
-* [ ] **Hình ảnh mục tiêu được đánh dấu** - Cột mục tiêu đã được kiểm tra để hiệu chỉnh hình ảnh
-* [ ] **Đã phát hiện các mẫu máy ảnh** - Cột Mẫu máy ảnh hiển thị các máy ảnh chính xác
-* [ ] **Cài đặt được định cấu hình** - Cài đặt dự án được xem xét và điều chỉnh
-* [ ] **Các chỉ số đã chọn** - Đã thêm các chỉ số đa phổ mong muốn (nếu cần)
-* [ ] **Định dạng xuất đã chọn**- Định dạng đầu ra phù hợp với quy trình làm việc của bạn
-
-{% hint style="info" %}**Mẹo**: Nhấp qua một số hình ảnh trong Trình duyệt tệp để xác minh rằng chúng được tải chính xác trước khi xử lý.
-{% endhint %}***
-
-## Bắt đầu xử lý
-
-### Xác định vị trí nút Bắt đầu
-
-Nút Bắt đầu/Phát nằm ở thanh tiêu đề trên cùng của Chloros:
-
-* Vị trí: Trên cùng chính giữa cửa sổ
-* Biểu tượng: **Nút Phát/Bắt đầu** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
-* Trạng thái: Nút được bật (sáng) khi sẵn sàng xử lý
-
-### Nhấp để bắt đầu
-
-1. Nhấp vào **Nút Phát/Bắt đầu**ở tiêu đề trên cùng
-2. Quá trình xử lý bắt đầu ngay lập tức
-3. Nút này sẽ bị vô hiệu hóa (chuyển sang màu xám) trong quá trình xử lý
-4. Cập nhật thanh tiến trình, hiển thị trạng thái xử lý
-
-{% hint style="success" %}**Đã bắt đầu xử lý**: Sau khi nhấp vào, Chloros sẽ tự động xử lý tất cả các bước xử lý - phát hiện mục tiêu, gỡ lỗi, hiệu chỉnh, tính toán chỉ mục và xuất.
-{% endhint %}***## Tìm hiểu các chế độ xử lý
-
-Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào giấy phép của bạn:
-
-### Chế độ miễn phí (Xử lý tuần tự)**Có sẵn cho tất cả người dùng** **Cách thức hoạt động:**
-
-* Xử lý tuần tự từng hình ảnh một
-* Hoạt động đơn luồng
-* Sử dụng bộ nhớ thấp hơn
-
-**Thanh tiến trình hiển thị 2 giai đoạn:**1.**Phát hiện mục tiêu**- Quét các mục tiêu hiệu chỉnh
-2.**Đang xử lý**- Áp dụng hiệu chỉnh và xuất hình ảnh**Thời gian xử lý:**
-
-* Chậm hơn nhiều so với chế độ song song của Chloros+
-* Thích hợp cho bộ dữ liệu vừa và nhỏ (< 200 hình ảnh)
-
-### Chế độ Chloros+ (Xử lý song song)
-
-**Yêu cầu giấy phép Chloros+** **Cách thức hoạt động:**
-
-* Xử lý nhiều hình ảnh cùng một lúc
-* Hoạt động đa luồng (tối đa 16 công nhân song song)
-* Sử dụng nhiều lõi CPU
-* Tăng tốc GPU (CUDA) tùy chọn với card đồ họa NVIDIA
-
-**Thanh tiến trình hiển thị 4 giai đoạn:**1.**Phát hiện**- Tìm mục tiêu hiệu chuẩn
-2.**Phân tích**- Kiểm tra siêu dữ liệu hình ảnh và chuẩn bị quy trình
-3.**Hiệu chỉnh**- Áp dụng hiệu chỉnh và hiệu chuẩn
-4.**Xuất**- Lưu hình ảnh và chỉ mục đã xử lý**Tương tác trên thanh tiến trình:***
-**Di chuột** qua thanh để xem bảng thả xuống chi tiết 4 giai đoạn
-* **Nhấp vào** thanh tiến trình để cố định bảng thả xuống tại chỗ
-* **Nhấp lại**để mở cố định và ẩn bảng điều khiển**Thời gian xử lý:**
-
-* Nhanh hơn đáng kể so với chế độ miễn phí
-* Cân với số lượng lõi CPU
-* Tăng tốc GPU cải thiện hơn nữa tốc độ
+* [ ] **Files imported** - All images appear in File Browser
+* [ ] **Target images marked** - Target column checked for calibration images
+* [ ] **Camera models detected** - Camera Model column shows correct cameras
+* [ ] **Settings configured** - Project Settings reviewed and adjusted
+* [ ] **Indices selected** - Desired multispectral indices added (if needed)
+* [ ] **Export format chosen** - Output format appropriate for your workflow
 
 {% hint style="info" %}
-**Chloros+ Speed**: Xử lý song song có thể nhanh hơn 5-10 lần so với chế độ tuần tự đối với các tập dữ liệu lớn. Dự án 500 hình ảnh mất 2 giờ ở chế độ miễn phí có thể hoàn thành sau 15-20 phút với Chloros+.
-{% endhint %}***## Điều gì xảy ra trong quá trình xử lý
-
-### Giai đoạn 1: Phát hiện mục tiêu**Chloros làm gì:**
-
-* Quét hình ảnh mục tiêu được đánh dấu (hoặc tất cả hình ảnh nếu không được đánh dấu)
-* Xác định 4 bảng hiệu chuẩn trong mỗi mục tiêu
-* Trích xuất các giá trị phản xạ từ bảng mục tiêu
-* Ghi lại dấu thời gian mục tiêu để lập kế hoạch hiệu chuẩn
-
-**Thời lượng:**1-30 giây (với mục tiêu được đánh dấu), 5-30+ phút (không được đánh dấu)
-
-### Giai đoạn 2: Debayering (Chuyển đổi RAW)**Chloros làm gì:**
-
-* Chuyển đổi dữ liệu mẫu RAW Bayer thành hình ảnh RGB đầy đủ
-* Áp dụng thuật toán demosaicing chất lượng cao
-* Bảo toàn chất lượng hình ảnh và chi tiết tối đa
-
-**Thời lượng:**Thay đổi tùy theo số lượng hình ảnh và tốc độ CPU
-
-### Giai đoạn 3: Hiệu chỉnh**Chloros làm gì:***
-**Hiệu chỉnh họa tiết**: Loại bỏ vết tối ở các cạnh của ống kính
-* **Hiệu chỉnh độ phản xạ**: Chuẩn hóa bằng cách sử dụng các giá trị phản xạ mục tiêu
-* Áp dụng hiệu chỉnh trên tất cả các băng tần/kênh
-* Sử dụng mục tiêu hiệu chỉnh phù hợp cho từng hình ảnh dựa trên dấu thời gian
-
-**Thời lượng:**Phần lớn thời gian xử lý
-
-### Giai đoạn 4: Tính chỉ số**Chloros làm gì:**
-
-* Tính toán các chỉ số đa phổ được cấu hình (NDVI, NDRE, v.v.)
-* Áp dụng toán học dải cho hình ảnh được hiệu chỉnh
-* Tạo hình ảnh chỉ mục cho từng chỉ mục đã chọn
-
-**Thời lượng:**Một vài giây cho mỗi hình ảnh
-
-### Giai đoạn 5: Xuất khẩu**Chloros làm gì:**
-
-* Lưu hình ảnh đã hiệu chỉnh ở định dạng đã chọn
-* Xuất hình ảnh chỉ mục với màu LUT được định cấu hình
-* Ghi tập tin vào thư mục con của mẫu máy ảnh
-* Giữ nguyên tên tập tin gốc có hậu tố
-
-**Thời lượng:**Thay đổi tùy theo định dạng xuất và kích thước tệp***
-
-## Hành vi xử lý
-
-### Đường ống xử lý tự động
-
-Sau khi bắt đầu, toàn bộ quy trình sẽ tự động chạy:
-
-* Không cần sự tương tác của người dùng
-* Tất cả các bước cấu hình thực hiện theo trình tự
-* Cập nhật tiến độ được hiển thị trong thời gian thực
-
-### Sử dụng máy tính trong quá trình xử lý
-
-**Chế độ miễn phí:**
-
-* Sử dụng CPU tương đối thấp (đơn luồng)
-* Máy tính vẫn đáp ứng các tác vụ khác
-* An toàn để giảm thiểu Cloros và hoạt động trong các ứng dụng khác
-
-**Chloros+ Chế độ song song:**
-
-* Mức sử dụng CPU cao (đa luồng, tối đa 16 lõi)
-* Với khả năng tăng tốc GPU: Mức sử dụng GPU cao
-* Máy tính có thể phản hồi kém hơn trong quá trình xử lý
-* Tránh bắt đầu các tác vụ ngốn CPU khác
-
-{% hint style="warning" %}
-**Mẹo về hiệu suất**: Để có hiệu suất Chloros+ tốt nhất, hãy đóng các ứng dụng khác và để Chloros sử dụng toàn bộ tài nguyên hệ thống.
+**Tip**: Click through a few images in the File Browser to verify they loaded correctly before processing.
 {% endhint %}
 
-### Không thể tạm dừng quá trình xử lý**Những hạn chế quan trọng:**
+***
 
-* Sau khi bắt đầu, quá trình xử lý không thể bị tạm dừng
-* Bạn có thể hủy quá trình xử lý nhưng tiến trình sẽ bị mất
-* Kết quả một phần không được lưu
-* Phải khởi động lại từ đầu nếu bị hủy
+## Starting the Processing
 
-**Mẹo lập kế hoạch:**Đối với các dự án rất lớn, hãy cân nhắc xử lý theo đợt hoặc sử dụng CLI để kiểm soát tốt hơn.***
+### Locate the Start Button
 
-## Giám sát quá trình xử lý của bạn
+The Start/Play button is located in the top header bar of Chloros:
 
-Trong khi chạy quá trình xử lý, bạn có thể:
+* Position: Top center of the window
+* Icon: **Play/Start button** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
+* Status: Button is enabled (bright) when ready to process
 
-* **Xem thanh tiến trình** - Xem phần trăm hoàn thành tổng thể
-* **Xem giai đoạn hiện tại** - Phát hiện, Phân tích, Hiệu chỉnh hoặc Xuất
-* **Kiểm tra tab nhật ký** - Xem các thông báo và cảnh báo xử lý chi tiết
-* **Xem trước hình ảnh đã hoàn thành**- Một số tệp xuất có thể xuất hiện trong quá trình xử lý
+### Click to Start
 
-Để biết thông tin chi tiết về giám sát, hãy xem [Giám sát quá trình xử lý](monitoring-the-processing.md).***## Đang hủy xử lý
+1. Click the **Play/Start button** in the top header
+2. Processing begins immediately
+3. The button becomes disabled (grayed out) during processing
+4. Progress bar updates, showing processing status
 
-Nếu bạn cần dừng xử lý:
+{% hint style="success" %}
+**Processing Started**: Once clicked, Chloros automatically handles all processing steps - target detection, debayering, calibration, index calculation, and export.
+{% endhint %}
 
-### Cách hủy
+***
 
-1. Xác định vị trí**Nút Dừng/Hủy**(thay thế nút Bắt đầu trong quá trình xử lý)
-2. Nhấp vào nút Dừng
-3. Quá trình xử lý dừng ngay lập tức
-4. Kết quả một phần bị loại bỏ
+## Understanding Processing Modes
 
-### Khi nào nên hủy**Lý do hợp lệ để hủy:**
+Chloros operates in two different processing modes depending on your license:
 
-* Nhận thấy cài đặt không chính xác đã được sử dụng
-* Quên đánh dấu hình ảnh mục tiêu
-* Hình ảnh được nhập sai
-* Hệ thống chạy quá chậm hoặc không phản hồi
+### Free Mode (Sequential Processing)
 
-**Sau khi hủy:**
+**Available to all users**
 
-* Xem xét và khắc phục mọi sự cố
-* Điều chỉnh cài đặt khi cần thiết
-* Khởi động lại quá trình xử lý từ đầu
-* Để có trải nghiệm sạch nhất, hãy đóng hoàn toàn Chloros và khởi động lại
+**How it works:**
 
-{% hint style="warning" %}
-**Không có kết quả một phần**: Việc hủy sẽ loại bỏ tất cả tiến trình. Cloros không lưu hình ảnh được xử lý một phần.
-{% endhint %}***
+* Processes images one at a time, sequentially
+* Single-threaded operation
+* Lower memory usage
 
-## Ước tính thời gian xử lý
+**Progress bar shows 2 stages:**
 
-Thời gian xử lý thực tế thay đổi rất nhiều dựa trên:
+1. **Target Detect** - Scanning for calibration targets
+2. **Processing** - Applying calibration and exporting images
 
-* Số lượng hình ảnh
-* Độ phân giải hình ảnh
-* Định dạng đầu vào RAW và JPG
-* Chế độ xử lý (Miễn phí so với Chloros+)
-* Tốc độ CPU và số lượng lõi
-* Tính khả dụng của GPU (chỉ Cloros+)
-* Số chỉ số cần tính
-* Độ phức tạp của định dạng xuất
+**Processing time:**
 
-### Ước tính sơ bộ (Chloros+, hình ảnh 12MP, CPU hiện đại)
+* Much slower than Chloros+ parallel mode
+* Suitable for small to medium datasets (< 200 images)
 
-| Đếm Hình Ảnh | Chế độ miễn phí | Cloros+ (CPU) | Cloros+ (GPU) |
-| ----------- | --------- | -------------- | -------------- |
-| 50 hình ảnh | 15-20 phút | 5-8 phút | 3-5 phút |
-| 100 hình ảnh | 30-40 phút | 10-15 phút | 5-8 phút |
-| 200 hình ảnh | 1-1,5 giờ | 20-30 phút | 10-15 phút |
-| 500 hình ảnh | 2-3 giờ | 45-60 phút | 20-30 phút |
-| 1000 hình ảnh | 4-6 giờ | 1,5-2 giờ | 40-60 phút |
+### Chloros+ Mode (Parallel Processing)
+
+**Requires Chloros+ license**
+
+**How it works:**
+
+* Processes multiple images simultaneously
+* Multi-threaded operation (up to 16 parallel workers)
+* Utilizes multiple CPU cores
+* Optional GPU (CUDA) acceleration with NVIDIA graphics cards
+
+**Progress bar shows 4 stages:**
+
+1. **Detecting** - Finding calibration targets
+2. **Analyzing** - Examining image metadata and preparing pipeline
+3. **Calibrating** - Applying corrections and calibrations
+4. **Exporting** - Saving processed images and indices
+
+**Progress bar interaction:**
+
+* **Hover mouse** over bar to see detailed 4-stage dropdown panel
+* **Click** progress bar to freeze the dropdown panel in place
+* **Click again** to unfreeze and hide panel
+
+**Processing time:**
+
+* Significantly faster than free mode
+* Scales with CPU core count
+* GPU acceleration further improves speed
 
 {% hint style="info" %}
-**Lần đầu tiên**: Quá trình xử lý ban đầu có thể mất nhiều thời gian hơn do Chloros xây dựng bộ nhớ đệm và cấu hình. Việc xử lý các tập dữ liệu tương tự sau đó sẽ nhanh hơn.
-{% endhint %}***## Các vấn đề thường gặp khi bắt đầu
+**Chloros+ Speed**: Parallel processing can be 5-10x faster than sequential mode for large datasets. A 500-image project that takes 2 hours in free mode may complete in 15-20 minutes with Chloros+.
+{% endhint %}
 
-### Nút Bắt đầu bị vô hiệu hóa (Chuyển sang màu xám)**Nguyên nhân có thể:**
+***
 
-* Không có hình ảnh được nhập
-* Phần phụ trợ chưa bắt đầu đầy đủ
-* Quá trình xử lý trước đó vẫn đang chạy
-* Dự án chưa được tải đầy đủ
+## What Happens During Processing
 
-**Giải pháp:**1. Đợi phần phụ trợ khởi chạy hoàn toàn (kiểm tra biểu tượng menu chính)
-2. Xác minh hình ảnh được nhập vào File Browser
-3. Khởi động lại Chloros nếu nút vẫn bị tắt
-4. Kiểm tra Nhật ký gỡ lỗi để biết thông báo lỗi
+### Stage 1: Target Detection
 
-### Quá trình bắt đầu rồi thất bại ngay lập tức**Nguyên nhân có thể:**
+**What Chloros does:**
 
-* Không có hình ảnh hợp lệ trong dự án
-* Tệp hình ảnh bị hỏng
-* Dung lượng đĩa không đủ
-* Không đủ bộ nhớ (RAM)
+* Scans marked target images (or all images if none marked)
+* Identifies the 4 calibration panels in each target
+* Extracts reflectance values from target panels
+* Records target timestamps for calibration scheduling
 
-**Giải pháp:**1. Kiểm tra Nhật ký gỡ lỗi <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> để biết thông báo lỗi
-2. Xác minh dung lượng đĩa trống
-3. Thử xử lý một tập hợp con hình ảnh nhỏ hơn
-4. Xác minh hình ảnh không bị hỏng
+**Duration:** 1-30 seconds (with marked targets), 5-30+ minutes (unmarked)
 
-### Cảnh báo "Không phát hiện mục tiêu"**Nguyên nhân có thể:**
+### Stage 2: Debayering (RAW Conversion)
 
-* Quên đánh dấu hình ảnh mục tiêu
-* Hình ảnh mục tiêu không chứa mục tiêu hiển thị
-* Cài đặt phát hiện mục tiêu quá nghiêm ngặt
+**What Chloros does:**
 
-**Giải pháp:**1. Xem lại [Chọn ảnh mục tiêu](chọn-target-images.md)
-2. Đánh dấu hình ảnh phù hợp vào cột Target
-3. Xác minh mục tiêu hiển thị trong hình ảnh được đánh dấu
-4. Điều chỉnh cài đặt phát hiện mục tiêu nếu cần***
+* Converts RAW Bayer pattern data to full RGB images
+* Applies high-quality demosaicing algorithm
+* Preserves maximum image quality and detail
 
-## Mẹo để xử lý thành công
+**Duration:** Varies by image count and CPU speed
 
-### Trước khi bắt đầu
+### Stage 3: Calibration
 
-1.**Thử nghiệm với tập hợp con nhỏ trước**- Xử lý 10-20 hình ảnh để xác minh cài đặt
-2.**Kiểm tra dung lượng đĩa trống**- Đảm bảo kích thước tập dữ liệu miễn phí 2-3x
-3.**Đóng các ứng dụng không cần thiết**- Giải phóng tài nguyên hệ thống
-4.**Xác minh hình ảnh mục tiêu**- Xem trước mục tiêu được đánh dấu để đảm bảo chất lượng
-5.**Lưu dự án**- Dự án tự động lưu nhưng cách tốt nhất là lưu thủ công
+**What Chloros does:**
 
-### Trong quá trình xử lý
+* **Vignette correction**: Removes lens darkening at edges
+* **Reflectance calibration**: Normalizes using target reflectance values
+* Applies corrections across all bands/channels
+* Uses appropriate calibration target for each image based on timestamp
 
-1.**Tránh chế độ ngủ của hệ thống**- Tắt chế độ tiết kiệm năng lượng
-2.**Giữ Chloros ở nền trước**- Hoặc ít nhất là hiển thị trên thanh tác vụ
-3.**Thỉnh thoảng theo dõi tiến trình**- Kiểm tra các cảnh báo hoặc lỗi
-4.**Không tải các ứng dụng nặng khác**- Đặc biệt có chế độ song song Chloros+
+**Duration:** Majority of processing time
 
-### Tăng tốc GPU + Chloros
+### Stage 4: Index Calculation
 
-Nếu sử dụng khả năng tăng tốc GPU NVIDIA:
+**What Chloros does:**
 
-1. Cập nhật trình điều khiển NVIDIA lên phiên bản mới nhất
-2. Đảm bảo GPU có 4GB+ VRAM
-3. Đóng các ứng dụng sử dụng nhiều GPU (game, chỉnh sửa video)
-4. Theo dõi nhiệt độ GPU (đảm bảo làm mát đầy đủ)***## Các bước tiếp theo
+* Calculates configured multispectral indices (NDVI, NDRE, etc.)
+* Applies band math to calibrated images
+* Generates index images for each selected index
 
-Khi quá trình xử lý đã bắt đầu:
+**Duration:** A few seconds per image
 
-1.**Theo dõi tiến trình**- Xem [Theo dõi quá trình xử lý](monitoring-the-processing.md)
-2.**Chờ hoàn thành**- Quá trình xử lý diễn ra tự động
-3.**Xem lại kết quả** - Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
+### Stage 5: Export
 
-Để biết thông tin về những việc cần làm trong quá trình xử lý, hãy xem [Giám sát quá trình xử lý](monitoring-the-processing.md).
+**What Chloros does:**
+
+* Saves calibrated images in selected format
+* Exports index images with configured LUT colors
+* Writes files to camera model subfolders
+* Preserves original filenames with suffixes
+
+**Duration:** Varies by export format and file size
+
+***
+
+## Processing Behavior
+
+### Automatic Processing Pipeline
+
+Once started, the entire pipeline runs automatically:
+
+* No user interaction needed
+* All configured steps execute in sequence
+* Progress updates shown in real-time
+
+### Computer Usage During Processing
+
+**Free Mode:**
+
+* Relatively low CPU usage (single-threaded)
+* Computer remains responsive for other tasks
+* Safe to minimize Chloros and work in other applications
+
+**Chloros+ Parallel Mode:**
+
+* High CPU usage (multi-threaded, up to 16 cores)
+* With GPU acceleration: High GPU usage
+* Computer may be less responsive during processing
+* Avoid starting other CPU-intensive tasks
+
+{% hint style="warning" %}
+**Performance Tip**: For best Chloros+ performance, close other applications and let Chloros use full system resources.
+{% endhint %}
+
+### Processing Cannot Be Paused
+
+**Important limitations:**
+
+* Once started, processing cannot be paused
+* You can cancel processing, but progress is lost
+* Partial results are not saved
+* Must restart from beginning if canceled
+
+**Planning tip:** For very large projects, consider processing in batches or using CLI for better control.
+
+***
+
+## Monitoring Your Processing
+
+While processing runs, you can:
+
+* **Watch progress bar** - See overall completion percentage
+* **View current stage** - Detect, Analyze, Calibrate, or Export
+* **Check log tab** - See detailed processing messages and warnings
+* **Preview completed images** - Some export files may appear during processing
+
+For detailed information on monitoring, see [Monitoring the Processing](monitoring-the-processing.md).
+
+***
+
+## Canceling Processing
+
+If you need to stop processing:
+
+### How to Cancel
+
+1. Locate the **Stop/Cancel button** (replaces Start button during processing)
+2. Click the Stop button
+3. Processing halts immediately
+4. Partial results are discarded
+
+### When to Cancel
+
+**Valid reasons to cancel:**
+
+* Realized incorrect settings were used
+* Forgot to mark target images
+* Wrong images imported
+* System running too slow or unresponsive
+
+**After canceling:**
+
+* Review and fix any issues
+* Adjust settings as needed
+* Restart processing from the beginning
+* For the cleanest experience, completely close Chloros and restart
+
+{% hint style="warning" %}
+**No Partial Results**: Canceling discards all progress. Chloros does not save partially processed images.
+{% endhint %}
+
+***
+
+## Processing Time Estimates
+
+Actual processing time varies greatly based on:
+
+* Number of images
+* Image resolution
+* RAW vs JPG input format
+* Processing mode (Free vs Chloros+)
+* CPU speed and core count
+* GPU availability (Chloros+ only)
+* Number of indices to calculate
+* Export format complexity
+
+### Rough Estimates (Chloros+, 12MP images, modern CPU)
+
+| Image Count | Free Mode | Chloros+ (CPU) | Chloros+ (GPU) |
+| ----------- | --------- | -------------- | -------------- |
+| 50 images   | 15-20 min | 5-8 min        | 3-5 min        |
+| 100 images  | 30-40 min | 10-15 min      | 5-8 min        |
+| 200 images  | 1-1.5 hrs | 20-30 min      | 10-15 min      |
+| 500 images  | 2-3 hrs   | 45-60 min      | 20-30 min      |
+| 1000 images | 4-6 hrs   | 1.5-2 hrs      | 40-60 min      |
+
+{% hint style="info" %}
+**First Run**: Initial processing may take longer as Chloros builds caches and profiles. Subsequent processing of similar datasets will be faster.
+{% endhint %}
+
+***
+
+## Common Issues at Start
+
+### Start Button Disabled (Grayed Out)
+
+**Possible causes:**
+
+* No images imported
+* Backend not fully started
+* Previous processing still running
+* Project not fully loaded
+
+**Solutions:**
+
+1. Wait for backend to fully initialize (check main menu icon)
+2. Verify images are imported in File Browser
+3. Restart Chloros if button remains disabled
+4. Check Debug Log for error messages
+
+### Processing Starts Then Immediately Fails
+
+**Possible causes:**
+
+* No valid images in project
+* Corrupted image files
+* Insufficient disk space
+* Insufficient memory (RAM)
+
+**Solutions:**
+
+1. Check Debug Log <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> for error messages
+2. Verify disk space available
+3. Try processing a smaller subset of images
+4. Verify images are not corrupted
+
+### "No Targets Detected" Warning
+
+**Possible causes:**
+
+* Forgot to mark target images
+* Target images don't contain visible targets
+* Target detection settings too strict
+
+**Solutions:**
+
+1. Review [Choosing Target Images](choosing-target-images.md)
+2. Mark appropriate images in Target column
+3. Verify targets are visible in marked images
+4. Adjust target detection settings if needed
+
+***
+
+## Tips for Successful Processing
+
+### Before Starting
+
+1. **Test with small subset first** - Process 10-20 images to verify settings
+2. **Check available disk space** - Ensure 2-3x dataset size free
+3. **Close unnecessary applications** - Free up system resources
+4. **Verify target images** - Preview marked targets to ensure quality
+5. **Save project** - Project auto-saves, but good practice to save manually
+
+### During Processing
+
+1. **Avoid system sleep** - Disable power saving modes
+2. **Keep Chloros in foreground** - Or at least visible in taskbar
+3. **Monitor progress occasionally** - Check for warnings or errors
+4. **Don't load other heavy applications** - Especially with Chloros+ parallel mode
+
+### Chloros+ GPU Acceleration
+
+If using NVIDIA GPU acceleration:
+
+1. Update NVIDIA drivers to latest version
+2. Ensure GPU has 4GB+ VRAM
+3. Close GPU-intensive applications (games, video editing)
+4. Monitor GPU temperature (ensure adequate cooling)
+
+***
+
+## Next Steps
+
+Once processing has started:
+
+1. **Monitor the progress** - See [Monitoring the Processing](monitoring-the-processing.md)
+2. **Wait for completion** - Processing runs automatically
+3. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
+
+For information about what to do during processing, see [Monitoring the Processing](monitoring-the-processing.md).
