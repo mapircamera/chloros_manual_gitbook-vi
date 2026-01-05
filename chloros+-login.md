@@ -6,7 +6,7 @@ Menu thanh bên <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"
 
 Khi đăng nhập thông tin tài khoản của bạn sẽ được hiển thị:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>
 
 ## Đăng nhập CLI
 
