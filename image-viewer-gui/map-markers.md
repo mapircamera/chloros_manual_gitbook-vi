@@ -88,7 +88,7 @@ The Map tab supports two tile providers for the background map imagery:
 
 You can choose the map layer type (from left to right):
 
-&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="line">
+&#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
 
 ### Terrain
 
