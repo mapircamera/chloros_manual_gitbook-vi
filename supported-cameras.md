@@ -1,7 +1,7 @@
 ---
 metaLinks:
-  thay thế:
-    - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/supported-Cameras
+  alternates:
+    - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/supported-cameras
 ---
 
 # Máy ảnh được hỗ trợ

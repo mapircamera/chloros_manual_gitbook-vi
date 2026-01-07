@@ -1,7 +1,7 @@
 ---
 mô tả: Bảng đo trong phòng thí nghiệm được sử dụng để hiệu chỉnh dữ liệu đã ghi trong quá trình xử lý hậu kỳ
 liên kết meta:
-  thay thế:
+  alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets
 ---
 

@@ -1,7 +1,7 @@
 ---
 mô tả: Câu hỏi thường gặp
 liên kết meta:
-  thay thế:
+  alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
 ---
 
@@ -11,7 +11,7 @@ liên kết meta:
 
 <summary>Tôi có thể xử lý hình ảnh từ máy ảnh không phải nhãn hiệu MAPIR bằng Chloros không?</summary>
 
-Không, Chloros chỉ hỗ trợ xử lý hình ảnh camera MAPIR. Vui lòng xem danh sách [các mẫu máy ảnh được hỗ trợ](supported-Cameras.md) để biết thêm thông tin. Chúng tôi cung cấp dịch vụ xử lý các camera khác trên Đám mây MAPIR, xem danh sách đầy đủ [tại đây](https://mapir.gitbook.io/mapir-cloud/supported-Cameras).
+Không, Chloros chỉ hỗ trợ xử lý hình ảnh camera MAPIR. Vui lòng xem danh sách [các mẫu máy ảnh được hỗ trợ](supported-cameras.md) để biết thêm thông tin. Chúng tôi cung cấp dịch vụ xử lý các camera khác trên Đám mây MAPIR, xem danh sách đầy đủ [tại đây](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 

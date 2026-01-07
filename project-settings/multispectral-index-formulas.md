@@ -1,7 +1,7 @@
 ---
 mô tả: Trang này liệt kê một số chỉ số đa phổ mà Chloros sử dụng
 liên kết meta:
-  thay thế:
+  alternates:
     - >-
       https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/multispectral-index-formulas
 ---
