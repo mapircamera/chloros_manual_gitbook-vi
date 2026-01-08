@@ -1,165 +1,167 @@
-# Map Markers
+# Điểm đánh dấu bản đồ
 
-The Map tab displays your images on an interactive 2D map based on their GPS coordinates. This provides a geographic overview of your capture session and helps you visualize spatial coverage. It is also useful when first importing your images to quickly remove any images you do not need to process.
+Tab Bản đồ hiển thị hình ảnh của bạn trên bản đồ 2D tương tác dựa trên tọa độ GPS của chúng. Điều này cung cấp cái nhìn tổng quan về mặt địa lý của phiên chụp của bạn và giúp bạn hình dung phạm vi bao phủ không gian. Nó cũng hữu ích khi nhập hình ảnh lần đầu tiên để nhanh chóng xóa bất kỳ hình ảnh nào bạn không cần xử lý.
 
-## Accessing the Map Tab
+<figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
-1. Open or create a project in Chloros
-2. Import images that contain GPS metadata
-3. Click the **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab in the left sidebar
-4. The map will display markers at each image's GPS location
+## Truy cập tab Bản đồ
 
-{% hint style="info" %}
-**GPS Required**: Only images with embedded GPS coordinates in their EXIF metadata will appear on the map. Ensure your camera has GPS enabled during capture.
-{% endhint %}
-
-***
-
-## Adjusting Images from Map Tab
-
-The **Map** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> tab has the same add  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  and remove  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  file buttons as the [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab does. It also shows the same project file table list but with different column headers:
-
-### File Name
-
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
-
-### Latitude
-
-* The image's latitude
-
-### Longitude
-
-* The image's longitude
-
-### Altitude
-
-* The image's altitude
+1. Mở hoặc tạo dự án trong Chloros
+2. Nhập hình ảnh có chứa siêu dữ liệu GPS
+3. Nhấp vào tab **Bản đồ** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ở thanh bên trái
+4. Bản đồ sẽ hiển thị các điểm đánh dấu tại vị trí GPS của mỗi hình ảnh
 
 {% hint style="info" %}
-Clicking the table column headers also sorts the row data
+**Yêu cầu GPS**: Chỉ những hình ảnh có tọa độ GPS được nhúng trong siêu dữ liệu EXIF ​​của chúng mới xuất hiện trên bản đồ. Đảm bảo máy ảnh của bạn đã bật GPS trong khi chụp.
 {% endhint %}
 
 ***
 
-## Image Markers
+## Điều chỉnh hình ảnh từ tab bản đồ
 
-Each image with GPS data is represented by a marker on the map:
+Tab **Bản đồ** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> có cùng các nút thêm <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> và xóa các nút tệp <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> giống như tab [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">. Nó cũng hiển thị cùng một danh sách bảng tệp dự án nhưng với các tiêu đề cột khác nhau:
 
-### Marker Display
+### Tên tệp
 
-* Markers indicate the exact GPS coordinates where each image was captured
-* Clustered markers may group together when zoomed out
-* Zoom in to see individual image locations
+* Tên file gốc từ máy ảnh
+* Duy trì quy ước đặt tên máy ảnh (ví dụ: IMG\_0001.RAW)
 
-{% hint style="success" %}
-SUPER-ZOOM: When you reach the maximum zoom level from the map tile provider the tile is then enlarged upon further zoom, allowing you to see markers that are close together.
+### Vĩ độ
+
+* Vĩ độ của hình ảnh
+
+### Kinh độ
+
+* Kinh độ của hình ảnh
+
+### Độ cao
+
+* Độ cao của hình ảnh
+
+{% hint style="info" %}
+Nhấp vào tiêu đề cột của bảng cũng sắp xếp dữ liệu hàng
 {% endhint %}
-
-### Hover Preview
-
-* **Hover your mouse** over any marker to see a thumbnail preview of that image
-* This allows quick visual identification without leaving the map view
-* Useful for locating specific images within a large capture session
 
 ***
 
-## Map Tile Providers
+## Điểm đánh dấu hình ảnh
+
+Mỗi hình ảnh có dữ liệu GPS được thể hiện bằng một điểm đánh dấu trên bản đồ:
+
+### Hiển thị điểm đánh dấu
+
+* Điểm đánh dấu cho biết tọa độ GPS chính xác nơi mỗi hình ảnh được chụp
+* Điểm đánh dấu được nhóm có thể nhóm lại với nhau khi thu nhỏ
+* Phóng to để xem các vị trí hình ảnh riêng lẻ
 
 {% hint style="success" %}
-**Automatic Selection**: Chloros automatically chooses the tile service that provides the best zoom level for your current map location. You can manually switch between providers if desired.
+SIÊU THU PHÓNG: Khi bạn đạt đến mức thu phóng tối đa từ nhà cung cấp ô bản đồ, ô đó sẽ được phóng to khi thu phóng thêm, cho phép bạn xem các điểm đánh dấu gần nhau.
 {% endhint %}
 
-The Map tab supports two tile providers for the background map imagery:
+### Xem trước khi di chuột
+
+* **Di chuột** qua bất kỳ điểm đánh dấu nào để xem bản xem trước hình thu nhỏ của hình ảnh đó
+* Điều này cho phép nhận dạng trực quan nhanh chóng mà không cần rời khỏi chế độ xem bản đồ
+* Hữu ích cho việc định vị các hình ảnh cụ thể trong một phiên chụp lớn
+
+***
+
+## Nhà cung cấp ô bản đồ
+
+{% hint style="success" %}
+**Lựa chọn tự động**: Chloros tự động chọn dịch vụ ô cung cấp mức thu phóng tốt nhất cho vị trí bản đồ hiện tại của bạn. Bạn có thể chuyển đổi thủ công giữa các nhà cung cấp nếu muốn.
+{% endhint %}
+
+Tab Bản đồ hỗ trợ hai nhà cung cấp ô cho hình ảnh bản đồ nền:
 
 ### Google Maps
 
-* Standard satellite and map imagery from Google
-* Best for general worldwide coverage
+* Hình ảnh vệ tinh và bản đồ tiêu chuẩn từ Google
+* Tốt nhất cho phạm vi phủ sóng chung trên toàn thế giới
 
-### ESRI
+###ESRI
 
-* Satellite and aerial imagery from ESRI ArcGIS
-* Often provides higher resolution imagery in certain regions
+* Hình ảnh vệ tinh và trên không từ ESRI ArcGIS
+* Thường cung cấp hình ảnh có độ phân giải cao hơn ở một số vùng nhất định
 
 ***
 
-## Map Tile Types
+## Các loại ô bản đồ
 
-You can choose the map layer type (from left to right):
+Bạn có thể chọn loại lớp bản đồ (từ trái sang phải):
 
 &#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
 
-### Terrain
+### Địa hình
 
-Shows elevation profiles and map tiles with details (roads, etc)
+Hiển thị cấu hình độ cao và ô bản đồ với các chi tiết (đường, v.v.)
 
-### Map
+###Bản đồ
 
-Shows standard (lower bandwidth) map tiles with details (roads, etc)
+Hiển thị các ô bản đồ tiêu chuẩn (băng thông thấp hơn) với các chi tiết (đường, v.v.)
 
-### Satellite
+### Vệ tinh
 
-Shows detailed (higher bandwidth) satellite map tiles
+Hiển thị các ô bản đồ vệ tinh chi tiết (băng thông cao hơn)
 
-### Hybrid
+### Lai
 
-Shows satellite map tiles with added details (roads, etc)
-
-***
-
-## Map Navigation
-
-### Zoom Controls
-
-* **Zoom In/Out**: Use mouse scroll wheel or zoom buttons
-* **Fullscreen**: Fullscreen the map
-
-### Pan Controls
-
-* **Pan**: Click and drag to move around the map
+Hiển thị các ô bản đồ vệ tinh với các chi tiết bổ sung (đường, v.v.)
 
 ***
 
-## Use Cases
+## Điều hướng bản đồ
 
-### Flight Path Visualization
+### Điều khiển thu phóng
 
-* View the coverage area of drone capture sessions
-* Identify gaps in image coverage
-* Verify flight path execution
+* **Phóng to/Thu nhỏ**: Sử dụng con lăn chuột hoặc nút thu phóng
+* **Toàn màn hình**: Toàn màn hình bản đồ
 
-### Ground Survey Review
+### Điều khiển Pan
 
-* See the spatial distribution of ground-based captures
-* Locate calibration target images relative to survey area
-* Plan additional capture locations
-
-### Quality Control
-
-* Quickly identify images captured in unexpected locations
-* Verify GPS accuracy across the dataset
-* Cross-reference image locations with field notes
+* **Pan**: Nhấp và kéo để di chuyển xung quanh bản đồ
 
 ***
 
-## Troubleshooting
+## Trường hợp sử dụng
 
-### No Markers Appearing
+### Trực quan hóa đường bay
 
-**Possible causes:**
+* Xem vùng phủ sóng của các phiên chụp drone
+* Xác định những khoảng trống trong vùng phủ sóng hình ảnh
+* Xác minh việc thực hiện đường bay
 
-* Images do not contain GPS metadata
-* GPS was disabled on camera during capture
-* EXIF data was stripped by external software
+### Đánh giá khảo sát mặt đất
 
-**Solution**: Verify GPS is enabled on your camera and re-import original files
+* Xem sự phân bố không gian của ảnh chụp trên mặt đất
+* Xác định vị trí hình ảnh mục tiêu hiệu chuẩn liên quan đến khu vực khảo sát
+* Lập kế hoạch các địa điểm chụp bổ sung
 
-### Markers in Wrong Location
+### Kiểm soát chất lượng
 
-**Possible causes:**
+* Nhanh chóng xác định hình ảnh được chụp ở những vị trí không ngờ tới
+* Xác minh độ chính xác của GPS trên tập dữ liệu
+* Tham chiếu chéo vị trí hình ảnh với ghi chú hiện trường
 
-* Camera GPS had poor satellite fix
-* GPS drift during capture
+***
 
-**Solution**: This is typically a capture-time issue; consider using PPK/RTK GPS for precision applications
+## Khắc phục sự cố
+
+### Không có dấu hiệu nào xuất hiện
+
+**Nguyên nhân có thể:**
+
+* Hình ảnh không chứa siêu dữ liệu GPS
+* GPS đã bị tắt trên máy ảnh trong khi chụp
+* Dữ liệu EXIF ​​đã bị phần mềm bên ngoài xóa
+
+**Giải pháp**: Xác minh GPS được bật trên máy ảnh của bạn và nhập lại tệp gốc
+
+### Điểm đánh dấu sai vị trí
+
+**Nguyên nhân có thể:**
+
+* Camera GPS đã sửa lỗi vệ tinh kém
+* GPS trôi trong quá trình chụp
+
+**Giải pháp**: Đây thường là sự cố về thời gian chụp; cân nhắc sử dụng GPS PPK/RTK cho các ứng dụng chính xác

@@ -1,199 +1,205 @@
-# Adding Files to a Project
+# Thêm tập tin vào dự án
 
-Once you've created or opened a project in Chloros, the next step is to add your multispectral images to begin processing. The File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+Sau khi bạn đã tạo hoặc mở dự án trong Chloros, bước tiếp theo là thêm hình ảnh đa phổ của bạn để bắt đầu xử lý. Tab File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> giúp bạn dễ dàng nhập hình ảnh và quản lý tập dữ liệu của mình.
 
-## Accessing the File Browser
+## Truy cập Trình duyệt Tệp
 
-1. Open or create a project in Chloros
-2. Click the **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> icon in the left sidebar
-3. The File Browser panel will display your project's file list
+1. Mở hoặc tạo dự án trong Chloros
+2. Nhấp vào biểu tượng **Trình duyệt tệp** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> ở thanh bên trái
+3. Bảng File Browser sẽ hiển thị danh sách tệp dự án của bạn
 
 {% hint style="info" %}
-**Supported File Types**: Chloros supports RAW+JPG and JPG image files from MAPIR Survey3W and Survey3N cameras. Only RAW+JPG are recommended.
+**Các loại tệp được hỗ trợ**: Chloros hỗ trợ các tệp hình ảnh RAW+JPG và JPG từ máy ảnh MAPIR Survey3W và Survey3N. Chỉ nên sử dụng RAW+JPG.
 {% endhint %}
 
 ***
 
-## Adding Images to Your Project
+## Thêm hình ảnh vào dự án của bạn
 
-There are two primary ways to add images to your project:
+Có hai cách chính để thêm hình ảnh vào dự án của bạn:
 
-### Method 1: Add Files
+### Cách 1: Thêm File
 
-Use this option to import individual image files or a small selection of files.
+Sử dụng tùy chọn này để nhập các tệp hình ảnh riêng lẻ hoặc một số tệp được lựa chọn.
 
-1. Click the **"Add Files"** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> button at the top of the File Browser panel
-2. Navigate to the folder containing your images
-3. Select one or more image files (hold **Ctrl** to select multiple files)
-4. Click **"Open"** to import the selected files
+1. Nhấp vào nút **"Thêm tệp"** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> ở đầu bảng Trình duyệt tệp
+2. Điều hướng đến thư mục chứa hình ảnh của bạn
+3. Chọn một hoặc nhiều file ảnh (giữ **Ctrl** để chọn nhiều file)
+4. Nhấp vào **"Mở"** để nhập các tệp đã chọn
 
-### Method 2: Add Folder
+### Cách 2: Thêm thư mục
 
-Use this option to import all images from a folder at once.
+Sử dụng tùy chọn này để nhập tất cả hình ảnh từ một thư mục cùng một lúc.
 
-1. Click the **"Add Folder"** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> button at the top of the File Browser panel
-2. Navigate to and select the folder containing your capture session images
-3. Click **"Select Folder"** to import all supported images from that folder
-
-***
-
-## Understanding the File Browser Table
-
-Once images are imported, they appear in a table with the following columns:
-
-### File Name
-
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
-
-### Timestamp
-
-* Date and time the image was captured
-* Extracted from image EXIF metadata
-* Used for PPK synchronization and calibration target detection
-
-### Camera Model
-
-* Automatically detected camera and filter configuration
-* Examples: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
-* Used to apply correct processing profiles
-
-### Target Column (Checkbox)
-
-* Check this box for images that contain calibration targets
-* Greatly speeds up target detection during processing
-* See [Choosing Target Images](choosing-target-images.md) for details
+1. Nhấp vào nút **"Thêm thư mục"** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> ở đầu bảng Trình duyệt tệp
+2. Điều hướng đến và chọn thư mục chứa hình ảnh phiên chụp của bạn
+3. Nhấp vào **"Chọn thư mục"** để nhập tất cả hình ảnh được hỗ trợ từ thư mục đó
 
 ***
 
-## Managing Files in Your Project
+## Tìm hiểu bảng trình duyệt tệp
 
-### Removing Files
+Khi hình ảnh được nhập, chúng sẽ xuất hiện trong bảng có các cột sau:
 
-To remove unwanted images from your project:
+### Tên tệp
 
-1. Select one or more images in the File Browser table
-2. Click the **"Remove Selected"** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> button
-3. Confirm removal (files are not deleted from disk, only removed from the project)
+* Tên file gốc từ máy ảnh
+* Duy trì quy ước đặt tên máy ảnh (ví dụ: IMG\_0001.RAW)
 
-### Sorting and Filtering
+### Dấu thời gian
 
-* **Sort by column**: Click any column header to sort images
-* **Timestamp sort**: Useful for organizing chronological capture sequences
-* **Camera model filter**: Group images by camera type if using multiple cameras
+* Ngày và giờ hình ảnh được chụp
+* Trích xuất từ ​​siêu dữ liệu EXIF ​​của hình ảnh
+* Được sử dụng để đồng bộ hóa PPK và phát hiện mục tiêu hiệu chuẩn
 
-***
+### Mẫu máy ảnh
 
-## Image Preview
+* Tự động phát hiện cấu hình camera và bộ lọc
+* Ví dụ: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
+* Được sử dụng để áp dụng hồ sơ xử lý chính xác
 
-### Viewing Full Image
+### Cột mục tiêu (Hộp kiểm)
 
-Click any image thumbnail in the File Browser to display it in the main preview area:
+* Chọn hộp này để xem hình ảnh chứa mục tiêu hiệu chuẩn
+* Tăng tốc đáng kể việc phát hiện mục tiêu trong quá trình xử lý
+* Xem [Chọn hình ảnh mục tiêu](choosing-target-images.md) để biết chi tiết
 
-1. Image appears in the center preview panel
-2. Use zoom controls to inspect image details
-3. Navigate between images using arrow keys
+### Xem siêu dữ liệu hình ảnh
 
-### Quick Navigation
+Nhấp vào nút chuyển đổi ở góc trên cùng bên phải phía trên bảng sẽ hiển thị siêu dữ liệu của hình ảnh đã chọn trong khu vực lưới hình ảnh.
 
-* **Previous Image**: Click left arrow or press ← key
-* **Next Image**: Click right arrow or press → key
-* **Zoom In/Out**: Use mouse wheel or zoom buttons
-* **Pan**: Click and drag on image when zoomed in
+<figure><img src="../.gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
 
 ***
 
-## Duplicate File Handling
+## Quản lý tệp trong dự án của bạn
 
-Chloros automatically detects and ignores duplicate files:
+### Xóa tập tin
 
-* Files with identical filenames are skipped
-* Prevents accidental double-processing
-* Warning message displayed when duplicates are detected
+Để xóa hình ảnh không mong muốn khỏi dự án của bạn:
+
+1. Chọn một hoặc nhiều hình ảnh trong bảng File Browser
+2. Nhấp vào nút **"Xóa đã chọn"** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+3. Xác nhận xóa (tệp không bị xóa khỏi đĩa, chỉ bị xóa khỏi dự án)
+
+### Sắp xếp và lọc
+
+* **Sắp xếp theo cột**: Nhấp vào bất kỳ tiêu đề cột nào để sắp xếp hình ảnh
+* **Sắp xếp dấu thời gian**: Hữu ích cho việc sắp xếp các chuỗi chụp theo trình tự thời gian
+* **Bộ lọc mẫu máy ảnh**: Nhóm hình ảnh theo loại máy ảnh nếu sử dụng nhiều máy ảnh
+
+***
+
+## Xem trước hình ảnh
+
+### Xem hình ảnh đầy đủ
+
+Bấm vào bất kỳ hình thu nhỏ nào của hình ảnh trong Trình duyệt Tệp để hiển thị hình ảnh đó trong khu vực xem trước chính:
+
+1. Hình ảnh xuất hiện trong bảng xem trước ở giữa
+2. Sử dụng điều khiển thu phóng để kiểm tra chi tiết hình ảnh
+3. Điều hướng giữa các hình ảnh bằng phím mũi tên
+
+### Điều hướng nhanh
+
+* **Hình trước**: Nhấp vào mũi tên trái hoặc nhấn phím ←
+* **Hình ảnh tiếp theo**: Nhấp vào mũi tên phải hoặc nhấn phím →
+* **Phóng to/Thu nhỏ**: Sử dụng bánh xe chuột hoặc nút thu phóng
+* **Pan**: Nhấp và kéo vào hình ảnh khi phóng to
+
+***
+
+## Xử lý tệp trùng lặp
+
+Chloros tự động phát hiện và bỏ qua các tệp trùng lặp:
+
+* Các tệp có tên tệp giống hệt nhau sẽ bị bỏ qua
+* Ngăn chặn việc xử lý kép ngẫu nhiên
+* Thông báo cảnh báo hiển thị khi phát hiện trùng lặp
 
 {% hint style="warning" %}
-**Important**: Do not rename or modify your original image files before importing. Chloros relies on original filenames and metadata for proper processing.
+**Quan trọng**: Không đổi tên hoặc sửa đổi tệp hình ảnh gốc của bạn trước khi nhập. Chloros dựa vào tên tệp gốc và siêu dữ liệu để xử lý thích hợp.
 {% endhint %}
 
 ***
 
-## Mixed Camera Datasets
+## Bộ dữ liệu máy ảnh hỗn hợp
 
-If your project contains images from multiple MAPIR cameras:
+Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
-1. Chloros automatically detects each camera model
-2. Each camera type is processed with its appropriate calibration profile
-3. File Browser displays camera model in the Camera Model column
-4. Processing applies correct settings for each camera type
+1. Chloros tự động phát hiện từng kiểu máy ảnh
+2. Mỗi loại camera được xử lý với cấu hình hiệu chuẩn phù hợp
+3. File Browser hiển thị model camera ở cột Camera Model
+4. Xử lý áp dụng cài đặt chính xác cho từng loại camera
 
-**Example scenario**: Survey3W RGN + Survey3N OCN dual-camera setup
-
-***
-
-## Best Practices
-
-### Organize Before Import
-
-* Keep calibration target images in the same folder as survey images
-* Maintain original folder structure from your camera/SD card
-* Don't mix datasets from different sessions in one project
-
-### File Naming
-
-* Preserve original camera filenames (IMG\_0001.RAW, etc.)
-* Don't rename files before import
-* Original names contain important metadata
-
-### Calibration Target Images
-
-* Always include 1-2 calibration target images per session
-* Capture targets before and after the capture session
-* Place targets in the same lighting conditions as capture area
-* Mark target images using the Target checkbox to speed up processing
+**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN
 
 ***
 
-## Common Issues and Solutions
+## Các phương pháp hay nhất
 
-### Images Not Appearing After Import
+### Sắp xếp trước khi nhập
 
-**Possible causes:**
+* Giữ hình ảnh mục tiêu hiệu chỉnh trong cùng thư mục với hình ảnh khảo sát
+* Duy trì cấu trúc thư mục gốc từ máy ảnh/thẻ SD của bạn
+* Không trộn lẫn các tập dữ liệu từ các phiên khác nhau trong một dự án
 
-* File format not supported (only RAW+JPG and JPG from MAPIR cameras)
-* Images are from non-MAPIR cameras (see [Supported Cameras](../supported-cameras.md))
-* File corruption or incomplete transfer from SD card
+### Đặt tên tệp
 
-**Solution**: Verify file format and camera model compatibility
+* Giữ nguyên tên tệp máy ảnh gốc (IMG\_0001.RAW, v.v.)
+* Không đổi tên tập tin trước khi nhập
+* Tên gốc chứa siêu dữ liệu quan trọng
 
-### Camera Model Not Detected
+### Hình ảnh mục tiêu hiệu chuẩn
 
-**Possible causes:**
-
-* Modified EXIF metadata
-* Images edited in external software
-* Incomplete file transfer
-
-**Solution**: Re-import original, unmodified files from camera/SD card
-
-### Missing Timestamps
-
-**Possible causes:**
-
-* Camera clock not set correctly
-* EXIF data stripped by external software
-
-**Solution**: Verify camera time settings were correct during capture
+* Luôn bao gồm 1-2 hình ảnh mục tiêu hiệu chỉnh mỗi phiên
+* Bắt mục tiêu trước và sau phiên chụp
+* Đặt mục tiêu trong cùng điều kiện ánh sáng với khu vực chụp
+* Đánh dấu ảnh mục tiêu bằng hộp kiểm Mục tiêu để tăng tốc độ xử lý
 
 ***
 
-## Next Steps
+## Các vấn đề thường gặp và giải pháp
 
-Once your files are imported:
+### Hình ảnh không xuất hiện sau khi nhập
 
-1. **Review the file list** - Ensure all images loaded correctly
-2. **Check camera models** - Verify correct camera detection
-3. **Mark target images** - See [Choosing Target Images](choosing-target-images.md)
-4. **Adjust settings** - Configure processing options in [Project Settings](adjusting-project-settings.md)
-5. **Start processing** - See [Starting the Processing](starting-the-processing.md)
+**Nguyên nhân có thể:**
 
-For detailed information about project configuration, see [Adjusting Project Settings](adjusting-project-settings.md).
+* Định dạng tệp không được hỗ trợ (chỉ RAW+JPG và JPG từ máy ảnh MAPIR)
+* Hình ảnh được lấy từ máy ảnh không phải MAPIR (xem [Máy ảnh được hỗ trợ](../supported-cameras.md))
+* Tệp bị hỏng hoặc chuyển không đầy đủ từ thẻ SD
+
+**Giải pháp**: Xác minh định dạng tệp và khả năng tương thích của mẫu máy ảnh
+
+### Mẫu máy ảnh không được phát hiện
+
+**Nguyên nhân có thể:**
+
+* Siêu dữ liệu EXIF ​​đã sửa đổi
+* Hình ảnh được chỉnh sửa bằng phần mềm bên ngoài
+* Truyền tập tin không đầy đủ
+
+**Giải pháp**: Nhập lại các tập tin gốc, chưa sửa đổi từ máy ảnh/thẻ SD
+
+### Thiếu dấu thời gian
+
+**Nguyên nhân có thể:**
+
+* Đồng hồ máy ảnh không được đặt chính xác
+* Dữ liệu EXIF ​​bị phần mềm bên ngoài loại bỏ
+
+**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp
+
+***
+
+## Các bước tiếp theo
+
+Khi tệp của bạn được nhập:
+
+1. **Xem lại danh sách tệp** - Đảm bảo tất cả hình ảnh được tải chính xác
+2. **Kiểm tra các mẫu máy ảnh** - Xác minh việc phát hiện camera chính xác
+3. **Đánh dấu hình ảnh mục tiêu** - Xem [Chọn hình ảnh mục tiêu](choosing-target-images.md)
+4. **Điều chỉnh cài đặt** - Định cấu hình các tùy chọn xử lý trong [Cài đặt dự án](adjusting-project-settings.md)
+5. **Bắt đầu xử lý** - Xem [Bắt đầu xử lý](starting-the-processing.md)
+
+Để biết thông tin chi tiết về cấu hình dự án, hãy xem [Điều chỉnh cài đặt dự án](adjusting-project-settings.md).
