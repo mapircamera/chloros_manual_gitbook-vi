@@ -1,6 +1,6 @@
 # Điểm đánh dấu bản đồ
 
-Tab Bản đồ hiển thị hình ảnh của bạn trên bản đồ 2D tương tác dựa trên tọa độ GPS của chúng. Điều này cung cấp cái nhìn tổng quan về mặt địa lý của phiên chụp của bạn và giúp bạn hình dung phạm vi bao phủ không gian. Nó cũng hữu ích khi nhập hình ảnh lần đầu tiên để nhanh chóng xóa bất kỳ hình ảnh nào bạn không cần xử lý.
+Tab Bản đồ hiển thị hình ảnh của bạn trên bản đồ 2D tương tác dựa trên tọa độ GPS của chúng. Điều này cung cấp cái nhìn tổng quan về mặt địa lý của phiên chụp của bạn và giúp bạn hình dung phạm vi bao phủ không gian. Nó cũng hữu ích khi nhập hình ảnh của bạn lần đầu tiên để nhanh chóng xóa bất kỳ hình ảnh nào bạn không cần xử lý.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
@@ -19,7 +19,7 @@ Tab Bản đồ hiển thị hình ảnh của bạn trên bản đồ 2D tươn
 
 ## Điều chỉnh hình ảnh từ tab bản đồ
 
-Tab **Bản đồ** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> có cùng các nút thêm <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> và xóa các nút tệp <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> giống như tab [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">. Nó cũng hiển thị cùng một danh sách bảng tệp dự án nhưng với các tiêu đề cột khác nhau:
+Tab **Bản đồ**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> có cùng phần bổ sung <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> và xóa các nút tệp <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> làm [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img tab src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> thì có. Nó cũng hiển thị danh sách bảng tệp dự án tương tự nhưng với các tiêu đề cột khác nhau:
 
 ### Tên tệp
 
@@ -96,7 +96,7 @@ Bạn có thể chọn loại lớp bản đồ (từ trái sang phải):
 
 Hiển thị cấu hình độ cao và ô bản đồ với các chi tiết (đường, v.v.)
 
-###Bản đồ
+### Bản đồ
 
 Hiển thị các ô bản đồ tiêu chuẩn (băng thông thấp hơn) với các chi tiết (đường, v.v.)
 
@@ -119,9 +119,7 @@ Hiển thị các ô bản đồ vệ tinh với các chi tiết bổ sung (đư
 
 ### Điều khiển Pan
 
-* **Pan**: Nhấp và kéo để di chuyển xung quanh bản đồ
-
-***
+* **Pan**: Nhấp và kéo để di chuyển xung quanh bản đồ***
 
 ## Trường hợp sử dụng
 

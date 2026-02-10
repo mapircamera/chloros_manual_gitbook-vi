@@ -8,7 +8,7 @@ Trình xem ảnh Chloros cung cấp giao diện toàn màn hình chuyên dụng 
 
 Cách phổ biến nhất để mở hình ảnh trong Trình xem ảnh:
 
-1. Đảm bảo bạn đang ở tab **Trình duyệt tệp** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+1. Đảm bảo bạn đang ở trong tab **Trình duyệt tệp** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
 2. Nhấp vào bất kỳ **hình thu nhỏ** nào trong lưới hình ảnh
 3. Hình ảnh mở ra trong **khu vực xem trước chính** (giữa màn hình)
 4. Hình ảnh hiện đã được tải và sẵn sàng để xem toàn màn hình
@@ -17,8 +17,8 @@ Cách phổ biến nhất để mở hình ảnh trong Trình xem ảnh:
 
 Sau khi tải hình ảnh vào khu vực xem trước:
 
-1. Nhấp vào biểu tượng **Trình xem ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
-2. Tab Trình xem Hình ảnh mở ra, hiển thị toàn màn hình hình ảnh đã chọn
+1. Nhấp vào biểu tượng **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
+2. Tab Trình xem Hình ảnh mở ra, hiển thị hình ảnh đã chọn ở chế độ toàn màn hình
 3. Các công cụ xem và phân tích nâng cao có sẵn ở thanh bên trái
 
 ***
@@ -32,9 +32,7 @@ Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 * **Độ phân giải đầy đủ**: Hình ảnh được hiển thị ở độ phân giải gốc
 * **Có thể thu phóng**: Sử dụng điều khiển hoặc con lăn chuột để thu phóng
 * **Có thể xoay**: Nhấp và kéo để di chuyển xung quanh khi được phóng to
-* **Tỷ lệ khung hình được duy trì**: Tỷ lệ hình ảnh theo tỷ lệ
-
-***
+* **Tỷ lệ khung hình được duy trì**: Tỷ lệ hình ảnh theo tỷ lệ***
 
 ## Tùy chọn xem
 
@@ -44,23 +42,18 @@ Phần lớn nhất của màn hình hiển thị hình ảnh của bạn:
 
 Điều hướng qua bộ hình ảnh của bạn bằng phím tắt hoặc nút:
 
-* **Hình ảnh tiếp theo**: Nhấp vào nút → hoặc nhấn phím **→** (Mũi tên phải)
-* **Hình trước**: Bấm vào nút ← hoặc nhấn phím **←** (Mũi tên trái)
+* **Hình ảnh tiếp theo**: Nhấp vào nút → hoặc nhấn phím**→** (Mũi tên phải)
+* **Hình trước**: Bấm vào nút ← hoặc nhấn phím**←** (Mũi tên trái)
 * **Chuyển đến hình ảnh cụ thể**: Quay lại Trình duyệt Tệp và nhấp vào hình thu nhỏ mong muốn
 
 #### Điều khiển thu phóng
 
 Điều chỉnh độ phóng đại để kiểm tra chi tiết hình ảnh:
 
-**Phóng to:**
+**Phóng to:*** Nhấp vào nút ****** (Cộng)
+* Nhấn phím **++ hoặc**=*** Cuộn con lăn chuột **lên**
 
-* Nhấp vào nút ****** (Cộng)
-* Nhấn phím **++ hoặc **=**
-* Cuộn con lăn chuột **lên**
-
-**Thu nhỏ:**
-
-* Nhấp vào nút **−** (Trừ)
+**Thu nhỏ:*** Nhấp vào nút **−** (Trừ)
 * Nhấn phím **−** (Dấu trừ)
 * Cuộn con lăn chuột **xuống**
 
@@ -70,25 +63,17 @@ Khi phóng to ra ngoài kích thước màn hình:
 
 1. Di chuyển con trỏ chuột lên hình ảnh
 2. Nhấp và **giữ chuột trái**
-3. **Kéo** để di chuyển hình ảnh xung quanh
+
+3.**Kéo** để di chuyển hình ảnh xung quanh
 4. Thả ra để dừng lia máy
 
-**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ
-
-***
+**Cách khác**: Sử dụng phím mũi tên để xoay theo từng bước nhỏ***
 
 ## Kiểm tra giá trị pixel
 
 ### Xem giá trị pixel tại con trỏ
 
-Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel sẽ hiển thị theo thời gian thực:
-
-**Vị trí hiển thị giá trị:**
-
-* **Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT**
-* **Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu**
-* Hiển thị giá trị cho pixel **dưới con trỏ hoặc được đánh dấu**
-* Cập nhật khi bạn di chuyển chuột
+Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel sẽ hiển thị theo thời gian thực:**Vị trí hiển thị giá trị:*** **Số nổi và đường màu đỏ ở chỉ mục bên phải Chú giải độ dốc LUT*** **Khi phóng to hơn nữa, giá trị nổi gần con trỏ và pixel được đánh dấu*** Hiển thị giá trị cho pixel **dưới con trỏ hoặc được đánh dấu*** Cập nhật khi bạn di chuyển chuột
 
 ***
 
@@ -128,7 +113,7 @@ Khi bạn di chuyển con trỏ chuột lên hình ảnh, các giá trị pixel 
 
 Áp dụng các chỉ số đa phổ và Bảng tra cứu màu sắc:
 
-1. Xác định vị trí **Hộp cát Index/LUT** trong **Trình xem hình ảnh** thanh bên <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
+1. Xác định vị trí **Hộp cát Index/LUT**trong**Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> thanh bên
 2. Chọn chỉ số thực vật (NDVI, NDRE, v.v.)
 3. Chọn công thức đa phổ hoặc tạo công thức tùy chỉnh của riêng bạn (chỉ Chloros+)
 4. Áp dụng gradient LUT màu để trực quan hóa
@@ -149,11 +134,9 @@ Xem [Hộp cát Index/LUT](index-lut-sandbox.md) để biết hướng dẫn chi
 
 ### Phóng
 
-* ******* hoặc **=**: Phóng to
+* *******hoặc**=**: Phóng to
 * **−**: Thu nhỏ
-* **Con lăn chuột**: Phóng to/thu nhỏ
-
-***
+* **Con lăn chuột**: Phóng to/thu nhỏ***
 
 ### Xác minh tính toán chỉ số
 
@@ -166,9 +149,7 @@ Kiểm tra xem các chỉ số được tính toán có chính xác không:
    * **GNDVI**: Tương tự NDVI nhưng nhạy cảm với diệp lục
 3. Kiểm tra thảm thực vật:
    * **Đất**: Gần 0 hoặc hơi âm
-   * **Nước**: Giá trị âm (-0,5 đến 0)
-
-***
+   * **Nước**: Giá trị âm (-0,5 đến 0)***
 
 ## Khắc phục sự cố khi xem
 

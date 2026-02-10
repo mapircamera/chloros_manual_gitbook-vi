@@ -1,6 +1,7 @@
 ---
 metaLinks: {}
 ---
+
 # Bắt đầu
 
 <div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
@@ -9,15 +10,11 @@ Chloros là một ứng dụng phần mềm từ [MAPIR](https://www.mapir.camer
 
 ***
 
-Chloros có sẵn ở 4 chế độ ứng dụng:
+Chloros có sẵn ở 3 chế độ ứng dụng:
 
 ## Chloros: Ứng dụng GUI trên máy tính để bàn
 
-\[Khuyến nghị] Cửa sổ riêng biệt độc lập với tất cả các tính năng.
-
-## Chloros (Trình duyệt): Giao diện GUI dựa trên web
-
-Chạy trong trình duyệt web của bạn (Chrome/Edge). Tốt nhất cho các máy tính chậm hơn với <4GB VRAM.
+Cửa sổ riêng biệt độc lập với tất cả các tính năng.
 
 ## [Chloros CLI: Giao diện dòng lệnh](CLI.md)
 
@@ -35,12 +32,13 @@ Mặc dù Chloros được sử dụng miễn phí cho hầu hết các tác v�
 
 * **Xử lý đa luồng**: tăng tốc đáng kể quá trình xử lý hình ảnh cho các dự án lớn hơn bằng cách xử lý đồng thời hình ảnh thông qua quy trình.
 * **Tăng tốc GPU (CUDA)**: tận dụng các tùy chọn bộ nhớ GPU cao hơn hiện nay để tăng tốc hơn nữa quy trình xử lý hình ảnh. Chúng tôi khuyên dùng VRAM 4GB trở lên để có kết quả tốt nhất.
-* **Chloros+** [**CLI**](CLI.md) **Truy cập**: chạy Chloros+ từ dòng lệnh để tự động hóa và tích hợp vào phần mềm của riêng bạn.
-* **Chloros+** [**API**](api-python-sdk.md) **Truy cập:** chạy Chloros+ từ Python để kiểm soát theo chương trình, cho phép tích hợp liền mạch với quy trình nghiên cứu, quy trình phân tích dữ liệu và ứng dụng tùy chỉnh của bạn.
+* **Chloros+**[**CLI**](CLI.md)**Truy cập**: chạy Chloros+ từ dòng lệnh để tự động hóa và tích hợp vào phần mềm của riêng bạn.
+* **Chloros+**[**API**](api-python-sdk.md)**Truy cập:** chạy Chloros+ từ Python để kiểm soát theo chương trình, cho phép tích hợp liền mạch với quy trình nghiên cứu, quy trình phân tích dữ liệu và ứng dụng tùy chỉnh của bạn.
 * **Sử dụng nhiều thiết bị**: mỗi giấy phép Chloros+ cho phép đăng ký hơn 2 thiết bị. Sử dụng tài khoản MAPIR Cloud của bạn để quản lý các thiết bị đã đăng ký. Thêm hỗ trợ cho nhiều thiết bị hơn bằng cách nâng cấp giấy phép Chloros+ của bạn.
+* **Phương pháp gỡ lỗi nhận biết kết cấu nâng cao:** một công cụ gỡ lỗi nhận biết cạnh chất lượng cao kết hợp với mô hình khử nhiễu AI/ML giúp loại bỏ gần như toàn bộ nhiễu gây nhiễu.&#x20;
 * **Công thức chỉ mục đa phổ tùy chỉnh:** nhập các chỉ mục đa phổ tùy chỉnh vào máy tính raster Chloros, cho cả xử lý và hộp cát xem hình ảnh.
 
-<palign="center"><a href="https://cloud.mapir.camera/pricing" class="button Primary" data-icon="envira">Chloros+ Giá Đăng ký &#x26;</a></p>
+<palign="center"><a href="https://cloud.mapir.camera/pricing" class="button Primary" data-icon="envira">Chloros+ Giá &#x26; Đăng ký</a></p>
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 

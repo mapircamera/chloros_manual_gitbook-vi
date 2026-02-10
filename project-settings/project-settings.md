@@ -1,14 +1,16 @@
 # Cài đặt dự án
 
-Thanh bên Cài đặt dự án <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> trong Chloros cho phép bạn định cấu hình tất cả các khía cạnh của xử lý hình ảnh, phát hiện mục tiêu hiệu chuẩn, tính toán chỉ mục đa phổ và các tùy chọn xuất cho dự án của bạn. Các cài đặt này được lưu cùng với dự án của bạn và có thể được lưu dưới dạng mẫu để sử dụng lại trên nhiều dự án.
+Thanh bên Cài đặt dự án <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> trong Chloros cho phép bạn định cấu hình tất cả các khía cạnh của xử lý hình ảnh, phát hiện mục tiêu hiệu chỉnh, tính toán chỉ mục đa phổ và tùy chọn xuất cho dự án của bạn. Các cài đặt này được lưu cùng với dự án của bạn và có thể được lưu dưới dạng mẫu để sử dụng lại trên nhiều dự án.
 
 ## Truy cập cài đặt dự án
 
 Để truy cập Cài đặt dự án:
 
-1. Mở một dự án bằng Chloros
-2. Nhấp vào tab **Cài đặt dự án**<img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ở thanh bên trái
-3. Bảng cài đặt sẽ hiển thị tất cả các tùy chọn cấu hình có sẵn được sắp xếp theo danh mục***
+1. Mở một dự án trong Chloros
+2. Nhấp vào tab **Cài đặt dự án** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ở thanh bên trái
+3. Bảng cài đặt sẽ hiển thị tất cả các tùy chọn cấu hình có sẵn được sắp xếp theo danh mục
+
+***
 
 ## Phát hiện mục tiêu
 
@@ -29,7 +31,7 @@ Các cài đặt này kiểm soát cách Chloros phát hiện và xử lý các 
 * **Loại**: Số
 * **Phạm vi**: 0 đến 100
 * **Mặc định**: 60
-* **Mô tả**: Kiểm soát ngưỡng phân cụm để nhóm các vùng có màu tương tự nhau khi phát hiện mục tiêu hiệu chuẩn. Giá trị cao hơn yêu cầu nhiều màu tương tự hơn được nhóm lại với nhau, dẫn đến khả năng phát hiện mục tiêu thận trọng hơn. Giá trị thấp hơn cho phép biến đổi màu sắc nhiều hơn trong nhóm mục tiêu.
+* **Mô tả**: Kiểm soát ngưỡng phân cụm để nhóm các vùng có màu tương tự nhau khi phát hiện mục tiêu hiệu chuẩn. Giá trị cao hơn yêu cầu nhiều màu tương tự hơn được nhóm lại với nhau, dẫn đến khả năng phát hiện mục tiêu thận trọng hơn. Giá trị thấp hơn cho phép biến đổi màu sắc nhiều hơn trong một nhóm mục tiêu.
 * **Thời điểm điều chỉnh**:
   * Tăng nếu mục tiêu hiệu chuẩn được chia thành nhiều lần phát hiện
   * Giảm nếu mục tiêu hiệu chỉnh có biến thể màu không được phát hiện đầy đủ
@@ -58,17 +60,18 @@ Các cài đặt này kiểm soát cách Chloros xử lý và hiệu chỉnh hì
 
 * **Loại**: Lựa chọn thả xuống
 * **Tùy chọn**:
-  * Chất lượng cao (Nhanh hơn) - Hiện tại là tùy chọn duy nhất có sẵn
-* **Mặc định**: Chất lượng cao (Nhanh hơn)
-* **Mô tả**: Chọn thuật toán khử màu được sử dụng để chuyển đổi dữ liệu cảm biến mẫu thô của Bayer thành hình ảnh đầy đủ màu sắc. Phương pháp "Chất lượng cao (Nhanh hơn)" mang lại sự cân bằng tối ưu giữa tốc độ xử lý và chất lượng hình ảnh.
+  * Tiêu chuẩn (Nhanh, Chất lượng trung bình)
+  * Nhận biết kết cấu (Chậm, Chất lượng cao nhất) \[Chloros+]
+* **Mặc định**: Tiêu chuẩn (Nhanh, Chất lượng trung bình)
+* **Mô tả**: Chọn thuật toán khử màu được sử dụng để chuyển đổi dữ liệu cảm biến mẫu thô của Bayer thành hình ảnh đầy đủ màu sắc. Phương pháp "Tiêu chuẩn (Nhanh, Chất lượng Trung bình)" mang lại sự cân bằng tối ưu giữa tốc độ xử lý và chất lượng hình ảnh. "Phần mềm nhận biết kết cấu (Chậm, Chất lượng cao nhất)" \[Chloros+] sử dụng trình gỡ lỗi nhận biết cạnh chất lượng cao kết hợp với mô hình khử nhiễu AI/ML giúp loại bỏ gần như toàn bộ tiếng ồn gây nhiễu. Mô hình Nhận biết Kết cấu yêu cầu bộ nhớ GPU (VRAM) để chạy. Chúng tôi khuyên bạn nên sử dụng nó khi bạn có sẵn >4GB VRAM để xử lý nhanh hơn.
 * **Lưu ý**: Các phương pháp gỡ lỗi bổ sung có thể được thêm vào trong các phiên bản tương lai của Chloros.
 
-### Khoảng thời gian hiệu chuẩn lại tối thiểu
+### Khoảng thời gian hiệu chỉnh lại tối thiểu
 
 * **Loại**: Số
 * **Phạm vi**: 0 đến 3.600 giây
 * **Mặc định**: 0 giây
-* **Mô tả**: Đặt khoảng thời gian tối thiểu (tính bằng giây) giữa các lần sử dụng mục tiêu hiệu chuẩn. Khi được đặt thành 0, Chloros sẽ sử dụng mọi mục tiêu hiệu chuẩn được phát hiện. Khi được đặt thành giá trị cao hơn, Chloros sẽ chỉ sử dụng các mục tiêu hiệu chuẩn cách nhau ít nhất nhiều giây, giảm thời gian xử lý cho các tập dữ liệu thường xuyên chụp mục tiêu hiệu chuẩn.
+* **Mô tả**: Đặt khoảng thời gian tối thiểu (tính bằng giây) giữa các lần sử dụng mục tiêu hiệu chuẩn. Khi được đặt thành 0, Chloros sẽ sử dụng mọi mục tiêu hiệu chuẩn được phát hiện. Khi được đặt thành giá trị cao hơn, Chloros sẽ chỉ sử dụng các mục tiêu hiệu chuẩn cách nhau ít nhất nhiều giây này, giúp giảm thời gian xử lý cho các tập dữ liệu thường xuyên chụp mục tiêu hiệu chuẩn.
 * **Thời điểm điều chỉnh**:
   * Đặt thành 0 để có độ chính xác hiệu chuẩn tối đa khi điều kiện ánh sáng thay đổi
   * Tăng (ví dụ: lên 60-300 giây) để xử lý nhanh hơn khi ánh sáng nhất quán và bạn thường xuyên hiệu chỉnh hình ảnh mục tiêu
@@ -109,7 +112,7 @@ Các cài đặt này kiểm soát cách Chloros xử lý và hiệu chỉnh hì
 ### Chân phơi sáng 2
 
 * **Loại**: Lựa chọn thả xuống
-* **Chế độ hiển thị**: Chỉ hiển thị khi "Áp dụng hiệu chỉnh PPK" được bật VÀ dữ liệu phơi sáng có sẵn cho Chân 2
+* **Chế độ hiển thị**: Chỉ hiển thị khi bật "Áp dụng hiệu chỉnh PPK" VÀ dữ liệu phơi sáng có sẵn cho Chân 2
 * **Tùy chọn**:
   * Tên mẫu máy ảnh được phát hiện trong dự án
   * "Không sử dụng" - Bỏ qua pin phơi sáng này
@@ -131,23 +134,23 @@ Các cài đặt này cho phép bạn định cấu hình các chỉ số đa ph
 * **Mô tả**: Mở bảng tương tác nơi bạn có thể chọn và định cấu hình các chỉ số thực vật đa phổ (NDVI, NDRE, EVI, v.v.) để tính toán trong quá trình xử lý hình ảnh. Bạn có thể thêm nhiều chỉ mục, mỗi chỉ mục có cài đặt hiển thị riêng.
 * **Các chỉ số có sẵn**: Hệ thống bao gồm hơn 30 chỉ số đa phổ được xác định trước bao gồm:
   * NDVI (Chỉ số thực vật khác biệt chuẩn hóa)
-  * NDRE (RedEdge chênh lệch chuẩn hóa)
+  * NDRE (Sự khác biệt được chuẩn hóa RedEdge)
   * EVI (Chỉ số thực vật tăng cường)
   * GNDVI, SAVI, OSAVI, MSAVI2
-  * Và nhiều hơn nữa (xem [Công thức chỉ số đa phổ](multispectral-index-formulas.md) để biết danh sách đầy đủ)
-* **Đặc trưng**:
+  * Và nhiều hơn nữa (xem [Công thức chỉ mục đa phổ] (multispectral-index-formulas.md) để biết danh sách đầy đủ)
+* **Tính năng**:
   * Chọn từ các công thức chỉ số được xác định trước
   * Định cấu hình độ dốc màu trực quan (LUT - Bảng tra cứu)
   * Đặt giá trị ngưỡng để phân tích
   * Tạo công thức chỉ mục tùy chỉnh
 
-### Công thức tùy chỉnh (Tính năng Cloros+)
+### Công thức tùy chỉnh (Tính năng Chloros+)
 
 * **Loại**: Mảng định nghĩa công thức tùy chỉnh
 * **Mô tả**: Cho phép bạn tạo và lưu các công thức chỉ số đa phổ tùy chỉnh bằng cách sử dụng toán học. Các công thức tùy chỉnh được lưu cùng với cài đặt dự án của bạn và có thể được sử dụng giống như các chỉ mục tích hợp sẵn.
 * **Cách tạo**:
   1. Trong bảng cấu hình Chỉ mục, hãy tìm tùy chọn công thức tùy chỉnh
-  2. Xác định công thức của bạn bằng cách sử dụng mã định danh băng tần (ví dụ: NIR, Red, Green, Blue)
+  2. Xác định công thức của bạn bằng cách sử dụng số nhận dạng băng tần (ví dụ: NIR, Red, Green, Blue)
   3. Lưu công thức với tên mô tả
 * **Cú pháp công thức**: Các phép toán tiêu chuẩn được hỗ trợ, bao gồm:
   * Số học: `+`, `-`, `*`, `/`
@@ -158,7 +161,7 @@ Các cài đặt này cho phép bạn định cấu hình các chỉ số đa ph
 
 ## Xuất khẩu
 
-Các cài đặt này kiểm soát định dạng và chất lượng của hình ảnh đã xử lý được xuất.
+Các cài đặt này kiểm soát định dạng và chất lượng của hình ảnh được xử lý được xuất.
 
 ### Định dạng hình ảnh đã được hiệu chỉnh
 
@@ -166,14 +169,14 @@ Các cài đặt này kiểm soát định dạng và chất lượng của hìn
 * **Tùy chọn**:
   * **TIFF (16-bit)** - Định dạng TIFF 16-bit không nén
   * **TIFF (32-bit, Percent)** - TIFF dấu phẩy động 32-bit với các giá trị phản xạ dưới dạng phần trăm
-  * **PNG (8-bit)** - Định dạng PNG 8-bit được nén
-  * **JPG (8-bit)** - Định dạng nén JPEG 8-bit
+  * **PNG (8-bit)** - Định dạng PNG 8 bit được nén
+  * **JPG (8-bit)** - Định dạng JPEG 8-bit được nén
 * **Mặc định**: TIFF (16-bit)
 * **Mô tả**: Chọn định dạng tệp để lưu hình ảnh đã được xử lý và hiệu chỉnh.
 * **Khuyến nghị về định dạng**:
   * **TIFF (16-bit)**: Được khuyến nghị cho phân tích khoa học và quy trình làm việc chuyên nghiệp. Bảo toàn chất lượng dữ liệu tối đa mà không có hiện tượng nén. Tốt nhất cho phân tích đa phổ và xử lý sâu hơn trong phần mềm GIS.
-  * **TIFF (32-bit, Percent)**: Tốt nhất cho các quy trình công việc yêu cầu giá trị phản xạ dưới dạng phần trăm (0-100%). Cung cấp độ chính xác tối đa cho các phép đo phóng xạ.
-  * **PNG (8-bit)**: Phù hợp để xem trên web và hiển thị tổng thể. Kích thước tệp nhỏ hơn với tính năng nén không mất dữ liệu nhưng dải động giảm.
+  * **TIFF (32-bit, Phần trăm)**: Tốt nhất cho quy trình làm việc yêu cầu giá trị phản xạ dưới dạng phần trăm (0-100%). Cung cấp độ chính xác tối đa cho các phép đo phóng xạ.
+  * **PNG (8-bit)**: Tốt cho việc xem web và hình dung chung. Kích thước tệp nhỏ hơn với tính năng nén không mất dữ liệu nhưng dải động giảm.
   * **JPG (8-bit)**: Kích thước tệp nhỏ nhất, chỉ phù hợp để xem trước và hiển thị trên web. Sử dụng tính năng nén tổn thất không phù hợp cho phân tích khoa học.***
 
 ## Lưu mẫu dự án
@@ -182,39 +185,43 @@ Tính năng này cho phép bạn lưu cài đặt dự án hiện tại của m�
 
 * **Loại**: Nhập văn bản + Nút lưu
 * **Mô tả**: Nhập tên mô tả cho mẫu cài đặt của bạn và nhấp vào biểu tượng lưu. Mẫu sẽ lưu trữ tất cả cài đặt dự án hiện tại của bạn (phát hiện mục tiêu, tùy chọn xử lý, chỉ mục và định dạng xuất) để dễ dàng sử dụng lại trong các dự án trong tương lai.
-* **Trường hợp sử dụng**:
-  * Tạo mẫu cho các hệ thống camera khác nhau (RGB, multispectral, NIR)
+* **Các trường hợp sử dụng**:
+  * Tạo mẫu cho các hệ thống camera khác nhau (RGB, đa phổ, NIR)
   * Lưu cấu hình tiêu chuẩn cho các loại cây trồng cụ thể hoặc quy trình phân tích
   * Chia sẻ cài đặt nhất quán trong một nhóm
 * **Cách sử dụng**:
-  1. Định cấu hình tất cả cài đặt dự án mong muốn của bạn
-  2. Nhập tên mẫu (ví dụ: "Tiêu chuẩn NDVI của RedEdge Survey3")
+  1. Configure all your desired project settings
+  2. Nhập tên mẫu (ví dụ: "RedEdge Survey3 NDVI Standard")
   3. Nhấp vào biểu tượng lưu
-  4. Mẫu hiện có thể được tải khi tạo dự án mới***
+  4. Mẫu hiện có thể được tải khi tạo dự án mới
+
+***
 
 ## Lưu thư mục dự án
 
 Cài đặt này chỉ định nơi lưu dự án mới theo mặc định.
 
 * **Loại**: Hiển thị đường dẫn thư mục + Nút chỉnh sửa
-* **Mặc định**: `C:\Users\[Tên người dùng]\Chloros Project`
+* **Mặc định**: `C:\Users\[Username]\Chloros Projects`
 * **Mô tả**: Hiển thị thư mục mặc định hiện tại nơi các dự án Chloros mới được tạo. Nhấp vào biểu tượng chỉnh sửa để chọn một thư mục khác.
 * **Khi nào cần thay đổi**:
   * Đặt thành ổ đĩa mạng để cộng tác nhóm
   * Thay đổi sang ổ đĩa có nhiều dung lượng lưu trữ hơn cho các tập dữ liệu lớn
   * Sắp xếp các dự án theo năm, khách hàng hoặc loại dự án trong các thư mục khác nhau
-* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***## Cài đặt Kiên trì
+* **Lưu ý**: Việc thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***
 
-Tất cả các cài đặt dự án sẽ được lưu tự động cùng với tệp dự án của bạn (định dạng dự án `.mapir`). Khi bạn mở lại một dự án, tất cả các cài đặt sẽ được khôi phục chính xác như khi bạn rời khỏi chúng.
+## Cài đặt Kiên trì
+
+Tất cả cài đặt dự án sẽ được lưu tự động cùng với tệp dự án của bạn (định dạng dự án `.mapir`). Khi bạn mở lại một dự án, tất cả các cài đặt sẽ được khôi phục chính xác như khi bạn rời khỏi chúng.
 
 ### Phân cấp cài đặt
 
 Các cài đặt được áp dụng theo thứ tự sau:
 
-1.**Mặc định hệ thống**- Giá trị mặc định tích hợp được xác định bởi Chloros
-2.**Cài đặt mẫu**- Nếu bạn tải mẫu khi tạo dự án
-3.**Đã lưu cài đặt dự án**- Cài đặt được lưu cùng với tệp dự án
-4.**Điều chỉnh thủ công** - Mọi thay đổi bạn thực hiện trong phiên hiện tại
+1. **Mặc định hệ thống** - Mặc định tích hợp được xác định bởi Chloros
+2. **Cài đặt mẫu** - Nếu bạn tải mẫu khi tạo dự án
+3. **Đã lưu cài đặt dự án** - Cài đặt được lưu cùng với tệp dự án
+4. **Điều chỉnh thủ công** - Mọi thay đổi bạn thực hiện trong phiên hiện tại
 
 ### Cài đặt và xử lý ảnh
 
@@ -224,18 +231,20 @@ Hầu hết các thay đổi cài đặt (đặc biệt là trong danh mục X�
 * Thư mục làm việc
 * Định dạng hình ảnh đã hiệu chỉnh (áp dụng khi xuất)
 
-***## Các phương pháp hay nhất
+***
 
-1.**Bắt đầu với giá trị mặc định**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình làm việc thông thường.
-2.**Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho quy trình làm việc hoặc máy ảnh cụ thể, hãy lưu chúng dưới dạng mẫu để đảm bảo tính nhất quán giữa các dự án.
-3.**Kiểm tra trước khi xử lý hoàn toàn**: Khi thử nghiệm các cài đặt mới, hãy thử nghiệm trên một tập hợp con hình ảnh nhỏ trước khi xử lý toàn bộ tập dữ liệu của bạn.
-4.**Ghi lại cài đặt của bạn**: Sử dụng tên mẫu mô tả cho biết hệ thống camera, loại xử lý và mục đích sử dụng (ví dụ: "Survey3\_RGB\_NDVI\_Agriculture").
-5.**Lựa chọn định dạng xuất**: Chọn định dạng xuất dựa trên mục đích sử dụng cuối cùng của bạn:
+## Các phương pháp hay nhất
+
+1. **Bắt đầu với giá trị mặc định**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình công việc thông thường.
+2. **Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho quy trình làm việc hoặc máy ảnh cụ thể, hãy lưu chúng dưới dạng mẫu để đảm bảo tính nhất quán giữa các dự án.
+3. **Kiểm tra trước khi xử lý hoàn toàn**: Khi thử nghiệm các cài đặt mới, hãy thử nghiệm trên một tập hợp con hình ảnh nhỏ trước khi xử lý toàn bộ tập dữ liệu của bạn.
+4. **Ghi lại cài đặt của bạn**: Sử dụng tên mẫu mô tả cho biết hệ thống camera, loại xử lý và mục đích sử dụng (ví dụ: "Survey3\_RGB\_NDVI\_Agriculture").
+5. **Lựa chọn định dạng xuất**: Chọn định dạng xuất dựa trên mục đích sử dụng cuối cùng của bạn:
    * Phân tích khoa học → TIFF (16-bit hoặc 32-bit)
    * Xử lý GIS → TIFF (16-bit)
-   * Hình dung nhanh → PNG (8-bit)
+   * Hiển thị nhanh → PNG (8-bit)
    * Chia sẻ web → JPG (8-bit)
 
 ***
 
-Để biết thêm thông tin về các chỉ số đa phổ trong Chloros, hãy xem trang [Công thức chỉ số đa phổ](multispectral-index-formulas.md).
+Để biết thêm thông tin về các chỉ mục đa phổ trong Chloros, hãy xem trang [Công thức chỉ mục đa phổ](multispectral-index-formulas.md).

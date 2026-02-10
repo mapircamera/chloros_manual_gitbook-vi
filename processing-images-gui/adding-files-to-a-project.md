@@ -1,6 +1,6 @@
 # Thêm tập tin vào dự án
 
-Sau khi bạn đã tạo hoặc mở dự án trong Chloros, bước tiếp theo là thêm hình ảnh đa phổ của bạn để bắt đầu xử lý. Tab File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> giúp bạn dễ dàng nhập hình ảnh và quản lý tập dữ liệu của mình.
+Sau khi bạn đã tạo hoặc mở dự án trong Chloros, bước tiếp theo là thêm hình ảnh đa phổ của bạn để bắt đầu xử lý. Tab Trình duyệt tệp<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> giúp bạn dễ dàng nhập hình ảnh và quản lý tập dữ liệu của mình.
 
 ## Truy cập Trình duyệt Tệp
 
@@ -33,9 +33,7 @@ Sử dụng tùy chọn này để nhập tất cả hình ảnh từ một thư
 
 1. Nhấp vào nút **"Thêm thư mục"** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> ở đầu bảng Trình duyệt tệp
 2. Điều hướng đến và chọn thư mục chứa hình ảnh phiên chụp của bạn
-3. Nhấp vào **"Chọn thư mục"** để nhập tất cả hình ảnh được hỗ trợ từ thư mục đó
-
-***
+3. Nhấp vào **"Chọn thư mục"** để nhập tất cả hình ảnh được hỗ trợ từ thư mục đó***
 
 ## Tìm hiểu bảng trình duyệt tệp
 
@@ -79,22 +77,20 @@ Nhấp vào nút chuyển đổi ở góc trên cùng bên phải phía trên b�
 Để xóa hình ảnh không mong muốn khỏi dự án của bạn:
 
 1. Chọn một hoặc nhiều hình ảnh trong bảng File Browser
-2. Nhấp vào nút **"Xóa đã chọn"** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+2. Nhấp vào nút **"Xóa đã chọn"** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> nút
 3. Xác nhận xóa (tệp không bị xóa khỏi đĩa, chỉ bị xóa khỏi dự án)
 
 ### Sắp xếp và lọc
 
 * **Sắp xếp theo cột**: Nhấp vào bất kỳ tiêu đề cột nào để sắp xếp hình ảnh
 * **Sắp xếp dấu thời gian**: Hữu ích cho việc sắp xếp các chuỗi chụp theo trình tự thời gian
-* **Bộ lọc mẫu máy ảnh**: Nhóm hình ảnh theo loại máy ảnh nếu sử dụng nhiều máy ảnh
-
-***
+* **Bộ lọc mẫu máy ảnh**: Nhóm hình ảnh theo loại máy ảnh nếu sử dụng nhiều máy ảnh***
 
 ## Xem trước hình ảnh
 
 ### Xem hình ảnh đầy đủ
 
-Bấm vào bất kỳ hình thu nhỏ nào của hình ảnh trong Trình duyệt Tệp để hiển thị hình ảnh đó trong khu vực xem trước chính:
+Nhấp vào bất kỳ hình thu nhỏ nào trong Trình duyệt Tệp để hiển thị hình ảnh đó trong khu vực xem trước chính:
 
 1. Hình ảnh xuất hiện trong bảng xem trước ở giữa
 2. Sử dụng điều khiển thu phóng để kiểm tra chi tiết hình ảnh
@@ -105,9 +101,7 @@ Bấm vào bất kỳ hình thu nhỏ nào của hình ảnh trong Trình duyệ
 * **Hình trước**: Nhấp vào mũi tên trái hoặc nhấn phím ←
 * **Hình ảnh tiếp theo**: Nhấp vào mũi tên phải hoặc nhấn phím →
 * **Phóng to/Thu nhỏ**: Sử dụng bánh xe chuột hoặc nút thu phóng
-* **Pan**: Nhấp và kéo vào hình ảnh khi phóng to
-
-***
+* **Pan**: Nhấp và kéo vào hình ảnh khi phóng to***
 
 ## Xử lý tệp trùng lặp
 
@@ -132,9 +126,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 3. File Browser hiển thị model camera ở cột Camera Model
 4. Xử lý áp dụng cài đặt chính xác cho từng loại camera
 
-**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN
-
-***
+**Tình huống ví dụ**: Thiết lập máy ảnh kép Survey3W RGN + Survey3N OCN***
 
 ## Các phương pháp hay nhất
 
@@ -188,16 +180,14 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 * Đồng hồ máy ảnh không được đặt chính xác
 * Dữ liệu EXIF ​​bị phần mềm bên ngoài loại bỏ
 
-**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp
-
-***
+**Giải pháp**: Xác minh cài đặt thời gian của máy ảnh là chính xác trong khi chụp***
 
 ## Các bước tiếp theo
 
 Khi tệp của bạn được nhập:
 
 1. **Xem lại danh sách tệp** - Đảm bảo tất cả hình ảnh được tải chính xác
-2. **Kiểm tra các mẫu máy ảnh** - Xác minh việc phát hiện camera chính xác
+2. **Kiểm tra các mẫu máy ảnh** - Xác minh phát hiện camera chính xác
 3. **Đánh dấu hình ảnh mục tiêu** - Xem [Chọn hình ảnh mục tiêu](choosing-target-images.md)
 4. **Điều chỉnh cài đặt** - Định cấu hình các tùy chọn xử lý trong [Cài đặt dự án](adjusting-project-settings.md)
 5. **Bắt đầu xử lý** - Xem [Bắt đầu xử lý](starting-the-processing.md)
