@@ -1,13 +1,13 @@
-# Ngôn ngữ được hỗ trợ
+# Hỗ trợ ngôn ngữ
 
-Chloros cung cấp hỗ trợ giao diện đầy đủ bằng **38 ngôn ngữ trên toàn thế giới**, giúp người dùng trên toàn cầu có thể truy cập được. Bạn có thể chuyển đổi ngôn ngữ ngay lập tức trên tất cả các giao diện: Máy tính để bàn, Trình duyệt, CLI và Python SDK.
+Chloros cung cấp đầy đủ giao diện hỗ trợ bằng **38 ngôn ngữ trên toàn thế giới**, giúp người dùng trên toàn cầu có thể truy cập được. Bạn có thể chuyển đổi ngôn ngữ ngay lập tức trên tất cả các giao diện: Máy tính để bàn, Trình duyệt, CLI và Python SDK.
 
 Chloros hỗ trợ các ngôn ngữ sau:
 
-| # | Ngôn ngữ | Tên bản địa | Mã CLI |
+| # | Ngôn ngữ | Bản địa tên | Mã CLI |
 |---|----------|-------------|----------|
 | 1 | 🇺🇸 Tiếng Anh | Tiếng Anh | `en` |
-| 2 | 🇪🇸 Tiếng Tây Ban Nha | Tiếng Tây Ban Nha | `es` |
+| 2 | 🇪🇸 Tiếng Tây Bản Nha | Tiếng Tây Bản Nha | `es` |
 | 3 | 🇵🇹 Tiếng Bồ Đào Nha | Bồ Đào Nha | `pt` |
 | 4 | 🇫🇷 Tiếng Pháp | Tiếng Pháp | `fr` |
 | 5 | 🇩🇪 Tiếng Đức | tiếng Đức | `de` |
@@ -45,18 +45,18 @@ Chloros hỗ trợ các ngôn ngữ sau:
 | 37 | 🇪🇪 Tiếng Estonia | Eesti | `et` |
 | 38 | 🇸🇮 Tiếng Slovenia | Tiếng Sloveniaščina | `sl` |
 
-## Cách thay đổi ngôn ngữ
+##Thay đổi ngôn ngữ
 
-### Trong Máy tính để bàn/Trình duyệt Chloros
+### Trong Máy tính để bàn/ Trình duyệt Chloros
 
-1. Mở cài đặt ứng dụng
+1. Mở ứng dụng cài đặt
 2. Điều hướng đến menu chọn ngôn ngữ
 3. Chọn ngôn ngữ ưa thích của bạn từ danh sách
 4. Giao diện sẽ cập nhật ngay lập tức
 
 ### Trong Chloros CLI
 
-Sử dụng lệnh `language` để xem hoặc thay đổi ngôn ngữ giao diện CLI:
+Sử dụng `language` lệnh để xem hoặc thay đổi giao diện ngôn ngữ CLI:
 
 ```bash
 # View current language
@@ -79,15 +79,15 @@ chloros-cli language --list
 
 ### Trong Chloros Python SDK
 
-Đặt tham số ngôn ngữ khi khởi tạo SDK để nhận thông báo và kết quả đầu ra bằng ngôn ngữ ưa thích của bạn.
+Đặt tham số ngôn ngữ khi khởi động SDK để nhận thông báo và kết quả đầu ra bằng ngôn ngữ ưa thích của bạn.
 
-## Bảo hiểm
+##Bảo hiểm
 
 Tất cả 38 ngôn ngữ đều được hỗ trợ đầy đủ trên:
 
-* **Máy tính để bàn Chloros** - Bản dịch GUI hoàn chỉnh
+* **Máy tính để bàn Chloros** - Hoàn thiện bản dịch GUI
 * **Trình duyệt Chloros** - Giao diện web ở tất cả các ngôn ngữ
-* **Chloros CLI** - Giao diện dòng lệnh và thông báo đầu ra
+* **Chloros CLI** - Lệnh dòng giao diện và đầu thông báo
 * **Chloros Python SDK** - Thông báo và tài liệu API
 
 Hỗ trợ ngôn ngữ đảm bảo rằng người dùng trên toàn thế giới có thể làm việc hiệu quả bằng ngôn ngữ mẹ đẻ của họ mà không gặp rào cản.

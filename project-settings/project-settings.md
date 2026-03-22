@@ -1,246 +1,246 @@
 # Cài đặt dự án
 
-Thanh bên Cài đặt dự án <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> trong Chloros> cho phép bạn định cấu hình tất cả các khía cạnh của xử lý hình ảnh, phát hiện mục tiêu hiệu chỉnh, tính toán chỉ mục đa phổ và các tùy chọn xuất cho dự án của bạn. Các cài đặt này được lưu cùng với dự án của bạn và có thể được lưu dưới dạng mẫu để sử dụng lại trên nhiều dự án.
+Thanh cài đặt dự án <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> trong Chloros> cho phép bạn định cấu hình tất cả các cạnh của bộ xử lý hình ảnh, phát hiện hiệu chỉnh tiêu điểm mục, tính toán chỉ mục đa và các tùy chọn xuất ra cho dự án của bạn. Cài đặt này được lưu cùng với dự án của bạn và có thể được lưu dưới dạng mẫu để sử dụng lại trên nhiều dự án.
 
-## Truy cập cài đặt dự án
+## Truy cập dự án cài đặt
 
-Để truy cập Cài đặt dự án:
+Để truy cập cài đặt dự án:
 
 1. Mở một dự án trong Chloros
-2. Nhấp vào tab **Cài đặt dự án** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ở thanh bên trái
-3. Bảng cài đặt sẽ hiển thị tất cả các tùy chọn cấu hình có sẵn được sắp xếp theo danh mục
+2. Click vào tab **Cài đặt dự án** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> ở thanh bên trái
+3. Cài đặt bảng sẽ hiển thị tất cả các cấu hình tùy chọn có sẵn được sắp xếp theo danh mục
 
 ***
 
-## Phát hiện mục tiêu
+## Phát hiện tiêu điểm
 
-Các cài đặt này kiểm soát cách Chloros phát hiện và xử lý các mục tiêu hiệu chỉnh trong hình ảnh của bạn.
+Kiểm soát cài đặt này Cách Chloros phát hiện và xử lý các chỉnh sửa tiêu điểm trong hình ảnh của bạn.
 
-### Diện tích mẫu hiệu chuẩn tối thiểu (px)
+### Tối thiểu chuẩn mực mẫu vẽ (px)
 
 * **Loại**: Số
 * **Phạm vi**: 0 đến 10.000 pixel
 * **Mặc định**: 25 pixel
-* **Mô tả**: Đặt diện tích tối thiểu (tính bằng pixel) cần thiết để vùng được phát hiện được coi là mẫu mục tiêu hiệu chuẩn hợp lệ. Giá trị nhỏ hơn sẽ phát hiện các mục tiêu nhỏ hơn nhưng có thể làm tăng kết quả dương tính giả. Giá trị lớn hơn yêu cầu vùng mục tiêu lớn hơn, rõ ràng hơn để phát hiện.
-* **Thời điểm điều chỉnh**:
-  * Tăng nếu bạn nhận được phát hiện sai trên các tạo tác hình ảnh nhỏ
-  * Giảm nếu mục tiêu hiệu chỉnh của bạn xuất hiện nhỏ trong hình ảnh của bạn và không bị phát hiện
+* **Mô tả**: Cần thiết phải đặt mức tối thiểu diện tích (pixel thuộc tính) để vùng được phát hiện là hợp lệ chuẩn hiệu tiêu chuẩn mẫu. Giá trị nhỏ hơn sẽ phát hiện các mục tiêu nhỏ hơn nhưng có thể làm tăng kết quả dương tính. Giá trị lớn hơn yêu cầu tiêu điểm vùng lớn hơn, rõ ràng hơn để phát hiện.
+* **Điều chỉnh thời điểm**:
+  * Tăng nếu bạn nhận thấy sai sót trên các hình ảnh tạo tác vụ nhỏ
+  * Giảm nếu hiệu chỉnh tiêu điểm của bạn xuất hiện nhỏ trong hình ảnh của bạn và không được phát hiện
 
-### Phân cụm mục tiêu tối thiểu (0-100)
+### Tối thiểu phân cụm mục tiêu (0-100)
 
 * **Loại**: Số
 * **Phạm vi**: 0 đến 100
 * **Mặc định**: 60
-* **Mô tả**: Kiểm soát ngưỡng phân cụm để nhóm các vùng có màu tương tự nhau khi phát hiện mục tiêu hiệu chuẩn. Giá trị cao hơn yêu cầu nhiều màu tương tự hơn được nhóm lại với nhau, dẫn đến khả năng phát hiện mục tiêu thận trọng hơn. Giá trị thấp hơn cho phép biến đổi màu sắc nhiều hơn trong nhóm mục tiêu.
-* **Thời điểm điều chỉnh**:
-  * Tăng nếu mục tiêu hiệu chuẩn được chia thành nhiều lần phát hiện
-  * Giảm nếu mục tiêu hiệu chỉnh có biến thể màu không được phát hiện đầy đủ
+* **Mô tả**: Kiểm soát tần số phân cụm để nhóm các vùng có màu tương tự nhau khi phát hiện tiêu chuẩn tín hiệu. Giá trị cao hơn yêu cầu nhiều màu tương thích hơn được nhóm lại với nhau, dẫn đến khả năng phát hiện mục tiêu cẩn thận hơn. Giá trị thấp hơn cho phép nhiều biến đổi màu sắc hơn trong tiêu điểm nhóm.
+* **Điều chỉnh thời điểm**:
+  * Tăng cường nếu tiêu chuẩn mục tiêu được phát hiện thành nhiều lần
+  * Giảm nếu việc chỉnh sửa tiêu điểm có biến màu có thể không được phát hiện đầy đủ
 
 ***
 
 ## Xử lý
 
-Các cài đặt này kiểm soát cách Chloros xử lý và hiệu chỉnh hình ảnh của bạn.
+Kiểm soát cài đặt này Kiểm soát cách xử lý Chloros và hiệu chỉnh hình ảnh của bạn.
 
-### Chỉnh sửa họa tiết
+### Chỉnh sửa chi tiết
 
-* **Loại**: Hộp kiểm
+* **Loại**: Hộp kiểm tra
 * **Mặc định**: Đã bật (đã chọn)
-* **Mô tả**: Áp dụng hiệu chỉnh họa tiết để bù cho độ tối của ống kính ở các cạnh của hình ảnh. Họa tiết là một hiện tượng quang học phổ biến trong đó các góc và cạnh của hình ảnh có vẻ tối hơn phần trung tâm do đặc điểm của ống kính.
-* **Thời điểm tắt**: Chỉ tắt nếu tổ hợp máy ảnh/ống kính của bạn đã áp dụng tính năng chỉnh sửa họa tiết hoặc nếu bạn muốn sửa họa tiết theo cách thủ công trong quá trình xử lý hậu kỳ.
+* **Mô tả**: Áp dụng hiệu chỉnh chi tiết để bù đắp độ tối của ống kính ở các cạnh của hình ảnh. Họa tiết là một hiện tượng quang học phổ biến trong đó các góc và cạnh của hình ảnh có vẻ tối hơn phần trung tâm do đặc điểm của ống kính.
+* **Thời gian tắt**: Chỉ tắt nếu bạn đã áp dụng tính năng chỉnh sửa chi tiết hoặc nếu bạn muốn chỉnh sửa chi tiết theo cách thủ công trong quá trình xử lý hậu kỳ.
 
-### Hiệu chỉnh độ phản xạ / cân bằng trắng
+### Hiệu chỉnh chế độ phản xạ / cân bằng trắng
 
-* **Loại**: Hộp kiểm
+* **Loại**: Hộp kiểm tra
 * **Mặc định**: Đã bật (đã chọn)
-* **Mô tả**: Cho phép hiệu chỉnh phản xạ tự động bằng cách sử dụng các mục tiêu hiệu chỉnh được phát hiện trong hình ảnh của bạn. Điều này bình thường hóa các giá trị phản xạ trên tập dữ liệu của bạn và đảm bảo các phép đo nhất quán bất kể điều kiện ánh sáng.
-* **Thời điểm tắt**: Chỉ tắt nếu bạn muốn xử lý hình ảnh thô, chưa được hiệu chỉnh hoặc nếu bạn đang sử dụng quy trình hiệu chỉnh khác.
+* **Mô tả**: Cho phép tự động điều chỉnh phản xạ bằng cách sử dụng các hiệu chỉnh tiêu điểm được phát hiện trong hình ảnh của bạn. Điều này thường hóa các giá trị phản xạ trên dữ liệu của bạn và đảm bảo các thước đo được phép nhất bất chấp điều kiện ánh sáng.
+* **Thời điểm tắt**: Chỉ tắt nếu bạn muốn xử lý raw image, chưa được chỉnh sửa hoặc nếu bạn đang sử dụng trình chỉnh sửa quy trình khác.
 
-### Phương pháp Debayer
+### Debayer phương pháp
 
-* **Loại**: Lựa chọn thả xuống
+* **Loại bỏ**: Lựa chọn thả xuống
 * **Tùy chọn**:
   * Tiêu chuẩn (Nhanh, Chất lượng trung bình)
-  * Nhận biết kết cấu (Chậm, Chất lượng cao nhất) \[Chloros+]
+  * Nhận cấu hình (Chậm, Chất lượng cao nhất) \[Chloros+]
 * **Mặc định**: Tiêu chuẩn (Nhanh, Chất lượng trung bình)
-* **Mô tả**: Chọn thuật toán khử màu được sử dụng để chuyển đổi dữ liệu cảm biến mẫu thô của Bayer thành hình ảnh đầy đủ màu sắc. Phương pháp "Tiêu chuẩn (Nhanh, Chất lượng Trung bình)" mang lại sự cân bằng tối ưu giữa tốc độ xử lý và chất lượng hình ảnh. "Phần mềm nhận biết kết cấu (Chậm, Chất lượng cao nhất)" \[Chloros+] sử dụng trình gỡ lỗi nhận biết cạnh chất lượng cao kết hợp với mô hình khử nhiễu AI/ML giúp loại bỏ gần như toàn bộ tiếng ồn gây nhiễu. Mô hình Nhận biết Kết cấu yêu cầu bộ nhớ GPU (VRAM) để chạy. Chúng tôi khuyên bạn nên sử dụng nó khi bạn có sẵn >4GB VRAM để xử lý nhanh hơn.
-* **Lưu ý**: Các phương pháp gỡ lỗi bổ sung có thể được thêm vào trong các phiên bản tương lai của Chloros.
+* **Mô tả**: Chọn thuật toán khử màu được sử dụng để chuyển đổi nguyên liệu thô mẫu cảm biến dữ liệu của Bayer thành hình ảnh đầy đủ màu sắc. Phương pháp "Tiêu chuẩn (Nhanh, Chất lượng Trung bình)" mang lại sự cân bằng tối ưu giữa tốc độ xử lý và hình ảnh chất lượng. "Phần mềm nhận biết cấu hình (Chậm, Chất lượng cao nhất)" \[Chloros+] sử dụng trình gỡ lỗi biết chất lượng cao kết hợp với mô hình khử nhiễu AI/ML giúp loại bỏ gần như toàn bộ gây nhiễu ồn. Mô hình Nhận biết GPU bộ nhớ (VRAM) yêu cầu cấu hình để chạy. Chúng tôi khuyên bạn nên sử dụng nó khi bạn có sẵn >4GB VRAM để xử lý nhanh hơn.
+* **Lưu ý**: Các plugin gỡ lỗi phương pháp có thể được thêm vào trong các phiên bản tương thích của Chloros.
 
-### Khoảng thời gian hiệu chỉnh lại tối thiểu
+### Tối thiểu hóa hiệu chỉnh thời gian khoảng cách
 
 * **Loại**: Số
 * **Phạm vi**: 0 đến 3.600 giây
 * **Mặc định**: 0 giây
-* **Mô tả**: Đặt khoảng thời gian tối thiểu (tính bằng giây) giữa các lần sử dụng mục tiêu hiệu chuẩn. Khi được đặt thành 0, Chloros sẽ sử dụng mọi mục tiêu hiệu chuẩn được phát hiện. Khi được đặt thành giá trị cao hơn, Chloros sẽ chỉ sử dụng các mục tiêu hiệu chuẩn cách nhau ít nhất nhiều giây này, giúp giảm thời gian xử lý cho các tập dữ liệu thường xuyên chụp mục tiêu hiệu chuẩn.
-* **Thời điểm điều chỉnh**:
-  * Đặt thành 0 để có độ chính xác hiệu chuẩn tối đa khi điều kiện ánh sáng thay đổi
-  * Tăng (ví dụ: lên 60-300 giây) để xử lý nhanh hơn khi ánh sáng nhất quán và bạn thường xuyên hiệu chỉnh hình ảnh mục tiêu
+* **Mô tả**: Đặt khoảng thời gian tối thiểu (tính bằng giây) giữa các lần sử dụng tiêu chuẩn hiệu mục. Khi được đặt thành 0, Chloros sẽ sử dụng mọi tiêu chuẩn tiêu chuẩn được phát hiện. Khi được đặt thành giá trị cao hơn, Chloros sẽ chỉ sử dụng cách chuẩn hóa các mục tiêu ít nhất nhiều giây, giúp giảm thời gian xử lý các dữ liệu một cách thường xuyên.
+* **Điều chỉnh thời điểm**:
+  * Đặt thành 0 để có mức tối đa chuẩn xác chính xác khi thay đổi ánh sáng
+  * Tăng (ví dụ: tăng 60-300 giây) để xử lý nhanh hơn khi ánh sáng tối nhất quán và bạn thường xuyên hiệu chỉnh hình ảnh mục tiêu
 
-### Độ lệch múi giờ của cảm biến ánh sáng
+### Giờ độ lệch của ánh sáng biến
 
 * **Loại**: Số
 * **Phạm vi**: -12 đến +12 giờ
 * **Mặc định**: 0 giờ
-* **Mô tả**: Chỉ định độ lệch múi giờ (tính bằng giờ tính từ UTC) cho dấu thời gian dữ liệu cảm biến ánh sáng. Điều này được sử dụng khi xử lý các tệp dữ liệu PPK (Động học sau xử lý) để đảm bảo đồng bộ hóa thời gian chính xác giữa ảnh chụp và dữ liệu GPS.
-* **Thời điểm điều chỉnh**: Đặt giá trị này thành chênh lệch múi giờ địa phương nếu dữ liệu PPK của bạn sử dụng giờ địa phương thay vì UTC. Ví dụ:
-  * Giờ Thái Bình Dương: -8 hoặc -7 (tùy theo DST)
-  * Giờ miền Đông: -5 hoặc -4 (tùy theo DST)
-  * Giờ Trung Âu: +1 hoặc +2 (tùy theo DST)
+* **Mô tả**: Chỉ định độ lệch múi giờ (tính bằng giờ tính từ UTC) cho dấu thời gian dữ liệu cảm biến ánh sáng. Điều này được sử dụng khi xử lý PPK dữ liệu tệp (Động học sau quá trình xử lý) để đảm bảo đồng bộ hóa thời gian chính xác giữa ảnh chụp và GPS dữ liệu.
+* **Điều chỉnh thời điểm**: Đặt giá trị này thành chênh lệch múi giờ địa phương nếu PPK dữ liệu của bạn sử dụng địa phương giờ thay vì UTC. Ví dụ:
+  * Time Thái Bình Dương: -8 hoặc -7 (theo DST)
+  * Miền Đông: -5 hoặc -4 (theo DST)
+  * Time Trung Âu: +1 hoặc +2 (theo DST)
 
-### Áp dụng hiệu chỉnh PPK
+### Áp dụng PPK hiệu chỉnh
 
-* **Loại**: Hộp kiểm
-* **Mặc định**: Đã tắt (không được chọn)
-* **Mô tả**: Cho phép sử dụng các hiệu chỉnh Động học sau xử lý (PPK) từ máy ghi MAPIR DAQ có chứa GPS (GNSS). Khi được bật, Chloros sẽ sử dụng mọi tệp nhật ký .daq chứa dữ liệu ghim phơi sáng trong thư mục dự án của bạn và áp dụng các chỉnh sửa vị trí địa lý chính xác cho hình ảnh của bạn.
-* **Yêu cầu**: Tệp nhật ký .daq có các mục ghim phơi sáng phải có trong thư mục dự án của bạn
-* **Thời điểm bật**: Bạn nên luôn bật tính năng sửa PPK nếu bạn có các mục phản hồi phơi sáng trong tệp nhật ký .daq của mình.
+* **Loại**: Hộp kiểm tra
+* **Mặc định**: Đã tắt (không thể chọn)
+* **Mô tả**: Được phép sử dụng bộ xử lý Động học hiệu chỉnh (PPK) từ máy ghi MAPIR DAQ có chứa GPS (GNSS). Khi được bật, Chloros sẽ sử dụng mọi bản cập nhật tệp .daq chứa phơi sáng dữ liệu trong dự án thư mục của bạn và áp dụng các chỉnh sửa vị trí chính xác cho hình ảnh của bạn.
+* **Yêu cầu**: Tệp nhật ký .daq có các mục phơi sáng phải có trong dự án thư mục của bạn
+* **Thời điểm bật**: Bạn nên luôn bật tính năng sửa PPK nếu bạn có các mục phản hồi phơi sáng trong bản ghi tệp .daq của mình.
 
 ### Chân phơi sáng 1
 
-* **Loại**: Lựa chọn thả xuống
-* **Chế độ hiển thị**: Chỉ hiển thị khi bật "Áp dụng hiệu chỉnh PPK" VÀ dữ liệu phơi sáng có sẵn cho Ghim 1
+* **Loại bỏ**: Lựa chọn thả xuống
+* **Chế độ hiển thị**: Chỉ hiển thị khi bật "Áp dụng PPK hiệu chỉnh" Và phơi sáng dữ liệu có sẵn cho Ghim 1
 * **Tùy chọn**:
-  * Tên mẫu máy ảnh được phát hiện trong dự án
+  * Máy ảnh mẫu tên được phát hiện trong dự án
   * "Không sử dụng" - Bỏ qua pin phơi sáng này
 * **Mặc định**: Được chọn tự động dựa trên cấu hình dự án
-* **Mô tả**: Chỉ định một camera cụ thể cho Chân phơi sáng 1 để đồng bộ hóa thời gian PPK. Chốt phơi sáng ghi lại thời gian chính xác khi màn trập camera được kích hoạt, điều này rất quan trọng để định vị địa lý PPK chính xác.
+* **Mô tả**: Chỉ định một công cụ camera có thể chọn Độ phơi sáng 1 để đồng bộ hóa PPK thời gian. Hãy phơi sáng lại thời gian chính xác khi màn hình thu được kích hoạt, điều này rất quan trọng để xác định vị trí chính xác của PPK địa chỉ.
 * **Hành vi tự động lựa chọn**:
   * Camera đơn + chốt đơn: Tự động chọn camera
-  * Camera đơn + hai chân: Chân 1 tự động được gán cho camera
+  * Camera đơn + hai chân: Chân 1 tự động được phân bổ cho camera
   * Nhiều camera: Yêu cầu lựa chọn thủ công
 
 ### Chân phơi sáng 2
 
-* **Loại**: Lựa chọn thả xuống
-* **Chế độ hiển thị**: Chỉ hiển thị khi "Áp dụng hiệu chỉnh PPK" được bật VÀ dữ liệu phơi sáng có sẵn cho Chân 2
+* **Loại bỏ**: Lựa chọn thả xuống
+* **Chế độ hiển thị**: Chỉ hiển thị khi "Áp dụng PPK hiệu chỉnh" được bật và sẵn sàng phơi sáng dữ liệu cho Chân 2
 * **Tùy chọn**:
-  * Tên mẫu máy ảnh được phát hiện trong dự án
+  * Máy ảnh mẫu tên được phát hiện trong dự án
   * "Không sử dụng" - Bỏ qua pin phơi sáng này
 * **Mặc định**: Được chọn tự động dựa trên cấu hình dự án
-* **Mô tả**: Chỉ định một camera cụ thể cho Chân phơi sáng 2 để đồng bộ hóa thời gian PPK khi sử dụng thiết lập camera kép.
+* **Mô tả**: Chỉ định một công cụ camera cho Chân phơi sáng 2 để đồng bộ hóa PPK thời gian khi sử dụng camera kép thiết lập.
 * **Hành vi tự động lựa chọn**:
-  * Camera đơn + chốt đơn: Chân 2 tự động được đặt thành "Không sử dụng"
-  * Camera đơn + hai chân: Chân 2 tự động được đặt thành "Không sử dụng"
+  * Camera menu + chốt đơn: Chân 2 tự động được cài đặt thành "Không sử dụng"
+  * Camera đơn + hai chân: Chân 2 tự động cài đặt thành "Không sử dụng"
   * Nhiều camera: Yêu cầu lựa chọn thủ công
-* **Lưu ý**: Không thể gán cùng một camera cho cả Chân 1 và Chân 2 cùng một lúc.***
+* **Lưu ý**: Không thể phân bổ cùng một camera cho cả Chân 1 và Chân 2 cùng một lúc.***
 
-## Chỉ mục
+## Index
 
-Các cài đặt này cho phép bạn định cấu hình các chỉ số đa phổ để phân tích và trực quan hóa.
+Cài đặt này cho phép bạn định cấu hình đa phổ chỉ để phân tích và trực tuyến hóa.
 
-### Thêm chỉ mục
+### Add only item
 
-* **Loại**: Bảng cấu hình chỉ mục đặc biệt
-* **Mô tả**: Mở bảng tương tác nơi bạn có thể chọn và định cấu hình các chỉ số thực vật đa phổ (NDVI, NDRE, EVI, v.v.) để tính toán trong quá trình xử lý hình ảnh. Bạn có thể thêm nhiều chỉ mục, mỗi chỉ mục có cài đặt hiển thị riêng.
-* **Các chỉ số có sẵn**: Hệ thống bao gồm hơn 30 chỉ số đa phổ được xác định trước bao gồm:
-  * NDVI (Chỉ số thực vật khác biệt chuẩn hóa)
+* **Loại**: Đặc biệt chỉ mục cấu hình bảng
+* **Mô tả**: Mở bảng tương tác nơi bạn có thể chọn và định cấu hình các thực vật đa phổ chỉ (NDVI, NDRE, EVI, v.v.) để tính toán trong quá trình xử lý hình ảnh. Bạn có thể thêm nhiều chỉ mục, mỗi mục riêng biệt cài đặt cài đặt chỉ mục.
+* **Các chỉ số có sẵn**: Hệ thống bao gồm hơn 30 chỉ số đa phổ được xác định trước bao bao:
+  * NDVI (Chỉ số thực vật khác chuẩn hóa)
   * NDRE (Chênh lệch chuẩn hóa RedEdge)
   * EVI (Chỉ số thực vật tăng cường)
   * GNDVI, SAVI, OSAVI, MSAVI2
   * Và nhiều hơn nữa (xem [Công thức chỉ mục đa phổ] (multispectral-index-formulas.md) để biết danh sách đầy đủ)
 * **Tính năng**:
-  * Chọn từ các công thức chỉ số được xác định trước
-  * Định cấu hình độ dốc màu trực quan (LUT - Bảng tra cứu)
-  * Đặt giá trị ngưỡng để phân tích
-  * Tạo công thức chỉ mục tùy chỉnh
+  * Choose from the công thức được xác định chỉ định trước đó
+  * Định cấu hình gradient màu trực quan (LUT - Bảng tra cứu)
+  * Đặt ngưỡng giá trị để phân tích
+  * Tạo tùy chỉnh chỉ mục công thức
 
-### Công thức tùy chỉnh (Tính năng Chloros+)
+### Tùy chỉnh công thức ( Tính năng Chloros+)
 
-* **Loại**: Mảng định nghĩa công thức tùy chỉnh
-* **Mô tả**: Cho phép bạn tạo và lưu các công thức chỉ số đa phổ tùy chỉnh bằng cách sử dụng toán học. Các công thức tùy chỉnh được lưu cùng với cài đặt dự án của bạn và có thể được sử dụng giống như các chỉ mục tích hợp sẵn.
+* **Loại**: Tùy chỉnh công thức định nghĩa
+* **Mô tả**: Cho phép bạn tạo và lưu các công thức điều chỉnh đa tùy chọn đa số chỉ bằng cách sử dụng học toán. Tùy chỉnh công thức được lưu cùng với dự án cài đặt của bạn và có thể được sử dụng giống như các mục tích hợp sẵn.
 * **Cách tạo**:
-  1. Trong bảng cấu hình Chỉ mục, hãy tìm tùy chọn công thức tùy chỉnh
-  2. Xác định công thức của bạn bằng cách sử dụng số nhận dạng băng tần (ví dụ: NIR, Red, Green, Blue)
-  3. Lưu công thức với tên mô tả
-* **Cú pháp công thức**: Các phép toán tiêu chuẩn được hỗ trợ, bao gồm:
+  1. Trong Index config table, hãy tìm tùy chọn tùy chọn công thức
+  2. Xác định công thức của bạn bằng cách sử dụng số lượng băng tần nhận dạng (ví dụ: NIR, Red, Green, Blue)
+  3. Save công thức với mô tả tên
+* **Công thức pháp**: Các chuẩn toán được hỗ trợ, bao gồm:
   * Số học: `+`, `-`, `*`, `/`
-  * Dấu ngoặc đơn cho thứ tự thực hiện
+  * Hiện tại dấu ngoặc đơn cho thứ tự
   * Tham chiếu băng tần: NIR, Red, Green, Blue, RedEdge, Cyan, Orange, NIR1, NIR2
 
 ***
 
 ## Xuất khẩu
 
-Các cài đặt này kiểm soát định dạng và chất lượng của hình ảnh đã xử lý được xuất.
+Trình kiểm tra cài đặt này đã được xử lý Định dạng và chất lượng của hình ảnh đã được xuất.
 
-### Định dạng hình ảnh đã được hiệu chỉnh
+### Hình ảnh định dạng đã được chỉnh sửa
 
-* **Loại**: Lựa chọn thả xuống
+* **Loại bỏ**: Lựa chọn thả xuống
 * **Tùy chọn**:
-  * **TIFF (16-bit)** - Định dạng TIFF 16-bit không nén
-  * **TIFF (32-bit, Phần trăm)** - TIFF dấu phẩy động 32-bit với các giá trị phản xạ dưới dạng phần trăm
-  * **PNG (8-bit)** - Định dạng PNG 8 bit được nén
+  * **TIFF (16-bit)** - TIFF 16-bit dạng không nén
+  * **TIFF (32-bit, Phần trăm)** - TIFF comcomoma 32-bit với các giá trị phản xạ dưới dạng phần trăm
+  * **PNG (8-bit)** - PNG 8 bit được nén
   * **JPG (8-bit)** - Định dạng JPEG 8-bit được nén
 * **Mặc định**: TIFF (16-bit)
-* **Mô tả**: Chọn định dạng tệp để lưu hình ảnh đã được xử lý và hiệu chỉnh.
+* **Mô tả**: Chọn tệp định dạng để lưu hình ảnh đã được xử lý và hiệu chỉnh.
 * **Khuyến nghị định dạng**:
-  * **TIFF (16-bit)**: Được khuyến nghị cho phân tích khoa học và quy trình làm việc chuyên nghiệp. Bảo toàn chất lượng dữ liệu tối đa mà không có hiện tượng nén. Tốt nhất cho phân tích đa phổ và xử lý sâu hơn trong phần mềm GIS.
-  * **TIFF (32-bit, Phần trăm)**: Tốt nhất cho quy trình làm việc yêu cầu giá trị phản xạ dưới dạng phần trăm (0-100%). Cung cấp độ chính xác tối đa cho các phép đo phóng xạ.
-  * **PNG (8-bit)**: Tốt cho việc xem web và hình dung chung. Kích thước tệp nhỏ hơn với tính năng nén không mất dữ liệu nhưng dải động giảm.
-  * **JPG (8-bit)**: Kích thước tệp nhỏ nhất, chỉ phù hợp để xem trước và hiển thị trên web. Sử dụng tính năng nén tổn thất không phù hợp cho phân tích khoa học.***
+  * **TIFF (16-bit)**: Khuyến nghị cho phân tích khoa học và quy trình làm việc chuyên nghiệp. Bảo đảm tối đa chất lượng dữ liệu mà không có biểu tượng nén. Tốt nhất cho phân tích đa phổ và xử lý sâu hơn trong phần mềm GIS.
+  * **TIFF (32-bit, Phần trăm)**: Tốt nhất cho công việc quy trình yêu cầu giá trị phản xạ dưới dạng phần trăm (0-100%). Cung cấp tối đa độ chính xác cao cho các phép đo xạ được phép.
+  * **PNG (8-bit)**: Tốt cho công việc xem web và hình dung chung. Tệp kích thước nhỏ hơn so với tính năng nén không bị mất dữ liệu nhưng phạm vi động giảm.
+  * **JPG (8-bit)**: Kích thước tệp nhỏ nhất, chỉ phù hợp để xem trước và hiển thị trên web. Sử dụng tính năng nén phức tạp không phù hợp cho phân tích khoa học.***
 
-## Lưu mẫu dự án
+## Lưu dự án mẫu
 
-Tính năng này cho phép bạn lưu cài đặt dự án hiện tại của mình dưới dạng mẫu có thể sử dụng lại.
+Tính năng này cho phép bạn lưu dự án cài đặt hiện tại của mình dưới dạng mẫu có thể sử dụng lại.
 
 * **Loại**: Nhập văn bản + Nút lưu
-* **Mô tả**: Nhập tên mô tả cho mẫu cài đặt của bạn và nhấp vào biểu tượng lưu. Mẫu sẽ lưu trữ tất cả cài đặt dự án hiện tại của bạn (phát hiện mục tiêu, tùy chọn xử lý, chỉ mục và định dạng xuất) để dễ dàng sử dụng lại trong các dự án trong tương lai.
+* **Mô tả**: Nhập mô tả tên cho mẫu cài đặt của bạn và nhấp vào biểu tượng lưu. Sẽ lưu trữ tất cả hiện tại dự án cài đặt của bạn (hiện tiêu chuẩn, xử lý tùy chọn, mẫu chỉ mục và định dạng) để dễ dàng sử dụng lại trong các dự án trong tương lai.
 * **Trường hợp sử dụng**:
-  * Tạo mẫu cho các hệ thống camera khác nhau (RGB, đa phổ, NIR)
+  * Tạo mẫu cho các hệ thống camera khác nhau (RGB, multi phổ biến, NIR)
   * Lưu cấu hình tiêu chuẩn cho các loại cây trồng cụ thể hoặc quy trình phân tích
-  * Chia sẻ cài đặt nhất quán trong một nhóm
+  * Chia sẻ cài đặt tối đa trong một nhóm
 * **Cách sử dụng**:
-  1. Định cấu hình tất cả cài đặt dự án mong muốn của bạn
-  2. Nhập tên mẫu (ví dụ: "RedEdge Survey3 NDVI Standard")
-  3. Nhấp vào biểu tượng lưu
+  1. Định cấu hình tất cả cài đặt dự án mà bạn mong muốn
+  2. Nhập mẫu tên (ví dụ: "RedEdge Survey3 NDVI Standard")
+  3. Click vào biểu tượng lưu
   4. Mẫu hiện có thể được tải khi tạo dự án mới
 
 ***
 
-## Lưu thư mục dự án
+## Lưu dự án thư mục
 
-Cài đặt này chỉ định nơi lưu dự án mới theo mặc định.
+Cài đặt địa chỉ này để lưu dự án mới theo mặc định.
 
-* **Loại**: Hiển thị đường dẫn thư mục + Nút chỉnh sửa
+* **Loại**: Hiển thị thư mục đường dẫn + chỉnh sửa nút
 * **Mặc định (Windows)**: `C:\Users\[Username]\Chloros Projects`
 * **Mặc định (Linux)**: `~/.local/share/chloros/projects`
-* **Mô tả**: Hiển thị thư mục mặc định hiện tại nơi các dự án Chloros mới được tạo. Nhấp vào biểu tượng chỉnh sửa để chọn một thư mục khác.
+* **Mô tả**: Hiển thị mặc định thư mục hiện tại ở nơi dự án Chloros mới được tạo. Click vào biểu tượng chỉnh sửa để chọn một thư mục khác.
 * **Khi nào cần thay đổi**:
-  * Đặt thành ổ đĩa mạng để cộng tác nhóm
-  * Thay đổi sang ổ đĩa có nhiều dung lượng lưu trữ hơn cho các tập dữ liệu lớn
+  * Đặt mạng ổ đĩa thành công để cộng vào nhóm hoạt động
+  * Thay đổi sang ổ đĩa có nhiều kho lưu trữ hơn cho các dữ liệu lớn
   * Sắp xếp các dự án theo năm, khách hàng hoặc loại dự án trong các thư mục khác nhau
-* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***
+* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Dự án hiện tại vẫn ở vị trí ban đầu.***
 
 ## Cài đặt Kiên trì
 
-Tất cả cài đặt dự án sẽ được lưu tự động cùng với tệp dự án của bạn (định dạng dự án `.mapir`). Khi bạn mở lại một dự án, tất cả các cài đặt sẽ được khôi phục chính xác như khi bạn rời khỏi chúng.
+Tất cả dự án cài đặt sẽ được lưu tự động cùng với dự án tệp của bạn (định dạng dự án `.mapir`). Khi bạn mở lại một dự án, tất cả các cài đặt sẽ được khôi phục chính xác như khi bạn rời khỏi.
 
-### Phân cấp cài đặt
+### Cài đặt phân vùng
 
 Các cài đặt được áp dụng theo thứ tự sau:
 
 1. **Mặc định hệ thống** - Mặc định tích hợp được xác định bởi Chloros
 2. **Cài đặt mẫu** - Nếu bạn tải mẫu khi tạo dự án
-3. **Đã lưu cài đặt dự án** - Cài đặt được lưu cùng với tệp dự án
-4. **Điều chỉnh thủ công** - Mọi thay đổi bạn thực hiện trong phiên hiện tại
+3. **Đã lưu cài đặt dự án** - Cài đặt được lưu cùng với dự án tệp
+4. **Điều chỉnh thủ công** - Mọi thay đổi bạn thực hiện trong phiên bản hiện tại
 
 ### Cài đặt và xử lý ảnh
 
-Hầu hết các thay đổi cài đặt (đặc biệt là trong danh mục Xử lý và Xuất) sẽ kích hoạt quá trình xử lý lại hình ảnh để phản ánh các cài đặt mới. Tuy nhiên, một số cài đặt "chỉ xuất" và không yêu cầu xử lý lại ngay lập tức:
+Hầu hết các cài đặt cài đặt (đặc biệt là trong danh mục Xử lý và Xuất) sẽ kích hoạt quá trình xử lý lại hình ảnh để xem xét mới cài đặt. Tuy nhiên, một số "xuất chỉ" cài đặt và không yêu cầu xử lý lại ngay lập tức:
 
-* Lưu mẫu dự án
+* Lưu dự án mẫu
 * Thư mục làm việc
-* Định dạng hình ảnh đã hiệu chỉnh (áp dụng khi xuất)
+* Chỉnh sửa ảnh dạng định dạng (áp dụng khi xuất)
 
 ***
 
 ## Các phương pháp hay nhất
 
-1. **Bắt đầu với giá trị mặc định**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình công việc thông thường.
-2. **Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho quy trình làm việc hoặc máy ảnh cụ thể, hãy lưu chúng dưới dạng mẫu để đảm bảo tính nhất quán giữa các dự án.
-3. **Kiểm tra trước khi xử lý hoàn toàn**: Khi thử nghiệm các cài đặt mới, hãy thử nghiệm trên một tập hợp con hình ảnh nhỏ trước khi xử lý toàn bộ tập dữ liệu của bạn.
-4. **Ghi lại cài đặt của bạn**: Sử dụng tên mẫu mô tả cho biết hệ thống camera, loại xử lý và mục đích sử dụng (ví dụ: "Survey3\_RGB\_NDVI\_Agriculture").
-5. **Lựa chọn định dạng xuất**: Chọn định dạng xuất dựa trên mục đích sử dụng cuối cùng của bạn:
+1. **Bắt đầu với mặc định giá trị**: Cài đặt mặc định hoạt động tốt với hầu hết các hệ thống camera MAPIR và quy trình công việc thông thường.
+2. **Tạo mẫu**: Sau khi bạn đã tối ưu hóa cài đặt cho công việc hoặc máy ảnh của quy trình, hãy lưu chúng dưới dạng mẫu để đảm bảo tính toán tốt nhất giữa các dự án.
+3. **Kiểm tra trước khi xử lý hoàn toàn**: Khi thử nghiệm các cài đặt mới, hãy thử thử nghiệm trên một hình ảnh tập hợp nhỏ trước khi xử lý toàn bộ dữ liệu của bạn.
+4. **Ghi lại cài đặt của bạn**: Sử dụng mô tả mẫu tên cho máy ảnh hệ thống, loại xử lý và mục tiêu sử dụng (ví dụ: "Survey3\_RGB\_NDVI\_Agriculture").
+5. **Lựa chọn xuất định dạng định dạng**: Chọn xuất định dạng dựa trên mục tiêu sử dụng cuối cùng của bạn:
    * Phân tích khoa học → TIFF (16-bit hoặc 32-bit)
    * Xử lý GIS → TIFF (16-bit)
    * Hiển thị nhanh → PNG (8-bit)
@@ -248,4 +248,4 @@ Hầu hết các thay đổi cài đặt (đặc biệt là trong danh mục X�
 
 ***
 
-Để biết thêm thông tin về các chỉ mục đa phổ trong Chloros, hãy xem trang [Công thức chỉ mục đa phổ](multispectral-index-formulas.md).
+Để biết thêm thông tin về đa phổ chỉ mục trong Chloros, hãy xem trang [Công thức đa phổ chỉ mục](multispectral-index-formulas.md).
