@@ -1,157 +1,157 @@
 # Điểm đánh dấu bản đồ
 
-Tab Bản đồ hiển thị hình ảnh của bạn trên bản đồ 2D tương tác dựa trên tọa độ GPS của chúng. Điều này cung cấp cái nhìn tổng quan về mặt địa lý của phiên chụp của bạn và giúp bạn hình dung phạm vi bao phủ không gian. Nó cũng hữu ích khi nhập hình ảnh của bạn lần đầu tiên để nhanh chóng xóa bất kỳ hình ảnh nào bạn không cần xử lý.
+Tab Bản đồ hiển thị hình ảnh của bạn trên bản đồ 2D tương tác dựa trên chế độ GPS của chúng. Điều này cung cấp cái nhìn tổng quan về địa lý phiên bản của bạn và giúp bạn hình dung phạm vi bao phủ không gian. Nó cũng hữu ích khi bạn nhập hình ảnh của mình lần đầu tiên để nhanh chóng xóa bất kỳ hình ảnh nào bạn không cần xử lý.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
 ## Truy cập tab Bản đồ
 
 1. Mở hoặc tạo dự án trong Chloros
-2. Nhập hình ảnh có chứa siêu dữ liệu GPS
-3. Nhấp vào tab **Bản đồ** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ở thanh bên trái
-4. Bản đồ sẽ hiển thị các điểm đánh dấu tại vị trí GPS của mỗi hình ảnh
+2. Nhập hình ảnh chứa siêu dữ liệu GPS
+3. Cú vào tab **Bản đồ** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ở thanh bên trái
+4. Bản đồ sẽ hiển thị các dấu hiệu đánh dấu tại vị trí GPS của mỗi hình ảnh
 
 {% hint style="info" %}
-**Yêu cầu GPS**: Chỉ những hình ảnh có tọa độ GPS được nhúng trong siêu dữ liệu EXIF ​​của chúng mới xuất hiện trên bản đồ. Đảm bảo máy ảnh của bạn đã bật GPS trong khi chụp.
+**Yêu cầu GPS**: Chỉ những hình ảnh có GPS được nhúng trong EXIF ​​siêu dữ liệu mới xuất hiện trên bản đồ. Đảm bảo ảnh của bạn đã bật GPS khi chụp.
 {% endhint %}
 
 ***
 
 ## Điều chỉnh hình ảnh từ tab bản đồ
 
-Tab **Bản đồ**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> có cùng phần bổ sung <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> và xóa các nút tệp <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> làm [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img tab src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> thì có. Nó cũng hiển thị danh sách bảng tệp dự án tương tự nhưng với các tiêu đề cột khác nhau:
+Tab **Bản đồ**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> có cùng phần bổ sung <img src="../.gitbook/assets/image.png" alt="" data-size="line"> <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> và xóa các nút tệp <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> làm [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img tab src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> thì có. Nó cũng hiển thị tương tự danh sách dự án tệp bảng nhưng với các cột tiêu đề khác nhau:
 
-### Tên tệp
+### Tệp tên
 
-* Tên file gốc từ máy ảnh
-* Duy trì quy ước đặt tên máy ảnh (ví dụ: IMG\_0001.RAW)
+* Tên gốc của file ảnh từ máy ảnh
+* Duy trì quy trình đặt tên máy ảnh (ví dụ: IMG\_0001.RAW)
 
 ### Vĩ độ
 
-* Vĩ độ của hình ảnh
+* Hình ảnh vĩ độ
 
 ### Kinh độ
 
-* Kinh độ của hình ảnh
+* Hình ảnh Kinh độ
 
-### Độ cao
+###Độ cao
 
 * Độ cao của hình ảnh
 
 {% hint style="info" %}
-Nhấp vào tiêu đề cột của bảng cũng sắp xếp dữ liệu hàng
+Click vào cột tiêu đề của bảng cũng sắp xếp hàng dữ liệu
 {% endhint %}
 
 ***
 
-## Điểm đánh dấu hình ảnh
+##Hình ảnh đánh dấu điểm
 
-Mỗi hình ảnh có dữ liệu GPS được thể hiện bằng một điểm đánh dấu trên bản đồ:
+Mỗi hình ảnh đều có dữ liệu GPS có thể được hiển thị bằng một dấu đánh dấu trên bản đồ:
 
-### Hiển thị điểm đánh dấu
+### Show the marker
 
-* Điểm đánh dấu cho biết tọa độ GPS chính xác nơi mỗi hình ảnh được chụp
-* Điểm đánh dấu được nhóm có thể nhóm lại với nhau khi thu nhỏ
-* Phóng to để xem các vị trí hình ảnh riêng lẻ
+* Điểm đánh dấu cho biết độ chính xác của GPS nơi mỗi hình ảnh được chụp
+* Điểm đánh dấu các nhóm có thể được nhóm lại khi thu nhỏ
+* Phóng to để xem các vị trí hình ảnh riêng biệt
 
 {% hint style="success" %}
-SIÊU THU PHÓNG: Khi bạn đạt đến mức thu phóng tối đa từ nhà cung cấp ô bản đồ, ô đó sẽ được phóng to khi thu phóng thêm, cho phép bạn xem các điểm đánh dấu gần nhau.
+SIÊU THU PHÓNG: Khi bạn đạt được mức thu phóng tối đa từ nhà cung cấp ô bản đồ, ô đó sẽ được phóng to khi thu phóng thêm, cho phép bạn xem các điểm chiến đấu gần nhau.
 {% endhint %}
 
 ### Xem trước khi di chuột
 
 * **Di chuột** qua bất kỳ điểm đánh dấu nào để xem bản xem trước hình thu nhỏ của hình ảnh đó
-* Điều này cho phép nhận dạng trực quan nhanh chóng mà không cần rời khỏi chế độ xem bản đồ
-* Hữu ích cho việc định vị các hình ảnh cụ thể trong một phiên chụp lớn
+* Điều này cho phép nhận dạng trực quan nhanh chóng mà không cần phải rời khỏi chế độ xem bản đồ
+* Hữu ích cho việc định vị các công cụ hình ảnh trong một phiên bản chụp lớn
 
 ***
 
 ## Nhà cung cấp ô bản đồ
 
 {% hint style="success" %}
-**Lựa chọn tự động**: Chloros tự động chọn dịch vụ ô cung cấp mức thu phóng tốt nhất cho vị trí bản đồ hiện tại của bạn. Bạn có thể chuyển đổi thủ công giữa các nhà cung cấp nếu muốn.
+**Lựa chọn tự động**: Chloros tự động chọn dịch vụ ô cung cấp mức độ thu phóng tốt nhất cho vị trí bản đồ hiện tại của bạn. Bạn có thể chuyển đổi thủ công giữa các nhà cung cấp nếu muốn.
 {% endhint %}
 
-Tab Bản đồ hỗ trợ hai nhà cung cấp ô cho hình ảnh bản đồ nền:
+Tab cung cấp ô hỗ trợ bản đồ hỗ trợ cho hình ảnh bản đồ:
 
 ### Google Maps
 
-* Hình ảnh vệ tinh và bản đồ tiêu chuẩn từ Google
+* Hình ảnh được bảo vệ và tiêu chuẩn bản đồ từ Google
 * Tốt nhất cho phạm vi phủ sóng chung trên toàn thế giới
 
 ###ESRI
 
-* Hình ảnh vệ tinh và trên không từ ESRI ArcGIS
+* Hình ảnh bảo vệ và trên không từ ESRI ArcGIS
 * Thường cung cấp hình ảnh có độ phân giải cao hơn ở một số vùng nhất định
 
 ***
 
 ## Các loại ô bản đồ
 
-Bạn có thể chọn loại lớp bản đồ (từ trái sang phải):
+Bạn có thể chọn loại bản đồ (từ trái sang phải):
 
 &#x20;<img src="../.gitbook/assets/image (23).png" alt="" data-size="original">
 
 ### Địa hình
 
-Hiển thị cấu hình độ cao và ô bản đồ với các chi tiết (đường, v.v.)
+Hiển thị cao cấu hình và ô bản đồ với các chi tiết (đường, v.v.)
 
-### Bản đồ
+###Bản đồ
 
-Hiển thị các ô bản đồ tiêu chuẩn (băng thông thấp hơn) với các chi tiết (đường, v.v.)
+Hiển thị các ô tiêu chuẩn bản đồ (băng thông thấp hơn) với các chi tiết (đường, v.v.)
 
-### Vệ tinh
+###Vệ tinh
 
-Hiển thị các ô bản đồ vệ tinh chi tiết (băng thông cao hơn)
+Hiển thị các ô bản đồ bảo vệ chi tiết (băng thông tin cao hơn)
 
-### Lai
+###Lại
 
 Hiển thị các ô bản đồ vệ tinh với các chi tiết bổ sung (đường, v.v.)
 
 ***
 
-## Điều hướng bản đồ
+##Bản đồ điều hướng
 
-### Điều khiển thu phóng
+### Zoom control
 
 * **Phóng to/Thu nhỏ**: Sử dụng con lăn chuột hoặc nút thu phóng
 * **Toàn màn hình**: Toàn màn hình bản đồ
 
-### Điều khiển Pan
+### Pan điều khiển
 
-* **Pan**: Nhấp và kéo để di chuyển xung quanh bản đồ***
+* **Pan**: Tinh và kéo để di chuyển xung quanh bản đồ***
 
 ## Trường hợp sử dụng
 
-### Trực quan hóa đường bay
+### Vịnh đường hóa học trực tiếp
 
-* Xem vùng phủ sóng của các phiên chụp drone
+* Xem vùng phủ sóng của các phiên bản drone
 * Xác định những khoảng trống trong vùng phủ sóng hình ảnh
 * Xác minh việc thực hiện đường bay
 
-### Đánh giá khảo sát mặt đất
+###Đánh giá khảo sát mặt đất
 
-* Xem sự phân bố không gian của ảnh chụp trên mặt đất
-* Xác định vị trí hình ảnh mục tiêu hiệu chuẩn liên quan đến khu vực khảo sát
-* Lập kế hoạch các địa điểm chụp bổ sung
+* Xem bố cục không gian của ảnh chụp trên mặt đất
+* Xác định tiêu chuẩn hình ảnh định vị liên hệ với khu vực khảo sát
+* Lập kế hoạch bổ sung địa điểm
 
 ### Kiểm soát chất lượng
 
-* Nhanh chóng xác định hình ảnh được chụp ở những vị trí không ngờ tới
-* Xác minh độ chính xác của GPS trên tập dữ liệu
-* Tham chiếu chéo vị trí hình ảnh với ghi chú hiện trường
+* Hình ảnh được xác định nhanh chóng được chụp ở những vị trí không mong đợi
+* Xác định độ chính xác của GPS trên dữ liệu
+* Tham chiếu hình ảnh vị trí chéo với trường ghi chú
 
 ***
 
-## Khắc phục sự cố
+##Khắc phục sự cố
 
 ### Không có dấu hiệu nào xuất hiện
 
 **Nguyên nhân có thể:**
 
 * Hình ảnh không chứa siêu dữ liệu GPS
-* GPS đã bị tắt trên máy ảnh trong khi chụp
-* Dữ liệu EXIF ​​đã bị phần mềm bên ngoài xóa
+* GPS đã bị tắt trên máy ảnh khi chụp
+* EXIF ​​data đã được xóa bên ngoài phần mềm
 
 **Giải pháp**: Xác minh GPS được bật trên máy ảnh của bạn và nhập lại tệp gốc
 
@@ -159,7 +159,7 @@ Hiển thị các ô bản đồ vệ tinh với các chi tiết bổ sung (đư
 
 **Nguyên nhân có thể:**
 
-* Camera GPS đã sửa lỗi vệ tinh kém
+* Camera GPS đã sửa lỗi bảo vệ tinh tế
 * GPS trôi trong quá trình chụp
 
-**Giải pháp**: Đây thường là sự cố về thời gian chụp; cân nhắc sử dụng GPS PPK/RTK cho các ứng dụng chính xác
+**Giải pháp**: Đây thường là vấn đề về thời gian chụp; Cân nhắc sử dụng GPS PPK/RTK cho các ứng dụng chính xác

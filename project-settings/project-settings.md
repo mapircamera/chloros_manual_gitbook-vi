@@ -1,6 +1,6 @@
 # Cài đặt dự án
 
-Thanh bên Cài đặt dự án <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> trong Chloros cho phép bạn định cấu hình tất cả các khía cạnh của xử lý hình ảnh, phát hiện mục tiêu hiệu chỉnh, tính toán chỉ mục đa phổ và tùy chọn xuất cho dự án của bạn. Các cài đặt này được lưu cùng với dự án của bạn và có thể được lưu dưới dạng mẫu để sử dụng lại trên nhiều dự án.
+Thanh bên Cài đặt dự án <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> trong Chloros> cho phép bạn định cấu hình tất cả các khía cạnh của xử lý hình ảnh, phát hiện mục tiêu hiệu chỉnh, tính toán chỉ mục đa phổ và các tùy chọn xuất cho dự án của bạn. Các cài đặt này được lưu cùng với dự án của bạn và có thể được lưu dưới dạng mẫu để sử dụng lại trên nhiều dự án.
 
 ## Truy cập cài đặt dự án
 
@@ -31,7 +31,7 @@ Các cài đặt này kiểm soát cách Chloros phát hiện và xử lý các 
 * **Loại**: Số
 * **Phạm vi**: 0 đến 100
 * **Mặc định**: 60
-* **Mô tả**: Kiểm soát ngưỡng phân cụm để nhóm các vùng có màu tương tự nhau khi phát hiện mục tiêu hiệu chuẩn. Giá trị cao hơn yêu cầu nhiều màu tương tự hơn được nhóm lại với nhau, dẫn đến khả năng phát hiện mục tiêu thận trọng hơn. Giá trị thấp hơn cho phép biến đổi màu sắc nhiều hơn trong một nhóm mục tiêu.
+* **Mô tả**: Kiểm soát ngưỡng phân cụm để nhóm các vùng có màu tương tự nhau khi phát hiện mục tiêu hiệu chuẩn. Giá trị cao hơn yêu cầu nhiều màu tương tự hơn được nhóm lại với nhau, dẫn đến khả năng phát hiện mục tiêu thận trọng hơn. Giá trị thấp hơn cho phép biến đổi màu sắc nhiều hơn trong nhóm mục tiêu.
 * **Thời điểm điều chỉnh**:
   * Tăng nếu mục tiêu hiệu chuẩn được chia thành nhiều lần phát hiện
   * Giảm nếu mục tiêu hiệu chỉnh có biến thể màu không được phát hiện đầy đủ
@@ -112,7 +112,7 @@ Các cài đặt này kiểm soát cách Chloros xử lý và hiệu chỉnh hì
 ### Chân phơi sáng 2
 
 * **Loại**: Lựa chọn thả xuống
-* **Chế độ hiển thị**: Chỉ hiển thị khi bật "Áp dụng hiệu chỉnh PPK" VÀ dữ liệu phơi sáng có sẵn cho Chân 2
+* **Chế độ hiển thị**: Chỉ hiển thị khi "Áp dụng hiệu chỉnh PPK" được bật VÀ dữ liệu phơi sáng có sẵn cho Chân 2
 * **Tùy chọn**:
   * Tên mẫu máy ảnh được phát hiện trong dự án
   * "Không sử dụng" - Bỏ qua pin phơi sáng này
@@ -134,7 +134,7 @@ Các cài đặt này cho phép bạn định cấu hình các chỉ số đa ph
 * **Mô tả**: Mở bảng tương tác nơi bạn có thể chọn và định cấu hình các chỉ số thực vật đa phổ (NDVI, NDRE, EVI, v.v.) để tính toán trong quá trình xử lý hình ảnh. Bạn có thể thêm nhiều chỉ mục, mỗi chỉ mục có cài đặt hiển thị riêng.
 * **Các chỉ số có sẵn**: Hệ thống bao gồm hơn 30 chỉ số đa phổ được xác định trước bao gồm:
   * NDVI (Chỉ số thực vật khác biệt chuẩn hóa)
-  * NDRE (Sự khác biệt được chuẩn hóa RedEdge)
+  * NDRE (Chênh lệch chuẩn hóa RedEdge)
   * EVI (Chỉ số thực vật tăng cường)
   * GNDVI, SAVI, OSAVI, MSAVI2
   * Và nhiều hơn nữa (xem [Công thức chỉ mục đa phổ] (multispectral-index-formulas.md) để biết danh sách đầy đủ)
@@ -161,19 +161,19 @@ Các cài đặt này cho phép bạn định cấu hình các chỉ số đa ph
 
 ## Xuất khẩu
 
-Các cài đặt này kiểm soát định dạng và chất lượng của hình ảnh được xử lý được xuất.
+Các cài đặt này kiểm soát định dạng và chất lượng của hình ảnh đã xử lý được xuất.
 
 ### Định dạng hình ảnh đã được hiệu chỉnh
 
 * **Loại**: Lựa chọn thả xuống
 * **Tùy chọn**:
   * **TIFF (16-bit)** - Định dạng TIFF 16-bit không nén
-  * **TIFF (32-bit, Percent)** - TIFF dấu phẩy động 32-bit với các giá trị phản xạ dưới dạng phần trăm
+  * **TIFF (32-bit, Phần trăm)** - TIFF dấu phẩy động 32-bit với các giá trị phản xạ dưới dạng phần trăm
   * **PNG (8-bit)** - Định dạng PNG 8 bit được nén
   * **JPG (8-bit)** - Định dạng JPEG 8-bit được nén
 * **Mặc định**: TIFF (16-bit)
 * **Mô tả**: Chọn định dạng tệp để lưu hình ảnh đã được xử lý và hiệu chỉnh.
-* **Khuyến nghị về định dạng**:
+* **Khuyến nghị định dạng**:
   * **TIFF (16-bit)**: Được khuyến nghị cho phân tích khoa học và quy trình làm việc chuyên nghiệp. Bảo toàn chất lượng dữ liệu tối đa mà không có hiện tượng nén. Tốt nhất cho phân tích đa phổ và xử lý sâu hơn trong phần mềm GIS.
   * **TIFF (32-bit, Phần trăm)**: Tốt nhất cho quy trình làm việc yêu cầu giá trị phản xạ dưới dạng phần trăm (0-100%). Cung cấp độ chính xác tối đa cho các phép đo phóng xạ.
   * **PNG (8-bit)**: Tốt cho việc xem web và hình dung chung. Kích thước tệp nhỏ hơn với tính năng nén không mất dữ liệu nhưng dải động giảm.
@@ -185,12 +185,12 @@ Tính năng này cho phép bạn lưu cài đặt dự án hiện tại của m�
 
 * **Loại**: Nhập văn bản + Nút lưu
 * **Mô tả**: Nhập tên mô tả cho mẫu cài đặt của bạn và nhấp vào biểu tượng lưu. Mẫu sẽ lưu trữ tất cả cài đặt dự án hiện tại của bạn (phát hiện mục tiêu, tùy chọn xử lý, chỉ mục và định dạng xuất) để dễ dàng sử dụng lại trong các dự án trong tương lai.
-* **Các trường hợp sử dụng**:
+* **Trường hợp sử dụng**:
   * Tạo mẫu cho các hệ thống camera khác nhau (RGB, đa phổ, NIR)
   * Lưu cấu hình tiêu chuẩn cho các loại cây trồng cụ thể hoặc quy trình phân tích
   * Chia sẻ cài đặt nhất quán trong một nhóm
 * **Cách sử dụng**:
-  1. Configure all your desired project settings
+  1. Định cấu hình tất cả cài đặt dự án mong muốn của bạn
   2. Nhập tên mẫu (ví dụ: "RedEdge Survey3 NDVI Standard")
   3. Nhấp vào biểu tượng lưu
   4. Mẫu hiện có thể được tải khi tạo dự án mới
@@ -202,13 +202,14 @@ Tính năng này cho phép bạn lưu cài đặt dự án hiện tại của m�
 Cài đặt này chỉ định nơi lưu dự án mới theo mặc định.
 
 * **Loại**: Hiển thị đường dẫn thư mục + Nút chỉnh sửa
-* **Mặc định**: `C:\Users\[Username]\Chloros Projects`
+* **Mặc định (Windows)**: `C:\Users\[Username]\Chloros Projects`
+* **Mặc định (Linux)**: `~/.local/share/chloros/projects`
 * **Mô tả**: Hiển thị thư mục mặc định hiện tại nơi các dự án Chloros mới được tạo. Nhấp vào biểu tượng chỉnh sửa để chọn một thư mục khác.
 * **Khi nào cần thay đổi**:
   * Đặt thành ổ đĩa mạng để cộng tác nhóm
   * Thay đổi sang ổ đĩa có nhiều dung lượng lưu trữ hơn cho các tập dữ liệu lớn
   * Sắp xếp các dự án theo năm, khách hàng hoặc loại dự án trong các thư mục khác nhau
-* **Lưu ý**: Việc thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***
+* **Lưu ý**: Thay đổi cài đặt này chỉ ảnh hưởng đến các dự án MỚI. Các dự án hiện tại vẫn ở vị trí ban đầu.***
 
 ## Cài đặt Kiên trì
 

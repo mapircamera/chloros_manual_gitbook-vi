@@ -1,306 +1,286 @@
-# Finishing the Processing
+#Hoàn tất quá trình xử lý
 
-Once Chloros completes processing, it's time to review your results, verify output quality, and prepare your processed images for use in your workflow. This page guides you through the final steps and next actions.
+Sau khi Chloros hoàn tất quá trình xử lý, lúc này bạn sẽ xem lại kết quả, xác định chất lượng đầu ra và chuẩn hình ảnh đã được xử lý để sử dụng trong quá trình làm việc của bạn. Trang này hướng dẫn bạn qua các bước cuối cùng và hành động tiếp theo.
 
-## Processing Complete Indication
+## Đang xử lý thành công thông báo
 
-When processing finishes successfully, you'll see several indicators:
+Khi quá trình xử lý kết thúc thành công, bạn sẽ thấy một số chỉ báo:
 
-* ✅ **Progress bar**: Reaches 100% completion
-* ✅ **Debug Log**: Shows "Processing Complete" message
-* ✅ **Start button**: Becomes enabled again (ready for next processing run)
-* ✅ **Output files**: All processed images saved to camera model subfolder
+* ✅ **Thanh tiến trình**: Hoàn thành 100%
+* ✅ **Gỡ lỗi nhật ký**: Hiển thị thông báo "Đang xử lý hoàn tất"
+* ✅ **Nút bắt đầu**: Được bật lại (sẵn sàng cho quá trình xử lý tiếp theo)
+* ✅ **Tệp đầu ra**: Tất cả hình ảnh đã được xử lý được lưu vào thư mục của máy ảnh mẫu***
 
-***
+## Bạn đã xử lý hình ảnh định vị
 
-## Locating Your Processed Images
+### Mở đầu thư mục
 
-### Opening the Output Folder
+1. Click vào biểu tượng **Main Menu** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> biểu tượng (ở cùng bên trái)
+2. Choose **"Mở dự án thư mục"**
 
-1. Click the **Main Menu** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> icon (top left)
-2. Select **"Open Project Folder"**
-3. Your file explorer opens to the project directory
-4. Locate your project by name
-
-***
-
-## Reviewing Processed Images
-
-### Quick Preview in File Explorer
-
-**Windows built-in preview:**
-
-1. Navigate to camera model subfolder
-2. Select an image file
-3. Preview appears in Windows Explorer preview pane
-4. Use arrow keys to browse through images
-
-### Preview in External Image Viewers
-
-**Recommended viewers:**
-
-* **QGIS** - Free GIS software (best for georeferenced multispectral analysis)
-* **IrfanView** - Fast, lightweight image viewer (supports TIFF)
-* **Adobe Photoshop** - Professional editing (TIFF support)
-* **GIMP** - Free alternative to Photoshop
-* **Windows Photos** - Basic viewing (may not support 16-bit TIFF)
-
-### Preview in Chloros Image Viewer
-
-Use Chloros's built-in Image Viewer for advanced visualization:
-
-1. Click an image thumbnail in the File Browser
-2. Image opens in the main preview area
-3. Click **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab in left sidebar
-4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) for interactive analysis
-
-See [Image Viewer](../image-viewer-gui/opening-an-image-full-screen.md) for detailed instructions.
+3. File explorer của bạn sẽ mở ra dự án thư mục
+4. Xác định dự án của bạn theo tên
 
 ***
 
-## Reviewing the Debug Log
+## Xem lại hình ảnh đã được xử lý
 
-### Check for Warnings or Errors
+### Xem trước nhanh trong File Explorer
 
-1. Open **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
-2. Scroll through messages
-3. Look for yellow warnings or red errors
-4. Review any issues noted
-5. Contact MAPIR support for assistance
+**Bản xem trước hợp lý Windows:**
 
-### Saving the Log
+1. Điều hướng đến máy ảnh mẫu thư mục
+2. Choose file image
+3. Bản xem trước xuất hiện trong khung xem trước Windows Explorer
+4. Sử dụng mũi tên để duyệt hình ảnh
 
-To keep a record of processing or to send to MAPIR Support:
+### Xem trước trong Trình xem ảnh bên ngoài
 
-1. Click **"Copy"** or **"Download"** button
-2. Save as text file in project folder
-3. Include with project documentation
-4. Send to MAPIR support if issues encountered
+**Người xem được đề xuất:*** **QGIS** - Phần mềm GIS miễn phí (tốt nhất cho phân tích đa tham chiếu địa lý)
+* **IrfanView** - Trình xem hình ảnh nhanh, nhẹ nhàng (hỗ trợ TIFF)
+* **Adobe Photoshop** - Chỉnh sửa chuyên nghiệp (hỗ trợ TIFF)
+* **GIMP** - Thay thế miễn phí cho Photoshop
+* **Ảnh Windows** - Xem cơ bản (TIFF 16 bit có thể không được hỗ trợ)
 
-***
+### Xem trước trong Trình xem ảnh Chloros
 
-## Common Output Issues and Solutions
+Sử dụng Trình xem hình ảnh hợp lý của Chloros để hiển thị nâng cao:
 
-### Issue: Missing Output Files
+1. Click vào hình thu nhỏ của hình ảnh trong File trình duyệt
+2. Hình ảnh mở ra trong khu vực xem trước chính
+3. Cú vào tab **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
+4. Sử dụng [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) để phân tích tương tác
 
-**Possible causes:**
-
-* Files didn't meet processing criteria
-* Target-only images (excluded from export)
-* Disk space ran out during export
-* File corruption during processing
-
-**Solutions:**
-
-1. Check Debug Log for skip/error messages
-2. Verify disk space was sufficient
-3. Count files: Should match (original count - target count) × (indices + 1)
-4. Re-import and reprocess any missing files
-
-### Issue: Dark or Bright Edges (Vignetting Still Visible)
-
-**Possible causes:**
-
-* Vignette correction disabled
-* Camera/lens not in Chloros profile database
-* Extreme vignetting beyond correction capability
-
-**Solutions:**
-
-1. Verify vignette correction was enabled in Project Settings
-2. Check camera model correctly detected
-3. Contact MAPIR support if vignetting persists
-
-### Issue: Incorrect Colors or Values
-
-**Possible causes:**
-
-* No calibration targets detected
-* Wrong calibration target model selected
-* Reflectance calibration disabled
-* Poor quality target images
-
-**Solutions:**
-
-1. Verify reflectance calibration was enabled
-2. Check "Target found" messages in Debug Log
-3. Review target image quality
-4. Reprocess with proper targets marked
-
-### Issue: NDVI Values Seem Wrong
-
-**Expected NDVI ranges:**
-
-* **Water, rocks, soil**: -0.1 to 0.2
-* **Sparse/unhealthy vegetation**: 0.2 to 0.4
-* **Moderate vegetation**: 0.4 to 0.6
-* **Healthy, dense vegetation**: 0.6 to 0.9
-
-**If values are outside these ranges:**
-
-1. Verify reflectance calibration was applied
-2. Verify light sensor log was included
-3. Check calibration targets were detected
-4. Ensure correct camera model was detected
-5. Review target image capture timing and conditions
+Xem [ Hướng dẫn xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md) để biết hướng dẫn chi tiết.
 
 ***
 
-## Using Your Processed Images
+## Xem lại lỗi gỡ lỗi Nhật ký
 
-### For Photogrammetry / Orthomosaic Creation
+### Kiểm tra cảnh báo hoặc lỗi
 
-**Recommended workflow:**
+1. Mở **Nhật ký gỡ lỗi** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
+2. Cuộn qua tin nhắn
+3. Tìm cảnh báo màu vàng hoặc lỗi màu đỏ
+4. Xem lại mọi vấn đề đã được ghi
+5. Liên hệ bộ phận hỗ trợ MAPIR để được hỗ trợ
 
-1. **Import calibrated reflectance images** into photogrammetry software:
+### Lưu nhật ký
+
+Để lưu hồ sơ xử lý hoặc gửi tới bộ phận hỗ trợ MAPIR:
+
+1. Cẩn vào nút **"Sao chép"**hoặc**"Tải xuống"**
+
+2. Lưu dưới dạng bản văn tệp trong dự án thư mục
+3. Đính kèm dự án tài liệu
+4. Gửi tới bộ phận hỗ trợ MAPIR nếu gặp sự cố
+
+***
+
+## Các vấn đề và giải pháp thường gặp
+
+### Vấn đề: Thiếu tệp đầu ra
+
+**Nguyên nhân có thể:**
+
+* Tệp xử lý tiêu chuẩn không đáp ứng
+* Dành riêng cho mục tiêu hình ảnh (không thể xuất ra)
+* Dung lượng ổ đĩa đã hết trong khi xuất
+* Tệp bị hỏng trong quá trình xử lý
+
+**Giải pháp:**
+
+1. Kiểm tra lỗi gỡ lỗi nhật ký để biết lỗi thông báo/bỏ qua
+2. Xác minh đủ dung lượng ổ đĩa
+3. Đếm tệp: Phải khớp (số lượng ban đầu - số lượng mục tiêu) × (chỉ số + 1)
+4. Nhập lại và xử lý lại mọi tệp bị thiếu
+
+### Vấn đề: Các cạnh tối hoặc sáng (Xem chi tiết)
+
+**Nguyên nhân có thể:**
+
+* Đã tắt tính năng chỉnh sửa chi tiết
+* Camera/ống kính không có trong cấu hình cơ sở dữ liệu Chloros
+* Họa tiết cực độ vượt quá khả năng chỉnh sửa
+
+**Giải pháp:**
+
+1. Xác minh tính năng chỉnh sửa chi tiết đã được bật trong Cài đặt dự án
+2. Kiểm tra độ chính xác của máy ảnh mẫu
+3. Liên hệ với bộ phận hỗ trợ MAPIR nếu đường viền mờ biểu tượng vẫn tiếp tục diễn ra
+
+### Vấn đề: Màu sắc hoặc giá trị không chính xác
+
+**Nguyên nhân có thể:**
+
+* Không thể phát hiện được tiêu chuẩn đầu mục
+* Đã chọn sai tiêu chuẩn mô hình
+* Kích hoạt phản xạ vô hiệu hóa
+* Hình ảnh sản phẩm chất lượng giá trị
+
+**Giải pháp:**
+
+1. Xác minh đã bật phản xạ chỉnh sửa
+2. Kiểm tra thông báo "Đã tìm thấy mục tiêu" trong lỗi gỡ lỗi nhật ký
+3. Xem lại mục hình ảnh chất lượng
+4. Tái xử lý các mục tiêu thích hợp được đánh dấu
+
+### Vấn đề: Giá trị NDVI có vẻ sai
+
+**Phạm vi NDVI dự kiến:*** **Nước, đá, đất**: -0,1 đến 0,2
+* **Thảm thực vật thưa thớt/không tốt**: 0,2 đến 0,4
+* **Sản phẩm thực sự phải**: 0,4 đến 0,6
+* **Thảm thực nước suối, khỏe mạnh**: 0,6 đến 0,9**Nếu các giá trị nằm ngoài phạm vi này:**
+
+1. Xác minh mã phản xạ chuẩn đã được áp dụng
+2. Xác minh nhật ký ký hiệu ánh sáng đã được đưa vào
+3. Kiểm tra tiêu chuẩn tín hiệu đã được phát hiện
+4. Đảm bảo phát hiện đúng máy ảnh mẫu
+5. Xem lại thời gian và điều kiện chụp ảnh mục tiêu
+
+***
+
+## Sử dụng hình ảnh đã được xử lý của bạn
+
+### Phép đo hình ảnh được phép / Tạo cấu hình
+
+**Quy trình làm việc được xuất ra:**
+
+1.**Nhập ảnh đã được chỉnh sửa phản xạ** vào ảnh đo phần mềm:
    * Pix4Dmapper
-   * Agisoft Metashape
-   * DroneDeploy
+   * Metashape Agisoft
+   * Triển khai Drone
    * WebODM
-2. **Keep EXIF metadata**: Ensure GPS data preserved for geotagging
-3. **Calibrated workflows**: Use reflectance images for scientific accuracy
-4. **Process index mosaics**: Create NDVI orthomosaics from individual index images
-5. **Export georeferenced GeoTIFF**: For use in GIS applications
+2. **Giữ EXIF ​​siêu dữ liệu**: Đảm bảo GPS dữ liệu được bảo đảm an toàn để gắn thẻ địa chỉ
+3. **Quy trình làm việc đã được hiệu chỉnh**: Sử dụng hình ảnh phản chiếu để có độ chính xác khoa học
+4. **Xử lý chỉ mục**: Tạo cấu hình NDVI từ một lẻ chỉ mục hình ảnh
+5. **Xuất GeoTIFF được tham chiếu địa lý**: Để sử dụng trong các ứng dụng GIS
 
-### For GIS Analysis
+### Để phân tích GIS
 
-**Recommended workflow:**
+**Quy trình làm việc được xuất ra:**
 
-1. **Load into QGIS, ArcGIS, or similar**
-2. **Use 16-bit TIFF** reflectance images for multi-band analysis
-3. **Use index images** (NDVI, NDRE) as ready-to-use vegetation layers
-4. **Raster calculator**: Combine bands for custom analysis
-5. **Export**: Create classification maps, change detection, vegetation health maps
+1.**Tải vào QGIS, ArcGIS hoặc tương tự**
 
-### For Direct Analysis / Reporting
+2.**Sử dụng hình ảnh phản xạ 16-bit TIFF** để phân tích tối đa băng tần
+3. **Sử dụng chỉ mục hình ảnh** (NDVI, NDRE) để sẵn sàng sử dụng các lớp thực vật
+4. **Máy tính raster**: Kết hợp các phạm vi để phân tích tùy chỉnh
+5. **Xuất**: Tạo bản đồ phân loại, phát hiện thay đổi, bản đồ trạng thái thảm thực vật
 
-**Recommended workflow:**
+### Để phân tích / báo cáo trực tiếp
 
-1. **Use index images with LUT colors** for visual reports
-2. **Extract statistics**: Mean NDVI per field/plot
-3. **Time series**: Compare indices across multiple sessions
-4. **Generate reports**: Include maps, statistics, and visualizations
+**Quy trình làm việc được xuất ra:**
 
-***
+1.**Sử dụng chỉ mục hình ảnh có màu LUT** cho báo cáo trực tiếp
+2. **Trích xuất số liệu thống kê**: NDVI trung bình trên mỗi trường/ô
+3. **Chuỗi thời gian**: So sánh các số trên nhiều phiên bản
+4. **Tạo báo cáo**: Bao gồm bản đồ, số liệu thống kê và hình ảnh trực quan***
 
-## Archiving and Backup
+## Lưu trữ và sao lưu
 
-### Recommended Backup Strategy
+### Chiến lược sao lưu được xuất đề
 
-**What to save:**
+**Những thứ cần lưu:***✅**Hình ảnh RAW/JPG gốc** - Lưu trữ trên ổ đĩa/đám mây riêng
+* ✅ **Đầu ra đã được xử lý** - Giữ hình ảnh và chỉnh sửa chỉ số
+* ✅ **Tệp dự án** - Chứa tất cả các cài đặt để xử lý lại nếu cần
+* ✅ **Nhật ký gỡ lỗi** - Chi tiết xử lý tài liệu
+* ✅ **Hình ảnh mục tiêu hiệu chỉnh**- Để xác minh và xử lý lại**Khuyến đề nghị lưu trữ:*** **Sao lưu ngay lập tức**: Ổ cứng ngoài
+* **Lưu trữ dài hạn**: Lưu trữ đám mây (Google Drive, Dropbox, v.v.)
+* **Dữ liệu quan trọng**: Giữ 2-3 bản sao ở các vị trí khác***
 
-* ✅ **Original RAW/JPG images** - Archive on separate drive/cloud
-* ✅ **Processed outputs** - Keep calibrated images and indices
-* ✅ **Project file** - Contains all settings for reprocessing if needed
-* ✅ **Debug Log** - Documents processing details
-* ✅ **Calibration target images** - For verification and reprocessing
+## Xử lý lần tiếp theo
 
-**Storage recommendations:**
+### Sử dụng lại dự án cài đặt
 
-* **Immediate backup**: External hard drive
-* **Long-term archive**: Cloud storage (Google Drive, Dropbox, etc.)
-* **Critical data**: Keep 2-3 copies in different locations
+Nếu xử lý các dữ liệu tương tự trong tương lai:
 
-***
+1. **Lưu dự án mẫu** (nếu chưa được thực hiện)
+2. **Tạo dự án mới** sử dụng mẫu đã lưu
+3. **Nhập hình ảnh mới**
 
-## Next Processing Runs
+4.**Xử lý**với các cài đặt gốc phun để đảm bảo tính chất nhất quán
 
-### Reusing Project Settings
+### Xử lý hàng loạt nhiều phiên bản
 
-If processing similar datasets in the future:
+Đối với nhiều phiên bản/dữ liệu:**Tùy chọn 1: GUI - Nhiều dự án**
 
-1. **Save Project Template** (if not already done)
-2. **Create new project** using saved template
-3. **Import new images**
-4. **Process** with identical settings for consistency
+* Tạo dự án riêng cho mỗi phiên
+* Sử dụng cài đặt quán mẫu nhất
+* Xử lý từng cái một
 
-### Batch Processing Multiple Sessions
+**Tùy chọn 2: Chloros CLI (chỉ Chloros+)**
 
-For multiple sessions/datasets:
+* Tự động xử lý hàng loạt
+* Xử lý nhiều thư mục bằng lệnh
+* Xem [Tài liệu CLI](../CLI.md)
 
-**Option 1: GUI - Multiple Projects**
+**Tùy chọn 3: Python SDK (chỉ Chloros+)**
 
-* Create separate project for each session
-* Use consistent template settings
-* Process one at a time
-
-**Option 2: Chloros CLI (Chloros+ only)**
-
-* Automate batch processing
-* Process multiple folders with scripts
-* See [CLI Documentation](../CLI.md)
-
-**Option 3: Python SDK (Chloros+ only)**
-
-* Programmatic control
-* Integration with analysis pipelines
-* See [API Documentation](../api-python-sdk.md)
+* Điều khiển chương trình
+* Tích hợp với phân tích đường ống
+* Xem [Tài liệu API](../api-python-sdk.md)
 
 ***
 
-## Troubleshooting Post-Processing
+##Khắc phục sự cố sau quá trình xử lý
 
-### Re-Processing with Different Settings
+### Xử lý lại các cài đặt khác
 
-If results aren't satisfactory:
+Nếu kết quả không đạt được yêu cầu:
 
-1. Keep original images (never delete)
-2. Open same project in Chloros
-3. Adjust settings in Project Settings panel
-4. Process again - outputs will overwrite previous results
+1. Giữ nguyên hình ảnh (không bao giờ xóa)
+2. Mở cùng một dự án trong Chloros
+3. Điều chỉnh cài đặt trong cài đặt dự án
+4. Xử lý lại - đầu ra của kết quả sẽ ghi đè kết quả trước đó
 
-### Processing Subset of Images
+### Đang xử lý tập hợp hình ảnh
 
-To reprocess only specific images:
+Để xử lý lại các hình ảnh cụ thể:
 
-1. Create new project
-2. Import only the images needing reprocessing
-3. Use same settings template
-4. Process smaller dataset
+1. Tạo dự án mới
+2. Chỉ nhập những hình ảnh cần xử lý lại
+3. Sử dụng cùng một cài đặt mẫu
+4. Xử lý dữ liệu nhỏ hơn
 
-### Getting Help
+### Nhận trợ giúp
 
-If you encounter issues:
+Nếu bạn gặp phải vấn đề:
 
-* 📧 **Email**: info@mapir.camera (include Debug Log)
-* 🌐 **Support**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **FAQ**: [Frequently Asked Questions](../faq.md)
-* 📖 **Documentation**: [Chloros Manual](../)
+* 📧 **Email**: info@mapir.camera (bao gồm cả nhật ký gỡ lỗi)
+* 🌐 **Hỗ trợ**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* 📚 **Câu hỏi thường gặp**: [Câu hỏi thường gặp](../faq.md)
+* 📖 **Tài liệu**: [ Hướng dẫn sử dụng Chloros](../)***
 
-***
+## Tóm tắt: Công việc hoàn thành quy trình
 
-## Summary: Complete Workflow
+Bây giờ bạn đã hoàn thành xong bộ xử lý Chloros:
 
-You've now completed the full Chloros processing workflow:
-
-1. ✅ **Created project** - See [Projects](../projects.md)
-2. ✅ **Added files** - See [Adding Files](adding-files-to-a-project.md)
-3. ✅ **Adjusted settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-4. ✅ **Marked targets** - See [Choosing Target Images](choosing-target-images.md)
-5. ✅ **Started processing** - See [Starting the Processing](starting-the-processing.md)
-6. ✅ **Monitored progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-7. ✅ **Reviewed results** - This page
-
-**Your calibrated, reflectance-corrected multispectral images are ready for analysis!**
+1. ✅ **Dự án đã tạo** - Xem [Dự án](../projects.md)
+2. ✅ **Đã thêm tệp** - Xem [Thêm tệp](adding-files-to-a-project.md)
+3. ✅ **Cài đặt điều chỉnh** - Xem [Điều chỉnh cài đặt dự án](adjusting-project-settings.md)
+4. ✅ **Mục tiêu được đánh dấu** - Xem [Chọn hình ảnh tiêu điểm](choosing-target-images.md)
+5. ✅ **Đã xử lý bắt đầu** - Xem [Bắt xử lý bắt đầu](starting-the-processing.md)
+6. ✅ **Tiến trình giám sát** - Xem [Giám sát quá trình xử lý](monitoring-the-processing.md)
+7. ✅ **Kết quả đã được đánh giá**- Trang này**Hình ảnh phổ biến đã được chỉnh sửa, hiệu chỉnh mức độ phản xạ của bạn đã sẵn sàng để phân tích!**
 
 ***
 
-## Additional Resources
+##Tài nguyên bổ sung
 
-### Advanced Features
+### Tính năng nâng cao
 
-* [**Image Viewer**](../image-viewer-gui/opening-an-image-full-screen.md) - Interactive visualization and analysis
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Custom index testing
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Complete index reference
+* [**Image Viewer**](../image-viewer-gui/opening-an-image-full-screen.md) - Tương tác trực quan hóa và phân tích
+* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Kiểm tra tùy chỉnh chỉ mục
+* [**Đa phổ chỉ mục công thức**](../project-settings/multispectral-index-formulas.md) - Tham chiếu đầy đủ chỉ mục
 
-### Automation & Integration
+###Tự động hóa & Tích hợp
 
-* [**CLI Documentation**](../CLI.md) - Command-line batch processing
-* [**Python SDK**](../api-python-sdk.md) - Programmatic automation
-* [**Chloros+ Features**](../#chloros) - Advanced processing capabilities
+* [**Tài liệu CLI**](../CLI.md) - Xử lý lệnh dòng hàng
+* [**Python SDK**](../api-python-sdk.md) - Tự động hóa theo chương trình
+* [**Chloros+ Tính năng**](../#chloros) - Khả năng xử lý nâng cao
 
-### Support & Learning
+### Hỗ trợ & Tập tin học tập
 
-* [**FAQ**](../faq.md) - Common questions answered
-* [**Calibration Targets**](../calibration-targets.md) - Understanding reflectance calibration
-* [**Supported Cameras**](../supported-cameras.md) - Compatible hardware
+* [**FAQ**](../faq.md) - Đã trả lời các câu hỏi thường gặp
+* [**Mục tiêu chuẩn**](../calibration-targets.md) - Tìm hiểu về phản xạ chuẩn
+* [**Máy ảnh được hỗ trợ**](../supported-cameras.md) - Phần cứng tương thích

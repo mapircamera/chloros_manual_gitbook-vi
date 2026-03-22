@@ -34,3 +34,14 @@
 * [Lớp hình ảnh](image-viewer-gui/image-layers.md)
 * [Hộp cát chỉ mục/LUT](image-viewer-gui/index-lut-sandbox.md)
 * [Điểm đánh dấu bản đồ](image-viewer-gui/map-markers.md)
+
+## Linux & Điện toán biên
+
+* [Tổng quan về Linux](linux/linux-overview.md)
+* [Cài đặt Linux](linux/linux-installation.md)
+* [Hướng dẫn NVIDIA Jetson](linux/nvidia-jetson-guide.md)
+
+## Kiến trúc xử lý
+
+* [Điều chỉnh tính toán động](processing-architecture/dynamic-compute-adaptation.md)
+* [Đường ống xử lý](processing-architecture/processing-pipeline.md)

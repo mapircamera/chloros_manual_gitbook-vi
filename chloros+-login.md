@@ -2,15 +2,15 @@
 
 ## Chloros và Chloros (Trình duyệt) Đăng nhập
 
-Menu thanh bên <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> của người dùng cho phép bạn đăng nhập vào tài khoản Chloros+ của mình và mở khóa các tính năng bổ sung.
+Menu thanh bên <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> cho phép bạn đăng nhập vào tài khoản Chloros+ của mình và mở khóa các tính năng bổ sung.
 
 Khi đăng nhập thông tin tài khoản của bạn sẽ được hiển thị:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Đăng nhập CLI
 
-Đăng nhập bằng thông tin xác thực Chloros+ của bạn để kích hoạt xử lý CLI.
+Đăng nhập bằng thông tin xác thực Chloros+ của bạn để kích hoạt xử lý CLI. Trên Linux (không có GUI), đây là cách duy nhất để kích hoạt giấy phép của bạn.
 
 **Cú pháp:**
 
@@ -18,9 +18,9 @@ Khi đăng nhập thông tin tài khoản của bạn sẽ được hiển thị
 chloros-cli login <email> <password>
 ```
 
-Kiểu gợi ý {% = "thông tin" %}
+{% hint style="info" %}
 **Người dùng SDK**: Python SDK cũng cung cấp phương thức `logout()` có lập trình để xóa thông tin xác thực được lưu trong bộ nhớ đệm. Xem [tài liệu Python SDK](api-python-sdk.md#logout) để biết chi tiết.
-{% cuối %}
+{% endhint %}
 
 **Ví dụ:**
 
@@ -28,13 +28,22 @@ Kiểu gợi ý {% = "thông tin" %}
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-Kiểu gợi ý {% = "cảnh báo" %}
+{% hint style="warning" %}
 **Ký tự đặc biệt**: Sử dụng dấu ngoặc đơn xung quanh mật khẩu chứa các ký tự như `$`, `!` hoặc dấu cách.
-{% cuối %}
+{% endhint %}
 
 **Đầu ra:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+
+### Bộ nhớ thông tin xác thực
+
+Thông tin đăng nhập được lưu trong bộ nhớ đệm được lưu trữ ở một vị trí dành riêng cho nền tảng:
+
+| Nền tảng | Đường dẫn bộ nhớ đệm thông tin xác thực |
+| --- | --- |
+| **Windows** | `%APPDATA%\Chloros\cache\` |
+| **Linux** | `~/.cache/chloros/` |
 
 ### Gói hết hạn
 

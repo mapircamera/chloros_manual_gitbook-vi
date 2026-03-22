@@ -1,88 +1,89 @@
-# Index/LUT Sandbox
+# Box cát chỉ mục/LUT
 
-The Index/LUT Sandbox is an interactive workspace within the Chloros Image Viewer that allows you to experiment with multispectral index calculations and color visualizations in real-time. This powerful tool helps you test different indices, refine value ranges, and create publication-ready visualizations without reprocessing your entire dataset.
+Hộp cát Index/LUT là một không gian làm việc tương tác trong Trình xem ảnh Chloros cho phép bạn thử nghiệm các phép tính chỉ số đa phổ và trực tuyến hóa màu sắc trong thời gian thực. Công cụ mạnh mẽ này giúp bạn kiểm tra các chỉ mục khác nhau, điều chỉnh phạm vi giá trị và tạo bản xuất sẵn có sẵn trực tuyến mà không cần xử lý lại toàn bộ dữ liệu của bạn.
 
-## What is the Index/LUT Sandbox?
+## Sandbox Index/LUT là gì?
 
-### Purpose
+### Đích đến
 
-The Sandbox provides:
+Cung cấp hộp cát:
 
-* **Real-time index calculation** - Apply any vegetation index instantly
-* **Interactive LUT adjustment** - Fine-tune color gradients and ranges
-* **Workflow optimization** - Determine best settings before batch processing
+* **Tính toán chỉ số thời gian thực** - Áp dụng bất kỳ chỉ số thực vật nào ngay lập tức
+* **Điều chỉnh LUT tương tác** - Tinh chỉnh chuyển màu và phạm vi màu
+* **Công việc ưu tiên hóa quy trình** - Xác định cài đặt tốt nhất trước khi xử lý hàng loạt
 
-### Sandbox vs. Project Processing
+### Sandbox để xử lý dự án
 
-**Index/LUT Sandbox (Interactive):**
+**Hộp cát chỉ mục/LUT (Tương tác):**
 
-* Single image at a time
-* Instant feedback
-* Experimental and iterative
-* No permanent changes to files
-* Perfect for exploring and testing
+* Hình ảnh duy nhất tại một thời điểm
+* Phản hồi tức thì
+* Thử nghiệm và lặp lại
+* Không có sự thay đổi vĩnh viễn cho tập tin
+* Hoàn hảo để khám phá và thử nghiệm
 
-**Project Processing (Batch):**
+**Xử lý dự án (hàng loạt):**
 
-* Entire dataset at once
-* Pre-configured settings
-* Permanent output files
-* Time-intensive
-* Best when settings are finalized
+* Toàn bộ tập tin cùng một lúc
+* Cài đặt sẵn cấu hình
+* Tệp đầu ra vĩnh viễn
+* Uốn nhiều thời gian
+* Tốt nhất khi cài đặt hoàn tất
 
 {% hint style="success" %}
-**Best Workflow**: Use the Sandbox to experiment and find optimal index and LUT settings, then apply those settings during Project Processing for your entire dataset.
+**Quy trình làm việc tốt nhất**: Sử dụng hộp cát để thử nghiệm và tìm chỉ mục cài đặt và tối ưu LUT, sau đó áp dụng các cài đặt đó trong quá trình xử lý dự án tập tin cho toàn bộ dữ liệu của bạn.
 {% endhint %}
 
 ***
 
-## Working with the Index/LUT Sandbox
+##Làm việc với Box sand Index/LUT
 
-### Understanding Pre-Calculated Indices
+### Tìm hiểu các số được tính toán trước đó
 
-In Chloros, indices can be applied during project processing. To determine which index and LUT settings you want to apply to exports it is easiest to use the image viewer sandbox.
+Trong Chloros, các mục có thể được áp dụng trong quá trình xử lý dự án. Để xác định cài đặt chỉ mục và LUT bất kỳ ứng dụng nào bạn muốn áp dụng để xuất, cách dễ nhất là sử dụng hộp xem hình ảnh hộp cát.
 
-The sandbox allows you to:
+Hộp cát cho phép bạn:
 
-* **Apply new index and color gradients (LUTs)** to visualize the data
-* **Adjust visualization settings** interactively
-* **View** already-calculated index images
-* **Inspect** pixel values at all zoom levels
+* **Áp dụng chỉ mục mới và màu gradient (LUT)** để trực quan hóa dữ liệu
+* **Điều chỉnh màn hình cài đặt** một cách tương thích
+* **Xem** chỉ mục hình ảnh đã được tính toán
+* **Kiểm tra** pixel giá trị ở mọi mức thu phóng
 
-### Opening the Sandbox
+### Mở Sandbox
 
-The Index/LUT Sandbox is accessed in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar tab:
+Box cát Index/LUT được truy cập trong tab thanh bên **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">:
 
-1. Click an image in the file browser image grid, it opens in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab
-2. Click **the Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab to open the left pop-out sidebar if it's not already open
+1. Bấm vào một hình ảnh trong lưới hình ảnh của tệp trình duyệt. Nó sẽ mở trong tab **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
+2. Click vào tab **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> để mở thanh bên bật ra bên trái nếu nó chưa mở
 
-### Selecting an Image to Apply an Index/LUT to
+### Chọn một hình ảnh để áp dụng Chỉ mục/LUT cho
 
-To work with an index in the Image Viewer <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sandbox:
+Để làm việc với một mục trong hộp cát <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> của Trình xem ảnh:
 
-1. **Open an image** from the main image grid by clicking on it
-2. The **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab will then open
-3. Click the **Layer dropdown** (top-right of viewer)
-4. Select the layer from the dropdown:
-   * RAW (Reflectance)
+1. **Mở một hình ảnh** từ mạng hình ảnh chính bằng cách nhấp vào nó
+2. Sau đó, tab **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sẽ mở
+3. Bước vào **Đơn giản thả xuống lớp** (ở cùng bên phải của trình xem)
+4. Chọn lớp từ danh sách thả xuống:
+   * RAW (Phản xạ)
 
-### Applying an Index to an Image
+### Áp dụng chỉ mục cho hình ảnh
 
-Once the image is fullscreen and the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar is open:
+Khi hiển thị ảnh ở chế độ toàn màn hình và tab thanh bên **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sẽ mở:
 
-1. Check the Index box at the top of the sidebar
-2. Choose your camera's filter from the left dropdown
-3. Choose the desired index formula from the right dropdown
-4. Drag the filter channel color circles to the locations in the index formula below
-5. Once the formula is valid the image will update and show the index values
-6. Move your mouse cursor around to see the values at the cursor's location
-7. Zoom in to see individual pixels and their associated values
+1. Chọn hộp thư ở đầu thanh bên
+2. Chọn bộ lọc máy ảnh của bạn từ menu thả xuống bên trái
+3. Chọn công thức chỉ mong muốn từ danh sách thả xuống bên phải
+4. Kéo sợi kênh tròn màu đến các vị trí trong công thức chỉ số bên dưới
+5. Khi hợp lệ công thức, hình ảnh sẽ cập nhật và hiển thị các chỉ số giá trị
+6. Di chuyển con trỏ chuột xung quanh để xem các giá trị tại vị trí của con trỏ
+7. Phóng to để xem từng pixel và giá trị liên quan của chúng
 
-Each index has a specific value range and meaning:
+Mỗi số chỉ có một công cụ giá trị phạm vi và ý nghĩa:
 
-#### NDVI Example
+#### Ví dụ NDVI
 
 ```
+
 Formula: (NIR - Red) / (NIR + Red)
 
 For Survey3W RGN camera:
@@ -96,295 +97,249 @@ Bare soil: 0.0 to 0.2
 Water: -0.1 to 0.1
 ```
 
-For complete index formula documentation, see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md).
+Để biết đầy đủ tài liệu về công thức chỉ mục công thức, hãy xem [Đa phổ chỉ mục công thức](../project-settings/multispectral-index-formulas.md).
 
 ***
 
-## Working with LUTs (Look-Up Tables)
+## Làm việc với LUT (Bảng nghiên cứu)
 
-### What is a LUT?
+### LUT là gì?
 
-A **Look-Up Table (LUT)** maps numerical index values to colors for visualization:
+**Bảng tra cứu (LUT)** ánh xạ các giá trị chỉ số thành phần màu sắc để trực quan hóa:
 
-* **Input**: Index pixel value (e.g., NDVI 0.65)
-* **Output**: RGB color (e.g., bright green)
-* **Purpose**: Make patterns easier to see and interpret
+* **Đầu vào**: Mục lục pixel giá trị (Ví dụ: NDVI 0,65)
+* **Đầu ra**: Màu RGB (ví dụ: xanh lục sáng)
+* **Mục đích**: Làm cho các mẫu dễ nhìn và diễn giải hơn**Thang độ xám so với LUT màu:**
 
-**Grayscale vs. Color LUT:**
-
-* Grayscale: Scientific and neutral, shows raw data
-* Color LUT: Intuitive and impactful, highlights patterns and differences
+* Thang độ xám: Khoa học và trung tính, hiển thị dữ liệu thô
+* Màu LUT: Trực quan và có tác động mạnh mẽ, làm nổi bật các mẫu và sự khác biệt
 
 {% hint style="success" %}
-**Visualization Power**: Applying a color LUT to a grayscale index image makes it dramatically easier to identify patterns, anomalies, and areas of interest at a glance.
+**Sức mạnh trực quan**: Áp dụng LUT màu cho hình ảnh chỉ mục thang độ xám giúp xác định nhanh chóng các mẫu, điểm bất thường và khu vực quan tâm dễ dàng hơn đáng kể.
 {% endhint %}
 
-### Applying a LUT to an Index Image
+### Áp dụng LUT cho chỉ mục ảnh
 
-Once you have an index image showing
+Khi bạn có một màn hình chỉ mục hình ảnh
 
-1. Click the <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> "+Add LUT" button
-2. Select the color gradient
-3. Adjust the clipping min/max end points
-4. Adjust the Clipping Mode
-5. Check the Index box in the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab sidebar to apply the LUT
+1. Bấm vào nút <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> nút "+Thêm LUT"
+2. Choose color gradient
+3. Điều chỉnh điểm cắt tối thiểu/tối đa
+4. Điều chỉnh chế độ cắt
+5. Chọn hộp mục trong thanh bên **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> để áp dụng LUT
 
-### Choosing a Color Gradient
+### Choose a range color
 
-**Selecting a gradient:**
+**Chọn chuyển màu:**
 
-1. In the LUT panel, locate the **colored gradient bar**
-2. Hover your mouse over it to view available gradient presets
-3. Select desired gradient
-4. The image **updates immediately** with new colors when the Index box is checked
+1. Trong LUT bảng, tìm**thanh gradient màu**
+
+2. Di chuột qua nó để xem các cài đặt trước độ dốc có sẵn
+3. Select gradient mong muốn
+4. Hình ảnh **cập nhật ngay lập tức** với màu sắc mới khi chỉ mục được chọn
 
 {% hint style="success" %}
-**Best Practice**: For vegetation indices like NDVI, the Red-Yellow-Green gradient is most intuitive because it aligns with natural color associations (green=healthy, yellow=moderate, red=stressed).
+**Phương pháp tốt nhất**: Đối với các số thực vật như NDVI, độ dốc Red-Yellow-Green là trực quan nhất vì nó phù hợp với các liên kết màu sắc tự nhiên (xanh lá cây=khỏe mạnh, vàng=trung bình, đỏ=căng thẳng).
 {% endhint %}
 
-### Adjusting Color Classes
+### Điều chỉnh các lớp màu
 
-The **Classes control** determines how many discrete color steps appear in your gradient:
+**Điều khiển lớp**xác định số bước màu riêng biệt xuất hiện trong phạm vi màu của bạn:**Tùy chọn số lớp:*** **2-5 lớp**: Danh mục rất rộng, khu vực riêng biệt
+* **6-10 lớp**: Cân bằng, tốt cho việc phân loại
+* **11-20 lớp**: Chuyển màu mượt, xuất hiện liên tục
+* **Hơn 20 lớp**: Gần như liên tục, độ tối tối đa**Cách chỉnh sửa:**
 
-**Class count options:**
+1. Trong LUT bảng, xác định vị trí**ô mẫu màu bên dưới thanh gradient**
 
-* **2-5 classes**: Very broad categories, distinct zones
-* **6-10 classes**: Balanced, good for classification
-* **11-20 classes**: Smooth gradients, continuous appearance
-* **20+ classes**: Near-continuous, maximum smoothness
+2. Điều chỉnh lớp bằng cách thêm nút +
+3. Xóa số lớp bằng cách nhấp vào mẫu màu
+4. Cập nhật độ dốc **theo thời gian thực**trên hình ảnh**Hiệu ứng trực quan:*** **Ít lớp hơn** (3-5): Tạo các vùng riêng biệt, phân loại đơn giản hóa, dễ phân biệt danh mục hơn
+* **Lớp trung bình** (6-10): Cách tiếp cận cân bằng, phù hợp với hầu hết các ứng dụng
+* **Các lớp khác** (15-20): Chuyển tiếp mượt mà, biến thể chi tiết, hình thức chụp ảnh**Khi nào nên sử dụng:*** **Ít lớp (3-5)**: Slide trình bày, loại sơ đồ phân loại, báo cáo đơn giản
+* **Lớp trung bình (6-10)**: Phân tích tổng, cân bằng chi tiết, báo cáo tiêu chuẩn
+* **Nhiều lớp (15-20)**: Phân tích khoa học, kiểm tra chi tiết, đầu ra chất lượng công bố
 
-**How to adjust:**
+### Tinh chỉnh giá trị phạm vi
 
-1. In the LUT panel, locate the **color swatch squares below the gradient bar**
-2. Adjust the number of classes by adding with the + button
-3. Remove the number of classes by double clicking on a color swatch
-4. The gradient updates **in real-time** on the image
+**Kiểm soát phạm vi giá trị**xác định giá trị của bất kỳ mục tiêu giá trị nào trong phạm vi màu của bạn:**Kiểm soát phạm vi trong LUT bảng:*** **Tối thiểu giá trị**: Giới hạn dưới của thang màu
+* **Giá trị tối đa**: Giới hạn trên của thang màu
+* **Giá trị trung bình**: Tự động phân tích giữa mức tối thiểu và tối đa (dựa trên số lượng lớp)
 
-**Effect on visualization:**
+#### Điều chỉnh Giá trị tối thiểu/Tối đa
 
-* **Fewer classes** (3-5): Creates distinct zones, simplified classification, easier to distinguish categories
-* **Medium classes** (6-10): Balanced approach, good for most applications
-* **More classes** (15-20): Smooth transitions, detailed variation, photographic appearance
+**Để điều chỉnh giá trị phạm vi:**
 
-**When to use:**
+1. Trong LUT bảng, tìm các trường**Giá trị tối thiểu**và**Giá trị tối đa**
 
-* **Few classes (3-5)**: Presentation slides, classification maps, simple reports
-* **Medium classes (6-10)**: General analysis, balanced detail, standard reports
-* **Many classes (15-20)**: Scientific analysis, detailed inspection, publication-quality outputs
+2. Đột nhập vào**Giá trị tối thiểu**
 
-### Fine-Tuning Value Ranges
-
-The **value range controls** determine which index values map to which colors in your gradient:
-
-**Range controls in LUT panel:**
-
-* **Minimum value**: Lower bound of the color scale
-* **Maximum value**: Upper bound of the color scale
-* **Intermediate values**: Automatically distributed between min and max (based on class count)
-
-#### Adjusting Min/Max Values
-
-**To adjust value ranges:**
-
-1. In the LUT panel, locate the **Min Value** and **Max Value** input fields
-2. Click the **Min Value** field
-3. Type the desired minimum value (e.g., `0.2`)
-4. Press **Enter** or click outside the field
-5. Repeat for **Max Value** field (e.g., `0.9`)
-6. The visualization **updates immediately**
-
-{% hint style="info" %}
-**Auto-Scaling**: When you first apply a LUT, Chloros automatically sets the min/max to the actual data range in the image. You can then narrow this range to focus on specific value ranges of interest.
+3. Nhập giá trị tối thiểu mong muốn (ví dụ: `0.2`)
+4. Nhấn **Enter** hoặc nhấp vào bên ngoài trường
+5. Lặp lại cho trường **Giá trị tối đa** (ví dụ: `0.9`)
+6. Hình ảnh **cập nhật ngay lập tức**{% hint style="info" %}**Tự động chia tỷ lệ**: Khi bạn áp dụng LUT lần đầu tiên, Chloros sẽ tự động thiết lập mức tối thiểu/tối đa cho phạm vi dữ liệu thực tế trong hình ảnh. Sau đó, bạn có thể thu hẹp phạm vi này để tập trung vào phạm vi giá trị cụ thể mà bạn quan tâm.
 {% endhint %}
 
-**Example NDVI range adjustments:**
+**Ví dụ điều chỉnh phạm vi NDVI:*** **Phạm vi đầy đủ**: `-1.0` đến `1.0` (hiển thị tất cả các giá trị có thể)
+* **Tập trung vào thảm thực vật**: `0.2` đến `0.9` (không bao gồm đất trống và nước)
+* **Chỉ thực vật khỏe mạnh**: `0.5` đến `0.9` (chỉ dấu dấu những thực vật mạnh mẽ)
+* **Phát hiện căng thẳng**: `0.2` đến `0.5` (nhấn mạnh các khu vực có vấn đề)
+* **Phạm vi tùy chỉnh**: Điều chỉnh dựa trên pixel giá trị được quan sát của bạn**Tại sao phải điều chỉnh phạm vi?*** **Tăng độ tương phản** trong lĩnh vực bạn quan tâm
+* **Loại trừ các giá trị không liên quan** (ví dụ: vùng nước, đất trống)
+* **Chẩn hóa trực tuyến** trên nhiều hình ảnh hoặc ngày
+* **Nhấn mạnh những điều khác biệt nhỏ** trong phạm vi giá trị thu hẹp
 
-* **Full range**: `-1.0` to `1.0` (show all possible values)
-* **Vegetation-focused**: `0.2` to `0.9` (exclude bare soil and water)
-* **Healthy vegetation only**: `0.5` to `0.9` (highlight only vigorous plants)
-* **Stress detection**: `0.2` to `0.5` (emphasize problem areas)
-* **Custom range**: Adjust based on your observed pixel values
+### Cắt giảm giá trị ngoài phạm vi
 
-**Why adjust ranges?**
+Khi pixel giá trị nằm ngoài phạm vi xác định tối thiểu/tối đa của bạn, bạn có thể kiểm soát cách chúng hiển thị bằng cách sử dụng **cắt chế độ**.
 
-* **Increase contrast** in your area of interest
-* **Exclude irrelevant values** (e.g., water bodies, bare soil)
-* **Standardize visualization** across multiple images or dates
-* **Emphasize subtle differences** within a narrow value range
+#### **Có sẵn chế độ cắt tùy chọn:**
 
-### Clipping Out-of-Range Values
+#### 1. Tối thiểu và tối đa
 
-When pixel values fall outside your defined min/max range, you can control how they're displayed using **clipping modes**.
+* Điểm ảnh **dưới mức tối thiểu**→ hiển thị bằng cách sử dụng**màu đầu tiên** trong phạm vi màu (ví dụ: màu đỏ)
+* Điểm ảnh **trên mức tối đa**→ hiển thị bằng cách sử dụng**màu cuối cùng** trong phạm vi màu (ví dụ: màu xanh lá cây)
+* **Trường hợp sử dụng**: Nhấn mạnh đến cực chất, hiển thị đầy đủ phạm vi dữ liệu với màu sắc bão hòa ở giới hạn
+* **Ví dụ**: Các giá trị NDVI dưới 0,2 đều có màu đỏ, các giá trị trên 0,9 đều có màu xanh lục
 
-#### **Available clipping mode options:**
+#### 2. Nền tảng vững chắc
 
-#### 1. Minimum and Maximum
-
-* Pixels **below minimum** → display using the **first color** in gradient (e.g., red)
-* Pixels **above maximum** → display using the **last color** in gradient (e.g., green)
-* **Use case**: Emphasize extremes, show full data range with saturated colors at limits
-* **Example**: NDVI values below 0.2 all appear red, values above 0.9 all appear green
-
-#### 2. Transparent Background
-
-* Pixels **outside the range** become **fully transparent**
-* Only pixels **within range** show color gradient
-* **Use case**: GIS overlay, isolating specific value ranges, highlighting only areas of interest
-* **Example**: Show only NDVI 0.4-0.7 in color, everything else transparent
+* Các pixel **nngoài phạm vi**trở nên**hoàn toàn trong suốt***Chỉ các pixel**trong phạm vi** hiển thị phạm vi màu
+* **Trường hợp sử dụng**: Lớp phủ GIS, phân biệt các phạm vi giá trị cụ thể, chỉ làm nổi bật các lĩnh vực quan tâm
+* **Ví dụ**: Chỉ hiển thị NDVI 0,4-0,7 ở màu sắc, mọi thứ khác trong suốt
 
 {% hint style="warning" %}
-**Transparency Limitation**: Transparent pixels will appear as the background color in the viewer. When exported during processing, transparency is preserved in PNG format but not in JPG.
+**Giới hạn độ trong suốt**: Các pixel trong suốt sẽ hiển thị dưới dạng màu nền trong quá trình xem. Khi xuất trong quá trình xử lý, mức độ được giữ nguyên ở định dạng PNG nhưng không ở định dạng JPG.
 {% endhint %}
 
-#### 3. Index Background
+#### 3. Mục chỉ nền tảng
 
-* Pixels **outside range** display in **grayscale** (showing raw index values)
-* Pixels **within range** show **color gradient**
-* **Use case**: Subtle highlighting, maintain context while emphasizing areas of interest
-* **Example**: Color-highlight stressed vegetation (NDVI 0.3-0.5) while showing healthy areas in gray
+* Điểm ảnh **ngoài phạm vi**hiển thị ở**thang độ xám** (hiển thị thô chỉ mục giá trị)
+* Các điểm ảnh **trong phạm vi**hiển thị**độ dốc màu*** **Trường hợp sử dụng**: Làm nổi bật tinh tế, duy trì ngữ cảnh trong khi nhấn mạnh các lĩnh vực quan tâm
+* **Ví ví**: nổi bật màu thực vật bị căng thẳng (NDVI 0,3-0,5) khi hiển thị các vùng khỏe mạnh bằng màu xám
 
-#### 4. Original Background
+#### 4. Nền tảng gốc
 
-* Pixels **outside range** display the **original multispectral image**
-* Pixels **within range** show **color gradient**
-* **Use case**: Most intuitive - combines natural image context with analytical color overlay
-* **Example**: See the actual field/crop appearance with color-coded stress areas overlaid
+* Các pixel **ngoài phạm vi**hiển thị**hình ảnh đa phổ gốc***Các điểm ảnh**trong phạm vi**hiển thị**độ dốc** **Trường hợp sử dụng**: Trực quan nhất - kết hợp hình ảnh bối cảnh tự nhiên với phân tích lớp phủ màu
+* **Ví dụ**: Xem diện mạo cánh đồng/cây trồng thực tế với các vùng căng thẳng được mã hoá màu được phủ lên
 
-### Choosing the Right Clipping Mode
+###Chọn chế độ cắt phù hợp
 
-| Clipping Mode              | Best For                                   | Visualization Style          |
+| Cut mode | Tốt nhất cho | Phong cách trực quan |
 | -------------------------- | ------------------------------------------ | ---------------------------- |
-| **Minimum and Maximum**    | Full data display, scientific analysis     | All pixels colored           |
-| **Transparent Background** | GIS overlays, isolating specific ranges    | Color on range, blank beyond |
-| **Index Background**       | Subtle emphasis, maintaining data context  | Color on range, gray beyond  |
-| **Original Background**    | Reports, presentations, intuitive analysis | Color on range, photo beyond |
+| **Tối thiểu và tối đa** | Hiển thị đầy đủ dữ liệu, phân tích khoa học | Tất cả các pixel được tô màu |
+| **Nền trong suốt** | Lớp phủ GIS, cô lập các công cụ vi phạm | Màu sắc trên phạm vi, khoảng trống ngoài |
+| **Mục chỉ số** | Nhấn mạnh tinh tế, duy trì bối cảnh dữ liệu | Màu sắc trong phạm vi, màu xám xa hơn |
+| **Hình nền gốc** | Báo cáo, trình bày, phân tích trực quan | Màu sắc trên phạm vi, hình ảnh xa hơn |
 
-### Creating Custom LUT Colors
+### Tạo tùy chỉnh LUT màu
 
-For full control over your visualization, you can create **custom color gradients** by editing individual color stops.
+Để kiểm soát khả năng hiển thị hoàn toàn của mình, bạn có thể tạo **điều chỉnh màu chuyển tiếp**bằng cách chỉnh sửa các điểm dừng màu riêng biệt.**Để tạo tùy chỉnh phạm vi màu:**
 
-**To create a custom gradient:**
+1. Trong bảng LUT, tìm**thanh xem trước gradient**
 
-1. In the LUT panel, locate the **gradient preview bar**
-2. Look for **color swatch squares** below the gradient
-3. **Click a color stop** to select it
-4. A **color picker** opens
-5. Choose a new color using:
-   * **Color wheel**: Visual color selection
-   * **RGB/HSV sliders**: Precise color control
-   * **Hex code entry**: Exact color specification (e.g., `#FF0000` for red)
-6. Click off the color picker **to apply the new color**
-7. The gradient **updates immediately** on the image
+2. Tìm**hình vuông mẫu màu** bên dưới dải màu
+3. **Nhấp vào điểm dừng màu** để chọn nó
+4. **Mở ra bộ chọn màu**
 
-**Adding or removing color stops:**
+5. Chọn màu mới bằng cách sử dụng:
+   * **Bánh xe màu**: Vòng chọn màu sắc trực quan
+   * **Thanh trượt RGB/HSV**: Kiểm soát màu sắc chính xác
+   * **Hex mã hóa mục nhập**: Thông số màu chính xác (ví dụ: `#FF0000` cho màu đỏ)
+6. Click vào bộ chọn màu **để áp dụng màu mới**
 
-* **Add a stop**: Click the + icon to add a new swatch at the end
-* **Remove a stop**: Double click the color square to remove the swatch
-
-**Customization strategies:**
-
-* **Invert gradient**: Flip color order to reverse the meaning (e.g., green=low, red=high)
-* **Brand colors**: Match your organization's color palette for reports
-* **Colorblind-friendly**: Use orange-blue or purple-yellow combinations
-* **Print optimization**: Choose colors that work in both color and grayscale printing
-* **Multi-threshold**: Use distinct colors at specific value thresholds for classification
+7. Độ dốc**cập nhật ngay lập tức**trên hình ảnh**Thêm hoặc xóa các điểm dừng màu:*** **Thêm điểm dừng**: Nhấn vào biểu tượng + để thêm mẫu màu mới vào cuối
+* **Xóa điểm dừng**: Cú nhấp chuột vào ô vuông màu để xóa mẫu màu**Chiến lược tùy chỉnh:*** **Đảo ngược gradient**: Lật thứ tự màu để đảo ngược ý nghĩa (ví dụ: xanh lá cây=thấp, đỏ=cao)
+* **Màu sắc thương mại**: Phù hợp với bảng màu của tổ chức bạn cho báo cáo
+* **Tân thiện với người mù màu**: Sử dụng kết hợp màu cam-xanh hoặc tím-vàng
+* **Ưu hóa in**: Chọn màu phù hợp với cả in màu và thang độ xám
+* **Đa ngưỡng**: Sử dụng các màu riêng biệt ở ngưỡng giá trị công cụ để phân loại
 
 {% hint style="info" %}
-**Saving Custom Gradients**: Custom gradients can be saved and reused. Click the save icon in the LUT panel to preserve your custom color schemes for future use.
+**Lưu tùy chỉnh độ dốc**: Tùy chỉnh độ dốc có thể được lưu và sử dụng lại. Click vào biểu tượng lưu trong LUT bảng để chứa các tùy chọn chỉnh sửa màu sắc của bạn nhằm sử dụng trong tương lai.
 {% endhint %}
 
 ***
 
-## Interactive Workflow
+## Tương tác quy trình làm việc
 
-### Real-Time Updates
+### Update cập nhật theo thời gian thực
 
-All LUT adjustments in the sandbox update the image **instantly and interactively**:
+Tất cả các điều chỉnh LUT trong sandbox đều cập nhật hình ảnh **ngay lập tức và tương tác**:
 
-* **Switch layer** → Image changes immediately
-* **Select gradient** → Colors update instantly
-* **Adjust value range** → Contrast changes in real-time
-* **Change classes** → Gradient smoothness updates immediately
-* **Modify clipping** → Background display changes instantly
-* **Edit colors** → Custom gradient applies immediately
-
-**No "Apply" button needed** - all changes are live and interactive!
+* **Chuyển lớp** → Hình ảnh thay đổi ngay lập tức
+* **Chọn độ dốc** → Cập nhật màu sắc ngay lập tức
+* **Điều chỉnh phạm vi giá trị** → Thay đổi độ tương phản trong thời gian thực
+* **Thay đổi lớp** → Cập nhật độ dốc mượt mà ngay lập tức
+* **Sửa phần cắt** → Hiển thị thay đổi nền ngay lập tức
+* **Chỉ sửa màu**→ Tùy chỉnh màu sắc sẽ được áp dụng ngay lập tức**Không cần nút "Áp dụng"** - Tất cả các thay đổi đều trực tiếp và tương tác!
 
 {% hint style="success" %}
-**Live Feedback**: The instant visual feedback allows you to rapidly experiment with different settings until you find the optimal visualization for your analysis needs.
+**Phản hồi trực tiếp**: Phản hồi trực tiếp sẽ cho phép bạn nhanh chóng thử nghiệm các cài đặt khác khi bạn tìm thấy hình ảnh trực tiếp tối ưu cho nhu cầu phân tích của mình.
 {% endhint %}
 
-### Iterative Refinement Workflow
+### Công việc chuẩn bị sẵn sàng để lặp lại vòng lặp
 
-**Typical LUT optimization workflow:**
+**Màn hình LUT tối ưu hóa quy trình:**
 
-1. **Select index layer** (e.g., RAW (Reflectance))
-2. **Apply index** - Choose camera filter and index formula, drag colored circles to appropriate location in the index formula
-3. **Apply LUT gradient** - Start with Red-Yellow-Green preset
-4. **Inspect pixel values** - Move cursor around, note value ranges
-5. **Adjust min/max** - Narrow to focus on vegetation (e.g., 0.2 to 0.9)
-6. **Choose clipping** - Try "Original Background" for context
-7. **Refine colors** - Customize gradient if needed for specific emphasis
-8. **Finalize settings** - Document settings and copy to Project Settings for export processing
+1.**Chọn lớp chỉ mục** (Ví dụ: RAW (Phản xạ))
+2. **Áp dụng chỉ mục** - Chọn bộ lọc máy ảnh và chỉ mục công thức, kéo các vòng tròn màu đến vị trí thích hợp trong chỉ mục công thức
+3. **Áp dụng gradient LUT** - Bắt đầu cài đặt trước Red-Yellow-Green
+4. **Kiểm tra pixel giá trị** - Di chuyển con trỏ xung quanh, ghi chú phạm vi giá trị
+5. **Điều chỉnh tối thiểu/tối đa** - Thu gọn để tập trung vào thảm thực vật (Ví dụ: 0,2 đến 0,9)
+6. **Chọn cắt** - Thử "Nền gốc" để biết ngữ cảnh
+7. **Tinh chỉnh màu sắc** - Màu chuyển tùy chỉnh nếu cần để có thể nhấn vào công cụ
+8. **Hoàn tất cài đặt**- Cài đặt tài liệu và sao chép vào Cài đặt dự án để xử lý xuất
 
-### Pixel Value Inspection
+### Kiểm tra pixel giá trị
 
-Understanding actual pixel values is crucial for setting effective LUT ranges:
+Hiểu biết thực tế về giá trị pixel là rất quan trọng để thiết lập phạm vi Kết quả hiệu quả LUT:**Cách kiểm tra giá trị:**
 
-**How to inspect values:**
-
-1. Pixel values show when the image has either the Index, or both the Index and LUT **boxes checked**.
-2. **Move your cursor** over different areas of the image
-3. **Observe pixel values** displayed in the legend as you hover
-4. Zoom in to see individual pixels highlighted with a floating value
-5. **Take notes** of value ranges for different features:
-   * **Healthy vegetation**: e.g., NDVI 0.55-0.85
-   * **Stressed vegetation**: e.g., NDVI 0.30-0.50
-   * **Bare soil**: e.g., NDVI 0.05-0.25
-   * **Water** (if present): e.g., NDVI -0.05 to 0.10
-
-**Using pixel values to set LUT ranges:**
-
-After inspecting pixel values, adjust your LUT min/max accordingly:
-
-**Example scenario:**
-
-* **Observation**: Soil values = 0.05-0.25, Stressed = 0.25-0.50, Healthy = 0.50-0.85
-* **Goal**: Visualize only plant health (exclude soil)
-* **LUT settings**: Min = `0.25`, Max = `0.85`
-* **Clipping**: "Original Background" to see soil in natural color
-* **Result**: Color gradient only applies to vegetation, soil shows as original image
+1. Pixel có giá trị hiển thị khi hình ảnh có Chỉ mục hoặc cả hai mục Mục và LUT**được chọn**.
+2. **Di chuyển con trỏ** qua các hình ảnh khác nhau của vùng
+3. **Quan sát các pixel giá trị** được hiển thị trong phần chú thích khi bạn di chuột
+4. Phóng to để xem từng pixel được đánh dấu bằng giá trị nổi
+5. **Ghi chú** phạm vi giá trị cho các tính năng khác nhau:
+   * **Thảm thực vật khỏe mạnh**: ví dụ: NDVI 0,55-0,85
+   * **Thực vật bị căng thẳng**: ví dụ: NDVI 0,30-0,50
+   * **Đất trống**: ví dụ: NDVI 0,05-0,25
+   * **Nước**(nếu có): ví dụ: NDVI -0,05 đến 0,10**Dùng pixel giá trị để đặt phạm vi LUT:**Sau khi kiểm tra giá trị pixel, hãy điều chỉnh LUT tối thiểu/tối đa cho phù hợp:**Tình huống ví dụ:*** **Quan sát**: Giá trị đất = 0,05-0,25, Sử dụng = 0,25-0,50, mạnh = 0,50-0,85
+* **Mục tiêu**: Chỉ hình dung tình trạng thực vật (không bao gồm đất)
+* **Cài đặt LUT**: Tối thiểu = `0.25`, Tối đa = `0.85`
+* **Chắt**: "Nền gốc" để xem đất có màu sắc tự nhiên
+* **Kết quả**: Độ dốc màu chỉ áp dụng cho thảm thực vật, đất hiển thị như ảnh gốc
 
 {% hint style="info" %}
-**Dynamic Range**: Different crops, seasons, and growth stages will have different value ranges. Always inspect pixel values in your specific dataset before setting LUT ranges.
+**Phạm vi động**: Các loại cây trồng, mùa vụ và giai đoạn tăng trưởng khác nhau sẽ có phạm vi giá trị khác nhau. Luôn kiểm tra pixel giá trị trong công cụ dữ liệu của bạn trước khi đặt LUT phạm vi.
 {% endhint %}
 
 ***
 
-## Custom Indices (Chloros+)
+## Chỉ tùy chỉnh số (Chloros+)
 
-### Creating Custom Index Formulas
+### Tạo tùy chỉnh chỉ mục công thức
 
 {% hint style="info" %}
-**Where to Create**: Custom indices can be configured in **Project Settings** before processing, as well as in the Image Viewer sandbox sidebar.
+**Nơi tạo**: Bạn có thể định cấu hình các tùy chọn chỉ mục trong**Cài đặt dự án** trước khi xử lý, cũng như trong hộp cát của Trình xem ảnh.
 {% endhint %}
 
-**To create a custom index:**
+**Để tạo tùy chỉnh chỉ mục:**
 
-1. **Open Project Settings** (before processing) or Image Viewer sandbox sidebar
-2. Navigate to the **Index formula dropdown**
-3. Look for **"Custom"** option (must be logged in with Chloros+ license)
-4. **Define your formula** using band variables:
-   * Band names: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, etc.
-   * Operators: `+`, `-`, `*`, `/`, `^` (exponent)
-   * Functions: `sqrt()`, `abs()`, etc. (if supported)
-   * Parentheses: `()` for order of operations
-5. **Name your index** (e.g., "MyIndex" or "CustomNDVI")
-6. **Save the configuration**
+1.**Mở Cài đặt dự án** (trước khi xử lý) hoặc thanh bên trong cát của Trình xem ảnh
+2. Điều hướng đến **danh sách thả xuống chỉ mục công thức**
 
-**Example custom formulas:**
+3. Tìm tùy chọn**"Tùy chỉnh"** (phải đăng nhập bằng giấy phép Chloros+)
+4. **Xác định công thức** bằng cách sử dụng các biến trong băng tần:
+   * Tên ban nhạc: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, v.v.
+   * Toán tử: `+`, `-`, `*`, `/`, `^` (số mũ)
+   * Chức năng: `sqrt()`, `abs()`, v.v. (nếu được hỗ trợ)
+   * Dấu ngoặc đơn: `()` cho thực hiện thứ tự
+5. **Đặt tên cho chỉ mục của bạn** (Ví dụ: "MyIndex" hoặc "CustomNDVI")
+6. **Lưu cấu hình**
+
+**Ví dụ về tùy chỉnh công thức:**
 
 ```
+
 Modified NDVI with offset:
 (NIR - Red) / (NIR + Red + 0.5)
 
@@ -399,21 +354,21 @@ Exponential index:
 ```
 
 {% hint style="warning" %}
-**Formula Validation**: Ensure your formula uses bands available in your camera. For example, RedEdge is only available on cameras with a RedEdge filter.
+**Xác thực công thức**: Đảm bảo công thức của bạn sử dụng các băng tần có sẵn trong máy ảnh của bạn. Ví dụ: RedEdge chỉ sử dụng được trên máy ảnh có bộ lọc RedEdge.
 {% endhint %}
 
 ***
 
-## Next Steps
+## Các bước tiếp theo
 
-Now that you understand the Index/LUT Sandbox:
+Bây giờ bạn đã hiểu được Hộp cát Index/LUT:
 
-* **Apply to processing**: Use discovered settings in [Project Settings](../project-settings/project-settings.md)
-* **Batch process**: Apply optimized indices to full datasets
-* **Learn more**: Read [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md)
+* **Áp dụng để xử lý**: Sử dụng các cài đặt được phát hiện trong [Cài đặt dự án](../project-settings/project-settings.md)
+* **Chuỗi hàng hàng**: Áp dụng các mục chỉ được tối ưu hóa cho đầy đủ dữ liệu
+* **Tìm hiểu thêm**: Đọc [Công thức đa mục mục đa phổ](../project-settings/multispectral-index-formulas.md)
 
-Related documentation:
+Link tài liệu:
 
-* [**Image Layers**](image-layers.md) - Layer management and visualization
-* [**Opening an Image Full Screen**](opening-an-image-full-screen.md) - Image Viewer basics
-* [**Processing Images (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Full processing workflow
+* [**Lớp hình ảnh**](image-layers.md) - Quản lý và trực quan hóa lớp
+* [**Mở hình ảnh toàn màn hình**](opening-an-image-full-screen.md) - Thông tin cơ bản về Trình xem hình ảnh
+* [**Dang xử lý hình ảnh (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Quy trình xử lý đầy đủ
