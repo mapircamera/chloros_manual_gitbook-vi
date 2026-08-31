@@ -1,368 +1,416 @@
-# Giám sát trong quá trình xử lý
+# Theo dõi quá trình xử lý
 
-Sau khi quá trình xử lý bắt đầu, Chloros cung cấp một số cách để theo dõi quá trình, kiểm tra sự cố và hiểu điều gì đang xảy ra với dữ liệu của bạn. Đây là giải pháp theo dõi quá trình xử lý của bạn và cung cấp giải pháp Chloros thông tin.
+Khi quá trình xử lý đã bắt đầu,Chloros
 
-## Tổng quan về tiến trình
+cung cấp một số cách để theo dõi tiến độ, kiểm tra các sự cố và hiểu rõ những gì đang diễn ra với tập dữ liệu của bạn. Trang này giải thích cách theo dõi quá trình xử lý và giải thích thông tin màChloros
 
-Thanh tiến trình ở tiêu đề trên cùng hiển thị trạng thái xử lý theo thời gian thực và phần trăm hoàn thành.
+cung cấp.
 
-### Thanh tiến trình miễn phí
+## Tổng quan về thanh tiến trình
 
-Đối với người dùng không có giấy phép Chloros+:
+Thanh tiến trình ở phần đầu trang hiển thị trạng thái xử lý theo thời gian thực và tỷ lệ phần trăm hoàn thành. Tiến độ được truyền trực tiếp từ hệ thống backend thông qua Server-Sent Events (SSE), do đó thanh tiến độ phản ánh chính xác những gì quy trình xử lý đang thực hiện.
 
-**Hiển thị giai đoạn 2 cấp độ:**
+### Thanh tiến độ ở Chế độ Miễn phí
 
-1.**Phát mục tiêu** - Tìm kiếm chỉnh sửa tiêu điểm trong hình ảnh
-2. **Đang xử lý**- Áp dụng chỉnh sửa và xuất**Thanh tiến trình hiển thị:**
+Đối với người dùng không có giấy phépChloros
 
-* Tỷ lệ hoàn thành có thể (0-100%)
-* Current Art
-* Đơn giản hóa thanh ngang trực quan
++:
 
-### Chloros+ Tiến trình
+**Hiển thị tiến độ 2 giai đoạn:**
 
-Đối với người dùng có giấy phép Chloros+:
+1.**Phát hiện mục tiêu** - Tìm các mục tiêu hiệu chuẩn trong hình ảnh
+2. **Xử lý** - Áp dụng các chỉnh sửa và xuất dữ liệu**Thanh tiến trình hiển thị:**
+
+* Tỷ lệ hoàn thành tổng thể (0-100%)
+* Tên giai đoạn hiện tại
+* Biểu diễn đơn giản dưới dạng thanh ngang
+
+### Thanh tiến trìnhChloros
+
+
+
+Dành cho người dùng có giấy phépChloros
+
++:
 
 **Hiển thị tiến trình 4 giai đoạn:**
 
-1.**Phát hiện** - Tìm kiếm tiêu chuẩn
-2. **Phân tích** - Kiểm tra hình ảnh và đường chuẩn
-3. **Chỉnh sửa** - Áp dụng hiệu chỉnh chi tiết và độ phản chiếu
-4. **Xuất**- Lưu các tập tin đã xử lý**Tính năng tương tác:*** **Di chuột qua** thanh tiến trình để xem bảng 4 mở rộng giai đoạn
-* **Nhấp vào** thanh tiến trình để cố gắng mở rộng bảng định nghĩa/ghim
-* **Nhấp xuống** để giải nén và tự động ẩn khi rời chuột
-* Mỗi giai đoạn cho thấy sự tiến bộ của từng cá nhân (0-100%)
+1.**Phát hiện** - Tìm các mục tiêu hiệu chuẩn
+2. **Phân tích** - Kiểm tra hình ảnh và chuẩn bị quy trình xử lý
+3. **Hiệu chuẩn** - Áp dụng các điều chỉnh hiệu ứng viền tối và độ phản xạ
+4. **Xuất** - Lưu các tệp đã xử lý**Các tính năng tương tác:*** **Di chuột qua** thanh tiến trình để xem bảng 4 giai đoạn mở rộng
+* **Nhấp vào** thanh tiến trình để đóng băng/ghim bảng mở rộng
+* **Nhấp lại** để bỏ đóng băng và ẩn tự động khi di chuột ra khỏi vùng
+* Mỗi giai đoạn hiển thị tiến trình riêng biệt (0-100%)
+
+{% hint style="info" %}
+**Tính nhất quán củaCLI**: trong quá trình chạy `chloros-cli process`, bốn luồng (thread) này đều báo trạng thái đang “Phát hiện”, “Phân tích”, “Xử lý” và “Xuất”, trong khi `chloros-cli export-status` hiển thị tiến trình xuất của Luồng 4 theo thời gian thực từ một thiết bị đầu cuối khác. Xem [Tài liệu tham khảoCLI
+
+](../reference/cli-reference.md).
+{% endhint %}
 
 ***
 
-## Tìm hiểu từng giai đoạn xử lý
+## Hiểu về từng giai đoạn xử lý
 
 {% hint style="info" %}
-**Đường ống kiến trúc**: GUI 4 giai đoạn này tương ứng với [trình xử lý đường dẫn 4 luồng](../processing-architecture/processing-pipeline.md). Trên các hệ thống có khả năng tăng tốc GPU, Thread 3 (Hiệu chỉnh) có thể được hưởng lợi từ [Thích ứng điện động](../processing-architecture/dynamic-compute-adaptation.md) giúp tối ưu hóa quá trình xử lý cho phần cứng công cụ của bạn.
+**Kiến trúc đường ống**: 4 giai đoạn trên giao diện người dùng (GUI) này tương ứng với [đường ống xử lý 4 luồng](../processing-architecture/processing-pipeline.md). Trên các hệ thống có khả năng tăng tốc GPU, luồng 3 (Hiệu chuẩn) được hưởng lợi từ [Tính năng điều chỉnh tính toán động](../processing-architecture/dynamic-compute-adaptation.md), giúp tối ưu hóa quá trình xử lý cho phần cứng cụ thể của bạn.
 {% endhint %}
 
-### Giai đoạn 1: Phát hiện (Phát mục tiêu)
+### Giai đoạn 1: Phát hiện (Phát hiện mục tiêu)
 
-**Chuyện gì đang xảy ra vậy:**
+**Quá trình diễn ra như sau:**
 
-* Chloros quét các hình ảnh được đánh dấu bằng hộp kiểm Target
-* Thuật toán giác giác máy tính xác định 4 chuẩn bảng
-* Giá trị phản xạ được trích xuất từ ​​mỗi bảng
-* Ghi lại tiêu điểm thời gian để lập lịch phù hợp với tiêu chuẩn
+* Chương trình quét hình ảnh (Chloros
 
-**Khoảng thời gian:**
+) quét các hình ảnh mà bạn đã chọn bằng hộp kiểm &quot;Target&quot; (tất cả hình ảnh nếu không có hình ảnh nào được chọn)
+* Các thuật toán thị giác máy tính xác định các bảng hiệu chuẩn
+* Giá trị phản xạ được trích xuất từ mỗi bảng
+* Dấu thời gian của mục tiêu được ghi lại để lập lịch hiệu chuẩn chính xác
 
-* Với dấu mục tiêu được đánh dấu: 10-60 giây
-* Không có mục tiêu nào được đánh dấu: 5-30+ phút (quét tất cả hình ảnh)
+**Thời gian thực hiện:**
 
-**Chỉ báo tiến độ:**
+* Có mục tiêu được đánh dấu: 10–60 giây
+* Không có mục tiêu được đánh dấu: 5–30+ phút (quét tất cả hình ảnh)
 
-* Hiện tại: 0% → 100%
-* Số lượng hình ảnh được quét
-* Số mục tiêu được tìm thấy
+**Chỉ báo tiến trình:**
 
-**Những thứ cần xem:**
+* Đang phát hiện: 0% → 100%
+* Số lượng hình ảnh đã quét (chỉ tính các hình ảnh thực sự đang được quét)
+* Số lượng mục tiêu đã tìm thấy
 
-* Nên hoàn thành nhanh chóng nếu mục tiêu được đánh dấu đúng
-* Nếu bị mất quá nhiều thời gian, mục tiêu có thể không được đánh dấu
-* Kiểm tra lỗi gỡ lỗi nhật ký để biết thông báo "Đã tìm thấy tiêu điểm"
+**Cần lưu ý:**
+
+* Quá trình sẽ hoàn tất nhanh chóng nếu các mục tiêu được đánh dấu đúng cách
+* Nếu mất quá nhiều thời gian, có thể các mục tiêu chưa được đánh dấu
+* Kiểm tra Nhật ký gỡ lỗi để tìm các thông báo &quot;Đã tìm thấy mục tiêu&quot;
 
 ### Giai đoạn 2: Phân tích
 
-**Chuyện gì đang xảy ra vậy:**
+**Điều gì đang xảy ra:**
 
-* Đọc hình ảnh EXIF ​​siêu dữ liệu (dấu thời gian, cài đặt ánh sáng)
-* Xác định cơ sở điều chỉnh chiến lược dựa trên tiêu điểm thời gian
-* Tổ chức xử lý ảnh hàng đợi
-* Chuẩn bị bài hát xử lý công nhân (chỉ Chloros+)
+* Đọc siêu dữ liệu EXIF của hình ảnh (dấu thời gian, cài đặt phơi sáng)
+* Xác định chiến lược hiệu chuẩn dựa trên dấu thời gian của mục tiêu và dữ liệu DAQ hướng xuống có sẵn
+* Sắp xếp hàng đợi xử lý hình ảnh
+* Chuẩn bị các công cụ xử lý song song (chỉ dành choChloros
 
-**Thời lượng:**5-30 giây**Chỉ báo tiến độ:**
+trở lên)
 
-* Phân tích: 0% → 100%
-* Giai đoạn nhanh, thường kết thúc nhanh
+**Thời gian thực hiện:** 5–30 giây**Chỉ báo tiến trình:**
 
-**Những thứ cần xem:**
+* Đang phân tích: 0% → 100%
+* Giai đoạn diễn ra nhanh, thường hoàn thành sớm
 
-* Nên tiến triển đều đặn không ngừng nghỉ
-* Cảnh báo thiếu siêu dữ liệu sẽ xuất hiện trong lỗi gỡ lỗi nhật ký
+**Cần lưu ý:**
 
-### Giai đoạn 3: Hiệu chỉnh
+* Quá trình nên diễn ra đều đặn mà không bị gián đoạn
+* Các cảnh báo về metadata thiếu sẽ xuất hiện trong Nhật ký gỡ lỗi
 
-**Chuyện gì đang xảy ra vậy:*** **Debayering**: Chuyển đổi mẫu RAW Bayer thành 3 kênh
-* **Chỉ họa tiết**: Loại bỏ vết đen ở cạnh ống kính
-* **Phản xạ chỉnh sửa**: Chuẩn hóa với tiêu điểm giá trị
+### Giai đoạn 3: Hiệu chuẩn
+
+**Điều gì đang diễn ra:*** **Debayering**: Chuyển đổi mẫu Bayer RAW thành 3 kênh (bị bỏ qua đối với các mô-đun LATTICE mono, kèm chú thích)
+* **Chỉnh sửa hiệu ứng tối góc**: Loại bỏ hiện tượng tối ở viền ống kính
+* **Hiệu chuẩn độ phản xạ**: Chuẩn hóa với các giá trị mục tiêu và/hoặc tín hiệu xuống từ hệ thống thu thập dữ liệu (DAQ)
 * **Tính toán chỉ số**: Tính toán các chỉ số đa phổ
-* Xử lý từng hình ảnh thông qua đường ống đầy đủ
+* Xử lý từng hình ảnh qua toàn bộ quy trình
 
-**Thời lượng:**Xử lý thời gian phần lớn (60-80%)**Chỉ báo tiến độ:**
+**Thời gian:** Chiếm phần lớn tổng thời gian xử lý (60–80%)**Chỉ báo tiến trình:**
 
-* Hiệu chuẩn: 0% → 100%
-* Đang xử lý hiện tại hình ảnh
-* Hình ảnh hoàn thành / Tổng số hình ảnh
+* Đang hiệu chuẩn: 0% → 100%
+* Đang xử lý hình ảnh hiện tại
+* Số hình ảnh đã hoàn thành / Tổng số hình ảnh
 
-**Hành vi xử lý:*** **Chế độ miễn phí**: Xử lý tuần tự từng hình ảnh
-* **Chế độ Chloros+**: Xử lý đồng thời tối đa 16 hình ảnh
-* **Tăng tốc GPU**: Tăng tốc đáng kể giai đoạn này**Những gì cần xem:**
+**Hành vi xử lý:*** **Chế độ Free**: Xử lý từng hình ảnh một theo thứ tự
+* **Chế độChloros
 
-* Tiến bộ ổn định thông tin về số lượng hình ảnh
-* Kiểm tra lỗi gỡ lỗi nhật ký để biết thông báo hoàn thành trên mỗi hình ảnh
-* Cảnh báo về vấn đề chất lượng hình ảnh hoặc tiêu chuẩn
++**: Chạy nhóm công nhân thích ứng với phần cứng — 1–4 công nhân đồng thời trên hệ thống GPU (tùy theo VRAM), một công nhân cho mỗi lõi vật lý (trừ đi một) trên hệ thống chỉ dùng CPU. Xem [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md)
+* **Tăng tốc bằng GPU**: Tăng tốc đáng kể giai đoạn này**Cần lưu ý:**
 
-### Giai đoạn 4: Xuất khẩu
+* Tiến trình ổn định theo số lượng hình ảnh
+* Kiểm tra Nhật ký gỡ lỗi để xem thông báo hoàn thành từng hình ảnh
+* Cảnh báo về chất lượng hình ảnh hoặc các vấn đề hiệu chuẩn
 
-**Chuyện gì đang xảy ra vậy:**
+### Giai đoạn 4: Xuất dữ liệu
 
-* Ghi hình ảnh đã được chỉnh sửa vào đĩa ở dạng đã chọn
-* Xuất đa chỉ mục hình ảnh với LUT màu
-* Tạo máy ảnh thư mục
-* Giữ nguyên tên tập tin với điều chỉnh hậu tố thích hợp
+**Quá trình diễn ra:**
 
-**Thời lượng:**Xử lý tổng thời gian 10-20%**Chỉ báo tiến độ:**
+* Ghi các hình ảnh đã xử lý lên đĩa theo định dạng đã chọn ngay khi chúng hoàn thành
+* **LATTICE**: mỗi khung hình được phân tán ra tất cả các sản phẩm đã kích hoạt (debayered / preview / radiance / reflectance)
+* Xuất các hình ảnh chỉ số đa quang phổ với màu LUT
+* Tạo cây thư mục đầu ra `<project>/<camera>/<format>/<Product>_Images/` — các tệp đã xuất giữ nguyên tên tệp nguồn; thư mục xác định sản phẩm
 
-* Xuất: 0% → 100%
-* File đang được ghi
-* Xuất và định dạng
+**Thời gian thực hiện:** 10–20% tổng thời gian xử lý**Chỉ báo tiến trình:**
 
-**Những thứ cần xem:**
+* Đang xuất: 0% → 100%
+* Đang ghi tệp
+* Định dạng xuất và đích đến
 
-* Cảnh báo dung lượng ổ đĩa
-* File write error
-* Hoàn thành tất cả các cấu hình đầu ra
+**Cần lưu ý:**
 
-***
-
-## Gỡ lỗi tab
-
-Nhật ký gỡ lỗi cung cấp thông tin chi tiết về quá trình xử lý và mọi vấn đề phải gặp.
-
-### Lỗi gỡ bỏ bản cập nhật
-
-1. Bấm vào biểu tượng **Nhật ký gỡ lỗi** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> ở thanh bên trái
-2. Nhật ký mở bảng hiển thị quá trình xử lý thông báo theo thời gian
-3. Tự động cuộn để hiển thị tin nhắn mới nhất
-
-###Tìm hiểu thông điệp thông báo
-
-#### Tin nhắn thông tin (Trắng/Xám)
-
-Cập nhật thông tin xử lý thông thường:
-
-```
-[INFO] Processing started
-[INFO] Target detected in IMG_0015.RAW - 4 panels found
-[INFO] Calibrating IMG_0234.RAW
-[INFO] Exported NDVI image: IMG_0234_NDVI.tif
-[INFO] Processing complete
-```
-
-#### Thông báo cảnh báo (Vàng)
-
-Sự cố không nghiêm trọng không được xử lý:
-
-```
-[WARN] No GPS data found in IMG_0145.RAW
-[WARN] Target image timestamp gap > 30 minutes
-[WARN] Low contrast in calibration panel - results may vary
-```
-
-**Hành động:** Xem lại cảnh báo sau khi xử lý nhưng không làm gián đoạn
-
-#### Lỗi thông báo (Red)
-
-Các vấn đề nghiêm trọng có thể khiến quá trình xử lý không thành công:
-
-```
-[ERROR] Cannot write file - disk full
-[ERROR] Corrupted image file: IMG_0299.RAW
-[ERROR] No targets detected - enable reflectance calibration or mark target images
-```
-
-**Hành động:** Dừng xử lý, giải quyết lỗi, khởi động lại
-
-###Nhật ký chung thông báo
-
-| Tin nhắn | Ý nghĩa | Cần hành động |
-| -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Đã phát hiện mục tiêu trong \[tên tệp]" | Đã tìm thấy công cụ chỉnh sửa tiêu điểm thành công | Không - bình thường |
-| "Xử lý ảnh X của Y" | Cập nhật hiện tại tiến trình | Không - bình thường |
-| "Không tìm thấy mục tiêu" | Không thể phát hiện được tiêu chuẩn đầu mục | Đánh dấu tiêu điểm hình ảnh hoặc tắt chế độ phản xạ chỉnh sửa |
-| "Không đủ dung lượng đĩa" | Không đủ dung lượng lưu trữ cho đầu ra | Giải thích dung lượng ổ đĩa phóng to |
-| "Bỏ qua file bị hỏng" | Ảnh tập tin bị hỏng | Sao chép tập tin từ thẻ SD |
-| "Dữ liệu PPK được ứng dụng" | Đã áp dụng chỉnh sửa GPS từ tệp .daq | Không - bình thường |
-
-### Sao chép nhật ký dữ liệu
-
-Để sao chép bản cập nhật nhằm giải quyết vấn đề hoặc hỗ trợ:
-
-1. Mở gỡ lỗi nhật ký bảng
-2. Bấm vào nút **"Sao chép nhật ký"** (hoặc nhấp chuột phải → Chọn tất cả)
-3. Dán vào tập tin văn bản hoặc email
-4. Gửi tới bộ phận hỗ trợ MAPIR nếu cần
+* Cảnh báo dung lượng đĩa
+* Lỗi ghi tệp
+* Hoàn tất tất cả các đầu ra đã cấu hình
 
 ***
 
-##Giám sát hệ thống tài nguyên
+## Tab Nhật ký gỡ lỗi
 
-### Cách sử dụng CPU
+Nhật ký gỡ lỗi cung cấp thông tin chi tiết về tiến trình xử lý và bất kỳ sự cố nào gặp phải. Các thông báo khởi động của hệ thống nền cũng được ghi lại vào bảng điều khiển nhật ký, do đó nhật ký sẽ phản ánh toàn bộ quá trình ngay cả khi bạn mở nó muộn.
 
-**Chế độ miễn phí:**
+### Truy cập Nhật ký gỡ lỗi
 
-* 1 CPU lõi ở mức \~100%
-* Các nền tảng khác hoặc có sẵn
-* System is not reply
+1. Nhấp vào biểu tượng **Nhật ký gỡ lỗi**<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
 
-**Bài hát Chloros+ Chế độ:**
+ở thanh bên trái
+2. Bảng nhật ký sẽ mở ra, hiển thị các thông báo xử lý theo thời gian thực
+3. Tự động cuộn để hiển thị các thông báo mới nhất
 
-* Nhiều cốt lõi ở mức 80-100% (tối đa 16 cốt lõi)
-* Tổng mức sử dụng CPU có thể cao
-* Hệ thống có thể cảm nhận được phản hồi tốt hơn
+<!-- SCREENSHOT-NEEDED: Debug Log tab open at the end of a completed run, showing real backend log lines including the [RUN-SUMMARY] lines (images / camera groups / targets / calibrated / files written) -->
+
+### Hiểu các thông báo nhật ký Các dòng nhật ký
+
+Chloros
+
+được đánh dấu bằng các thẻ trong ngoặc vuông chỉ tên hệ thống con — ví dụ: `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Thông tin quan trọng nhất cần biết là **tóm tắt quá trình chạy**, được hiển thị ở cuối mỗi lần chạy (bao gồm cả các lần chạy đã dừng):
+
+```
+[RUN-SUMMARY] 49 image(s) in 2 camera group(s); 4 target(s) detected; 45 image(s) calibrated; 180 file(s) written.
+```
+
+Các dòng gợi ý bổ sung `[RUN-SUMMARY]` sẽ xuất hiện bất cứ khi nào cần giải thích điều gì đó — ví dụ như một lần chạy không tạo ra kết quả nào, hoặc một camera mà sản phẩm được yêu cầu đã bị bỏ qua vì không áp dụng được. Các dòng `[EXPORT-CHECK]` giải thích các trường hợp bỏ qua theo từng camera (ví dụ: lý do tại sao cameraRGB
+
+không nhận được sản phẩm radiance).
+
+Các mức độ nghiêm trọng chung của thông báo (các ví dụ dưới đây chỉ mang tính minh họa, không phải nguyên văn):
+
+#### Thông báo Thông tin (Màu trắng/Xám)
+
+Cập nhật xử lý thông thường: quá trình xử lý đã bắt đầu, phát hiện mục tiêu (kèm số lượng ô), tiến trình hiệu chuẩn từng hình ảnh, tệp đã được xuất, quá trình xử lý hoàn tất.
+
+#### Thông báo Cảnh báo (Màu vàng)
+
+Các vấn đề không nghiêm trọng không làm dừng quá trình xử lý — ví dụ: thiếu dữ liệu GPS trong một khung hình, khoảng cách thời gian lớn giữa các hình ảnh mục tiêu, hoặc độ tương phản thấp trong bảng hiệu chuẩn.
+
+**Hành động:** Kiểm tra các cảnh báo sau khi xử lý, nhưng không ngắt quá trình
+
+#### Thông báo lỗi (Red
+
+)
+
+Các vấn đề nghiêm trọng có thể khiến quá trình xử lý thất bại — ví dụ: đĩa đầy, tệp hình ảnh bị hỏng, hoặc không phát hiện được mục tiêu trong khi yêu cầu hiệu chuẩn phản xạ.
+
+**Hành động:** Dừng xử lý, khắc phục lỗi, khởi động lại
+
+### Các tình huống thường gặp trong nhật ký
+
+| Tình huống                             | Ý nghĩa                                       | Hành động cần thực hiện                                         |
+| ------------------------------------- | --------------------------------------------- | ----------------------------------------------------- |
+| Phát hiện mục tiêu trong \[tên tệp]        | Đã tìm thấy mục tiêu hiệu chuẩn thành công         | Không có - bình thường                                         |
+| Dòng tiến trình cho từng hình ảnh              | Cập nhật tiến trình hiện tại                       | Không có - bình thường                                         |
+| Không tìm thấy mục tiêu nào                      | Không phát hiện mục tiêu hiệu chuẩn               | Đánh dấu hình ảnh mục tiêu hoặc tắt hiệu chuẩn phản xạ |
+| Dung lượng đĩa không đủ               | Không đủ dung lượng lưu trữ cho kết quả                 | Giải phóng dung lượng đĩa                                    |
+| Bỏ qua tệp bị hỏng               | Tệp hình ảnh bị hỏng                         | Sao chép lại tệp từ thẻ SD                             |
+| `[IMPORT-LEVEL] Skipping ... no raw source` | Không thể xử lý dữ liệu chụp không có khung hình thô | Chụp lại với khung hình thô hoặc sử dụngCLI
+
+`--input-level`  |
+| `[RUN-SUMMARY] ... 0 file(s) written` | Quá trình chạy không tạo ra sản phẩm hình ảnh — được báo cáo là lỗi kèm gợi ý | Đọc các dòng gợi ý; kiểm tra những gì đã bị bỏ qua và lý do |
+
+### Sao chép dữ liệu nhật ký
+
+Để sao chép nhật ký nhằm khắc phục sự cố hoặc hỗ trợ:
+
+1. Mở bảng Nhật ký gỡ lỗi
+2. Nhấp vào nút **&quot;Sao chép nhật ký&quot;** (hoặc nhấp chuột phải → Chọn tất cả)
+3. Dán vào tệp văn bản hoặc email
+4. Gửi đến bộ phận hỗ trợMAPIR
+
+nếu cần
+
+***
+
+## Giám sát tài nguyên hệ thống
+
+### Tỷ lệ sử dụng CPU
+
+**Chế độ Tự do:**
+
+* 1 nhân CPU ở mức ~100%
+* Các nhân còn lại ở trạng thái nhàn rỗi hoặc sẵn sàng
+* Hệ thống vẫn phản hồi bình thường
+
+**Chế độ song songChloros
+
++:**
+
+* Nhiều nhân hoạt động ở mức sử dụng cao — số lượng cụ thể phụ thuộc vào chiến lược được chọn bởi [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md)
+* Hệ thống có thể cảm thấy chậm hơn
 
 **Để theo dõi:**
 
-* Trình quản lý tác vụ Windows (Ctrl+Shift+Esc)
-* Hiệu suất tab → CPU phần
-* Tìm kiếm quy trình "Chloros" hoặc "chloros-backend"
+* Trình quản lý tác vụWindows
 
-### Cách sử dụng bộ nhớ (RAM)
+(Ctrl+Shift+Esc)
+* Tab Hiệu suất → Phần CPU
+* Tìm các tiến trình “Chloros
 
-**Cách sử dụng hình điển:**
+” hoặc “chloros-backend”
 
-* Dự án nhỏ (< 100 hình ảnh): 2-4 GB
-* Dự án trung bình (100-500 hình ảnh): 4-8 GB
-* Dự án lớn (500+ hình ảnh): 8-16 GB
-* Chế độ bài hát Chloros+ dùng nhiều RAM hơn
+### Mức sử dụng bộ nhớ (RAM)
 
-**Nếu bộ nhớ sắp hết:**
+**Mức sử dụng thông thường:**
+
+* Dự án nhỏ (&lt; 100 hình ảnh): 2–4 GB
+* Dự án trung bình (100–500 hình ảnh): 4–8 GB
+* Dự án lớn (500+ hình ảnh): 8–16 GB
+* Chế độ song songChloros
+
++ tiêu tốn nhiều RAM hơn
+
+**Nếu bộ nhớ thấp:**
 
 * Xử lý các lô nhỏ hơn
 * Đóng các ứng dụng khác
-* Nâng cấp RAM nếu thường xuyên Xử lý dữ liệu lớn
+* Nâng cấp RAM nếu thường xuyên xử lý các tập dữ liệu lớn
 
-### Cách sử dụng GPU (Chloros+ với CUDA)
+### Sử dụng GPU (từChloros
 
-Khi tính năng tăng tốc GPU được bật:
+trở lên với CUDA)
 
-* GPU NVIDIA cho thấy mức sử dụng cao (60-90%)
-* Tăng mức sử dụng VRAM (yêu cầu 4GB+ VRAM)
-* Giai đoạn chỉnh sửa nhanh hơn đáng kể
+Khi bật tính năng tăng tốc GPU:
+
+* GPU NVIDIA hiển thị mức sử dụng cao (60–90%)
+* Sử dụng VRAM tăng lên (yêu cầu 4GB VRAM trở lên; 7GB trở lên cho quá trình debayering Texture Aware đồng thời)
+* Giai đoạn hiệu chuẩn diễn ra nhanh hơn đáng kể
 
 **Để theo dõi:**
 
-* Biểu tượng Khay hệ thống NVIDIA
+* Biểu tượng NVIDIA trên khay hệ thống
 * Trình quản lý tác vụ → Hiệu suất → GPU
-* GPU-Z hoặc công cụ giám sát tương tự
+* GPU-Z hoặc công cụ theo dõi tương tự
 
-### Đĩa I/O
+### I/O đĩa
 
-**Điều gì sẽ xảy ra:**
+**Điều cần lưu ý:**
 
-* Tốc độ đọc đĩa cao trong giai đoạn phân tích
-* Ghi cao đĩa trong giai đoạn Xuất
+* Tốc độ đọc đĩa cao trong giai đoạn Phân tích
+* Tốc độ ghi đĩa cao trong giai đoạn Xuất
 * SSD nhanh hơn đáng kể so với HDD
 
-**Mao performance:**
+**Mẹo tối ưu hiệu suất:**
 
-* Sử dụng SSD cho dự án thư mục khi có thể
-* Tránh mạng ổ đĩa cho dữ liệu lớn
-* Đảm bảo đĩa không hết dung lượng (ảnh hưởng đến tốc độ ghi)
+* Sử dụng SSD cho thư mục dự án khi có thể
+* Tránh sử dụng ổ đĩa mạng cho tập dữ liệu lớn
+* Đảm bảo ổ đĩa không gần đầy (ảnh hưởng đến tốc độ ghi)
 
 ***
 
-## Cố gắng phát triển trong quá trình xử lý
+## Phát hiện sự cố trong quá trình xử lý
 
-###Dấu cảnh báo
+### Dấu hiệu cảnh báo
 
-**Tiến trình được di chuyển (không thay đổi trong hơn 5 phút):**
+**Tiến trình bị đình trệ (không thay đổi trong hơn 5 phút):**
 
-* Kiểm tra nhật ký gỡ lỗi để tìm lỗi
-* Xác minh dung lượng trống của đĩa
-* Kiểm tra tác vụ trình quản lý để đảm bảo Chloros đang chạy
+* Kiểm tra Nhật ký gỡ lỗi để tìm lỗi
+* Kiểm tra dung lượng ổ đĩa còn trống
+* Kiểm tra Trình quản lý tác vụ (Task Manager) để đảm bảo quá trình &quot;Chloros
+
+&quot; đang chạy
 
 **Thông báo lỗi xuất hiện thường xuyên:**
 
-* Dừng xử lý và xem xét lỗi
-* Nguyên nhân thường gặp: ổ đĩa dung lượng lớn, tệp bị hỏng, vấn đề về bộ nhớ
-* Xem phần khắc phục sự cố bên dưới
+* Dừng xử lý và kiểm tra các lỗi
+* Nguyên nhân phổ biến: dung lượng đĩa, tệp bị hỏng, vấn đề về bộ nhớ
+* Xem phần Khắc phục sự cố bên dưới
 
 **Hệ thống không phản hồi:**
 
-* Bài hát chế độ Chloros+ sử dụng quá nhiều tài nguyên
-* Cân nhắc giảm bớt các tác vụ đồng thời hoặc nâng cấp phần cứng
-* Chế độ miễn phí ít tài nguyên hơn
+* Chế độ song song &quot;Chloros
 
-### Khi nào nên ngừng xử lý
++&quot; đang sử dụng quá nhiều tài nguyên
+* Cân nhắc giảm số tác vụ đồng thời hoặc nâng cấp phần cứng
+* Chế độ miễn phí (Free mode) tiêu tốn ít tài nguyên hơn
 
-Dừng quá trình xử lý nếu bạn thấy:
+### Khi nào nên dừng xử lý
 
-* ❌ Error "Đĩa đầy" hoặc "Không thể ghi tệp"
-* ❌ Lỗi làm hỏng vòng lặp ảnh của tệp lặp lại
-* ❌ Hệ thống được đóng băng hoàn toàn (không phản hồi)
-* ❌ Đã nhận được lỗi cài đặt đã được định cấu hình
-* ❌ Import bad image
+Dừng xử lý nếu bạn thấy:
 
-**Điểm dừng:**
+* ❌ Lỗi &quot;Đĩa đầy&quot; hoặc &quot;Không thể ghi tệp&quot;
+* ❌ Lỗi tệp hình ảnh bị hỏng lặp đi lặp lại
+* ❌ Hệ thống bị đóng băng hoàn toàn (không phản hồi)
+* ❌ Nhận ra đã cấu hình sai các thiết lập
+* ❌ Nhập nhầm hình ảnh
 
-1. Kích vào**Nút Dừng/Hủy** (thay thế nút Bắt đầu)
-2. Quá trình xử lý bị dừng, quá trình xử lý bị mất
-3. Khắc phục sự cố và khởi động lại từ đầu
+**Cách dừng:**
+
+1. Nhấp vào**nút Dừng** (thay thế cho nút Bắt đầu) — chỉ cần nhấp một lần là đủ
+2. Thanh tiến trình hiển thị &quot;Đang dừng...&quot; trong khi hình ảnh đang xử lý hoàn tất, sau đó quá trình kết thúc ở trạng thái đã dừng
+3. Các sản phẩm đã xuất vẫn còn trên đĩa; nhật ký ghi lại thông tin chi tiết về những gì đã hoàn thành với mã lỗi `[RUN-SUMMARY]`
+4. Khắc phục sự cố và khởi động lại — quá trình sẽ bắt đầu lại từ đầu
 
 ***
 
-##Khắc phục sự cố trong quá trình xử lý
+## Khắc phục sự cố trong quá trình xử lý
 
 ### Quá trình xử lý rất chậm
 
 **Nguyên nhân có thể:**
 
-* Tiêu điểm hình ảnh không được đánh dấu (quét tất cả hình ảnh)
-* HDD thay thế SSD
-* Hệ thống tài nguyên không đủ
-* Nhiều cấu hình được chỉ định
-* Truy cập mạng ổ đĩa
+* Hình ảnh mục tiêu chưa được đánh dấu (quét tất cả hình ảnh)
+* Sử dụng ổ cứng HDD thay vì ổ SSD
+* Tài nguyên hệ thống không đủ
+* Cấu hình quá nhiều chỉ mục
+* Truy cập ổ đĩa mạng
 
 **Giải pháp:**
 
-1. Nếu mới bắt đầu và đang trong giai đoạn Phát triển: Hủy, đánh dấu mục tiêu, khởi động lại
-2. Tương lai: Sử dụng SSD, giảm chỉ số, nâng cấp phần cứng
-3. Cân nhắc CLI để xử lý hàng loạt dữ liệu
+1. Nếu mới bắt đầu và đang ở giai đoạn Phát hiện: Dừng lại, đánh dấu mục tiêu, khởi động lại
+2. Đối với lần sau: Sử dụng SSD, giảm số lượng chỉ mục, nâng cấp phần cứng
+3. Xem xét sử dụngCLI
 
-### Cảnh báo "Dung lượng ổ đĩa"
+để xử lý hàng loạt tập dữ liệu lớn
 
-**Giải pháp:**
-
-1. Giải thích dung lượng ổ đĩa ngay lập tức
-2. Chuyển dự án sang ổ đĩa có nhiều không gian hơn
-3. Giảm số lượng chỉ cần xuất
-4. Sử dụng định dạng JPG thay vì TIFF (tệp nhỏ hơn)
-
-### Thông báo "Tep bị hỏng" thường xuyên
+### Cảnh báo &quot;Dung lượng đĩa&quot;
 
 **Giải pháp:**
 
-1. Sao chép lại hình ảnh từ thẻ SD để đảm bảo an toàn
-2. Kiểm tra thẻ SD lỗi
-3. Xóa các tập tin bị hỏng khỏi dự án
-4. Tiếp tục xử lý lại các ảnh còn lại
+1. Giải phóng dung lượng đĩa ngay lập tức
+2. Chuyển dự án sang ổ đĩa có dung lượng lớn hơn
+3. Giảm số lượng chỉ mục cần xuất
+4. Tắt các sản phẩm xuất LATTICE không cần thiết (Cài đặt Dự án → Xử lý)
+5. Sử dụng định dạng JPG thay vì &quot;TIFF
 
-### System too hot / Giảm ga
+&quot; (tệp nhỏ hơn)
+
+### Thông báo &quot;Tệp bị hỏng&quot; xuất hiện thường xuyên
 
 **Giải pháp:**
 
-1. Đảm bảo thông gió đầy đủ
-2. Dọn dẹp bụi bẩn trên máy tính
-3. Giảm tải xử lý (sử dụng chế độ Miễn phí thay vì Chloros+)
-4. Xử lý khoảnh mát mẻ trong ngày
+1. Sao chép lại hình ảnh từ thẻ SD để đảm bảo tính toàn vẹn
+2. Kiểm tra lỗi trên thẻ SD
+3. Loại bỏ các tệp bị hỏng khỏi dự án
+4. Tiếp tục xử lý các hình ảnh còn lại
+
+### Hệ thống quá nhiệt / Giảm hiệu suất
+
+**Giải pháp:**
+
+1. Đảm bảo thông gió đủ
+2. Làm sạch bụi khỏi các khe thông gió của máy tính
+3. Giảm tải xử lý (sử dụng chế độ &quot;Free&quot; thay vì &quot;Chloros
+
+&quot;)
+4. Xử lý vào những thời điểm mát mẻ trong ngày
 
 ***
 
-## Đang xử lý hoàn chỉnh thông báo
+## Thông báo hoàn tất xử lý
 
 Khi quá trình xử lý kết thúc:
 
-* Thanh tiến độ đạt 100%
-* **Thông báo "Đang xử lý hoàn tất"** xuất hiện trong lỗi Nhật ký gỡ lỗi
-* Nút bắt đầu được bật lại
-* Tất cả các đầu tập tin đều nằm trong thư mục của máy ảnh mẫu
+* Thanh tiến trình đạt 100%
+* Các dòng `[RUN-SUMMARY]` xuất hiện trong Nhật ký gỡ lỗi kèm theo số liệu cuối cùng
+* Nút Bắt đầu lại có thể sử dụng được
+* Tất cả tệp đầu ra đều nằm trong thư mục đầu ra theo từng camera của dự án: `<project>/<camera>/<format>/<Product>_Images/`
 
 ***
 
@@ -370,9 +418,9 @@ Khi quá trình xử lý kết thúc:
 
 Sau khi quá trình xử lý hoàn tất:
 
-1. **Xem lại kết quả** - Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
-2. **Kiểm tra đầu thư mục** - Xác minh tất cả các tệp được xuất chính xác
-3. **Xem lại nhật ký gỡ lỗi** - Kiểm tra mọi cảnh báo hoặc lỗi
-4. **Xem trước hình ảnh đã được xử lý** - Use Image Viewer hoặc phần mềm bên ngoài
+1. **Kiểm tra kết quả** - Xem [Hoàn tất quá trình xử lý](finishing-the-processing.md)
+2. **Kiểm tra thư mục đầu ra** - Xác minh tất cả các tệp đã được xuất chính xác
+3. **Xem lại nhật ký gỡ lỗi** - Kiểm tra xem có cảnh báo hoặc lỗi nào không
+4. **Xem trước hình ảnh đã xử lý** - Sử dụng Trình xem hình ảnh hoặc phần mềm bên ngoài
 
-Để biết thông tin về cách xem xét và sử dụng kết quả đã xử lý của bạn, hãy xem [Hoàn tất quá trình xử lý](finishing-the-processing.md).
+Để biết thông tin về cách xem lại và sử dụng kết quả đã xử lý, hãy xem [Hoàn tất quá trình xử lý](finishing-the-processing.md).

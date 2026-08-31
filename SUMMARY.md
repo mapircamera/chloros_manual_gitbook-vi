@@ -1,15 +1,16 @@
 # Mục lục
 
 * [Bắt đầu](README.md)
+* [Sử dụng Chloros với Trợ lý AI](ai-assistants.md)
 * [GUI: Điều hướng](navigation.md)
-* [GUI : Dự án](projects.md)
-* [CLI : Dòng lệnh](CLI.md)
+* [Giao diện người dùng (GUI): Dự án](projects.md)
+* [CLI: Dòng lệnh](CLI.md)
 * [API: Python SDK](api-python-sdk.md)
-* [Hỗ trợ máy ảnh](supported-cameras.md)
-* [Đầu ra hình ảnh định dạng](output-image-formats.md)
+* [Các máy ảnh được hỗ trợ](supported-cameras.md)
+* [Định dạng hình ảnh đầu ra](output-image-formats.md)
 * [Chloros+ Đăng nhập](chloros+-login.md)
-* [Chỉnh sửa tiêu điểm](calibration-targets.md)
-* [Hỗ trợ ngôn ngữ](supported-languages.md)
+* [Mục tiêu hiệu chuẩn](calibration-targets.md)
+* [Ngôn ngữ được hỗ trợ](supported-languages.md)
 * [Tải xuống](download.md)
 * [Câu hỏi thường gặp](faq.md)
 
@@ -17,31 +18,55 @@
 
 * [Điều chỉnh cài đặt dự án](processing-images-gui/adjusting-project-settings.md)
 * [Thêm tệp vào dự án](processing-images-gui/adding-files-to-a-project.md)
-* [Chọn tiêu điểm hình ảnh](processing-images-gui/choosing-target-images.md)
+* [Chọn hình ảnh đích](processing-images-gui/choosing-target-images.md)
 * [Bắt đầu xử lý](processing-images-gui/starting-the-processing.md)
-* [Giám sát trong quá trình xử lý](processing-images-gui/monitoring-the-processing.md)
+* [Theo dõi quá trình xử lý](processing-images-gui/monitoring-the-processing.md)
 * [Hoàn tất quá trình xử lý](processing-images-gui/finishing-the-processing.md)
 
-## THIẾT LẬP DỰ ÁN
+## CÀI ĐẶT DỰ ÁN
 
 * [Cài đặt dự án](project-settings/project-settings.md)
-* [Đa phổ chỉ mục công thức](project-settings/multispectral-index-formulas.md)
+* [Công thức chỉ số đa phổ](project-settings/multispectral-index-formulas.md)
 
-## Trình xem ảnh (GUI)
+## TRÌNH XEM HÌNH ẢNH (GUI)
 
-* [Dưới hình ảnh](image-viewer-gui/image-grid.md)
-* [Mở toàn màn hình hình ảnh] (image-viewer-gui/opening-an-image-full-screen.md)
-* [Lớp hình ảnh](image-viewer-gui/image-layers.md)
-* [Hộp cát chỉ mục/LUT](image-viewer-gui/index-lut-sandbox.md)
-* [Điểm đánh dấu bản đồ](image-viewer-gui/map-markers.md)
+* [Lưới hình ảnh](image-viewer-gui/image-grid.md)
+* [Mở hình ảnh toàn màn hình](image-viewer-gui/opening-an-image-full-screen.md)
+* [Các lớp hình ảnh](image-viewer-gui/image-layers.md)
+* [Khu vực thử nghiệm chỉ số/LUT](image-viewer-gui/index-lut-sandbox.md)
+* [Điểm đánh dấu trên bản đồ](image-viewer-gui/map-markers.md)
 
-##Linux & Điện toán biên
+## Camera LATTICE
+
+* [Camera LATTICE](lattice/README.md)
+* [Kết nối camera](lattice/connecting.md)
+* [Cài đặt camera](lattice/camera-settings.md)
+* [Cài đặt và chế độ chụp](lattice/capture.md)
+* [Mảng nhiều camera](lattice/arrays.md)
+* [Camera đơn &amp; Chỉ số thực vật](lattice/mono-indices.md)
+
+## Cảm biến ánh sáng DAQ
+
+* [Cảm biến ánh sáng DAQ](daq/README.md)
+* [Tab DAQ trong Chloros](daq/gui.md)
+* [Hướng dẫn nhanh về CLI (pool-\*)](daq/cli-quick-start.md)
+* [Hồ sơ Cap &amp; Phạm vi hiệu chuẩn](daq/caps-and-range.md)
+* [Ghi dữ liệu &amp; định dạng .daq](daq/recording.md)
+* [Mạng DAQ-E &amp; đồng bộ thời gian](daq/ethernet-ptp.md)
+* [Quy trình làm việc với độ phản xạ](daq/reflectance.md)
+
+## Linux &amp; Tính toán biên
 
 * [Tổng quan về Linux](linux/linux-overview.md)
 * [Cài đặt Linux](linux/linux-installation.md)
-* [ Hướng dẫn NVIDIA Jetson](linux/nvidia-jetson-guide.md)
+* [Hướng dẫn về NVIDIA Jetson](linux/nvidia-jetson-guide.md)
 
-## Xử lý kiến trúc
+## Kiến trúc xử lý
 
-* [Điều chỉnh tính toán động](processing-architecture/dynamic-compute-adaptation.md)
-* [Xử lý đường ống](processing-architecture/processing-pipeline.md)
+* [Thích ứng tính toán động](processing-architecture/dynamic-compute-adaptation.md)
+* [Quy trình xử lý](processing-architecture/processing-pipeline.md)
+
+## Tài liệu tham khảo (CLI &amp; SDK)
+
+* [Tài liệu tham khảo Chloros CLI](reference/cli-reference.md)
+* [Tài liệu tham khảo Chloros Python SDK](reference/sdk-reference.md)

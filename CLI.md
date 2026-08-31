@@ -1,1209 +1,344 @@
-#CLI : Dòng lệnh
+# CLI : Dòng lệnh
+
+> **Tài liệu tham khảo đầy đủ:**[CLI Reference](reference/cli-reference.md) ghi chép**mọi tham số của mọi lệnh con** và được tối ưu hóa cho các trợ lý AI — hãy dán liên kết URL vào trợ lý của bạn và yêu cầu một lệnh hoạt động: `https://mapir.gitbook.io/chloros/reference/cli-reference`
+>
+> **Mẹo cho các công cụ AI:** bất kỳ trang nào trong tài liệu hướng dẫn này đều có sẵn dưới dạng Markdown thô bằng cách thêm `.md` vào URL của trang đó (ví dụ: `https://mapir.gitbook.io/chloros/reference/cli-reference.md`), và `https://mapir.gitbook.io/chloros/llms.txt` sẽ lập chỉ mục toàn bộ tài liệu hướng dẫn để các mô hình ngôn ngữ lớn (LLM) có thể sử dụng.
 
 <figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
+<!-- SCREENSHOT-UPDATE: banner shows CLI 1.1.0; reshoot the CLI welcome/banner output on the 1.2.0 build so the version line reads "Chloros CLI 1.2.0" -->
 
-**Chloros CLI** cung cấp khả năng truy cập dòng lệnh mạnh mẽ vào công cụ xử lý hình ảnh Chloros, cho phép tự động hóa, viết kịch bản và vận hành không đầu cho quy trình xử lý hình ảnh của bạn.
 
-### Các tính năng chính
+##CLI
+là gì
 
-* 🚀 **Tự động hóa** - Xử lý hàng loạt tập lệnh của nhiều bộ dữ liệu
-* 🔗 **Tích hợp** - Nhúng vào quy trình công việc và quy trình hiện có
-* 💻 **Thao tác không đầu** - Chạy không cần GUI
-* 🌍 **Đa ngôn ngữ** - Hỗ trợ 38 ngôn ngữ
-* ⚡ **Xử lý song song** - [Thích ứng điện toán động](processing-architecture/dynamic-compute-adaptation.md) tự động tối ưu hóa cho phần cứng của bạn
+`chloros-cli` là giao diện dòng lệnh (CLI) cho cùng một bộ xử lý mà ứng dụng máy tính để bànChloros
+sử dụng. Đây là một client mỏngHTTP
+chạy trên backendChloros
+(một máy chủ cục bộ trên `127.0.0.1:5000`) — hầu hết các lệnh sẽ tự động khởi động backend, do đó một skript chỉ cần một lệnh gọi `chloros-cli process …` duy nhất.
 
-### Yêu cầu
-
-| Yêu cầu | Chi tiết |
-| -------------------- | ------------------------------------------------------------------- |
-| **Hệ điều hành** | Windows 10/11 (64-bit), Linux x86_64 (AMD64), Linux arm64 (NVIDIA Jetson JetPack 6) |
-| **Giấy phép** | Chloros+ ([yêu cầu gói trả phí](https://cloud.mapir.camera/pricing)) |
-| **Bộ nhớ** | RAM tối thiểu 8GB (khuyến nghị 16GB) |
-| **Internet** | Cần thiết để kích hoạt giấy phép |
-| **Dung lượng đĩa** | Thay đổi theo quy mô dự án |
-
-{% hint style="warning" %}
-**Yêu cầu về giấy phép**: CLI yêu cầu đăng ký Chloros+ trả phí. Các gói tiêu chuẩn (miễn phí) không có quyền truy cập CLI. Truy cập [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) để nâng cấp.
-{% endhint %}
-
-## Bắt đầu nhanh
-
-### Cài đặt
-
-#### Windows
-
-CLI được tự động đi kèm với trình cài đặt Chloros:
-
-1. Tải xuống và chạy **Trình cài đặt Chloros.exe**
-
-2. Hoàn tất trình hướng dẫn cài đặt
-3. CLI được cài đặt vào: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
-
-{% hint style="success" %}
-Trình cài đặt tự động thêm `chloros-cli` vào PATH hệ thống của bạn. Khởi động lại thiết bị đầu cuối của bạn sau khi cài đặt.
-{% endhint %}
-
-#### Linux
-
-Cài đặt gói `.deb` cho kiến ​​trúc của bạn:
+Ứng dụng này chạy trên **Windows
+10/11 (x64)**và**Linux
+(x86_64, và NVIDIA Jetson arm64 trên JetPack 6)**, trong bất kỳ terminal nào, không cần giao diện đồ họa (GUI). Kiểm tra cài đặt của bạn bằng lệnh:
 
 ```bash
-# Linux amd64
+chloros-cli --version    # prints "Chloros CLI 1.2.0"
+```
+
+Tổng quan về các nhóm lệnh:
+
+* **Xử lý &amp; tài khoản** — `process`, `login`, `logout`, `status`, `export-status`, `language` (38 ngôn ngữ — xem [Các ngôn ngữ được hỗ trợ](supported-languages.md)), `set-project-folder` / `get-project-folder` / `reset-project-folder`, `selftest`, `update` (chỉ dành choLinux
+/Jetson)
+* **Phần cứng trực tiếp** — `lattice` (điều khiển camera LATTICE, hơn 45 lệnh con), `daq pool-*` (cảm biến ánh sáng DAQ), `time-sync` (PTP)
+* **Tự động hóa** — `project` (chạy dự ánChloros
+đã lưu ở chế độ không giao diện người dùng, bao gồm các công thức ghi lại YAML)
+
+Các tùy chọn toàn cục cần biết: `--port N` (cổng backend, mặc định là `5000`), `-v/--verbose`, `--restart` (buộc khởi động lại backend), `--backend-exe PATH`. Xem [CLI
+Tài liệu tham khảo](reference/cli-reference.md) để xem danh sách đầy đủ.
+
+***
+
+## Cài đặt
+
+CLI
+**được tích hợp sẵn trong trình cài đặtChloros** trên mọi nền tảng — không có bản tải xuống riêng biệt tạiCLI
+. Tải trình cài đặt từ trang [Tải xuống](download.md).
+
+###Windows
+
+
+Trình cài đặt sẽ đặt thư mụcCLI
+tại:
+
+```
+
+C:\Program Files\Chloros\cli\chloros-cli.exe
+```
+
+và thêm thư mục đó vào hệ thống của bạn `PATH` — **mở một cửa sổ terminal mới**sau khi cài đặt để hệ thống nhận diện được phiên bản cập nhật `PATH`. Trình cài đặt cũng đặt các tập lệnh khởi chạy (`Chloros_CLI.bat` / `Chloros_CLI.ps1`) trong thư mục gốc cài đặt cùng với một**Chloros
+CLI
+** trong menu Bắt đầu, mỗi phím tắt sẽ mở một cửa sổ terminal với `chloros-cli` sẵn sàng để sử dụng.
+
+###Linux
+
+
+Cài đặt phiên bản `.deb` phù hợp với kiến trúc hệ thống của bạn:
+
+```bash
+# Linux x86_64
 sudo dpkg -i chloros-amd64.deb
 
-# Linux arm64 (NVIDIA Jetson, JetPack 6)
+# NVIDIA Jetson (arm64, JetPack 6)
 sudo dpkg -i chloros-arm64-jp6.deb
 ```
 
-Để biết cách thiết lập Linux chi tiết, hãy xem [Cài đặt Linux](linux/linux-installation.md).
+Việc này sẽ cài đặt `chloros-cli` đến `/usr/bin/chloros-cli` (hiện đã ở phiên bản `PATH`) và phần backend lên phiên bản `/usr/lib/chloros/chloros-backend`, cùng với môi trường chạy ArenaSDK
+cần thiết cho camera LATTICE. Xem [Linux
+Cài đặt](linux/linux-installation.md) để biết chi tiết.
 
-### Thiết lập lần đầu
+### Xác minh
 
-Trước khi sử dụng CLI, hãy kích hoạt giấy phép Chloros+ của bạn:
+```bash
+chloros-cli --version    # "Chloros CLI 1.2.0"
+chloros-cli selftest     # 7-step diagnostic: backend, API, GPU/CUDA, denoiser models
+chloros-cli status       # license tier + logged-in user
+```
 
-**Windows:**
+***
 
-```powershell
-# Login with your Chloros+ account
-chloros-cli login user@example.com 'your_password'
+## Đăng nhập &amp; Giấy phép
 
-# Check license status
+CLI
+(vàPython
+SDK
+) yêu cầu **gói trả phíChloros
++**— bất kỳ gói trả phí nào cũng có tính năng này; gói miễn phí thì không. Giới hạn này được áp dụng**từ phía máy chủ** bởi hệ thống backend, không phải bởi tệp nhị phânCLI
+: một cuộc gọi khi chưa đăng nhập sẽ bị từ chối với mã lỗi `401 AUTH_REQUIRED`, và yêu cầu từ tài khoản đã đăng nhập trên gói miễn phí sẽ bị từ chối với mã lỗi `403 PLAN_UPGRADE_REQUIRED`, bất kể yêu cầu đó đến từ `chloros-cli`,SDK
+hay một clientHTTP
+tự phát triển. Nâng cấp tại [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing).
+
+Đăng nhập **một lần trên mỗi máy**:
+
+```bash
+chloros-cli login user@example.com 'YourPassword'
 chloros-cli status
-
-# Process your first project
-chloros-cli process "C:\Images\Dataset001"
 ```
 
-**Linux:**
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<!-- SCREENSHOT-UPDATE: login success output predates 1.2.0; reshoot `chloros-cli login` followed by `chloros-cli status` on the 1.2.0 build showing the license tier line -->
 
-```bash
-# Login with your Chloros+ account
-chloros-cli login user@example.com 'your_password'
-
-# Check license status
-chloros-cli status
-
-# Process your first project
-chloros-cli process ~/images/dataset001
-```
-
-### Cách sử dụng cơ bản
-
-Xử lý thư mục có cài đặt mặc định:
-
-**Windows:**
-
-```powershell
-chloros-cli process "C:\Images\Dataset001"
-```
-
-**Linux:**
-
-```bash
-chloros-cli process ~/images/dataset001
-```
-
-***
-
-## Tham chiếu lệnh
-
-### Cú pháp chung
-
-```
-chloros-cli [global-options] <command> [command-options]
-```
-
-***
-
-## Lệnh
-
-### `process` - Xử lý hình ảnh
-
-Xử lý hình ảnh trong một thư mục có hiệu chuẩn.
-
-**Cú pháp:**
-
-```bash
-chloros-cli process <input-folder> [options]
-```
-
-**Ví dụ:**
-
-```bash
-# Windows
-chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
-
-# Linux
-chloros-cli process ~/datasets/survey_001 --vignette --reflectance
-```
-
-#### Tùy chọn lệnh xử lý
-
-| Tùy chọn | Loại | Mặc định | Mô tả |
-| --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<input-folder>` | Đường dẫn | _Bắt buộc_ | Thư mục chứa ảnh đa phổ RAW/JPG |
-| `-o, --output` | Đường dẫn | Tương tự như đầu vào | Thư mục đầu ra cho hình ảnh được xử lý |
-| `-n, --project-name` | Chuỗi | Được tạo tự động | Tên dự án tùy chỉnh |
-| `--vignette` | Cờ | Đã bật | Bật tính năng chỉnh sửa họa tiết |
-| `--no-vignette` | Cờ | - | Tắt tính năng chỉnh sửa họa tiết |
-| `--reflectance` | Cờ | Đã bật | Kích hoạt hiệu chuẩn phản xạ |
-| `--no-reflectance` | Cờ | - | Vô hiệu hóa hiệu chuẩn phản xạ |
-| `--ppk` | Cờ | Vô hiệu hóa | Áp dụng hiệu chỉnh PPK từ dữ liệu cảm biến ánh sáng .daq |
-| `--format` | Lựa chọn | TIFF (16-bit) | Định dạng đầu ra: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
-| `--min-target-size` | Số nguyên | Tự động | Kích thước mục tiêu tối thiểu tính bằng pixel để phát hiện bảng hiệu chuẩn |
-| `--target-clustering` | Số nguyên | Tự động | Ngưỡng phân cụm mục tiêu (0-100) |
-| `--debayer` | Lựa chọn | `standard` | Phương pháp gỡ lỗi: `standard` hoặc `texture-aware` (chỉ Chloros+) |
-| `--target`, `--targets` | Cờ | Vô hiệu hóa | Chỉ tìm kiếm các mục tiêu hiệu chuẩn trong thư mục con "target" hoặc "target" (tăng tốc độ xử lý) |
-| `--indices` | Danh sách | Không có | Chỉ số thực vật cần tính toán (ví dụ: `--indices NDVI NDRE GNDVI`) |
-| `--exposure-pin-1` | Chuỗi | Không có | Khóa phơi sáng cho kiểu máy ảnh (Chân 1) |
-| `--exposure-pin-2` | Chuỗi | Không có | Khóa phơi sáng cho kiểu máy ảnh (Chân 2) |
-| `--recal-interval` | Số nguyên | Tự động | Khoảng thời gian hiệu chuẩn lại tính bằng giây |
-| `--timezone-offset` | Số nguyên | 0 | Bù trừ múi giờ theo giờ |
-
-***
-
-### `login` - Xác thực tài khoản
-
-Đăng nhập bằng thông tin đăng nhập Chloros+ của bạn để kích hoạt xử lý CLI.
-
-**Cú pháp:**
-
-```bash
-chloros-cli login <email> <password>
-```
-
-**Ví dụ:**
-
-```bash
-chloros-cli login user@example.com 'MyP@ssw0rd123'
-```
 
 {% hint style="warning" %}
-**Ký tự đặc biệt**: Sử dụng dấu ngoặc đơn xung quanh mật khẩu chứa các ký tự như `$`, `!` hoặc dấu cách.
+**Mật khẩu có ký tự đặc biệt**(`$`, `!`, spaces): wrap the password in**single quotes**, as shown above. In PowerShell double quotes, `$$` bị lỗi do vỏ lệnh (CLI
+) phát hiện lỗi này khi gặp mã trạng thái 401 và tự động thử lại, nhưng việc sử dụng dấu nháy đơn sẽ tránh được vấn đề này hoàn toàn).
 {% endhint %}
 
-**Đầu ra:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
+Phiên làm việc được lưu trong bộ nhớ đệm tại `~/.chloros/user_session.json` và vẫn hoạt động ngoại tuyến trong thời gian ân hạn của gói cước (30 ngày đối với gói hàng tháng, đến khi hết hạn đối với gói hàng năm). `chloros-cli status` vẫn hoạt động ngay cả khi không có gói trả phí, do đó lý do từ chối luôn hiển thị.
 
-### `logout` - Xóa thông tin xác thực
+{% hint style="danger" %}
+**Đang lên lịch công việc không cần giao diện người dùng? Vui lòng đăng nhập trước.**Các lệnh khởi tạo nền (`process`, `status`, `export-status`, …) được chạy**không có phiên làm việc được lưu trong bộ nhớ đệm**sẽ không báo lỗi ngay lập tức — nó sẽ chuyển sang chế độ nhắc lệnh tương tác `Email:` / `Password:` trên stdin. Do đó, một tác vụ cron hoặc bước CI chạy tự động sẽ**bị treo khi chờ nhập liệu**. Hãy chạy `chloros-cli login EMAIL 'PASSWORD'` một lần trên máy trước khi lên lịch bất kỳ tác vụ nào.
+{% endhint %}
 
-Xóa thông tin đăng nhập được lưu trữ và đăng xuất khỏi tài khoản của bạn.
+***
 
-**Cú pháp:**
+## Lần Chạy Xử Lý Đầu Tiên
+
+Chỉ định `process` vào một thư mục chứa các tệp ghi lại — nó sẽ tự động phát hiệnSurvey3
+(`.raw` + `.jpg`), LATTICE (`.tif`/`.tiff`), `.dng`, hoặc kết hợp cả hai:
 
 ```bash
-chloros-cli logout
+chloros-cli process "C:\Images\flight_001"          # Windows
+chloros-cli process ~/images/flight_001              # Linux
 ```
 
-**Ví dụ:**
+Dòng tiến trình được hiển thị trực tiếp theo từng luồng xử lý (Phát hiện, Phân tích, Xử lý, Xuất), và một lần chạy thành công kết thúc bằng việc báo cáo số lượng sản phẩm hình ảnh đã được ghi (`Image products written: N`).
 
-```bash
-chloros-cli logout
+
+
+<!-- SCREENSHOT-NEEDED: terminal capture of a `chloros-cli process` run on a LATTICE captures folder completing successfully — per-thread progress lines visible and the final "Image products written: N" summary line -->
+### Vị trí lưu trữ đầu ra
+
+`process` ghi vào một **thư mục dự án**, không phải vào thư mục đầu vào của bạn:
+
+* Nếu không có `-o`: dự án sẽ được tạo trong thư mục dự án mặc định của bạn (được chia sẻ với giao diện người dùng; quản lý nó bằng `get-project-folder` / `set-project-folder`, tùy chọn dự phòng `~/Chloros Projects`), được đặt tên theo `-n/--project-name` hoặc dấu thời gian (`YYYYMMDD_HHMMSS`) khi không chỉ định.
+* Với `-o PATH`: thư mục đó **chính là** thư mục dự án. Nếu thư mục đó đã chứa một tệp `project.json`, một tệp có hậu tố `_1`/`_2`… sẽ được tạo ra thay vì ghi đè lên tệp cũ.
+
+Bên trong dự án, các sản phẩm được nhóm **theo máy ảnh, sau đó theo định dạng tệp**:
+
+```
+<project>/
+├── project.json
+├── calibration_data.json
+└── LATT-M3M-L41-F550/                  # one folder per camera model+lens+filter
+    ├── tiff16/
+    │   ├── Reflectance_Calibrated_Images/
+    │   ├── Debayered_Images/
+    │   ├── Preview_Images/
+    │   └── NDVI_Index_Images/           # one folder per requested index
+    └── tiff32/
+        └── Radiance_Images/             # float32 radiance always lands here
 ```
 
-**Đầu ra:**
-
-```
-✓ Logout successful
-ℹ Credentials cleared from cache
-```
+Thư mục máy ảnh là `LATT-<sensor>-<lens>-F<filter>` dành cho LATTICE (phù hợp với thông tin EXIF của ảnh chụp `Model`) và `<model>_<filter>` (ví dụ: `Survey3N_RGN`) dành choSurvey3
+. Thư mục định dạng tuân theo cấu trúc `--format`: `tiff16`, `tiff8`, `png8`, `jpg8` hoặc `tiff32` cho `TIFF (32-bit, Percent)`.
 
 {% hint style="info" %}
-**Người dùng SDK**: Python SDK cũng cung cấp phương thức `logout()` có lập trình để xóa thông tin xác thực trong tập lệnh Python. Xem [tài liệu Python SDK](api-python-sdk.md#logout) để biết chi tiết.
+**Mọi sản phẩm được xuất ra đều giữ nguyên tên tệp NGUỒN.**Một tệp xuất radiance từ `capture_..._raw.tif` vẫn được đặt tên là `capture_..._raw.tif` — chỉ là nó nằm trong thư mục `tiff32/Radiance_Images/`.**Thư mục xác định sản phẩm, không phải tên tệp**, vì vậy hãy sử dụng cú pháp glob cho thư mục, không phải cho phần mở rộng `*radiance*`.
 {% endhint %}
 
-***
+### Các tùy chọn bạn sẽ thực sự sử dụng
 
-### `status` - Kiểm tra trạng thái giấy phép
+| Cờ | Mặc định | Chức năng |
+| --- | --- | --- |
+| `-o, --output PATH` | thư mục dự án mặc định | Vị trí thư mục dự án (xem ở trên). |
+| `-n, --project-name NAME` | dấu thời gian | Tên dự án. |
+| `--format FMT` | `TIFF (16-bit)` | Một trong các giá trị sau: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)`. |
+| `--indices NAME [NAME ...]` | không có | Các chỉ số thảm thực vật cần xuất (xem [Chỉ số thảm thực vật](#vegetation-indices)). |
+| `--debayer {standard,texture-aware}` | `standard` | `texture-aware` = thuật toán khử hiệu ứng Bayer bằng mạng nơ-ron, chậm hơn, chất lượng cao nhất (hệ điều hànhChloros
+trở lên, GPU NVIDIA). |
+| `--vignette / --no-vignette` | bật | Chỉnh sửa hiệu ứng tối góc. |
+| `--reflectance / --no-reflectance` | bật | Hiệu chỉnh độ phản xạ; đối với LATTICE, đây cũng là công tắc bật/tắt sản phẩm độ phản xạ. |
+| `--input-level {auto,raw,debayered,processed}` | `auto` | Buộc điểm vào của chuỗi xử lý cho các tệp TIFF của LATTICE. |
 
-Hiển thị giấy phép hiện tại và trạng thái xác thực.
-
-**Cú pháp:**
-
-```bash
-chloros-cli status
-```
-
-**Ví dụ:**
-
-```bash
-chloros-cli status
-```
-
-**Đầu ra:**
-
-```
-╔══════════════════════════════════════╗
-║     LICENSE & ACCOUNT INFORMATION    ║
-╚══════════════════════════════════════╝
-
-📧 Email: user@example.com
-📋 Plan: Chloros+ Professional
-🔓 API/CLI Access: Enabled
-✓ Status: Active
-```
+Đối với các tùy chọn khác — tinh chỉnh phát hiện mục tiêu, PPK, điểm phơi sáng, cờ căn chỉnh mảng — hãy tham khảo [phần `process` trong Tài liệu tham khảoCLI
+](reference/cli-reference.md).
 
 ***
 
-### `export-status` - Kiểm tra tiến trình xuất
+## Chọn nội dung cần xuất (Sản phẩm LATTICE)
 
-Theo dõi tiến trình xuất Thread 4 trong hoặc sau khi xử lý.
+Quy trình xử lý LATTICE được phân tán sang **tất cả các sản phẩm tương ứng trong một lần chạy**. Bốn công tắc cho từng sản phẩm đều**được bật theo mặc định**; sử dụng biểu mẫu `--no-` để tắt một công tắc:
 
-**Cú pháp:**
+| Công tắc | Sản phẩm |
+| --- | --- |
+| `--debayered` | Demosaic tuyến tính → `Debayered_Images/` |
+| `--preview` | Xem trước hiển thị (cân bằng trắng + gamma; kéo dãn màu giả cho đa phổ) → `Preview_Images/` |
+| `--radiance` | Độ sáng (radiance) dạng float32, W/m²/sr/nm → `Radiance_Images/` (luôn là `tiff32/`) |
+| `--reflectance` | uint16 độ phản xạ, tương thích với Pix4D → `Reflectance_Calibrated_Images/` |
 
-```bash
-chloros-cli export-status
-```
-
-**Ví dụ:**
-
-```bash
-chloros-cli export-status
-```
-
-**Trường hợp sử dụng:** Gọi lệnh này trong khi quá trình xử lý đang chạy để kiểm tra tiến trình xuất.***
-
-### `language` - Quản lý ngôn ngữ giao diện
-
-Xem hoặc thay đổi ngôn ngữ giao diện CLI.
-
-**Cú pháp:**
+RGB
+các camera chính chỉ phát ra dữ liệu đã loại bỏ hiệu ứng Bayer + bản xem trước — độ rạng rỡ/độ phản xạ theo từng dải tần không có ý nghĩa đối với cảm biến băng thông rộng, do đó các tùy chọn này không có tác dụng đối với chúng.Survey3
+`.raw` bỏ qua các tùy chọn này và tuân theo đường dẫn phản xạ/mục tiêu tiêu chuẩn.
 
 ```bash
-# Show current language
-chloros-cli language
-
-# List all available languages
-chloros-cli language --list
-
-# Set a specific language
-chloros-cli language <language-code>
+# Radiance only — no DAQ downwelling needed
+chloros-cli process ~/captures/lattice_flight --no-debayered --no-preview --no-reflectance
 ```
 
-**Ví dụ:**
-
-```bash
-# View current language
-chloros-cli language
-
-# List all 38 supported languages
-chloros-cli language --list
-
-# Change to Spanish
-chloros-cli language es
-
-# Change to Japanese
-chloros-cli language ja
-```
-
-#### Ngôn ngữ được hỗ trợ (Tổng cộng 38)
-
-| Mã | Ngôn ngữ | Tên bản địa |
-| ------- | --------------------- | ---------------- |
-| `en` | Tiếng Anh | Tiếng Anh |
-| `es` | Tây Ban Nha | Tiếng Tây Ban Nha |
-| `pt` | Tiếng Bồ Đào Nha | Bồ Đào Nha |
-| `fr` | Tiếng Pháp | Tiếng Pháp |
-| `de` | Tiếng Đức | tiếng Đức |
-| `it` | Ý | Tiếng Ý |
-| `ja` | Tiếng Nhật | 日本語 |
-| `ko` | Tiếng Hàn | 한국어 |
-| `zh` | Tiếng Trung (Giản thể) | 简体中文 |
-| `zh-TW` | Tiếng Trung (Phồn Thể) | 繁體中文 |
-| `ru` | Tiếng Nga | Русский |
-| `nl` | Tiếng Hà Lan | Hà Lan |
-| `ar` | Tiếng Ả Rập | العربية |
-| `pl` | Tiếng Ba Lan | Tiếng Ba Lan |
-| `tr` | Thổ Nhĩ Kỳ | Türkçe |
-| `hi` | Tiếng Hindi | हिंदी |
-| `id` | Tiếng Indonesia | Tiếng Bahasa Indonesia |
-| `vi` | Tiếng Việt | Tiếng Việt |
-| `th` | Tiếng Thái | ไทย |
-| `sv` | Thụy Điển | Svenska |
-| `da` | Tiếng Đan Mạch | Đan Mạch |
-| `no` | Na Uy | Norsk |
-| `fi` | Phần Lan | Suomi |
-| `el` | Tiếng Hy Lạp | Ελληνικά |
-| `cs` | Tiếng Séc | Čeština |
-| `hu` | Tiếng Hungary | Tiếng Magyar |
-| `ro` | Tiếng Rumani | Română |
-| `uk` | Tiếng Ukraina | Українська |
-| `pt-BR` | Tiếng Bồ Đào Nha Brazil | Bồ Đào Nha Brasileiro |
-| `zh-HK` | Tiếng Quảng Đông | 粵語 |
-| `ms` | Mã Lai | Tiếng Bahasa Melayu |
-| `sk` | Tiếng Slovak | Tiếng Slovenia |
-| `bg` | Tiếng Bungari | Български |
-| `hr` | Tiếng Croatia | Hrvatski |
-| `lt` | Tiếng Litva | Liệtuvių |
-| `lv` | Tiếng Latvia | Latviešu |
-| `et` | Tiếng Estonia | Eesti |
-| `sl` | Tiếng Slovenia | Tiếng Sloveniaščina |
-
-{% hint style="success" %}
-**Tính kiên trì tự động**: Tùy chọn ngôn ngữ của bạn được lưu vào `~/.chloros/cli_language.json` và tồn tại trong tất cả các phiên.
-{% endhint %}
-
-***
-
-### `set-project-folder` - Đặt thư mục dự án mặc định
-
-Thay đổi vị trí thư mục dự án mặc định (được chia sẻ với GUI trên Windows).
-
-**Cú pháp:**
-
-```bash
-chloros-cli set-project-folder <folder-path>
-```
-
-**Ví dụ:**
-
-```bash
-# Windows
-chloros-cli set-project-folder "C:\Projects\2025"
-
-# Linux
-chloros-cli set-project-folder ~/projects/2025
-```
-
-***
-
-### `get-project-folder` - Hiển thị thư mục dự án
-
-Hiển thị vị trí thư mục dự án mặc định hiện tại.
-
-**Cú pháp:**
-
-```bash
-chloros-cli get-project-folder
-```
-
-**Ví dụ:**
-
-```bash
-chloros-cli get-project-folder
-```
-
-**Đầu ra:**
-
-```
-
-# Windows
-ℹ Current project folder: C:\Projects\2025
-
-# Linux
-ℹ Current project folder: /home/user/.local/share/chloros/projects
-```
-
-***
-
-### `reset-project-folder` - Đặt lại về mặc định
-
-Đặt lại thư mục dự án về vị trí mặc định.
-
-**Cú pháp:**
-
-```bash
-chloros-cli reset-project-folder
-```
-
-***
-
-### `selftest` - Chạy chẩn đoán hệ thống
-
-Chạy 7 bước kiểm tra chẩn đoán để xác minh cấu hình hệ thống của bạn.
-
-**Cú pháp:**
-
-```bash
-chloros-cli selftest
-```
-
-**Chẩn đoán được thực hiện:**
-
-1. Kiểm tra phiên bản
-2. Tính khả dụng của cổng (5000)
-3. Khởi động phụ trợ
-4. Kiểm tra kết nối API
-5. Thông tin hệ thống và phát hiện GPU
-6. Xác minh mô hình khử nhiễu
-7. Kiểm tra tính khả dụng của CUDA
+**`--reflectance-source {auto,target,daq}`** (mặc định là `auto`) chọn tham chiếu độ phản xạ: `auto` tạo một [mục tiêu hiệu chuẩn](calibration-targets.md) trong khung hình đạt tiêu chuẩn QA làm tham chiếu tuyệt đối và chuyển về giá trị chia theo hướng xuống của cảm biến ánh sáng DAQ (ρ = π·L/E) khi không có mục tiêu; `target` áp dụng nghiêm ngặt (không thay thế bằng dữ liệu DAQ); `daq` là có thẩm quyền theo DAQ. Các lần quét mục tiêu được đo theo đơn vị có thể được cung cấp bằng `--target-reflectance-dir`.
 
 {% hint style="info" %}
-**Hữu ích khi khắc phục sự cố**: Chạy `selftest` sau khi cài đặt để xác minh hệ thống của bạn được định cấu hình chính xác, đặc biệt là trên Linux/Jetson nơi thiết lập GPU và CUDA có thể cần xác minh.
+**Đọc các pixel phản xạ:**giá trị DN tương ứng với ρ = 1,0 là**theo từng nguồn** — Các tệp LATTICE đóng dấu `Chloros:PixelScale=32768` trong XMP; các tệpSurvey3
+sử dụng giá trị 65535 (và không chứa thẻ `Chloros:*`). Hãy đọc thẻ và chia cho giá trị đó thay vì giả định một hằng số. Chi tiết và trường hợp ngoại lệ duy nhất không có tỷ lệ được đề cập trong [CLI
+Tài liệu tham khảo](reference/cli-reference.md).
+{% endhint %}
+
+**Quá trình xử lý luôn bắt đầu từ `raw`.** Các sản phẩm phái sinh (dữ liệu xuất sau khi loại bỏ hiệu ứng debayering/độ rạng rỡ/độ phản xạ) không bao giờ được đưa trở lại qua đường ống xử lý — việc nhập lại và xử lý chúng sẽ khiến các phép tính hiệu chuẩn được áp dụng hai lần, do đóChloros
+sẽ bỏ qua chúng và thông báo điều này. `--input-level` là lối thoát có chủ ý khi bạn thực sự cần ép buộc một điểm vào.
+
+***
+
+## Khi một lần chạy thất bại
+
+Kể từ phiên bản 1.2.0, `process` sẽ báo lỗi rõ ràng thay vì “thành công” mà không hiển thị kết quả nào:
+
+* Một lần chạy **yêu cầu các sản phẩm nhưng không ghi lại sản phẩm nào**— chỉ có `project.json` và `calibration_data.json` — sẽ hiển thị thông báo `Processing finished but wrote no image products.` và**thoát với giá trị không bằng 0**, do đó các skript có thể phát hiện được. Các nguyên nhân thường gặp: thư mục đầu vào không được nhận diện là vùng ghi hình (kiểm tra bố cục và `--input-level`), hoặc mọi sản phẩm được yêu cầu đều không áp dụng được cho các camera đó (ví dụ: yêu cầu độ sáng/độ phản xạ từ các camera chỉ hỗ trợ chế độ &quot;RGB
+&quot;).
+* Một **lần chạy chỉ lấy metadata có chủ đích** (tắt tất cả các sản phẩm, không có `--indices`) vẫn được coi là thành công — kết quả đầu ra là hình ảnh trống là kết quả chính xác trong trường hợp này.
+* Chạy lại với `--verbose` và kiểm tra nhật ký hệ thống để tìm các dòng liên quan đến `[LATTICE-EXPORT]` / `[EXPORT-CHECK]`, những dòng này giải thích lý do bỏ qua từng camera cụ thể.
+
+Mã thoát: `0` thành công · `1` lỗi chung · `2` lỗi tham số · `130` bị ngắt bởi Ctrl+C.
+
+***
+
+## Chỉ số thảm thực vật
+
+Chạy `--indices` với một hoặc nhiều tên cài đặt sẵn; mỗi chỉ số sẽ được lưu trong thư mục `<INDEX>_Index_Images/` riêng:
+
+```bash
+chloros-cli process ~/images/flight_001 --indices NDVI NDRE GNDVI
+```
+
+22 tên cài đặt sẵn mà `process --indices` chấp nhận:
+
+`NDVI` `GNDVI` `NDRE` `OSAVI` `SAVI` `MSAVI2` `EVI` `MSR` `TDVI` `LAI` `GCI` `GRVI` `GSAVI` `GOSAVI` `NLI` `MNLI` `RDVI` `WDRVI` `CVI` `ENDVI` `GLI` `VARI`
+
+{% hint style="warning" %}
+**Có ba danh sách chỉ mục — đừng nhầm lẫn chúng.**Menu thả xuống “Project Settings” (Cài đặt Dự án) trên giao diện người dùng (GUI) có 27 công thức (bao gồm `FCI1`, `FCI2`, `GARI`, `GEMI`, `LCI` — năm công thức này chỉ dành riêng cho giao diện người dùng (GUI) và**không** áp dụng cho `--indices`). Lệnh trực tiếp/ngoại tuyến `lattice index --preset` sử dụng danh sách 22 cài đặt sẵn riêng biệt. Các công thức và phép toán dải phổ được ghi chép trong [Công thức chỉ số đa phổ](project-settings/multispectral-index-formulas.md).
 {% endhint %}
 
 ***
 
-### `update` - Kiểm tra cập nhật (Chỉ Linux)
+## Cảm biến ánh sáng DAQ: Giới thiệu nhanh
 
-Kiểm tra và cài đặt các bản cập nhật CLI trên hệ thống Linux.
-
-**Cú pháp:**
+Dòng sản phẩm `daq pool-*` điều khiển các cảm biến phổ DAQ (MAPIR
+) (DAQ-U qua USB, DAQ-M qua BLE, DAQ-E qua Ethernet) thông qua bể lưu trữ liên tục của hệ thống nền — giao diện người dùng (GUI),CLI
+vàSDK
+đều chia sẻ chung một đối tượng kết nối trực tiếp. **`pool-*` là đường dẫn DAQ được hỗ trợ trong bản phát hànhCLI
+**; các lệnh con `daq` khác mà bạn có thể thấy được đề cập làMAPIR
+— một bề mặt chỉ dành cho nguồn nội bộ — và sẽ thoát với một lỗi rõ ràng chỉ dẫn bạn đến `pool-*`.
 
 ```bash
-# Check for updates without installing
-chloros-cli update --check
+# 1. Open a pooled session (pick the line matching your sensor)
+chloros-cli daq pool-connect                              # smart-detect
+chloros-cli daq pool-connect --port COM3                  # DAQ-U on a specific COM port
+chloros-cli daq pool-connect --mac AA:BB:CC:DD:EE:FF      # DAQ-M by BLE MAC
+chloros-cli daq pool-connect --eth-host daq-e-xxx.local   # DAQ-E by hostname (reliable)
 
-# Check for and install updates
-chloros-cli update
+# 2. List pooled sensors and their ids
+#    (DAQ-U ids look like 'CB-7C-A8-2E-5F'; DAQ-E ids like 'daq-e-def330')
+chloros-cli daq pool-list
+
+# 3. Read the latest calibrated spectrum (W/m²/nm)
+chloros-cli daq pool-latest --sensor-id CB-7C-A8-2E-5F
+
+# 4. Record a calibrated .daq file for 60 s
+chloros-cli daq pool-record --sensor-id CB-7C-A8-2E-5F --duration 60 \
+  -o ~/Documents/spectra --device-name "field-A"
+
+# 5. Release
+chloros-cli daq pool-disconnect --sensor-id CB-7C-A8-2E-5F
 ```
 
-| Tùy chọn | Mô tả |
-| --------- | ---------------------------------- |
-| `--check` | Chỉ kiểm tra cập nhật, không cài đặt |
+`pool-record` mà không có `--duration` sẽ chạy cho đến khi gặp `pool-record --stop`; thư mục đầu ra mặc định là `~/Documents/DAQ Live View/` **trên máy của backend**. Hồ sơ hiệu chỉnh giới hạn được chọn tại thời điểm kết nối (`--cap-id`, mặc định của máy chủ là `sunshine_cosine`) và có thể được thay đổi trực tiếp bằng `pool-set-cap` — các cấu hình cap và phạm vi hiệu chuẩn của cảm biến được đề cập trong các chương về DAQ của tài liệu hướng dẫn này.
 
-{% hint style="info" %}
-Lệnh này chỉ khả dụng trên Linux. Trên Windows, các bản cập nhật được gửi qua trình cài đặt.
+{% hint style="warning" %}
+**DAQ-E trên máy chủ có nhiều NIC:** quá trình tự động phát hiện `pool-connect --eth` đầu tiên sau khi khởi động có thể thất bại ngay cả khi cảm biến hoạt động bình thường. `--eth-host <ip-or-hostname>` là phương án đáng tin cậy — hãy sử dụng nó mỗi khi quá trình phát hiện không thành công.
 {% endhint %}
 
 ***
 
-## Tùy chọn toàn cầu
+## Camera LATTICE, PTP &amp; Tự động hóa dự án
 
-Các tùy chọn này áp dụng cho tất cả các lệnh:
-
-| Tùy chọn | Loại | Mặc định | Mô tả |
-| ----------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Đường dẫn | Tự động phát hiện | Đường dẫn đến phần thực thi phụ trợ |
-| `--port` | Số nguyên | 5000 | Số cổng API phụ trợ |
-| `--restart` | Cờ | - | Buộc khởi động lại chương trình phụ trợ (giết chết các tiến trình hiện có) |
-| `--version` | Cờ | - | Hiển thị thông tin phiên bản và thoát |
-| `--help` | Cờ | - | Hiển thị thông tin trợ giúp và thoát |
-
-{% hint style="info" %}
-**Tự động phát hiện phần phụ trợ**: Đường dẫn `--backend-exe` được tự động phát hiện trên mỗi nền tảng:
-* **Windows**: `C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backend.exe`
-* **Linux (.deb)**: `/usr/lib/chloros/chloros-backend`
-* **Linux (thủ công)**: `/opt/mapir/chloros/backend/chloros-backend`
-{% endhint %}
-
-**Ví dụ với Tùy chọn chung:**
-
-**Windows:**
-
-```powershell
-chloros-cli --port 5001 process "C:\Datasets\Survey_001"
-```
-
-**Linux:**
+Dòng lệnh `lattice` (hơn 45 lệnh con) bao quát toàn bộ quy trình làm việc với máy ảnh LATTICE: phát hiện, chụp ảnh đơn lẻ, mảng đồng bộ liên tục thông qua quy trình kết nối &quot;smart-prep&quot; của giao diện người dùng (GUI), xem trước trực tiếp trên trình duyệt, căn chỉnh, tính toán chỉ số và chẩn đoán NIC của máy chủ. Một số ví dụ:
 
 ```bash
-chloros-cli --port 5001 process ~/datasets/survey_001
+chloros-cli lattice info                                          # discover cameras
+chloros-cli lattice capture -o output/                            # one frame, all export types
+chloros-cli lattice array-connect --serials SN1,SN2,SN3,SN4       # persistent synced array
+chloros-cli lattice array-capture --processing reflectance -o out/
 ```
+
+Bên cạnh đó: `chloros-cli time-sync` báo cáo về máy chủ PTP chính (grandmaster) mà máy chủChloros
+đang chạy (các camera LATTICE và cảm biến DAQ-E hoạt động như thiết bị phụ thuộc vào nó để đồng bộ dấu thời gian giữa các thiết bị), và `chloros-cli project` mở một dự án đã lưu từChloros
+và điều khiển các camera, mảng và cảm biến của nó mà không cần giao diện đồ họa — bao gồm cả các kịch bản thu thập dữ liệu YAML được lập trình sẵn.
+
+Ba dòng sản phẩm này (`lattice`, `project`, `daq pool-*`) cũng là những dòng duy nhất hỗ trợ `CHLOROS_BACKEND_URL` để điều khiển một backend **từ xa**; các lệnh cốt lõi luôn nhắm đến máy cục bộ.
+
+Các hướng dẫn chi tiết được trình bày trong các chương về LATTICE của tài liệu này; mọi tham số đều có trong [CLI
+Tài liệu tham khảo](reference/cli-reference.md).
 
 ***
 
-## Hướng dẫn cài đặt xử lý
-
-### Xử lý song song & Thích ứng điện toán động
-
-Chloros 1.1.0 bao gồm [Thích ứng điện toán động](processing-architecture/dynamic-compute-adaptation.md) — công cụ xử lý **tự động phát hiện phần cứng của bạn** và chọn chiến lược tối ưu:
-
-| Nền tảng | Chiến lược | Công nhân | Đường ống | Ghi chú |
-| --- | --- | --- | --- | --- |
-| **Jetson Nano 8GB** | `GPU_SINGLE` | 1 | `tiled_gpu` | Tiết kiệm bộ nhớ, được tuần tự hóa |
-| **Jetson Orin NX 16GB** | `GPU_PARALLEL` | 3 | `fused_gpu` | Xử lý GPU đồng thời |
-| **Máy tính để bàn có GPU 8GB** | `GPU_SINGLE` | 3 | `tiled_gpu` | Hiệu suất máy tính để bàn tốt |
-| **Máy tính để bàn có GPU 12GB+** | `GPU_PARALLEL` | 3-4 | `fused_gpu` | Hiệu suất máy tính để bàn tối ưu |
-| **Hệ thống chỉ dùng CPU** | `CPU_PARALLEL` | lõi - 1 | `cpu_fallback` | Không cần GPU |
-
-{% hint style="success" %}
-**Không cần cấu hình thủ công!** Chloros tự động phát hiện cảm biến nhiệt CPU, GPU, RAM và (trên Jetson) của bạn, sau đó tự động định cấu hình quy trình xử lý tối ưu.
-{% endhint %}
-
-### Phương pháp Debayer
-
-| Phương pháp | Cờ CLI | Chất lượng | Tốc độ | Giấy phép |
-| --- | --- | --- | --- | --- |
-| **Tiêu chuẩn (Nhanh, Chất lượng trung bình)** | `--debayer standard` | Tốt | Nhanh | Miễn phí / Chloros+ |
-| **Nhận biết kết cấu (Chậm, Chất lượng cao nhất)** | `--debayer texture-aware` | Cao nhất | Chậm | Chỉ Chloros+ |
-
-Phương thức gỡ lỗi mặc định là **Tiêu chuẩn**. Phương pháp**Nhận biết kết cấu** sử dụng mô hình khử nhiễu AI/ML để có chất lượng đầu ra cao nhất nhưng yêu cầu giấy phép Chloros+ và GPU NVIDIA.
-
-```bash
-# Use Texture Aware debayer (Chloros+ only)
-chloros-cli process ~/datasets/field_a --debayer texture-aware
-```
-
-### Chỉnh sửa họa tiết
-
-**Công dụng của nó:** Khắc phục tình trạng mất ánh sáng ở các cạnh hình ảnh (các góc tối hơn thường gặp trong hình ảnh bằng máy ảnh).
-
-* **Bật theo mặc định** - Hầu hết người dùng nên bật tính năng này
-* Sử dụng `--no-vignette` để tắt
-
-{% hint style="success" %}
-**Khuyến nghị**: Luôn bật tính năng chỉnh sửa họa tiết để đảm bảo độ sáng đồng đều trên toàn khung hình.
-{% endhint %}
-
-### Hiệu chỉnh độ phản xạ
-
-Chuyển đổi giá trị cảm biến thô thành tỷ lệ phần trăm phản xạ được tiêu chuẩn hóa bằng bảng hiệu chuẩn.
-
-* **Bật theo mặc định** - Cần thiết cho phân tích thực vật
-* Yêu cầu bảng mục tiêu hiệu chuẩn trong hình ảnh
-* Sử dụng `--no-reflectance` để tắt
-
-{% hint style="info" %}
-**Yêu cầu**: Đảm bảo bảng hiệu chuẩn được hiển thị đúng cách và hiển thị trong hình ảnh của bạn để chuyển đổi độ phản xạ chính xác.
-{% endhint %}
-
-### Chỉnh sửa PPK
-
-**Công dụng:** Áp dụng các hiệu chỉnh Động học sau xử lý bằng cách sử dụng dữ liệu nhật ký DAQ-A-SD để cải thiện độ chính xác của GPS.
-
-* **Bị tắt theo mặc định**
-* Sử dụng `--ppk` để kích hoạt
-* Yêu cầu tệp .daq trong thư mục dự án từ cảm biến ánh sáng MAPIR DAQ-A-SD.
-
-### Định dạng đầu ra
-
-<table><thead><tr><th width="197">Định dạng</th><th width="130.20001220703125">Độ sâu bit</th><th width="116.5999755859375">Kích thước tệp</th><th>Tốt nhất cho</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>Số nguyên 16 bit</td><td>Lớn</td><td>Phân tích GIS, phép đo ảnh (được khuyến nghị)</td></tr><tr><td><strong>TIFF (32-bit, Phần trăm)</strong></td><td>Phôi 32 bit</td><td>Rất Lớn</td><td>Phân tích, nghiên cứu khoa học</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>Số nguyên 8 bit</td><td>Trung bình</td><td>Kiểm tra trực quan, chia sẻ web</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit số nguyên</td><td>Nhỏ</td><td>Xem trước nhanh, đầu ra được nén</td></tr></tbody></table>
-
-***
-
-## Tự động hóa & Viết kịch bản
-
-### Xử lý hàng loạt PowerShell (Windows)
-
-Tự động xử lý nhiều thư mục tập dữ liệu trên Windows:
-
-```powershell
-# process_all_datasets.ps1
-
-$datasets = Get-ChildItem "C:\Datasets\2025" -Directory
-
-foreach ($dataset in $datasets) {
-    Write-Host "Processing $($dataset.Name)..." -ForegroundColor Cyan
-    
-    chloros-cli process $dataset.FullName `
-        --vignette `
-        --reflectance
-    
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "✓ $($dataset.Name) complete" -ForegroundColor Green
-    } else {
-        Write-Host "✗ $($dataset.Name) failed" -ForegroundColor Red
-    }
-}
-
-Write-Host "All datasets processed!" -ForegroundColor Green
-```
-
-### Tập lệnh hàng loạt Windows (Windows)
-
-Vòng lặp đơn giản để xử lý hàng loạt trên Windows:
-
-```batch
-@echo off
-echo Starting batch processing...
-
-for /d %%i in (C:\Datasets\2025\*) do (
-    echo.
-    echo ========================================
-    echo Processing: %%i
-    echo ========================================
-    chloros-cli process "%%i"
-    
-    if %ERRORLEVEL% EQU 0 (
-        echo SUCCESS: %%i processed
-    ) else (
-        echo ERROR: %%i failed
-    )
-)
-
-echo.
-echo All datasets processed!
-pause
-```
-
-### Xử lý hàng loạt Bash (Linux)
-
-Xử lý nhiều thư mục tập dữ liệu trên Linux:
-
-```bash
-#!/bin/bash
-# process_all_datasets.sh
-
-for dataset in ~/datasets/2026/*/; do
-    name=$(basename "$dataset")
-    echo "Processing $name..."
-
-    chloros-cli process "$dataset" \
-        --vignette \
-        --reflectance
-
-    if [ $? -eq 0 ]; then
-        echo "✓ $name complete"
-    else
-        echo "✗ $name failed"
-    fi
-done
-
-echo "All datasets processed!"
-```
-
-### Tập lệnh tự động hóa Python (Đa nền tảng)
-
-Tự động hóa nâng cao với xử lý lỗi (hoạt động trên Windows và Linux):
-
-```python
-import subprocess
-import os
-import sys
-from pathlib import Path
-from datetime import datetime
-
-def process_dataset(input_folder):
-    """Process a folder using Chloros CLI"""
-    cmd = ['chloros-cli', 'process', str(input_folder)]
-    
-    # Execute command
-    result = subprocess.run(
-        cmd, 
-        capture_output=True, 
-        text=True,
-        encoding='utf-8'
-    )
-    
-    return result.returncode == 0, result.stdout, result.stderr
-
-def main():
-    """Process all datasets in a directory"""
-    # Adjust path for your platform
-    # Windows: Path('C:/Datasets/2025')
-    # Linux:   Path.home() / 'datasets' / '2025'
-    datasets_dir = Path('C:/Datasets/2025')
-    log_file = Path('processing_log.txt')
-    
-    successful = []
-    failed = []
-    
-    # Start processing
-    print(f"Starting batch processing: {datetime.now()}")
-    print(f"Scanning: {datasets_dir}")
-    print("=" * 60)
-    
-    for dataset_folder in sorted(datasets_dir.iterdir()):
-        if not dataset_folder.is_dir():
-            continue
-        
-        print(f"\nProcessing: {dataset_folder.name}")
-        
-        success, stdout, stderr = process_dataset(dataset_folder)
-        
-        if success:
-            print(f"✓ {dataset_folder.name} - SUCCESS")
-            successful.append(dataset_folder.name)
-        else:
-            print(f"✗ {dataset_folder.name} - FAILED")
-            failed.append(dataset_folder.name)
-            
-            # Log error details
-            with open(log_file, 'a', encoding='utf-8') as f:
-                f.write(f"\n=== {dataset_folder.name} - {datetime.now()} ===\n")
-                f.write(f"STDOUT:\n{stdout}\n")
-                f.write(f"STDERR:\n{stderr}\n")
-    
-    # Print summary
-    print("\n" + "=" * 60)
-    print(f"SUMMARY - Completed: {datetime.now()}")
-    print(f"  Successful: {len(successful)}")
-    print(f"  Failed: {len(failed)}")
-    
-    if failed:
-        print(f"\nFailed folders:")
-        for folder in failed:
-            print(f"  - {folder}")
-        print(f"\nCheck {log_file} for error details")
-        sys.exit(1)
-    else:
-        print("\nAll datasets processed successfully!")
-        sys.exit(0)
-
-if __name__ == '__main__':
-    main()
-```
-
-***
-
-## Quy trình xử lý
-
-### Quy trình làm việc tiêu chuẩn
-
-1. **Đầu vào**: Thư mục chứa các cặp ảnh RAW/JPG
-2. **Khám phá**: CLI tự động quét các tệp hình ảnh được hỗ trợ
-3. **Đang xử lý**: Chế độ song song mở rộng theo lõi CPU của bạn (Chloros+)
-4. **Đầu ra**: Tạo các thư mục con kiểu máy ảnh chứa các hình ảnh đã được xử lý
-
-### Ví dụ về cấu trúc đầu ra
-
-```
-
-MyProject/
-├── project.json                             # Project metadata
-├── 2025_0203_193056_008.JPG                # Original JPG
-├── 2025_0203_193055_007.RAW                # Original RAW
-└── Survey3N_RGN/                           # Processed outputs ✓
-    ├── 2025_0203_193056_008_Reflectance.tif   # Calibrated reflectance
-    ├── 2025_0203_193056_008_Target.tif        # Target detection
-    └── ...
-```
-
-### Ước tính thời gian xử lý
-
-Thời gian xử lý thông thường cho 100 hình ảnh (mỗi hình 12MP):
-
-| Nền tảng | Chế độ | Thời gian dự kiến ​​| Ghi chú |
-| --- | --- | --- | --- |
-| **GPU 12GB+ cho máy tính để bàn** | `GPU_PARALLEL` | 5-10 phút | Tùy chọn nhanh nhất |
-| **GPU 8GB dành cho máy tính để bàn** | `GPU_SINGLE` | 10-15 phút | Hiệu suất tốt |
-| **Jetson Orin NX 16GB** | `GPU_PARALLEL` | 15-25 phút | Tính toán cạnh |
-| **Jetson Nano 8GB** | `GPU_SINGLE` | 30-60 phút | Hạn chế về bộ nhớ |
-| **Chỉ dành cho CPU** | `CPU_PARALLEL` | 20-40 phút | Không cần GPU |
-
-{% hint style="info" %}
-**Mẹo về hiệu suất**: Thời gian xử lý thay đổi tùy theo số lượng hình ảnh, độ phân giải, phương pháp gỡ lỗi và phần cứng. Trình gỡ lỗi nhận biết kết cấu mất nhiều thời gian hơn đáng kể so với Tiêu chuẩn. Xem [Điều chỉnh điện toán động](processing-architecture/dynamic-compute-adaptation.md) để biết chi tiết.
-{% endhint %}
-
-***
-
-## Khắc phục sự cố
-
-### Không tìm thấy CLI
-
-**Lỗi Windows:**
-
-```
-'chloros-cli' is not recognized as an internal or external command
-```
-
-**Giải pháp Windows:**
-
-1. Xác minh vị trí cài đặt:
-
-```powershell
-dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
-```
-
-2. Sử dụng đường dẫn đầy đủ nếu không có trong PATH:
-
-```powershell
-"C:\Program Files\Chloros\resources\cli\chloros-cli.exe" process "C:\Datasets\Field_A"
-```
-
-3. Thêm vào PATH theo cách thủ công:
-   * Thuộc tính hệ thống mở → Biến môi trường
-   * Chỉnh sửa biến PATH
-   * Thêm: `C:\Program Files\Chloros\resources\cli`
-   * Khởi động lại thiết bị đầu cuối
-
-**Lỗi Linux:**
-
-```
-chloros-cli: command not found
-```
-
-**Giải pháp Linux:**
-
-1. Xác minh cài đặt:
-
-```bash
-which chloros-cli
-dpkg -L chloros-amd64  # or chloros-arm64-jp6
-```
-
-2. Tải lại shell của bạn:
-
-```bash
-source ~/.bashrc
-```
-
-3. Kiểm tra quyền:
-
-```bash
-sudo chmod +x /usr/bin/chloros-cli
-```
-
-***
-
-### Phần phụ trợ không khởi động được**Lỗi:**
-
-```
-
-Backend failed to start within 30 seconds
-```
-
-**Giải pháp:**
-
-1. Kiểm tra xem chương trình phụ trợ đã chạy chưa (đóng nó trước)
-2. Kiểm tra tường lửa không chặn (Windows) hoặc kiểm tra tính khả dụng của cổng (Linux: `lsof -i :5000`)
-3. Thử cổng khác:
-
-```bash
-# Windows
-chloros-cli --port 5001 process "C:\Datasets\Field_A"
-
-# Linux
-chloros-cli --port 5001 process ~/datasets/field_a
-```
-
-4. Buộc khởi động lại phần phụ trợ:
-
-```bash
-# Windows
-chloros-cli --restart process "C:\Datasets\Field_A"
-
-# Linux
-chloros-cli --restart process ~/datasets/field_a
-```
-
-5. Trên Linux, kiểm tra xem tệp thực thi phụ trợ có tồn tại không:
-
-```bash
-ls -la /usr/lib/chloros/chloros-backend
-```
-
-***
-
-### Vấn đề về giấy phép / xác thực**Lỗi:**
-
-```
-
-Chloros+ license required for CLI access
-```
-
-**Giải pháp:**
-
-1. Xác minh rằng bạn có đăng ký Chloros+ đang hoạt động
-2. Đăng nhập bằng thông tin đăng nhập của bạn:
-
-```bash
-chloros-cli login user@example.com 'password'
-```
-
-3. Kiểm tra tình trạng giấy phép:
-
-```bash
-chloros-cli status
-```
-
-4. Liên hệ hỗ trợ: info@mapir.camera
-
-***
-
-### Không tìm thấy hình ảnh nào**Lỗi:**
-
-```
-
-No images found in the specified folder
-```
-
-**Giải pháp:**
-
-1. Xác minh thư mục chứa các định dạng được hỗ trợ (.RAW, .TIF, .JPG)
-2. Kiểm tra đường dẫn thư mục có chính xác không (sử dụng dấu ngoặc kép cho đường dẫn có dấu cách)
-3. Đảm bảo bạn có quyền đọc thư mục
-4. Kiểm tra phần mở rộng của file có chính xác không
-
-***
-
-### Đang xử lý bị treo hoặc bị treo**Giải pháp:**
-
-1. Kiểm tra dung lượng đĩa còn trống (đảm bảo đủ cho đầu ra)
-2. Đóng các ứng dụng khác để giải phóng bộ nhớ
-3. Giảm số lượng ảnh (xử lý theo đợt)
-
-***
-
-### Cổng đã được sử dụng**Lỗi:**
-
-```
-
-Port 5000 is already in use
-```
-
-**Giải pháp:**
-
-**Windows:**
-
-```powershell
-chloros-cli --port 5001 process "C:\Datasets\Field_A"
-```
-
-**Linux:**
-
-```bash
-# Find what's using port 5000
-lsof -i :5000
-
-# Use a different port
-chloros-cli --port 5001 process ~/datasets/field_a
-```
-
-***
-
-##Câu hỏi thường gặp
-
-### Hỏi: Tôi có cần giấy phép cho CLI không?
-
-**Đ:**Vâng! CLI yêu cầu giấy phép**Chloros+ trả phí**.
-
-* ❌ Gói tiêu chuẩn (miễn phí): CLI bị vô hiệu hóa
-* ✅ Gói Chloros+ (trả phí): CLI được kích hoạt đầy đủ
-
-Đăng ký tại: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
-
-***
-
-### Hỏi: Tôi có thể sử dụng CLI trên máy chủ không có GUI không?**Đ:** Vâng! CLI chạy hoàn toàn không có đầu. Đây là trường hợp sử dụng chính trên Linux.**Máy chủ Windows:**
-* Máy chủ Windows 2016 trở lên
-* Đã cài đặt Visual C++ có thể phân phối lại
-
-**Máy chủ Linux:**
-* Ubuntu 20.04+ / Debian 11+ (amd64) hoặc JetPack 6 (arm64)
-* Cài đặt qua gói `.deb`
-
-**Cả hai nền tảng:**
-* RAM tối thiểu 8GB (khuyến nghị 16GB)
-* Kích hoạt giấy phép một lần: `chloros-cli login user@example.com 'password'`
-
-***
-
-### Hỏi: Hình ảnh đã xử lý được lưu ở đâu?**A:**Theo mặc định, hình ảnh đã xử lý sẽ được lưu trong**cùng thư mục với đầu vào** trong các thư mục con của mẫu máy ảnh (ví dụ: `Survey3N_RGN/`).
-
-Sử dụng tùy chọn `-o` để chỉ định thư mục đầu ra khác:
-
-```bash
-# Windows
-chloros-cli process "C:\Input" -o "D:\Output"
-
-# Linux
-chloros-cli process ~/input -o ~/output
-```
-
-***
-
-### Hỏi: Tôi có thể xử lý nhiều thư mục cùng một lúc không?**A:** Không trực tiếp bằng một lệnh, nhưng bạn có thể sử dụng tập lệnh để xử lý các thư mục một cách tuần tự. Xem phần [Tự động hóa & viết tập lệnh](CLI.md#automation--scripting).***
-
-### Hỏi: Làm cách nào để lưu đầu ra CLI vào tệp nhật ký?**PowerShell:**
-
-```powershell
-chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
-```
-
-**Đợt:**
-
-```batch
-chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
-```
-
-**Linux Bash:**
-
-```bash
-chloros-cli process ~/datasets/field_a 2>&1 | tee processing.log
-```
-
-***
-
-### Hỏi: Điều gì xảy ra nếu tôi nhấn Ctrl+C trong khi xử lý?**A:** CLI sẽ:
-
-1. Dừng xử lý một cách duyên dáng
-2. Tắt phần phụ trợ
-3. Thoát với mã 130
-
-Hình ảnh được xử lý một phần có thể vẫn còn trong thư mục đầu ra.
-
-***
-
-### Hỏi: Tôi có thể tự động xử lý CLI không?**Đ:** Chắc chắn rồi! CLI được thiết kế để tự động hóa. Xem [Tự động hóa & viết tập lệnh](CLI.md#automation--scripting) để biết các ví dụ về PowerShell (Windows), Batch (Windows), Bash (Linux) và Python (đa nền tảng).***
-
-### Hỏi: Làm cách nào để kiểm tra phiên bản CLI?**MỘT:**
-
-```bash
-chloros-cli --version
-```
-
-**Đầu ra:**
-
-```
-
-Chloros CLI 1.1.0
-```
+## Khắc phục sự cố: 5 vấn đề hàng đầu
+
+| Triệu chứng | Cách khắc phục |
+| --- | --- |
+| `Login required` hoặc một tác vụ được lên lịch bị treo tại dấu nhắc `Email:` | Chạy `chloros-cli login EMAIL 'PASSWORD'` một lần trên máy này — các lệnh không có phiên được lưu trong bộ nhớ đệm sẽ tương tác thay vì báo lỗi ngay lập tức. |
+| `backend unreachable` | Khởi động ứng dụng máy tính để bànChloros
+hoặc chạy trực tiếp tệp nhị phân phía máy chủ (`chloros-backend`). Nếu bạn chỉ định `lattice`/`project`/`daq pool-*` đến một backend từ xa, hãy kiểm tra `CHLOROS_BACKEND_URL`. |
+| Kết nối mảng bị chặn: `FRAMES WILL DROP` / `Reduce ROI to enable` | Vòng nhận của NIC máy chủ được đặt lại về mặc định — nguyên nhân hàng đầu khiến một hệ thống từng hoạt động bình thường từ chối kết nối, thường xảy ra sau khi cập nhật trình điều khiển NIC. Chạy lệnh `chloros-cli lattice network --fix` từ một cửa sổ terminal **có quyền quản trị** (hoặc thiết lập các tham số `ReceiveBufferLen=256`, `PendingReceives=64`); xem phần *Cài đặt và Tối ưu hóa NIC máy chủ* trong tài liệu tham khảo. |
+| Lệnh con `daq` báo lỗi: &quot;yêu cầu gói DAQ đầy đủ…&quot; | Điều này là bình thường trên các bản dựng được phân phối sẵn — phiên bản biên dịch sẵnCLI
+chỉ bao gồm dòng lệnh `daq pool-*`, bao quát các chức năng kết nối, truyền dữ liệu, ghi dữ liệu và chọn tệp CAP. Sử dụng `pool-*` (hoặc `chloros_sdk.connect_daq_sensor()` từPython
+). |
+| Jetson hiển thị cảnh báo về vùng nhớ ảo trước khi xử lý các thư mục lớn | Thêm vùng nhớ ảo dựa trên tệp — tệpCLI
+in ra chính xác các lệnh `fallocate`/`swapon` cần chạy. |
 
 ***
 
 ## Nhận trợ giúp
 
-### Trợ giúp dòng lệnh
-
-Xem thông tin trợ giúp trực tiếp trong CLI:
-
 ```bash
-# General help
-chloros-cli --help
-
-# Command-specific help
-chloros-cli process --help
-chloros-cli login --help
-chloros-cli language --help
+chloros-cli --help              # top-level help
+chloros-cli process --help      # per-command help
+chloros-cli lattice --help
+chloros-cli daq --help          # lists the pool-* subcommands
 ```
 
-### Kênh hỗ trợ
-
-* **Email**: info@mapir.camera
-* **Trang web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Giá**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***
-
-## Ví dụ hoàn chỉnh
-
-### Ví dụ 1: Xử lý cơ bản
-
-Xử lý với cài đặt mặc định (làm mờ nét ảnh, độ phản chiếu):
-
-**Windows:**
-
-```powershell
-chloros-cli process "C:\Datasets\Field_A_2025_01_15"
-```
-
-**Linux:**
-
-```bash
-chloros-cli process ~/datasets/field_a_2025_01_15
-```
-
-***
-
-### Ví dụ 2: Sản phẩm khoa học chất lượng cao
-
-Phao 32 bit TIFF:
-
-**Windows:**
-
-```powershell
-chloros-cli process "C:\Datasets\Field_A" ^
-  --format "TIFF (32-bit, Percent)" ^
-  --vignette ^
-  --reflectance
-```
-
-**Linux:**
-
-```bash
-chloros-cli process ~/datasets/field_a \
-  --format "TIFF (32-bit, Percent)" \
-  --vignette \
-  --reflectance
-```
-
-***
-
-### Ví dụ 3: Xử lý xem trước nhanh
-
-PNG 8 bit không cần hiệu chỉnh để xem xét nhanh:
-
-**Windows:**
-
-```powershell
-chloros-cli process "C:\Datasets\Field_A" ^
-  --format "PNG (8-bit)" ^
-  --no-vignette ^
-  --no-reflectance
-```
-
-**Linux:**
-
-```bash
-chloros-cli process ~/datasets/field_a \
-  --format "PNG (8-bit)" \
-  --no-vignette \
-  --no-reflectance
-```
-
-***
-
-### Ví dụ 4: Xử lý PPK-Cor Corrected
-
-Áp dụng hiệu chỉnh PPK với độ phản xạ:
-
-**Windows:**
-
-```powershell
-chloros-cli process "C:\Datasets\Field_A" ^
-  --ppk ^
-  --reflectance
-```
-
-**Linux:**
-
-```bash
-chloros-cli process ~/datasets/field_a \
-  --ppk \
-  --reflectance
-```
-
-***
-
-### Ví dụ 5: Vị trí đầu ra tùy chỉnh
-
-Xử lý đến một vị trí khác với định dạng cụ thể:
-
-**Windows:**
-
-```powershell
-chloros-cli process "C:\Input\Raw_Images" ^
-  -o "D:\Output\Processed" ^
-  --format "TIFF (16-bit)"
-```
-
-**Linux:**
-
-```bash
-chloros-cli process ~/input/raw_images \
-  -o ~/output/processed \
-  --format "TIFF (16-bit)"
-```
-
-***
-
-### Ví dụ 6: Quy trình xác thực
-
-Hoàn tất quy trình xác thực (giống nhau trên tất cả các nền tảng):
-
-```bash
-# Step 1: Login
-chloros-cli login user@example.com 'MyP@ssw0rd'
-
-# Step 2: Verify status
-chloros-cli status
-
-# Step 3: Process images
-# Windows: chloros-cli process "C:\Datasets\Field_A"
-# Linux:   chloros-cli process ~/datasets/field_a
-chloros-cli process ~/datasets/field_a
-
-# Step 4: Logout (optional, when switching accounts)
-chloros-cli logout
-```
-
-***
-
-### Ví dụ 7: Sử dụng đa ngôn ngữ
-
-Thay đổi ngôn ngữ giao diện (giống nhau trên tất cả các nền tảng):
-
-```bash
-# List available languages
-chloros-cli language --list
-
-# Change to Spanish
-chloros-cli language es
-
-# Process with Spanish interface
-# Windows: chloros-cli process "C:\Vuelos\Campo_A"
-# Linux:   chloros-cli process ~/vuelos/campo_a
-chloros-cli process ~/vuelos/campo_a
-
-# Change back to English
-chloros-cli language en
-```
+* **Mọi tham số, mọi lệnh con:** [CLI
+Tài liệu tham khảo](reference/cli-reference.md)
+* **Tương đươngPython
+:** [Python
+SDK
+](api-python-sdk.md) và [SDK
+Tài liệu tham khảo](reference/sdk-reference.md)
+* **Hỗ trợ:** info@mapir.camera · [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)

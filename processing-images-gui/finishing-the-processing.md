@@ -1,286 +1,418 @@
-#Hoàn tất quá trình xử lý
+# Hoàn tất quá trình xử lý
 
-Sau khi Chloros hoàn tất quá trình xử lý, lúc này bạn sẽ xem lại kết quả, xác định chất lượng đầu ra và chuẩn hình ảnh đã được xử lý để sử dụng trong quá trình làm việc của bạn. Trang này hướng dẫn bạn qua các bước cuối cùng và hành động tiếp theo.
+KhiChloros
+hoàn tất quá trình xử lý, đã đến lúc bạn xem lại kết quả, kiểm tra chất lượng đầu ra và chuẩn bị các hình ảnh đã xử lý để sử dụng trong quy trình làm việc của mình. Trang này sẽ hướng dẫn bạn thực hiện các bước cuối cùng và các thao tác tiếp theo.
 
-## Đang xử lý thành công thông báo
+## Dấu hiệu cho biết quá trình xử lý đã hoàn tất
 
-Khi quá trình xử lý kết thúc thành công, bạn sẽ thấy một số chỉ báo:
+Khi quá trình xử lý kết thúc thành công, bạn sẽ thấy một số dấu hiệu sau:
 
-* ✅ **Thanh tiến trình**: Hoàn thành 100%
-* ✅ **Gỡ lỗi nhật ký**: Hiển thị thông báo "Đang xử lý hoàn tất"
-* ✅ **Nút bắt đầu**: Được bật lại (sẵn sàng cho quá trình xử lý tiếp theo)
-* ✅ **Tệp đầu ra**: Tất cả hình ảnh đã được xử lý được lưu vào thư mục của máy ảnh mẫu***
+* ✅ **Thanh tiến trình**: Đạt 100% hoàn thành
+* ✅ **Nhật ký gỡ lỗi**: Hiển thị các dòng `[RUN-SUMMARY]` cuối cùng kèm theo số lượng (hình ảnh, nhóm camera, mục tiêu, hình ảnh đã hiệu chuẩn, tệp đã ghi)
+* ✅ **Nút Bắt đầu**: Lại được kích hoạt (sẵn sàng cho lần xử lý tiếp theo)
+* ✅ **Tệp đầu ra**: Tất cả hình ảnh đã xử lý được lưu vào thư mục đầu ra của dự án (bên dưới)
 
-## Bạn đã xử lý hình ảnh định vị
-
-### Mở đầu thư mục
-
-1. Click vào biểu tượng **Main Menu** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> biểu tượng (ở cùng bên trái)
-2. Choose **"Mở dự án thư mục"**
-
-3. File explorer của bạn sẽ mở ra dự án thư mục
-4. Xác định dự án của bạn theo tên
+{% hint style="warning" %}
+**Một lần chạy không ghi ra bất kỳ hình ảnh nào được coi là thất bại.** Nếu bạn yêu cầu các sản phẩm hình ảnh nhưng lần chạy không ghi ra bất kỳ sản phẩm nào,Chloros
+sẽ báo cáo đó là thất bại — dòng `[RUN-SUMMARY]` trong tên nhật ký gợi ý nguyên nhân có thể (không có dữ liệu nào được nhập vào, không phát hiện được mục tiêu, hoặc mọi sản phẩm được yêu cầu đều bị bỏ qua vì không áp dụng được). Chương trình tương đươngCLI
+sẽ thoát với giá trị không bằng 0. Một lần chạy chỉ chứa siêu dữ liệu (tắt tất cả các sản phẩm xuất, không có chỉ mục) vẫn được coi là thành công. Xem [Tài liệu tham khảoCLI
+](../reference/cli-reference.md#a-run-that-writes-no-images-fails).
+{% endhint %}
 
 ***
 
-## Xem lại hình ảnh đã được xử lý
+## Tìm hình ảnh đã xử lý
+
+### Mở thư mục đầu ra
+
+1. Nhấp vào biểu tượng **Menu chính**<img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line">
+(góc trên bên trái)
+2. Chọn **&quot;Mở thư mục dự án&quot;**
+
+3. Trình quản lý tệp của bạn sẽ mở ra tại thư mục dự án
+4. Tìm dự án của bạn theo tên
+
+### Cấu trúc thư mục đầu ra
+
+Các tệp đầu ra được lưu trữ **trong thư mục dự án, được nhóm theo máy ảnh và sau đó theo định dạng tệp**:
+
+```
+<project>/
+└── LATT-M3M-L41-F550/                  # one folder per camera
+    ├── tiff16/
+    │   ├── Reflectance_Calibrated_Images/
+    │   ├── Debayered_Images/
+    │   ├── Preview_Images/
+    │   └── NDVI_Index_Images/           # one folder per selected index
+    └── tiff32/
+        └── Radiance_Images/             # float32 radiance always lands here
+```
+
+* **Thư mục máy ảnh**: `LATT-<sensor>-<lens>-F<filter>` cho LATTICE (trùng khớp với thông tin EXIF của ảnh chụp `Model`), `<model>_<filter>` dành choSurvey3
+(ví dụ: `Survey3N_RGN`). Hai máy ảnh cùng sử dụng cảm biến và bộ lọc nhưng khác nhau về ống kính sẽ có các cây thư mục riêng biệt — hiệu ứng viền tối, trường nhìn và độ méo khác nhau.
+* **Thư mục định dạng**: tuân theo cài đặt định dạng xuất của bạn — `tiff16`, `tiff8`, `png8`, `jpg8`, hoặc `tiff32` cho dữ liệu phản xạ (TIFF
+) (32-bit, Phần trăm). Dữ liệu Radiance luôn có định dạng float32 và luôn được lưu trong thư mục `tiff32`.
+* **Thư mục sản phẩm**:
+  * `Reflectance_Calibrated_Images/` — độ phản xạ đã hiệu chuẩn
+  * `Debayered_Images/` — đã loại bỏ hiệu ứng Bayer tuyến tính (LATTICE)
+  * `Preview_Images/` — bản xem trước trên màn hình (LATTICE)
+  * `Radiance_Images/` — độ rạng quang phổ float32, W/m²/sr/nm (LATTICE đa quang phổ)
+  * `Vignette_Corrected_Images/` **hoặc** `Sensor_Response_Images/` — giá trị dự phòng chưa hiệu chuẩn cho các khung hình không có tham chiếu độ phản xạ; chỉ có đúng một trong hai giá trị này tồn tại cho mỗi lần chạy, được chọn dựa trên cài đặt hiệu chỉnh Vignette
+  * `<INDEX>_Index_Images/` — một thư mục cho mỗi chỉ số được chọn (ví dụ: `NDVI_Index_Images`)
+
+{% hint style="info" %}
+**Mọi sản phẩm được xuất đều giữ nguyên tên tệp NGUỒN.**Một tệp radiance được xuất từ `capture_..._raw.tif` vẫn được gọi là `capture_..._raw.tif` — chỉ là nó nằm trong thư mục `tiff32/Radiance_Images/`.**Thư mục xác định sản phẩm, không phải tên tệp**, do đó việc tìm kiếm `*radiance*.tif` sẽ không cho kết quả nào; hãy tìm kiếm dựa trên thư mục thay vào đó.
+{% endhint %}
+
+
+
+<!-- SCREENSHOT-NEEDED: Windows Explorer open on a processed project folder showing the tree: a LATT-… camera folder expanded with tiff16 (Reflectance_Calibrated_Images, Debayered_Images, Preview_Images, NDVI_Index_Images) and tiff32 (Radiance_Images) subfolders visible -->
+### Nên có bao nhiêu tệp?
+
+Đừng tính theo công thức — số lượng tệp đầu ra phụ thuộc vào các sản phẩm nào đã được kích hoạt và sản phẩm nào áp dụng cho từng camera (ví dụ: các cameraRGB
+không có dữ liệu radiance/reflectance). Số lượng chính xác được ghi trong nhật ký: dòng cuối cùng `[RUN-SUMMARY]` báo cáo chính xác số tệp đã được ghi, và các dòng gợi ý giải thích những gì đã bị bỏ qua.
+
+***
+
+## Xem lại hình ảnh đã xử lý
 
 ### Xem trước nhanh trong File Explorer
 
-**Bản xem trước hợp lý Windows:**
+**Chức năng xem trước tích hợp sẵn trongWindows
+:**
 
-1. Điều hướng đến máy ảnh mẫu thư mục
-2. Choose file image
-3. Bản xem trước xuất hiện trong khung xem trước Windows Explorer
-4. Sử dụng mũi tên để duyệt hình ảnh
+1. Truy cập vào thư mục sản phẩm (ví dụ: `tiff16/Reflectance_Calibrated_Images/`)
+2. Chọn một tệp hình ảnh
+3. Hình ảnh xem trước sẽ hiển thị trong khung xem trước củWindows
+Explorer
+4. Sử dụng các phím mũi tên để duyệt qua các hình ảnh
 
-### Xem trước trong Trình xem ảnh bên ngoài
+### Xem trước trong các trình xem hình ảnh bên ngoài
 
-**Người xem được đề xuất:*** **QGIS** - Phần mềm GIS miễn phí (tốt nhất cho phân tích đa tham chiếu địa lý)
-* **IrfanView** - Trình xem hình ảnh nhanh, nhẹ nhàng (hỗ trợ TIFF)
-* **Adobe Photoshop** - Chỉnh sửa chuyên nghiệp (hỗ trợ TIFF)
-* **GIMP** - Thay thế miễn phí cho Photoshop
-* **Ảnh Windows** - Xem cơ bản (TIFF 16 bit có thể không được hỗ trợ)
+**Các trình xem được khuyến nghị:*** **QGIS** - Phần mềm GIS miễn phí (phù hợp nhất cho phân tích đa phổ có tham chiếu địa lý)
+* **IrfanView** - Trình xem hình ảnh nhanh, nhẹ (hỗ trợ định dạngTIFF
+)
+* **Adobe Photoshop** - Chỉnh sửa chuyên nghiệp (hỗ trợ định dạngTIFF
+)
+* **GIMP** - Phần mềm thay thế miễn phí cho Photoshop
+* **Windows
+Photos** - Xem cơ bản (có thể không hỗ trợ định dạng 16-bitTIFF
+)
 
-### Xem trước trong Trình xem ảnh Chloros
+### Xem trước trong Trình xem hình ảnh củaChloros
 
-Sử dụng Trình xem hình ảnh hợp lý của Chloros để hiển thị nâng cao:
 
-1. Click vào hình thu nhỏ của hình ảnh trong File trình duyệt
-2. Hình ảnh mở ra trong khu vực xem trước chính
-3. Cú vào tab **Trình xem hình ảnh** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> ở thanh bên trái
+Sử dụng Trình xem hình ảnh tích hợp sẵn củaChloros
+để xem hình ảnh nâng cao:
+
+1. Nhấp vào hình thu nhỏ của ảnh trong Trình duyệt tệp
+2. Ảnh sẽ mở ra trong khu vực xem trước chính
+3. Nhấp vào tab **Trình xem ảnh**<img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line">
+ở thanh bên trái
 4. Sử dụng [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) để phân tích tương tác
 
-Xem [ Hướng dẫn xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md) để biết hướng dẫn chi tiết.
+Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md) để biết hướng dẫn chi tiết.
 
 ***
 
-## Xem lại lỗi gỡ lỗi Nhật ký
+## Đọc giá trị phản xạ của pixel (GIS / Pix4D / Tập lệnh)
 
-### Kiểm tra cảnh báo hoặc lỗi
+Độ phản xạ được lưu trữ dưới dạng số nguyên DN, và **giá trị DN tương ứng với ρ = 1.0 phụ thuộc vào máy ảnh nguồn**:
 
-1. Mở **Nhật ký gỡ lỗi** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
-2. Cuộn qua tin nhắn
-3. Tìm cảnh báo màu vàng hoặc lỗi màu đỏ
-4. Xem lại mọi vấn đề đã được ghi
-5. Liên hệ bộ phận hỗ trợ MAPIR để được hỗ trợ
+| Nguồn          | ρ = 1.0 là | Cách xác định                                        |
+| --------------- | ---------- | -------------------------------------------------- |
+| LATTICE (M3C/M3M) | **32768** (dải giá trị lên đến ρ 2.0) | Thẻ XMP `Chloros:PixelScale=32768` được gắn vào tệp |
+|Survey3
+         | **65535** (bị cắt ở ρ 1.0)     | Không có thẻ XMP `Chloros:*` — sự vắng mặt này chính là tín hiệu |
+
+**Đọc thẻ `Chloros:PixelScale` và chia cho giá trị đó** thay vì giả định một giá trị chung là 65535 — việc chia độ phản xạ LATTICE cho 65535 sẽ âm thầm giảm một nửa mọi giá trị. Một trường hợp ngoại lệ không mang tỷ lệ theo thiết kế: một bản ghi nguồn 8-bit được ghi ra dưới dạng đầu ra 8-bit sẽ bị cắt bớt, không được điều chỉnh tỷ lệ, và cố ý không có thẻ tỷ lệ — hãy xuất lại ở định dạng 16-bit hoặc 32-bit thay vì chia nó. Xem [Định dạng hình ảnh đầu ra](../output-image-formats.md) để biết chi tiết đầy đủ.***
+
+## Thông tin siêu dữ liệu được giữ lại trong các tệp xuất
+
+Mỗi sản phẩm đều giữ lại **khối GPS**và**phân vùng EXIF con** của tệp nguồn, do đó, một
+tệp xuất sẽ chứa `FocalLength`, `FNumber`, `ExposureTime`, `ISO`, `DateTimeOriginal` và
+`CameraSerialNumber` cũng như thông tin tham chiếu địa lý.
+
+{% hint style="warning" %}
+**Nếu bản đồ ghép chính xác (orthomosaic) hiển thị ở tỷ lệ không hợp lý, hãy kiểm tra `FocalLength` trước tiên.**
+Pix4D tính toán khoảng cách mẫu mặt đất (GSD) dựa trên tiêu cự cộng với độ cao. Nếu thiếu thẻ này,
+hệ thống sẽ tự động chuyển về tỷ lệ sai lệch nghiêm trọng — trong một chuyến bay đo đạc gồm 49 ảnh, một vườn cam có kích thước 411 m × 160 m
+đã được tái tạo thành 47,8 km × 13 km, tạo ra một ảnh chính quy 455 megapixel chủ yếu là
+không gian trống. Quá trình ghép ảnh chậm và tệp tin có dung lượng lớn bất thường là các triệu chứng của vấn đề này, chứ không phải là các
+vấn đề riêng biệt.
+
+```bash
+exiftool -FocalLength -GPSLatitude "YourProject/.../some_export.tif"
+```
+{% endhint %}
+
+Không phải *tất cả* các thẻ đều được sao chép. Các thẻ cấu trúc của IFD0 được cố ý bỏ qua (việc sao chép
+chúng sẽ làm hỏng đầu ra của LATTICE), và `ExifImageWidth` / `ExifImageHeight` bị loại trừ
+vì chúng mô tả bản chụp gốc — nếu không, một tệp xuất đã được thay đổi kích thước sẽ
+yêu cầu các kích thước mâu thuẫn với chính raster của nó.
+
+***
+
+## Kiểm tra Nhật ký Gỡ lỗi
+
+### Kiểm tra Cảnh báo hoặc Lỗi
+
+1. Mở tab **Nhật ký gỡ lỗi** (<img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line">
+)
+2. Cuộn qua các thông báo
+3. Tìm các cảnh báo màu vàng hoặc lỗi màu đỏ
+4. Đọc các dòng `[RUN-SUMMARY]` và bất kỳ gợi ý nào
+5. Liên hệ với bộ phận hỗ trợMAPIR
+để được trợ giúp
 
 ### Lưu nhật ký
 
-Để lưu hồ sơ xử lý hoặc gửi tới bộ phận hỗ trợ MAPIR:
+Để lưu lại bản ghi quá trình xử lý hoặc gửi cho bộ phận hỗ trợMAPIR
+:
 
-1. Cẩn vào nút **"Sao chép"**hoặc**"Tải xuống"**
+1. Nhấp vào nút **&quot;Sao chép&quot;**hoặc**&quot;Tải xuống&quot;**
 
-2. Lưu dưới dạng bản văn tệp trong dự án thư mục
-3. Đính kèm dự án tài liệu
-4. Gửi tới bộ phận hỗ trợ MAPIR nếu gặp sự cố
+2. Lưu dưới dạng tệp văn bản trong thư mục dự án
+3. Đính kèm vào tài liệu dự án
+4. Gửi cho bộ phận hỗ trợMAPIR
+nếu gặp sự cố
 
 ***
 
-## Các vấn đề và giải pháp thường gặp
+## Các vấn đề thường gặp về đầu ra và cách khắc phục
 
 ### Vấn đề: Thiếu tệp đầu ra
 
 **Nguyên nhân có thể:**
 
-* Tệp xử lý tiêu chuẩn không đáp ứng
-* Dành riêng cho mục tiêu hình ảnh (không thể xuất ra)
-* Dung lượng ổ đĩa đã hết trong khi xuất
-* Tệp bị hỏng trong quá trình xử lý
+* Sản phẩm không áp dụng cho loại camera đó (ví dụ: độ sáng/độ phản xạ cho cameraRGB
+— nhật ký sẽ ghi rõ điều này)
+* Thiếu tham chiếu bắt buộc (ví dụ: phản xạ mà không có mục tiêu và không có `.daq` chiếu xuống)
+* Hộp kiểm xuất sản phẩm đã bị vô hiệu hóa trong Cài đặt Dự án
+* Hết dung lượng đĩa trong quá trình xuất
 
 **Giải pháp:**
 
-1. Kiểm tra lỗi gỡ lỗi nhật ký để biết lỗi thông báo/bỏ qua
-2. Xác minh đủ dung lượng ổ đĩa
-3. Đếm tệp: Phải khớp (số lượng ban đầu - số lượng mục tiêu) × (chỉ số + 1)
-4. Nhập lại và xử lý lại mọi tệp bị thiếu
+1. Kiểm tra các gợi ý `[RUN-SUMMARY]` và các dòng `[EXPORT-CHECK]` trong Nhật ký Gỡ lỗi — chúng giải thích các trường hợp bỏ qua theo từng camera
+2. Kiểm tra các ô chọn xuất sản phẩm trong [Cài đặt Dự án](adjusting-project-settings.md)
+3. Kiểm tra xem dung lượng đĩa có đủ không
+4. Xử lý lại sau khi khắc phục nguyên nhân
 
-### Vấn đề: Các cạnh tối hoặc sáng (Xem chi tiết)
+### Vấn đề: Viền tối hoặc sáng (hiệu ứng vignetting vẫn còn)
 
 **Nguyên nhân có thể:**
 
-* Đã tắt tính năng chỉnh sửa chi tiết
-* Camera/ống kính không có trong cấu hình cơ sở dữ liệu Chloros
-* Họa tiết cực độ vượt quá khả năng chỉnh sửa
+* Tính năng chỉnh sửa hiện tượng tối góc bị tắt
+* Camera/ống kính không có trong cơ sở dữ liệu hồ sơ củaChloros
+
+* Hiện tượng tối góc quá mức, vượt quá khả năng chỉnh sửa
 
 **Giải pháp:**
 
-1. Xác minh tính năng chỉnh sửa chi tiết đã được bật trong Cài đặt dự án
-2. Kiểm tra độ chính xác của máy ảnh mẫu
-3. Liên hệ với bộ phận hỗ trợ MAPIR nếu đường viền mờ biểu tượng vẫn tiếp tục diễn ra
+1. Kiểm tra xem tính năng chỉnh sửa hiện tượng tối góc đã được bật trong Cài đặt Dự án chưa
+2. Kiểm tra xem mẫu máy ảnh đã được phát hiện chính xác chưa
+3. Liên hệ với bộ phận hỗ trợMAPIR
+nếu hiện tượng tối viền vẫn tiếp diễn
 
 ### Vấn đề: Màu sắc hoặc giá trị không chính xác
 
 **Nguyên nhân có thể:**
 
-* Không thể phát hiện được tiêu chuẩn đầu mục
-* Đã chọn sai tiêu chuẩn mô hình
-* Kích hoạt phản xạ vô hiệu hóa
-* Hình ảnh sản phẩm chất lượng giá trị
+* Không phát hiện được mục tiêu hiệu chuẩn
+* Chọn sai mẫu mục tiêu hiệu chuẩn
+* Tính năng hiệu chuẩn phản xạ bị tắt
+* Hình ảnh mục tiêu có chất lượng kém
 
 **Giải pháp:**
 
-1. Xác minh đã bật phản xạ chỉnh sửa
-2. Kiểm tra thông báo "Đã tìm thấy mục tiêu" trong lỗi gỡ lỗi nhật ký
-3. Xem lại mục hình ảnh chất lượng
-4. Tái xử lý các mục tiêu thích hợp được đánh dấu
+1. Kiểm tra xem tính năng hiệu chuẩn phản xạ đã được bật chưa
+2. Kiểm tra các thông báo “Đã tìm thấy mục tiêu” trong Nhật ký gỡ lỗi
+3. Kiểm tra chất lượng hình ảnh mục tiêu
+4. Xử lý lại với các mục tiêu được đánh dấu chính xác
 
-### Vấn đề: Giá trị NDVI có vẻ sai
+### Vấn đề: Giá trị của Chỉ số Độ tương phản Điểm ảnh (NDVI
+) có vẻ không chính xác
 
-**Phạm vi NDVI dự kiến:*** **Nước, đá, đất**: -0,1 đến 0,2
-* **Thảm thực vật thưa thớt/không tốt**: 0,2 đến 0,4
-* **Sản phẩm thực sự phải**: 0,4 đến 0,6
-* **Thảm thực nước suối, khỏe mạnh**: 0,6 đến 0,9**Nếu các giá trị nằm ngoài phạm vi này:**
+**Phạm vi giá trịNDVI
+dự kiến:*** **Nước, đá, đất**: -0,1 đến 0,2
+* **Thảm thực vật thưa thớt/không khỏe mạnh**: 0,2 đến 0,4
+* **Thảm thực vật vừa phải**: 0,4 đến 0,6
+* **Thực vật khỏe mạnh, rậm rạp**: 0,6 đến 0,9**Nếu các giá trị nằm ngoài các khoảng này:**
 
-1. Xác minh mã phản xạ chuẩn đã được áp dụng
-2. Xác minh nhật ký ký hiệu ánh sáng đã được đưa vào
-3. Kiểm tra tiêu chuẩn tín hiệu đã được phát hiện
-4. Đảm bảo phát hiện đúng máy ảnh mẫu
-5. Xem lại thời gian và điều kiện chụp ảnh mục tiêu
+1. Kiểm tra xem đã áp dụng hiệu chuẩn độ phản xạ chưa
+2. Kiểm tra xem nhật ký cảm biến ánh sáng đã được bao gồm chưa
+3. Kiểm tra xem các mục tiêu hiệu chuẩn đã được phát hiện chưa
+4. Đảm bảo đã phát hiện đúng mẫu máy ảnh
+5. Xem lại thời điểm và điều kiện chụp ảnh mục tiêu
+6. Nếu tự tính toán các chỉ số từ tệp phản xạ, hãy xác nhận rằng bạn đã chia cho giá trị `Chloros:PixelScale` của tệp (xem ở trên)
 
 ***
 
-## Sử dụng hình ảnh đã được xử lý của bạn
+## Sử dụng hình ảnh đã xử lý
 
-### Phép đo hình ảnh được phép / Tạo cấu hình
+### Dành cho Photogrammetry / Tạo bản đồ chính quy
 
-**Quy trình làm việc được xuất ra:**
+**Quy trình làm việc được khuyến nghị:**
 
-1.**Nhập ảnh đã được chỉnh sửa phản xạ** vào ảnh đo phần mềm:
+1.**Nhập hình ảnh phản xạ đã hiệu chuẩn** vào phần mềm photogrammetry:
    * Pix4Dmapper
-   * Metashape Agisoft
-   * Triển khai Drone
+   * Agisoft Metashape
+   * DroneDeploy
    * WebODM
-2. **Giữ EXIF ​​siêu dữ liệu**: Đảm bảo GPS dữ liệu được bảo đảm an toàn để gắn thẻ địa chỉ
-3. **Quy trình làm việc đã được hiệu chỉnh**: Sử dụng hình ảnh phản chiếu để có độ chính xác khoa học
-4. **Xử lý chỉ mục**: Tạo cấu hình NDVI từ một lẻ chỉ mục hình ảnh
-5. **Xuất GeoTIFF được tham chiếu địa lý**: Để sử dụng trong các ứng dụng GIS
+2. **Giữ lại siêu dữ liệu EXIF**: Đảm bảo dữ liệu GPS được bảo toàn để gắn thẻ địa lý
+3. **Quy trình làm việc đã hiệu chỉnh**: Sử dụng hình ảnh phản xạ để đảm bảo độ chính xác khoa học — phản xạ LATTICE chứa các thẻ hiệu chỉnh XMP mà Pix4D có thể đọc được
+4. **Xử lý ảnh ghép chỉ số**: Tạo ảnh ghép trực giao (orthomosaics) từ các hình ảnh chỉ số riêng lẻNDVI
 
-### Để phân tích GIS
+5. **Xuất ảnh ghép đã được định vị địa lý (GeoTIFF
+)**: Để sử dụng trong các ứng dụng GIS
 
-**Quy trình làm việc được xuất ra:**
+### Đối với phân tích GIS
 
-1.**Tải vào QGIS, ArcGIS hoặc tương tự**
+**Quy trình làm việc được khuyến nghị:**
 
-2.**Sử dụng hình ảnh phản xạ 16-bit TIFF** để phân tích tối đa băng tần
-3. **Sử dụng chỉ mục hình ảnh** (NDVI, NDRE) để sẵn sàng sử dụng các lớp thực vật
-4. **Máy tính raster**: Kết hợp các phạm vi để phân tích tùy chỉnh
-5. **Xuất**: Tạo bản đồ phân loại, phát hiện thay đổi, bản đồ trạng thái thảm thực vật
+1.**Tải vào QGIS, ArcGIS hoặc các phần mềm tương tự**
 
-### Để phân tích / báo cáo trực tiếp
+2.**Sử dụng hình ảnh phản xạ 16-bitTIFF
+** cho phân tích đa dải (chia cho giá trị `Chloros:PixelScale` trong tệp)
+3. **Sử dụng hình ảnh chỉ số** (NDVI
+,NDRE
+) làm các lớp thảm thực vật sẵn sàng sử dụng
+4. **Công cụ tính toán raster**: Kết hợp các dải phổ để phân tích tùy chỉnh
+5. **Xuất dữ liệu**: Tạo bản đồ phân loại, phát hiện thay đổi, bản đồ sức khỏe thảm thực vật
 
-**Quy trình làm việc được xuất ra:**
+### Dành cho phân tích trực tiếp / Báo cáo
 
-1.**Sử dụng chỉ mục hình ảnh có màu LUT** cho báo cáo trực tiếp
-2. **Trích xuất số liệu thống kê**: NDVI trung bình trên mỗi trường/ô
-3. **Chuỗi thời gian**: So sánh các số trên nhiều phiên bản
-4. **Tạo báo cáo**: Bao gồm bản đồ, số liệu thống kê và hình ảnh trực quan***
+**Quy trình làm việc được khuyến nghị:**
+
+1.**Sử dụng hình ảnh chỉ số với màu LUT** cho báo cáo trực quan
+2. **Trích xuất số liệu thống kê**: Giá trị trung bình của Chỉ số Phân loại Thực vật (NDVI
+) cho từng cánh đồng/ô thí nghiệm
+3. **Dãy thời gian**: So sánh các chỉ số qua nhiều đợt quan trắc
+4. **Tạo báo cáo**: Bao gồm bản đồ, số liệu thống kê và các biểu đồ trực quan***
 
 ## Lưu trữ và sao lưu
 
-### Chiến lược sao lưu được xuất đề
+### Chiến lược sao lưu được khuyến nghị
 
-**Những thứ cần lưu:***✅**Hình ảnh RAW/JPG gốc** - Lưu trữ trên ổ đĩa/đám mây riêng
-* ✅ **Đầu ra đã được xử lý** - Giữ hình ảnh và chỉnh sửa chỉ số
-* ✅ **Tệp dự án** - Chứa tất cả các cài đặt để xử lý lại nếu cần
-* ✅ **Nhật ký gỡ lỗi** - Chi tiết xử lý tài liệu
-* ✅ **Hình ảnh mục tiêu hiệu chỉnh**- Để xác minh và xử lý lại**Khuyến đề nghị lưu trữ:*** **Sao lưu ngay lập tức**: Ổ cứng ngoài
+**Cần lưu gì:*** ✅ **Hình ảnh RAW/JPG gốc hoặc các bản chụp thô LATTICE** - Lưu trữ trên ổ đĩa riêng biệt hoặc đám mây; dữ liệu thô là nguồn đầu vào cho quy trình xử lý và mọi thứ khác có thể được tái tạo từ đó
+* ✅ **Tệp cảm biến ánh sáng `.daq` / `.csv`** - Cần thiết để tái tính toán độ phản xạ sau này
+* ✅ **Kết quả đã xử lý** - Giữ lại hình ảnh đã hiệu chuẩn và các chỉ số
+* ✅ **Thư mục dự án** (`project.json` và các tệp liên quan) - Chứa tất cả cài đặt để xử lý lại nếu cần
+* ✅ **Nhật ký gỡ lỗi** - Ghi lại chi tiết quá trình xử lý
+* ✅ **Hình ảnh mục tiêu hiệu chuẩn** - Dùng để xác minh và xử lý lại**Khuyến nghị lưu trữ:*** **Sao lưu ngay lập tức**: Ổ cứng ngoài
 * **Lưu trữ dài hạn**: Lưu trữ đám mây (Google Drive, Dropbox, v.v.)
-* **Dữ liệu quan trọng**: Giữ 2-3 bản sao ở các vị trí khác***
+* **Dữ liệu quan trọng**: Lưu giữ 2-3 bản sao tại các vị trí khác nhau***
 
-## Xử lý lần tiếp theo
+## Các lần xử lý tiếp theo
 
-### Sử dụng lại dự án cài đặt
+### Tái sử dụng cài đặt dự án
 
-Nếu xử lý các dữ liệu tương tự trong tương lai:
+Nếu xử lý các tập dữ liệu tương tự trong tương lai:
 
-1. **Lưu dự án mẫu** (nếu chưa được thực hiện)
-2. **Tạo dự án mới** sử dụng mẫu đã lưu
+1. **Lưu mẫu dự án** (nếu chưa thực hiện)
+2. **Tạo dự án mới** bằng mẫu đã lưu
 3. **Nhập hình ảnh mới**
 
-4.**Xử lý**với các cài đặt gốc phun để đảm bảo tính chất nhất quán
+4.**Xử lý**với các cài đặt giống hệt nhau để đảm bảo tính nhất quán
 
-### Xử lý hàng loạt nhiều phiên bản
+### Xử lý hàng loạt nhiều phiên
 
-Đối với nhiều phiên bản/dữ liệu:**Tùy chọn 1: GUI - Nhiều dự án**
+Đối với nhiều phiên/bộ dữ liệu:**Tùy chọn 1: Giao diện người dùng đồ họa (GUI) - Nhiều dự án**
 
-* Tạo dự án riêng cho mỗi phiên
-* Sử dụng cài đặt quán mẫu nhất
-* Xử lý từng cái một
+* Tạo dự án riêng biệt cho từng phiên
+* Sử dụng các cài đặt mẫu nhất quán
+* Xử lý từng dự án một
 
-**Tùy chọn 2: Chloros CLI (chỉ Chloros+)**
+**Tùy chọn 2:Chloros
+CLI
+(chỉ dành choChloros
++)**
 
-* Tự động xử lý hàng loạt
-* Xử lý nhiều thư mục bằng lệnh
-* Xem [Tài liệu CLI](../CLI.md)
+* Tự động hóa xử lý hàng loạt
+* Xử lý nhiều thư mục bằng tập lệnh
+* Xem [CLI
+Tài liệu](../CLI.md) và [CLI
+Tài liệu tham khảo](../reference/cli-reference.md)
 
-**Tùy chọn 3: Python SDK (chỉ Chloros+)**
+**Tùy chọn 3:Python
+SDK
+(chỉ dành choChloros
++)**
 
-* Điều khiển chương trình
-* Tích hợp với phân tích đường ống
-* Xem [Tài liệu API](../api-python-sdk.md)
+* Điều khiển bằng lập trình
+* Tích hợp với các quy trình phân tích
+* Xem [API
+Tài liệu](../api-python-sdk.md) và [SDK
+Tài liệu tham khảo](../reference/sdk-reference.md)
 
 ***
 
-##Khắc phục sự cố sau quá trình xử lý
+## Khắc phục sự cố trong quá trình xử lý sau
 
-### Xử lý lại các cài đặt khác
+### Xử lý lại với các thiết lập khác
 
-Nếu kết quả không đạt được yêu cầu:
+Nếu kết quả không như mong đợi:
 
-1. Giữ nguyên hình ảnh (không bao giờ xóa)
-2. Mở cùng một dự án trong Chloros
-3. Điều chỉnh cài đặt trong cài đặt dự án
-4. Xử lý lại - đầu ra của kết quả sẽ ghi đè kết quả trước đó
+1. Giữ lại hình ảnh gốc (không bao giờ xóa)
+2. Mở cùng một dự án trongChloros
+3. Điều chỉnh cài đặt trong bảng Cài đặt dự án
+4. Xử lý lại — kết quả sẽ được lưu vào cùng các thư mục sản phẩm, do đó các tệp có cùng tên từ lần chạy trước sẽ bị thay thế
 
-### Đang xử lý tập hợp hình ảnh
+### Xử lý một tập con hình ảnh
 
-Để xử lý lại các hình ảnh cụ thể:
+Để xử lý lại chỉ các hình ảnh cụ thể:
 
 1. Tạo dự án mới
-2. Chỉ nhập những hình ảnh cần xử lý lại
-3. Sử dụng cùng một cài đặt mẫu
-4. Xử lý dữ liệu nhỏ hơn
+2. Chỉ nhập các hình ảnh cần xử lý lại
+3. Sử dụng cùng mẫu cài đặt
+4. Xử lý tập dữ liệu nhỏ hơn
 
-### Nhận trợ giúp
+### Nhận hỗ trợ
 
-Nếu bạn gặp phải vấn đề:
+Nếu bạn gặp sự cố:
 
-* 📧 **Email**: info@mapir.camera (bao gồm cả nhật ký gỡ lỗi)
+* 📧 **Email**: info@mapir.camera (kèm theo Nhật ký gỡ lỗi)
 * 🌐 **Hỗ trợ**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Câu hỏi thường gặp**: [Câu hỏi thường gặp](../faq.md)
-* 📖 **Tài liệu**: [ Hướng dẫn sử dụng Chloros](../)***
-
-## Tóm tắt: Công việc hoàn thành quy trình
-
-Bây giờ bạn đã hoàn thành xong bộ xử lý Chloros:
-
-1. ✅ **Dự án đã tạo** - Xem [Dự án](../projects.md)
-2. ✅ **Đã thêm tệp** - Xem [Thêm tệp](adding-files-to-a-project.md)
-3. ✅ **Cài đặt điều chỉnh** - Xem [Điều chỉnh cài đặt dự án](adjusting-project-settings.md)
-4. ✅ **Mục tiêu được đánh dấu** - Xem [Chọn hình ảnh tiêu điểm](choosing-target-images.md)
-5. ✅ **Đã xử lý bắt đầu** - Xem [Bắt xử lý bắt đầu](starting-the-processing.md)
-6. ✅ **Tiến trình giám sát** - Xem [Giám sát quá trình xử lý](monitoring-the-processing.md)
-7. ✅ **Kết quả đã được đánh giá**- Trang này**Hình ảnh phổ biến đã được chỉnh sửa, hiệu chỉnh mức độ phản xạ của bạn đã sẵn sàng để phân tích!**
+* 📖 **Tài liệu**: [Hướng dẫn sử dụngChloros
+](../)
 
 ***
 
-##Tài nguyên bổ sung
+## Tóm tắt: Quy trình làm việc hoàn chỉnh
+
+Bây giờ bạn đã hoàn tất toàn bộ quy trình xử lýChloros
+:
+
+1. ✅ **Tạo dự án** - Xem [Dự án](../projects.md)
+2. ✅ **Thêm tệp** - Xem [Thêm tệp](adding-files-to-a-project.md)
+3. ✅ **Điều chỉnh cài đặt** - Xem [Điều chỉnh cài đặt dự án](adjusting-project-settings.md)
+4. ✅ **Đánh dấu mục tiêu** - Xem [Chọn hình ảnh mục tiêu](choosing-target-images.md)
+5. ✅ **Bắt đầu xử lý** - Xem [Bắt đầu xử lý](starting-the-processing.md)
+6. ✅ **Theo dõi tiến trình** - Xem [Theo dõi quá trình xử lý](monitoring-the-processing.md)
+7. ✅ **Xem lại kết quả** - Trang này**Các hình ảnh đa phổ đã được hiệu chuẩn và hiệu chỉnh độ phản xạ của bạn đã sẵn sàng để phân tích!**
+
+***
+
+## Tài nguyên bổ sung
 
 ### Tính năng nâng cao
 
-* [**Image Viewer**](../image-viewer-gui/opening-an-image-full-screen.md) - Tương tác trực quan hóa và phân tích
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Kiểm tra tùy chỉnh chỉ mục
-* [**Đa phổ chỉ mục công thức**](../project-settings/multispectral-index-formulas.md) - Tham chiếu đầy đủ chỉ mục
+* [**Trình xem hình ảnh**](../image-viewer-gui/opening-an-image-full-screen.md) - Trực quan hóa và phân tích tương tác
+* [**Môi trường thử nghiệm chỉ số/LUT**](../image-viewer-gui/index-lut-sandbox.md) - Thử nghiệm chỉ số tùy chỉnh
+* [**Công thức chỉ số đa phổ**](../project-settings/multispectral-index-formulas.md) - Tài liệu tham khảo đầy đủ về chỉ số
 
-###Tự động hóa & Tích hợp
+### Tự động hóa &amp; Tích hợp
 
-* [**Tài liệu CLI**](../CLI.md) - Xử lý lệnh dòng hàng
-* [**Python SDK**](../api-python-sdk.md) - Tự động hóa theo chương trình
-* [**Chloros+ Tính năng**](../#chloros) - Khả năng xử lý nâng cao
+* [**Tài liệuCLI**](../CLI.md) - Xử lý hàng loạt qua dòng lệnh
+* [**SDK
+Python
+**](../api-python-sdk.md) - Tự động hóa lập trình
+* [**Chloros
++ Tính năng**](../#chloros) - Khả năng xử lý nâng cao
 
-### Hỗ trợ & Tập tin học tập
+### Hỗ trợ &amp; Học tập
 
-* [**FAQ**](../faq.md) - Đã trả lời các câu hỏi thường gặp
-* [**Mục tiêu chuẩn**](../calibration-targets.md) - Tìm hiểu về phản xạ chuẩn
+* [**Câu hỏi thường gặp (FAQ)**](../faq.md) - Trả lời các câu hỏi thường gặp
+* [**Mục tiêu hiệu chuẩn**](../calibration-targets.md) - Hiểu về hiệu chuẩn độ phản xạ
 * [**Máy ảnh được hỗ trợ**](../supported-cameras.md) - Phần cứng tương thích

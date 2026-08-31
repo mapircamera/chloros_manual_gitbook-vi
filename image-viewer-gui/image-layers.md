@@ -1,331 +1,282 @@
-# Lớp hình ảnh
+# Các lớp hình ảnh
 
-Trình đơn thả xuống Lớp hình ảnh trong Trình xem hình ảnh Chloros cho phép bạn chuyển đổi nhanh chóng giữa các phiên bản khác nhau của cùng một hình ảnh - từ ảnh chụp ban đầu đến đầu ra phản xạ được xử lý và hình ảnh chỉ mục được tính toán.
+**Menu thả xuống &quot;Lớp&quot;** ở góc trên bên phải của Trình xem hình ảnh cho phép bạn chuyển đổi giữa các phiên bản khác nhau của hình ảnh đang xem — từ hình ảnh gốc cho đến từng sản phẩm đã qua xử lý và các hình ảnh chỉ mục được tính toán — mà không cần thoát khỏi trình xem.
 
 ## Lớp hình ảnh là gì?
 
-Trong Chloros, **lớp** đề cập đến các hình ảnh đầu khác nhau có sẵn cho một hình ảnh nguồn duy nhất. Khi bạn xử lý hình ảnh, Chloros sẽ tạo nhiều phiên bản:
+Một &quot;lớp&quot; trongChloros
 
-* **Hình ảnh gốc** (tệp JPG và RAW từ máy ảnh của bạn)
-* **Đầu ra được điều chỉnh bằng cách phản xạ** (nếu điều chỉnh bằng cách kích hoạt phản xạ)
-* **Tiêu điểm hình ảnh** (nếu hình ảnh chứa hiệu chỉnh tiêu điểm mục)
-* **Chỉ mục hình ảnh**(NDVI, NDRE, GNDVI, v.v. if chỉ mục đã được định cấu hình)** Trình đơn thả xuống Bộ chọn**ở phía trên bên phải của Trình xem hình ảnh cho phép bạn chuyển đổi cài đặt ngay lập tức giữa các phiên bản này mà không cần phải rời khỏi trình xem.***
+là một **tệp sản phẩm**được đăng ký dựa trên một hình ảnh nguồn. Quá trình nhập dữ liệu cung cấp cho bạn các tệp nguồn; quá trình xử lý sẽ thêm một lớp cho mỗi sản phẩm được tạo ra trong lần chạy đó. Các tệp được xuất vẫn giữ tên tệp nguồn — chính**thư mục** là yếu tố xác định sản phẩm, và tên lớp chính là nhãn màChloros
 
-## Các loại lớp có sẵn
+gán cho thư mục đó.
 
-### JPG
+<!-- SCREENSHOT-NEEDED: Image Viewer full screen with the layer dropdown open on a processed LATTICE multispectral image, showing the full list: TIFF base, RAW (Original), RAW (Debayered), RAW (Preview), RAW (Radiance), RAW (Reflectance), and one RAW (NDVI Index) entry. -->
 
-* Hình ảnh xem trước gốc JPG từ máy ảnh của bạn
-* Luôn có sẵn cho tất cả các hình ảnh
-* Chưa được xử lý, như được chụp bởi máy ảnh
-* Tải và hiển thị nhanh nhất
+***
 
-**Thời điểm xem:**
+## Danh sách lớp
 
-* Xem trước ảnh chụp nhanh gốc
-* Kiểm tra bố cục và hình ảnh khung
-* Xác minh chất lượng đã chụp trước khi xử lý
+### Luôn hiển thị
 
-### NGUYÊN (Bản gốc)
+| Lớp | Là gì |
+| --- | --- |
+| **JPG**(hoặc**PNG
 
-* Gốc dữ liệu gốc của biến cảm biến RAW từ máy ảnh của bạn
-* Đã gỡ bỏ mà không áp dụng quá trình xử lý bài đăng
-* Độ sâu bit cao hơn JPG (thường là biến dữ liệu 12 bit hoặc 14 bit)
+**/**TIFF
 
-**Thời điểm xem:**
+**) | Tệp gốc được nhập cùng với dữ liệu chụp.Survey3
 
-* Kiểm tra gốc biến thể dữ liệu chất lượng
-* Kiểm tra các vấn đề về biến hoặc hiện tượng
-* So sánh kết quả trước/sau quá trình xử lý
+nhập tệp `.JPG` bên cạnh mỗi tệp `.RAW`; dữ liệu chụp từ LATTICE mang theo bản xem trước hiển thịPNG
 
-### RAW (Mục tiêu)
+hoặcTIFF
 
-* Chỉ xuất hiện đối với các hình ảnh được xác định có chứa tiêu chuẩn tín hiệu
-* Hiển thị ảnh gốc RAW với mục tiêu được phát hiện
-* Được sử dụng để xác định công việc phát hiện mục tiêu đã thành công
+. Được gắn nhãn theo những gì thực sự được nhập |
+| **RAW (Gốc)** | Khung hình thô nguồn, đã được khử hiệu ứng Bayer để hiển thị mà không áp dụng bất kỳ chỉnh sửa nào. Có sẵn ngay từ khi nhập — không cần xử lý |
 
-**Thời điểm xem:**
+Một bản chụp LATTICE có tệp gốc **chính là** khung hình RAW của nó sẽ không có mục gốc riêng biệt: `RAW (Original)` đã bao gồm nó.
 
-* Xác định tiêu chuẩn nhận dạng đã được xác định chính xác
-* Kiểm tra chất lượng hình ảnh tiêu điểm
-* Khắc phục tiêu chuẩn cố định
+### Sản phẩm xử lý từ dữ liệu tham chiếu (Survey3
+
+)
+
+| Lớp | Được ghi vào | Tồn tại khi |
+| --- | --- | --- |
+| **RAW (Mục tiêu)** | — | Khung hình được xác định là chứa mục tiêu hiệu chuẩn |
+| **RAW (Độ phản xạ)** | `Reflectance_Calibrated_Images/` | Quá trình hiệu chuẩn độ phản xạ đã diễn ra thành công trên khung hình này |
+| **Đã hiệu chỉnh hiện tượng tối góc**| `Vignette_Corrected_Images/` | Khung hình không thể hiệu chuẩn phản xạ**và** *chức năng hiệu chỉnh hiện tượng tối góc* đang bật |
+| **Phản ứng cảm biến**| `Sensor_Response_Images/` | Không thể hiệu chuẩn độ phản xạ cho khung hình này**và** *chức năng chỉnh hiệu ứng viền tối* đã bị tắt |
+| **Đã cân bằng trắng** | `White_Balanced_Images/` | Đã tạo sản phẩm đã cân bằng trắng |
 
 {% hint style="info" %}
-**Lớp mục**: Lớp này chỉ hiển thị trong danh sách thả xuống dành cho các hình ảnh có chứa hiệu chỉnh tiêu điểm. Ảnh chụp thông thường sẽ không có tùy chọn này.
+**Chức năng &quot;Chỉnh sửa hiện tượng tối góc&quot; và &quot;Phản hồi cảm biến&quot; là hai tùy chọn thay thế cho nhau, không bao giờ sử dụng cả hai cùng lúc.** Chỉ có đúng một sản phẩm dự phòng chưa được hiệu chỉnh cho mỗi lần chạy, đối với mỗi mẫu máy ảnh, và công tắc *Chỉnh sửa hiện tượng tối góc* sẽ chọn sản phẩm đó. Xem [Cài đặt Dự án](../project-settings/project-settings.md).
 {% endhint %}
 
-### RAW (Phản xạ)
+### Các cấp độ LATTICE
 
-* Hình ảnh đầu ra phản xạ được điều chỉnh
-* Đã chỉnh sửa chi tiết (nếu được bật trong quá trình xử lý)
-* Độ phản xạ được chỉnh sửa bằng mục tiêu dữ liệu (nếu được bật)
-* Băng tần TIFF với tất cả các kênh camera
-* Pixel giá trị biểu thị tỷ lệ phần trăm phóng xạ (khi sử dụng phần trăm chế độ)
-* Các tiện ích sẵn sàng hoạt động với [Index/LUT Sandbox](index-lut-sandbox.md)
+LATTICE ghi lại các cấp độ này trong một lần xử lý duy nhất. Các cấp độ nào tồn tại phụ thuộc vào các tùy chọn xuất riêng cho từng sản phẩm trong Cài đặt Dự án và vào những gì áp dụng cho máy ảnh.
 
-**Thời điểm xem:**
+| Lớp | Ghi vào | Áp dụng cho |
+| --- | --- | --- |
+| **RAW (Đã loại bỏ hiệu ứng Bayer)** | `Debayered_Images/` | Máy ảnhRGB
 
-* Kiểm tra tiêu chuẩn kết quả
-* Kiểm tra tiêu chuẩn chất lượng
-* Kiểm tra pixel giá trị để có khoa học chính xác
-* So sánh với bản gốc để xem hiệu chỉnh hiệu ứng
+và đa quang phổ |
+| **RAW (Xem trước)** | `Preview_Images/` | Đa quang phổ (kéo dãn màu giả) |
+| **Cân bằng trắng** | `Preview_Images/` | Máy ảnh chính củaRGB
 
-{% hint style="success" %}
-**Khuyến nghị**: Sử dụng lớp RAW (Phản xạ) khi kiểm tra pixel giá trị cho phép đo và phân tích khoa học.
+— bản xem trước củaRGB
+
+được đăng ký dưới tên này để khớp với lớpSurvey3
+
+cùng tên |
+| **RAW (Bức xạ)** | `Radiance_Images/` | Chỉ đa quang phổ |
+| **RAW (Độ phản xạ)** | `Reflectance_Calibrated_Images/` | Chỉ đa quang phổ, và chỉ khi có bản ghi hướng xuống tương ứng `.daq` hoặc mục tiêu trong khung hình đã qua kiểm tra chất lượng (QA) bao phủ khung hình |
+
+RGB
+
+các camera chính không có đo quang phổ theo dải, do đó độ rạng rỡ và độ phản xạ sẽ bị bỏ qua đối với chúng với lý do **không áp dụng** — nhật ký sẽ ghi rõ điều này thay vì báo lỗi im lặng.
+
+### Các lớp chỉ số, LUT và sandbox
+
+| Mẫu lớp | Ví dụ | Nguồn gốc |
+| --- | --- | --- |
+| **RAW (Chỉ số `<INDEX>`)** | `RAW (NDVI Index)` | Mỗi chỉ số được cấu hình trong Cài đặt Dự án, được tính toán trong quá trình xử lý |
+| **`<INDEX>` LUT** | `NDVI LUT` | Phiên bản được ánh xạ màu của một chỉ mục |
+| **Sandbox (`<Name>` `<Index\|LUT>` `<NNN>`)** | `Sandbox (NDVI LUT 003)` | Mỗi lần xuất [Chỉ mục/LUT Sandbox](index-lut-sandbox.md) sẽ có một bản |
+
+Nếu cùng một tên chỉ mục được cấu hình nhiều lần với các thiết lập khác nhau, các bản cấu hình từ lần thứ hai trở đi sẽ được thêm số vào tên (`RAW (NDVI2 Index)`) để các lớp vẫn có thể phân biệt được.
+
+***
+
+## Sử dụng trình chọn lớp
+
+1. Mở hình ảnh ở chế độ toàn màn hình bằng cách nhấp vào hình thu nhỏ trong lưới
+2. Nhấp vào **menu thả xuống lớp** ở góc trên bên phải của trình xem
+3. Chọn một lớp — hình ảnh sẽ được cập nhật ngay lập tức
+
+Menu thả xuống sẽ hiển thị **JPG, RAW (Original), RAW (Target), RAW (Reflectance)** trước tiên, theo thứ tự đó, và liệt kê tất cả các tùy chọn khác sau đó theo thứ tự các sản phẩm được đăng ký.
+
+### Ưu tiên lớp khi điều hướng
+
+Nhấn phím **←**/**→** để chuyển sang hình ảnh tiếp theo và cố gắng giữ nguyên lớp hiện tại:
+
+1. **Ưu tiên khớp chính xác** — nếu hình ảnh tiếp theo có lớp cùng tên, hệ thống sẽ chuyển sang lớp đó. Đây là cơ chế giúp bạn duy trì ở lớp `RAW (NDVI Index)` khi duyệt qua toàn bộ bộ dữ liệu
+2. **Sau đó là khớp theo loại** — lớp chỉ mục sẽ tìm bất kỳ lớp chỉ mục nào, lớp LUT tìm bất kỳ lớp LUT nào, lớp phản xạ tìm lớp phản xạ, lớp mục tiêu tìm lớp mục tiêu, lớp gốc tìm lớp gốc, lớp cơ sở tìm lớp cơ sở
+3. **Tiếp theo, chỉ áp dụng cho các lớp xuất** — tên lớp vẫn được giữ nguyên ngay cả khi danh sách lớp chưa cập nhật kịp, vì tệp đã tồn tại trên đĩa. Đây chính là cơ chế cho phép bạn xem trước sản phẩm trong khi quá trình chạy vẫn đang ghi chúng
+4. **Trong các trường hợp khác** — lớp đầu tiên có sẵn, thường là hình ảnh gốc
+
+Các tệp sidecar `.daq` và `.csv` trong dự án sẽ bị bỏ qua khi điều hướng bằng phím mũi tên, do đó việc di chuyển qua các hình ảnh sẽ không bao giờ dừng lại ở bản ghi cảm biến ánh sáng.
+
+Chức năng thu phóng và di chuyển cũng được áp dụng trên các hình ảnh, giúp việc so sánh trước/sau tại cùng một vị trí trường trở nên đơn giản.
+
+***
+
+## Hiểu giá trị pixel theo từng lớp
+
+[Bảng Giá trị Con trỏ](opening-an-image-full-screen.md#cursor-values) hiển thị giá trị thực theo từng kênh tại vị trí con trỏ của bạn, với đơn vị mà lớp đó được lưu trữ. Các cột của bảng này thay đổi tùy theo lớp:
+
+| Lớp | Đơn vị hiển thị | Ghi chú |
+| --- | --- | --- |
+| Base (JPG /PNG
+
+/TIFF
+
+preview) | DN, 0–255 | Giá trị hiển thị, đã được hiệu chỉnh gamma trênRGB
+
+. Chỉ dành cho kiểm tra trực quan |
+| RAW (Bản gốc) | DN | Số liệu kỹ thuật số thô từ cảm biến. Trục biểu đồ tần suất cho biết độ sâu: 255 (8-bit), 4095 (12-bit) hoặc 65535 (16-bit) |
+| RAW (Đã loại bỏ hiệu ứng Bayer) | DN | Tuyến tính, không kéo giãn hiển thị |
+| RAW (Xem trước) / Đã cân bằng trắng | DN | Sản phẩm hiển thị — đã được kéo giãn hoặc hiệu chỉnh gamma. Không dùng để đo lường |
+| RAW (Độ rạng rỡ) | **W/m²/sr/nm** | Độ rạng rỡ vật lý Float32. Không có cột DN |
+| RAW (Độ phản xạ) | DN **và %** | Phần trăm được tính toán dựa trên thang đo riêng của tệp đó — xem bên dưới |
+| Xuất chỉ số / LUT / sandbox | Giá trị chỉ số, hoặc các thành phầnRGB
+
+| Tệp chỉ số kênh đơn báo cáo giá trị chỉ số; tệp LUT ánh xạ màu báo cáo các thành phầnRed
+
+/Green
+
+/Blue
+
+|
+
+### Độ phản xạ: thang đo được xác định theo từng tệp
+
+{% hint style="warning" %}
+**&quot;Chia cho 65.535&quot; chỉ chính xác đối vớiSurvey3
+
+.** Độ phản xạ LATTICE được lưu trữ theo một thang đo khác, và việc trộn lẫn hai hệ số chia này là cách phổ biến nhất dẫn đến các giá trị độ phản xạ chỉ bằng một nửa so với giá trị thực tế.
 {% endhint %}
 
-### RAW (Chỉ số NDVI)... và tương tự
+| Nguồn | Giá trị DN tương ứng với hệ số phản xạ 1.0 | Được xác định bởi |
+| --- | --- | --- |
+| **LATTICE**(M3C / M3M) |**32768** | Thẻ XMP `Chloros:PixelScale=32768` được gắn vào mọi tệp xuất độ phản xạ LATTICE. Dải động 2× có nghĩa là ρ lớn hơn 1.0 có thể được biểu diễn thay vì bị cắt bớt |
+| **Survey3**| **65535** | Không có thẻ tỷ lệ XMP &quot;Chloros
 
-* Hình ảnh chỉ số thực vật được tính toán (NDVI trong ví dụ này)
-* Thay đổi chỉ mục tên dựa trên bất kỳ mục nào được cấu hình trong quá trình xử lý
-* Ví dụ: RAW (Chỉ số NDVI), RAW (Chỉ số NDRE), RAW (Chỉ số GNDVI), v.v.
-* Hình ảnh thang độ xám đơn hiển thị kết quả tính toán chỉ số
-* Một lớp xuất hiện cho mỗi mục được định cấu hình trong cài đặt dự án
+&quot; — quá trình hiệu chuẩnSurvey3
 
-**Mục chỉ tên có thể có:**
+ghi giá trị ρ × dtype-max và cắt bớt tại 1.0 |
 
-* RAW (Chỉ số NDVI)
-* RAW (Chỉ số NDRE)
-* RAW (Chỉ số GNDVI)
-* RAW (Chỉ số OSAVI)
-* RAW (Chỉ số EVI)
-* RAW (Chỉ số SAVI)
-* Và nhiều hơn nữa... (xem [Công thức chỉ số đa phổ](../project-settings/multispectral-index-formulas.md))
+Đối với GIS và lập trình kịch bản: đọc giá trị `Chloros:PixelScale` từ tệp và chia cho giá trị đó. Nếu thẻ này không có, tệp sẽ sử dụng tỷ lệ quy mô mặc định củaSurvey3
 
-**Thời điểm xem:**
+(65535). Trình xem, môi trường thử nghiệm chỉ mục/LUT và quá trình xuất chỉ mục đều xác định tỷ lệ này theo cách tương tự, do đó con số hiển thị tại vị trí con trỏ chính là giá trị được sử dụng trong các phép tính của chỉ mục.
 
-* Kiểm tra chỉ số tính toán kết quả
-* Kiểm tra số chỉ giá trị phạm vi
-* Xác định lĩnh vực quan tâm
-* Xác minh chỉ mục hình ảnh trước khi sử dụng trong GIS hoặc phân tích
+Lưu trữ theo định dạng cụ thể dựa trên tỷ lệ quy mô đó:
 
-***
+* **TIFF
 
-## Use Use Layer Selector
+(32-bit, Phần trăm)** lưu trữ DN / 65535 dưới dạng số thực
+* **PNG
 
-### Mở menu thả xuống
+(8-bit)**và**JPG (8-bit)** lưu trữ DN × 255 / 65535
+* Một **tệp xuất 8-bitTIFF
 
-1. Mở hình ảnh ở chế độ toàn màn hình (nhấp vào bất kỳ hình ảnh thu nhỏ nào trong Trình xem Hình ảnh)
-2. Xác định vị trí **menu thả xuống lớp** ở góc trên bên phải của trình xem
-3. Trình đơn thả xuống hiển thị lớp đã chọn (ví dụ: "JPG")
-4. Click vào menu thả xuống để xem tất cả các lớp có sẵn
+từ nguồn 8-bit** sẽ bị cắt giới hạn trong khoảng 0–255 thay vì được điều chỉnh tỷ lệ, và cố ý không chứa thẻ tỷ lệ. Bảng điều khiển chỉ hiển thị giá trị DN cho các tệp này, không có cột phần trăm
 
-### Chuyển lớp
+### Phạm vi giá trị chỉ số
 
-1. Click vào menu thả xuống lớp để mở danh sách
-2. Tất cả các lớp có sẵn cho hình ảnh hiện tại đều được hiển thị
-3. Bấm vào lớp bất kỳ để chuyển sang phiên bản đó
-4. Cập nhật hình ảnh ngay lập tức để hiển thị lớp đã chọn
+| Nhóm chỉ số | Phạm vi điển hình | Giá trị |
+| --- | --- | --- |
+| Chênh lệch chuẩn hóa (NDVI
 
-**Chuyển đổi nhanh:**
+,GNDVI
 
-* Danh sách thả xuống ghi nhớ lựa chọn cuối cùng của bạn
-* Khi điều chỉnh đến hình ảnh tiếp theo, Chloros cố gắng trình diễn cùng loại lớp
-* If lớp đó không tồn tại trên hình ảnh tiếp theo, nó sẽ mặc định là JPG
+,NDRE
 
-### Tính khả năng của lớp
+, ENDVI…) | −1 đến +1 | Thực vật khỏe mạnh thường từ 0,4–0,9; đất trống gần 0; nước có giá trị âm |
+| Chỉ số điều chỉnh theo đất (SAVI
 
-Không phải tất cả các lớp đều có sẵn cho mọi hình ảnh:
+,OSAVI
 
-**Luôn có sẵn:*** ✅ JPG (mỗi hình ảnh đều có bản xem trước JPG)**Có điều kiện:**
+, MSAVI2…) | khoảng −1 đến +1,5 | Giá trị tương tự nhưNDVI
 
-* ⚠️ RAW (Bản gốc) - Chỉ khi ảnh được chụp ở chế độ RAW hoặc RAW+JPG
-* ⚠️ RAW (Mục tiêu) - Chỉ khi hình ảnh chứa hiệu chỉnh tiêu điểm được phát hiện
-* ⚠️ RAW (Phản xạ) - Chỉ sau khi xử lý với tính năng chỉnh sửa chế độ phản xạ được bật
-* ⚠️ RAW (\[Index] Index) - Chỉ sau khi xử lý các mục được cấu hình chỉ mục
+nhưng đã loại bỏ nền đất |
+| Tỷ lệ (GRVI
+
+,GCI
+
+, MSR, CIRE…) | không giới hạn phía trên | Tỷ lệ tăng không giới hạn khi dải mẫu số tiến tới 0 |
+|EVI
+
+/LAI
+
+| 0 đến ~1, 0 đến ~3,5 | Mây và các pixel bão hòa khác đẩy cả hai giá trị ra khỏi phạm vi — hãy che chúng lại trước |
+
+Xem [Công thức chỉ số đa quang phổ](../project-settings/multispectral-index-formulas.md) để biết công thức chính xác đằng sau mỗi cài đặt sẵn.
 
 ***
 
-##Độ bền của lớp
+## Quy trình làm việc thông thường
 
-### Điều hướng giữa các hình ảnh
+### So sánh trước / sau
 
-Khi bạn điều chỉnh một hình ảnh khác (sử dụng mũi tên hoặc nhấp vào hình thu nhỏ):**Ưu tiên lớp được giữ nguyên:**
+1. Chọn **RAW (Original)** và lưu ý hiện tượng tối góc và các giá trị chưa được hiệu chỉnh
+2. Chuyển sang **RAW (Reflectance)**
 
-* Nếu xem "RAW (Phản xạ)", hình ảnh tiếp theo hiển thị "RAW (Phản xạ)" (nếu có)
-* Nếu xem "RAW (Chỉ mục NDVI)", hình ảnh tiếp theo hiển thị "RAW (Chỉ mục NDVI)" (nếu có)
-* If không tồn tại cùng một lớp, mặc định là JPG
+3. So sánh — hiện tượng tối góc đã được loại bỏ, các giá trị đã được hiệu chuẩn. Tính năng thu phóng và di chuyển được giữ nguyên, do đó bạn đang xem cùng một khu vực mặt đất
 
-**Mẫu công việc của quy trình:**
+### Xem xét một chỉ số trên toàn bộ bộ ảnh
 
-1. Mở Ảnh 1, chuyển sang RAW (Chỉ số NDVI)
-2. Nhấn → để xem Hình 2
-3. Hình ảnh 2 tự động hiển thị lớp RAW (NDVI Index)
-4. Tiếp tục điều hướng - tất cả hình ảnh hiển thị lớp NDVI
-5. Rất hiệu quả để xem chỉ mục kết quả nhận xét trên nhiều hình ảnh
+1. Mở hình ảnh đã xử lý đầu tiên và chọn lớp chỉ số
+2. Nhấn **→** nhiều lần — lớp chỉ số sẽ theo bạn từ hình ảnh này sang hình ảnh khác
+3. Theo dõi biểu đồ histogram ở thanh bên trong quá trình xem: khung hình nào có sự thay đổi đột ngột trong phân bố giá trị thì cần xem xét kỹ hơn
 
-***
+### Xác minh mục tiêu hiệu chuẩn
 
-## Quy trình công việc chung
+1. Chọn **RAW (Mục tiêu)** trên một khung hình mục tiêu
+2. Xác nhận mục tiêu hiển thị rõ ràng và được phát hiện
+3. Chuyển sang khung hình mục tiêu tiếp theo — lớp mục tiêu sẽ theo sau
 
-### Quy trình 1: Trước/Sau so sánh
+### Kiểm tra độ chính xác của các giá trị phản xạ
 
-**Mục tiêu**: So sánh ảnh gốc và ảnh đã chỉnh sửa
+1. Chọn **RAW (Phản xạ)**
 
-1. Mở hình ảnh đã được xử lý trong Image Viewer
-2. Choose **RAW (Bản gốc)** từ danh sách thả xuống
-3. Lưu ý các chi tiết giá trị và chưa được hiệu chỉnh
-4. Chuyển sang **RAW (Phản xạ)** từ danh sách thả xuống
-5. So sánh - loại bỏ chi tiết, hiệu chỉnh giá trị
+2. Đọc cột**%** trong bảng Giá trị Con trỏ — giá trị này đã được chuẩn hóa chính xác cho tệp đó
+3. Kiểm tra chéo với các vật liệu đã biết trong khung hình: thực vật khỏe mạnh có giá trị phản xạ xanh lá cây (NIR
 
-### Quy trình 2: Đánh giá chỉ mục
-
-**Mục tiêu**: Xem xét kết quả nhanh NDVI trên dữ liệu
-
-1. Mở hình ảnh được xử lý đầu tiên
-2. Chọn **RAW (Chỉ mục NDVI)** từ danh sách thả xuống
-3. Sử dụng mũi tên → để chuyển sang hình ảnh tiếp theo
-4. Lớp NDVI tự động tồn tại
-5. Tiếp tục xem tất cả các hình ảnh, kiểm tra các mẫu NDVI
-6. Chuyển sang **RAW (Chỉ số NDRE)** để so sánh
-
-### Quy trình 3: Xác định mục tiêu
-
-**Mục tiêu**: Xác minh tất cả các mục tiêu hình ảnh được phát hiện chính xác
-
-1. Điều hướng đến hình ảnh tiêu điểm
-2. Choose **RAW (Mục tiêu)** từ danh sách thả xuống
-3. Xác minh rằng tiêu chuẩn các mục tiêu được nhìn thấy và rõ ràng
-4. Điều hướng đến hình ảnh tiêu điểm tiếp theo
-5. Lặp lại xác thực cho tất cả các mục tiêu
-
-### Quy trình 4: Kiểm tra pixel giá trị
-
-**Mục tiêu**: Kiểm tra các xạ trị giá trị để đảm bảo độ chính xác về mặt khoa học
-
-1. Mở trình xử lý ảnh
-2. Chọn lớp **RAW (Phản xạ)**
-
-3. Kích hoạt chế độ**Phần trăm pixel** (nút ở thanh công cụ bên phải)
-4. Di chuyển con trỏ qua các thực vật
-5. Xác minh pixel giá trị nằm trong phạm vi dự kiến (30-70% đối với NIR, 5-15% đối với Red)
-6. Kiểm tra các vùng đất, nước để có giá trị phù hợp
+) cao và giá trị đỏ thấp; mục tiêu hiệu chuẩn nên có giá trị phản xạ gần với giá trị đã công bố
 
 ***
 
-## Tìm hiểu pixel giá trị theo lớp
+## Khắc phục sự cố
 
-Các lớp khác nhau hiển thị các pixel giá trị phạm vi khác nhau:
+### Một lớp mà tôi mong đợi không có trong danh sách thả xuống
 
-### Lớp JPG
+**Nguyên nhân có thể**
 
-* **Phạm vi**: 0-255 (8-bit)
-* **Ý nghĩa**: Hiển thị giá trị, hiệu chỉnh gamma
-* **Sử dụng**: Chỉ kiểm tra bằng mắt, không dùng để đo khoa học
+* Hình ảnh chưa bao giờ được xử lý — chỉ có lớp nền và `RAW (Original)` tồn tại
+* Công tắc xuất sản phẩm chưa được chọn trong Cài đặt Dự án
+* Sản phẩm không áp dụng cho máy ảnh đó (độ rạng rỡ và độ phản xạ trên máy ảnh chínhRGB
 
-### NGUYÊN (Bản gốc)
+; bất kỳ chỉ số nào trên máy ảnh đơn dải M3M mono)
+* Quá trình hiệu chuẩn phản xạ không có dữ liệu để xử lý — không có vùng phủ sóng hướng xuống của `.daq` và không có mục tiêu trong khung hình đạt tiêu chuẩn QA — do đó khung hình đã chuyển về chế độ “Vignette Corrected” hoặc “Sensor Response”
 
-* **Phạm vi**: 0-65535 (16-bit)
-* **Ý nghĩa**: Số liệu cảm biến thô
-* **Sử dụng**: Kiểm tra hoạt động của biến cảm ứng, chưa chỉnh sửa
+**Cách xử lý**
 
-### RAW (Phản xạ)
+1. Kiểm tra nhật ký chạy:Chloros
 
-* **Phạm vi**: 0-65.535 (16-bit TIFF) hoặc 0,0-1,0 (Phần trăm 32-bit)
-* **Ý nghĩa**: Tỉ lệ phản xạ được chỉnh sửa
-* **Sử dụng**: Đo lường và phân tích khoa học**Đối với TIFF 16 bit:**Chia cho 65.535 để nhận phần trăm phản xạ**Đối đầu với phần trăm 32 bit:** Giá trị biểu thị trực tiếp phần trăm (độ phản xạ 0,5 = 50%)
+ghi lại thời điểm sản phẩm xuất yêu cầu không thể thực hiện được và lý do tại sao
+2. Kiểm tra các công tắc xuất theo từng sản phẩm trong [Cài đặt Dự án](../project-settings/project-settings.md)
+3. Xác nhận thư mục sản phẩm tồn tại trong cây kết quả đầu ra của dự án
+4. Xử lý lại với sản phẩm được bật
 
-### RAW (Chỉ mục hình ảnh)
+### Danh sách lớp trông có vẻ lỗi thời
 
-* **Phạm vi**: Thay đổi chỉ mục (Thường là -1,0 đến +1,0 đối với các chỉ số được chuẩn hóa)
-* **Ý nghĩa**: Kết quả tính toán chỉ số
-* **Ví dụ**:
-  * NDVI: -1 đến +1 (thực tế là 0,4 đến 0,9)
-  * NDRE: -1 đến +1 (phát hiện căng thẳng)
-  * EVI: 0 đến 1 (thảm thực vật được tăng cường)
+Chloros
 
-***
+sẽ quét lại các thư mục sản phẩm của dự án trong khi quá trình chạy đang diễn ra và khắc phục các đăng ký lớp bị thiếu dựa trên dữ liệu thực tế trên đĩa, do đó một lớp đã xuất thành công thường sẽ tự động xuất hiện trong lần quét tiếp theo. Việc chuyển sang cửa sổ khác rồi quay lại sẽ buộc hệ thống thực hiện quá trình xác định lại từ đầu.
 
-## Mẹo và cách thực hiện tốt nhất
+### Giá trị phản xạ chỉ bằng một nửa so với mức bình thường
 
-### Chuyển đổi hiệu quả lớp
+Rất có thể bạn đang chia tệp LATTICE cho 65535. Hãy sử dụng `Chloros:PixelScale` (32768), hoặc xem cột **%**, nơi giá trị này đã được áp dụng sẵn.
 
-* **Nhận thức về các phím tắt**: Mặc dù không có phím tắt cho các lớp nhưng mũi tên điều hướng (←/→) hoạt động trên tất cả các lớp
-* **Quy trình làm việc nhất quán**: Chọn một lớp (ví dụ: NDVI) và xem lại toàn bộ tập dữ liệu trước khi chuyển sang lớp khác
-* **So sánh nhanh**: Chuyển đổi giữa Bản gốc và Phản chiếu để xử lý chất lượng cụ thể
+### Lớp chỉ mục tồn tại nhưng hình ảnh trống
 
-### Cân nhắc về hiệu ứng
-
-* **JPG tải nhanh nhất**: Sử dụng để điều hướng nhanh qua nhiều hình ảnh
-* **Các lớp RAW tải xuống chậm hơn**: Độ phân giải và độ sâu bit cao hơn
-* **Lớp chỉ mục**: Tốc độ tương tự như lớp Phản chiếu
-* **Lần tải xuống chậm nhất**: Các lượt xem tiếp theo của cùng một lớp được lưu vào bộ nhớ đệm và nhanh hơn
-
-### Xác minh chất lượng
-
-* **Luôn kiểm tra RAW (Bản gốc)**: Xác minh nguồn dữ liệu chất lượng trước khi tin cậy các đầu ra được xử lý
-* **So sánh các lớp**: Sử dụng chuyển đổi lớp để xác thực trong quá trình xử lý hoạt động chính xác
-* **Kiểm tra chỉ mục vi phạm**: Sử dụng Pixel Percent chế độ với các chỉ mục lớp để xác định giá trị hợp lý***
-
-##Khắc phục sự cố
-
-### Lớp không có sẵn
-
-**Cố gắng**: Lớp dự kiến ​​​​không xuất hiện trong danh sách thả xuống**Nguyên nhân có thể:**
-
-* Hình ảnh chưa được xử lý (chỉ có JPG và RAW (Bản gốc))
-* Kích hoạt phản xạ đã bị vô hiệu hóa trong quá trình xử lý
-* Chỉ mục cụ thể chưa được định cấu hình trong Cài đặt dự án
-* Hình ảnh chỉ là tiêu điểm hình ảnh (không có chỉ mục nào được tạo cho tiêu điểm)
-
-**Giải pháp:**
-
-1. Xác minh hình ảnh đã được xử lý (kiểm tra đầu thư mục để tìm các tệp đã được xử lý)
-2. Kiểm tra cài đặt dự án để xác định các mục đã được định cấu hình
-3. Xử lý lại các mục mong muốn được kích hoạt
-
-### Hiển thị sai lớp
-
-**Sự cố**: Hình ảnh mở ở lớp không mong muốn**Lý do**: Ưu tiên lớp từ hình ảnh trước đó được chuyển tiếp nhưng lớp đó không tồn tại trên hình ảnh hiện tại**Giải pháp**: Chloros tự động quay lại JPG khi không có lớp thích hợp - đây là hành vi bình thường
-
-### Không thể nhìn thấy hiệu chỉnh tiêu điểm được tìm thấy
-
-**Cố gắng**: Lớp RAW (Mục tiêu) không hiển thị tính năng phát hiện mục**Nguyên nhân có thể:**
-
-* Mục tiêu không được phát hiện trong quá trình xử lý
-* Hình ảnh thực tế không chứa mục tiêu
-* Cài đặt tiêu điểm quá nghiêm ngặt
-
-**Giải pháp:**
-
-1. Kiểm tra lỗi gỡ lỗi nhật ký để biết thông báo "Đã tìm thấy mục tiêu"
-2. Xác minh hình ảnh thực sự chứa màn hình tiêu chuẩn mục tiêu
-3. Điều chỉnh cài đặt tiêu điểm trong Cài đặt dự án
-4. Xem [Chọn mục ảnh](../processing-images-gui/choosing-target-images.md)
-
-***
-
-## Tính năng liên quan
-
-### Công cụ xem ảnh
-
-Khi xem bất kỳ lớp nào, bạn có thể sử dụng:
-
-* **Điều khiển thu phóng**: Phóng to để kiểm tra chi tiết
-* **Pan**: Tinh và kéo để chuyển đổi xung quanh hình ảnh được phóng to
-* **Kiểm tra pixel giá trị**: Xem giá trị tại vị trí con trỏ
-* **Mũi điều hướng tên**: Di chuyển giữa các hình ảnh trong khi duy trì lớp
-* **Phần trăm pixel ở chế độ**: Chuyển đổi giữa màn hình DN và phần trăm
-
-Xem [Mở toàn màn hình hình ảnh](opening-an-image-full-screen.md) để biết đầy đủ tài liệu về Trình xem hình ảnh.
-
-### Hộp cát chỉ mục/LUT
-
-Để kiểm tra và trực tiếp hóa các chỉ mục tương tác:
-
-* **Tính chỉ số theo thời gian**: Kiểm tra các chỉ số khác nhau của công thức
-* **Ánh xạ màu LUT**: Áp dụng chuyển màu cho các chỉ số thang độ xám
-* **Xuất trực quan hóa**: Lưu hình ảnh màu chỉ mục
-
-Xem [Hộp cát Index/LUT](index-lut-sandbox.md) để biết chi tiết.
+Chỉ mục yêu cầu các dải phổ mà lớp của bạn không có — ví dụ: một chỉ mục đọc kênh thứ ba được áp dụng cho tệp một hoặc hai kênh. Chuyển sang lớp đa dải phổ (phản xạ hoặc đã loại bỏ hiệu ứng Bayer), hoặc chọn chỉ mục phù hợp với bộ lọc của máy ảnh.
 
 ***
 
 ## Các bước tiếp theo
 
-Bây giờ bạn đã hiểu các hình ảnh lớp:
-
-* [**Mở hình ảnh toàn màn hình**](opening-an-image-full-screen.md) - Hướng dẫn hoàn chỉnh về Trình xem hình ảnh
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Tương tác chỉ số trực quan
-* [**Đa phổ chỉ mục công thức**](../project-settings/multispectral-index-formulas.md) - Có sẵn chỉ số tham chiếu
-* [**Hoàn tất quá trình xử lý**](../processing-images-gui/finishing-the-processing.md) - Tìm hiểu kết quả xử lý đầu ra
+* [**Mở hình ảnh ở chế độ toàn màn hình**](opening-an-image-full-screen.md) — hiển thị con trỏ, biểu đồ histogram và điều khiển GSD
+* [**Hộp cát chỉ số/LUT**](index-lut-sandbox.md) — trực quan hóa chỉ số tương tác và xuất
+* [**Công thức chỉ số đa phổ**](../project-settings/multispectral-index-formulas.md) — tài liệu tham khảo về chỉ số
+* [**Hoàn tất quá trình xử lý**](../processing-images-gui/finishing-the-processing.md) — Cấu trúc thư mục đầu ra mà các lớp này trỏ đến
