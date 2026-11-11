@@ -146,7 +146,7 @@ for hint in result.get("summary", {}).get("hints", []):
 ```
 
 {% hint style="warning" %}
-**`process()` không phát sinh ngoại lệ khi một lần chạy không tạo ra hình ảnh nào.** Đây là điểm duy nhất mà SDK và CLI có sự khác biệt có chủ đích: `chloros-cli process` coi &quot;đã yêu cầu sản phẩm nhưng không có sản phẩm nào được ghi&quot; là lỗi và thoát với giá trị không bằng 0, trong khi SDK trả về kết quả bình thường và báo cáo tình trạng này thông qua `summary` / các gợi ý. Nếu quy trình của bạn cần dừng lại khi có lần chạy trống, hãy tự kiểm tra — kiểm tra `summary` (hoặc đếm số tệp trong thư mục dự án) thay vì dựa vào ngoại lệ.
+**`process()` không phát sinh ngoại lệ khi một lần chạy không tạo ra hình ảnh nào.** Đây là điểm duy nhất mà SDK và CLI có sự khác biệt có chủ đích: `chloros-cli process` coi "đã yêu cầu sản phẩm nhưng không có sản phẩm nào được ghi" là lỗi và thoát với giá trị không bằng 0, trong khi SDK trả về kết quả bình thường và báo cáo tình trạng này thông qua `summary` / các gợi ý. Nếu quy trình của bạn cần dừng lại khi có lần chạy trống, hãy tự kiểm tra — kiểm tra `summary` (hoặc đếm số tệp trong thư mục dự án) thay vì dựa vào ngoại lệ.
 {% endhint %}
 
 ## Smart Connect — phần cứng trực tiếp
@@ -165,7 +165,7 @@ with chloros_sdk.connect_camera("213800234") as cam:
 ```
 
 {% hint style="info" %}
-**Đường dẫn tương đối sẽ trỏ đến vị trí chạy skript của bạn (đã thay đổi trong phiên bản 1.3.0).** Với backend cục bộ, đường dẫn tương đối `output_dir` (bao gồm cả đường dẫn mặc định `"output"`) — và các đường dẫn khác mà backend mở (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — sẽ được giải quyết dựa trên thư mục làm việc của tập lệnh của bạn, do đó `cam.capture("output/")` ghi vào `<current folder>/output/`. Trong phiên bản 1.2.0, một backend đã cài đặt giải quyết các đường dẫn này trong thư mục cài đặt riêng của nó và báo lỗi &quot;Truy cập bị từ chối&quot;. Đối với backend từ xa, các đường dẫn được gửi nguyên văn như đã nhập.
+**Đường dẫn tương đối sẽ trỏ đến vị trí chạy skript của bạn (đã thay đổi trong phiên bản 1.3.0).** Với backend cục bộ, đường dẫn tương đối `output_dir` (bao gồm cả đường dẫn mặc định `"output"`) — và các đường dẫn khác mà backend mở (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — sẽ được giải quyết dựa trên thư mục làm việc của tập lệnh của bạn, do đó `cam.capture("output/")` ghi vào `<current folder>/output/`. Trong phiên bản 1.2.0, một backend đã cài đặt giải quyết các đường dẫn này trong thư mục cài đặt riêng của nó và báo lỗi "Truy cập bị từ chối". Đối với backend từ xa, các đường dẫn được gửi nguyên văn như đã nhập.
 {% endhint %}
 
 ### Mảng đồng bộ — `connect_array`

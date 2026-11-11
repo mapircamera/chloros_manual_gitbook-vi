@@ -21,7 +21,7 @@ Nhấp vào **Kết nối cảm biến** ở đầu thanh bên. Hộp thoại k�
 | **↻ Làm mới** | Quét lại phương thức truyền dữ liệu đã chọn ngay lập tức (tính năng này bị vô hiệu hóa trong quá trình quét BLE/Ethernet). |
 | **Kết nối cảm biến** | Tính năng này được kích hoạt khi thiết bị đã được chọn; tên sẽ được đổi thành `Connecting...` trong quá trình kết nối. |
 
-Quá trình phát hiện chỉ chạy **khi hộp thoại kết nối đang hiển thị trên màn hình** và lặp lại mỗi 15 giây chỉ cho giao thức đã chọn — việc chỉ mở tab sẽ không thực hiện quét. Khi gặp lỗi, hộp thoại sẽ hiển thị: *&quot;Kết nối thất bại. Hãy thử rút và cắm lại cảm biến, sau đó nhấp vào Kết nối một lần nữa.&quot;*
+Quá trình phát hiện chỉ chạy **khi hộp thoại kết nối đang hiển thị trên màn hình** và lặp lại mỗi 15 giây chỉ cho giao thức đã chọn — việc chỉ mở tab sẽ không thực hiện quét. Khi gặp lỗi, hộp thoại sẽ hiển thị: *"Kết nối thất bại. Hãy thử rút và cắm lại cảm biến, sau đó nhấp vào Kết nối một lần nữa."*
 
 Thanh bên sẽ tự động bật lên khi cảm biến đầu tiên của bạn kết nối.
 
@@ -43,9 +43,7 @@ Mỗi cảm biến được kết nối sẽ có một hàng (cộng thêm một
 | Biểu tượng kết nối | `DAQ-U` / `DAQ-M` / `DAQ-E`, hoặc biểu tượng màu xanh lá cây `REF` dành cho nhóm phản xạ Ambient+Object. |
 | Tên thiết bị | Mặc định là số sê-ri của cảm biến (danh tính ổn định để hiệu chuẩn, tên tệp `.daq` và khớp khi nhập); tên tùy chỉnh được lưu giữ theo từng dự án. |
 | Biểu tượng **Đã hiệu chuẩn** (màu xanh lá) | Hiển thị khi gói hiệu chuẩn xuất xưởng của cảm biến được tải, tức là các phổ là giá trị thực W/m²/nm. |
-| Biểu tượng **Có bản cập nhật** (màu hổ phách, chỉ dành cho DAQ-E) | Phiên bản firmware đang chạy cũ hơn so với hình ảnh đi kèm trong bản dựng Chloros
-
-này. Trong quá trình cập nhật, biểu tượng này hiển thị tiến trình thời gian thực (`Flashing… N%`, `Restarting sensor…`, sau đó là `Updated X → Y` hoặc `Failed`). |
+| Biểu tượng **Có bản cập nhật** (màu hổ phách, chỉ dành cho DAQ-E) | Phiên bản firmware đang chạy cũ hơn so với hình ảnh đi kèm trong bản dựng Chloros này. Trong quá trình cập nhật, biểu tượng này hiển thị tiến trình thời gian thực (`Flashing… N%`, `Restarting sensor…`, sau đó là `Updated X → Y` hoặc `Failed`). |
 | Mắt | Bật/tắt hiển thị cảm biến này trên biểu đồ. |
 | Bánh răng | Mở cửa sổ cài đặt riêng cho từng cảm biến (bên dưới). |
 | ✕ (màu đỏ) | Ngắt kết nối cảm biến hoặc xóa nhóm Môi trường xung quanh + Đối tượng. |
@@ -53,9 +51,9 @@ này. Trong quá trình cập nhật, biểu tượng này hiển thị tiến t
 Phía trên các hàng có hai nút:
 
 * **Kết nối cảm biến** — mở hộp thoại kết nối (đổi tên thành `Connecting...` khi đang bận).
-* **Ghi lại tất cả / Dừng tất cả**— bắt đầu hoặc dừng quá trình ghi lại `.daq` trên**tất cả**các cảm biến đã kết nối. Yêu cầu ít nhất một cảm biến**và một dự án đang mở** (chú thích: &quot;Mở dự án để ghi&quot;); nút này chuyển sang màu đỏ khi bất kỳ quá trình ghi nào đang chạy.
+* **Ghi lại tất cả / Dừng tất cả**— bắt đầu hoặc dừng quá trình ghi lại `.daq` trên**tất cả**các cảm biến đã kết nối. Yêu cầu ít nhất một cảm biến**và một dự án đang mở** (chú thích: "Mở dự án để ghi"); nút này chuyển sang màu đỏ khi bất kỳ quá trình ghi nào đang chạy.
 
-Trạng thái trống hiển thị &quot;Không có cảm biến nào được kết nối&quot;.
+Trạng thái trống hiển thị "Không có cảm biến nào được kết nối".
 
 <!-- SCREENSHOT-NEEDED: sensor sidebar with three rows — a DAQ-E showing both the green Calibrated pill and the amber Update Available pill, a DAQ-U row, and a green REF group row — plus the Connect Sensor and Record All buttons -->
 
@@ -84,15 +82,9 @@ Mở bằng biểu tượng bánh răng trên hàng cảm biến. Nội dung the
 
 nút</version\>
 
-**Cập nhật lên \<version\>** sẽ xuất hiện khi bản dựng Chloros
-
-này bao gồm hình ảnh phần mềm hệ thống DAQ-E mới hơn. Quá trình cập nhật diễn ra qua mạng trong khoảng 30 giây; cảm biến sẽ tự động khởi động lại và kết nối lại, và nếu quá trình truyền dữ liệu bị gián đoạn, phiên bản phần mềm hệ thống hiện tại vẫn được giữ nguyên. Tiến trình được truyền trực tiếp (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`), và ô này hiển thị `Up to date` khi là phiên bản hiện tại.
-* **Đồng bộ PTP** — trạng thái PTP trực tiếp (sẽ quay về `unknown`). Phần mềm DAQ-E phiên bản v1.2.0 trở lên tham gia tiêu chuẩn IEEE 1588 PTPv2 với vai trò đồng hồ nô lệ; phần backend của máy chủ Chloros
-
-là grandmaster PTP, và mọi thiết bị DAQ-E cùng máy ảnh LATTICE trên mạng LAN đều hoạt động như thiết bị nô lệ trong miền 0, duy trì độ lệch thời gian trong khoảng 1 ms.
-* **Mạng**— địa chỉ mà thiết bị đang sử dụng và cách thiết bị nhận được địa chỉ đó (DHCP, địa chỉ cục bộ liên kết hoặc tĩnh), cùng với cài đặt đã lưu sẽ được áp dụng sau khi khởi động lại.**Thay đổi…**mở một biểu mẫu:**Tự động (DHCP)**hoặc**IP tĩnh**kèm theo địa chỉ IP, mặt nạ mạng con và cổng mặc định (tùy chọn).**Áp dụng và khởi động lại** sẽ lưu cài đặt, khởi động lại cảm biến và kết nối lại thiết bị. Địa chỉ tĩnh nằm ngoài mạng của máy tính này sẽ bị từ chối, vì Chloros
-
-không thể kết nối với cảm biến sau khi khởi động lại; một hộp thoại cho phép vẫn xuất hiện, dành cho máy tính sẽ được gán lại địa chỉ hoặc định tuyến đến mạng đó. **Phát trực tiếp khi bật nguồn**thiết lập liệu cảm biến có bắt đầu phát trực tiếp ngay khi được cấp nguồn hay không, trước khi bất kỳ phần mềm nào kết nối.**Khởi động lại cảm biến** sẽ khởi động lại cảm biến và kết nối lại với các cài đặt hiện tại. Việc khởi động lại sẽ bị từ chối khi cảm biến đang ghi dữ liệu. Tính năng mới trong phiên bản 1.3.0.
+**Cập nhật lên \<version\>** sẽ xuất hiện khi bản dựng Chloros này bao gồm hình ảnh phần mềm hệ thống DAQ-E mới hơn. Quá trình cập nhật diễn ra qua mạng trong khoảng 30 giây; cảm biến sẽ tự động khởi động lại và kết nối lại, và nếu quá trình truyền dữ liệu bị gián đoạn, phiên bản phần mềm hệ thống hiện tại vẫn được giữ nguyên. Tiến trình được truyền trực tiếp (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`), và ô này hiển thị `Up to date` khi là phiên bản hiện tại.
+* **Đồng bộ PTP** — trạng thái PTP trực tiếp (sẽ quay về `unknown`). Phần mềm DAQ-E phiên bản v1.2.0 trở lên tham gia tiêu chuẩn IEEE 1588 PTPv2 với vai trò đồng hồ nô lệ; phần backend của máy chủ Chloros là grandmaster PTP, và mọi thiết bị DAQ-E cùng máy ảnh LATTICE trên mạng LAN đều hoạt động như thiết bị nô lệ trong miền 0, duy trì độ lệch thời gian trong khoảng 1 ms.
+* **Mạng**— địa chỉ mà thiết bị đang sử dụng và cách thiết bị nhận được địa chỉ đó (DHCP, địa chỉ cục bộ liên kết hoặc tĩnh), cùng với cài đặt đã lưu sẽ được áp dụng sau khi khởi động lại.**Thay đổi…**mở một biểu mẫu:**Tự động (DHCP)**hoặc**IP tĩnh**kèm theo địa chỉ IP, mặt nạ mạng con và cổng mặc định (tùy chọn).**Áp dụng và khởi động lại** sẽ lưu cài đặt, khởi động lại cảm biến và kết nối lại thiết bị. Địa chỉ tĩnh nằm ngoài mạng của máy tính này sẽ bị từ chối, vì Chloros không thể kết nối với cảm biến sau khi khởi động lại; một hộp thoại cho phép vẫn xuất hiện, dành cho máy tính sẽ được gán lại địa chỉ hoặc định tuyến đến mạng đó. **Phát trực tiếp khi bật nguồn**thiết lập liệu cảm biến có bắt đầu phát trực tiếp ngay khi được cấp nguồn hay không, trước khi bất kỳ phần mềm nào kết nối.**Khởi động lại cảm biến** sẽ khởi động lại cảm biến và kết nối lại với các cài đặt hiện tại. Việc khởi động lại sẽ bị từ chối khi cảm biến đang ghi dữ liệu. Tính năng mới trong phiên bản 1.3.0.
 
 Đối với nhóm Ambient+Object, cửa sổ cài đặt hình bánh răng chỉ hiển thị các cảm biến nguồn của nhóm, Tên Thiết Bị và Màu Đường Đồ Thị.
 
@@ -102,9 +94,7 @@ không thể kết nối với cảm biến sau khi khởi động lại; một 
 
 ### Lựa chọn nắp
 
-Menu thả xuống **Nắp** cho Chloros
-
-biết nắp vật lý nào được lắp trên bộ khuếch tán của cảm biến, và áp dụng hồ sơ hiệu chỉnh được đo tại nhà máy của nắp đó cho mọi phổ. Các tùy chọn phụ thuộc vào mẫu:
+Menu thả xuống **Nắp** cho Chloros biết nắp vật lý nào được lắp trên bộ khuếch tán của cảm biến, và áp dụng hồ sơ hiệu chỉnh được đo tại nhà máy của nắp đó cho mọi phổ. Các tùy chọn phụ thuộc vào mẫu:
 
 | Mẫu | Tùy chọn nắp |
 | --- | --- |
@@ -112,12 +102,10 @@ biết nắp vật lý nào được lắp trên bộ khuếch tán của cảm 
 | DAQ-M | Không có (cảm biến trần), Sunshine (bộ hiệu chỉnh cosin) |
 | DAQ-E | Không có (cảm biến trần), FOV 15°, FOV 45°, FOV 90°, Sunshine (bộ hiệu chỉnh cosin) |
 
-**Cài đặt mặc định cho mọi mẫu là Sunshine (bộ hiệu chỉnh cosin)** — MAPIR
-
-xuất xưởng mọi thiết bị DAQ với nắp Sunshine đã được lắp sẵn, và đây là cấu hình tiêu chuẩn khi sử dụng ngoài trời: góc nhìn bán cầu 180° với sai số cosin ≤ ±4 % đến 60° và ≤ ±4,5 % đến 70° (không khuyến nghị khi góc cao mặt trời dưới ~15°), có thiết kế giảm cường độ (~12×). Lựa chọn của bạn sẽ được lưu trong dự án.
+**Cài đặt mặc định cho mọi mẫu là Sunshine (bộ hiệu chỉnh cosin)** — MAPIR xuất xưởng mọi thiết bị DAQ với nắp Sunshine đã được lắp sẵn, và đây là cấu hình tiêu chuẩn khi sử dụng ngoài trời: góc nhìn bán cầu 180° với sai số cosin ≤ ±4 % đến 60° và ≤ ±4,5 % đến 70° (không khuyến nghị khi góc cao mặt trời dưới ~15°), có thiết kế giảm cường độ (~12×). Lựa chọn của bạn sẽ được lưu trong dự án.
 
 {% hint style="warning" %}
-**Lựa chọn nắp phải trùng khớp với nắp thực tế.**Cả cảm biến lẫn phần mềm đều không thể phát hiện nắp nào đang được lắp. Lựa chọn này quyết định cả quá trình hiệu chỉnh thời gian thực và thông tin ghi vào mỗi tệp `.daq` — với hệ số suy giảm ~12× của nắp Sunshine, việc thay nắp mà không khai báo sẽ khiến phổ bị hiệu chỉnh sai với hệ số xấp xỉ như vậy. (Tháo và lắp lại cùng một nắp sẽ lặp lại sai số khoảng 1,5 %.) Chỉ chọn**None (cảm biến trần)** khi nắp đã được tháo ra thực tế; trên DAQ-E, tùy chọn &quot;None&quot; vẫn áp dụng hồ sơ hình học mặc định của nhà sản xuất cho bộ khuếch tán kính lõm — đây không phải là thao tác không tác động — và DAQ-E không có nắp là cấu hình trên bàn thí nghiệm, không phải cấu hình được hỗ trợ trong thực địa.
+**Lựa chọn nắp phải trùng khớp với nắp thực tế.**Cả cảm biến lẫn phần mềm đều không thể phát hiện nắp nào đang được lắp. Lựa chọn này quyết định cả quá trình hiệu chỉnh thời gian thực và thông tin ghi vào mỗi tệp `.daq` — với hệ số suy giảm ~12× của nắp Sunshine, việc thay nắp mà không khai báo sẽ khiến phổ bị hiệu chỉnh sai với hệ số xấp xỉ như vậy. (Tháo và lắp lại cùng một nắp sẽ lặp lại sai số khoảng 1,5 %.) Chỉ chọn**None (cảm biến trần)** khi nắp đã được tháo ra thực tế; trên DAQ-E, tùy chọn "None" vẫn áp dụng hồ sơ hình học mặc định của nhà sản xuất cho bộ khuếch tán kính lõm — đây không phải là thao tác không tác động — và DAQ-E không có nắp là cấu hình trên bàn thí nghiệm, không phải cấu hình được hỗ trợ trong thực địa.
 {% endhint %}
 
 {% hint style="info" %}
@@ -150,13 +138,7 @@ Một thanh trên cùng cố định chứa **nút chuyển đổi giữa chế 
 Phía dưới biểu đồ ở chế độ xem danh sách, được làm mới mỗi 500 ms:
 
 * **Tất cả các mẫu**: Mẫu màu ánh sáng (sRGB từ CIE XYZ), Đã bão hòa (Có/Không), CIE 1931 X/Y/Z, Độ sắc màu x/y, CIE u′/v′, CCT (K), CRI (Ra), Bước sóng chủ đạo (nm), Bước sóng đỉnh (nm), Độ tinh khiết kích thích, Duv, CIE L\*/a\*/b\*, và Munsell H/V/C.
-* **Chỉ áp dụng cho cảm biến đã hiệu chuẩn**(bất kỳ model nào trong số DAQ-U / DAQ-M / DAQ-E sau khi gói hiệu chuẩn nhà máy được tải — biểu tượng**Calibrated** màu xanh lá trên hàng cảm biến là dấu hiệu nhận biết): Công suất tổng (W/m²), Lux quang (lx), Lux tối (lx), Tỷ lệ S/P, PPFD cùng PPFD Red
-
-/Green
-
-/Blue
-
-(µmol/m²/s), và các cường độ chiếu sáng opic — S-cone, Melanopic, Rhodopic, M-cone, L-cone (tất cả đều tính bằng W/m²).
+* **Chỉ áp dụng cho cảm biến đã hiệu chuẩn**(bất kỳ model nào trong số DAQ-U / DAQ-M / DAQ-E sau khi gói hiệu chuẩn nhà máy được tải — biểu tượng**Calibrated** màu xanh lá trên hàng cảm biến là dấu hiệu nhận biết): Công suất tổng (W/m²), Lux quang (lx), Lux tối (lx), Tỷ lệ S/P, PPFD cùng PPFD Red /Green /Blue (µmol/m²/s), và các cường độ chiếu sáng opic — S-cone, Melanopic, Rhodopic, M-cone, L-cone (tất cả đều tính bằng W/m²).
 
 <!-- SCREENSHOT-NEEDED: list view live data table for a DAQ-E showing both the colorimetric rows and the power-calibrated rows (Total Power, Photopic/Scotopic Lux, PPFD, opic irradiances) -->
 
@@ -169,12 +151,10 @@ Hai cảm biến được kết nối có thể được kết hợp thành mộ
 1. Trong chế độ xem lưới, nhấp vào **+**trên ô biểu đồ và chọn**Kết hợp Ánh sáng xung quanh + Đối tượng**.
 2. Chọn một cảm biến **Nguồn sáng môi trường**và một cảm biến**Quét đối tượng**(hai cảm biến riêng biệt), sau đó nhấn**Tạo**.
 
-Chloros
+Chloros tính toán R(λ) = đối tượng(λ) / môi trường(λ) cho từng bước sóng từ hai luồng dữ liệu thời gian thực (giá trị bằng 0 khi cường độ ánh sáng môi trường ≤ 0). Nhãn của nhóm tuân theo lớp hiệu chuẩn của các cảm biến:
 
-tính toán R(λ) = đối tượng(λ) / môi trường(λ) cho từng bước sóng từ hai luồng dữ liệu thời gian thực (giá trị bằng 0 khi cường độ ánh sáng môi trường ≤ 0). Nhãn của nhóm tuân theo lớp hiệu chuẩn của các cảm biến:
-
-* Cả hai cảm biến đều đã được hiệu chuẩn (gói đã được tải) → **&quot;Độ phản xạ biểu kiến&quot;**.
-* Một trong hai cảm biến chưa được hiệu chuẩn → **&quot;Độ phản xạ tương đối&quot;**.
+* Cả hai cảm biến đều đã được hiệu chuẩn (gói đã được tải) → **"Độ phản xạ biểu kiến"**.
+* Một trong hai cảm biến chưa được hiệu chuẩn → **"Độ phản xạ tương đối"**.
 
 Nhóm này xuất hiện dưới dạng một hàng màu xanh lá cây `REF` trong thanh bên và biểu đồ riêng của nó (nền cầu vồng, hiển thị giá trị khi di chuột đến 4 chữ số thập phân, thu phóng bằng cách kéo).
 
@@ -186,34 +166,10 @@ Menu **+**cũng cung cấp tùy chọn**Thêm cảm biến mới** với ba vị
 
 ### Bảng chỉ số thực vật
 
-Trong chế độ xem danh sách, bảng chỉ số thực vật nằm bên dưới biểu đồ của nhóm độ phản xạ, được tính toán từ độ phản xạ thời gian thực tại các tâm dải sóng **xanh dương 450 / xanh lá 550 / đỏ 670 / NIR
+Trong chế độ xem danh sách, bảng chỉ số thực vật nằm bên dưới biểu đồ của nhóm độ phản xạ, được tính toán từ độ phản xạ thời gian thực tại các tâm dải sóng **xanh dương 450 / xanh lá 550 / đỏ 670 / NIR 800 nm** (giá trị đến 4 chữ số thập phân, `---` khi không thể tính toán; di chuột qua tên chỉ số để xem tên đầy đủ):
 
-800 nm** (giá trị đến 4 chữ số thập phân, `---` khi không thể tính toán; di chuột qua tên chỉ số để xem tên đầy đủ):
-
-* **Luôn hiển thị** (không phụ thuộc tỷ lệ, bất kỳ kết hợp cảm biến nào): NDVI
-
-, GNDVI
-
-, ENDVI, WDRVI
-
-, GRVI
-
-, CVI
-
-, GCI
-
-, MSR.
-* **Chỉ hiển thị khi cả hai cảm biến đều được hiệu chuẩn công suất** (cả hai gói dữ liệu đều được tải): EVI
-
-, SAVI
-
-, OSAVI
-
-, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI
-
-, NLI, MNLI, FCI, GEMI
-
-.
+* **Luôn hiển thị** (không phụ thuộc tỷ lệ, bất kỳ kết hợp cảm biến nào): NDVI, GNDVI, ENDVI, WDRVI, GRVI, CVI, GCI, MSR.
+* **Chỉ hiển thị khi cả hai cảm biến đều được hiệu chuẩn công suất** (cả hai gói dữ liệu đều được tải): EVI, SAVI, OSAVI, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI, NLI, MNLI, FCI, GEMI.
 
 <!-- SCREENSHOT-NEEDED: an Ambient+Object reflectance group in list view — reflectance chart labeled "Apparent Reflectance" with the vegetation index table below it showing live NDVI etc. -->
 
@@ -237,13 +193,9 @@ Trong chế độ xem danh sách, bảng chỉ số thực vật nằm bên dư�
 ## Bố cục đa cảm biến và tính bền vững của dự án
 
 * Kết hợp nhiều cảm biến trên một biểu đồ (trục chung), giữ các biểu đồ riêng biệt (bố cục lưới tự động), di chuyển cảm biến giữa các biểu đồ, kéo để sắp xếp lại các hàng/ô, và ẩn từng cảm biến bằng nút chuyển đổi hình mắt.
-* Đối với mỗi dự án, Chloros
-
-sẽ lưu lại: tên thiết bị, màu biểu đồ, kích thước biểu đồ, chế độ xem và cài đặt của từng cảm biến (thời gian tích hợp, trung bình khung hình, trạng thái AE, lựa chọn nắp).
+* Đối với mỗi dự án, Chloros sẽ lưu lại: tên thiết bị, màu biểu đồ, kích thước biểu đồ, chế độ xem và cài đặt của từng cảm biến (thời gian tích hợp, trung bình khung hình, trạng thái AE, lựa chọn nắp).
 * **Khi mở lại dự án, các cảm biến sẽ tự động kết nối lại** theo địa chỉ — cổng COM cho DAQ-U, thiết bị BLE cho DAQ-M, tên máy chủ mDNS cho DAQ-E (vẫn được giải quyết ngay cả khi địa chỉ IP của thiết bị thay đổi) — và áp dụng lại cấu hình cap đã lưu, trung bình khung hình, trạng thái AE và thời gian tích hợp thủ công của từng cảm biến.***
 
 ## Ghép nối camera (DLS)
 
-Không cần ghép nối. Khác với quy trình làm việc DLS trên máy bay không người lái (drone) — nơi cảm biến ánh sáng được liên kết với camera ngay từ đầu — Chloros
-
-ghép dữ liệu DAQ với hình ảnh ở giai đoạn sau: tại thời điểm nhập/xử lý, các giá trị đo `.daq` được nội suy theo dấu thời gian phơi sáng của từng khung hình. Ghi hình với bất kỳ cảm biến nào được kết nối (`.daq` sẽ tự động xuất hiện trong dự án), và quá trình xử lý phản xạ sẽ tìm ra các giá trị đo phù hợp theo thời gian — xem [Cảm biến ánh sáng DAQ](README.md) để biết cách dữ liệu ánh sáng chiếu xuống được sử dụng. Đối với các lần chụp LATTICE **trực tiếp**, hãy chọn cảm biến trong menu thả xuống**Cảm biến ánh sáng** trên tab Máy ảnh; mỗi lần ghi hình sẽ lưu lại giá trị đo đã sử dụng, chỉ khớp với các camera của lần ghi hình đó (xem [Quy trình làm việc về phản xạ](reflectance.md)).</version\>
+Không cần ghép nối. Khác với quy trình làm việc DLS trên máy bay không người lái (drone) — nơi cảm biến ánh sáng được liên kết với camera ngay từ đầu — Chloros ghép dữ liệu DAQ với hình ảnh ở giai đoạn sau: tại thời điểm nhập/xử lý, các giá trị đo `.daq` được nội suy theo dấu thời gian phơi sáng của từng khung hình. Ghi hình với bất kỳ cảm biến nào được kết nối (`.daq` sẽ tự động xuất hiện trong dự án), và quá trình xử lý phản xạ sẽ tìm ra các giá trị đo phù hợp theo thời gian — xem [Cảm biến ánh sáng DAQ](README.md) để biết cách dữ liệu ánh sáng chiếu xuống được sử dụng. Đối với các lần chụp LATTICE **trực tiếp**, hãy chọn cảm biến trong menu thả xuống**Cảm biến ánh sáng** trên tab Máy ảnh; mỗi lần ghi hình sẽ lưu lại giá trị đo đã sử dụng, chỉ khớp với các camera của lần ghi hình đó (xem [Quy trình làm việc về phản xạ](reflectance.md)).</version\>

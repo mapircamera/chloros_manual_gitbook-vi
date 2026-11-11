@@ -24,9 +24,7 @@ Khi cửa sổ quá hẹp để hiển thị tất cả các nút, các nhóm s�
 
 ## Nút Xem Xuất
 
-Các nút này chuyển đổi các hình thu nhỏ trên lưới giữa các loại hình ảnh. **Một nút sẽ xuất hiện ngay khi sản phẩm mà nó đề cập tồn tại** — đối với các tệp nguồn, điều này có nghĩa là ngay lập tức khi nhập, chứ không phải sau khi xử lý.Chloros
-
-quét lại các sản phẩm của dự án trong khi quá trình đang diễn ra, do đó các nút xuất hiện trong quá trình xử lý khi mỗi sản phẩm bắt đầu được lưu vào đĩa.
+Các nút này chuyển đổi các hình thu nhỏ trên lưới giữa các loại hình ảnh. **Một nút sẽ xuất hiện ngay khi sản phẩm mà nó đề cập tồn tại** — đối với các tệp nguồn, điều này có nghĩa là ngay lập tức khi nhập, chứ không phải sau khi xử lý.Chloros quét lại các sản phẩm của dự án trong khi quá trình đang diễn ra, do đó các nút xuất hiện trong quá trình xử lý khi mỗi sản phẩm bắt đầu được lưu vào đĩa.
 
 ### Nút cơ bản
 
@@ -34,9 +32,7 @@ Nút xuất ở ngoài cùng bên trái được ghi nhãn theo **những gì b�
 
 | Những gì bạn đã nhập | Nhãn nút |
 | --- | --- |
-|Survey3
-
-RAW+JPG | `JPG` |
+|Survey3 RAW+JPG | `JPG` |
 | Các ảnh chụp LATTICE kèm bản xem trước hiển thị bên cạnh khung hình RAW | `PNG` hoặc `TIFF`, tùy thuộc vào bản xem trước |
 | Các ảnh chụp LATTICE mà tệp gốc **chính là** khung hình RAW | *không có nút* — `RAW (Original)` đã hiển thị tệp đó |
 
@@ -50,9 +46,7 @@ Trong một dự án hỗn hợp, nhãn sẽ tuân theo phần mở rộng đư�
 | **Độ phản xạ** | Hình ảnh độ phản xạ đã hiệu chuẩn | Chỉ dành cho các dự ánSurvey3
 
 — Các dự án LATTICE sử dụng `RAW (Reflectance)` thay thế, do đó lưới không bao giờ hiển thị hai nút độ phản xạ |
-| **Cân bằng trắng** | Sản phẩm đã cân bằng trắng (máy ảnhRGB
-
-) | Sau khi xử lý |
+| **Cân bằng trắng** | Sản phẩm đã cân bằng trắng (máy ảnhRGB) | Sau khi xử lý |
 | **Đã hiệu chỉnh hiệu ứng viền tối** | Sản phẩm dự phòng đã hiệu chỉnh hiệu ứng viền tối nhưng chưa hiệu chuẩn | Sau một lần chạy mà không thể áp dụng hiệu chuẩn độ phản xạ và tùy chọn *Hiệu chỉnh hiệu ứng viền tối* được bật |
 | **Phản ứng cảm biến** | Giá trị dự phòng phản ứng cảm biến chưa hiệu chỉnh | Tương tự, nhưng với *Chức năng khắc phục hiệu ứng viền tối* bị tắt |
 | **`RAW (<INDEX> Index)`** | Một nút cho mỗi chỉ số đã tính toán | Sau một lần chạy với các chỉ số đã được cấu hình |
@@ -76,9 +70,7 @@ Hai cấp độ xuấtChloros
 **không có nút lưới riêng**:
 
 * **Đã loại bỏ hiệu ứng bay** — chế độ xem `RAW (Original)` đã hiển thị hình ảnh đã loại bỏ hiệu ứng bay, do đó việc thêm một nút thứ hai vào hình ảnh trông giống hệt nhau sẽ gây ra nhiễu. Sản phẩm `RAW (Debayered)` vẫn được ghi vào đĩa và vẫn có thể chọn từ menu thả xuống lớp toàn màn hình.
-* **Xem trước** — trên các máy ảnhRGB
-
-, hình xem trước được đăng ký dưới dạng lớp `White Balanced`, lớp này có nút riêng. Trên các máy ảnh đa quang phổ, nó được đăng ký dưới tên `RAW (Preview)` và có thể truy cập từ menu thả xuống lớp toàn màn hình.
+* **Xem trước** — trên các máy ảnhRGB, hình xem trước được đăng ký dưới dạng lớp `White Balanced`, lớp này có nút riêng. Trên các máy ảnh đa quang phổ, nó được đăng ký dưới tên `RAW (Preview)` và có thể truy cập từ menu thả xuống lớp toàn màn hình.
 
 {% hint style="info" %}
 Các nút cấp độ này chỉ hiển thị đối với các dự án thực sự chứa các khung hình LATTICE. Các dự ánSurvey3
@@ -98,8 +90,7 @@ Nhấp vào hình thu nhỏ của lưới sẽ mở [Trình xem hình ảnh](ope
 
 ## Nhóm các dự án LATTICE: Theo Trigger so với Theo Camera
 
-Chế độ chụp mảng (Array captures) tạo ra nhiều hình ảnh cùng một khoảnh khắc từ các mô-đun camera khác nhau. Chế độ nhóm quyết định cách lưới sắp xếp các hình ảnh này. Cả hai chế độ đều hiển thị các thanh tiêu đề có thể thu gọn với chiều rộng đầy đủ; **mỗi nhóm đều mở rộng sẵn khi bắt đầu**, vàChloros
-sẽ ghi nhớ các nhóm bạn đã thu gọn. Trạng thái thu gọn được theo dõi riêng biệt cho từng chế độ, do đó việc thu gọn một nhóm trong chế độ &quot;Per Camera&quot; sẽ không ảnh hưởng đến chế độ &quot;Per Trigger&quot;.
+Chế độ chụp mảng (Array captures) tạo ra nhiều hình ảnh cùng một khoảnh khắc từ các mô-đun camera khác nhau. Chế độ nhóm quyết định cách lưới sắp xếp các hình ảnh này. Cả hai chế độ đều hiển thị các thanh tiêu đề có thể thu gọn với chiều rộng đầy đủ; **mỗi nhóm đều mở rộng sẵn khi bắt đầu**, vàChloros sẽ ghi nhớ các nhóm bạn đã thu gọn. Trạng thái thu gọn được theo dõi riêng biệt cho từng chế độ, do đó việc thu gọn một nhóm trong chế độ "Per Camera" sẽ không ảnh hưởng đến chế độ "Per Trigger".
 
 ### Theo Camera (mặc định)
 

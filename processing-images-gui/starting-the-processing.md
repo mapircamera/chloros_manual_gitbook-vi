@@ -8,7 +8,7 @@ Trước khi nhấp vào nút Bắt đầu, hãy kiểm tra xem mọi thứ đã
 
 * [ ] **Tệp đã được nhập** - Tất cả hình ảnh đều xuất hiện trong Trình duyệt tệp
 * [ ] **Hình ảnh mục tiêu đã được đánh dấu** - Cột Mục tiêu đã được kiểm tra đối với hình ảnh hiệu chuẩn (hoặc tệp ghi `.daq` đã được nhập cho LATTICE)
-* [ ] **Đã phát hiện các mẫu máy ảnh** - Cột &quot;Mẫu máy ảnh&quot; hiển thị đúng các máy ảnh
+* [ ] **Đã phát hiện các mẫu máy ảnh** - Cột "Mẫu máy ảnh" hiển thị đúng các máy ảnh
 * [ ] **Đã cấu hình cài đặt** - Đã xem xét và điều chỉnh Cài đặt dự án
 * [ ] **Đã chọn các chỉ số** - Đã thêm các chỉ số đa phổ mong muốn (nếu cần)
 * [ ] **Định dạng xuất đã được chọn** - Định dạng đầu ra phù hợp với quy trình làm việc của bạn
@@ -62,7 +62,7 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 2. **Xử lý** - Áp dụng hiệu chuẩn và xuất hình ảnh**Thời gian xử lý:**
 
 * Chậm hơn nhiều so với chế độ song song củChloros+
-* Phù hợp với tập dữ liệu nhỏ đến trung bình (&lt; 200 hình ảnh)
+* Phù hợp với tập dữ liệu nhỏ đến trung bình (< 200 hình ảnh)
 
 ### Chế độ Chloros+ (Xử lý song song)
 
@@ -202,7 +202,7 @@ Nếu bạn cần dừng quá trình xử lý:
 ### Cách dừng
 
 1. Tìm **nút Dừng** (thay thế nút Bắt đầu trong quá trình xử lý)
-2. Nhấp vào nút này một lần — thanh tiến trình sẽ hiển thị **&quot;Đang dừng...&quot;** trong khi hình ảnh đang xử lý hoàn tất
+2. Nhấp vào nút này một lần — thanh tiến trình sẽ hiển thị **"Đang dừng..."** trong khi hình ảnh đang xử lý hoàn tất
 3. Quá trình xử lý kết thúc ở trạng thái dừng hoàn toàn và nhật ký sẽ ghi lại thông tin chi tiết về những gì đã hoàn thành
 
 ### Khi nào nên dừng
@@ -305,7 +305,7 @@ Xem [Tài liệu tham khảo CLI](../reference/cli-reference.md#a-run-that-write
 **Giải pháp:**
 
 1. Lưu trữ các dự án trong thư mục có tên ngắn hơn — thay đổi**Thư mục làm việc** trong [Cài đặt Dự án](../project-settings/project-settings.md) và tạo lại dự án, hoặc
-2. Bật đường dẫn dài của Windows và khởi động lại Chloros: chạy lại trình cài đặt Chloros với tùy chọn **Enable Windows long paths** được chọn (tùy chọn này được chọn mặc định), hoặc sử dụng Chính sách Nhóm: *Cấu hình Máy tính &gt; Mẫu Quản trị &gt; Hệ thống &gt; Hệ thống Tệp &gt; Bật đường dẫn dài Win32*.
+2. Bật đường dẫn dài của Windows và khởi động lại Chloros: chạy lại trình cài đặt Chloros với tùy chọn **Enable Windows long paths** được chọn (tùy chọn này được chọn mặc định), hoặc sử dụng Chính sách Nhóm: *Cấu hình Máy tính > Mẫu Quản trị > Hệ thống > Hệ thống Tệp > Bật đường dẫn dài Win32*.
 
 ### Cảnh báo “Không phát hiện mục tiêu”
 
@@ -318,7 +318,7 @@ Xem [Tài liệu tham khảo CLI](../reference/cli-reference.md#a-run-that-write
 **Giải pháp:**
 
 1. Xem lại [Chọn hình ảnh mục tiêu](choosing-target-images.md)
-2. Đánh dấu các hình ảnh phù hợp trong cột &quot;Mục tiêu&quot;
+2. Đánh dấu các hình ảnh phù hợp trong cột "Mục tiêu"
 3. Kiểm tra xem các mục tiêu có hiển thị trong các hình ảnh đã đánh dấu hay không
 4. Điều chỉnh cài đặt phát hiện mục tiêu nếu cần
 

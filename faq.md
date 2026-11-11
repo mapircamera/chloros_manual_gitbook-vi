@@ -19,7 +19,7 @@ Không, Chloros chỉ hỗ trợ xử lý hình ảnh từ các camera MAPIR —
 
 <summary>Chloros có hỗ trợ máy ảnh LATTICE không?</summary>
 
-Có. Chloros 1.3.0 hỗ trợ các mô-đun camera LATTICE M3C và M3M từ đầu đến cuối: **điều khiển trực tiếp**— phát hiện, kết nối, xem trước và ghi hình từ tab &quot;Cameras&quot; trên giao diện người dùng (GUI), `chloros-cli lattice`, hoặc SDK SDK, bao gồm mảng camera đa kênh đồng bộ hóa thời gian qua PTP — và**xử lý phóng xạ đầy đủ** cho dữ liệu ghi hình (thô → khử hiệu ứng Bayer → độ rạng rỡ → độ phản xạ → chỉ số). Xem [Các camera được hỗ trợ](supported-cameras.md) và [hướng dẫn LATTICE](lattice/README.md).
+Có. Chloros 1.3.0 hỗ trợ các mô-đun camera LATTICE M3C và M3M từ đầu đến cuối: **điều khiển trực tiếp**— phát hiện, kết nối, xem trước và ghi hình từ tab "Cameras" trên giao diện người dùng (GUI), `chloros-cli lattice`, hoặc SDK SDK, bao gồm mảng camera đa kênh đồng bộ hóa thời gian qua PTP — và**xử lý phóng xạ đầy đủ** cho dữ liệu ghi hình (thô → khử hiệu ứng Bayer → độ rạng rỡ → độ phản xạ → chỉ số). Xem [Các camera được hỗ trợ](supported-cameras.md) và [hướng dẫn LATTICE](lattice/README.md).
 
 </details>
 
@@ -27,15 +27,9 @@ Có. Chloros 1.3.0 hỗ trợ các mô-đun camera LATTICE M3C và M3M từ đ�
 
 <summary>Tôi có thể hiệu chuẩn hình ảnh của mình về độ phản xạ mà không cần mục tiêu hiệu chuẩn không?</summary>
 
-**Survey3
+**Survey3:** Không. Nếu không có hình ảnh của mục tiêu hiệu chuẩn được chụp cùng lúc với các hình ảnh không phải mục tiêu, bạn sẽ không thể liên hệ các giá trị pixel của hình ảnh với tỷ lệ phần trăm phản xạ đã biết. Nếu bạn cũng không bao gồm nhật ký từ cảm biến ánh sáng MAPIR, thì quang phổ ánh sáng xung quanh sẽ không được đo, và kết quả độ phản xạ sẽ không chính xác.
 
-:** Không. Nếu không có hình ảnh của mục tiêu hiệu chuẩn được chụp cùng lúc với các hình ảnh không phải mục tiêu, bạn sẽ không thể liên hệ các giá trị pixel của hình ảnh với tỷ lệ phần trăm phản xạ đã biết. Nếu bạn cũng không bao gồm nhật ký từ cảm biến ánh sáng MAPIR
-
-, thì quang phổ ánh sáng xung quanh sẽ không được đo, và kết quả độ phản xạ sẽ không chính xác.
-
-**LATTICE:** Có. Độ phản xạ có thể được tham chiếu đến bức xạ xuống được đo bởi cảm biến ánh sáng DAQ thay vì tấm panel (ρ = π·L/E). Khi mục tiêu trong khung hình *đã* vượt qua kiểm tra chất lượng (QA), nó sẽ tự động trở thành tham chiếu tuyệt đối (`--reflectance-source auto`), trừ khi mục tiêu đó vượt qua với một cờ đánh dấu, khi đó mục tiêu và chuỗi DAQ sẽ cạnh tranh dựa trên điểm số đo được. Một trường hợp ngoại lệ: &quot;Độ phản xạ F988 được hiệu chuẩn bằng tấm phản xạ trong khung hình: dải này nằm ngoài phạm vi hiệu chuẩn của cảm biến ánh sáng DAQ, do đó Chloros
-
-sẽ áp dụng dữ liệu chụp tấm phản xạ gần nhất của bạn và giữ nguyên giá trị đó giữa các lần quan sát tấm phản xạ.&quot; Xem [Mục tiêu hiệu chuẩn](calibration-targets.md).
+**LATTICE:** Có. Độ phản xạ có thể được tham chiếu đến bức xạ xuống được đo bởi cảm biến ánh sáng DAQ thay vì tấm panel (ρ = π·L/E). Khi mục tiêu trong khung hình *đã* vượt qua kiểm tra chất lượng (QA), nó sẽ tự động trở thành tham chiếu tuyệt đối (`--reflectance-source auto`), trừ khi mục tiêu đó vượt qua với một cờ đánh dấu, khi đó mục tiêu và chuỗi DAQ sẽ cạnh tranh dựa trên điểm số đo được. Một trường hợp ngoại lệ: "Độ phản xạ F988 được hiệu chuẩn bằng tấm phản xạ trong khung hình: dải này nằm ngoài phạm vi hiệu chuẩn của cảm biến ánh sáng DAQ, do đó Chloros sẽ áp dụng dữ liệu chụp tấm phản xạ gần nhất của bạn và giữ nguyên giá trị đó giữa các lần quan sát tấm phản xạ." Xem [Mục tiêu hiệu chuẩn](calibration-targets.md).
 
 </details>
 
@@ -43,9 +37,7 @@ sẽ áp dụng dữ liệu chụp tấm phản xạ gần nhất của bạn v�
 
 <summary>Tôi có cần cảm biến ánh sáng DAQ không?</summary>
 
-Không cần cho độ sáng: Dữ liệu độ sáng LATTICE được xuất từ quá trình hiệu chuẩn phóng xạ tại nhà máy của từng camera và không cần cả cảm biến DAQ lẫn mục tiêu hiệu chuẩn. Đối với **độ phản xạ**, bạn cần một tham chiếu cho ánh sáng môi trường — có thể là giá trị đo ánh sáng chiếu xuống từ cảm biến DAQ hoặc mục tiêu hiệu chuẩn trong khung hình. Cảm biến DAQ cho phép bạn tạo ra giá trị phản xạ đã hiệu chuẩn**mà không cần đặt bất kỳ tấm panel nào trong khung cảnh**. Các tệp `.daq` đã ghi sẽ được tự động khớp với hình ảnh của bạn dựa trên dấu thời gian. Xem [Mục tiêu hiệu chuẩn](calibration-targets.md) và [Tham chiếu CLI
-
-](reference/cli-reference.md).
+Không cần cho độ sáng: Dữ liệu độ sáng LATTICE được xuất từ quá trình hiệu chuẩn phóng xạ tại nhà máy của từng camera và không cần cả cảm biến DAQ lẫn mục tiêu hiệu chuẩn. Đối với **độ phản xạ**, bạn cần một tham chiếu cho ánh sáng môi trường — có thể là giá trị đo ánh sáng chiếu xuống từ cảm biến DAQ hoặc mục tiêu hiệu chuẩn trong khung hình. Cảm biến DAQ cho phép bạn tạo ra giá trị phản xạ đã hiệu chuẩn**mà không cần đặt bất kỳ tấm panel nào trong khung cảnh**. Các tệp `.daq` đã ghi sẽ được tự động khớp với hình ảnh của bạn dựa trên dấu thời gian. Xem [Mục tiêu hiệu chuẩn](calibration-targets.md) và [Tham chiếu CLI](reference/cli-reference.md).
 
 </details>
 
@@ -92,7 +84,7 @@ Chúng không phải là hình ảnh của cảnh: quá trình nhập của Chlo
 
 <details>
 
-<summary>Tại sao Chloros lại hiển thị thông báo &quot;Thư mục dự án quá sâu đối với máy tính này&quot;?</summary>
+<summary>Tại sao Chloros lại hiển thị thông báo "Thư mục dự án quá sâu đối với máy tính này"?</summary>
 
 Điều này chỉ áp dụng cho Windows. Windows được cài đặt sẵn với tùy chọn đường dẫn dài bị tắt, do đó đường dẫn tệp không được dài quá 260 ký tự. Các sản phẩm của Chloros nằm ở mức khoảng 130 ký tự dưới thư mục dự án, do đó Chloros sẽ từ chối thư mục dự án nằm sâu hơn trước khi xử lý — thay vì chạy mà không ghi lại gì, như có thể xảy ra trước phiên bản 1.3.0. Thông báo này sẽ hiển thị thư mục dự án dài nhất mà hệ thống vẫn chấp nhận được.
 
@@ -143,9 +135,7 @@ Trong bảng trình duyệt tệp, việc chọn trước các hình ảnh mục
 
 <summary>Nếu tôi định tải hình ảnh lên <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> tôi có nên xử lý trong Chloros trước khi tải lên không?</summary>
 
-Nếu bạn có kế hoạch tải lên nền tảng xử lý trực tuyến của chúng tôi [MAPIR
-
-Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), đừng chỉnh sửa hình ảnh trước khi tải lên. Cloud sẽ thực hiện tất cả các bước xử lý tương tự và hơn thế nữa.
+Nếu bạn có kế hoạch tải lên nền tảng xử lý trực tuyến của chúng tôi [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), đừng chỉnh sửa hình ảnh trước khi tải lên. Cloud sẽ thực hiện tất cả các bước xử lý tương tự và hơn thế nữa.
 
 </details>
 
@@ -153,7 +143,7 @@ Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscr
 
 <summary>MAPIR có bao giờ hỗ trợ tính năng X không? Tôi thực sự mong MAPIR cung cấp tính năng X.</summary>
 
-Chúng tôi luôn quan tâm đến việc nhận phản hồi về các sản phẩm của mình. Nếu bạn phát hiện vấn đề với sản phẩm của chúng tôi hoặc có đề xuất về cách cải thiện sản phẩm, vui lòng [LIÊN HỆ VỚI CHÚNG TÔI](https://www.mapir.camera/community/contact) để chia sẻ ý kiến của bạn. Hầu hết các hoạt động R&amp;D của chúng tôi đều được định hướng dựa trên việc lắng nghe những nhu cầu lớn nhất của khách hàng.
+Chúng tôi luôn quan tâm đến việc nhận phản hồi về các sản phẩm của mình. Nếu bạn phát hiện vấn đề với sản phẩm của chúng tôi hoặc có đề xuất về cách cải thiện sản phẩm, vui lòng [LIÊN HỆ VỚI CHÚNG TÔI](https://www.mapir.camera/community/contact) để chia sẻ ý kiến của bạn. Hầu hết các hoạt động R&D của chúng tôi đều được định hướng dựa trên việc lắng nghe những nhu cầu lớn nhất của khách hàng.
 
 </details>
 
@@ -185,9 +175,7 @@ Có! Chloros tích hợp tính năng [Dynamic Compute Adaptation](processing-arc
 
 <summary>Đường ống xử lý 4 luồng là gì?</summary>
 
-Chloros
-sử dụng kiến trúc đường ống 4 luồng cho người dùng Chloros
-+: Luồng 1 (Phát hiện) tải hình ảnh và phát hiện các mục tiêu hiệu chuẩn, Luồng 2 (Hiệu chuẩn) tính toán hiệu chuẩn phản xạ, Luồng 3 (Xử lý) thực hiện khử hiệu ứng bayering và tính toán chỉ số được tăng tốc bằng GPU, và Luồng 4 (Xuất) ghi các tệp đầu ra. Nhiều hình ảnh có thể được xử lý đồng thời trong các luồng khác nhau để đạt thông lượng tối đa. Xem [Đường ống xử lý](processing-architecture/processing-pipeline.md) để biết thêm chi tiết.
+Chloros sử dụng kiến trúc đường ống 4 luồng cho người dùng Chloros+: Luồng 1 (Phát hiện) tải hình ảnh và phát hiện các mục tiêu hiệu chuẩn, Luồng 2 (Hiệu chuẩn) tính toán hiệu chuẩn phản xạ, Luồng 3 (Xử lý) thực hiện khử hiệu ứng bayering và tính toán chỉ số được tăng tốc bằng GPU, và Luồng 4 (Xuất) ghi các tệp đầu ra. Nhiều hình ảnh có thể được xử lý đồng thời trong các luồng khác nhau để đạt thông lượng tối đa. Xem [Đường ống xử lý](processing-architecture/processing-pipeline.md) để biết thêm chi tiết.
 
 </details>
 

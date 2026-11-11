@@ -17,35 +17,35 @@ Trừ khi bạn thay đổi trong [Cài đặt Dự án](project-settings/projec
 
 ## Dự án mới
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>Chọn &quot;Dự án mới&quot; từ menu chính và nhập tên duy nhất cho dự án của bạn.
+<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>Chọn "Dự án mới" từ menu chính và nhập tên duy nhất cho dự án của bạn.
 
-Nếu bạn đã lưu bất kỳ mẫu dự án nào, một menu thả xuống **Chọn mẫu** sẽ xuất hiện bên dưới trường tên — việc chọn một mẫu sẽ bắt đầu dự án mới dựa trên cài đặt của mẫu đó. Các mẫu dự án được lưu từ [Cài đặt dự án](project-settings/project-settings.md): nhập tên vào trường &quot;Tên mẫu dự án&quot; và nhấp vào biểu tượng lưu.
+Nếu bạn đã lưu bất kỳ mẫu dự án nào, một menu thả xuống **Chọn mẫu** sẽ xuất hiện bên dưới trường tên — việc chọn một mẫu sẽ bắt đầu dự án mới dựa trên cài đặt của mẫu đó. Các mẫu dự án được lưu từ [Cài đặt dự án](project-settings/project-settings.md): nhập tên vào trường "Tên mẫu dự án" và nhấp vào biểu tượng lưu.
 
 ## Mở dự án
 
-<figure><img src=".gitbook/assets/v120-open-project.jpg" alt=""><figcaption><p>&quot;Mở Dự án&quot; liệt kê tất cả các dự án trong thư mục dự án của bạn, với tùy chọn <strong>Mở Thư mục Dự án</strong> ở phía dưới</p></figcaption></figure>
+<figure><img src=".gitbook/assets/v120-open-project.jpg" alt=""><figcaption><p>"Mở Dự án" liệt kê tất cả các dự án trong thư mục dự án của bạn, với tùy chọn <strong>Mở Thư mục Dự án</strong> ở phía dưới</p></figcaption></figure>
 
-Chọn &quot;Mở Dự án&quot; để xem danh sách các dự án hiện có trong Thư mục Dự án. Nếu không có dự án nào, menu phụ bên cạnh sẽ không mở ra. Bạn có thể thấy một số dự án được tạo bởi giao diện người dùng (t1, t2, t3) được liệt kê trong hình ảnh trên. Các dự án có định dạng DATE\_TIME được tạo bởi giao diện dòng lệnh (CLI) theo quy ước đặt tên dự án mặc định. Nhấp vào bất kỳ tên dự án nào sẽ mở dự án đó.
+Chọn "Mở Dự án" để xem danh sách các dự án hiện có trong Thư mục Dự án. Nếu không có dự án nào, menu phụ bên cạnh sẽ không mở ra. Bạn có thể thấy một số dự án được tạo bởi giao diện người dùng (t1, t2, t3) được liệt kê trong hình ảnh trên. Các dự án có định dạng DATE\_TIME được tạo bởi giao diện dòng lệnh (CLI) theo quy ước đặt tên dự án mặc định. Nhấp vào bất kỳ tên dự án nào sẽ mở dự án đó.
 
-Nhấp vào nút &quot;Mở thư mục dự án&quot; sẽ mở Trình quản lý tệp trên máy tính của bạn tại đường dẫn của dự án. Bạn có thể điều chỉnh đường dẫn dự án trong [Cài đặt Dự án](project-settings/project-settings.md).
+Nhấp vào nút "Mở thư mục dự án" sẽ mở Trình quản lý tệp trên máy tính của bạn tại đường dẫn của dự án. Bạn có thể điều chỉnh đường dẫn dự án trong [Cài đặt Dự án](project-settings/project-settings.md).
 
 Nếu bất kỳ tệp hình ảnh nguồn nào của dự án đã bị di chuyển hoặc xóa kể từ lần mở gần nhất, Chloros sẽ hiển thị một hộp thoại liệt kê chính xác các tệp bị thiếu thay vì mở một lưới trống.
 
 ## Sao chép dự án
 
-Tính năng này có sẵn khi dự án đã được mở. Chọn &quot;Sao chép dự án&quot; để sao chép dự án hiện tại dưới một tên mới — Chloros sẽ đề xuất tên trống tiếp theo (ví dụ: &quot;MyProject (2)&quot;) — và bản sao sẽ được mở ngay lập tức.
+Tính năng này có sẵn khi dự án đã được mở. Chọn "Sao chép dự án" để sao chép dự án hiện tại dưới một tên mới — Chloros sẽ đề xuất tên trống tiếp theo (ví dụ: "MyProject (2)") — và bản sao sẽ được mở ngay lập tức.
 
 ## Thêm tệp
 
-Sau khi dự án được mở, chọn &quot;Thêm tệp&quot; từ menu chính để thêm các tệp hình ảnh riêng lẻ vào dự án hiện tại. Tính năng này tương tự như chức năng thêm tệp trong trình duyệt tệp nhưng có thể truy cập trực tiếp từ menu chính để thuận tiện hơn.
+Sau khi dự án được mở, chọn "Thêm tệp" từ menu chính để thêm các tệp hình ảnh riêng lẻ vào dự án hiện tại. Tính năng này tương tự như chức năng thêm tệp trong trình duyệt tệp nhưng có thể truy cập trực tiếp từ menu chính để thuận tiện hơn.
 
 ## Thêm thư mục
 
-Sau khi dự án được mở, hãy chọn &quot;Thêm thư mục&quot; từ menu chính để thêm các thư mục chứa hình ảnh vào dự án hiện tại. Bạn có thể chọn nhiều thư mục cùng một lúc. Các tệp trùng lặp sẽ bị bỏ qua.
+Sau khi dự án được mở, hãy chọn "Thêm thư mục" từ menu chính để thêm các thư mục chứa hình ảnh vào dự án hiện tại. Bạn có thể chọn nhiều thư mục cùng một lúc. Các tệp trùng lặp sẽ bị bỏ qua.
 
 ## Bắt đầu / Dừng xử lý
 
-Sau khi các tệp được thêm vào dự án, tùy chọn &quot;Bắt đầu xử lý&quot; sẽ xuất hiện trong menu chính. Đây là thao tác tương tự như nhấp vào nút Phát/Bắt đầu ở thanh tiêu đề trên cùng. Trong quá trình xử lý, mục menu này sẽ chuyển thành &quot;Dừng xử lý&quot; để cho phép bạn dừng quy trình xử lý.
+Sau khi các tệp được thêm vào dự án, tùy chọn "Bắt đầu xử lý" sẽ xuất hiện trong menu chính. Đây là thao tác tương tự như nhấp vào nút Phát/Bắt đầu ở thanh tiêu đề trên cùng. Trong quá trình xử lý, mục menu này sẽ chuyển thành "Dừng xử lý" để cho phép bạn dừng quy trình xử lý.
 
 ## Kết nối với máy ảnh / Kết nối với cảm biến ánh sáng
 

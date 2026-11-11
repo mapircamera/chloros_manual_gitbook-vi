@@ -139,7 +139,7 @@ ID nắp chọn hồ sơ hiệu chỉnh được đo tại nhà máy áp dụng 
 | `fov_30`, `fov_60` | Chỉ DAQ-U |
 | `none` | Chỉ DAQ-E — xem chú thích |
 
-Mã nắp nằm ngoài bộ cài đặt của cảm biến sẽ bị từ chối khi kết nối kèm theo thông báo lỗi rõ ràng. `none` (DAQ-E) có nghĩa là nắp đã được tháo ra về mặt vật lý — thiết bị vẫn áp dụng cấu hình hình học mặc định của nhà sản xuất cho bộ khuếch tán kính lõm của DAQ-E, do đó đây không phải là chế độ không hoạt động (no-op), và một DAQ-E không có nắp là cấu hình trên bàn thí nghiệm, không phải cấu hình được hỗ trợ trong môi trường thực tế. (Một DAQ-U không có nắp là loại &quot;true-bare&quot; và không cần bất kỳ cấu hình hiệu chỉnh nào; DAQ-M được sử dụng kèm với nắp Sunshine.)
+Mã nắp nằm ngoài bộ cài đặt của cảm biến sẽ bị từ chối khi kết nối kèm theo thông báo lỗi rõ ràng. `none` (DAQ-E) có nghĩa là nắp đã được tháo ra về mặt vật lý — thiết bị vẫn áp dụng cấu hình hình học mặc định của nhà sản xuất cho bộ khuếch tán kính lõm của DAQ-E, do đó đây không phải là chế độ không hoạt động (no-op), và một DAQ-E không có nắp là cấu hình trên bàn thí nghiệm, không phải cấu hình được hỗ trợ trong môi trường thực tế. (Một DAQ-U không có nắp là loại "true-bare" và không cần bất kỳ cấu hình hiệu chỉnh nào; DAQ-M được sử dụng kèm với nắp Sunshine.)
 
 ## `pool-disconnect` — giải phóng cảm biến
 

@@ -63,7 +63,7 @@ Trước khi xử lý, hãy kiểm tra lại:
 * **Mục tiêu trong khung hình**: khi một hình ảnh mục tiêu được đánh dấu vượt qua các tiêu chuẩn chất lượng (QA) củChloros, mục tiêu đó sẽ trở thành**mức tham chiếu phản xạ tuyệt đối** cho các hình ảnh xung quanh nó.
 * **Tia sáng chiếu xuống từ DAQ**: khi không có mục tiêu (hoặc không đạt tiêu chuẩn QA), Chloros sẽ tính toán độ phản xạ dựa trên cường độ bức xạ chiếu xuống từ cảm biến ánh sáng của DAQ (ρ = π·L/E). Nếu bản ghi `.daq` hoặc DAQ-M `.csv` bao phủ các hình ảnh bạn thu được, bạn sẽ nhận được độ phản xạ đã hiệu chuẩn**mà không cần bất kỳ hình ảnh mục tiêu nào cả**.
 
-Hành vi tự động này là mặc định. Trong tệp tham chiếu &quot;CLI&quot; / &quot;SDK&quot;, điều này tương ứng với `--reflectance-source auto`; bạn cũng có thể ép sử dụng `target` (chế độ nghiêm ngặt — không thay thế bằng DAQ) hoặc `daq` (chế độ ưu tiên DAQ). Xem [CLI Tài liệu tham khảo](../reference/cli-reference.md#per-product-export-toggles-lattice-multispectral).
+Hành vi tự động này là mặc định. Trong tệp tham chiếu "CLI" / "SDK", điều này tương ứng với `--reflectance-source auto`; bạn cũng có thể ép sử dụng `target` (chế độ nghiêm ngặt — không thay thế bằng DAQ) hoặc `daq` (chế độ ưu tiên DAQ). Xem [CLI Tài liệu tham khảo](../reference/cli-reference.md#per-product-export-toggles-lattice-multispectral).
 
 **Hình dạng mục tiêu LATTICE**: ngoài phương pháp phát hiện bảng truyền thống được sử dụng cho Survey3, quy trình xử lý LATTICE hỗ trợ**mục tiêu được đánh dấu ArUco**,**mục tiêu vùng quan tâm cố định (ROI)**và**mục tiêu dạng dải**, được cấu hình theo từng dự án. Các bản quét độ phản xạ**đo được** của mục tiêu cho từng đơn vị có thể được cung cấp theo số sê-ri (CLI: `--target-reflectance-dir`, một `<serial>.csv` cho mỗi đơn vị mục tiêu), với phổ T3/T4P danh nghĩa làm phương án dự phòng.
 
@@ -159,7 +159,7 @@ Nếu Chloros không phát hiện chính xác các mục tiêu của bạn, hãy
 **Nguyên nhân có thể:**
 
 * Hình ảnh mục tiêu không được đánh dấu trong Trình duyệt tệp
-* Mục tiêu quá nhỏ trong khung hình (&lt; 30% hình ảnh)
+* Mục tiêu quá nhỏ trong khung hình (< 30% hình ảnh)
 * Ánh sáng kém (bóng tối, lóa sáng)
 * Cài đặt phát hiện mục tiêu quá nghiêm ngặt
 
@@ -216,8 +216,8 @@ Nếu cảm biến ánh sáng DAQ đã ghi lại cường độ bức xạ xuố
 
 Bạn cũng có thể xử lý mà không cần mục tiêu và không cần DAQ:
 
-1. Để tất cả các ô chọn trong cột &quot;Mục tiêu&quot; ở trạng thái không được chọn
-2. **Tắt** tùy chọn &quot;Hiệu chuẩn độ phản xạ / cân bằng trắng&quot; trong Cài đặt Dự án — quá trình phát hiện mục tiêu sẽ bị bỏ qua hoàn toàn
+1. Để tất cả các ô chọn trong cột "Mục tiêu" ở trạng thái không được chọn
+2. **Tắt** tùy chọn "Hiệu chuẩn độ phản xạ / cân bằng trắng" trong Cài đặt Dự án — quá trình phát hiện mục tiêu sẽ bị bỏ qua hoàn toàn
 3. Chức năng chỉnh sửa hiệu ứng viền tối vẫn được áp dụng
 4. Kết quả đầu ra sẽ không được hiệu chuẩn cho độ phản xạ tuyệt đối (LATTICE đa phổ vẫn xuất các sản phẩm đã loại bỏ hiệu ứng Bayer, bản xem trước và sản phẩm độ rạng rỡ)
 

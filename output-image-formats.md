@@ -77,7 +77,7 @@ Mới trong phiên bản 1.3.0, một sản phẩm chỉ số mô tả **chính 
 | `Chloros:IlluminationInvariant` | `True` đối với chỉ số được tính toán từ độ phản xạ, `False` từ độ rạng rỡ hoặc các giá trị cảm biến |
 | `Chloros:ChlorosPipelineVersion` | phiên bản Chloros đã tạo ra chỉ số |
 
-`Chloros:PixelScale` đã bị loại bỏ khỏi các sản phẩm chỉ số — hãy sử dụng `IndexMin` / `IndexMax` ở trên. Công thức đọc lại đầy đủ nằm trong phần &quot;Một raster chỉ số nguyên là quá trình kéo dãn độ tương phản theo từng hình ảnh&quot; trong [Tài liệu tham khảo CLI](reference/cli-reference.md).
+`Chloros:PixelScale` đã bị loại bỏ khỏi các sản phẩm chỉ số — hãy sử dụng `IndexMin` / `IndexMax` ở trên. Công thức đọc lại đầy đủ nằm trong phần "Một raster chỉ số nguyên là quá trình kéo dãn độ tương phản theo từng hình ảnh" trong [Tài liệu tham khảo CLI](reference/cli-reference.md).
 
 ## Đọc giá trị phản xạ của pixel
 
@@ -94,4 +94,4 @@ Mới trong phiên bản 1.3.0, một sản phẩm chỉ số mô tả **chính 
 **Dữ liệu thu thập 8-bit.** Các giá trị xuất ra từ dữ liệu thu thập 8-bit cũng là 8-bit. Độ phản xạ của nó được điều chỉnh tỷ lệ và gắn nhãn `Chloros:PixelScale=32768`, do đó tỷ lệ được duy trì; Các sản phẩm DN 8-bit và các tệp độ phản xạ được ghi trước phiên bản 1.3.0 sẽ bị cắt giới hạn trong khoảng 0–255 và không chứa thẻ tỷ lệ. Nếu thẻ tỷ lệ vắng mặt trên tệp độ phản xạ LATTICE, không nên giả định có tỷ lệ; thay vào đó, hãy xuất lại ở định dạng 16-bit hoặc 32-bit.
 {% endhint %}
 
-Để xem các quy tắc đầy đủ (bao gồm các thẻ tương thích với MicaSense), hãy tham khảo phần **&quot;Đọc các pixel phản xạ&quot;** trong [Tài liệu tham khảo CLI](reference/cli-reference.md).
+Để xem các quy tắc đầy đủ (bao gồm các thẻ tương thích với MicaSense), hãy tham khảo phần **"Đọc các pixel phản xạ"** trong [Tài liệu tham khảo CLI](reference/cli-reference.md).

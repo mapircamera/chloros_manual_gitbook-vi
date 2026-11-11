@@ -195,7 +195,7 @@ Chloros lưu trữ thông tin đăng nhập và cấu hình CLI trong một thư
 | `/lib/systemd/system/chloros-backend@.service` | Dịch vụ nền luôn hoạt động (opt-in) chạy nền dưới danh nghĩa người dùng mà bạn chỉ định (đã cài đặt, **chưa được kích hoạt**) — đây là dịch vụ cần kích hoạt, xem [Always-On PTP](#always-on-ptp-for-headless-hosts) |
 | `/lib/systemd/system/chloros-backend.service` | Dịch vụ tương tự chạy phần nền dưới quyền **root**(đã cài đặt,**chưa được kích hoạt**), được giữ lại để máy tính đã kích hoạt nó tiếp tục hoạt động |
 | `/var/log/chloros/` | Nhật ký chi tiết của dịch vụ root, có thể được đọc bởi nhóm `adm` (bị xóa khi gói phần mềm bị xóa hoàn toàn) |
-| `/usr/share/applications/chloros-cli.desktop` | Mục menu ứng dụng &quot;Chloros CLI&quot; dùng để mở terminal |
+| `/usr/share/applications/chloros-cli.desktop` | Mục menu ứng dụng "Chloros CLI" dùng để mở terminal |
 
 **Tường lửa (mới trong phiên bản 1.3.0).** Nếu `ufw` hoặc `firewalld` đang hoạt động tại thời điểm cài đặt, gói phần mềm sẽ mở các cổng UDP `5002` (dữ liệu DAQ-E), `5353` (phát hiện mDNS), `319` và `320` (PTP), và xóa các quy tắc đó khi gói phần mềm bị gỡ bỏ. Nếu tường lửa đã được cài đặt nhưng không hoạt động, nó sẽ không thêm bất kỳ quy tắc nào và hiển thị danh sách các cổng cần mở trong trường hợp bạn kích hoạt tường lửa sau này. Nó không mở bất kỳ cổng TCP nào: việc cập nhật firmware DAQ-E, trong đó cảm biến kết nối trở lại với máy tính này qua TCP để thu thập hình ảnh, sẽ thất bại với mã lỗi `… device never connected back on TCP <port> …` khi tường lửa đang hoạt động chặn kết nối đó.
 
@@ -389,7 +389,7 @@ chloros-cli time-sync status
 chloros-cli time-sync peers
 ```
 
-### Các lệnh `lattice` thất bại với thông báo &quot;Không tìm thấy trình điều khiển camera LATTICE&quot;
+### Các lệnh `lattice` thất bại với thông báo "Không tìm thấy trình điều khiển camera LATTICE"
 
 Backend không thể tải runtime camera LATTICE đi kèm khi cài đặt. Mọi lệnh `lattice` đều chạy trên backend; chính giao diện dòng lệnh (CLI) không chứa trình điều khiển camera nào. Cài đặt lại Chloros (`sudo apt install --reinstall ./chloros_1.3.0_<arch>.deb`): lệnh `.deb` sẽ cài đặt runtime bên cạnh phần backend, trong thư mục `/usr/lib/chloros/arena_runtime`, và đăng ký nó với trình tải động. Để kiểm tra việc đăng ký này:
 

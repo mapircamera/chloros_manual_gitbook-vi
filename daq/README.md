@@ -86,8 +86,8 @@ Mỗi tên tệp `.daq` đều bao gồm ID cảm biến và dấu thời gian.
 
 * [**Tab DAQ trong Chloros**](gui.md) — hướng dẫn chi tiết về giao diện người dùng (GUI): kết nối từng mô hình, cài đặt cho từng cảm biến, biểu đồ phổ, dữ liệu màu trực tiếp, độ phản xạ của cảm biến kép và ghi dữ liệu.
 * [**Hướng dẫn nhanh CLI (pool-\*)**](cli-quick-start.md) — điều khiển cảm biến DAQ từ `chloros-cli daq pool-*`, đường dẫn dòng lệnh được hỗ trợ.
-* [**Hồ sơ giới hạn &amp; Phạm vi hiệu chuẩn**](caps-and-range.md) — các giới hạn có sẵn cho từng mẫu, cách khai báo chúng và phạm vi quang phổ hiệu chuẩn chi tiết.
-* [**Ghi dữ liệu &amp; định dạng .daq**](recording.md) — định dạng SQLite của `.daq` và quy trình ghi dữ liệu.
-* [**Kết nối mạng DAQ-E &amp; Đồng bộ hóa thời gian**](ethernet-ptp.md) — các chế độ truyền tải DAQ-E và đồng bộ hóa thời gian PTP.
+* [**Hồ sơ giới hạn & Phạm vi hiệu chuẩn**](caps-and-range.md) — các giới hạn có sẵn cho từng mẫu, cách khai báo chúng và phạm vi quang phổ hiệu chuẩn chi tiết.
+* [**Ghi dữ liệu & định dạng .daq**](recording.md) — định dạng SQLite của `.daq` và quy trình ghi dữ liệu.
+* [**Kết nối mạng DAQ-E & Đồng bộ hóa thời gian**](ethernet-ptp.md) — các chế độ truyền tải DAQ-E và đồng bộ hóa thời gian PTP.
 * [**Quy trình làm việc về độ phản xạ**](reflectance.md) — sử dụng dữ liệu chiếu xuống từ DAQ để tính toán độ phản xạ.
 * Để xem tài liệu đầy đủ về cấp độ cờ, hãy tham khảo [Tài liệu tham khảo CLI](../reference/cli-reference.md) (phần `chloros-cli daq`) và [Tài liệu tham khảo SDK](../reference/sdk-reference.md) (`chloros_sdk.connect_daq_sensor()`), cả hai đều được viết để các trợ lý AI có thể sử dụng trực tiếp.

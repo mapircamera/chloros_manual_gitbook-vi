@@ -12,7 +12,7 @@ Các công thức chỉ số dưới đây sử dụng sự kết hợp của c�
 
 <table><thead><tr><th align="center">Màu bộ lọc Survey3</th><th width="196.199951171875" align="center">Tên bộ lọc Survey3</th><th width="159.800048828125" align="center">Phạm vi truyền qua (FWHM)</th><th align="center">Độ truyền trung bình</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476–512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543–558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598–640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653–668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re-RedEdge</td><td align="center">712–735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798–848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835–865 nm</td><td align="center">850 nm</td></tr></tbody></table>
 
-Khi sử dụng các công thức này, tên có thể kết thúc bằng &quot;\_1&quot; hoặc &quot;\_2&quot;, tương ứng với bộ lọc NIR nào đã được sử dụng, là NIR1 hay NIR2.
+Khi sử dụng các công thức này, tên có thể kết thúc bằng "\_1" hoặc "\_2", tương ứng với bộ lọc NIR nào đã được sử dụng, là NIR1 hay NIR2.
 
 Đối với máy ảnh LATTICE M3C (bộ lọc ba dải tần Bayer), cùng một công cụ lập chỉ mục sử dụng các dải tần của bộ lọc M3C:
 
@@ -118,7 +118,7 @@ Khi bạn truyền một tên đơn thuần như `NDVI`, Chloros phải xác đ�
 | RE | RE 0 |
 | NIR | NIR 0 |
 
-**Bộ lọc mặc định** của cài đặt sẵn (cột &quot;Default filter&quot; ở trên) sẽ được sử dụng khi dự án chứa các hình ảnh có bộ lọc đó. Nếu không, Chloros sẽ quét các bộ lọc thực sự có trong dự án theo thứ tự `RGN, OCN, NGB, RGB, RE, NIR` và chọn bộ lọc đầu tiên có thể cung cấp đầy đủ các kênh mà cài đặt sẵn yêu cầu. Nếu không có bộ lọc nào đáp ứng được, cài đặt sẵn sẽ bị loại bỏ cho lần chạy đó. Đây là lý do tại sao `NDVI` được yêu cầu trên bộ dữ liệu chỉ có OCN vẫn cho kết quả hợp lý — nó liên kết với các vị trí Orange và NIR của OCN.
+**Bộ lọc mặc định** của cài đặt sẵn (cột "Default filter" ở trên) sẽ được sử dụng khi dự án chứa các hình ảnh có bộ lọc đó. Nếu không, Chloros sẽ quét các bộ lọc thực sự có trong dự án theo thứ tự `RGN, OCN, NGB, RGB, RE, NIR` và chọn bộ lọc đầu tiên có thể cung cấp đầy đủ các kênh mà cài đặt sẵn yêu cầu. Nếu không có bộ lọc nào đáp ứng được, cài đặt sẵn sẽ bị loại bỏ cho lần chạy đó. Đây là lý do tại sao `NDVI` được yêu cầu trên bộ dữ liệu chỉ có OCN vẫn cho kết quả hợp lý — nó liên kết với các vị trí Orange và NIR của OCN.
 
 Các chuỗi mô hình LATTICE M3C mang bộ lọc có tiền tố `F` (`LATT-M3C-L41-FRGN`), nhưng tiền tố này sẽ bị loại bỏ khi mã bộ lọc được đọc từ hình ảnh, do đó máy ảnh FRGN sẽ giải quyết thông qua hàng `RGN` ở trên và không cần xử lý đặc biệt.
 
@@ -165,7 +165,7 @@ $$
 
 Trong giao diện người dùng (GUI) và danh sách cài đặt sẵn của CLI/SDK, công thức ký hiệu là `(z/y)*(x/y)` với x=Red, y=Green, z=NIR (các dải sóng của camera RGN); cài đặt sẵn của bộ xử lý chỉ số LATTICE là `nir * red / green**2`. Mọi bề mặt đều tính toán cùng một chỉ số.
 
-_Tham khảo: Vincini, M., E. Frazzi, và P. D&#x27;Alessio. &quot;Chỉ số Thực vật Dựa trên Lá và Diệp lục Băng tần Rộng ở Quy mô Tán cây.&quot; Precision Agriculture 9 (2008): 303-319._
+_Tham khảo: Vincini, M., E. Frazzi, và P. D'Alessio. "Chỉ số Thực vật Dựa trên Lá và Diệp lục Băng tần Rộng ở Quy mô Tán cây." Precision Agriculture 9 (2008): 303-319._
 
 ***
 
@@ -191,7 +191,7 @@ $$
 
 Giá trị EVI đối với các pixel thực vật nên nằm trong khoảng từ 0 đến 1. Các đối tượng sáng như mây và tòa nhà màu trắng, cùng với các đối tượng tối như mặt nước, có thể gây ra các giá trị pixel bất thường trong hình ảnh EVI. Trước khi tạo hình ảnh EVI, bạn nên loại bỏ mây và các đối tượng sáng khỏi hình ảnh phản xạ, và tùy chọn đặt ngưỡng cho các giá trị pixel từ 0 đến 1.
 
-_Tham khảo: Huete, A., et al. &quot;Tổng quan về hiệu suất phóng xạ và sinh lý của các chỉ số thảm thực vật MODIS.&quot; Remote Sensing of Environment 83 (2002):195–213._
+_Tham khảo: Huete, A., et al. "Tổng quan về hiệu suất phóng xạ và sinh lý của các chỉ số thảm thực vật MODIS." Remote Sensing of Environment 83 (2002):195–213._
 
 ***
 
@@ -207,7 +207,7 @@ $$
 
 Các khu vực có rừng sẽ có giá trị FCI1 thấp hơn do độ phản xạ của cây cối thấp hơn và sự hiện diện của bóng râm bên trong tán rừng.
 
-_Tài liệu tham khảo: Becker, Sarah J., Craig S.T. Daughtry, và Andrew L. Russ. &quot;Các chỉ số che phủ rừng đáng tin cậy cho hình ảnh đa quang phổ.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Tài liệu tham khảo: Becker, Sarah J., Craig S.T. Daughtry, và Andrew L. Russ. "Các chỉ số che phủ rừng đáng tin cậy cho hình ảnh đa quang phổ." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -215,7 +215,7 @@ _Tài liệu tham khảo: Becker, Sarah J., Craig S.T. Daughtry, và Andrew L. R
 
 _Chỉ có trên giao diện người dùng (GUI) — không có sẵn dưới dạng cài đặt sẵn CLI/SDK `--indices`._
 
-Chỉ số này phân biệt tán rừng với các loại thảm thực vật khác bằng cách sử dụng hình ảnh phản xạ đa phổ không bao gồm dải tần số &quot;red edge&quot;.
+Chỉ số này phân biệt tán rừng với các loại thảm thực vật khác bằng cách sử dụng hình ảnh phản xạ đa phổ không bao gồm dải tần số "red edge".
 
 $$
 FCI2 = Red * NIR
@@ -223,7 +223,7 @@ $$
 
 Các khu vực có rừng sẽ có giá trị FCI2 thấp hơn do độ phản xạ của cây cối thấp hơn và sự hiện diện của bóng râm bên trong tán rừng.
 
-_Tài liệu tham khảo: Becker, Sarah J., Craig S.T. Daughtry, và Andrew L. Russ. &quot;Các chỉ số phủ rừng bền vững cho hình ảnh đa phổ.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Tài liệu tham khảo: Becker, Sarah J., Craig S.T. Daughtry, và Andrew L. Russ. "Các chỉ số phủ rừng bền vững cho hình ảnh đa phổ." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -259,7 +259,7 @@ $$
 
 Hằng số gamma là một hàm trọng số phụ thuộc vào điều kiện hạt khí trong khí quyển. ENVI sử dụng giá trị 1,7, đây là giá trị được khuyến nghị bởi Gitelson, Kaufman và Merzylak (1996, trang 296).
 
-_Tài liệu tham khảo: Gitelson, A., Y. Kaufman và M. Merzylak. &quot;Sử dụng Kênh Xanh trong Viễn thám Thực vật Toàn cầu từ EOS-MODIS.&quot; Remote Sensing of Environment 58 (1996): 289-298._
+_Tài liệu tham khảo: Gitelson, A., Y. Kaufman và M. Merzylak. "Sử dụng Kênh Xanh trong Viễn thám Thực vật Toàn cầu từ EOS-MODIS." Remote Sensing of Environment 58 (1996): 289-298._
 
 ***
 
@@ -273,7 +273,7 @@ $$
 
 Việc sử dụng dải bước sóng hồng ngoại gần (NIR) và xanh lá cây rộng giúp dự đoán hàm lượng diệp lục chính xác hơn, đồng thời mang lại độ nhạy cao hơn và tỷ lệ tín hiệu trên nhiễu (SNR) tốt hơn.
 
-_Tài liệu tham khảo: Gitelson, A., Y. Gritz, và M. Merzlyak. &quot;Mối quan hệ giữa hàm lượng diệp lục trong lá và độ phản xạ quang phổ, cùng các thuật toán đánh giá diệp lục không phá hủy trên lá thực vật bậc cao.&quot; Tạp chí Sinh lý Thực vật 160 (2003): 271-282._
+_Tài liệu tham khảo: Gitelson, A., Y. Gritz, và M. Merzlyak. "Mối quan hệ giữa hàm lượng diệp lục trong lá và độ phản xạ quang phổ, cùng các thuật toán đánh giá diệp lục không phá hủy trên lá thực vật bậc cao." Tạp chí Sinh lý Thực vật 160 (2003): 271-282._
 
 ***
 
@@ -287,7 +287,7 @@ $$
 
 Giá trị GLI dao động từ -1 đến +1. Các giá trị âm đại diện cho đất và các đặc điểm không sống, trong khi các giá trị dương đại diện cho lá và thân cây xanh.
 
-_Tài liệu tham khảo: Louhaichi, M., M. Borman và D. Johnson. &quot;Nền tảng định vị không gian và ảnh chụp từ trên không để ghi chép tác động của việc chăn thả đối với lúa mì.&quot; Geocarto International 16, Số 1 (2001): 65-70._
+_Tài liệu tham khảo: Louhaichi, M., M. Borman và D. Johnson. "Nền tảng định vị không gian và ảnh chụp từ trên không để ghi chép tác động của việc chăn thả đối với lúa mì." Geocarto International 16, Số 1 (2001): 65-70._
 
 ***
 
@@ -299,7 +299,7 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Tài liệu tham khảo: Gitelson, A., và M. Merzlyak. &quot;Viễn thám nồng độ diệp lục trong lá thực vật bậc cao.&quot; Advances in Space Research 22 (1998): 689-692._
+_Tài liệu tham khảo: Gitelson, A., và M. Merzlyak. "Viễn thám nồng độ diệp lục trong lá thực vật bậc cao." Advances in Space Research 22 (1998): 689-692._
 
 ***
 
@@ -311,7 +311,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Tài liệu tham khảo: Sripada, R., et al. &quot;Xác định nhu cầu nitơ trong mùa vụ cho ngô bằng phương pháp chụp ảnh màu-hồng ngoại từ trên không.&quot; Luận án tiến sĩ, Đại học Bang North Carolina, 2005._
+_Tài liệu tham khảo: Sripada, R., et al. "Xác định nhu cầu nitơ trong mùa vụ cho ngô bằng phương pháp chụp ảnh màu-hồng ngoại từ trên không." Luận án tiến sĩ, Đại học Bang North Carolina, 2005._
 
 ***
 
@@ -323,7 +323,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Tài liệu tham khảo: Sripada, R., et al. &quot;Chụp ảnh màu hồng ngoại từ trên không để xác định nhu cầu nitơ giai đoạn đầu mùa vụ của ngô.&quot; Tạp chí Agronomy 98 (2006): 968-977._
+_Tài liệu tham khảo: Sripada, R., et al. "Chụp ảnh màu hồng ngoại từ trên không để xác định nhu cầu nitơ giai đoạn đầu mùa vụ của ngô." Tạp chí Agronomy 98 (2006): 968-977._
 
 ***
 
@@ -335,7 +335,7 @@ $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_Tài liệu tham khảo: Sripada, R., và cộng sự. &quot;Xác định nhu cầu nitơ trong mùa vụ của ngô bằng phương pháp chụp ảnh màu hồng ngoại từ trên không.&quot; Luận án tiến sĩ, Đại học Bang North Carolina, 2005._
+_Tài liệu tham khảo: Sripada, R., và cộng sự. "Xác định nhu cầu nitơ trong mùa vụ của ngô bằng phương pháp chụp ảnh màu hồng ngoại từ trên không." Luận án tiến sĩ, Đại học Bang North Carolina, 2005._
 
 ***
 
@@ -355,7 +355,7 @@ $$
 
 Các giá trị LAI cao thường dao động trong khoảng từ khoảng 0 đến 3,5. Tuy nhiên, khi cảnh quan chứa mây và các đặc điểm sáng khác gây ra các pixel bão hòa, các giá trị LAI có thể vượt quá 3,5. Tốt nhất bạn nên loại bỏ mây và các đặc điểm sáng khỏi cảnh quan của mình trước khi tạo hình ảnh LAI.
 
-_Tài liệu tham khảo: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, và A. Thomsen. &quot;Dữ liệu đa phổ từ máy bay để định lượng Chỉ số Diện tích Lá, Nồng độ Nitơ và Hiệu suất Quang hợp trong Nông nghiệp.&quot; Remote Sensing of Environment 81, số 2-3 (2002): 179-193._
+_Tài liệu tham khảo: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, và A. Thomsen. "Dữ liệu đa phổ từ máy bay để định lượng Chỉ số Diện tích Lá, Nồng độ Nitơ và Hiệu suất Quang hợp trong Nông nghiệp." Remote Sensing of Environment 81, số 2-3 (2002): 179-193._
 
 ***
 
@@ -369,7 +369,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Tài liệu tham khảo: Datt, B. &quot;Phân tích từ xa hàm lượng nước trong lá cây bạch đàn.&quot; Tạp chí Sinh lý Thực vật 154, số 1 (1999): 30-36._
+_Tài liệu tham khảo: Datt, B. "Phân tích từ xa hàm lượng nước trong lá cây bạch đàn." Tạp chí Sinh lý Thực vật 154, số 1 (1999): 30-36._
 
 ***
 
@@ -381,7 +381,7 @@ $$
 MNLI = {(NIR^{2} - Red) * (1 + L) \over (NIR^{2} + Red + L)  }
 $$
 
-_Tài liệu tham khảo: Yang, Z., P. Willis, và R. Mueller. &quot;Tác động của hình ảnh AWIFS được cải thiện tỷ lệ dải phổ đối với độ chính xác phân loại cây trồng.&quot; Kỷ yếu Hội nghị chuyên đề Viễn thám Pecora 17 (2008), Denver, CO._
+_Tài liệu tham khảo: Yang, Z., P. Willis, và R. Mueller. "Tác động của hình ảnh AWIFS được cải thiện tỷ lệ dải phổ đối với độ chính xác phân loại cây trồng." Kỷ yếu Hội nghị chuyên đề Viễn thám Pecora 17 (2008), Denver, CO._
 
 ***
 
@@ -393,7 +393,7 @@ $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
 $$
 
-_Tài liệu tham khảo: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, và S. Sorooshian. &quot;Chỉ số Thực vật Điều chỉnh theo Đất đã được Sửa đổi.&quot; Remote Sensing of Environment 48 (1994): 119-126._
+_Tài liệu tham khảo: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, và S. Sorooshian. "Chỉ số Thực vật Điều chỉnh theo Đất đã được Sửa đổi." Remote Sensing of Environment 48 (1994): 119-126._
 
 ***
 
@@ -405,7 +405,7 @@ $$
 MSR = {(NIR / Red) - 1 \over \sqrt{NIR / Red} + 1}
 $$
 
-_Tài liệu tham khảo: Chen, J. &quot;Đánh giá các chỉ số thảm thực vật và Tỷ lệ đơn giản cải tiến cho các ứng dụng ở vùng ôn đới.&quot; Tạp chí Viễn thám Canada 22 (1996): 229-242._
+_Tài liệu tham khảo: Chen, J. "Đánh giá các chỉ số thảm thực vật và Tỷ lệ đơn giản cải tiến cho các ứng dụng ở vùng ôn đới." Tạp chí Viễn thám Canada 22 (1996): 229-242._
 
 ***
 
@@ -441,7 +441,7 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Tài liệu tham khảo: Goel, N., và W. Qin. &quot;Ảnh hưởng của cấu trúc tán cây đối với mối quan hệ giữa các chỉ số thảm thực vật khác nhau với LAI và Fpar: Một mô phỏng máy tính.&quot; Tạp chí Đánh giá Viễn thám 10 (1994): 309-347._
+_Tài liệu tham khảo: Goel, N., và W. Qin. "Ảnh hưởng của cấu trúc tán cây đối với mối quan hệ giữa các chỉ số thảm thực vật khác nhau với LAI và Fpar: Một mô phỏng máy tính." Tạp chí Đánh giá Viễn thám 10 (1994): 309-347._
 
 ***
 
@@ -453,7 +453,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Tài liệu tham khảo: Rondeaux, G., M. Steven, và F. Baret. &quot;Tối ưu hóa các chỉ số thực vật được điều chỉnh theo đất.&quot; Remote Sensing of Environment 55 (1996): 95-107._
+_Tài liệu tham khảo: Rondeaux, G., M. Steven, và F. Baret. "Tối ưu hóa các chỉ số thực vật được điều chỉnh theo đất." Remote Sensing of Environment 55 (1996): 95-107._
 
 ***
 
@@ -465,7 +465,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Tài liệu tham khảo: Roujean, J., và F. Breon. &quot;Ước tính PAR được thực vật hấp thụ từ các phép đo phản xạ hai chiều.&quot; Remote Sensing of Environment 51 (1995): 375-384._
+_Tài liệu tham khảo: Roujean, J., và F. Breon. "Ước tính PAR được thực vật hấp thụ từ các phép đo phản xạ hai chiều." Remote Sensing of Environment 51 (1995): 375-384._
 
 ***
 
@@ -477,7 +477,7 @@ $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
 $$
 
-_Tài liệu tham khảo: Huete, A. &quot;Chỉ số Thực vật Được Điều chỉnh theo Đất (SAVI).&quot; Remote Sensing of Environment 25 (1988): 295-309._
+_Tài liệu tham khảo: Huete, A. "Chỉ số Thực vật Được Điều chỉnh theo Đất (SAVI)." Remote Sensing of Environment 25 (1988): 295-309._
 
 ***
 
@@ -489,7 +489,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Tài liệu tham khảo: Bannari, A., H. Asalhi, và P. Teillet. “Chỉ số Thực vật Chênh lệch Biến đổi (TDVI) để Lập bản đồ Mật độ Thực vật” Trong Kỷ yếu Hội nghị Khoa học Địa chất và Viễn thám, IGARSS &#x27;02, IEEE International, Tập 5 (2002)._
+_Tài liệu tham khảo: Bannari, A., H. Asalhi, và P. Teillet. “Chỉ số Thực vật Chênh lệch Biến đổi (TDVI) để Lập bản đồ Mật độ Thực vật” Trong Kỷ yếu Hội nghị Khoa học Địa chất và Viễn thám, IGARSS '02, IEEE International, Tập 5 (2002)._
 
 ***
 
@@ -501,7 +501,7 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Tài liệu tham khảo: Gitelson, A., và cộng sự. &quot;Các đường phân cách thực vật và đất trong không gian quang phổ ánh sáng khả kiến: Một khái niệm và kỹ thuật để ước tính từ xa tỷ lệ thực vật.&quot; Tạp chí Quốc tế về Viễn thám 23 (2002): 2537−2562._
+_Tài liệu tham khảo: Gitelson, A., và cộng sự. "Các đường phân cách thực vật và đất trong không gian quang phổ ánh sáng khả kiến: Một khái niệm và kỹ thuật để ước tính từ xa tỷ lệ thực vật." Tạp chí Quốc tế về Viễn thám 23 (2002): 2537−2562._
 
 ***
 
@@ -517,6 +517,6 @@ Hệ số trọng số (_a_) có thể dao động từ 0,1 đến 0,2. Giá tr�
 
 _Tài liệu tham khảo_
 
-_Gitelson, A. &quot;Chỉ số Thực vật Dải Động Rộng để Định lượng Từ xa các Đặc tính Sinh lý-Vật lý của Thực vật.&quot; Tạp chí Sinh lý Thực vật 161, Số 2 (2004): 165-173._
+_Gitelson, A. "Chỉ số Thực vật Dải Động Rộng để Định lượng Từ xa các Đặc tính Sinh lý-Vật lý của Thực vật." Tạp chí Sinh lý Thực vật 161, Số 2 (2004): 165-173._
 
-_Henebry, G., A. Viña và A. Gitelson. &quot;Chỉ số Thực vật Dải Động Rộng và tiềm năng ứng dụng của nó trong phân tích khoảng trống.&quot; Tạp chí Phân tích Khoảng trống 12: 50-56._
+_Henebry, G., A. Viña và A. Gitelson. "Chỉ số Thực vật Dải Động Rộng và tiềm năng ứng dụng của nó trong phân tích khoảng trống." Tạp chí Phân tích Khoảng trống 12: 50-56._

@@ -1,10 +1,6 @@
 # Theo dõi quá trình xử lý
 
-Khi quá trình xử lý đã bắt đầu, Chloros
-
-cung cấp nhiều cách để theo dõi tiến độ, kiểm tra các sự cố và nắm bắt tình hình của tập dữ liệu của bạn. Trang này giải thích cách theo dõi quá trình xử lý và giải thích thông tin mà Chloros
-
-cung cấp.
+Khi quá trình xử lý đã bắt đầu, Chloros cung cấp nhiều cách để theo dõi tiến độ, kiểm tra các sự cố và nắm bắt tình hình của tập dữ liệu của bạn. Trang này giải thích cách theo dõi quá trình xử lý và giải thích thông tin mà Chloros cung cấp.
 
 ## Tổng quan về thanh tiến trình
 
@@ -12,9 +8,7 @@ Thanh tiến trình ở đầu trang hiển thị trạng thái xử lý theo th
 
 ### Thanh tiến trình ở Chế độ Miễn phí
 
-Dành cho người dùng không có giấy phép Chloros
-
-+:
+Dành cho người dùng không có giấy phép Chloros+:
 
 **Hiển thị tiến trình 2 giai đoạn:**
 
@@ -25,13 +19,9 @@ Dành cho người dùng không có giấy phép Chloros
 * Tên giai đoạn hiện tại
 * Hình ảnh thanh ngang đơn giản
 
-### Thanh tiến trình Chloros
+### Thanh tiến trình Chloros+
 
-+
-
-Dành cho người dùng có giấy phép Chloros
-
-+:
+Dành cho người dùng có giấy phép Chloros+:
 
 **Hiển thị tiến trình 4 giai đoạn:**
 
@@ -44,9 +34,7 @@ Dành cho người dùng có giấy phép Chloros
 * Mỗi giai đoạn hiển thị tiến trình riêng biệt (0-100%)
 
 {% hint style="info" %}
-**Tính tương thích với CLI**: trong quá trình chạy `chloros-cli process`, bốn luồng (thread) tương tự sẽ hiển thị trạng thái &quot;Đang phát hiện&quot;, &quot;Đang phân tích&quot;, &quot;Đang xử lý&quot;, &quot;Đang xuất&quot;, và `chloros-cli export-status` hiển thị tiến trình xuất của Luồng 4 theo thời gian thực từ một terminal khác. Xem [Tài liệu tham khảo CLI
-
-](../reference/cli-reference.md).
+**Tính tương thích với CLI**: trong quá trình chạy `chloros-cli process`, bốn luồng (thread) tương tự sẽ hiển thị trạng thái "Đang phát hiện", "Đang phân tích", "Đang xử lý", "Đang xuất", và `chloros-cli export-status` hiển thị tiến trình xuất của Luồng 4 theo thời gian thực từ một terminal khác. Xem [Tài liệu tham khảo CLI](../reference/cli-reference.md).
 {% endhint %}
 
 ***
@@ -61,9 +49,7 @@ Dành cho người dùng có giấy phép Chloros
 
 **Quá trình diễn ra như sau:**
 
-* Chloros
-
-quét các hình ảnh mà bạn đã chọn bằng hộp kiểm “Mục tiêu” (tất cả hình ảnh nếu không có hình ảnh nào được chọn)
+* Chloros quét các hình ảnh mà bạn đã chọn bằng hộp kiểm “Mục tiêu” (tất cả hình ảnh nếu không có hình ảnh nào được chọn)
 * Các thuật toán thị giác máy tính xác định các bảng hiệu chuẩn
 * Giá trị phản xạ được trích xuất từ mỗi bảng
 * Dấu thời gian của mục tiêu được ghi lại để lập lịch hiệu chuẩn chính xác
@@ -83,7 +69,7 @@ quét các hình ảnh mà bạn đã chọn bằng hộp kiểm “Mục tiêu�
 
 * Quá trình sẽ hoàn tất nhanh chóng nếu các mục tiêu được đánh dấu đúng cách
 * Nếu mất quá nhiều thời gian, có thể các mục tiêu chưa được đánh dấu
-* Kiểm tra Nhật ký gỡ lỗi để tìm các thông báo &quot;Đã tìm thấy mục tiêu&quot;
+* Kiểm tra Nhật ký gỡ lỗi để tìm các thông báo "Đã tìm thấy mục tiêu"
 
 ### Giai đoạn 2: Phân tích
 
@@ -92,9 +78,7 @@ quét các hình ảnh mà bạn đã chọn bằng hộp kiểm “Mục tiêu�
 * Đọc siêu dữ liệu EXIF của hình ảnh (dấu thời gian, cài đặt phơi sáng)
 * Xác định chiến lược hiệu chuẩn dựa trên dấu thời gian của mục tiêu và dữ liệu DAQ hướng xuống có sẵn
 * Sắp xếp hàng đợi xử lý hình ảnh
-* Chuẩn bị các công cụ xử lý song song (Chỉ áp dụng cho Chloros
-
-+)
+* Chuẩn bị các công cụ xử lý song song (Chỉ áp dụng cho Chloros+)
 
 **Thời gian thực hiện:** 5–30 giây**Chỉ báo tiến trình:**
 
@@ -121,9 +105,7 @@ quét các hình ảnh mà bạn đã chọn bằng hộp kiểm “Mục tiêu�
 * Số hình ảnh đã hoàn thành / Tổng số hình ảnh
 
 **Hành vi xử lý:*** **Chế độ tự do**: Xử lý từng hình ảnh một theo thứ tự
-* **Chế độ Chloros
-
-+**: Chạy nhóm công nhân thích ứng với phần cứng — 1–4 công nhân đồng thời trên hệ thống GPU (tùy thuộc vào VRAM), một công nhân cho mỗi lõi vật lý (trừ đi một) trên hệ thống chỉ dùng CPU. Xem [Thích ứng tính toán động](../processing-architecture/dynamic-compute-adaptation.md)
+* **Chế độ Chloros+**: Chạy nhóm công nhân thích ứng với phần cứng — 1–4 công nhân đồng thời trên hệ thống GPU (tùy thuộc vào VRAM), một công nhân cho mỗi lõi vật lý (trừ đi một) trên hệ thống chỉ dùng CPU. Xem [Thích ứng tính toán động](../processing-architecture/dynamic-compute-adaptation.md)
 * **Tăng tốc GPU**: Tăng tốc đáng kể giai đoạn này**Cần lưu ý:**
 
 * Tiến trình ổn định theo số lượng hình ảnh
@@ -169,17 +151,13 @@ Nhật ký gỡ lỗi cung cấp thông tin chi tiết về tiến trình xử l
 
 ### Hiểu các thông báo nhật ký Các dòng nhật ký của
 
-Chloros
-
-được đánh dấu bằng các thẻ trong ngoặc vuông chỉ tên hệ thống con — ví dụ: `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Thông tin quan trọng nhất cần biết là **tóm tắt quá trình chạy**, được hiển thị ở cuối mỗi lần chạy (bao gồm cả các lần chạy đã dừng):
+Chloros được đánh dấu bằng các thẻ trong ngoặc vuông chỉ tên hệ thống con — ví dụ: `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Thông tin quan trọng nhất cần biết là **tóm tắt quá trình chạy**, được hiển thị ở cuối mỗi lần chạy (bao gồm cả các lần chạy đã dừng):
 
 ```
 [RUN-SUMMARY] 49 image(s) in 2 camera group(s); 4 target(s) detected; 45 image(s) calibrated; 180 file(s) written.
 ```
 
-Các dòng gợi ý bổ sung `[RUN-SUMMARY]` sẽ xuất hiện bất cứ khi nào cần giải thích điều gì đó — ví dụ như một lần chạy không tạo ra kết quả nào, hoặc một camera mà sản phẩm được yêu cầu đã bị bỏ qua vì không áp dụng được. Các dòng `[EXPORT-CHECK]` giải thích các trường hợp bỏ qua theo từng camera (ví dụ: lý do tại sao camera RGB
-
-không nhận được sản phẩm radiance).
+Các dòng gợi ý bổ sung `[RUN-SUMMARY]` sẽ xuất hiện bất cứ khi nào cần giải thích điều gì đó — ví dụ như một lần chạy không tạo ra kết quả nào, hoặc một camera mà sản phẩm được yêu cầu đã bị bỏ qua vì không áp dụng được. Các dòng `[EXPORT-CHECK]` giải thích các trường hợp bỏ qua theo từng camera (ví dụ: lý do tại sao camera RGB không nhận được sản phẩm radiance).
 
 Các mức độ nghiêm trọng chung của thông báo (các ví dụ dưới đây chỉ mang tính minh họa, không phải nguyên văn):
 
@@ -193,9 +171,7 @@ Các vấn đề không nghiêm trọng không làm dừng quá trình xử lý 
 
 **Hành động:** Kiểm tra các cảnh báo sau khi xử lý, nhưng không ngắt quá trình
 
-#### Thông báo lỗi (màu Red
-
-)
+#### Thông báo lỗi (màu Red)
 
 Các vấn đề nghiêm trọng có thể khiến quá trình xử lý thất bại — ví dụ: đĩa đầy, tệp hình ảnh bị hỏng hoặc không phát hiện được mục tiêu trong khi yêu cầu hiệu chuẩn phản xạ.
 
@@ -210,17 +186,9 @@ Các vấn đề nghiêm trọng có thể khiến quá trình xử lý thất b
 | Không tìm thấy mục tiêu nào                      | Không phát hiện mục tiêu hiệu chuẩn               | Đánh dấu hình ảnh mục tiêu hoặc tắt hiệu chuẩn phản xạ |
 | Không đủ dung lượng đĩa               | Không đủ dung lượng lưu trữ cho kết quả                 | Giải phóng dung lượng đĩa                                    |
 | Bỏ qua tệp bị hỏng               | Tệp hình ảnh bị hỏng                         | Sao chép lại tệp từ thẻ SD                             |
-| `[IMPORT-LEVEL] Skipping ... no raw source` | Không thể xử lý dữ liệu chụp không có khung hình thô | Chụp lại với định dạng thô, hoặc sử dụng CLI
-
-`--input-level`  |
+| `[IMPORT-LEVEL] Skipping ... no raw source` | Không thể xử lý dữ liệu chụp không có khung hình thô | Chụp lại với định dạng thô, hoặc sử dụng CLI `--input-level`  |
 | `[RUN-SUMMARY] ... 0 file(s) written` | Quá trình chạy không tạo ra sản phẩm hình ảnh — được báo cáo là lỗi kèm gợi ý | Đọc các dòng gợi ý; kiểm tra những gì đã bị bỏ qua và lý do |
-| `[PROCESS] refused: The project folder is too deep for this computer…` | Tính năng đường dẫn dài của Windows
-
-bị tắt và thư mục dự án nằm quá sâu so với giới hạn đường dẫn 260 ký tự; không có dữ liệu nào được xử lý | Sử dụng thư mục dự án ngắn hơn (thông báo sẽ hiển thị đường dẫn dài nhất vẫn phù hợp), hoặc bật tính năng đường dẫn dài củWindows
-
-và khởi động lại Chloros
-
-— xem [Khởi động quá trình xử lý](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer) |
+| `[PROCESS] refused: The project folder is too deep for this computer…` | Tính năng đường dẫn dài của Windows bị tắt và thư mục dự án nằm quá sâu so với giới hạn đường dẫn 260 ký tự; không có dữ liệu nào được xử lý | Sử dụng thư mục dự án ngắn hơn (thông báo sẽ hiển thị đường dẫn dài nhất vẫn phù hợp), hoặc bật tính năng đường dẫn dài củWindows và khởi động lại Chloros — xem [Khởi động quá trình xử lý](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer) |
 | `[unmix-clamp-mask] …` | Không thể ghi mặt nạ kẹp (clamp mask) của sản phẩm LATTICE; bản thân sản phẩm vẫn hoạt động bình thường và hiển thị thông báo `Chloros:UnmixClampMask=unavailable` | Kiểm tra dung lượng đĩa và quyền truy cập thư mục, sau đó xử lý lại nếu cần mặt nạ |
 
 ### Sao chép dữ liệu nhật ký
@@ -230,32 +198,18 @@ và khởi động lại Chloros
 1. Mở bảng điều khiển Nhật ký gỡ lỗi
 2. Nhấp vào nút **Sao chép**(sao chép nhật ký vào khay nhớ tạm) hoặc**Tải xuống** để lưu dưới dạng tệp văn bản
 3. Dán vào tệp văn bản hoặc email
-4. Gửi đến bộ phận hỗ trợ của MAPIR
-
-nếu cần
+4. Gửi đến bộ phận hỗ trợ của MAPIR nếu cần
 
 ### Báo cáo lỗi từ tab Nhật ký gỡ lỗi
 
-Tính năng mới trong phiên bản 1.3.0: biểu tượng lỗi (**Báo cáo lỗi**) ở đầu tab Nhật ký gỡ lỗi sẽ gửi báo cáo trực tiếp đến MAPIR
-
-.
+Tính năng mới trong phiên bản 1.3.0: biểu tượng lỗi (**Báo cáo lỗi**) ở đầu tab Nhật ký gỡ lỗi sẽ gửi báo cáo trực tiếp đến MAPIR.
 
 1. Nhấp vào biểu tượng lỗi ở đầu tab Nhật ký gỡ lỗi
 2. Mô tả vấn đề: bạn đang làm gì, kết quả mong đợi và điều gì đã xảy ra thay vào đó (bắt buộc)
 3. Tùy chọn: đánh dấu vào **Thêm một vài hình ảnh (tối đa 10)**và chọn hình ảnh từ dự án đang mở, hoặc sử dụng**Duyệt...** để chọn bất kỳ tệp hình ảnh nào khác
 4. Nhấp vào **Gửi**
 
-Báo cáo bao gồm mô tả của bạn, các hình ảnh bạn đính kèm, nhật ký Chloros
-
-và thông tin hệ thống (phiên bản Chloros
-
-, hệ điều hành, GPU và cài đặt dự án). Bạn phải đăng nhập vào Chloros
-
-(tab Người dùng) để gửi báo cáo. Bạn có thể đóng cửa sổ trong khi quá trình gửi đang diễn ra; khi quá trình hoàn tất, một mã tham chiếu như `Bug report sent. Reference: BR-…` sẽ được ghi vào nhật ký — hãy trích dẫn mã này khi liên hệ với MAPIR
-
-. Nếu báo cáo không thể được tải lên (ví dụ: không có kết nối internet), Chloros
-
-sẽ lưu báo cáo trên máy tính của bạn và hiển thị đường dẫn để bạn có thể gửi email báo cáo đó đến support@mapir.camera.
+Báo cáo bao gồm mô tả của bạn, các hình ảnh bạn đính kèm, nhật ký Chloros và thông tin hệ thống (phiên bản Chloros, hệ điều hành, GPU và cài đặt dự án). Bạn phải đăng nhập vào Chloros (tab Người dùng) để gửi báo cáo. Bạn có thể đóng cửa sổ trong khi quá trình gửi đang diễn ra; khi quá trình hoàn tất, một mã tham chiếu như `Bug report sent. Reference: BR-…` sẽ được ghi vào nhật ký — hãy trích dẫn mã này khi liên hệ với MAPIR. Nếu báo cáo không thể được tải lên (ví dụ: không có kết nối internet), Chloros sẽ lưu báo cáo trên máy tính của bạn và hiển thị đường dẫn để bạn có thể gửi email báo cáo đó đến support@mapir.camera.
 
 ***
 
@@ -269,33 +223,25 @@ sẽ lưu báo cáo trên máy tính của bạn và hiển thị đường dẫ
 * Các nhân còn lại ở trạng thái nhàn rỗi hoặc sẵn sàng
 * Hệ thống vẫn phản hồi bình thường
 
-**Chế độ song song Chloros
-
-+:**
+**Chế độ song song Chloros+:**
 
 * Nhiều nhân CPU hoạt động ở mức cao — số lượng nhân phụ thuộc vào chiến lược được chọn bởi [Dynamic Compute Adaptation](../processing-architecture/dynamic-compute-adaptation.md)
 * Hệ thống có thể cảm thấy chậm phản hồi hơn
 
 **Để theo dõi:**
 
-* Trình quản lý tác vụ Windows
-
-(Ctrl+Shift+Esc)
+* Trình quản lý tác vụ Windows (Ctrl+Shift+Esc)
 * Tab Hiệu suất → Phần CPU
-* Tìm các tiến trình &quot;Chloros
-
-&quot; hoặc &quot;chloros-backend&quot;
+* Tìm các tiến trình "Chloros" hoặc "chloros-backend"
 
 ### Sử dụng bộ nhớ (RAM)
 
 **Mức sử dụng thông thường:**
 
-* Dự án nhỏ (&lt; 100 hình ảnh): 2–4 GB
+* Dự án nhỏ (< 100 hình ảnh): 2–4 GB
 * Dự án trung bình (100–500 hình ảnh): 4–8 GB
 * Dự án lớn (500+ hình ảnh): 8–16 GB
-* Chế độ song song của Chloros
-
-+ tiêu tốn nhiều RAM hơn
+* Chế độ song song của Chloros+ tiêu tốn nhiều RAM hơn
 
 **Nếu bộ nhớ thấp:**
 
@@ -343,9 +289,7 @@ Khi bật tính năng tăng tốc GPU:
 
 * Kiểm tra Nhật ký gỡ lỗi để tìm lỗi
 * Kiểm tra dung lượng đĩa trống
-* Kiểm tra Trình quản lý tác vụ để đảm bảo Chloros
-
-đang chạy
+* Kiểm tra Trình quản lý tác vụ để đảm bảo Chloros đang chạy
 
 **Thông báo lỗi xuất hiện thường xuyên:**
 
@@ -355,9 +299,7 @@ Khi bật tính năng tăng tốc GPU:
 
 **Hệ thống không phản hồi:**
 
-* Chế độ song song của Chloros
-
-+ đang tiêu tốn quá nhiều tài nguyên
+* Chế độ song song của Chloros+ đang tiêu tốn quá nhiều tài nguyên
 * Cân nhắc giảm số tác vụ đồng thời hoặc nâng cấp phần cứng
 * Chế độ miễn phí tiêu tốn ít tài nguyên hơn
 
@@ -365,7 +307,7 @@ Khi bật tính năng tăng tốc GPU:
 
 Dừng xử lý nếu bạn thấy:
 
-* ❌ Lỗi &quot;Đĩa đầy&quot; hoặc &quot;Không thể ghi tệp&quot;
+* ❌ Lỗi "Đĩa đầy" hoặc "Không thể ghi tệp"
 * ❌ Lỗi tệp hình ảnh bị hỏng lặp đi lặp lại
 * ❌ Hệ thống bị treo hoàn toàn (không phản hồi)
 * ❌ Phát hiện cài đặt sai
@@ -374,7 +316,7 @@ Dừng xử lý nếu bạn thấy:
 **Cách dừng:**
 
 1. Nhấp vào**nút Dừng** (thay thế cho nút Bắt đầu) — chỉ cần nhấp một lần là đủ
-2. Thanh tiến trình sẽ hiển thị &quot;Đang dừng...&quot; trong khi hình ảnh đang xử lý hoàn tất, sau đó quá trình chạy kết thúc ở trạng thái đã dừng
+2. Thanh tiến trình sẽ hiển thị "Đang dừng..." trong khi hình ảnh đang xử lý hoàn tất, sau đó quá trình chạy kết thúc ở trạng thái đã dừng
 3. Các sản phẩm đã được xuất vẫn còn trên đĩa; nhật ký sẽ hiển thị mã lỗi `[RUN-SUMMARY]` mô tả chính xác những gì đã hoàn thành
 4. Khắc phục sự cố và khởi động lại — quá trình xử lý sẽ bắt đầu lại từ đầu
 
@@ -396,11 +338,9 @@ Dừng xử lý nếu bạn thấy:
 
 1. Nếu mới bắt đầu và đang ở giai đoạn Phát hiện: Dừng lại, đánh dấu mục tiêu, khởi động lại
 2. Cho lần sau: Sử dụng SSD, giảm số lượng chỉ mục, nâng cấp phần cứng
-3. Cân nhắc sử dụng giao diện dòng lệnh (CLI
+3. Cân nhắc sử dụng giao diện dòng lệnh (CLI) để xử lý hàng loạt tập dữ liệu lớn
 
-) để xử lý hàng loạt tập dữ liệu lớn
-
-### Cảnh báo &quot;Dung lượng đĩa&quot;
+### Cảnh báo "Dung lượng đĩa"
 
 **Giải pháp:**
 
@@ -408,11 +348,9 @@ Dừng xử lý nếu bạn thấy:
 2. Chuyển dự án sang ổ đĩa có dung lượng lớn hơn
 3. Giảm số lượng chỉ mục cần xuất
 4. Tắt các sản phẩm xuất LATTICE không cần thiết (Cài đặt Dự án → Xử lý)
-5. Sử dụng định dạng JPG thay vì TIFF
+5. Sử dụng định dạng JPG thay vì TIFF (tệp nhỏ hơn)
 
-(tệp nhỏ hơn)
-
-### Thông báo &quot;Tệp bị hỏng&quot; xuất hiện thường xuyên
+### Thông báo "Tệp bị hỏng" xuất hiện thường xuyên
 
 **Giải pháp:**
 
@@ -427,9 +365,7 @@ Dừng xử lý nếu bạn thấy:
 
 1. Đảm bảo thông gió đủ
 2. Làm sạch bụi khỏi các khe thông gió của máy tính
-3. Giảm tải xử lý (sử dụng chế độ Free thay vì Chloros
-
-+)
+3. Giảm tải xử lý (sử dụng chế độ Free thay vì Chloros+)
 4. Xử lý vào những thời điểm mát mẻ trong ngày
 
 ***

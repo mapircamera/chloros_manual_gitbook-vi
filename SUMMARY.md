@@ -43,19 +43,19 @@
 * [Cài đặt camera](lattice/camera-settings.md)
 * [Cài đặt và chế độ chụp](lattice/capture.md)
 * [Mảng nhiều camera](lattice/arrays.md)
-* [Camera đơn &amp; Chỉ số thực vật](lattice/mono-indices.md)
+* [Camera đơn & Chỉ số thực vật](lattice/mono-indices.md)
 
 ## Cảm biến ánh sáng DAQ
 
 * [Cảm biến ánh sáng DAQ](daq/README.md)
 * [Tab DAQ trong Chloros](daq/gui.md)
 * [Hướng dẫn nhanh về CLI (pool-\*)](daq/cli-quick-start.md)
-* [Hồ sơ Cap &amp; Phạm vi hiệu chuẩn](daq/caps-and-range.md)
-* [Ghi dữ liệu &amp; định dạng .daq](daq/recording.md)
-* [Mạng DAQ-E &amp; đồng bộ thời gian](daq/ethernet-ptp.md)
+* [Hồ sơ Cap & Phạm vi hiệu chuẩn](daq/caps-and-range.md)
+* [Ghi dữ liệu & định dạng .daq](daq/recording.md)
+* [Mạng DAQ-E & đồng bộ thời gian](daq/ethernet-ptp.md)
 * [Quy trình làm việc với độ phản xạ](daq/reflectance.md)
 
-## Linux &amp; Tính toán biên
+## Linux & Tính toán biên
 
 * [Tổng quan về Linux](linux/linux-overview.md)
 * [Cài đặt Linux](linux/linux-installation.md)
@@ -66,7 +66,7 @@
 * [Thích ứng tính toán động](processing-architecture/dynamic-compute-adaptation.md)
 * [Quy trình xử lý](processing-architecture/processing-pipeline.md)
 
-## Tài liệu tham khảo (CLI &amp; SDK)
+## Tài liệu tham khảo (CLI & SDK)
 
 * [Tài liệu tham khảo Chloros CLI](reference/cli-reference.md)
 * [Tài liệu tham khảo Chloros Python SDK](reference/sdk-reference.md)

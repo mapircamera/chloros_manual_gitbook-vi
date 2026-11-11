@@ -1,17 +1,14 @@
 # Tự động điều chỉnh khả năng tính toán
 
-Chloros
-1.3.0 sử dụng tính năng phát hiện phần cứng và tự động lựa chọn chiến lược xử lý. Bộ xử lý sẽ tự động điều chỉnh phù hợp với phần cứng của bạn — từ Jetson Orin Nano đến máy trạm đa GPU — mà không cần bất kỳ cấu hình thủ công nào.
+Chloros 1.3.0 sử dụng tính năng phát hiện phần cứng và tự động lựa chọn chiến lược xử lý. Bộ xử lý sẽ tự động điều chỉnh phù hợp với phần cứng của bạn — từ Jetson Orin Nano đến máy trạm đa GPU — mà không cần bất kỳ cấu hình thủ công nào.
 
 ***
 
 ## Cách thức hoạt động
 
-Khi Chloros
-khởi động, nó sẽ phân tích hệ thống của bạn:
+Khi Chloros khởi động, nó sẽ phân tích hệ thống của bạn:
 
-1. **Phát hiện hệ điều hành** — Windows
-hoặc Linux
+1. **Phát hiện hệ điều hành** — Windows hoặc Linux
 2. **Xác định số lõi CPU và tổng dung lượng RAM**
 
 3.**Phát hiện sự hiện diện của GPU** — khả năng NVIDIA CUDA, VRAM, mô hình
@@ -24,19 +21,16 @@ Hồ sơ được phát hiện sẽ được lưu vào bộ nhớ đệm cho phi
 
 | Nền tảng | Hồ sơ được lưu vào bộ nhớ đệm |
 | --- | --- |
-| **Linux
-/ Jetson** | `~/.config/chloros/system_config.json` (ưu tiên `XDG_CONFIG_HOME`) |
+| **Linux / Jetson** | `~/.config/chloros/system_config.json` (ưu tiên `XDG_CONFIG_HOME`) |
 | **Windows** | `%LOCALAPPDATA%\Chloros\config\system_config.json` |
 
-Xóa tệp đó để buộc thực hiện phát hiện lại — hữu ích sau khi thêm GPU hoặc tăng dung lượng RAM. Chloros
-cũng tự động phát hiện lại khi bộ nhớ đệm được ghi bởi một phiên bản cũ không tương thích.
+Xóa tệp đó để buộc thực hiện phát hiện lại — hữu ích sau khi thêm GPU hoặc tăng dung lượng RAM. Chloros cũng tự động phát hiện lại khi bộ nhớ đệm được ghi bởi một phiên bản cũ không tương thích.
 
 ***
 
 ## Chiến lược tính toán
 
-Chloros
-chọn một trong ba chiến lược tính toán dựa trên phần cứng của bạn:
+Chloros chọn một trong ba chiến lược tính toán dựa trên phần cứng của bạn:
 
 | Chiến lược | Được chọn khi | Công nhân | Bộ thực thi | Đường ống |
 | --- | --- | --- | --- | --- |
@@ -50,11 +44,7 @@ Ví dụ minh họa về công thức xác định số worker của `GPU_PARALL
 **Các chiến lược GPU yêu cầu PyTorch có thể sử dụng CUDA.** Một máy tính có PyTorch không có thiết bị CUDA khả dụng sẽ nhận được `CPU_PARALLEL`, bất kể GPU của nó là gì. Gói Jetson 1.3.0 sử dụng phiên bản PyTorch được biên dịch với CUDA của JetPack 6, do đó một thiết bị Jetson sẽ đáp ứng yêu cầu ngay khi các thư viện CUDA và cuDNN của JetPack được cài đặt. Một thiết bị Jetson có RAM dưới 12GB luôn xử lý một hình ảnh tại một thời điểm, trong quá trình xử lý (được ghi lại là `GPU_SINGLE`).
 {% endhint %}
 
-Các chiến lược GPU chạy một nhóm các tiến trình công nhân, mỗi tiến trình là một tiến trình hệ điều hành riêng biệt với bối cảnh CUDA riêng, mà Chloros
-khởi động bằng cách khởi chạy lại chương trình backend đã cài đặt của chính nó (không thông qua `multiprocessing` của Python
-, vì việc khởi động tiến trình công nhân của nó không hoạt động bên trong ứng dụng được đóng gói). Chiến lược CPU sử dụng một nhóm luồng (`ThreadPoolExecutor` của Python
-). Chloros
-không sử dụng bất kỳ khung phân tán của bên thứ ba nào (chẳng hạn như Ray).
+Các chiến lược GPU chạy một nhóm các tiến trình công nhân, mỗi tiến trình là một tiến trình hệ điều hành riêng biệt với bối cảnh CUDA riêng, mà Chloros khởi động bằng cách khởi chạy lại chương trình backend đã cài đặt của chính nó (không thông qua `multiprocessing` của Python, vì việc khởi động tiến trình công nhân của nó không hoạt động bên trong ứng dụng được đóng gói). Chiến lược CPU sử dụng một nhóm luồng (`ThreadPoolExecutor` của Python). Chloros không sử dụng bất kỳ khung phân tán của bên thứ ba nào (chẳng hạn như Ray).
 
 ### Các loại đường ống xử lý
 
@@ -75,8 +65,7 @@ Chuỗi giải pháp dự phòng trong thời gian chạy luôn là `fused_gpu` 
 CHLOROS_STRATEGY=CPU_PARALLEL chloros-cli process ~/datasets/flight001
 ```
 
-Biến này được so khớp mà không phân biệt chữ hoa chữ thường; bất kỳ giá trị nào không phải là một trong ba tên trên sẽ bị bỏ qua và tính năng tự động phát hiện sẽ tiếp tục hoạt động bình thường. Khi áp dụng tùy chỉnh, Chloros
-vẫn sẽ tự động chọn số lượng công nhân cho bạn:
+Biến này được so khớp mà không phân biệt chữ hoa chữ thường; bất kỳ giá trị nào không phải là một trong ba tên trên sẽ bị bỏ qua và tính năng tự động phát hiện sẽ tiếp tục hoạt động bình thường. Khi áp dụng tùy chỉnh, Chloros vẫn sẽ tự động chọn số lượng công nhân cho bạn:
 
 | Tùy chỉnh | Số lượng công nhân được sử dụng |
 | --- | --- |
@@ -124,8 +113,7 @@ Các GPU rời chỉ dành 0,5GB cho hệ thống, vì chúng không chia sẻ R
 
 ## Phân bổ bộ nhớ GPU động
 
-Chloros
-sử dụng [đường ống xử lý 4 luồng](processing-pipeline.md):
+Chloros sử dụng [đường ống xử lý 4 luồng](processing-pipeline.md):
 
 * **Luồng 1** (Phát hiện) — Tải hình ảnh, phân tích EXIF, phát hiện mục tiêu
 * **Luồng 2** (Hiệu chuẩn) — Tính toán hiệu chỉnh độ phản xạ
@@ -152,26 +140,23 @@ Giá trị thực tế được sử dụng trong thời gian chạy là giá tr
 
 ## Xử lý nhận biết kết cấu
 
-Bộ khử răng cưa nhận biết kết cấu (**chỉ Chloros
-+** — `--debayer texture-aware`) chạy mô hình khử nhiễu AI/ML cần khoảng 1,75GB VRAM ở định dạng FP16 cho mỗi bản sao, do đó nó sử dụng nhiều bộ nhớ GPU hơn so với phương pháp Tiêu chuẩn:
+Bộ khử răng cưa nhận biết kết cấu (**chỉ Chloros+** — `--debayer texture-aware`) chạy mô hình khử nhiễu AI/ML cần khoảng 1,75GB VRAM ở định dạng FP16 cho mỗi bản sao, do đó nó sử dụng nhiều bộ nhớ GPU hơn so với phương pháp Tiêu chuẩn:
 
 * Các hệ thống có **dưới 7GB VRAM**xử lý Texture Aware trong một**vòng lặp đồng bộ, từng hình ảnh một** — không thể chứa nhiều bản sao mô hình, và việc sử dụng nhóm công nhân (worker pool) chỉ làm tăng xung đột
 * Các hệ thống có **VRAM từ 7GB trở lên** có thể xử lý Texture Aware đồng thời, mặc dù số lượng worker sẽ ít hơn so với phương pháp Standard
 * Trên **Jetson**, Texture Aware luôn được gán cố định cho một công nhân duy nhất
 * Nếu **không có GPU CUDA khả dụng**, quá trình chạy sẽ sử dụng thuật toán debayer Standard, và hệ thống ghi lại một dòng thông báo `[DEBAYER] … needs a CUDA GPU …` giải thích lý do
-* Trên các thiết bị Jetson công suất thấp (Nano, Orin Nano), giao diện dòng lệnh (CLI
-) sẽ áp dụng giới hạn tần số GPU khi bạn yêu cầu chế độ Texture Aware — xem [Hướng dẫn NVIDIA Jetson](../linux/nvidia-jetson-guide.md#gpu-frequency-cap-for-texture-aware-on-nano-and-orin-nano)
+* Trên các thiết bị Jetson công suất thấp (Nano, Orin Nano), giao diện dòng lệnh (CLI) sẽ áp dụng giới hạn tần số GPU khi bạn yêu cầu chế độ Texture Aware — xem [Hướng dẫn NVIDIA Jetson](../linux/nvidia-jetson-guide.md#gpu-frequency-cap-for-texture-aware-on-nano-and-orin-nano)
 
 ***
 
 ## Quản lý nhiệt (Jetson)
 
-Các thiết bị Jetson có giới hạn về nhiệt độ, đặc biệt là trong các môi trường triển khai kín hoặc trên không. Chloros
-theo dõi các cảm biến nhiệt độ tích hợp trên Jetson và tự động điều chỉnh kích thước lô:
+Các thiết bị Jetson có giới hạn về nhiệt độ, đặc biệt là trong các môi trường triển khai kín hoặc trên không. Chloros theo dõi các cảm biến nhiệt độ tích hợp trên Jetson và tự động điều chỉnh kích thước lô:
 
 | Nhiệt độ | Phản ứng |
 | --- | --- |
-| **&lt; 70°C** | Hoạt động bình thường — tốc độ tối đa |
+| **< 70°C** | Hoạt động bình thường — tốc độ tối đa |
 | **70°C** (Cảnh báo) | Kích thước lô được thu nhỏ dần (từ 100% xuống 50% trong khoảng từ 70°C đến 80°C) |
 | **80°C** (Nguy cấp) | Giảm tốc độ mạnh (từ 50% xuống 0% trong khoảng từ 80°C đến 90°C) |
 | **90°C** (Tắt nguồn) | Dừng hoàn toàn quá trình xử lý GPU |
@@ -182,11 +167,9 @@ Trên các hệ thống máy tính để bàn có hệ thống làm mát đủ t
 
 ## Xử lý áp lực bộ nhớ
 
-Chloros
-liên tục theo dõi bộ nhớ GPU trong quá trình xử lý và phản ứng ở ba mức độ.
+Chloros liên tục theo dõi bộ nhớ GPU trong quá trình xử lý và phản ứng ở ba mức độ.
 
-**Kích thước lô.** Một lô bắt đầu với 8 hình ảnh nhân với hệ số nhân của nền tảng từ các bảng trên. Sau đó, Chloros
-kiểm tra VRAM trống, dành riêng 20% trong số đó cho chi phí hoạt động của chính PyTorch và giả định khoảng 100MB bộ nhớ GPU cho mỗi hình ảnh 12MP — kích thước lô sẽ là giá trị nhỏ hơn giữa giới hạn tính từ bộ nhớ và giá trị cơ sở của nền tảng. Nó không bao giờ giảm xuống dưới 1.
+**Kích thước lô.** Một lô bắt đầu với 8 hình ảnh nhân với hệ số nhân của nền tảng từ các bảng trên. Sau đó, Chloros kiểm tra VRAM trống, dành riêng 20% trong số đó cho chi phí hoạt động của chính PyTorch và giả định khoảng 100MB bộ nhớ GPU cho mỗi hình ảnh 12MP — kích thước lô sẽ là giá trị nhỏ hơn giữa giới hạn tính từ bộ nhớ và giá trị cơ sở của nền tảng. Nó không bao giờ giảm xuống dưới 1.
 
 **Giảm kích thước lô chủ động.**Khi**tỷ lệ sử dụng VRAM vượt quá 85%**, kích thước lô sẽ được giảm xuống trước khi xảy ra lỗi.**Cắt giảm phân bổ theo luồng.** Khi mức sử dụng thực tế tăng lên, ngân sách GPU của mỗi luồng sẽ bị thu hẹp: ×0,75 khi sử dụng vượt quá 80%, ×0,5 khi vượt quá 90%. Các ngưỡng theo dõi là 70% (thận trọng), 85% (giới hạn hoạt động bình thường) và 95% (nguy cơ hết bộ nhớ).**Thoái lui và phục hồi khi hết bộ nhớ (OOM).** Nếu sự cố hết bộ nhớ vẫn xảy ra:
 
@@ -194,8 +177,7 @@ kiểm tra VRAM trống, dành riêng 20% trong số đó cho chi phí hoạt đ
 * việc phân bổ cho các luồng đang hoạt động sẽ bị cắt giảm xuống 70% so với giá trị hiện tại và bộ phân bổ sẽ chuyển sang chiến lược thận trọng, sau đó nới lỏng trở lại sau một chuỗi các lần phân bổ thành công
 * khi gặp áp lực nghiêm trọng, đường ống xử lý sẽ chuyển từ `fused_gpu` sang `tiled_gpu`, và sang `cpu_fallback` như phương án cuối cùng
 
-**Bộ nhớ RAM máy chủ (Jetson).** Trước khi xử lý, giao diện dòng lệnh (CLI
-) sẽ ước tính dung lượng bộ nhớ tối đa của máy chủ dựa trên số lượng hình ảnh và chế độ debayer, đồng thời cảnh báo nếu dung lượng RAM cộng với vùng hoán đổi dựa trên tệp có khả năng không đủ, đồng thời hiển thị các lệnh chính xác để thêm vùng hoán đổi — xem [Hướng dẫn NVIDIA Jetson](../linux/nvidia-jetson-guide.md#swap-warning-and-recommendations).
+**Bộ nhớ RAM máy chủ (Jetson).** Trước khi xử lý, giao diện dòng lệnh (CLI) sẽ ước tính dung lượng bộ nhớ tối đa của máy chủ dựa trên số lượng hình ảnh và chế độ debayer, đồng thời cảnh báo nếu dung lượng RAM cộng với vùng hoán đổi dựa trên tệp có khả năng không đủ, đồng thời hiển thị các lệnh chính xác để thêm vùng hoán đổi — xem [Hướng dẫn NVIDIA Jetson](../linux/nvidia-jetson-guide.md#swap-warning-and-recommendations).
 
 ***
 
@@ -219,21 +201,17 @@ Kiểm tra 7 hiển thị `CUDA: <bool>, Denoiser: <bool>` — cả hai điều 
 
 ### Nhật ký backend
 
-Chiến lược và số lượng worker được chọn bên trong backend khi bắt đầu mỗi lần chạy — không có thông báo trên giao diện dòng lệnh (CLI
-) nào hiển thị các thông tin này. Khi xảy ra sự cố bất thường (đường dẫn GPU chuyển sang phương án dự phòng, lỗi OOM, bộ lọc giảm nhiễu không thể tải), nhật ký backend của phiên làm việc đó sẽ ghi lại thông tin này:
+Chiến lược và số lượng worker được chọn bên trong backend khi bắt đầu mỗi lần chạy — không có thông báo trên giao diện dòng lệnh (CLI) nào hiển thị các thông tin này. Khi xảy ra sự cố bất thường (đường dẫn GPU chuyển sang phương án dự phòng, lỗi OOM, bộ lọc giảm nhiễu không thể tải), nhật ký backend của phiên làm việc đó sẽ ghi lại thông tin này:
 
 | Nền tảng | Vị trí nhật ký |
 | --- | --- |
-| **Hệ điều hành Linux
-/Jetson** | `~/.cache/chloros/logs/backend_<YYYYMMDD_HHMMSS>.log` (một tệp cho mỗi lần khởi chạy) |
-| **Linux
-, backend khởi chạy qua CLI** | cũng là `~/.chloros/backend.log` |
+| **Hệ điều hành Linux/Jetson** | `~/.cache/chloros/logs/backend_<YYYYMMDD_HHMMSS>.log` (một tệp cho mỗi lần khởi chạy) |
+| **Linux, backend khởi chạy qua CLI** | cũng là `~/.chloros/backend.log` |
 | **Windows** | `%LOCALAPPDATA%\Chloros\logs\` |
 
 ### Tiến trình thời gian thực
 
-Trong quá trình chạy, giao diện dòng lệnh (CLI
-) hiển thị tiến trình theo thời gian thực cho từng luồng (Phát hiện, Phân tích, Xử lý, Xuất) thông qua Server-Sent Events — đây là cách thực tế để xác định liệu Luồng 3 có phải là điểm nghẽn hay không. Xem [Quy trình xử lý](processing-pipeline.md).
+Trong quá trình chạy, giao diện dòng lệnh (CLI) hiển thị tiến trình theo thời gian thực cho từng luồng (Phát hiện, Phân tích, Xử lý, Xuất) thông qua Server-Sent Events — đây là cách thực tế để xác định liệu Luồng 3 có phải là điểm nghẽn hay không. Xem [Quy trình xử lý](processing-pipeline.md).
 
 ***
 
@@ -241,8 +219,6 @@ Trong quá trình chạy, giao diện dòng lệnh (CLI
 
 * [Quy trình xử lý](processing-pipeline.md) — Hiểu về kiến trúc quy trình 4 luồng
 * [Hướng dẫn NVIDIA Jetson](../linux/nvidia-jetson-guide.md) — Triển khai và tối ưu hóa dành riêng cho Jetson
-* [CLI
-: Dòng lệnh](../CLI.md) — Hướng dẫn về CLI
+* [CLI: Dòng lệnh](../CLI.md) — Hướng dẫn về CLI
 
-* [Tham chiếu CLI
-](../reference/cli-reference.md) — Danh sách đầy đủ các lệnh cho phiên bản 1.3.0
+* [Tham chiếu CLI](../reference/cli-reference.md) — Danh sách đầy đủ các lệnh cho phiên bản 1.3.0

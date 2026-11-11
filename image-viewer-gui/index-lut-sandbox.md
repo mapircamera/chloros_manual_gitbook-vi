@@ -32,7 +32,7 @@ Thanh bên hiển thị, từ trên xuống dưới:
 * bảng **Giá trị con trỏ** với phần hiển thị dữ liệu, biểu đồ histogram và điều khiển GSD
 
 {% hint style="warning" %}
-**Không khả dụng cho máy ảnh đơn sắc.** Trên hình ảnh LATTICE M3M đơn dải, cả hai ô chọn đều bị vô hiệu hóa, kèm chú thích _&quot;Không khả dụng cho cảm biến đơn sắc (M3M)&quot;_ — chỉ số đa dải không được định nghĩa trên một dải. Để tính toán chỉ số từ máy ảnh M3M, hãy kết hợp hai hoặc nhiều hình ảnh thành một chồng hình đa dải được căn chỉnh và sử dụng công cụ tính chỉ số LATTICE.
+**Không khả dụng cho máy ảnh đơn sắc.** Trên hình ảnh LATTICE M3M đơn dải, cả hai ô chọn đều bị vô hiệu hóa, kèm chú thích _"Không khả dụng cho cảm biến đơn sắc (M3M)"_ — chỉ số đa dải không được định nghĩa trên một dải. Để tính toán chỉ số từ máy ảnh M3M, hãy kết hợp hai hoặc nhiều hình ảnh thành một chồng hình đa dải được căn chỉnh và sử dụng công cụ tính chỉ số LATTICE.
 {% endhint %}
 
 ***
@@ -79,7 +79,7 @@ Một **bảng tra cứu (Look-Up Table)** ánh xạ các giá trị chỉ số 
 
 ### Thêm LUT
 
-1. Nhấp vào nút **&quot;+ Add LUT&quot;** (<img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">) bên dưới công thức
+1. Nhấp vào nút **"+ Add LUT"** (<img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">) bên dưới công thức
 2. Chọn một dải màu
 3. Đặt giá trị tối thiểu và tối đa cho vùng cắt
 4. Chọn Chế độ cắt (Clipping Mode)
@@ -101,7 +101,7 @@ Di chuột qua **thanh độ dốc**để mở danh sách cài đặt sẵn — 
 | 6 | Tím → Blue → Green → Vàng      | Tuần tự, từ tối đến sáng                                           |
 | 7 | Orange → Trắng → Tím             | Phân kỳ quanh điểm giữa sáng                                   |
 
-Một gradient **phân kỳ**đặt một màu trung tính ở giữa cửa sổ của bạn, điều này rất phù hợp khi điểm giữa có ý nghĩa cụ thể (một ngưỡng, một ngày cơ sở). Một gradient**từng bước** chạy theo thứ tự từ tối đến sáng, rất phù hợp cho một đại lượng chỉ có &quot;nhiều&quot; và &quot;ít&quot;.
+Một gradient **phân kỳ**đặt một màu trung tính ở giữa cửa sổ của bạn, điều này rất phù hợp khi điểm giữa có ý nghĩa cụ thể (một ngưỡng, một ngày cơ sở). Một gradient**từng bước** chạy theo thứ tự từ tối đến sáng, rất phù hợp cho một đại lượng chỉ có "nhiều" và "ít".
 
 Mỗi cài đặt sẵn có bảy điểm dừng màu. Nhấp vào một cài đặt sẵn và hình ảnh sẽ được cập nhật ngay lập tức (khi hộp LUT được đánh dấu).
 
@@ -143,14 +143,14 @@ Khi giá trị chỉ số của một pixel nằm ngoài khoảng tối thiểu/
 
 | Nhãn menu thả xuống                  | Giá trị lưu trữ      | Các pixel nằm ngoài phạm vi sẽ được vẽ dưới dạng                                                                                                |
 | ------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Tối thiểu &amp; Tối đa** (mặc định) | `clip`            | Màu cuối gần nhất của gradient — các giá trị dưới mức tối thiểu sẽ lấy màu đầu tiên, các giá trị trên mức tối đa sẽ lấy màu cuối cùng |
+| **Tối thiểu & Tối đa** (mặc định) | `clip`            | Màu cuối gần nhất của gradient — các giá trị dưới mức tối thiểu sẽ lấy màu đầu tiên, các giá trị trên mức tối đa sẽ lấy màu cuối cùng |
 | **Nền trong suốt**      | `transparent`     | Hoàn toàn trong suốt (alpha thực)                                                                                                  |
 | **Nền chỉ số**| `indexColor`      | Tông xám, được kéo dài trên toàn bộ phạm vi chỉ số**đầy đủ** của hình ảnh, do đó cấu trúc nằm ngoài phạm vi vẫn hiển thị dưới dạng màu xám                |
 | **Nền gốc**         | `backgroundColor` | Chính hình ảnh nền bên dưới, do đó lớp phủ màu nằm trên cảnh thực                                                |
 
 | Chế độ                       | Phù hợp nhất cho                               | Hiệu ứng                                      |
 | -------------------------- | -------------------------------------- | ----------------------------------------- |
-| **Giá trị tối thiểu &amp; tối đa**      | Hiển thị dữ liệu đầy đủ, phân tích khoa học | Mỗi pixel đều có màu                      |
+| **Giá trị tối thiểu & tối đa**      | Hiển thị dữ liệu đầy đủ, phân tích khoa học | Mỗi pixel đều có màu                      |
 | **Nền trong suốt** | Lớp phủ GIS, cô lập dải giá trị   | Màu bên trong khung, không có gì bên ngoài |
 | **Nền chỉ số**       | Nhấn mạnh đồng thời giữ bối cảnh dữ liệu    | Màu bên trong, xám bên ngoài               |
 | **Nền gốc**    | Báo cáo và trình bày              | Màu bên trong, ảnh bên ngoài         |
@@ -222,7 +222,7 @@ Việc xuất toàn bộ dự án chỉ mất vài phút, do đó quá trình ch
 
 * Thanh tiến trình hiển thị `current / total` và tệp đang được ghi
 * Khi hoàn tất, khung cửa sổ sẽ báo cáo số lượng hình ảnh đã được xuất, số lượng hình ảnh bị bỏ qua và đường dẫn thư mục đầu ra
-* Các hình ảnh bị bỏ qua được liệt kê kèm lý do (hiển thị tối đa năm lý do, sau đó là dòng &quot;+N nữa&quot;). Lý do phổ biến nhất là một lớp không có các kênh mà chỉ mục này cần
+* Các hình ảnh bị bỏ qua được liệt kê kèm lý do (hiển thị tối đa năm lý do, sau đó là dòng "+N nữa"). Lý do phổ biến nhất là một lớp không có các kênh mà chỉ mục này cần
 * Nếu **không** có hình ảnh nào trong dự án có thể sử dụng chỉ mục này, quá trình chạy sẽ báo lỗi thay vì để lại cho bạn một thư mục trống
 
 Chỉ có một quá trình xuất trong môi trường thử nghiệm (sandbox) được thực thi cùng một lúc. Việc khởi chạy quá trình thứ hai trong khi quá trình đầu tiên đang diễn ra sẽ bị từ chối kèm theo thông báo rõ ràng, thay vì để hai quá trình tranh chấp cùng một tệp dự án.
@@ -233,17 +233,13 @@ Mỗi lần chạy đã hoàn tất sẽ xuất hiện dưới dạng một nút
 
 ***
 
-## Công thức chỉ số tùy chỉnh (Chloros
-
-+)
+## Công thức chỉ số tùy chỉnh (Chloros+)
 
 {% hint style="info" %}
 **Nơi tạo công thức**: trong thanh bên Sandbox hoặc trong**Cài đặt dự án** trước khi xử lý. Cả hai đều ghi vào cùng một danh sách cấp dự án.
 {% endhint %}
 
-1. Mở trình tính công thức tùy chỉnh từ menu thả xuống công thức chỉ số (yêu cầu đăng nhập bằng gói đăng kýChloros
-
-+ đủ điều kiện)
+1. Mở trình tính công thức tùy chỉnh từ menu thả xuống công thức chỉ số (yêu cầu đăng nhập bằng gói đăng kýChloros+ đủ điều kiện)
 2. Viết công thức bằng cách sử dụng các **ký hiệu dải-khe** `x`, `y`, `z`, `a`, `b`, `c` — không phải tên dải
 3. Các toán tử có sẵn: `+`, `-`, `*`, `/`, `^` và `()` để nhóm
 4. Các hàm có sẵn: `sqrt()`, `log()`, `ln()`, `abs()`, `sign()`, `log1p()`, `log2()`
@@ -260,20 +256,18 @@ Squared ratio:                  (y/x)^2
 {% hint style="warning" %}
 **Công thức tùy chỉnh chỉ có sẵn trên giao diện người dùng (GUI).** Tùy chọnCLI
 
-/SDK
-
-`--indices` sẽ mở rộng danh sách 22 tên cài đặt sẵn tích hợp sẵn và tự động bỏ qua mọi thứ khác, bao gồm cả các công thức tùy chỉnh của bạn. Để xử lý hàng loạt một công thức tùy chỉnh, hãy cấu hình nó trong Cài đặt Dự án và chạy xử lý, hoặc sử dụng tính năng xuất &quot;Áp dụng cho tất cả hình ảnh trong dự án&quot; của Sandbox.
+/SDK `--indices` sẽ mở rộng danh sách 22 tên cài đặt sẵn tích hợp sẵn và tự động bỏ qua mọi thứ khác, bao gồm cả các công thức tùy chỉnh của bạn. Để xử lý hàng loạt một công thức tùy chỉnh, hãy cấu hình nó trong Cài đặt Dự án và chạy xử lý, hoặc sử dụng tính năng xuất "Áp dụng cho tất cả hình ảnh trong dự án" của Sandbox.
 {% endhint %}
 
 ***
 
 ## Khắc phục sự cố
 
-### &quot;Lớp này không có các kênh mà chỉ số này yêu cầu&quot;
+### "Lớp này không có các kênh mà chỉ số này yêu cầu"
 
 Công thức yêu cầu vị trí kênh mà lớp hiện tại không có — ví dụ: chỉ số ba khe trên tệp một hoặc hai kênh. Chuyển sang lớp đa dải (phản xạ hoặc đã loại bỏ Bayer), hoặc chọn chỉ số phù hợp với bộ lọc của máy ảnh.
 
-### &quot;Không thể kết nối với hệ thống xử lý hình ảnh phía sau&quot;
+### "Không thể kết nối với hệ thống xử lý hình ảnh phía sau"
 
 Hệ thống phía sau không phản hồi. Kiểm tra tab Nhật ký; nếu hệ thống xử lý đang khởi động lại, Sandbox sẽ tự động khôi phục khi hệ thống hoạt động trở lại.
 

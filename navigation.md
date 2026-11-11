@@ -14,7 +14,7 @@ Từ trái sang phải, thanh tiêu đề trên cùng bao gồm:
 
 * **Dự án mới**— tạo một dự án mới. Nếu bạn đã lưu các mẫu dự án, một menu thả xuống**Chọn mẫu** sẽ xuất hiện để dự án mới bắt đầu từ cài đặt của mẫu đó.
 * **Mở dự án**— mở một dự án hiện có. Danh sách này bao gồm nút**Mở Thư mục Dự án** để mở thư mục dự án trong trình quản lý tệp của bạn.
-* **Sao chép Dự án** — sao chép dự án đang mở dưới một tên mới (được đề xuất là tên tự do như &quot;MyProject (2)&quot;) và mở bản sao đó. _(hiển thị sau khi dự án được mở)_
+* **Sao chép Dự án** — sao chép dự án đang mở dưới một tên mới (được đề xuất là tên tự do như "MyProject (2)") và mở bản sao đó. _(hiển thị sau khi dự án được mở)_
 * **Thêm tệp** — thêm các tệp hình ảnh riêng lẻ vào dự án hiện tại _(hiển thị sau khi dự án được mở)_
 * **Thêm thư mục** — thêm một hoặc nhiều thư mục chứa hình ảnh vào dự án hiện tại _(hiển thị sau khi dự án được mở)_
 * **Bắt đầu xử lý / Dừng xử lý** — bắt đầu hoặc dừng quy trình xử lý hình ảnh _(chức năng này được kích hoạt sau khi đã thêm tệp)_
@@ -22,19 +22,7 @@ Từ trái sang phải, thanh tiêu đề trên cùng bao gồm:
 * **Kết nối với cảm biến ánh sáng** — chuyển đến [tab Cảm biến ánh sáng](daq/) để kết nối cảm biến ánh sáng DAQ. Hoạt động mà không cần mở dự án.
 
 {% hint style="info" %}
-**Chỉ dành cho Windows**: Giao diện người dùng Chloros
-
-Desktop có sẵn trên Windows
-
-. Người dùng Linux
-
-nên tham khảo tài liệu về [CLI
-
-](CLI.md) và [Python
-
-SDK
-
-](api-python-sdk.md) để xử lý không giao diện đồ họa.
+**Chỉ dành cho Windows**: Giao diện người dùng Chloros Desktop có sẵn trên Windows. Người dùng Linux nên tham khảo tài liệu về [CLI](CLI.md) và [Python SDK](api-python-sdk.md) để xử lý không giao diện đồ họa.
 {% endhint %}
 
 ### <img src=".gitbook/assets/image (2) (1) (1).png" alt="" data-size="line">
@@ -49,15 +37,9 @@ Thanh tiến trình <img src=".gitbook/assets/image (5).png" alt="" data-size="l
 
 
 
-Trong chế độ Chloros
+Trong chế độ Chloros miễn phí, nơi xử lý tất cả tệp theo thứ tự, thanh tiến trình sẽ hiển thị 2 giai đoạn: Phát hiện mục tiêu và Xử lý.
 
-miễn phí, nơi xử lý tất cả tệp theo thứ tự, thanh tiến trình sẽ hiển thị 2 giai đoạn: Phát hiện mục tiêu và Xử lý.
-
-Trong chế độ Chloros
-
-+ có bản quyền, nơi xử lý tất cả tệp đồng thời, thanh tiến trình hiển thị 4 giai đoạn: Phát hiện, Phân tích, Hiệu chỉnh, Xuất. Nếu bạn di chuột qua thanh tiến trình Chloros
-
-+, một bảng điều khiển mở rộng gồm 4 thanh tiến trình sẽ hiện ra để bạn có thể theo dõi quá trình. Nhấp vào thanh tiến trình trên cùng sẽ khóa bảng điều khiển mở rộng; nhấp lại sẽ mở khóa nó.
+Trong chế độ Chloros+ có bản quyền, nơi xử lý tất cả tệp đồng thời, thanh tiến trình hiển thị 4 giai đoạn: Phát hiện, Phân tích, Hiệu chỉnh, Xuất. Nếu bạn di chuột qua thanh tiến trình Chloros+, một bảng điều khiển mở rộng gồm 4 thanh tiến trình sẽ hiện ra để bạn có thể theo dõi quá trình. Nhấp vào thanh tiến trình trên cùng sẽ khóa bảng điều khiển mở rộng; nhấp lại sẽ mở khóa nó.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -83,7 +65,7 @@ Xem hình ảnh của bạn trên bản đồ 2D tương tác dựa trên tọa 
 
 #### <img src=".gitbook/assets/image (17).png" alt="" data-size="line"> [Camera](lattice/)
 
-Kết nối và điều khiển camera LATTICE trực tiếp — từng chiếc một hoặc dưới dạng mảng camera đa kênh đồng bộ. Tab này hiển thị các ô xem trước trực tiếp kèm lớp phủ và biểu đồ histogram, cài đặt cho từng camera và từng mảng camera, cùng với Cài đặt Ghi hình để chọn các camera và loại xuất dữ liệu mà tùy chọn &quot;Ghi lại Tất cả&quot; sẽ tạo ra. Tính năng này sẽ khả dụng khi hệ thống nền tảng đã sẵn sàng; xem [phần LATTICE](lattice/) để biết hướng dẫn chi tiết.
+Kết nối và điều khiển camera LATTICE trực tiếp — từng chiếc một hoặc dưới dạng mảng camera đa kênh đồng bộ. Tab này hiển thị các ô xem trước trực tiếp kèm lớp phủ và biểu đồ histogram, cài đặt cho từng camera và từng mảng camera, cùng với Cài đặt Ghi hình để chọn các camera và loại xuất dữ liệu mà tùy chọn "Ghi lại Tất cả" sẽ tạo ra. Tính năng này sẽ khả dụng khi hệ thống nền tảng đã sẵn sàng; xem [phần LATTICE](lattice/) để biết hướng dẫn chi tiết.
 
 #### <img src=".gitbook/assets/image (23).png" alt="" data-size="line"> [Cảm biến ánh sáng](daq/)
 

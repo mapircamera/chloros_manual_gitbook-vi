@@ -16,49 +16,21 @@ Khi đã đăng nhập, thông tin tài khoản của bạn sẽ được hiển
 | Gói | `plan_id` | Loại |
 | --- | --- | --- |
 | Iron | `0` | Miễn phí |
-| Copper | `1` | Trả phí (Chloros
-
-+) |
-| Bronze | `2` | Trả phí (Chloros
-
-+) |
-| Silver | `3` | Trả phí (Chloros
-
-+) |
-| Vàng | `4` | Trả phí (Chloros
-
-+) |
+| Copper | `1` | Trả phí (Chloros+) |
+| Bronze | `2` | Trả phí (Chloros+) |
+| Silver | `3` | Trả phí (Chloros+) |
+| Vàng | `4` | Trả phí (Chloros+) |
 
 Xem [các gói và giá cả](https://cloud.mapir.camera/pricing) để biết chi tiết về những gì mỗi gói trả phí bao gồm.
 
-### Quyền truy cập CLI
+### Quyền truy cập CLI/SDK yêu cầu gói trả phí
 
-/SDK
+Việc truy cập CLI và Python SDK yêu cầu **bất kỳ gói Chloros+ trả phí nào (từ Copper trở lên)**. Quy định này được áp dụng**từ phía máy chủ** — mọi yêu cầu CLI/SDK đều phải kèm theo cả phiên hoạt động và gói trả phí:
 
-yêu cầu gói trả phí
-
-Việc truy cập CLI
-
-và Python
-
-SDK
-
-yêu cầu **bất kỳ gói Chloros
-
-+ trả phí nào (từ Copper trở lên)**. Quy định này được áp dụng**từ phía máy chủ** — mọi yêu cầu CLI
-
-/SDK
-
-đều phải kèm theo cả phiên hoạt động và gói trả phí:
-
-| Trạng thái HTTP
-
-| `error_code` | Ý nghĩa | Cách khắc phục |
+| Trạng thái HTTP | `error_code` | Ý nghĩa | Cách khắc phục |
 | --- | --- | --- | --- |
 | `401` | `AUTH_REQUIRED` | Chưa đăng nhập trên máy này | `chloros-cli login <email> <password>` |
-| `403` | `PLAN_UPGRADE_REQUIRED` | Đã đăng nhập, nhưng cấp độ gói quá thấp (cấp độ Iron miễn phí) | Nâng cấp lên bất kỳ gói Chloros
-
-+ trả phí nào |
+| `403` | `PLAN_UPGRADE_REQUIRED` | Đã đăng nhập, nhưng cấp độ gói quá thấp (cấp độ Iron miễn phí) | Nâng cấp lên bất kỳ gói Chloros+ trả phí nào |
 
 `chloros-cli status` vẫn có thể truy cập được ở gói miễn phí, vì vậy bạn luôn có thể xem gói dịch vụ hiện tại của mình và lý do tại sao quyền truy cập bị từ chối.
 
@@ -77,13 +49,7 @@ Mỗi gói dịch vụ đều giới hạn số lượng camera LATTICE và cả
 
 
 
-Đăng nhập bằng thông tin đăng nhập Chloros
-
-+ của bạn để kích hoạt xử lý CLI
-
-. Trên hệ điều hành Linux
-
-(không có giao diện đồ họa), đây là cách duy nhất để kích hoạt giấy phép của bạn.
+Đăng nhập bằng thông tin đăng nhập Chloros+ của bạn để kích hoạt xử lý CLI. Trên hệ điều hành Linux (không có giao diện đồ họa), đây là cách duy nhất để kích hoạt giấy phép của bạn.
 
 **Cú pháp:**
 
@@ -92,13 +58,7 @@ chloros-cli login <email> <password>
 ```
 
 {% hint style="info" %}
-**Người dùng SDK**: Python
-
-SDK
-
-cũng cung cấp phương thức lập trình `logout()` để xóa thông tin đăng nhập được lưu trong bộ nhớ đệm. Xem [Tài liệu tham khảo SDK
-
-](reference/sdk-reference.md) để biết thêm chi tiết.
+**Người dùng SDK**: Python SDK cũng cung cấp phương thức lập trình `logout()` để xóa thông tin đăng nhập được lưu trong bộ nhớ đệm. Xem [Tài liệu tham khảo SDK](reference/sdk-reference.md) để biết thêm chi tiết.
 {% endhint %}
 
 **Ví dụ:**
@@ -125,15 +85,7 @@ Thông tin đăng nhập và cấu hình được lưu trong thư mục `.chloro
 | **Hệ điều hành Windows** | `%USERPROFILE%\.chloros\` |
 | **Hệ điều hành Linux** | `~/.chloros/` |
 
-Việc cài đặt phiên bản mới hơn lên phiên bản hiện có sẽ giữ lại thông tin đăng nhập của bạn trên Windows
-
-(trình cài đặt) và trên Linux
-
-(thư mục `.deb`, bao gồm cả `chloros-cli update`). Việc gỡ cài đặt Chloros
-
-— hoặc xóa gói Linux
-
-— sẽ xóa thông tin đăng nhập được lưu trong bộ nhớ đệm, do đó bạn phải đăng nhập lại sau khi cài đặt mới.
+Việc cài đặt phiên bản mới hơn lên phiên bản hiện có sẽ giữ lại thông tin đăng nhập của bạn trên Windows (trình cài đặt) và trên Linux (thư mục `.deb`, bao gồm cả `chloros-cli update`). Việc gỡ cài đặt Chloros — hoặc xóa gói Linux — sẽ xóa thông tin đăng nhập được lưu trong bộ nhớ đệm, do đó bạn phải đăng nhập lại sau khi cài đặt mới.
 
 ### Hết hạn gói dịch vụ và thời gian ân hạn ngoại tuyến
 
@@ -149,13 +101,7 @@ xác thực giấy phép của bạn trực tuyến, nhưng việc sử dụng n
 
 ### Giới hạn thiết bị
 
-Mỗi gói Chloros
-
-+ cung cấp số lượng thiết bị đã đăng ký khác nhau. Mỗi thiết bị bạn đăng nhập bằng tài khoản Chloros
-
-+ sẽ được tính vào số lượng thiết bị đã đăng ký của bạn. Bạn có thể đổi tên và xóa thiết bị trên trang tài khoản MAPIR
-
-Cloud của mình.
+Mỗi gói Chloros+ cung cấp số lượng thiết bị đã đăng ký khác nhau. Mỗi thiết bị bạn đăng nhập bằng tài khoản Chloros+ sẽ được tính vào số lượng thiết bị đã đăng ký của bạn. Bạn có thể đổi tên và xóa thiết bị trên trang tài khoản MAPIR Cloud của mình.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Gói Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Các thiết bị được hỗ trợ</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
 

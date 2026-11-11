@@ -43,7 +43,7 @@ Các công cụ của máy chủ bao gồm các chức năng mà [Python SDK](ap
 claude mcp add chloros -- chloros-mcp
 ```
 
-**Claude Desktop:**thêm mục này vào `claude_desktop_config.json` (**Cài đặt &gt; Nhà phát triển &gt; Chỉnh sửa cấu hình**để mở), sau đó khởi động lại Claude Desktop.**Cursor** cũng sử dụng mục tương tự trong `~/.cursor/mcp.json`.
+**Claude Desktop:**thêm mục này vào `claude_desktop_config.json` (**Cài đặt > Nhà phát triển > Chỉnh sửa cấu hình**để mở), sau đó khởi động lại Claude Desktop.**Cursor** cũng sử dụng mục tương tự trong `~/.cursor/mcp.json`.
 
 ```json
 {
@@ -132,5 +132,5 @@ Một điểm bất đối xứng mà trợ lý cần lưu ý: lệnh `process()
 
 * **Yêu cầu đăng nhập Chloros+.**CLI và SDK yêu cầu gói Chloros+**trả phí**, được áp dụng ở phía máy chủ: các yêu cầu sẽ thất bại với lỗi `401 AUTH_REQUIRED` khi chưa đăng nhập và `403 PLAN_UPGRADE_REQUIRED` trên gói miễn phí. Chạy lệnh `chloros-cli login` một lần trên mỗi máy trước khi chạy các tập lệnh được tạo ra. Xem [Đăng nhập Chloros+](chloros+-login.md).
 * **Các lệnh Capture điều khiển phần cứng thực tế.** Các lệnh `lattice` / `daq` / `project`, các đối tượng phiên SDK và các công cụ của `chloros-mcp` sẽ kết nối, truyền dữ liệu và kích hoạt các camera và cảm biến vật lý. Kiểm tra lại tập lệnh đã tạo trước khi chạy lần đầu tiên và chạy tập lệnh đó khi có người giám sát phần cứng.
-* **Kiểm tra ngẫu nhiên các kết quả đầu ra.** Xác minh các thư mục sản phẩm và một vài giá trị pixel trước khi công bố kết quả. Đặc biệt, các tệp TIFF phản xạ được quy mô hóa theo từng nguồn — hãy đọc thẻ XMP của `Chloros:PixelScale` (các tệp LATTICE chứa thông tin này: 32768 = 1.0 phản xạ; các tệp Survey3 thì không, và sử dụng 65535 = 1.0) thay vì giả định một hệ số chia. Cả hai trang tài liệu tham khảo đều ghi rõ điều này trong phần &quot;Đọc các pixel phản xạ&quot;.
+* **Kiểm tra ngẫu nhiên các kết quả đầu ra.** Xác minh các thư mục sản phẩm và một vài giá trị pixel trước khi công bố kết quả. Đặc biệt, các tệp TIFF phản xạ được quy mô hóa theo từng nguồn — hãy đọc thẻ XMP của `Chloros:PixelScale` (các tệp LATTICE chứa thông tin này: 32768 = 1.0 phản xạ; các tệp Survey3 thì không, và sử dụng 65535 = 1.0) thay vì giả định một hệ số chia. Cả hai trang tài liệu tham khảo đều ghi rõ điều này trong phần "Đọc các pixel phản xạ".
 * **Một số điểm cần lưu ý có thể gây lỗi cho mã được tạo tự động:**`pool-record` ghi vào hệ thống tệp của**máy chủ backend** (mặc định là `~/Documents/DAQ Live View/`); trên các máy có nhiều giao diện mạng, nên ưu tiên `daq pool-connect --eth-host <ip-or-hostname>` thay vì tự động phát hiện; sử dụng `http://127.0.0.1:5000` (không bao giờ dùng `localhost`) ở bất kỳ đâu có URL máy chủ phía sau xuất hiện; một skript duyệt qua cây thư mục đầu ra của dự án nên bỏ qua các thư mục `clamp_masks/` (các tệp `*_clampmask.tif` trong đó là các mặt nạ, không phải hình ảnh — xem [Định dạng hình ảnh đầu ra](output-image-formats.md#clamp-masks)); và trên hệ điều hành Windows khi tính năng đường dẫn dài bị tắt, hãy giữ cho tên thư mục dự án ngắn — thư mục dự án có độ sâu vượt quá khoảng 130 ký tự sẽ bị từ chối trước khi quá trình xử lý bắt đầu.

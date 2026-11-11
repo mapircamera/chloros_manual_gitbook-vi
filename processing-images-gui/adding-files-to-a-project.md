@@ -26,18 +26,18 @@ Có hai cách chính để thêm hình ảnh vào dự án của bạn:
 
 Sử dụng tùy chọn này để nhập các tệp hình ảnh riêng lẻ hoặc một số lượng nhỏ tệp.
 
-1. Nhấp vào nút **&quot;Thêm tệp&quot;** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ở đầu bảng điều khiển Trình duyệt tệp
+1. Nhấp vào nút **"Thêm tệp"** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> ở đầu bảng điều khiển Trình duyệt tệp
 2. Điều hướng đến thư mục chứa hình ảnh của bạn
 3. Chọn một hoặc nhiều tệp hình ảnh (giữ phím **Ctrl** để chọn nhiều tệp)
-4. Nhấp vào **&quot;Mở&quot;** để nhập các tệp đã chọn
+4. Nhấp vào **"Mở"** để nhập các tệp đã chọn
 
 ### Phương pháp 2: Thêm thư mục
 
 Sử dụng tùy chọn này để nhập tất cả hình ảnh từ một thư mục cùng một lúc. Bạn có thể chọn **nhiều thư mục** trong một hộp thoại.
 
-1. Nhấp vào nút **&quot;Thêm thư mục&quot;** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> ở đầu bảng điều khiển Trình duyệt tệp
+1. Nhấp vào nút **"Thêm thư mục"** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> ở đầu bảng điều khiển Trình duyệt tệp
 2. Điều hướng đến và chọn (các) thư mục chứa hình ảnh từ phiên chụp của bạn
-3. Nhấp vào **&quot;Chọn thư mục&quot;** để nhập tất cả hình ảnh được hỗ trợ
+3. Nhấp vào **"Chọn thư mục"** để nhập tất cả hình ảnh được hỗ trợ
 
 {% hint style="info" %}
 **Các tệp không tải được sẽ được báo cáo.** Nếu một thư mục chứa các tệp mà Chloros nhận diện được nhưng không thể tải, một cảnh báo sẽ thông báo cho bạn — hình ảnh sẽ không tự động biến mất khỏi lưới.
@@ -62,7 +62,7 @@ output/
 * Một thư mục chụp được lưu **mà không** có các khung hình thô sẽ được nhập và hiển thị bình thường, nhưng quá trình xử lý sẽ bỏ qua nó và ghi lại điều này trong nhật ký. (Tham số dòng lệnh CLI `--input-level` có thể ép buộc điểm vào cho trường hợp này — xem [Tài liệu tham khảo CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Kể từ phiên bản 1.3.0, một thư mục ghi lại cũng có thể chứa một thư mục `clamp_masks/` (mặt nạ theo từng pixel cho mức độ bức xạ và phản xạ — xem [Định dạng hình ảnh đầu ra](../output-image-formats.md#clamp-masks)). Các mặt nạ không phải là hình ảnh của cảnh, và Chloros sẽ bỏ qua chúng khi nhập, bất kể chúng nằm ở đâu.
 
-**Các phiên làm việc trên LATTICE hub** được nhập theo cách tương tự: chọn &quot;Add Folder&quot; (Thêm thư mục) vào thư mục phiên làm việc được sao chép từ hub (thư mục này chứa `raw/` và `previews/`), cùng với bất kỳ tệp nhật ký hướng xuống nào của DAQ-M (`.csv`). Nếu thông tin hiệu chuẩn của camera hoặc DAQ chưa được lưu trong bộ nhớ đệm trên máy của bạn, Chloros sẽ tự động lấy thông tin đó theo số sê-ri khi nhập (cần kết nối internet một lần).***
+**Các phiên làm việc trên LATTICE hub** được nhập theo cách tương tự: chọn "Add Folder" (Thêm thư mục) vào thư mục phiên làm việc được sao chép từ hub (thư mục này chứa `raw/` và `previews/`), cùng với bất kỳ tệp nhật ký hướng xuống nào của DAQ-M (`.csv`). Nếu thông tin hiệu chuẩn của camera hoặc DAQ chưa được lưu trong bộ nhớ đệm trên máy của bạn, Chloros sẽ tự động lấy thông tin đó theo số sê-ri khi nhập (cần kết nối internet một lần).***
 
 ## Hiểu về bảng Trình duyệt tệp
 
@@ -113,7 +113,7 @@ Nhấp vào nút chuyển đổi ở góc trên bên phải phía trên bảng s
 Để xóa các hình ảnh không mong muốn khỏi dự án của bạn:
 
 1. Chọn một hoặc nhiều hình ảnh trong bảng Trình duyệt tệp
-2. Nhấp vào nút **&quot;Xóa các mục đã chọn&quot;** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
+2. Nhấp vào nút **"Xóa các mục đã chọn"** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 3. Xác nhận việc xóa (các tệp không bị xóa khỏi đĩa, chỉ bị loại bỏ khỏi dự án)
 
 ### Sắp xếp và lọc
@@ -159,7 +159,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
 1. Chloros tự động phát hiện từng mẫu camera — Survey3, LATTICE hoặc kết hợp
 2. Mỗi loại camera được xử lý bằng hồ sơ hiệu chuẩn phù hợp
-3. Trình duyệt tệp hiển thị mẫu camera trong cột &quot;Camera Model&quot;
+3. Trình duyệt tệp hiển thị mẫu camera trong cột "Camera Model"
 4. Mỗi camera sẽ có cây thư mục đầu ra riêng khi được xử lý
 
 **Ví dụ về các tình huống**: Cấu hình hai camera Survey3W RGN + Survey3N OCN, hoặc mảng camera LATTICE với camera chính RGB và một số mô-đun dải hẹp***
@@ -184,7 +184,7 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 * Luôn bao gồm 1–2 hình ảnh mục tiêu hiệu chuẩn cho mỗi phiên chụp (phần mềm Survey3; đối với LATTICE, bản ghi DAQ có thể thay thế — xem [Chọn hình ảnh mục tiêu](choosing-target-images.md))
 * Chụp các hình ảnh mục tiêu trước và sau phiên chụp
 * Đặt các hình ảnh mục tiêu trong điều kiện ánh sáng tương tự như khu vực chụp
-* Đánh dấu các hình ảnh mục tiêu bằng cách chọn hộp kiểm &quot;Target&quot;
+* Đánh dấu các hình ảnh mục tiêu bằng cách chọn hộp kiểm "Target"
 
 ***
 

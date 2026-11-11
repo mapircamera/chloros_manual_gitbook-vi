@@ -86,7 +86,7 @@ Mỗi hình ảnh có dữ liệu GPS sẽ có một điểm đánh dấu tại 
 
 Chọn loại lớp bản đồ bằng các nút (từ trái sang phải):
 
-![](&lt;../.gitbook/assets/image (14).png&gt;)
+![](<../.gitbook/assets/image (14).png>)
 
 | Loại                 | Hiển thị                                                                |
 | -------------------- | -------------------------------------------------------------------- |
