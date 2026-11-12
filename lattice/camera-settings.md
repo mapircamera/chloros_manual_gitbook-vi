@@ -64,7 +64,7 @@ Mỗi hàng camera hiển thị một đường viền được mã hóa màu (m
 | Nút | Tác dụng |
 | --- | --- |
 | **Mắt**| Bật/tắt hiển thị. Các camera bị ẩn sẽ biến mất khỏi lưới và**không được tính vào tính năng "Capture All"**. |
-| ****Bánh răng** | Mở bảng cài đặt cho từng camera (phần tiếp theo). |
+| **Bánh răng** | Mở bảng cài đặt cho từng camera (phần tiếp theo). |
 | **Tạm dừng / Phát**| Đóng băng bản xem trước trực tiếp**chỉ ở phía hiển thị** — quá trình ghi hình ở phía máy chủ vẫn tiếp tục chạy. Các camera đang tạm dừng không thể ghi hình. |
 | **X** | Ngắt kết nối. Giao diện người dùng cập nhật ngay lập tức (trong trường hợp thuận lợi); quá trình ngắt kết nối ở phía máy chủ có thể mất 10–30 giây để hoàn tất. |
 

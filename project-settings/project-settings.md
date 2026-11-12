@@ -105,7 +105,7 @@ Các cài đặt này điều khiển cách Chloros xử lý và hiệu chuẩn 
 * Các camera chính RGB phát ra dữ liệu đã loại bỏ hiệu ứng Bayer + bản xem trước; dữ liệu độ rạng rỡ/độ phản xạ bị bỏ qua đối với chúng vì không áp dụng.
 * Độ sâu bit của dữ liệu đã loại bỏ hiệu ứng Bayer/bản xem trước tuân theo cài đặt *Định dạng hình ảnh đã hiệu chuẩn*; độ rạng rỡ luôn là float32.
 * Quá trình xử lý Survey3 không bị ảnh hưởng bởi bốn tùy chọn bật/tắt này.
-* Các sản phẩm độ rạng rỡ và độ phản xạ của camera đa quang phổ M3C cũng có thể ghi một ****mặt nạ giới hạn** cho từng pixel vào thư mục `clamp_masks/` bên cạnh các thư mục sản phẩm, ghi lại vị trí mà quá trình tách dải đã giới hạn giá trị âm xuống 0. Xem [Định dạng hình ảnh đầu ra](../output-image-formats.md#clamp-masks).
+* Các sản phẩm độ rạng rỡ và độ phản xạ của camera đa quang phổ M3C cũng có thể ghi một **mặt nạ giới hạn** cho từng pixel vào thư mục `clamp_masks/` bên cạnh các thư mục sản phẩm, ghi lại vị trí mà quá trình tách dải đã giới hạn giá trị âm xuống 0. Xem [Định dạng hình ảnh đầu ra](../output-image-formats.md#clamp-masks).
 
 Bốn tùy chọn này cũng tồn tại dưới dạng không giao diện đồ họa (headless) với tên `chloros-cli process --debayered / --preview / --radiance / --reflectance`. Chúng đã thay thế cờ CLI cũ `--radiometric-output`, hiện không còn tồn tại.
 

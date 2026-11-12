@@ -170,7 +170,7 @@ chloros-cli daq pool-reboot --sensor-id daq-e-def330
 chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 ```
 
-`pool-info` hiển thị phiên bản firmware của cảm biến (và liệu bản phát hành Chloros này có phiên bản mới hơn hay không), địa chỉ của nó và cách nó nhận được địa chỉ đó, cài đặt mạng đã lưu (nếu khác với cài đặt đang hoạt động), truyền dữ liệu khi bật nguồn và PTP. `pool-set-network` khởi động lại cảm biến để áp dụng thay đổi và kết nối lại với các cài đặt ban đầu; `--no-reboot` chỉ lưu lại cài đặt. Địa chỉ tĩnh phải nằm trong mạng của máy tính này, nếu không Chloros sẽ từ chối; `--force` bỏ qua quy tắc đó, chỉ áp dụng cho máy tính sẽ được gán lại địa chỉ hoặc được định tuyến đến địa chỉ đó. Việc khởi động lại sẽ bị từ chối trong khi cảm biến đang ghi dữ liệu. `pool-update-firmware` là lệnh **Update to \<version\>**</version\> của giao diện người dùng (GUI) <version\>dành cho dòng lệnh, đồng thời là cách để cập nhật DAQ-E trên hệ điều hành Linux (không có GUI). Tính năng mới trong phiên bản 1.3.0.
+`pool-info` hiển thị phiên bản firmware của cảm biến (và liệu bản phát hành Chloros này có phiên bản mới hơn hay không), địa chỉ của nó và cách nó nhận được địa chỉ đó, cài đặt mạng đã lưu (nếu khác với cài đặt đang hoạt động), truyền dữ liệu khi bật nguồn và PTP. `pool-set-network` khởi động lại cảm biến để áp dụng thay đổi và kết nối lại với các cài đặt ban đầu; `--no-reboot` chỉ lưu lại cài đặt. Địa chỉ tĩnh phải nằm trong mạng của máy tính này, nếu không Chloros sẽ từ chối; `--force` bỏ qua quy tắc đó, chỉ áp dụng cho máy tính sẽ được gán lại địa chỉ hoặc được định tuyến đến địa chỉ đó. Việc khởi động lại sẽ bị từ chối trong khi cảm biến đang ghi dữ liệu. `pool-update-firmware` là lệnh **Update to \<version\>** của giao diện người dùng (GUI) dành cho dòng lệnh, đồng thời là cách để cập nhật DAQ-E trên hệ điều hành Linux (không có GUI). Tính năng mới trong phiên bản 1.3.0.
 
 ***
 
@@ -206,4 +206,3 @@ chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 {% hint style="info" %}
 **Mẹo dành cho trợ lý AI.** Mỗi trang của tài liệu hướng dẫn này được cung cấp dưới dạng Markdown thô — hãy thêm `.md` vào phần slug URL viết thường của trang (trang này: `https://mapir.gitbook.io/chloros/daq/cli-quick-start.md`); chỉ mục có thể đọc được bởi máy là `https://mapir.gitbook.io/chloros/llms.txt`. Để xem tài liệu đầy đủ về các tùy chọn của `chloros-cli daq` và mọi nhóm lệnh khác, hãy truy cập [Tham chiếu CLI](../reference/cli-reference.md) (`https://mapir.gitbook.io/chloros/reference/cli-reference.md`); đường dẫn Python là `chloros_sdk.connect_daq_sensor()` trong [Tham chiếu SDK](../reference/sdk-reference.md).
 {% endhint %}
-</version\>

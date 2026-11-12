@@ -206,7 +206,7 @@ Các bề mặt chụp mảng được phân chia rõ ràng thành **cấp độ
 
 | Quy trình làm việc | Cấp độ | Những gì được lưu | Giao diện người dùng (GUI) | Giao diện dòng lệnh (CLI) |
 | --- | --- | --- | --- | --- |
-| **Ghi lại**(hình tĩnh) | Phân tích | Một nhóm khung hình đồng bộ cho mỗi lần quét; các tệp theo từng camera ở mọi mức xuất đã chọn (thô/đã loại bỏ hiệu ứng debayering/độ sáng/độ phản xạ/xem trước/chỉ số) + tệp sidecar `.daq` |****Capture All** + Cài đặt chụp | `lattice array-capture` |
+| **Ghi lại**(hình tĩnh) | Phân tích | Một nhóm khung hình đồng bộ cho mỗi lần quét; các tệp theo từng camera ở mọi mức xuất đã chọn (thô/đã loại bỏ hiệu ứng debayering/độ sáng/độ phản xạ/xem trước/chỉ số) + tệp sidecar `.daq` |**Capture All** + Cài đặt chụp | `lattice array-capture` |
 | **Ghi video chỉ số** | Giám sát | Hình ảnh tổng hợp chỉ số kết hợp trực tiếp như hiển thị — 8-bit, độ phân giải xem trước, LUT được tích hợp sẵn. Từ CLI khi không mở giao diện đồ họa (GUI), hệ thống nền sẽ xử lý giá trị NDVI (hoặc `--expr`) của mảng sau khi mảng được căn chỉnh; quá trình ghi hình sẽ thất bại nếu không ghi được khung hình nào | ● Ghi video chỉ số (mảng kết hợp) | `lattice array-record` |
 | **Dữ liệu thô liên tiếp → tạo video**| Phân tích | Các khung hình thô từ cảm biến ở tốc độ thu thập tối đa + tệp manifest + `.daq`, sau đó tái tạo ngoại tuyến thành video độ sáng / độ phản xạ / chỉ số đã hiệu chuẩn, đồng bộ thời gian với các giá trị đọc từ DAQ | ⦿ Ghi dữ liệu thô liên tiếp →**Tạo video** | `lattice array-burst` → `lattice array-build-video` |
 
