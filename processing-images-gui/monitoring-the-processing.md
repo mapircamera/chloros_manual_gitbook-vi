@@ -28,7 +28,11 @@ Dành cho người dùng có giấy phép Chloros+:
 1.**Phát hiện** - Tìm các mục tiêu hiệu chuẩn
 2. **Phân tích** - Kiểm tra hình ảnh và chuẩn bị quy trình xử lý
 3. **Hiệu chuẩn** - Áp dụng hiệu chỉnh hiệu ứng viền tối và độ phản xạ
-4. **Xuất** - Lưu các tệp đã xử lý**Tính năng tương tác:*** **Di chuột qua** thanh tiến trình để xem bảng điều khiển 4 giai đoạn mở rộng
+4. **Xuất** - Lưu các tệp đã xử lý
+
+**Tính năng tương tác:**
+
+* **Di chuột qua** thanh tiến trình để xem bảng điều khiển 4 giai đoạn mở rộng
 * **Nhấp** vào thanh tiến trình để đóng băng/ghim bảng điều khiển mở rộng
 * **Nhấp lại** để bỏ khóa và ẩn tự động khi di chuột ra khỏi
 * Mỗi giai đoạn hiển thị tiến trình riêng biệt (0-100%)
@@ -92,7 +96,9 @@ Dành cho người dùng có giấy phép Chloros+:
 
 ### Giai đoạn 3: Hiệu chuẩn
 
-**Quá trình diễn ra:*** **Debayering**: Chuyển đổi mẫu Bayer RAW thành 3 kênh (bước này bị bỏ qua đối với các mô-đun đơn sắc LATTICE, kèm chú thích)
+**Quá trình diễn ra:**
+
+* **Debayering**: Chuyển đổi mẫu Bayer RAW thành 3 kênh (bước này bị bỏ qua đối với các mô-đun đơn sắc LATTICE, kèm chú thích)
 * **Chỉnh sửa hiệu ứng tối góc**: Loại bỏ hiện tượng tối ở viền ống kính
 * **Hiệu chuẩn độ phản xạ**: Chuẩn hóa theo các giá trị mục tiêu và/hoặc tín hiệu xuống từ hệ thống thu thập dữ liệu (DAQ)
 * **Tính toán chỉ số**: Tính toán các chỉ số đa phổ
@@ -104,7 +110,9 @@ Dành cho người dùng có giấy phép Chloros+:
 * Đang xử lý hình ảnh hiện tại
 * Số hình ảnh đã hoàn thành / Tổng số hình ảnh
 
-**Hành vi xử lý:*** **Chế độ tự do**: Xử lý từng hình ảnh một theo thứ tự
+**Hành vi xử lý:**
+
+* **Chế độ tự do**: Xử lý từng hình ảnh một theo thứ tự
 * **Chế độ Chloros+**: Chạy nhóm công nhân thích ứng với phần cứng — 1–4 công nhân đồng thời trên hệ thống GPU (tùy thuộc vào VRAM), một công nhân cho mỗi lõi vật lý (trừ đi một) trên hệ thống chỉ dùng CPU. Xem [Thích ứng tính toán động](../processing-architecture/dynamic-compute-adaptation.md)
 * **Tăng tốc GPU**: Tăng tốc đáng kể giai đoạn này**Cần lưu ý:**
 

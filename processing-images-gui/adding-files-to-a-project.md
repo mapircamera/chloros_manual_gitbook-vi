@@ -57,7 +57,11 @@ output/
 └── *.daq          the downwelling reading matched to the capture
 ```
 
-**Chọn Thêm thư mục tại thư mục gốc của các ảnh chụp** (`output/` ở trên). Khi thư mục đã chọn không chứa hình ảnh nào nhưng có các thư mục con, Chloros sẽ tự động đi sâu vào các thư mục đó — các thư mục con cùng cấp và thư mục gốc `.daq` đều được chọn cùng một lúc.**Cách nhập các bản chụp:*** Mỗi bản chụp được nhập dưới dạng **một hình ảnh duy nhất**, được nhóm theo bản chụp (không phải một mục cho mỗi cấp độ). Các cấp độ khác của cùng một bản chụp sẽ xuất hiện dưới dạng các chế độ xem của hình ảnh đó.
+**Chọn Thêm thư mục tại thư mục gốc của các ảnh chụp** (`output/` ở trên). Khi thư mục đã chọn không chứa hình ảnh nào nhưng có các thư mục con, Chloros sẽ tự động đi sâu vào các thư mục đó — các thư mục con cùng cấp và thư mục gốc `.daq` đều được chọn cùng một lúc.
+
+**Cách nhập các bản chụp:**
+
+* Mỗi bản chụp được nhập dưới dạng **một hình ảnh duy nhất**, được nhóm theo bản chụp (không phải một mục cho mỗi cấp độ). Các cấp độ khác của cùng một bản chụp sẽ xuất hiện dưới dạng các chế độ xem của hình ảnh đó.
 * **Quá trình xử lý luôn bắt đầu từ khung hình thô.** Các cấp độ khác có thể xem được, nhưng chỉ có `raw` mới được đưa vào quy trình xử lý — việc xử lý lại một sản phẩm đã được xử lý sẽ áp dụng các chỉnh sửa hai lần, do đó Chloros sẽ từ chối. Một tệp xuất được nhập lại không bao giờ có thể chiếm vị trí khung hình thô của một lần chụp.
 * Một thư mục chụp được lưu **mà không** có các khung hình thô sẽ được nhập và hiển thị bình thường, nhưng quá trình xử lý sẽ bỏ qua nó và ghi lại điều này trong nhật ký. (Tham số dòng lệnh CLI `--input-level` có thể ép buộc điểm vào cho trường hợp này — xem [Tài liệu tham khảo CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Kể từ phiên bản 1.3.0, một thư mục ghi lại cũng có thể chứa một thư mục `clamp_masks/` (mặt nạ theo từng pixel cho mức độ bức xạ và phản xạ — xem [Định dạng hình ảnh đầu ra](../output-image-formats.md#clamp-masks)). Các mặt nạ không phải là hình ảnh của cảnh, và Chloros sẽ bỏ qua chúng khi nhập, bất kể chúng nằm ở đâu.

@@ -196,7 +196,7 @@ Chỉ số fps của ô mảng cũng báo cáo trạng thái của luồng dữ 
 Thông tin hữu ích về chế độ kết hợp:
 
 * Hình ảnh tổng hợp được căn chỉnh với khung hình của camera **chính**. Chức năng nhắm mục tiêu AE-ROI và đo sáng điểm trên hình ảnh tổng hợp là chính xác đối với camera chính và xấp xỉ đối với các camera phụ; hãy sử dụng**Split View** (cài đặt mảng → "Hiển thị các camera thành viên") để xem các ô hình ảnh chính xác đến từng pixel cho từng camera mà không cần mở thêm kết nối camera.
-* ****Lớp hiển thị**(cài đặt mảng; mặc định tắt) cho phép bạn chọn lớp nền trước và lớp nền sau — bất kỳ camera thành viên nào hoặc**Chỉ số**. Khi lớp nền trước = Chỉ số, các pixel nằm ngoài phạm vi LUT Min/Max sẽ hiển thị lớp nền sau.
+* **Lớp hiển thị** (cài đặt mảng; mặc định tắt) cho phép bạn chọn lớp nền trước và lớp nền sau — bất kỳ camera thành viên nào hoặc**Chỉ số**. Khi lớp nền trước = Chỉ số, các pixel nằm ngoài phạm vi LUT Min/Max sẽ hiển thị lớp nền sau.
 * **Độ phân giải kết xuất** (mặc định 720p) thiết lập chiều cao luồng trực tiếp *và* kích thước xuất hình ảnh tổng hợp đã lưu. Hình ảnh của từng camera luôn được xuất ở độ phân giải đầy đủ.
 * Việc căn chỉnh được tính toán cho từng phiên và không bao giờ được lưu lại. Chloros tự động căn chỉnh **mọi mảng sau khi kết nối, ở cả hai chế độ hiển thị**, sau khi độ phơi sáng tự động của các camera thành viên đã ổn định (nó sẽ tiếp tục thử trong tối đa 5 phút). Phần**Căn chỉnh**trong bảng cài đặt mảng hiển thị các sai số RMS và nút**Căn chỉnh lại** — cũng áp dụng cho các mảng riêng lẻ, không có ô ghép tổng hợp.
 

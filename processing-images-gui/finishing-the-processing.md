@@ -81,7 +81,9 @@ Các sản phẩm được lưu **trong thư mục dự án, được nhóm theo
 
 ### Xem trước trong các trình xem hình ảnh bên ngoài
 
-**Các trình xem được khuyến nghị:*** **QGIS** - Phần mềm GIS miễn phí (phù hợp nhất cho phân tích đa phổ có tham chiếu địa lý)
+**Các trình xem được khuyến nghị:**
+
+* **QGIS** - Phần mềm GIS miễn phí (phù hợp nhất cho phân tích đa phổ có tham chiếu địa lý)
 * **IrfanView** - Trình xem hình ảnh nhanh, nhẹ (hỗ trợ định dạng TIFF)
 * **Adobe Photoshop** - Chỉnh sửa chuyên nghiệp (hỗ trợ định dạng TIFF)
 * **GIMP** - Phần mềm thay thế miễn phí cho Photoshop
@@ -224,7 +226,9 @@ của chúng. Xem [Định dạng hình ảnh đầu ra](../output-image-formats
 
 ### Vấn đề: Giá trị NDVI có vẻ không chính xác
 
-**Phạm vi NDVI dự kiến:*** **Nước, đá, đất**: -0,1 đến 0,2
+**Phạm vi NDVI dự kiến:**
+
+* **Nước, đá, đất**: -0,1 đến 0,2
 * **Thực vật thưa thớt/không khỏe mạnh**: 0,2 đến 0,4
 * **Thực vật vừa phải**: 0,4 đến 0,6
 * **Thực vật khỏe mạnh, rậm rạp**: 0,6 đến 0,9**Nếu các giá trị nằm ngoài các khoảng này:**
@@ -278,12 +282,18 @@ của chúng. Xem [Định dạng hình ảnh đầu ra](../output-image-formats
 
 ### Chiến lược sao lưu được khuyến nghị
 
-**Cần lưu gì:*** ✅ **Hình ảnh RAW/JPG gốc hoặc dữ liệu thô LATTICE** - Lưu trữ trên ổ đĩa riêng biệt hoặc đám mây; dữ liệu thô là nguồn đầu vào của quy trình xử lý và mọi thứ khác đều có thể được tái tạo từ đó
+**Cần lưu gì:**
+
+* ✅ **Hình ảnh RAW/JPG gốc hoặc dữ liệu thô LATTICE** - Lưu trữ trên ổ đĩa riêng biệt hoặc đám mây; dữ liệu thô là nguồn đầu vào của quy trình xử lý và mọi thứ khác đều có thể được tái tạo từ đó
 * ✅ **Tệp cảm biến ánh sáng `.daq` / `.csv`** - Cần thiết để tính lại hệ số phản xạ sau này
 * ✅ **Kết quả đã xử lý** - Giữ lại hình ảnh và chỉ số đã hiệu chuẩn
 * ✅ **Thư mục dự án** (`project.json` và các tệp liên quan) - Chứa tất cả cài đặt để xử lý lại nếu cần
 * ✅ **Nhật ký gỡ lỗi** - Ghi lại chi tiết quá trình xử lý
-* ✅ **Hình ảnh mục tiêu hiệu chuẩn** - Dùng để xác minh và xử lý lại**Khuyến nghị về lưu trữ:*** **Sao lưu ngay lập tức**: Ổ cứng ngoài
+* ✅ **Hình ảnh mục tiêu hiệu chuẩn** - Dùng để xác minh và xử lý lại
+
+**Khuyến nghị về lưu trữ:**
+
+* **Sao lưu ngay lập tức**: Ổ cứng ngoài
 * **Lưu trữ dài hạn**: Lưu trữ đám mây (Google Drive, Dropbox, v.v.)
 * **Dữ liệu quan trọng**: Giữ 2-3 bản sao tại các vị trí khác nhau***
 

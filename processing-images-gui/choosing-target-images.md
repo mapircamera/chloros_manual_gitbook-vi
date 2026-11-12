@@ -32,7 +32,9 @@ Nếu **không** có hình ảnh nào được đánh dấu, Chloros sẽ quay l
 
 Xem qua các hình ảnh đã nhập trong Trình duyệt tệp và xác định những hình ảnh nào chứa mục tiêu hiệu chuẩn.
 
-**Các tình huống phổ biến:*** **Mục tiêu trước khi chụp**: Được chụp trước khi bắt đầu phiên chụp
+**Các tình huống phổ biến:**
+
+* **Mục tiêu trước khi chụp**: Được chụp trước khi bắt đầu phiên chụp
 * **Mục tiêu sau khi chụp**: Được chụp sau khi hoàn thành phiên chụp
 * **Mục tiêu tại hiện trường**: Các mục tiêu được đặt trong khu vực chụp
 * **Nhiều mục tiêu**: 2-3 hình ảnh mục tiêu mỗi phiên (được khuyến nghị)
@@ -140,9 +142,17 @@ Sử dụng cột này để xác minh rằng bạn đã đánh dấu mục tiê
 
 ### Điều chỉnh độ nhạy phát hiện
 
-Nếu Chloros không phát hiện chính xác các mục tiêu của bạn, hãy điều chỉnh các cài đặt này trong [Cài đặt dự án](adjusting-project-settings.md):**Diện tích mẫu hiệu chuẩn tối thiểu (px):*** **Mặc định**: 25 pixel
+Nếu Chloros không phát hiện chính xác các mục tiêu của bạn, hãy điều chỉnh các cài đặt này trong [Cài đặt dự án](adjusting-project-settings.md):
+
+**Diện tích mẫu hiệu chuẩn tối thiểu (px):**
+
+* **Mặc định**: 25 pixel
 * **Tăng** nếu xuất hiện các phát hiện sai trên các chi tiết nhỏ
-* **Giảm** nếu mục tiêu không được phát hiện**Mức nhóm mục tiêu tối thiểu (0-100):*** **Mặc định**: 60
+* **Giảm** nếu mục tiêu không được phát hiện
+
+**Mức nhóm mục tiêu tối thiểu (0-100):**
+
+* **Mặc định**: 60
 * **Tăng** nếu các mục tiêu bị chia thành nhiều phát hiện riêng biệt
 * **Giảm** nếu các mục tiêu có sự biến đổi màu sắc không được phát hiện đầy đủ
 

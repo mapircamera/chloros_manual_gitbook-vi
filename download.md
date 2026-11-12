@@ -254,10 +254,15 @@ Chloros sẽ kiểm tra các bản cập nhật, thông báo khi có phiên bả
 
 **Ngày phát hành: 10 tháng 2 năm 2026**
 
-**Tính năng mới*** **Phương pháp khử hiệu ứng debayer nhận diện kết cấu \[Chỉ dành cho Chloros+] -** Phương pháp nhận diện kết cấu sử dụng thuật toán khử hiệu ứng debayer chất lượng cao, nhận diện cạnh kết hợp với mô hình khử nhiễu AI/ML, giúp loại bỏ gần như toàn bộ nhiễu do quá trình khử hiệu ứng debayer gây ra.
-* **Hỗ trợ các mục tiêu hiệu chuẩn T4P*** **Xử lý GPU của Chloros+ nhanh hơn, quản lý bộ nhớ tốt hơn**
+**Tính năng mới**
 
-**Sửa lỗi*** Giao diện người dùng (GUI) hoàn toàn mới, hiện đã hoạt động trên tất cả các máy tính Windows.
+* **Phương pháp khử hiệu ứng debayer nhận diện kết cấu \[Chỉ dành cho Chloros+] -** Phương pháp nhận diện kết cấu sử dụng thuật toán khử hiệu ứng debayer chất lượng cao, nhận diện cạnh kết hợp với mô hình khử nhiễu AI/ML, giúp loại bỏ gần như toàn bộ nhiễu do quá trình khử hiệu ứng debayer gây ra.
+* **Hỗ trợ các mục tiêu hiệu chuẩn T4P**
+* **Xử lý GPU của Chloros+ nhanh hơn, quản lý bộ nhớ tốt hơn**
+
+**Sửa lỗi**
+
+* Giao diện người dùng (GUI) hoàn toàn mới, hiện đã hoạt động trên tất cả các máy tính Windows.
 
 </details>
 
@@ -267,14 +272,18 @@ Chloros sẽ kiểm tra các bản cập nhật, thông báo khi có phiên bả
 
 **Ngày phát hành: 5 tháng 1 năm 2026**
 
-**Tính năng mới*** **Chuyển đổi giữa hình ảnh và siêu dữ liệu**: Đã thêm nút chuyển đổi trong Trình duyệt tệp để xem siêu dữ liệu của hình ảnh đã chọn dưới dạng bảng thay vì lưới hình ảnh
+**Tính năng mới**
+
+* **Chuyển đổi giữa hình ảnh và siêu dữ liệu**: Đã thêm nút chuyển đổi trong Trình duyệt tệp để xem siêu dữ liệu của hình ảnh đã chọn dưới dạng bảng thay vì lưới hình ảnh
 * **Thanh trượt thu phóng lưới hình ảnh**: Thanh trượt giao diện người dùng mới để điều chỉnh kích thước hình thu nhỏ (cũng hỗ trợ tổ hợp phím CTRL + bánh xe chuột)
 * **Nút xuất lưới hình ảnh**: Các nút ở hàng trên cùng để chuyển đổi hình thu nhỏ từ định dạng JPG sang các định dạng xuất đã xử lý (Targets, Reflectance, Index, LUT)
 * **Tab Bản đồ**: Bản đồ 2D tương tác mới hiển thị các điểm đánh dấu vị trí GPS trên hình ảnh
   * Hỗ trợ Google Maps và các ô bản đồ ESRI (tự động chọn dịch vụ ô bản đồ tốt nhất dựa trên mức độ phóng to có sẵn)
   * Di chuột qua các điểm đánh dấu trên bản đồ để xem trước hình thu nhỏ
 
-**Sửa lỗi*** Cải thiện hỗ trợ cài đặt Chloros trên các máy tính không sử dụng tiếng Anh
+**Sửa lỗi**
+
+* Cải thiện hỗ trợ cài đặt Chloros trên các máy tính không sử dụng tiếng Anh
 
 </details>
 
@@ -284,13 +293,21 @@ Chloros sẽ kiểm tra các bản cập nhật, thông báo khi có phiên bả
 
 **Ngày phát hành: 20 tháng 12 năm 2025**
 
-**Tính năng mới*** Phiên bản đầu tiên
+**Tính năng mới**
 
-**Cải tiến*** Phiên bản đầu tiên
+* Phiên bản đầu tiên
 
-**Sửa lỗi*** Phiên bản đầu tiên
+**Cải tiến**
 
-**Vấn đề đã biết*** Phiên bản đầu tiên
+* Phiên bản đầu tiên
+
+**Sửa lỗi**
+
+* Phiên bản đầu tiên
+
+**Vấn đề đã biết**
+
+* Phiên bản đầu tiên
 
 </details>
 

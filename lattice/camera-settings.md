@@ -352,7 +352,7 @@ Chloros tự động căn chỉnh mọi mảng sau khi kết nối, trong cả h
 ### Hiệu ứng Vignette Thông minh
 
 * Hộp kiểm **Bật hiệu chỉnh**— áp dụng ước tính hiệu ứng vignette cho từng camera vào chuỗi đo lường bức xạ (cả chế độ trực tiếp**và** khi xuất).
-* ****Hiệu chuẩn từ khung nhìn hiện tại**— trước tiên hãy hướng mảng camera vào một mục tiêu đồng nhất (màn hình phẳng, tường hoặc bầu trời); mỗi camera sẽ được hiệu chỉnh độ phẳng riêng lẻ và trạng thái báo cáo mức tăng độ phẳng "n/N camera · −x.x %". Nhấn**Xóa** để loại bỏ ước tính.
+* **Hiệu chuẩn từ khung nhìn hiện tại** — trước tiên hãy hướng mảng camera vào một mục tiêu đồng nhất (màn hình phẳng, tường hoặc bầu trời); mỗi camera sẽ được hiệu chỉnh độ phẳng riêng lẻ và trạng thái báo cáo mức tăng độ phẳng "n/N camera · −x.x %". Nhấn**Xóa** để loại bỏ ước tính.
 * Trạng thái: "Đã hiệu chuẩn", "Chưa hiệu chuẩn" hoặc "Đã hiệu chuẩn một phần — chạy lại" khi chỉ một số ước tính của các camera vẫn áp dụng được ở khung hình hiện tại (ví dụ: sau khi thao tác **Hiệu chuẩn lại**làm thay đổi cửa sổ cắt của một camera) — hãy chạy lại lệnh**Hiệu chuẩn**.
 * Tinh chỉnh từng máy ảnh bằng thanh trượt **Vignette** dành riêng cho từng máy ảnh trong [Xem trước trực tiếp](#live-preview).
 
@@ -375,7 +375,7 @@ Một bảng điều khiển chỉ đọc được làm mới mỗi 5 giây:
 
 * **Nhãn cấp độ**: "Ghi hình đồng thời" (xanh lục) · "Ghi hình đồng thời (phát tín hiệu xen kẽ FTD)" (xanh lục) · "Ghi hình xen kẽ (chênh lệch 100 ms)" (vàng) · "Cấu hình quá lớn" (màu đỏ).
 * **Tình trạng khung hình**: "x.xx % chưa hoàn thành" — màu xanh lá khi dưới 1 %, màu vàng khi dưới 5 %, màu đỏ khi từ 5 % trở lên.
-* ****Dòng kết nối**: "NIC {mbps} Mbps - tốc độ ổn định {MB/s} MB/s".
+* **Dòng kết nối**: "NIC {mbps} Mbps - tốc độ ổn định {MB/s} MB/s".
 
 Đây là ngân sách băng thông thời gian thực của mảng. Để biết thông tin về fps cơ bản và mô hình mạng — cũng như những thay đổi cần thực hiện khi cấp độ chuyển sang màu vàng cam hoặc đỏ — hãy tham khảo [Mảng nhiều camera](arrays.md) và [Tài liệu tham khảo CLI](../reference/cli-reference.md).
 
@@ -401,7 +401,7 @@ Tham khảo nhanh về vị trí của các cài đặt khi một máy ảnh là
 Các hành vi chung khác:
 
 * **Hiển thị kết hợp so với hiển thị riêng biệt** được chọn khi kết nối mảng: kết hợp = một ô tổng hợp được căn chỉnh (dòng dữ liệu từ các thành viên chỉ được truyền qua Chế độ xem chia đôi); riêng biệt = mỗi thành viên hiển thị ô đồng bộ của riêng mình. Một camera không bao giờ hiển thị cả dòng dữ liệu độc lập và ô mảng cùng lúc.
-* ****Tự động kết nối lại**: mở một dự án đã lưu sẽ khôi phục các máy ảnh và mảng của dự án đó, đồng thời áp dụng lại mọi cài đặt đã lưu vào hệ thống nền trước khi các luồng dữ liệu tiếp tục.
+* **Tự động kết nối lại**: mở một dự án đã lưu sẽ khôi phục các máy ảnh và mảng của dự án đó, đồng thời áp dụng lại mọi cài đặt đã lưu vào hệ thống nền trước khi các luồng dữ liệu tiếp tục.
 * **Kiểm soát ghi hình**: các máy ảnh bị ẩn hoặc tạm dừng sẽ bị loại trừ khỏi chế độ Ghi tất cả; một mảng chỉ bị chặn hoàn toàn khi TẤT CẢ các thành viên đều bị ẩn/tạm dừng. Xem [Cài đặt & Chế độ ghi hình](capture.md).
 
 ## Cách các cài đặt được lưu giữ

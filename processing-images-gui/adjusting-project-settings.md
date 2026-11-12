@@ -44,7 +44,9 @@ Bảng Cài đặt Dự án được tổ chức thành các phần dưới đâ
 
 Kiểm soát cách Chloros xác định các mục tiêu hiệu chuẩn trong hình ảnh của bạn.
 
-**Các cài đặt chính:*** **Diện tích mẫu hiệu chuẩn tối thiểu (px)**: Ngưỡng kích thước để phát hiện mục tiêu (mặc định:**25**, phạm vi 0–10000)
+**Các cài đặt chính:**
+
+* **Diện tích mẫu hiệu chuẩn tối thiểu (px)**: Ngưỡng kích thước để phát hiện mục tiêu (mặc định:**25**, phạm vi 0–10000)
 * **Độ tương đồng tối thiểu để nhóm mục tiêu (0–100)**: Ngưỡng tương đồng để nhóm các vùng mục tiêu (mặc định:**60**)**Khi nào cần điều chỉnh:**
 
 * Tăng diện tích mẫu nếu xuất hiện các phát hiện sai
@@ -59,19 +61,26 @@ Các cài đặt này sẽ bị mờ đi khi tính năng **Hiệu chỉnh độ 
 
 Các tùy chọn xử lý hình ảnh chính và hiệu chỉnh.
 
-**Các cài đặt chính:*** **Chỉnh sửa hiệu ứng tối góc**: Bù đắp hiện tượng tối góc do ống kính gây ra ✅ Được khuyến nghị
+**Các cài đặt chính:**
+
+* **Chỉnh sửa hiệu ứng tối góc**: Bù đắp hiện tượng tối góc do ống kính gây ra ✅ Được khuyến nghị
 * **Hiệu chuẩn phản xạ / cân bằng trắng**: Hiệu chuẩn hình ảnh bằng cách sử dụng các mục tiêu được phát hiện (phần mềm Survey3) và/hoặc dữ liệu cảm biến ánh sáng DAQ (phần mềm LATTICE) ✅ Được khuyến nghị
 * **Phương pháp Debayer**: Thuật toán chuyển đổi định dạng RAW sang đa phổ 3 kênh
 * **Khoảng thời gian hiệu chuẩn tối thiểu**: Thời gian tối thiểu tính bằng giây giữa các lần sử dụng mục tiêu hiệu chuẩn (mặc định:**0** = sử dụng tất cả, phạm vi 0–3600)**Các sản phẩm dự phòng chưa được hiệu chuẩn:**Khi không thể hiệu chuẩn độ phản xạ cho một khung hình (không có mục tiêu hoặc tính năng hiệu chuẩn bị tắt), khung hình đó sẽ được xuất dưới dạng một trong hai sản phẩm dự phòng —**chỉ có chính xác một trong hai sản phẩm này tồn tại cho mỗi lần chạy**, được chọn bởi công tắc hiệu chỉnh Vignette:
 
-* **Xuất phản hồi cảm biến**: ghi `Sensor_Response_Images` — được sử dụng khi tính năng hiệu chỉnh Vignette**tắt*** **Xuất dữ liệu đã hiệu chỉnh hiệu ứng Vignette**: ghi tệp `Vignette_Corrected_Images` — được sử dụng khi tính năng hiệu chỉnh hiệu ứng Vignette được**bật**Hộp kiểm không được chọn sẽ bị mờ đi. Việc bỏ chọn hộp kiểm đang hoạt động sẽ ngăn tệp đó được ghi hoàn toàn.**Các sản phẩm xuất của LATTICE** (hiển thị cho mọi dự án; chúng áp dụng cho các bản chụp LATTICE):
+* **Xuất phản hồi cảm biến**: ghi `Sensor_Response_Images` — được sử dụng khi tính năng hiệu chỉnh Vignette**tắt**
+* **Xuất dữ liệu đã hiệu chỉnh hiệu ứng Vignette**: ghi tệp `Vignette_Corrected_Images` — được sử dụng khi tính năng hiệu chỉnh hiệu ứng Vignette được**bật**Hộp kiểm không được chọn sẽ bị mờ đi. Việc bỏ chọn hộp kiểm đang hoạt động sẽ ngăn tệp đó được ghi hoàn toàn.**Các sản phẩm xuất của LATTICE** (hiển thị cho mọi dự án; chúng áp dụng cho các bản chụp LATTICE):
 
 * **Xuất hình ảnh đã khử hiệu ứng bay**: hình ảnh đã loại bỏ hiệu ứng debayering tuyến tính (`Debayered_Images`): đã loại bỏ độ lệch tối của gói hiệu chuẩn, sau đó được demosaic, không có trường phẳng hoặc tách kênh — cùng tệp mà dữ liệu thu thập lưu ở mức đã loại bỏ hiệu ứng debayering — theo hướng gốc của cảm biến. Áp dụng cho các mô-đun RGB và đa phổ.
 * **Xuất bản xem trước**: bản xem trước trên màn hình (`Preview_Images`). RGB = cân bằng trắng (nguồn sáng DAQ khi có sẵn, nếu không thì chế độ gray-world) + gamma; đa phổ = kéo dãn màu giả.
 * **Xuất độ rạng rỡ**: độ rạng rỡ phổ dạng float32 (`Radiance_Images`, W/m²/sr/nm). Chỉ áp dụng cho các mô-đun đa phổ — không áp dụng cho các tệp gốc RGB.
 * **Xuất độ phản xạ**: độ phản xạ uint16 (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1.0) khi có dữ liệu chiếu xuống từ `.daq` hoặc mục tiêu trong khung hình bao phủ toàn bộ khung hình. Chỉ áp dụng cho các mô-đun đa quang phổ.
 
-Cả bốn tùy chọn đều **được bật theo mặc định**— một khung hình thô LATTICE được nhập vào sẽ được phân tách thành từng sản phẩm được kích hoạt và áp dụng trong một lần xử lý duy nhất. Hộp kiểm**Xuất độ phản xạ** sẽ bị mờ đi khi tính năng hiệu chuẩn độ phản xạ bị tắt. Các cài đặt mà công tắc cha khiến chúng không thể thực hiện được sẽ luôn bị mờ đi kèm theo chú giải công cụ nêu tên công tắc cần thay đổi.**Cài đặt nâng cao:*** **Chênh lệch múi giờ cảm biến ánh sáng**: Số giờ so với UTC để đồng bộ hóa thời gian cảm biến ánh sáng (mặc định: 0, phạm vi từ −12 đến +12)
+Cả bốn tùy chọn đều **được bật theo mặc định**— một khung hình thô LATTICE được nhập vào sẽ được phân tách thành từng sản phẩm được kích hoạt và áp dụng trong một lần xử lý duy nhất. Hộp kiểm**Xuất độ phản xạ** sẽ bị mờ đi khi tính năng hiệu chuẩn độ phản xạ bị tắt. Các cài đặt mà công tắc cha khiến chúng không thể thực hiện được sẽ luôn bị mờ đi kèm theo chú giải công cụ nêu tên công tắc cần thay đổi.
+
+**Cài đặt nâng cao:**
+
+* **Chênh lệch múi giờ cảm biến ánh sáng**: Số giờ so với UTC để đồng bộ hóa thời gian cảm biến ánh sáng (mặc định: 0, phạm vi từ −12 đến +12)
 * **Áp dụng hiệu chỉnh PPK**: Sử dụng dữ liệu GPS/điểm phơi sáng từ các tệp `.daq` (mặc định: tắt)
 * **Điểm phơi sáng 1/2**: Gán máy ảnh cho các điểm phơi sáng trong cấu hình hai máy ảnh
 
@@ -105,7 +114,9 @@ Cấu hình các chỉ số thực vật cần tính toán và xuất. Menu th�
 3. Cấu hình cài đặt hiển thị (màu LUT, phạm vi giá trị)
 4. Thêm nhiều chỉ số nếu cần
 
-**Các chỉ số phổ biến:*** **NDVI**: Sức khỏe thực vật tổng quát (phổ biến nhất)
+**Các chỉ số phổ biến:**
+
+* **NDVI**: Sức khỏe thực vật tổng quát (phổ biến nhất)
 * **NDRE**: Phát hiện sớm tình trạng căng thẳng bằng RedEdge
 * **GNDVI**: Nhạy cảm với nồng độ diệp lục
 * **OSAVI**: Hoạt động tốt với đất có thể nhìn thấy
@@ -215,7 +226,11 @@ Nếu sử dụng máy ghi dữ liệu DAQ củMAPIR kèm GPS để xác định
 3. Cài đặt**"Chênh lệch múi giờ cảm biến ánh sáng"** nếu cần (mặc định: 0 cho UTC)
 4. Gán máy ảnh vào các chân phơi sáng:
    * **Máy ảnh đơn**: Tự động được gán vào Chân 1
-   * **Máy ảnh kép**: Gán thủ công từng máy ảnh vào chân tương ứng**Gán chân phơi sáng:*** **Chân phơi sáng 1**: Chọn mẫu camera từ danh sách thả xuống
+   * **Máy ảnh kép**: Gán thủ công từng máy ảnh vào chân tương ứng
+
+**Gán chân phơi sáng:**
+
+* **Chân phơi sáng 1**: Chọn mẫu camera từ danh sách thả xuống
 * **Chân phơi sáng 2**: Chọn camera thứ hai hoặc "Không sử dụng"
 * Không thể gán cùng một camera cho cả hai chân
 

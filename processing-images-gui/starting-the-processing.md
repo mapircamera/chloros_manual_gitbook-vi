@@ -78,7 +78,11 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 1. **Phát hiện** (Luồng 1) - Tìm các mục tiêu hiệu chuẩn
 2. **Phân tích** (Luồng 2) - Kiểm tra siêu dữ liệu hình ảnh và tính toán hiệu chuẩn
 3. **Hiệu chuẩn** (Luồng 3) - Loại bỏ hiệu ứng bayering, chỉnh sửa hiệu ứng vignette, hiệu chuẩn, tính toán chỉ số
-4. **Xuất** (Luồng 4) - Lưu hình ảnh đã xử lý và các chỉ số**Tương tác với thanh tiến trình:*** **Di chuột** qua thanh tiến trình để xem bảng thả xuống chi tiết gồm 4 giai đoạn
+4. **Xuất** (Luồng 4) - Lưu hình ảnh đã xử lý và các chỉ số
+
+**Tương tác với thanh tiến trình:**
+
+* **Di chuột** qua thanh tiến trình để xem bảng thả xuống chi tiết gồm 4 giai đoạn
 * **Nhấp chuột** vào thanh tiến trình để cố định bảng thả xuống tại vị trí hiện tại
 * **Nhấp chuột lần nữa** để bỏ cố định và ẩn bảng**Thời gian xử lý:**
 
@@ -116,7 +120,9 @@ Chloros hoạt động ở hai chế độ xử lý khác nhau tùy thuộc vào
 
 ### Giai đoạn 3: Hiệu chuẩn
 
-**Chloros thực hiện những gì:*** **Chỉnh sửa hiện tượng tối góc**: Loại bỏ hiện tượng tối góc do ống kính gây ra
+**Chloros thực hiện những gì:**
+
+* **Chỉnh sửa hiện tượng tối góc**: Loại bỏ hiện tượng tối góc do ống kính gây ra
 * **Hiệu chỉnh độ phản xạ**: Chuẩn hóa bằng cách sử dụng các giá trị độ phản xạ mục tiêu và/hoặc dữ liệu ánh sáng chiếu xuống từ hệ thống thu thập dữ liệu (DAQ)
 * Áp dụng các hiệu chỉnh trên tất cả các dải/kênh
 * Sử dụng tham chiếu hiệu chuẩn phù hợp cho từng hình ảnh dựa trên dấu thời gian

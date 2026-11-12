@@ -45,7 +45,11 @@ Một luồng tính toán phụ thuộc vào CPU. Trong quá trình chạy Surve
 
 ### Luồng 3: Xử lý (GPU)
 
-**Mục đích**: Áp dụng các hiệu chỉnh và tính toán các chỉ số thực vật.**Đây là luồng tiêu tốn nhiều tài nguyên tính toán nhất.*** **Debayering**: chuyển đổi dữ liệu RAW Bayer thành hình ảnh đa kênh
+**Mục đích**: Áp dụng các hiệu chỉnh và tính toán các chỉ số thực vật.
+
+**Đây là luồng tiêu tốn nhiều tài nguyên tính toán nhất.**
+
+* **Debayering**: chuyển đổi dữ liệu RAW Bayer thành hình ảnh đa kênh
   * Tiêu chuẩn (Nhanh, Chất lượng Trung bình) — mặc định, `--debayer standard`
   * Nhận diện kết cấu (Chậm, Chất lượng Cao nhất) — chỉ dành cho Chloros+, `--debayer texture-aware`, sử dụng mô hình khử nhiễu AI/ML
   * Các ảnh chụp LATTICE mono (M3M) là ảnh đơn dải: các bước khử môzaic và cân bằng trắng sẽ bị bỏ qua đối với chúng (kèm theo một dòng thông báo nhật ký), trong khi bất kỳ ảnh M3C/Bayer nào trong cùng một lần chạy vẫn được thực hiện các bước này
