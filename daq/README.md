@@ -17,7 +17,9 @@ MAPIR đo ánh sáng môi trường dưới dạng phổ được hiệu chuẩn
 | --- | --- | --- |
 | **DAQ-U** | USB (nối tiếp) | quét cổng nối tiếp |
 | **DAQ-M** | Bluetooth Low Energy | quét BLE theo tên |
-| **DAQ-E** | Ethernet (IPv4, cấp nguồn qua PoE) | mDNS `_daq-e._tcp` (tên máy chủ `daq-e-<id>.local`) |**DAQ-E-S (mới trong phiên bản 1.3.0).** Một thiết bị DAQ-E được trang bị bộ khuếch tán cố định và cảm biến nghiêng. Chloros liệt kê thiết bị này với tên `DAQ-E-S` và vận hành nó hoàn toàn giống như một thiết bị DAQ-E, ngoại trừ việc nó không yêu cầu hiệu chỉnh nắp và mỗi giá trị đo đều chứa thông tin về góc nghiêng, góc lăn và góc dọc của thiết bị. Xem [DAQ-E-S: bộ khuếch tán cố định và cảm biến nghiêng](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
+| **DAQ-E** | Ethernet (IPv4, cấp nguồn qua PoE) | mDNS `_daq-e._tcp` (tên máy chủ `daq-e-<id>.local`) |
+
+**DAQ-E-S (mới trong phiên bản 1.3.0).** Một thiết bị DAQ-E được trang bị bộ khuếch tán cố định và cảm biến nghiêng. Chloros liệt kê thiết bị này với tên `DAQ-E-S` và vận hành nó hoàn toàn giống như một thiết bị DAQ-E, ngoại trừ việc nó không yêu cầu hiệu chỉnh nắp và mỗi giá trị đo đều chứa thông tin về góc nghiêng, góc lăn và góc dọc của thiết bị. Xem [DAQ-E-S: bộ khuếch tán cố định và cảm biến nghiêng](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
 
 Cả ba thiết bị đều sử dụng cùng một giao thức truyền dữ liệu và cung cấp dữ liệu giống hệt nhau:
 

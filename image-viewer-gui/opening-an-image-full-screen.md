@@ -57,7 +57,9 @@ Khi độ phóng đại hiệu dụng vượt quá **60×**, Chloros sẽ vẽ m
 | **←**                           | Toàn màn hình | Hình ảnh trước đó                      |
 | **Ctrl + R**                    | Toàn màn hình | Đặt lại vùng thử nghiệm chỉ mục/LUT         |
 | **Ctrl + `+`**/**Ctrl + `=`** | Lưới        | Hình thu nhỏ lớn hơn (4 px mỗi lần nhấn)  |
-| **Ctrl + `−`**                  | Lưới        | Hình thu nhỏ nhỏ hơn (4 px mỗi lần nhấn) |***
+| **Ctrl + `−`**                  | Lưới        | Hình thu nhỏ nhỏ hơn (4 px mỗi lần nhấn) |
+
+***
 
 ## Giá trị con trỏ
 
@@ -100,7 +102,9 @@ Trình xem, hộp cát chỉ mục/LUT và xuất chỉ mục đều giải quy�
 Hai hệ quả đáng lưu ý:
 
 * Một tệp **32-bit phần trăm**TIFF lưu trữ DN/65535 dưới dạng số thực, và tệp**8-bit** PNG /JPG xuất ra lưu trữ DN × 255/65535 — trình xem sẽ chuyển đổi cả hai trở lại trước khi hiển thị giá trị phần trăm.
-* Có một trường hợp không thể khôi phục: **tệp xuất 8-bit TIFF từ nguồn 8-bit** bị cắt giới hạn trong khoảng 0–255 thay vì được quy đổi tỷ lệ, và cố ý không chứa thẻ tỷ lệ. Đối với các tệp này, bảng điều khiển chỉ hiển thị DN, không có cột phần trăm. Đây là câu trả lời trung thực, không phải lỗi.***
+* Có một trường hợp không thể khôi phục: **tệp xuất 8-bit TIFF từ nguồn 8-bit** bị cắt giới hạn trong khoảng 0–255 thay vì được quy đổi tỷ lệ, và cố ý không chứa thẻ tỷ lệ. Đối với các tệp này, bảng điều khiển chỉ hiển thị DN, không có cột phần trăm. Đây là câu trả lời trung thực, không phải lỗi.
+
+***
 
 ## Biểu đồ phân bố màu của lớp
 
@@ -126,7 +130,9 @@ Có ba nút nằm phía trên biểu đồ histogram:
 | **INDEX**| Bật      | Chỉ xuất hiện khi chỉ số đang hoạt động. Chuyển biểu đồ tần suất từ các dải nguồn sang**phân phối giá trị chỉ số**, với hai ngưỡng cắt được vẽ dưới dạng các đường đứt nét màu cam và giá trị chỉ số của con trỏ dưới dạng một đường màu trắng                                                          |
 | **Chuyển đổi RGB**| Tắt     | Chuyển từ đường cong tổng hợp sang các đường cong riêng cho từng kênh. Trên cảm biến đơn sắc, nút này hiển thị**MONO** và bị vô hiệu hóa — chỉ có một kênh để hiển thị                                                                                                                                  |
 
-Biểu đồ histogram được tính toán dựa trên các **khối mà bạn nhìn thấy**, chứ không phải các pixel nguồn phía sau chúng: khi thay đổi kích thước khối GSD, phân phối sẽ được tính toán lại, do đó biểu đồ histogram, dấu hiệu con trỏ và hình ảnh hiển thị luôn khớp nhau.***
+Biểu đồ histogram được tính toán dựa trên các **khối mà bạn nhìn thấy**, chứ không phải các pixel nguồn phía sau chúng: khi thay đổi kích thước khối GSD, phân phối sẽ được tính toán lại, do đó biểu đồ histogram, dấu hiệu con trỏ và hình ảnh hiển thị luôn khớp nhau.
+
+***
 
 ## Kích thước khối GSD
 
@@ -185,7 +191,9 @@ Các bản chụp LATTICE sử dụng cùng một menu thả xuống, với tên
 
 3. Chọn bộ lọc của máy ảnh và công thức chỉ số, sau đó kéo các vòng tròn kênh vào các ô tương ứng trong công thức
 4. Thêm bảng tra cứu màu (LUT) và chọn độ dốc, ngưỡng và chế độ cắt
-5. Đọc giá trị tại vị trí con trỏ, sau đó lưu kết quả bằng **Export/Save Image(s)**Xem [Index/LUT Sandbox](index-lut-sandbox.md) để xem hướng dẫn chi tiết.***
+5. Đọc giá trị tại vị trí con trỏ, sau đó lưu kết quả bằng **Export/Save Image(s)**Xem [Index/LUT Sandbox](index-lut-sandbox.md) để xem hướng dẫn chi tiết.
+
+***
 
 ## Khắc phục sự cố
 

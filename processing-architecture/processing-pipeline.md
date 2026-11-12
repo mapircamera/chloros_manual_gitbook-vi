@@ -15,7 +15,9 @@ Images In → [Thread 1: Detection] → [Thread 2: Calibration] → [Thread 3: P
 
 Mỗi hình ảnh sẽ lần lượt đi qua cả bốn luồng theo thứ tự. Với cơ chế xử lý đa luồng củChloros+, nhiều hình ảnh có thể được xử lý trên các luồng khác nhau cùng lúc — trong khi Luồng 3 đang xử lý một hình ảnh, Luồng 1 có thể đang phát hiện hình ảnh tiếp theo, Luồng 2 đang hiệu chỉnh một hình ảnh khác, và Luồng 4 đang ghi hình ảnh đã hoàn thành lên đĩa.
 
-Tiến trình được báo cáo theo từng luồng và truyền qua Server-Sent Events (hệ thống backend phát hành chúng trên `/api/events`). Trong màn hình hiển thị tiến trình trực tiếp của giao diện dòng lệnh (CLI), bốn giai đoạn được đánh dấu là **Phát hiện, Phân tích, Xử lý, Xuất**.***
+Tiến trình được báo cáo theo từng luồng và truyền qua Server-Sent Events (hệ thống backend phát hành chúng trên `/api/events`). Trong màn hình hiển thị tiến trình trực tiếp của giao diện dòng lệnh (CLI), bốn giai đoạn được đánh dấu là **Phát hiện, Phân tích, Xử lý, Xuất**.
+
+***
 
 ## Chi tiết luồng
 

@@ -193,7 +193,9 @@ Mở khóa các tính năng nâng cao với gói đăng ký Chloros+:
 * **🐻 Phương pháp loại bỏ hiệu ứng debayer nâng cao dựa trên kết cấu** - phương pháp loại bỏ hiệu ứng debayer chất lượng cao, nhận diện cạnh kết hợp với mô hình khử nhiễu AI/ML giúp loại bỏ gần như toàn bộ nhiễu do hiệu ứng debayer gây ra.
 * 🧮 **Công thức tùy chỉnh** - Tạo chỉ số đa quang phổ tùy chỉnh
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Xem các gói và giá của Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Xem các gói và giá của Chloros+</a></p>
+
+***
 
 ## Hỗ trợ cài đặt
 
@@ -232,7 +234,9 @@ Cần trợ giúp về cài đặt hoặc thiết lập?
 * 📧 **Email**: info@mapir.camera
 * 🌐 **Trang web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Tài liệu**: [Bắt đầu sử dụng](./)
-* ❓ **Câu hỏi thường gặp**: [Câu hỏi thường gặp](faq.md)***
+* ❓ **Câu hỏi thường gặp**: [Câu hỏi thường gặp](faq.md)
+
+***
 
 ## Cập nhật phần mềm
 

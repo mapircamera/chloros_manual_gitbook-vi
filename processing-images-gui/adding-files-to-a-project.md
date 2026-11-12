@@ -62,7 +62,9 @@ output/
 * Một thư mục chụp được lưu **mà không** có các khung hình thô sẽ được nhập và hiển thị bình thường, nhưng quá trình xử lý sẽ bỏ qua nó và ghi lại điều này trong nhật ký. (Tham số dòng lệnh CLI `--input-level` có thể ép buộc điểm vào cho trường hợp này — xem [Tài liệu tham khảo CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Kể từ phiên bản 1.3.0, một thư mục ghi lại cũng có thể chứa một thư mục `clamp_masks/` (mặt nạ theo từng pixel cho mức độ bức xạ và phản xạ — xem [Định dạng hình ảnh đầu ra](../output-image-formats.md#clamp-masks)). Các mặt nạ không phải là hình ảnh của cảnh, và Chloros sẽ bỏ qua chúng khi nhập, bất kể chúng nằm ở đâu.
 
-**Các phiên làm việc trên LATTICE hub** được nhập theo cách tương tự: chọn "Add Folder" (Thêm thư mục) vào thư mục phiên làm việc được sao chép từ hub (thư mục này chứa `raw/` và `previews/`), cùng với bất kỳ tệp nhật ký hướng xuống nào của DAQ-M (`.csv`). Nếu thông tin hiệu chuẩn của camera hoặc DAQ chưa được lưu trong bộ nhớ đệm trên máy của bạn, Chloros sẽ tự động lấy thông tin đó theo số sê-ri khi nhập (cần kết nối internet một lần).***
+**Các phiên làm việc trên LATTICE hub** được nhập theo cách tương tự: chọn "Add Folder" (Thêm thư mục) vào thư mục phiên làm việc được sao chép từ hub (thư mục này chứa `raw/` và `previews/`), cùng với bất kỳ tệp nhật ký hướng xuống nào của DAQ-M (`.csv`). Nếu thông tin hiệu chuẩn của camera hoặc DAQ chưa được lưu trong bộ nhớ đệm trên máy của bạn, Chloros sẽ tự động lấy thông tin đó theo số sê-ri khi nhập (cần kết nối internet một lần).
+
+***
 
 ## Hiểu về bảng Trình duyệt tệp
 
@@ -104,7 +106,9 @@ Nhấp vào nút chuyển đổi ở góc trên bên phải phía trên bảng s
 
 * Các tệp `.daq` và `.csv` xuất hiện trong danh sách Trình duyệt tệp nhưng không phải là hình ảnh có thể nhấp vào — chúng cung cấp cường độ bức xạ chiếu xuống để hiệu chuẩn độ phản xạ.
 * Mỗi tệp `.daq`/`.csv` được nhập vào sẽ được liệt kê trong **Cài đặt Dự án → Cảm biến Ánh sáng DAQ**, nơi bạn có thể xem lại hiệu chỉnh nắp khuếch tán đang được áp dụng cho từng tệp. Xem [Điều chỉnh Cài đặt Dự án](adjusting-project-settings.md).
-* Các bản ghi bạn thực hiện trong tab **Cảm biến Ánh sáng** sẽ được tự động thêm vào dự án đang mở — không cần nhập thủ công.***
+* Các bản ghi bạn thực hiện trong tab **Cảm biến Ánh sáng** sẽ được tự động thêm vào dự án đang mở — không cần nhập thủ công.
+
+***
 
 ## Quản lý Tệp trong Dự án của Bạn
 
@@ -221,7 +225,9 @@ Nếu dự án của bạn chứa hình ảnh từ nhiều camera MAPIR:
 
 ### Báo cáo thiếu tệp khi mở lại dự án
 
-Nếu các tệp nguồn đã bị di chuyển hoặc xóa kể từ lần mở dự án gần nhất, Chloros sẽ thông báo cho bạn biết **những**tệp nào đã bị mất thay vì mở ra một lưới trống. Nếu chính thư mục dự án bị di chuyển, Chloros sẽ điều chỉnh lại đường dẫn nguồn trỏ đến thư mục mà `project.json` hiện đang nằm, đồng thời giữ lại bản sao lưu (`project.json.before-relink-<date>-<time>`). Khi không tìm thấy các tệp đó, cửa sổ**Không tìm thấy tệp nguồn**sẽ hiển thị tùy chọn**Duyệt** đến vị trí mới, sau đó là Tạo dự án mới hoặc Xóa dự án. Từ giao diện dòng lệnh (CLI), sử dụng `chloros-cli project open PATH --relink FOLDER`; từ bộ công cụ phát triển phần mềm (SDK), sử dụng `open_project(path, relink=...)`.***
+Nếu các tệp nguồn đã bị di chuyển hoặc xóa kể từ lần mở dự án gần nhất, Chloros sẽ thông báo cho bạn biết **những**tệp nào đã bị mất thay vì mở ra một lưới trống. Nếu chính thư mục dự án bị di chuyển, Chloros sẽ điều chỉnh lại đường dẫn nguồn trỏ đến thư mục mà `project.json` hiện đang nằm, đồng thời giữ lại bản sao lưu (`project.json.before-relink-<date>-<time>`). Khi không tìm thấy các tệp đó, cửa sổ**Không tìm thấy tệp nguồn**sẽ hiển thị tùy chọn**Duyệt** đến vị trí mới, sau đó là Tạo dự án mới hoặc Xóa dự án. Từ giao diện dòng lệnh (CLI), sử dụng `chloros-cli project open PATH --relink FOLDER`; từ bộ công cụ phát triển phần mềm (SDK), sử dụng `open_project(path, relink=...)`.
+
+***
 
 ## Các bước tiếp theo
 

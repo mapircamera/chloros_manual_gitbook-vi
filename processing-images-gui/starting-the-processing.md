@@ -180,7 +180,9 @@ Sau khi bắt đầu, toàn bộ quy trình sẽ chạy tự động:
 * Một quá trình đã dừng sẽ báo cáo chính xác những gì đã hoàn thành (xem các dòng `[RUN-SUMMARY]` trong nhật ký)
 * Một lần chạy mới sẽ khởi động lại quy trình từ đầu
 
-**Mẹo lập kế hoạch:** Đối với các dự án rất lớn, hãy cân nhắc xử lý theo lô hoặc sử dụng CLI để kiểm soát tốt hơn.***
+**Mẹo lập kế hoạch:** Đối với các dự án rất lớn, hãy cân nhắc xử lý theo lô hoặc sử dụng CLI để kiểm soát tốt hơn.
+
+***
 
 ## Theo dõi quá trình xử lý
 

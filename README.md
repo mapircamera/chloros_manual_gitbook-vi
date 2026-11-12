@@ -64,7 +64,9 @@ Hướng dẫn đầy đủ: [Sử dụng Chloros với Trợ lý AI](ai-assista
 * **Cơ chế xử lý lỗi minh bạch.** Một lần chạy `chloros-cli process` yêu cầu tạo sản phẩm nhưng không ghi được sản phẩm nào giờ đây sẽ báo lỗi rõ ràng và thoát với mã trạng thái khác 0; các lần chạy thành công sẽ báo cáo số lượng sản phẩm hình ảnh đã được ghi.
 * **Cấu trúc đầu ra mới.** Các sản phẩm được lưu trong các thư mục `<project>/<camera>/<format>/<Product>_Images/` và giữ nguyên tên tệp nguồn — thư mục, chứ không phải hậu tố tên tệp, là yếu tố xác định sản phẩm. Xem [Định dạng hình ảnh đầu ra](output-image-formats.md).
 * **Thêm đầu vào, gói dịch vụ và ngôn ngữ.** Hỗ trợ đầu vào `.dng`; đầy đủ 38 ngôn ngữ giao diện; giới hạn phần cứng theo từng gói dịch vụ với việc sử dụng miễn phí (không cần đăng nhập) tối đa 4 camera và 2 cảm biến ánh sáng.
-* **Độ tin cậy.** Chức năng “Dừng xử lý” kết thúc một cách trơn tru kèm theo bản tóm tắt quá trình chạy chi tiết, các dự án đa camera xuất dữ liệu từ mọi camera, và các bản cập nhật trình cài đặt không còn khiến bạn bị đăng xuất.***
+* **Độ tin cậy.** Chức năng “Dừng xử lý” kết thúc một cách trơn tru kèm theo bản tóm tắt quá trình chạy chi tiết, các dự án đa camera xuất dữ liệu từ mọi camera, và các bản cập nhật trình cài đặt không còn khiến bạn bị đăng xuất.
+
+***
 
 Chloros có sẵn trên 3 nền tảng ứng dụng:
 

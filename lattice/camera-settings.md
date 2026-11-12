@@ -196,7 +196,9 @@ Mọi thứ trong phần này **chỉ áp dụng cho màn hình**— nó thay đ
 | **Độ bão hòa** | 0–200 (100 = trung tính) | 100 | Chỉ RGB | Độ bão hòa HSV trên chế độ xem trước trực tiếp. |
 | **Độ tương phản** | 0–200 (100 = trung tính) | 100 | Chỉ RGB | Độ tương phản tuyến tính quanh mức xám trung bình trên bản xem trước trực tiếp. |
 | **Lật ngang / Lật dọc** | Hộp chọn | Tắt | Tất cả | Lật bản xem trước theo chiều ngang / chiều dọc. |
-| **Xoay**| 0° / 90° / 180° / 270° | 0° | Tất cả | Xoay bản xem trước. Hướng được áp dụng ở cuối chuỗi xem trước phía máy chủ.**Ảnh chụp đã lưu (1.3.0):**các sản phẩm Xem trước, Độ rạng rỡ, Độ phản xạ và Chỉ số của máy ảnh độc lập sẽ được xoay bằng tính năng Gương/Xoay, trong khi**Raw và Debayered vẫn giữ hướng gốc của máy ảnh**; mỗi tệp ảnh ghi lại cài đặt này trong XMP của nó, do đó khi xử lý tệp raw sau này, cài đặt này sẽ được áp dụng theo cách tương tự.**Các tệp thành viên trong mảng vẫn giữ hướng gốc** (cài đặt được ghi lại, không được áp dụng), và các chế độ xem tổng hợp mảng sẽ bỏ qua cài đặt này. |**Ngữ nghĩa của hồ sơ màu** (máy ảnh RGB):
+| **Xoay**| 0° / 90° / 180° / 270° | 0° | Tất cả | Xoay bản xem trước. Hướng được áp dụng ở cuối chuỗi xem trước phía máy chủ.**Ảnh chụp đã lưu (1.3.0):**các sản phẩm Xem trước, Độ rạng rỡ, Độ phản xạ và Chỉ số của máy ảnh độc lập sẽ được xoay bằng tính năng Gương/Xoay, trong khi**Raw và Debayered vẫn giữ hướng gốc của máy ảnh**; mỗi tệp ảnh ghi lại cài đặt này trong XMP của nó, do đó khi xử lý tệp raw sau này, cài đặt này sẽ được áp dụng theo cách tương tự.**Các tệp thành viên trong mảng vẫn giữ hướng gốc** (cài đặt được ghi lại, không được áp dụng), và các chế độ xem tổng hợp mảng sẽ bỏ qua cài đặt này. |
+
+**Ngữ nghĩa của hồ sơ màu** (máy ảnh RGB):
 
 * **Raw** — bỏ qua hoàn toàn chuỗi xử lý.
 * **Linear** — tín hiệu tối + trường phẳng + cân bằng trắng; không có ma trận màu, không có gamma.

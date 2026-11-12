@@ -10,7 +10,9 @@ Sử dụng thanh trượt thu phóng ở góc trên bên phải để điều c
 * **Ctrl + `+`**/**Ctrl + `=`**và**Ctrl + `−`** điều chỉnh kích thước tăng 4 px mỗi lần nhấn. Phạm vi điều chỉnh bằng bàn phím dừng lại ở 64 px ở mức nhỏ nhất và, ở mức lớn nhất, tại bất kỳ kích thước nào vừa vặn với chính xác hai hình thu nhỏ trên mỗi hàng trong cửa sổ hiện tại.
 * Kích thước bạn chọn sẽ được lưu cùng với dự án (`UI → Grid thumbnail size` trong `project.json`, mặc định là `160`), do đó khi mở lại dự án, cài đặt này sẽ được khôi phục.
 
-<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>*Độ phân giải* hình thu nhỏ là một cài đặt riêng biệt so với *kích thước* hình thu nhỏ: xem **Hiển thị → Độ phân giải hình thu nhỏ** trong [Cài đặt dự án](../project-settings/project-settings.md) (mặc định 512 px theo cạnh dài). Kích thước là độ lớn của ô được vẽ; độ phân giải là mức độ chi tiết được lấy để lấp đầy ô đó.***
+<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>*Độ phân giải* hình thu nhỏ là một cài đặt riêng biệt so với *kích thước* hình thu nhỏ: xem **Hiển thị → Độ phân giải hình thu nhỏ** trong [Cài đặt dự án](../project-settings/project-settings.md) (mặc định 512 px theo cạnh dài). Kích thước là độ lớn của ô được vẽ; độ phân giải là mức độ chi tiết được lấy để lấp đầy ô đó.
+
+***
 
 ## Thanh công cụ lưới
 
@@ -20,7 +22,9 @@ Hàng nút phía trên lưới có tối đa ba nhóm, từ trái sang phải:
 2. **Nút lọc camera** — mỗi camera LATTICE có một nút. Chỉ xuất hiện trong chế độ Theo Camera.
 3. **Nút chế độ xuất/xem** — sản phẩm mà mỗi hình thu nhỏ hiển thị.
 
-Khi cửa sổ quá hẹp để hiển thị tất cả các nút, các nhóm sẽ thu gọn từ phải sang trái thành các menu thả xuống khi di chuột qua: các nút xuất/xem sẽ thu gọn trước, sau đó đến các nút camera. Nhóm đã thu gọn sẽ để lại một nút duy nhất được gắn nhãn với lựa chọn hiện đang hoạt động, và khi di chuột qua nút này, toàn bộ bộ nút sẽ trượt xuống. **Chế độ Per Trigger / Per Camera không bao giờ thu gọn.**<!-- SCREENSHOT-NEEDED: Image grid toolbar of a LATTICE array project at full width, showing all three button groups inline: Per Trigger / Per Camera, three camera filter buttons labelled "LATT-M3M (serial)", and the export/view buttons including TIFF, RAW (Original), RAW (Radiance), RAW (Reflectance). -->***
+Khi cửa sổ quá hẹp để hiển thị tất cả các nút, các nhóm sẽ thu gọn từ phải sang trái thành các menu thả xuống khi di chuột qua: các nút xuất/xem sẽ thu gọn trước, sau đó đến các nút camera. Nhóm đã thu gọn sẽ để lại một nút duy nhất được gắn nhãn với lựa chọn hiện đang hoạt động, và khi di chuột qua nút này, toàn bộ bộ nút sẽ trượt xuống. **Chế độ Per Trigger / Per Camera không bao giờ thu gọn.**<!-- SCREENSHOT-NEEDED: Image grid toolbar of a LATTICE array project at full width, showing all three button groups inline: Per Trigger / Per Camera, three camera filter buttons labelled "LATT-M3M (serial)", and the export/view buttons including TIFF, RAW (Original), RAW (Radiance), RAW (Reflectance). -->
+
+***
 
 ## Nút Xem Xuất
 
@@ -43,10 +47,8 @@ Trong một dự án hỗn hợp, nhãn sẽ tuân theo phần mở rộng đư�
 | Nút | Hiển thị | Khi nào xuất hiện |
 | --- | --- | --- |
 | **Mục tiêu** | Hình ảnh có mục tiêu hiệu chuẩn được phát hiện | Sau một lần chạy phát hiện được mục tiêu |
-| **Độ phản xạ** | Hình ảnh độ phản xạ đã hiệu chuẩn | Chỉ dành cho các dự ánSurvey3
-
-— Các dự án LATTICE sử dụng `RAW (Reflectance)` thay thế, do đó lưới không bao giờ hiển thị hai nút độ phản xạ |
-| **Cân bằng trắng** | Sản phẩm đã cân bằng trắng (máy ảnhRGB) | Sau khi xử lý |
+| **Độ phản xạ** | Hình ảnh độ phản xạ đã hiệu chuẩn | Chỉ dành cho các dự án Survey3 — Các dự án LATTICE sử dụng `RAW (Reflectance)` thay thế, do đó lưới không bao giờ hiển thị hai nút độ phản xạ |
+| **Cân bằng trắng** | Sản phẩm đã cân bằng trắng (máy ảnh RGB) | Sau khi xử lý |
 | **Đã hiệu chỉnh hiệu ứng viền tối** | Sản phẩm dự phòng đã hiệu chỉnh hiệu ứng viền tối nhưng chưa hiệu chuẩn | Sau một lần chạy mà không thể áp dụng hiệu chuẩn độ phản xạ và tùy chọn *Hiệu chỉnh hiệu ứng viền tối* được bật |
 | **Phản ứng cảm biến** | Giá trị dự phòng phản ứng cảm biến chưa hiệu chỉnh | Tương tự, nhưng với *Chức năng khắc phục hiệu ứng viền tối* bị tắt |
 | **`RAW (<INDEX> Index)`** | Một nút cho mỗi chỉ số đã tính toán | Sau một lần chạy với các chỉ số đã được cấu hình |
@@ -70,12 +72,10 @@ Hai cấp độ xuấtChloros
 **không có nút lưới riêng**:
 
 * **Đã loại bỏ hiệu ứng bay** — chế độ xem `RAW (Original)` đã hiển thị hình ảnh đã loại bỏ hiệu ứng bay, do đó việc thêm một nút thứ hai vào hình ảnh trông giống hệt nhau sẽ gây ra nhiễu. Sản phẩm `RAW (Debayered)` vẫn được ghi vào đĩa và vẫn có thể chọn từ menu thả xuống lớp toàn màn hình.
-* **Xem trước** — trên các máy ảnhRGB, hình xem trước được đăng ký dưới dạng lớp `White Balanced`, lớp này có nút riêng. Trên các máy ảnh đa quang phổ, nó được đăng ký dưới tên `RAW (Preview)` và có thể truy cập từ menu thả xuống lớp toàn màn hình.
+* **Xem trước** — trên các máy ảnh RGB, hình xem trước được đăng ký dưới dạng lớp `White Balanced`, lớp này có nút riêng. Trên các máy ảnh đa quang phổ, nó được đăng ký dưới tên `RAW (Preview)` và có thể truy cập từ menu thả xuống lớp toàn màn hình.
 
 {% hint style="info" %}
-Các nút cấp độ này chỉ hiển thị đối với các dự án thực sự chứa các khung hình LATTICE. Các dự ánSurvey3
-
-cũng sử dụng một số tên lớp nội bộ tương tự, nhưng các nút này sẽ bị lọc bỏ trong những trường hợp đó; do đó, lướiSurvey3
+Các nút cấp độ này chỉ hiển thị đối với các dự án thực sự chứa các khung hình LATTICE. Các dự án Survey3 cũng sử dụng một số tên lớp nội bộ tương tự, nhưng các nút này sẽ bị lọc bỏ trong những trường hợp đó; do đó, lướiSurvey3
 
 vẫn giữ nguyên bộ lớp quen thuộc `JPG / Targets / Reflectance`.
 {% endhint %}

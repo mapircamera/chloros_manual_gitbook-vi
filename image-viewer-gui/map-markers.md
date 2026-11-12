@@ -80,7 +80,9 @@ Mỗi hình ảnh có dữ liệu GPS sẽ có một điểm đánh dấu tại 
 | Nhà cung cấp        | Ghi chú                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Google Maps** | Phạm vi phủ sóng rộng trên toàn thế giới; hỗ trợ cả bốn loại ô                                                                                                            |
-| **Esri ArcGIS**| Thường có hình ảnh chụp từ trên không có độ phân giải cao hơn ở một số khu vực cụ thể. Loại ô**Terrain** không được cung cấp cho Esri và nút tương ứng sẽ bị vô hiệu hóa khi Esri được chọn |***
+| **Esri ArcGIS**| Thường có hình ảnh chụp từ trên không có độ phân giải cao hơn ở một số khu vực cụ thể. Loại ô**Terrain** không được cung cấp cho Esri và nút tương ứng sẽ bị vô hiệu hóa khi Esri được chọn |
+
+***
 
 ## Các loại ô bản đồ
 
@@ -95,7 +97,9 @@ Chọn loại lớp bản đồ bằng các nút (từ trái sang phải):
 | **Vệ tinh**        | Hình ảnh vệ tinh chi tiết, không có nhãn — tùy chọn có băng thông cao nhất |
 | **Kết hợp** (mặc định) | Hình ảnh vệ tinh với đường và nhãn được vẽ chồng lên                |
 
-Tab Bản đồ mở ra ở chế độ **Kết hợp**. Lựa chọn của bạn sẽ được áp dụng khi chuyển đổi nhà cung cấp, nếu nhà cung cấp đó hỗ trợ tính năng này.***
+Tab Bản đồ mở ra ở chế độ **Kết hợp**. Lựa chọn của bạn sẽ được áp dụng khi chuyển đổi nhà cung cấp, nếu nhà cung cấp đó hỗ trợ tính năng này.
+
+***
 
 ## Điều hướng bản đồ
 
@@ -143,7 +147,9 @@ Tab Bản đồ mở ra ở chế độ **Kết hợp**. Lựa chọn của bạ
 
 ### Bản đồ trống hoặc các ô bản đồ ngừng tải
 
-Các nhà cung cấp ô bản đồ là các dịch vụ trực tuyến. Nếu các ô bản đồ ngừng được tải về, hãy kiểm tra kết nối mạng của máy, sau đó thử chuyển sang nhà cung cấp khác. Nếu bạn đang phóng to quá mức, hãy nhấn nút **×** để đặt lại về mức thu phóng bình thường và để bản đồ yêu cầu lại các ô bản đồ.***
+Các nhà cung cấp ô bản đồ là các dịch vụ trực tuyến. Nếu các ô bản đồ ngừng được tải về, hãy kiểm tra kết nối mạng của máy, sau đó thử chuyển sang nhà cung cấp khác. Nếu bạn đang phóng to quá mức, hãy nhấn nút **×** để đặt lại về mức thu phóng bình thường và để bản đồ yêu cầu lại các ô bản đồ.
+
+***
 
 ## Các trang liên quan
 

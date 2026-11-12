@@ -102,4 +102,4 @@ Chi tiết dành cho người dùng yêu cầu căn chỉnh nghiêm ngặt:
 | Vùng phát sóng | Máy chủ và cảm biến nằm trên cùng một phân đoạn L2; mDNS không định tuyến |
 | Tường lửa | Windows: quy tắc **Chloros Backend (UDP-In)** của trình cài đặt cho phép luồng dữ liệu DAQ-E (UDP 5002), mDNS (5353) và PTP (319/320) đi vào; tường lửa của bên thứ ba cũng cần thiết lập tương tự. Linux: `.deb` chỉ mở các cổng này trong `ufw` / `firewalld` nếu tường lửa đang hoạt động tại thời điểm cài đặt — bạn cần tự cho phép chúng nếu tường lửa được kích hoạt sau đó |
 | Máy chủ đa NIC | Quá trình phát hiện duyệt mDNS với cơ chế dự phòng ARP; `--eth-host <ip-or-hostname>` bỏ qua quá trình phát hiện và kết nối trực tiếp |
-| Quét lại qua GUI | Quá trình phát hiện chỉ chạy khi hộp thoại kết nối đang mở; hãy sử dụng nút Refresh |</version>
+| Quét lại qua GUI | Quá trình phát hiện chỉ chạy khi hộp thoại kết nối đang mở; hãy sử dụng nút Refresh |

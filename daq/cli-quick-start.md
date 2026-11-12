@@ -170,7 +170,9 @@ chloros-cli daq pool-reboot --sensor-id daq-e-def330
 chloros-cli daq pool-update-firmware --sensor-id daq-e-def330
 ```
 
-`pool-info` hiển thị phiên bản firmware của cảm biến (và liệu bản phát hành Chloros này có phiên bản mới hơn hay không), địa chỉ của nó và cách nó nhận được địa chỉ đó, cài đặt mạng đã lưu (nếu khác với cài đặt đang hoạt động), truyền dữ liệu khi bật nguồn và PTP. `pool-set-network` khởi động lại cảm biến để áp dụng thay đổi và kết nối lại với các cài đặt ban đầu; `--no-reboot` chỉ lưu lại cài đặt. Địa chỉ tĩnh phải nằm trong mạng của máy tính này, nếu không Chloros sẽ từ chối; `--force` bỏ qua quy tắc đó, chỉ áp dụng cho máy tính sẽ được gán lại địa chỉ hoặc được định tuyến đến địa chỉ đó. Việc khởi động lại sẽ bị từ chối trong khi cảm biến đang ghi dữ liệu. `pool-update-firmware` là lệnh **Update to \<version\>**</version\> của giao diện người dùng (GUI) <version\>dành cho dòng lệnh, đồng thời là cách để cập nhật DAQ-E trên hệ điều hành Linux (không có GUI). Tính năng mới trong phiên bản 1.3.0.***
+`pool-info` hiển thị phiên bản firmware của cảm biến (và liệu bản phát hành Chloros này có phiên bản mới hơn hay không), địa chỉ của nó và cách nó nhận được địa chỉ đó, cài đặt mạng đã lưu (nếu khác với cài đặt đang hoạt động), truyền dữ liệu khi bật nguồn và PTP. `pool-set-network` khởi động lại cảm biến để áp dụng thay đổi và kết nối lại với các cài đặt ban đầu; `--no-reboot` chỉ lưu lại cài đặt. Địa chỉ tĩnh phải nằm trong mạng của máy tính này, nếu không Chloros sẽ từ chối; `--force` bỏ qua quy tắc đó, chỉ áp dụng cho máy tính sẽ được gán lại địa chỉ hoặc được định tuyến đến địa chỉ đó. Việc khởi động lại sẽ bị từ chối trong khi cảm biến đang ghi dữ liệu. `pool-update-firmware` là lệnh **Update to \<version\>**</version\> của giao diện người dùng (GUI) <version\>dành cho dòng lệnh, đồng thời là cách để cập nhật DAQ-E trên hệ điều hành Linux (không có GUI). Tính năng mới trong phiên bản 1.3.0.
+
+***
 
 ## Tóm tắt lệnh
 

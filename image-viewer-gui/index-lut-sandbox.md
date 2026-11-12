@@ -71,7 +71,9 @@ Water:                 -0.1 to 0.1
 
 ### Khi chọn “Index” nhưng không có LUT
 
-Hình ảnh được hiển thị dưới dạng **thang xám**, được kéo giãn giữa hai giá trị ngưỡng. Điều này là có chủ đích: hình ảnh chỉ số là dữ liệu dạng số, và thang xám là cách hiển thị trung thực nhất của nó. Thêm bảng tra cứu (LUT) khi bạn muốn hiển thị màu sắc.***
+Hình ảnh được hiển thị dưới dạng **thang xám**, được kéo giãn giữa hai giá trị ngưỡng. Điều này là có chủ đích: hình ảnh chỉ số là dữ liệu dạng số, và thang xám là cách hiển thị trung thực nhất của nó. Thêm bảng tra cứu (LUT) khi bạn muốn hiển thị màu sắc.
+
+***
 
 ## Làm việc với bảng tra cứu (LUT)
 
@@ -135,7 +137,9 @@ Ví dụ về các cửa sổNDVI:
 | Chỉ thảm thực vật khỏe mạnh                 | 0.5  | 0.9 |
 | Nhấn mạnh tình trạng stress                        | 0.2  | 0.5 |
 
-Việc thu hẹp cửa sổ sẽ tăng độ tương phản bên trong khu vực quan tâm của bạn và đẩy mọi thứ khác ra ngoài phạm vi — nơi **Chế độ cắt xén** quyết định điều gì sẽ xảy ra với chúng.***
+Việc thu hẹp cửa sổ sẽ tăng độ tương phản bên trong khu vực quan tâm của bạn và đẩy mọi thứ khác ra ngoài phạm vi — nơi **Chế độ cắt xén** quyết định điều gì sẽ xảy ra với chúng.
+
+***
 
 ## Chế độ cắt xén
 

@@ -136,7 +136,9 @@ Có hai quy tắc chi phối các con số này:
 * Một luồng là luồng **duy nhất** đang hoạt động sẽ được cấp mức phân bổ tối đa theo cấu hình của nó.
 * Khi có nhiều hơn một tác vụ GPU *nặng* đang hoạt động, mức phân bổ cơ bản của mỗi tác vụ nặng sẽ được chia đều cho các luồng đó (không bao giờ thấp hơn mức tối thiểu đã cấu hình).
 
-Giá trị thực tế được sử dụng trong thời gian chạy là giá trị **thấp hơn** giữa mức phân bổ của cấu hình nền tảng và khuyến nghị thời gian thực từ trình giám sát bộ nhớ GPU, do đó một card đang bận rộn luôn được ưu tiên hơn so với một cấu hình quá lạc quan.***
+Giá trị thực tế được sử dụng trong thời gian chạy là giá trị **thấp hơn** giữa mức phân bổ của cấu hình nền tảng và khuyến nghị thời gian thực từ trình giám sát bộ nhớ GPU, do đó một card đang bận rộn luôn được ưu tiên hơn so với một cấu hình quá lạc quan.
+
+***
 
 ## Xử lý nhận biết kết cấu
 

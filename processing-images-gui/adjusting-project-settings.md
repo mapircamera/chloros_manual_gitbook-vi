@@ -153,7 +153,9 @@ Phần này **chỉ** xuất hiện khi có ít nhất một hình ảnh trong d
 
 * **Áp dụng căn chỉnh mảng** (mặc định: bật): biến dạng mọi sản phẩm đã xử lý (loại bỏ hiệu ứng Bayer / xem trước / độ rạng rỡ / độ phản xạ / chỉ số) vào hình học tham chiếu chung của mảng. Tắt = xuất ở hình học cảm biến gốc.
 * **Cắt theo vùng chồng chéo chung** (mặc định: bật): cắt các tệp xuất đã căn chỉnh để chỉ giữ lại vùng mà tất cả các mô-đun đều có chung, do đó mỗi dải phổ sẽ có cùng diện tích phủ sóng. Tắt sẽ giữ nguyên toàn bộ khung hình cảm biến (điền màu đen bên ngoài vùng nguồn).
-* **Lấy mẫu lại**:**Bilinear (mịn, mặc định)**,**Nearest (giữ nguyên giá trị chính xác)**— không trộn giữa các pixel, dành cho phân tích quang phổ nghiêm ngặt — hoặc**Cubic (sắc nét nhất)**.***
+* **Lấy mẫu lại**:**Bilinear (mịn, mặc định)**,**Nearest (giữ nguyên giá trị chính xác)**— không trộn giữa các pixel, dành cho phân tích quang phổ nghiêm ngặt — hoặc**Cubic (sắc nét nhất)**.
+
+***
 
 ## Lưu và Tải Cài đặt
 

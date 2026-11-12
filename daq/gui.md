@@ -194,7 +194,9 @@ Trong chế độ xem danh sách, bảng chỉ số thực vật nằm bên dư�
 
 * Kết hợp nhiều cảm biến trên một biểu đồ (trục chung), giữ các biểu đồ riêng biệt (bố cục lưới tự động), di chuyển cảm biến giữa các biểu đồ, kéo để sắp xếp lại các hàng/ô, và ẩn từng cảm biến bằng nút chuyển đổi hình mắt.
 * Đối với mỗi dự án, Chloros sẽ lưu lại: tên thiết bị, màu biểu đồ, kích thước biểu đồ, chế độ xem và cài đặt của từng cảm biến (thời gian tích hợp, trung bình khung hình, trạng thái AE, lựa chọn nắp).
-* **Khi mở lại dự án, các cảm biến sẽ tự động kết nối lại** theo địa chỉ — cổng COM cho DAQ-U, thiết bị BLE cho DAQ-M, tên máy chủ mDNS cho DAQ-E (vẫn được giải quyết ngay cả khi địa chỉ IP của thiết bị thay đổi) — và áp dụng lại cấu hình cap đã lưu, trung bình khung hình, trạng thái AE và thời gian tích hợp thủ công của từng cảm biến.***
+* **Khi mở lại dự án, các cảm biến sẽ tự động kết nối lại** theo địa chỉ — cổng COM cho DAQ-U, thiết bị BLE cho DAQ-M, tên máy chủ mDNS cho DAQ-E (vẫn được giải quyết ngay cả khi địa chỉ IP của thiết bị thay đổi) — và áp dụng lại cấu hình cap đã lưu, trung bình khung hình, trạng thái AE và thời gian tích hợp thủ công của từng cảm biến.
+
+***
 
 ## Ghép nối camera (DLS)
 

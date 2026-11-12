@@ -111,7 +111,9 @@ Xem [Trình xem hình ảnh](../image-viewer-gui/opening-an-image-full-screen.md
 | LATTICE (M3C/M3M) | **32768** (dải giá trị lên đến ρ 2.0) | Thẻ XMP `Chloros:PixelScale=32768` được gắn vào tệp |
 | Survey3          | **65535** (bị cắt tại ρ 1.0)     | Không có thẻ `Chloros:PixelScale` — sự vắng mặt này chính là dấu hiệu (các sản phẩm Survey3 vẫn chứa các thẻ xử lý `Chloros:*` khác) |
 
-**Đọc thẻ `Chloros:PixelScale` và chia cho giá trị đó** thay vì giả định một giá trị cố định là 65535 — việc chia độ phản xạ LATTICE cho 65535 sẽ âm thầm giảm một nửa mọi giá trị. Một tệp độ phản xạ từ phiên bản trước 1.3.0 được ghi dưới dạng 8-bit đã bị cắt bớt, không được điều chỉnh tỷ lệ, và không có thẻ tỷ lệ: hãy xuất lại tệp đó ở định dạng 16-bit hoặc 32-bit thay vì chia nó. Xem [Định dạng hình ảnh đầu ra](../output-image-formats.md) để biết chi tiết đầy đủ.***
+**Đọc thẻ `Chloros:PixelScale` và chia cho giá trị đó** thay vì giả định một giá trị cố định là 65535 — việc chia độ phản xạ LATTICE cho 65535 sẽ âm thầm giảm một nửa mọi giá trị. Một tệp độ phản xạ từ phiên bản trước 1.3.0 được ghi dưới dạng 8-bit đã bị cắt bớt, không được điều chỉnh tỷ lệ, và không có thẻ tỷ lệ: hãy xuất lại tệp đó ở định dạng 16-bit hoặc 32-bit thay vì chia nó. Xem [Định dạng hình ảnh đầu ra](../output-image-formats.md) để biết chi tiết đầy đủ.
+
+***
 
 ## Thông tin siêu dữ liệu được giữ lại trong các tệp xuất
 
@@ -167,7 +169,9 @@ của chúng. Xem [Định dạng hình ảnh đầu ra](../output-image-formats
 3. Đính kèm vào tài liệu dự án
 4. Gửi cho bộ phận hỗ trợ MAPIR nếu gặp sự cố
 
-Để gửi vấn đề trực tiếp đến MAPIR, hãy sử dụng biểu tượng lỗi (**Báo cáo lỗi**) ở đầu tab Nhật ký gỡ lỗi — xem [Báo cáo lỗi từ tab nhật ký](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Để gửi vấn đề trực tiếp đến MAPIR, hãy sử dụng biểu tượng lỗi (**Báo cáo lỗi**) ở đầu tab Nhật ký gỡ lỗi — xem [Báo cáo lỗi từ tab nhật ký](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).
+
+***
 
 ## Các sự cố đầu ra thường gặp và cách khắc phục
 

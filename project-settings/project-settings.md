@@ -34,7 +34,9 @@ trong Chloros cho phép bạn cấu hình tất cả các khía cạnh liên qua
 * **Tùy chọn**: `Default (512 px)`, `1024 px`, `2048 px`, `Full resolution`
 * **Mặc định**: Mặc định (512 px)
 * **Mô tả**: Độ phân giải (theo cạnh dài nhất, tính bằng pixel) mà tại đó các hình thu nhỏ trong lưới hình ảnh được hiển thị. Các giá trị cao hơn sẽ cho hình ảnh sắc nét hơn khi phóng to nhưng tải chậm hơn và tiêu tốn nhiều bộ nhớ hơn. Độ phân giải đầy đủ sẽ hiển thị kích thước hình ảnh gốc.
-* **Lưu ý**: Chỉ hiển thị — cài đặt này không bao giờ ảnh hưởng đến quá trình xử lý hoặc các tệp xuất ra.***
+* **Lưu ý**: Chỉ hiển thị — cài đặt này không bao giờ ảnh hưởng đến quá trình xử lý hoặc các tệp xuất ra.
+
+***
 
 ## Phát hiện mục tiêu
 
@@ -186,7 +188,9 @@ Các lần quét mục tiêu **đo lường** theo đơn vị được tra cứu
   * Một máy ảnh + một chân: Chân 2 tự động được đặt thành "Không sử dụng"
   * Một máy ảnh + hai chân: Chân 2 tự động được đặt thành "Không sử dụng"
   * Nhiều máy ảnh: Yêu cầu chọn thủ công
-* **Lưu ý**: Không thể gán cùng một camera cho cả chân 1 và chân 2 cùng lúc.***
+* **Lưu ý**: Không thể gán cùng một camera cho cả chân 1 và chân 2 cùng lúc.
+
+***
 
 ## Cảm biến ánh sáng DAQ
 
@@ -207,7 +211,9 @@ Mỗi hàng hiển thị tệp, mẫu cảm biến và hiệu chỉnh nắp khu�
 * **Mô tả**: `Auto` sử dụng nắp được ghi lại trong từng tệp (giả định là nắp Sunshine nếu không có dữ liệu ghi lại, nhưng DAQ-U, DAQ-M và DAQ-E được cung cấp mà không có nắp và Chloros không thể xác định nắp nào được lắp, nên quá trình xử lý sẽ cảnh báo về nắp được giả định: hãy chọn nắp đã được lắp đặt). Việc chọn một nắp cụ thể sẽ ghi đè lên **tất cả** tệp dữ liệu hướng xuống trong dự án, ngoại trừ các tệp từ DAQ-E-S (vì bộ khuếch tán của nó là một phần của quá trình hiệu chuẩn); một dự án chỉ chứa DAQ-E-S sẽ không hiển thị menu thả xuống: các bản ghi thô sẽ được hiệu chỉnh bằng nắp đó, và các bản ghi đã có nắp sẽ được tham chiếu lại (sự hiệu chỉnh đã ghi sẽ bị hủy bỏ và hiệu chỉnh đã chọn sẽ được áp dụng).
 * **Quan trọng**: Nắp đã chọn phải khớp với nắp đã được lắp đặt thực tế trong quá trình ghi. Cả cảm biến lẫn phần mềm đều không thể phát hiện nắp vật lý — ID nắp không khớp sẽ hiệu chỉnh sai phổ.
 
-Có **một** tùy chọn điều khiển chung cho toàn bộ dự án thay vì các menu thả xuống riêng lẻ cho từng tệp: cài đặt này áp dụng cho mọi nguồn ánh sáng chiếu xuống trong dự án.***
+Có **một** tùy chọn điều khiển chung cho toàn bộ dự án thay vì các menu thả xuống riêng lẻ cho từng tệp: cài đặt này áp dụng cho mọi nguồn ánh sáng chiếu xuống trong dự án.
+
+***
 
 ## Căn chỉnh mảng
 

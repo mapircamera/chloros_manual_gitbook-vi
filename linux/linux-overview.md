@@ -10,7 +10,8 @@ Chloros 1.3.0 cung cấp hỗ trợ Linux gốc cho **CLI**và**Python SDK** —
 
 ## Bảng hỗ trợ nền tảng
 
-| Tính năng | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/ --- | --- | --- | --- |
+| Tính năng | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/SDK) | Linux arm64 / Jetson (CLI/SDK) |
+| --- | --- | --- | --- | --- |
 | **Giao diện người dùng trên máy tính để bàn (Desktop GUI)** | Có | Không áp dụng | Không | Không |
 | **Giao diện dòng lệnh (CLI)** (`chloros-cli`) | Có | Có | Có | Có |
 | **Python SDK** (`chloros-sdk`) | Có | Có | Có | Có |
@@ -22,7 +23,9 @@ Chloros 1.3.0 cung cấp hỗ trợ Linux gốc cho **CLI**và**Python SDK** —
 | **Bộ xử lý debayer nhận diện kết cấu** (cần GPU hỗ trợ CUDA) | Có (Chloros+) | Có (Chloros+) | Có (Chloros+) | Có (Chloros+) |
 | **Thích ứng tính toán động** | Có | Có | Có | Có |
 | **Backend dưới dạng dịch vụ hệ thống** (`chloros-backend@<user>.service`) | Không | Không | Có (tùy chọn) | Có (tùy chọn) |
-| **Trình cập nhật tại chỗ** (`chloros-cli update`) | Không (chạy trình cài đặt) | Không (chạy trình cài đặt) | Có | Có |***
+| **Trình cập nhật tại chỗ** (`chloros-cli update`) | Không (chạy trình cài đặt) | Không (chạy trình cài đặt) | Có | Có |
+
+***
 
 ## Các kiến trúc được hỗ trợ
 
@@ -35,7 +38,9 @@ Chloros 1.3.0 cung cấp hỗ trợ Linux gốc cho **CLI**và**Python SDK** —
 
 * **Ubuntu 22.04 LTS hoặc mới hơn** (amd64)
 * **Debian 12 hoặc mới hơn** (amd64)
-* **NVIDIA JetPack 6** (arm64 — nền tảng Jetson Orin)***
+* **NVIDIA JetPack 6** (arm64 — nền tảng Jetson Orin)
+
+***
 
 ## Những gì người dùng Linux nhận được
 
@@ -54,7 +59,9 @@ Chloros 1.3.0 cung cấp hỗ trợ Linux gốc cho **CLI**và**Python SDK** —
 
 * **Giao diện người dùng trên máy tính để bàn** — không có giao diện đồ họa; mọi tương tác đều thông qua CLI hoặc Python SDK
 * **Trình xem hình ảnh** — không có trình xem hình ảnh tương tác, chế độ xem lưới hoặc điểm đánh dấu trên bản đồ
-* **Quản lý dự án trực quan** — các dự án được tạo và điều khiển thông qua lệnh CLI và các lệnh gọi SDK (phần cứng — máy ảnh, cảm biến, thiết bị thu thập — vẫn có thể điều khiển hoàn toàn từ terminal)***
+* **Quản lý dự án trực quan** — các dự án được tạo và điều khiển thông qua lệnh CLI và các lệnh gọi SDK (phần cứng — máy ảnh, cảm biến, thiết bị thu thập — vẫn có thể điều khiển hoàn toàn từ terminal)
+
+***
 
 ## Yêu cầu về giấy phép
 
